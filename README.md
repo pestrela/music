@@ -6,7 +6,7 @@
    
 Please see help text in program for more details and tips   
    
-## Run DJCU+RECU on Windows (in a MacOS VM)
+## Run DJCU+RECU
 
 * same idea as above, but for DJCU instead (please note that I'm only maitaining the above rekordbuddy process)
 
