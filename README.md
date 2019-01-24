@@ -1,10 +1,10 @@
 
-## Rekorbuddy over macOs VM
+## Run Rekorbuddy on windows (in a MacOS VM)
 
 * this script is able to run rekkordbuddy in Windows inside a macOS VM
 * it depends on having a NFS share and files in specific locations
 
-more info: https://mixxx.org/wiki/doku.php/traktor_cue_storage_format
+overview of the conversion options: https://mixxx.org/wiki/doku.php/traktor_cue_storage_format
 
 ## traktor_clone_cues.py
 
