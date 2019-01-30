@@ -9,8 +9,6 @@
 #   To customize the output: preferences / custom / edit / audio / %Encoded_Library%
 #
 #
-import pandas as pd
-from io import StringIO
 
 good_list="""
 |LAME3.98r|
@@ -321,11 +319,16 @@ bad_list="""
 
 
 
+import pandas as pd
+from io import StringIO
+
 def lame_heuristic(st, keep_ver=True):
     bad_lame = False
     if ((st == "LAME3.99.5") or
        (st == "LAME3.99") or 
-       (st == "LAME3.98")):
+       (st == "LAME3.98")
+       #or (st == "LAME3.99.5ªªÁ")
+       ):
         bad_lame = True
 
     if keep_ver:
@@ -387,3 +390,4 @@ print("\n\nNumber of mp3 samples: %d  (%d good / %d bad)     Percentage Bad shif
 stats = do_stats(df_both, index='heuristic', columns='shift')
 stats = add_fp_col(stats)
 stats
+
