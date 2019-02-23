@@ -1,8 +1,10 @@
+
+
+
 #!/usr/bin/env python
 # coding: utf-8a
 
-#!pip install seaborn
-#!pip install excel
+#!pip install seaborn xlrd 
 
 
 import pandas as pd
@@ -72,13 +74,6 @@ df['encoder3'] = df['encoder'].apply(lame_heuristic)
 
 df['offset_ms'] = (df['offset'] * 1000).round(1)
 df['offset_ms_abs'] = df['offset_ms'].abs()
-
-
-
-
-
-
-
 
 def dict_remove_key(d, key, default=None):
     """
@@ -280,32 +275,45 @@ def seaborn_cdfplot_with_count(data, *, y=None, **kwargs):
     seaborn_countplot(data=data, y=y, **kwargs)
     
 
-
-
 #seaborn_cdfplot(df, 'offset_ms', hue="encoder2",
 #                 xlim=None, ylim=[-200,200], size=5, aspect=2)
 
 sns.set()
-lim=50
+lim_ms=50
 
 use_abs=True
+#use_abs=False
+
+do_detailed = True
+#do_detailed = False
+
 if use_abs:
     offset="offset_ms_abs"
-    ylim=[0,lim]
+    ylim=[0, lim_ms]
     
 else:
     offset="offset_ms"
-    ylim=[-lim,lim]
+    ylim=[-lim_ms, lim_ms]
+    #ylim=[0, lim_ms]
+
     
-def do_plot(*args, **kwargs):
-    tool=seaborn_cdfplot_with_count
-    tool=seaborn_cdfplot
+#xlim=(0.8,1.0)    
+xlim=(0.0,1.0)    
     
-    return tool(*args, **kwargs, xlim=None, size=4, aspect=3)
+def do_plot(*args, do_count=False, **kwargs):
+    if do_count:
+        tool=seaborn_cdfplot_with_count
+    else:
+        tool=seaborn_cdfplot
+    
+    return tool(*args, **kwargs, size=4, aspect=3)
+
+
 
 do_plot(df, y=offset, hue="encoder2", ylim=ylim)
 
-if False:
+if do_detailed:
     for (name, df2) in df.groupby('encoder2'):
-        do_plot(df2, y=offset, hue="encoder2", row="encoder2", ylim=ylim)
+        do_plot(df2, y=offset, hue="encoder", row="encoder2", ylim=ylim, xlim=xlim)
 
+        
