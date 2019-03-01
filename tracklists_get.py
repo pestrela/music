@@ -4,9 +4,9 @@ import requests
 import bs4
 import json
 import re
+import time
 
-
-def get_latest_urls(main_url, limit=5):
+def get_latest_urls(main_url, limit=5, grep=None):
     # original idea: https://gist.github.com/CharlieTLe/9272de175edb85b07e332c2108288451
 
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
@@ -15,18 +15,22 @@ def get_latest_urls(main_url, limit=5):
     urls = []
     for setLink in soup.find_all('div', class_="tlLink"):
         link = 'https://www.1001tracklists.com' + setLink.find('a').get('href')
-        urls.append(link)
+        
+        if grep and (grep not in link):
+            continue
+            
         print(link)
+        urls.append(link)
         if len(urls) >= limit:
             break
-            
+    
+    print("\n\n")
     return urls
 
 
 def get_one_set(url):
 
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-
     r = requests.get(url, headers=headers)
     soup = bs4.BeautifulSoup(r.text, 'html.parser')
     
@@ -40,16 +44,19 @@ def get_one_set(url):
         i = i+1
 
         
-def get_latest_sets(main_url, limit=5, only_summary=False):
-    urls = get_latest_urls(main_url=main_url, limit=limit)
+def get_latest_sets(main_url, limit=5, grep=None):
+    urls = get_latest_urls(main_url=main_url, limit=limit, grep=grep)
 
-    if only_summary:
-        return
         
     for url in urls:
         get_one_set(url)
+        time.sleep(0.3)
+
         
-        
-main_url="https://www.1001tracklists.com/source/hufm3c/panama-amsterdam/index.html"
-limit=2
-get_latest_sets(main_url, limit, only_summary=True)
+
+#main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index.html"
+main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index2.html"
+    
+limit=5
+#get_latest_urls(main_url, limit, "900")
+get_latest_sets(main_url, limit, "900")
