@@ -1,6 +1,3 @@
-
-
-
 #!/usr/bin/env python
 # coding: utf-8a
 
@@ -17,69 +14,14 @@ import matplotlib.pyplot as plt
 #import seaborn           as sns
 
 
-file="offset-encoder.xlsx"
-tab="offset-encoder-flat"
-
-
-xls = pd.ExcelFile(file)
-df = pd.read_excel(xls, tab)
-
-#df = df.head(10)
-
-df = df[['offset', 'encoder']]
-
-df['encoder'] = df['encoder'].fillna('unk')
-
-def av_heuristic(st, keep_ver=True):
-    bad_lame = False
-    st = st.lower()
-    if st.find("av") >= 0:
-        ret="AV"
-    elif st.find("lame") >= 0:
-        ret="LAME"
-    elif st.find("itunes") >= 0:
-        ret="ITUNES"
-    elif st == "unk":
-        ret = "unk"
-    else:    
-        ret = "OTHER"
-    return ret
-
-
-def lame_heuristic(st, keep_ver=True):
-    bad_lame = False
-    if ((st == "LAME3.99.5") or
-       (st == "LAME3.99") or 
-       (st == "LAME3.98")
-       #or (st == "LAME3.99.5ªªÁ")
-       ):
-        bad_lame = True
-
-    if keep_ver:
-        if bad_lame:
-            ret = st
-        else:
-            ret = "LAME_OTHERS"
-    else:
-        if bad_lame:
-            ret = "LAME_BAD"    
-        else:
-            ret = "LAME_GOOD"
-        
-    return ret
-
-
-df['encoder2'] = df['encoder'].apply(av_heuristic)
-df['encoder3'] = df['encoder'].apply(lame_heuristic)
-
-df['offset_ms'] = (df['offset'] * 1000).round(1)
-df['offset_ms_abs'] = df['offset_ms'].abs()
+#####
+##### library functions follow
+#####
 
 def dict_remove_key(d, key, default=None):
     """
     removes a key from dict __WITH__ side effects
     Returns the found value if it was there (default=None). It also modifies the original dict.
-
     """
     return d.pop(key, default)
 
@@ -243,7 +185,6 @@ def seaborn_FacetGridplot(data, y, kind="cdf"                 # args required
 def seaborn_cdfplot(data, y, **kwargs):
     """
     Wrapper to CDF calculated by hand.
-
     Please see seaborn_FacetGridplot() for parameter list
     """
     return seaborn_FacetGridplot(data, y, kind="cdf", **kwargs)
@@ -253,7 +194,6 @@ def seaborn_countplot(data, *, y=None, count_ylim=None, **kwargs):
     """
     Wrapper to catplot(kind="count")
     Note that "y" is always ignored, to keep compatibility with the CDFPLOT. Use "hue" or "x" instead!
-
     Please see seaborn_FacetGridplot() for parameter list
     """
     
@@ -267,7 +207,6 @@ def seaborn_countplot(data, *, y=None, count_ylim=None, **kwargs):
 def seaborn_cdfplot_with_count(data, *, y=None, **kwargs):
     """
     shows two plots simultaneously (CDF + count)
-
     Please see seaborn_FacetGridplot() for parameter list
     """
     
@@ -275,45 +214,123 @@ def seaborn_cdfplot_with_count(data, *, y=None, **kwargs):
     seaborn_countplot(data=data, y=y, **kwargs)
     
 
-#seaborn_cdfplot(df, 'offset_ms', hue="encoder2",
-#                 xlim=None, ylim=[-200,200], size=5, aspect=2)
 
-sns.set()
-lim_ms=50
+#####
+##### Specific functions follow
+#####
 
-use_abs=True
-#use_abs=False
 
-do_detailed = True
-#do_detailed = False
+def av_heuristic(st, keep_ver=True):
+    bad_lame = False
+    st = st.lower()
+    if st.find("av") >= 0:
+        ret="AV"
+    elif st.find("lame") >= 0:
+        ret="LAME"
+    elif st.find("itunes") >= 0:
+        ret="ITUNES"
+    elif st == "unk":
+        ret = "unk"
+    else:    
+        ret = "OTHER"
+    return ret
 
-if use_abs:
-    offset="offset_ms_abs"
-    ylim=[0, lim_ms]
+
+def lame_heuristic(st, keep_ver=True):
+    bad_lame = False
+    if ((st == "LAME3.99.5") or
+       (st == "LAME3.99") or 
+       (st == "LAME3.98")
+       #or (st == "LAME3.99.5ªªÁ")
+       ):
+        bad_lame = True
+
+    if keep_ver:
+        if bad_lame:
+            ret = st
+        else:
+            ret = "LAME_OTHERS"
+    else:
+        if bad_lame:
+            ret = "LAME_BAD"    
+        else:
+            ret = "LAME_GOOD"
+        
+    return ret
+
+
+def read_excel(file, tab):
+    xls = pd.ExcelFile(file)
+    df = pd.read_excel(xls, tab)
+
+    #df = df.head(10)
+
+    df = df[['offset', 'encoder']]
+
+    df['encoder'] = df['encoder'].fillna('unk')
     
-else:
-    offset="offset_ms"
-    ylim=[-lim_ms, lim_ms]
-    #ylim=[0, lim_ms]
+    df['encoder2'] = df['encoder'].apply(av_heuristic)
+    df['encoder3'] = df['encoder'].apply(lame_heuristic)
 
+    df['offset_ms'] = (df['offset'] * 1000).round(1)
+    df['offset_ms_abs'] = df['offset_ms'].abs()
+
+    return df
     
-#xlim=(0.8,1.0)    
-xlim=(0.0,1.0)    
-    
-def do_plot(*args, do_count=False, **kwargs):
+def do_one_plot(*args, do_count=False, **kwargs):
     if do_count:
         tool=seaborn_cdfplot_with_count
     else:
         tool=seaborn_cdfplot
-    
+
+    sns.set()
+        
     return tool(*args, **kwargs, size=4, aspect=3)
 
+def choose_limits(do_abs, lim_ms):
+
+    if do_abs:
+        offset="offset_ms_abs"
+        ylim=[0, lim_ms]
+
+    else:
+        offset="offset_ms"
+        ylim=[-lim_ms, lim_ms]
+
+    return (offset, ylim)
 
 
-do_plot(df, y=offset, hue="encoder2", ylim=ylim)
+def do_all_plots(df, lim_ms_list, do_detailed=True, do_abs=False):
+    
+    for lim_ms in lim_ms_list:
+        dataset_len = len(df)
+        title = "Dataset: #%d entries / zoom: %dms" % (dataset_len, lim_ms)
 
-if do_detailed:
-    for (name, df2) in df.groupby('encoder2'):
-        do_plot(df2, y=offset, hue="encoder", row="encoder2", ylim=ylim, xlim=xlim)
+        offset, ylim = choose_limits(do_abs, lim_ms)
 
-        
+        #xlim=(0.8,1.0)
+        xlim=(0.0,1.0)
+
+        do_one_plot(df, y=offset, hue="encoder2", ylim=ylim, title=title)
+
+        if do_detailed:
+            for (name, df2) in df.groupby('encoder2'):
+                do_one_plot(df2, y=offset, hue="encoder", row="encoder2", ylim=ylim, xlim=xlim, title=title)
+
+
+#file="../offset-encoder - 2556 files.xlsx"
+file="../offset-encoder - 8335 files.xlsx"
+tab="offset-encoder-flat"
+df = read_excel(file, tab)
+
+dataset: 8335#
+
+lim_ms_list=[50, 500]
+
+do_abs=True
+do_abs=False
+
+do_detailed = True
+    
+do_all_plots(df, lim_ms_list, do_detailed, do_abs)
+
