@@ -1,4 +1,3 @@
-
 #!pip install bs4 requests
 
 import requests
@@ -10,29 +9,6 @@ import time
 # original idea: https://gist.github.com/CharlieTLe/9272de175edb85b07e332c2108288451
 # see also: https://github.com/GodLesZ/1001tracklists-scraper/blob/master/lib/scraper.js
 
-def get_latest_urls(main_url, limit=5, grep=None, verbose=False):
-    
-    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
-    r = requests.get(main_url, headers=headers)
-    soup = bs4.BeautifulSoup(r.text, 'html.parser')
-    urls = []
-    for setLink in soup.find_all('div', class_="tlLink"):
-        link = 'https://www.1001tracklists.com' + setLink.find('a').get('href')
-        
-        #print(setLink)
-        #verbose=True
-        if grep and (grep not in link):
-            if verbose:
-                print("ignoring: %s", (link))
-            continue
-            
-        print(link)
-        urls.append(link)
-        if len(urls) >= limit:
-            break
-    
-    print("\n\n")
-    return urls
 
 def get_latest_sets(main_url, limit=5, grep=None):
     urls = get_latest_urls(main_url=main_url, limit=limit, grep=grep)
@@ -68,16 +44,33 @@ def get_one_set(url):
         print("%-5s - %s" % (cue, name))
         
         
-      
-    
+def get_latest_urls(main_url, limit=5, grep=None, verbose=True):
+    headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
+    r = requests.get(main_url, headers=headers)
+    soup = bs4.BeautifulSoup(r.text, 'html.parser')
+    urls = []
+    #print(soup)
+    for setLink in soup.find_all('div', class_="tlLink"):
+        link = 'https://www.1001tracklists.com' + setLink.find('a').get('href')
         
-#main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index.html"
-main_url="https://www.1001tracklists.com/dj/craigconnelly/index.html"
-grep="@"
-grep=None
-
-limit=5
-get_latest_sets(main_url, limit=limit, grep=grep)
+        if grep and (grep not in link):
+            if verbose:
+                print("ignoring: %s", (link))
+            continue
+            
+        #print(link)
+        urls.append(link)
+        if len(urls) >= limit:
+            break
     
+    print("\n\n")
+    return urls
 
+        
+
+main_url="https://www.1001tracklists.com/source/hck7y3/transmission-events/index2.html"
+limit=2
+
+#get_latest_urls(main_url, limit=limit)
+get_latest_sets(main_url, limit=limit, grep=grep)
     
