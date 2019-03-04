@@ -1,3 +1,4 @@
+
 #!pip install bs4 requests
 
 import requests
@@ -6,9 +7,11 @@ import json
 import re
 import time
 
-def get_latest_urls(main_url, limit=5, grep=None):
-    # original idea: https://gist.github.com/CharlieTLe/9272de175edb85b07e332c2108288451
+# original idea: https://gist.github.com/CharlieTLe/9272de175edb85b07e332c2108288451
+# see also: https://github.com/GodLesZ/1001tracklists-scraper/blob/master/lib/scraper.js
 
+def get_latest_urls(main_url, limit=5, grep=None):
+    
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
     r = requests.get(main_url, headers=headers)
     soup = bs4.BeautifulSoup(r.text, 'html.parser')
@@ -28,6 +31,14 @@ def get_latest_urls(main_url, limit=5, grep=None):
     return urls
 
 
+        
+def get_latest_sets(main_url, limit=5, grep=None):
+    urls = get_latest_urls(main_url=main_url, limit=limit, grep=grep)
+    for url in urls:
+        get_one_set(url)
+        time.sleep(0.3)
+
+        
 def get_one_set(url):
 
     headers = {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36'}
@@ -36,27 +47,32 @@ def get_one_set(url):
     
     print("\n\n%s\n" % (url))
     i = 1
-    for track in soup.find_all('span', class_="trackFormat"):
-        trackName = track.text.strip() #.replace('-', '\n')
+    
+    names = []
+    for name in soup.find_all('span', class_="trackFormat"):
+        name = name.text.strip() #.replace('-', '\n')
         #.replace('&', 'and')
         #trackName = re.sub('[^a-zA-Z0-9_]', '', trackName)
-        print("%02d - %s" % (i, trackName))
-        i = i+1
-
+        names.append(name)
+ 
+    cues = []
+    for cue in soup.find_all('div', {"class": "cueValueField"}):
+        cue = cue.text.strip()
+        cues.append(cue)
+    
+    for ((i, name), cue) in zip(enumerate(names), cues):  
+        if cue == "":
+            cue=i
+            
+        print("%-5s - %s" % (cue, name))
         
-def get_latest_sets(main_url, limit=5, grep=None):
-    urls = get_latest_urls(main_url=main_url, limit=limit, grep=grep)
-
         
-    for url in urls:
-        get_one_set(url)
-        time.sleep(0.3)
-
+      
+    
         
-
-#main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index.html"
-main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index2.html"
+main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index.html"
+#main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index2.html"
     
 limit=5
-#get_latest_urls(main_url, limit, "900")
 get_latest_sets(main_url, limit, "900")
+    
