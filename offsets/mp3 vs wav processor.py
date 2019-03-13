@@ -1,4 +1,6 @@
 #!pip install pandas seaborn
+# to launch: https://mybinder.org/v2/gh/pestrela/music_scripts/master
+
 
 # https://jupyter.org/try
 # https://docs.python.org/3.4/library/xml.etree.elementtree.html
@@ -234,7 +236,6 @@ def read_file(file, source):
         location = entry.get('Location')
         name= entry.get('Name')
 
-        
         tempo_entry = entry.find('TEMPO')
         
         inizio = float(tempo_entry.get("Inizio"))
@@ -278,6 +279,31 @@ def read_file(file, source):
     #df = df.reset_index()
     return df
 
+def type_encoder(x):
+    x = x.lower()
+    if "av" in x:
+        return "AV"
+    elif "unk" in x:
+        return "UNK"
+    elif "lame" in x:
+        return "LAME"
+    else:
+        return "OTHER"
+
+def read_ffprobe(ffprobe_file = "ffprobe.csv"):
+    # to generate this csv: cat ffprobe.edn  | egrep  "/mnt/|:encoder" |  awk '{if(index($1, "mnt")){ print FILE "  " ENC;  FILE=$0; ENC="UNK"} else { ENC=$3 }}' > ffprobe.csv
+    
+    a = pd.read_csv(ffprobe_file, names=['file',"encoder"], quotechar='"')
+    a['file'] = a['file'].str.replace('"','').str.strip()
+    a['stem'] = a['file'].apply(lambda x: Path(x).stem)
+
+    a['encoder'] = a['encoder'].str.replace('"','').str.replace('}','').str.strip()
+    
+    a['encoder'] = a['encoder'].apply(type_encoder)
+    
+    a = a[['stem','encoder']]
+    return a
+
 
 
 
@@ -297,7 +323,18 @@ print("Total entries: %d" % ( len(input_df)))
 df = pd.pivot_table(input_df, index=['stem','tag'], columns=['source','compression'], values=['inizio'],
                fill_value=0) #, aggfunc=[np.sum])
 df.columns=['RB_mp3', 'RB_wav', 'TK_mp3', 'TK_wav']
+df = df.reset_index()
 df.head(2)
+
+######
+ffprobe_file = "ffprobe.csv"
+ffprobe_df = read_ffprobe(ffprobe_file)
+ffprobe_df.head(2)
+
+df = pd.merge(df, ffprobe_df, on='stem')
+df.head(2)
+
+
 
 def diff_columns(df, col1, col2, new_name=None, ms_digits=0):
     if new_name is None:
@@ -324,14 +361,14 @@ df = diff_columns(df, 'TK_mp3', 'TK_wav', 'TK_mp3_vs_wav')
 
 df['RB_vs_TK_mp3_adjusted'] = df['RB_vs_TK_mp3'] - df['RB_vs_TK_wav']
 
-final_cols=['RB_vs_TK_mp3_adjusted', 'RB_vs_TK_mp3']
-df= df[final_cols]
-#df.head(2)
+value_cols=['RB_vs_TK_mp3_adjusted', 'RB_vs_TK_mp3']
+id_cols = ['encoder', 'tag']
+df= df[value_cols + id_cols]
+df.head(2)
 
-
+#####
 # tutorial on melt: https://hackernoon.com/reshaping-data-in-python-fa27dda2ff77
-
-melt_df=df.reset_index().melt(value_vars=cols, id_vars='tag',
+melt_df=df.reset_index().melt(value_vars=value_cols, id_vars=id_cols,
                                         var_name ="what", value_name='diff_ms')
 melt_df.head(2)
 
@@ -347,5 +384,6 @@ if do_abs:
 else:
     ylim=(-lim, lim)
 
-seaborn_cdfplot(melt_df, 'diff_ms', hue='what',row='tag', size=4, aspect=3, ylim=ylim, )
+# row='tag', col='what'
+seaborn_cdfplot(melt_df, 'diff_ms', row='encoder', hue='what', size=4, aspect=3, ylim=ylim, )
 
