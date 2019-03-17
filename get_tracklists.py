@@ -15,9 +15,9 @@ import time
 def get_latest_sets(main_url, limit=5, start=None, grep=None):
     urls = get_latest_urls(main_url=main_url, limit=limit, start=start, grep=grep)
     
-    delay = 0.5
-    if limit > 10:
-        delay = 1.1
+    delay = 1
+    if limit and (limit > 20):
+        delay = 3
         
     for url in urls:
         get_one_set(url)
@@ -67,7 +67,7 @@ def dump_list(l):
     print(*["%s\n" % (i) for i in l ])
         
         
-def get_one_set(url, debug=False):
+def get_one_set(url, debug=False, detect_problem=True):
 
     soup = get_html(url)
     
@@ -108,16 +108,37 @@ def get_one_set(url, debug=False):
         line = "%-5s - %s" % (cue, name)
         print(line)
         
-         
+        if detect_problem and i <= 4:
+            raise Exception
+            
+        
+def do_work(main_url, limit=5, start=None, grep=None, token=None, what=None):
+    global token_global
+    
+    if token == token_global:
+        print("bad token")
+        return
+    token_global = token
 
-main_url="https://www.1001tracklists.com/source/rch80m/a-state-of-trance-festival/index2.html"
-start=2
-limit=6
+    ###
+    if what == "list":
+        get_latest_urls(main_url, limit=limit, start=start)
+    elif what == "sets":
+        get_latest_sets(main_url, limit=limit, start=start, grep=grep)
+ 
+
+
+main_url="https://www.1001tracklists.com/source/ummzhc/luminosity/index4.html"
+start=15
+limit=None
 grep=None
 
-#get_latest_urls(main_url, limit=limit, start=start)
-get_latest_sets(main_url, limit=limit, start=start, grep=grep)
- 
-    
-url="https://www.1001tracklists.com/tracklist/1jmmt129/reality-test-psy-stage-a-state-of-trance-festival-900-jaarbeurs-utrecht-netherlands-2019-02-23.html"
-#get_one_set(url)
+what="list"
+what="sets"
+token=2
+
+
+do_work(main_url, limit=limit, start=start, grep=grep, token=token, what=what)
+
+
+print('\n\nALL DONE \n\n')
