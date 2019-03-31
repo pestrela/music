@@ -243,8 +243,11 @@ def df_display_count_groupby(df, col=None):
         ipython_display(df_count_groupby(df, col))
 
 
-def df_preview_intermediate_df(df, groupby=None, n=2):
+def df_preview_intermediate_df(df, groupby=None, n=2, debug=False):
     from IPython.display import display as ipython_display
+    
+    if not debug:
+        return
     
     print("*************")
     ipython_display(df.head(n))
@@ -253,6 +256,9 @@ def df_preview_intermediate_df(df, groupby=None, n=2):
 
 
 
+def df_read_csv_string(st, **kwargs):
+    from io import StringIO
+    return pd.read_csv(StringIO(st), **kwargs)
 
 
 #####
@@ -360,6 +366,7 @@ def read_ffprobe(ffprobe_file = "ffprobe.csv"):
 
 
 versions="""
+ Program Version
  TP3 3.1.1_8
  RK  5.4.1
  FFMPEG_BATCH 1.6.5
@@ -368,6 +375,7 @@ versions="""
  MediaInfoLib v18.12
 """
 
+debug = False
 
 # to generate TK XML file:   ./dj-data-converter-win\ 0.2.1.exe 1\ -\ TK\ collection.nml
 file_tk="collection/2 - TK collection.xml"
@@ -388,15 +396,15 @@ pivot_df = pd.pivot_table(input_df, index=['stem','tag'], columns=['source','com
                fill_value=0) #, aggfunc=[np.sum])
 pivot_df.columns=['RB_mp3', 'RB_wav', 'TK_mp3', 'TK_wav']
 pivot_df = pivot_df.reset_index()
-df_preview_intermediate_df(pivot_df)
+df_preview_intermediate_df(pivot_df, debug=debug)
 
 ######
 ffprobe_df = read_ffprobe(file_ffprobe)
 ffprobe_df.head(5)
-df_preview_intermediate_df(ffprobe_df)
+df_preview_intermediate_df(ffprobe_df, debug=debug)
 
 merge_df = pd.merge(pivot_df, ffprobe_df, on='stem')
-df_preview_intermediate_df(merge_df, 'encoder_simple')
+df_preview_intermediate_df(merge_df, 'encoder_simple', debug=debug)
 
 def diff_columns(df, col1, col2, new_name=None, ms_digits=0):
     if new_name is None:
@@ -426,7 +434,7 @@ merge_df['RB_vs_TK_mp3_adjusted'] = merge_df['RB_vs_TK_mp3'] - merge_df['RB_vs_T
 value_cols=['RB_vs_TK_mp3_adjusted', 'RB_vs_TK_mp3']
 id_cols = ['encoder', 'encoder_simple', 'tag']
 merge_df= merge_df[value_cols + id_cols]
-df_preview_intermediate_df(merge_df, 'encoder_simple')
+df_preview_intermediate_df(merge_df, 'encoder_simple', debug=debug)
 
 
 
@@ -441,7 +449,7 @@ melt_df.head(2)
 
 sns.set()
 do_abs=True
-lim=1000
+lim=500
 
 if do_abs:
     melt_df['diff_ms'] = melt_df['diff_ms'].abs()
@@ -449,15 +457,18 @@ if do_abs:
 else:
     ylim=(-lim, lim)
 
+    
+
 # row='tag', col='what'
 #seaborn_cdfplot(melt_df, y='diff_ms', row='encoder_simple', hue='what', size=4, aspect=3, ylim=ylim, )
+
+display(df_read_csv_string(versions, sep='\s+'))
 
 do_adjust_comparison = False
 if do_adjust_comparison:
     seaborn_cdfplot(melt_df, y='diff_ms', row='encoder_simple', hue='what', size=4, aspect=3, ylim=ylim, )    
 else:
     melt_df = melt_df.query("what == 'RB_vs_TK_mp3_adjusted'")
-    seaborn_cdfplot(melt_df, y='diff_ms', hue='encoder_simple', size=4, aspect=3, ylim=ylim, )
+    seaborn_cdfplot(melt_df, y='diff_ms', hue='encoder_simple', height=4, aspect=3, ylim=ylim, )
     df_display_count_groupby(melt_df, 'encoder_simple')
-    
     
