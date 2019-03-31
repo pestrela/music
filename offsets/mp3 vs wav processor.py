@@ -220,8 +220,46 @@ def seaborn_cdfplot_with_count(data, *, y=None, **kwargs):
     
     seaborn_cdfplot(data=data, y=y, **kwargs)
     seaborn_countplot(data=data, y=y, **kwargs)
+
     
+#####
+##### NEW library fuctions follow here
+#####    
+
+def df_count_groupby(df, col):
     
+    df = df.groupby(col).count().iloc[:,0:1]
+    df.columns = ['count']
+    return df
+
+
+    
+def df_display_count_groupby(df, col=None):
+    from IPython.display import display as ipython_display
+    
+    if col is None:
+        print("number of rows: %d" % (len(df)))
+    else:
+        ipython_display(df_count_groupby(df, col))
+
+
+def df_preview_intermediate_df(df, groupby=None, n=2):
+    from IPython.display import display as ipython_display
+    
+    print("*************")
+    ipython_display(df.head(n))
+    
+    df_display_count_groupby(df, groupby)
+
+
+
+
+
+#####
+##### Main program functions starts here
+#####
+
+
 def read_file(file, source):
     root = ET.parse(file).getroot()
     collection=root.find('COLLECTION')
@@ -281,38 +319,64 @@ def read_file(file, source):
 
 def type_encoder(x):
     x = x.lower()
+    if "lavf" in x:
+        return "LAVF"
+    if "lavc" in x:
+        return "LAVC"
     if "av" in x:
         return "AV"
-    elif "unk" in x:
-        return "UNK"
     elif "lame" in x:
         return "LAME"
+    elif "unk" in x:
+        return "UNK_ENC"
     else:
-        return "OTHER"
+        return "OTHER_ENC"
 
 def read_ffprobe(ffprobe_file = "ffprobe.csv"):
-    # to generate this csv: cat ffprobe.edn  | egrep  "/mnt/|:encoder" |  awk '{if(index($1, "mnt")){ print FILE "  " ENC;  FILE=$0; ENC="UNK"} else { ENC=$3 }}' > ffprobe.csv
+    # to generate this csv from Alex's tool:
+    #   ln -sf ../../collection\ files/1\ -\ TK\ collection.nml collection.nml
+    #   ln -sf ../../collection\ files/4\ -\ rekordbox\ -\ small\ collection.xml rekordbox.xml
+    #    #cat ffprobe.edn  | egrep  "/mnt/|:encoder" |  awk '{if(index($1, "mnt")){ print FILE "  " ENC;  FILE=$0; ENC="UNK"} else { ENC=$3 }}' > ffprobe.csv
     
-    a = pd.read_csv(ffprobe_file, names=['file',"encoder"], quotechar='"')
+    # new version:
+    #   find . -iname "*.mp3" | tr '\n' '\0' | xargs -0 -n1 -- ffprobe 2>&1 | cat - > step1.txt
+    #   cat step1.txt | egrep -i "encode|Input.*from" | egrep -B1 -i "encoder.* : Lav" > step2.txt
+    #   cat step2.txt | egrep "^Input" -A1 | egrep -v "^--"  | paste - - |  cut -b21- | sed 's/:.*:/,/' > ffprobe.csv
+        
+    a = pd.read_csv(ffprobe_file, names=['file',"encoder"], quotechar="'")
     a['file'] = a['file'].str.replace('"','').str.strip()
     a['stem'] = a['file'].apply(lambda x: Path(x).stem)
 
     a['encoder'] = a['encoder'].str.replace('"','').str.replace('}','').str.strip()
     
-    a['encoder'] = a['encoder'].apply(type_encoder)
+    a['encoder_simple'] = a['encoder'].apply(type_encoder)
     
-    a = a[['stem','encoder']]
+    a = a[['stem','encoder', 'encoder_simple']]
     return a
 
+#####
+##### Main program statements starts here
+#####
 
 
+versions="""
+ TP3 3.1.1_8
+ RK  5.4.1
+ FFMPEG_BATCH 1.6.5
+ ffmpeg 4.1.1
+ ffprobe 4.1.1
+ MediaInfoLib v18.12
+"""
 
-file1="1 - RB - import of small tagged dataset.xml"
-file2="2 - TK - import of small tagged dataset.xml"
+
+# to generate TK XML file:   ./dj-data-converter-win\ 0.2.1.exe 1\ -\ TK\ collection.nml
+file_tk="collection/2 - TK collection.xml"
+file_rb="collection/4 - rekordbox - small collection.xml"
+file_ffprobe = "collection/ffprobe.csv"
 
 
-input_df1 = read_file(file1, "RB")
-input_df2 = read_file(file2, "TK")
+input_df1 = read_file(file_rb, "RB")
+input_df2 = read_file(file_tk, "TK")
 input_df = pd.concat([input_df1, input_df2], ignore_index=True)
 
 input_df['inizio'] = input_df['inizio'].astype(float)
@@ -320,21 +384,19 @@ input_df['bpm'] = input_df['bpm'].astype(float)
 print("Total entries: %d" % ( len(input_df)))
 
 
-df = pd.pivot_table(input_df, index=['stem','tag'], columns=['source','compression'], values=['inizio'],
+pivot_df = pd.pivot_table(input_df, index=['stem','tag'], columns=['source','compression'], values=['inizio'],
                fill_value=0) #, aggfunc=[np.sum])
-df.columns=['RB_mp3', 'RB_wav', 'TK_mp3', 'TK_wav']
-df = df.reset_index()
-df.head(2)
+pivot_df.columns=['RB_mp3', 'RB_wav', 'TK_mp3', 'TK_wav']
+pivot_df = pivot_df.reset_index()
+df_preview_intermediate_df(pivot_df)
 
 ######
-ffprobe_file = "ffprobe.csv"
-ffprobe_df = read_ffprobe(ffprobe_file)
-ffprobe_df.head(2)
+ffprobe_df = read_ffprobe(file_ffprobe)
+ffprobe_df.head(5)
+df_preview_intermediate_df(ffprobe_df)
 
-df = pd.merge(df, ffprobe_df, on='stem')
-df.head(2)
-
-
+merge_df = pd.merge(pivot_df, ffprobe_df, on='stem')
+df_preview_intermediate_df(merge_df, 'encoder_simple')
 
 def diff_columns(df, col1, col2, new_name=None, ms_digits=0):
     if new_name is None:
@@ -354,28 +416,31 @@ def diff_columns(df, col1, col2, new_name=None, ms_digits=0):
     return df
     
 
-df = diff_columns(df, 'RB_mp3', 'TK_mp3', 'RB_vs_TK_mp3')
-df = diff_columns(df, 'RB_wav', 'TK_wav', 'RB_vs_TK_wav')
-df = diff_columns(df, 'RB_mp3', 'RB_wav', 'RB_mp3_vs_wav')
-df = diff_columns(df, 'TK_mp3', 'TK_wav', 'TK_mp3_vs_wav')
+merge_df = diff_columns(merge_df, 'RB_mp3', 'TK_mp3', 'RB_vs_TK_mp3')
+merge_df = diff_columns(merge_df, 'RB_wav', 'TK_wav', 'RB_vs_TK_wav')
+merge_df = diff_columns(merge_df, 'RB_mp3', 'RB_wav', 'RB_mp3_vs_wav')
+merge_df = diff_columns(merge_df, 'TK_mp3', 'TK_wav', 'TK_mp3_vs_wav')
 
-df['RB_vs_TK_mp3_adjusted'] = df['RB_vs_TK_mp3'] - df['RB_vs_TK_wav']
+merge_df['RB_vs_TK_mp3_adjusted'] = merge_df['RB_vs_TK_mp3'] - merge_df['RB_vs_TK_wav']
 
 value_cols=['RB_vs_TK_mp3_adjusted', 'RB_vs_TK_mp3']
-id_cols = ['encoder', 'tag']
-df= df[value_cols + id_cols]
-df.head(2)
+id_cols = ['encoder', 'encoder_simple', 'tag']
+merge_df= merge_df[value_cols + id_cols]
+df_preview_intermediate_df(merge_df, 'encoder_simple')
+
+
+
+
 
 #####
 # tutorial on melt: https://hackernoon.com/reshaping-data-in-python-fa27dda2ff77
-melt_df=df.reset_index().melt(value_vars=value_cols, id_vars=id_cols,
+melt_df=merge_df.reset_index().melt(value_vars=value_cols, id_vars=id_cols,
                                         var_name ="what", value_name='diff_ms')
 melt_df.head(2)
 
+
 sns.set()
-
 do_abs=True
-
 lim=1000
 
 if do_abs:
@@ -385,5 +450,14 @@ else:
     ylim=(-lim, lim)
 
 # row='tag', col='what'
-seaborn_cdfplot(melt_df, 'diff_ms', row='encoder', hue='what', size=4, aspect=3, ylim=ylim, )
+#seaborn_cdfplot(melt_df, y='diff_ms', row='encoder_simple', hue='what', size=4, aspect=3, ylim=ylim, )
 
+do_adjust_comparison = False
+if do_adjust_comparison:
+    seaborn_cdfplot(melt_df, y='diff_ms', row='encoder_simple', hue='what', size=4, aspect=3, ylim=ylim, )    
+else:
+    melt_df = melt_df.query("what == 'RB_vs_TK_mp3_adjusted'")
+    seaborn_cdfplot(melt_df, y='diff_ms', hue='encoder_simple', size=4, aspect=3, ylim=ylim, )
+    df_display_count_groupby(melt_df, 'encoder_simple')
+    
+    
