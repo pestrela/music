@@ -194,6 +194,10 @@ while [ "$#" -ge 1 ]; do
     tag_filename=1
     ;;
     
+  -h)
+    display_help
+    ;;
+    
   *)
     add_argv "$1"
     ;;
