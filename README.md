@@ -1,5 +1,4 @@
-# music_scripts
-Various CLI tools for DJs to manage their media files and DJ collection
+This folder mostly contains tools for DJs to manage their media files and their DJ collection
 
 ## macos_converters
 Tools to manage Traktor colleciton and runing DJCU/Rekordbuddy in Windows
