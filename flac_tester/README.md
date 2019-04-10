@@ -22,7 +22,7 @@ If you want a manual GUI, I recommend http://spek.cc/
 ![spek](./demo_spek.png)
 
 If you an automatic GUI, I recommend https://fakinthefunk.net/en/
-![faking the funk](./demo_faking_the funk.png)
+![faking the funk](./demo_faking_the_funk.png)
 
 The difference of these tools is that they don't tag the files for inspection in Explorer / Finder
 
