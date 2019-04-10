@@ -19,7 +19,7 @@ These features makes it easy to quickly check for fakeflacs inside Windows_Explo
 # GUI Alternatives
 
 If you want a manual GUI, I recommend http://spek.cc/
-![spek](spek_demo.png)
+![spek](demo spek.PNG)
 
 If you an automatic GUI, I recommend https://fakinthefunk.net/en/
 ![faking the funk](faking%20the%20funk%20example.png)
