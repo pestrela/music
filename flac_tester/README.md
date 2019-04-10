@@ -1,21 +1,22 @@
-# summary
+# Summary
 
 This program extends fakeflac (http://www.maurits.vdschee.nl/fakeflac/) with two features:
-* tagging the mp3/mp4 cutoff as metadata
-* same, but renaminig the filename itself
+* tagging the mp3/mp4 cutoff **as metadata**
+* tagging the mp3/mp4 cutoff **as filename**
 
-These features  makes it easy to quyickly check for fake flacs inside Windows explorer / MacOS finder:
-https://linuxhint.com/install_ubuntu_windows_10_wsl/
-
-example:
+These features makes it easy to quickly check for fakeflacs inside Windows_Explorer / MacOS_Finder:
 ![Fake_flac](fake_flac_demo.png)
 
-# installation
+# Installation
 
-* Running linux nativelly inside windows 10: https://linuxhint.com/install_ubuntu_windows_10_wsl/
-* sudo apt-get install sndfile-programs python-scipy python-matplotlib ffmpeg
-
-# alternatives
+* Linux:
+  * sudo apt-get install sndfile-programs python-scipy python-matplotlib ffmpeg
+* Windows:
+  * The WSL enables Running linux nativelly inside windows 10: https://linuxhint.com/install_ubuntu_windows_10_wsl/
+* MacOS
+  * <TBD>
+  
+# GUI Alternatives
 
 If you want a manual GUI, I recommend http://spek.cc/
 ![spek](spek_demo.png)
