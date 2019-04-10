@@ -18,11 +18,13 @@ These features makes it easy to quickly check for fakeflacs inside Windows_Explo
   
 # GUI Alternatives
 
+## Spek
 If you want a manual GUI, I recommend http://spek.cc/
 ![spek](./demo_spek.png)
 
+## Faking the Funk
 If you an automatic GUI, I recommend https://fakinthefunk.net/en/
 ![faking the funk](./demo_faking_the_funk.png)
 
-The difference of these tools is that they don't tag the files for inspection in Explorer / Finder
+The difference of these tools to fake_flac is that they don't tag the files for inspection in Explorer / Finder
 
