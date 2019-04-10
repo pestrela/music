@@ -9,10 +9,10 @@ These features makes it easy to quickly check for fakeflacs inside Windows_Explo
 
 # Installation
 
-* Linux:
-  * sudo apt-get install sndfile-programs python-scipy python-matplotlib ffmpeg
 * Windows:
   * The WSL enables Running linux nativelly inside windows 10: https://linuxhint.com/install_ubuntu_windows_10_wsl/
+* Linux:
+  * sudo apt-get install sndfile-programs python-scipy python-matplotlib ffmpeg
 * MacOS
   * <TBD>
   
