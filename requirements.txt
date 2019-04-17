@@ -1,2 +1,9 @@
 bs4
-requests
+BeautifulSoup4
+lxml 
+html5librequests
+numpy
+pandas
+seaborn
+matplotlib
+jupyter_contrib_nbextensions
