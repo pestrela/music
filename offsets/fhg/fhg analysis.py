@@ -506,7 +506,7 @@ def display_versions(versions):
         
 
 def df_convert_to_stem(df, col="file", new_col="stem"):
-    csv_df[new_col] = csv_df[col].apply(lambda x: Path(x).stem)
+    df[new_col] = df[col].apply(lambda x: Path(x).stem)
     return df
 
 
@@ -673,6 +673,7 @@ def do_cdf_plot_breakdown_tag(df, y_list=None, hue_list=None, *, do_agg=False, t
             #print(y, hue)
             do_cdf_plot(df, y=y, hue=hue, title=y_title, **kwargs)    
             
+
 
 
 
