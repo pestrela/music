@@ -703,18 +703,24 @@ if dump_versions:  display_versions(versions)
 file_rb='2 - RB - only small tagged dataset.xml'
 file_tk='7 - TK - only small tagged dataset.xml'
     
+print("Step1")
 collection_df = step1_read_dj_collections(file_rb, file_tk)
 do_cdf_plot_breakdown_tag(collection_df, ['RB_vs_TK_adj'], ["tag"],  title='Traktor vs RekordBox "INIZIOS" (wav corrected)')
     
 
+print("Step2")
 mp3_encoder_file="mp3_encoder.csv"
 mp3_offset_file="mp3_offset.csv"
 info_df = step2_read_csv_files(mp3_encoder_file, mp3_offset_file)
 do_cdf_plot_breakdown_tag(info_df, ['fhg_vs_of1', 'fhg_vs_mpg', 'fhg_vs_mpg_nogapless'], None, title='Decoded mp3 differences')
 
+print("Step3")
+
 merge_df = pd.merge(collection_df, info_df, on='stem')
 df_preview_debug(merge_df)
 do_cdf_plot_breakdown_tag(merge_df, [ 'fhg_vs_mpg_nogapless'], ['tag'], title='Decoded mp3 differences (tagged)')
+
+print("Step4")
 
 merge_df['RB+TK__vs__FHG+MPG'] = merge_df['RB_vs_TK_adj'] + merge_df['fhg_vs_mpg']
 merge_df['RB+TK__vs__FHG+MPGNGL'] = merge_df['RB_vs_TK_adj'] + merge_df['fhg_vs_mpg_nogapless']
@@ -728,8 +734,6 @@ do_cdf_plot_breakdown_tag(simple_df, ["RB+TK__vs__FHG+MPGNGL"], ["tag"],  title=
 
 
 """ Overview of steps and graphs:
-
-""" Overview of steps and graphs:"""
 
 step 1:
   - objective: compare XML inizios for MP3s+WAV that were manually tagged
