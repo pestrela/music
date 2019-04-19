@@ -1,299 +1,116 @@
 ffprobe|mp3guessenc|mediainfo|file
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/01 - MARKUS SCHULZ FT. BROOKE TOMLINSON - In The Night.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/02 - GARETH EMERY AND BEN GOLD - Until We Meet Again - Extended Mix.mp3
-UNK|LAME3.98.2|LAME3.98|bad - makes shift/03 - COSMIC GATE AND EMMA HEWITT - Going Home - Gareth Emery Remix.mp3
-Lavf|LAME3.99.5|LAME3.99.5|bad - makes shift/03 - ESTIVA - Blossom - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/04 - LANGE vs GARETH EMERY - Another You, Another Me - Solis And Sean Truby Remix.mp3
-Lavf|LAME3.99.5|LAME3.99.5|bad - makes shift/04 - ORJAN NILSEN FT. RYKKA - The Hardest Part - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/05 - ARMIN VAN BUUREN FT. ERIC VLOEIMANS - Embrace - Arty Extended Remix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/05 - SUPER8 & TAB - Cosmo - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/08 - VENOM ONE - Elysia - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99.5|bad - makes shift/08 - VINCENT DE MOOR - Fly Away - Khomha Extended Remix.mp3
-UNK|LAME3.98.2|LAME3.98|bad - makes shift/09 - LANGE - Imagineer - Alex M.o.r.p.h Remix.mp3
-UNK|LAME3.98.2|LAME3.98|bad - makes shift/11 - ID - Allen Watts - Gravity (original Mix).mp3
-UNK|LAME3.99.5|UNK|bad - makes shift/11 - ROBERT NICKSON Feat. CAT MARTIN - Every Sun - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/12 - SIMON PATTERSON FT. LUCY PULLIN - Now I Can Breathe Again - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/13 - ARMIN VAN BUUREN FT. LYRICA ANDERSON - Gotta Be Love - Giuseppe Ottaviani Remix.mp3
-Lavf|LAME3.99.5|LAME3.99.5|bad - makes shift/13 - JOHN O'CALLAGHAN - Choice Of The Angels.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/14 - CRAIG CONNELLY - Out Of Orbit.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/14 - GARETH EMERY FT. GAVRIELLE - Far From Home - Craig Connelly Extended Remix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/14 - JOHN O'CALLAGHAN AND CLARE STAGG - Lies Cost Nothing - Will Atkinson Remix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/17 - BRYAN KEARNEY - Awaken - Ucast Rewake.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/18 - SIMON PATTERSON AND MAGNUS - Evoke - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/19 - RELOCATE vs ROBERT NICKSON - Proxima - Original Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/20 - RELOCATE vs ROBERT NICKSON - Everest - Extended Mix.mp3
-UNK|LAME3.98.2|LAME3.98|bad - makes shift/21 - DARREN PORTER - Terraforming - Original Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/21 - RELOCATE vs ROBERT NICKSON - Jetpack - Original Mix.mp3
-UNK|LAME3.98.2|LAME3.98|bad - makes shift/22 - RELOCATE vs ROBERT NICKSON - Vivid - Original Mix.mp3
-UNK|LAME3.99.5|LAME3.99.5|bad - makes shift/22 - THE NOBLE SIX - Firewalker - Extended Mix.mp3
-Lavf|LAME3.99.5|LAME3.99.5|bad - makes shift/23 - ECO & DRIFTMOON - Trust In The Wind - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99|bad - makes shift/27 - FACTOR B - Luna Therapy - Extended Mix.mp3
-Lavc56.19|LAME3.99.5|LAME3.99.5|bad - makes shift/CHRIS BROWN - Don't Wake Me Up.mp3
-Lavf54.20.4|LAME3.99.5|LAME3.99.5|bad - makes shift/Clean Bandit - Rockabye ft. Sean Paul & Anne.mp3
-UNK|LAME3.98.4|LAME3.98.4|bad - makes shift/DAVID GUETTA ft. KELLY ROWLAND - When Love Takes Over - Extended.mp3
-UNK|UNK|UNK|bad - makes shift/ENRIQUE IGLESIAS and SAMMY ADAMS - I Finally Found You.mp3
-UNK|LAME3.99.5|LAME3.99.5|bad - makes shift/JUSTIN BIEBER ft. J BALVIN - Sorry - Spanish-latin Remix.mp3
-Lavc57.24|LAME3.99.5|LAME3.99.|bad - makes shift/ROBIN SCHULZ ft. JAMES BLUNT - Ok - Radio Edit.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/0 ICONA POP - I Love It - Cobra Starship Radio Edit.mp3
-LAME3.93|LAME3.93|LAME3.93|good - no shift/01 - ABOVE AND BEYOND FT. ALEX VARGAS - All Over The World - Above And Beyond Club Mix.mp3
-UNK|UNK|UNK|good - no shift/01 - ARMIN VAN BUUREN vs ARTY - Nehalennia.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/01 - POBSKY - Final Cloud - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/01 - PURPLE HAZE Feat. BONUS CHECK - Light Me Up - DJ Estrela Intro.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/02 - ABOVE AND BEYOND FT. ZOE JOHNSTON - Peace Of Mind - Arty Remix.mp3
-UNK|UNK|UNK|good - no shift/02 - ANDY MOOR - K Ta - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/02 - ANDY MOOR - K Ta - Original Mix.mp3.fhg.default.wav
-UNK|UNK|UNK|good - no shift/02 - ERIC PRYDZ - Generate - Orkidea Remix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/02 - ERIC PRYDZ VS. CHVRCHES - Tether - Eric Prydz Private Remix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/02 - PROTOCULTURE - Cobalt.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/03 - ALEX M.O.R.P.H. - New York City - Original Mix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/03 - BEATSOLE - Before I Wake - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/03 - MAURO PICOTTO - Lizard - Solis And Sean Truby's Ibiza Mix.mp3
-UNK|UNK|UNK|good - no shift/03 - SHOGUN - Space Odyssey - Original Mix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/04 - KYAU ALBERT - Follow The Waves - Mino Safy Remix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/04 - MARK ETESON - Blackboard - Jon O'bir Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/04 - OMNIA & IRA - The Fusion - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/04 - SOLARSTONE WITH ALY AND FILA - Fireisland - Future Disciple Remix.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/05 - DARK MATTERS FT. ANA CRIADO - The Quest Of A Dream - Paul Webster Remix .mp3
-UNK|UNK|UNK|good - no shift/05 - DARK MATTERS FT. JESS MORGAN - The Perfect Lie - Beat Service Remix.mp3
-LAME3.92|LAME3.92|LAME3.92|good - no shift/05 - GAIA - In Principio - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/05 - SEVEN LIONS FT. PAUL MEANY - Higher Love - DJ Estrela Beat.mp3
-UNK|UNK|UNK|good - no shift/06 - ANDREW BAYER - Nobody Told Me - DJ Estrela Extended.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/06 - BEAT SERVICE AND NEEV KENNEDY - Not This Time - Original Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/06 - FUTURE DISCIPLE - Kwiwakurra - Original Mix.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/06 - PAUL VAN DYK FT. SUE MCLAREN - Lights - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/06 - PROTOCULTURE FT. SHANNON HURLEY - Sun Gone Down - Original Mix.mp3
-LAME3.98|LAME3.98|LAME3.98|good - no shift/06 - TRIPLE A - Winter Stayed - Alex Morph Mix .mp3
-UNK|UNK|UNK|good - no shift/07 - DEEP CARE - Blacks - Daniel Kandi Lifted Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/07 - DRIFTMOON - Howl At The Moon - Solarstone Retouch.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/07 - FERRY CORSTEN - Eternity - Arkham Knights Extended Remix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/07 - KYAU AND ALBERT - Memory Lane - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/07 - PROTOCULTURE - Ode To The Ocean.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/07 - SOLIS AND SEAN TRUBY - Loaded - Ben Gold Remix.mp3
-UNK|UNK|UNK|good - no shift/08 - ID - Track 08 52.mp3
-UNK|UNK|UNK|good - no shift/08 - LONDON GRAMMAR - Wasting My Young Years - Solarstone Pure Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/08 - MICHAEL L. FT. ALYONA B. - I Will Never Burn Again - Stoneface And Terminal Remix.mp3
-UNK|UNK|UNK|good - no shift/08 - SOLARSTONE - Love Theme From Blade Runner - Pure Mix.mp3
-LAME3.99|LAME3.99|LAME3.99|good - no shift/08 - ULTIMATE - Few Nights - Andy Tau Remix.mp3
-UNK|UNK|UNK|good - no shift/09 - ID - Track 09 48.mp3
-UNK|UNK|UNK|good - no shift/09 - LEMON - We Can't Fly - Solarstone Pure Mix.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/09 - PAUL VAN DYK - The Sun After Heartbreak - Nick Callaghan And Will Atkinson Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/09 - THE THRILLSEEKERS - Just Because.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/09 - WILL ATKINSON - Numb The Pain - Original Mix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/10 - ANTON FIRTICH Pres. AF PROJECT - Something Wrong - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/10 - ID - Track 10 16.mp3
-UNK|UNK|UNK|good - no shift/10 - ID - Track 10 17.mp3
-UNK|LAME3.90|LAME3.90|good - no shift/10 - MATTI LAAMANEN - Flakes - Extended.mp3
-LAME3.98|LAME3.98|LAME3.98|good - no shift/10 - MIKE FOYLE PRES STATICA - Deadly Nightshade - Phynn Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/10 - PHOTOGRAPHER AND ABSTRACT VISION - Zero Gravity.mp3
-UNK|UNK|UNK|good - no shift/10 - SIMON PATTERSON AND GREG DOWNEY FT. BO BRUCE - Come To Me.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/10 - THOMAS BRONZWAER - Still Waters - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/10,000 MANIACS - More Than This.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/11 - AIRBASE - We Might Fall.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/11 - MARK SHERRY - Gravitational Waves - Original Mix.mp3
-LAME3.99r|LAME3.99.4|LAME3.99r|good - no shift/11 - MAX GRAHAM vs MAARTEN DE JONG - Lekker - Original Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/11 - SOPHIE SUGAR - Skyline - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/11 - TILLMAN UHRMACHER - On The Run - Ocean To Shore Club Mix.mp3
-UNK|UNK|UNK|good - no shift/12 - ABOVE AND BEYOND - Sun In Your Eyes - Solarstate Remode.mp3
-LAME3.98|LAME3.98|LAME3.98|good - no shift/12 - GARETH EMERY FT. BO BRUCE - U - Bryan Kearney Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/12 - GIUSEPPE OTTAVIANI - Aurora - Onair Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/12 - MENNO DE JONG - Turtle Paradise - Original Mix .mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/13 - ALEX MORPH AND PAUL VAN DYK - We Are - Original Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/13 - DAN STONE - Topaz - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/13 - NERY - Nineteen Ninety - Original Mix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/13 - TOM COLONTONIO FT. CIBON - The Sun - Original Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/14 - JAMES RIGBY - Night Owl - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/14 - PHOTOGRAPHER - Airport - Original Mix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/14 - TRANCEYE - Good Morning Sunshine - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/15 - ILLENIUM FT. JONI FATORA - Fortress - Seven Lions Roots Mix - DJ Estrela Edit.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/15 - ORJAN NILSEN - Soulflayer - Original Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/15 - REORDER AND FERRY TAYLE - Tomorroworld - Extended Mix.mp3
-UNK|LAME3.93||good - no shift/15 - SOLARSTONE - Lovers - Pure Mix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/15 - THOMAS BRONZWAER - Proteus - Original Mix.mp3
-UNK|LAME3.97|LAME3.97|good - no shift/16 - ABOVE AND BEYOND - Sun In Your Eyes - Innersync Uplifting Remix.mp3
-UNK|UNK|UNK|good - no shift/16 - ANDRE VISIOR & KAY STONE - Something For Your Mind - Giuseppe Ottaviani Remix.mp3
-LAME3.99r|LAME3.99.3|LAME3.99r|good - no shift/16 - MARK W - Azrael - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/16 - NU-NRG - Dreamland - Chris Metcalfe Bootleg.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/16 - PAUL OAKENFOLD - Full Moon Party - Original Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/17 - AIRSCAPE AND PEETU S - Pianomatic - Airscape Festival Mix.mp3
-UNK|UNK|UNK|good - no shift/17 - JOCHEN MILLER - Lost Connection - Andres Sanchez Uplifting Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/17 - ROBERT NICKSON - Somewhere In Spacetime - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/18 - BEAT SERVICE - Cafe Del Mar - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/18 - DARREN PORTER - Cause And Effect - DJ Estrela Edit.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/18 - ROYKSOPP - I Had This Thing - Solarstone Pure Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/19 - CRAIG CONNELLY FT KATE MILES - Lost Without You - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/19 - PAUL VAN DYK - For An Angel - Live Global Gathering 2007 - DJ Estrela Edit.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/20 - ALY & FILA WITH FERRY TAYLE - Concorde - Extended Mix.mp3
-UNK|OFL|UNK|good - no shift/24 - ARMIN VAN BUUREN - Rush Hour - Amir Hussain Bootleg.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/25 - MIDWAY - Cobra - Niko Zografos Remix.mp3
-UNK|UNK|UNK|good - no shift/26 - AVA MEA - In The End - Amir Hussain Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/28 - SHERIDAN GROUT - The Last Word - Sam Laxton Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/29 - WILL ATKINSON - Leave A Message - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/3LAU, PARIS and SIMO ft. BRIGHT LIGHTS - Escape - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/99 - ID - Forgotten Lies.mp3
-UNK|UNK|UNK|good - no shift/99 - LONDON GRAMMAR - Hey Now - Arty Remix Acho.mp3
-UNK|UNK|UNK|good - no shift/99 - MARK LEANINGS VS. SPACE ROCKERZ & TANIA ZYGAR - Whatever Happened To Puzzle Piece (john O'callaghan Mashup).mp3
-LAME3.92|LAME3.92|LAME3.92|good - no shift/AC DC - Highway To Hell - Johnes Bootleg.mp3
-UNK|UNK|UNK|good - no shift/AC DC - Thunderstruck - Djlight Extended Mix.mp3
-UNK|encoder|UNK|good - no shift/ALESSO and MATTHEW KOMA - Years - Vocal Extended Mix.mp3
-UNK|LAME3.98.2|LAME3.98.2|good - no shift/ALEX MICA - Dalinda.mp3
-UNK|LAME3.99.3|UNK|good - no shift/ALX VELIZ - Dancing Kizomba - Spanish Version.mp3
-UNK|LAME3.96|LAME3.96|good - no shift/ANITA MEYER - Why Tell My Why - Guilliano Radio Mix.mp3
-UNK|UNK|UNK|good - no shift/ARIANA GRANDE - Break Free - ft. Zedd.mp3
-UNK|UNK|UNK|good - no shift/ARMIN VAN BUUREN ft. TREVOR GUTHRIE - This Is What It Feels Like.mp3
-UNK|UNK|UNK|good - no shift/AVICII ft. ALOE BLACC - Wake Me Up.mp3
-UNK|UNK|UNK|good - no shift/BASTILLE - Pompeii - Audien Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/BASTO - Again and Again - Extended Mix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/BINGO PLAYERS - Get Up - Rattle - ft. Far East Movement.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/BOB SINCLAR - I Feel For You - Erick Morillo Intro Edit.mp3
-UNK|UNK|UNK|good - no shift/BODYROCKERS - I Like The Way - Junior Jack 'rock Da House' Club Mix.mp3
-UNK|LAME3.97|LAME3.97|good - no shift/BRITNEY SPEARS - Hold It Against Me.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/BRITNEY SPEARS - I Wanna Go.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/BRITNEY SPEARS - Till The World Ends.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/BROS - I Owe You Nothing - Shep Pettibone Remix.mp3
-UNK|UNK|UNK|good - no shift/BRYAN ADAMS vs OTTO KNOWS - A Million Swedish Summers - The White Panda Bootleg.mp3
-UNK|UNK|UNK|good - no shift/BRYAN FERRY - Kiss and Tell - Dance Mix.mp3
-UNK|UNK|UNK|good - no shift/BRYAN FERRY - Kiss and Tell.mp3
-UNK|UNK|UNK|good - no shift/CALVIN HARRIS - Feel So Close - Extended Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/CALVIN HARRIS - Summer - Extended Mix.mp3
-UNK|LAME3.98.2|LAME|good - no shift/CALVIN HARRIS - Summer - Ju1c3d Daylight Savings Extended Edit .mp3
-UNK|UNK|UNK|good - no shift/CALVIN HARRIS - Summer - Lee Morrison Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/CALVIN HARRIS - Summer.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/CALVIN HARRIS ft. ELLIE GOULDING - I Need Your Love.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/CALVIN HARRIS ft. FLORENCE WELCH - Sweet Nothing - Cutedit Extended.mp3
-UNK|UNK|UNK|good - no shift/CALVIN HARRIS ft. FLORENCE WELCH - Sweet Nothing - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/CALVIN HARRIS ft. HURTS - Under Control - Original Mix.mp3
-UNK|OFL|UNK|good - no shift/CALVIN HARRIS ft. JOHN NEWMAN - Blame - Edit.mp3
-UNK|LAME3.98.4|LAME3.98.4|good - no shift/CALVIN HARRIS ft. JOHN NEWMAN - Blame - Leo Burn and Alexx Slam Remix.mp3
-UNK|LAME3.98.4|LAME3.98.4|good - no shift/CALVIN HARRIS ft. JOHN NEWMAN - Blame - Original.mp3
-UNK|UNK|UNK|good - no shift/CAMOUFLAGE - The Great Commandment - Extended Dance Mix.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/CANDY STATION - Young Hearts Run Free - Robbie Rivera Rmx.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/CARLY RAE JEPSEN - Call Me Maybe.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/CHRIS BROWN - Turn Up The Music - Prod. Fuego and The Underdogs.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/CHRIS JAMES, ARTY - Together We Are - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/CHRISTINA AGUILERA - Beautiful - Peter Rauhofer Mix.mp3
-UNK|UNK|UNK|good - no shift/CHRISTINA AGUILERA - Your Body - Audien Remix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/CLEAN BANDIT ft. SEAN PAUL and ANNE-MARIE - Rockabye.mp3
-UNK|UNK|UNK|good - no shift/COLDPLAY - A Sky Full Of Stars - Artec Rework.mp3
-UNK|LAME3.98.4|LAME3.98.4UUUUUUUUU|good - no shift/DADDY YANKEE - Limbo - Original.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/DANIEL SANTACRUZ - Lento - Hallux Makenzo Remix.mp3
-UNK|UNK|UNK|good - no shift/DAVID BOWIE - Rebel Rebel - Kapla's Drum Remix.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/DAVID GUETTA ft. SIA - She Wolf - Radio Edit.mp3
-LAME3.98|LAME3.98|LAME3.98|good - no shift/DAVID GUETTA ft. SIA - Titanium.mp3
-UNK|UNK|UNK|good - no shift/DEEPEST BLUE - Shooting Star - Dirty Radio Remix.mp3
-UNK|UNK|UNK|good - no shift/DJ SNAKE ft. JUSTIN BIEBER - Let Me Love You - Xmix Remix.mp3
-UNK|LAME3.82|LAME3.82|good - no shift/DON OMAR - Danza Kuduro - ft. Lucenzo.mp3
-LAME3.99r|LAME3.99.3|LAME3.99r|good - no shift/ELLIE GOULDING - Burn.mp3
-LAME3.99r|LAME3.99.4|LAME3.99r|good - no shift/ELLIE GOULDING ft. CALVIN HARRIS - I Need Your Love.mp3
-UNK|LAME3.98.2|LAME3.98.2|good - no shift/ENRIQUE IGLESIAS - Bailando - Extended Christian Mansilla Djs.mp3
-LAME3.98|LAME3.98|LAME3.98|good - no shift/ENRIQUE IGLESIAS ft. PITBULL - I Like It - Radio Edit.mp3
-UNK|UNK|UNK|good - no shift/ENRIQUE IGLESIAS ft. PITBULL - I Like It - Ultimix.mp3
-LAME3.93|LAME3.93|LAME3.93|good - no shift/ERIC PRYDZ - Call On Me - Extended.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/EVA SIMONS ft. KONSHENS - Policeman.mp3
-LAME3.99r|LAME3.99.3|LAME3.99r|good - no shift/FANNY LU ft. GENTE DE ZONA - Lo Que Dios Quiera - Dj Cristian Gil Remix 2016.mp3
-UNK|UNK|UNK|good - no shift/FILUR - I Want You - Club Version.mp3
-UNK|UNK|UNK|good - no shift/FLEETWOOD MAC - Little Lies - Orig.mp3
-LAME3.99|LAME3.99|LAME3.99|good - no shift/FLO RIDA - Good Feeling - Original Radio.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/FLO RIDA - Good Feeling - vs Avicci Levels.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/FLO RIDA ft. SIA - Wild Ones.mp3
-LAME3.99r|LAME3.99.3|LAME3.99r|good - no shift/FLORIDA ft. TAIO CRUZ - Hangover.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/FRAGMA - Tocas Miracle - In Petto Remix.mp3
-UNK|UNK|UNK|good - no shift/FREEMASONS ft. AMANDA WILSON - Watchin' - Club Mix.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/GENTE DE ZONA - Algo Contigo.mp3
-UNK|UNK|UNK|good - no shift/GENTE DE ZONA ft. PITBULL - Yo Quiero - Si Tu Te Enamoras.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/HARDWELL ft. MATTHEW KOMA - Dare You - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/HELLER and FARLEY PROJECT - Ultra Flava - Heller and Farley Project.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/ICONA POP - I Love It - Cobra Starship Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/ICONA POP - I Love It - ft. Charli Xcx - Cobra Starship Remix.mp3
-UNK|UNK|UNK|good - no shift/ICONA POP - I Love It.mp3
-UNK|UNK|UNK|good - no shift/ILEGALES - Que Te Vaya Bien.mp3
-UNK|UNK|UNK|good - no shift/IRENE CARA - What A Feeling.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/JASON DERULO - The Other Side.mp3
-LAME3.90a|(alpha)|LAME3.90a|good - no shift/JCA ft. DANNII MINOGUE - I Begin To Wonder - Ok.mp3
-LAME3.90a|(alpha)|LAME3.90a|good - no shift/JCA ft. DANNII MINOGUE - I Begin To Wonder.mp3
-UNK|LAME3.97|LAME3.97|good - no shift/JENNIFER LOPEZ - Dance Again.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/JENNIFER LOPEZ - On The Floor - No Rap Version.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/JESSIE J - Domino.mp3
-UNK|UNK|UNK|good - no shift/JULIAN COPE - World Shut Your Mouth.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/JUSTIN TIMBERLAKE - Can't Stop The Feeling.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/KATE RYAN - Desenchantee.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/KATE RYAN - Ella Elle L'a.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/KATY PERRY - Roar - Original.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/KELLY CLARKSON - Stronger.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/KESHA - Take It Off.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/KESHA - Tik Tok.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/KON KAN - I Beg Your Pardon - Hot Tracks Mix.mp3
-LAME3.99r|LAME3.99.4|LAME3.99r|good - no shift/KREWELLA - Alive.mp3
-LAME3.98b|(beta)|LAME3.98b|good - no shift/KREWELLA - Can't Control Myself.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/LADY BORN - I Was Born This Way.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/LADY GAGA - Applause.mp3
-UNK|UNK|UNK|good - no shift/LANA DEL REY - Summertime Sadness - Cedric Gervais Remix.mp3
-UNK|UNK|UNK|good - no shift/LIONEL RICHIE - All Night Long - DMC Remix.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/LUIS FONSI ft. DADDY YANKEE - Despacito - Dj Ácaro Remix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/MACKLEMORE and RYAN LEWIS - Like The Ceiling Can't Hold Us.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/MADCON ft. RAY DALTON - Don't Worry.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/MADONNA ft. NICKI MINAJ - Give Me All Your Luvin - Original Radio.mp3
-UNK|UNK|UNK|good - no shift/MADONNA ft. NICKI MINAJ - Give Me All Your Luvin - Party Rock Remix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/MAGIC - Rude - Litos Diaz and G-rod Bootleg.mp3
-UNK|LAME3.98.4|LAME3.98.4|good - no shift/MARC ANTHONY - Vivir Mi Vida - Dj Maksy Samba Edit 51bpm.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/MARC ANTHONY - Vivir Mi Vida - Original.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/MARK KNIGHT and FUNKAGENDA - Man With The Red Face - Original Club Mix.mp3
-UNK|UNK|UNK|good - no shift/MARTIN SOLVEIG - Everybody - Extended Mix.mp3
-UNK|LAME3.98|LAME3.98_LAME_LAME3.98|good - no shift/MARTIN SOLVEIG and DRAGONETTE - Hello.mp3
-UNK|UNK|UNK|good - no shift/MIAMI SOUND MACHINE - Conga - 12inch Version.mp3
-UNK|UNK|UNK|good - no shift/MOBY - Raining Again - Steve Angellos Vocal Mix.mp3
-UNK|UNK|UNK|good - no shift/MOBY - Slipping Away Axwell Vocal Mix.mp3
-UNK|LAME3.99.3|LAME3.99.3|good - no shift/MORAT - Como Te Atreves A Volver.mp3
-UNK|UNK|UNK|good - no shift/NEW ORDER - Blue Monday - Safety Remix White Label.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/NICKI MINAJ - Starships.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/NICKY JAM - Travesuras - Hallux Makenzo Remix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/NICKY JAM Y ENRIQUE IGLESIAS - El Perdon - Hallux Makenzo Remix.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/NINA SIMONE - Sinnerman - Felix Housecat Extended Vocal.mp3
-UNK|UNK|UNK|good - no shift/NINA SIMONE - Sinnerman - Felix Housecat Radio Mix.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/OTTO KNOWS - Million Voices.mp3
-LAME3.99a|(alpha)|LAME3.99a|good - no shift/PAUL KALKBRENNER - Sky and Sand - Extended.mp3
-UNK|LAME3.93|LAME3.93|good - no shift/PAUL VAN DYK ft. SUE MCLAREN - Lights - Original Mix.mp3
-UNK|UNK|UNK|good - no shift/PEPSI and SHIRLEY - Heartache.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/PITBULL and CHRIS BROWN - International Love.mp3
-UNK|LAME3.99.5|LAMEUUUF|good - no shift/PITBULL ft. CHRISTINA AGUILERA - Feel This Moment.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/PITBULL ft. JOHN RYAN - Fireball - Litos Diaz Bootleg.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/PITBULL ft. KESHA - Timber.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/PITBULL ft. NE-YO - Give Me Everything Tonight.mp3
-UNK|LAME3.82|LAME3.82|good - no shift/PUSSY DUB FOUNDATION - Make The World Go Round - Hq.mp3
-UNK|UNK|UNK|good - no shift/RENE CARA - What A Feeling - 12'' Mix.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/RIHANNA - Only Girl In The World.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/RIHANNA - S&m.mp3
-UNK|LAME3.97|LAME3.97|good - no shift/RIHANNA and CHRIS BROWN - Turn Up The Music - Funk3d Radio Edit.mp3
-MPE|UNK|UNK|good - no shift/RIHANNA ft. CALVIN HARRIS - We Found Love - Extended Mix.mp3
-UNK|UNK|UNK|good - no shift/ROBIN S - Luv 4 Luv - Original.mp3
-UNK|UNK|UNK|good - no shift/ROBIN S - Show Me Love - Original.mp3
-UNK|UNK|UNK|good - no shift/ROBIN S - Show Me Love - Stonebridge Classic Club Mix.mp3
-UNK|UNK|UNK|good - no shift/ROCKWELL - Somebody's Watching Me.mp3
-UNK|UNK|UNK|good - no shift/RUDIMENTAL ft. JOHN NEWMAN - Feel The Love - Patrick Hagenaar Full Mix.mp3
-UNK|UNK|UNK|good - no shift/SALIF KEITA - Madam - Martin Solvieg Mix.mp3
-UNK|UNK|UNK|good - no shift/SALOME DE BAHIA - Outro Lugar - Club Version.mp3
-UNK|UNK|UNK|good - no shift/SEAN PAUL - We Be Burnin'.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/SHAKIRA - Dare - La La La.mp3
-UNK|LAME3.97|LAME3.97|good - no shift/SPICE CLUB - Yeah 3x - Shane Deether Radio Edit.mp3
-UNK|UNK|UNK|good - no shift/SUPAFLY vs FISHBOWL - Let's Get Down - Full Intention Club Mix.mp3
-UNK|UNK|UNK|good - no shift/SUPERMODE - Tell Me Why - Extended.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/SWEDISH HOUSE MAFIA - Don't You Worry Child - Radio Edit.mp3
-UNK|LAME3.99.5|LAME3.99.5|good - no shift/SWEDISH HOUSE MAFIA ft. JOHN MARTIN - Dont You Worry Child - Extended Mix.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/TAIO CRUZ ft. KYLIE MINOGUE - Higher - Original.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/THE AVENER and PHOEBE KILLDEER - Fade Out Lines - Litos Diaz Edit.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/THE WANTED - Chasing The Sun.mp3
-UNK|UNK|UNK|good - no shift/THE WANTED - Glad You Came.mp3
-UNK|UNK|UNK|good - no shift/TIME BANDITS - Endless Road.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/TIN TIN - Beg Your Pardon.mp3
-LAME3.97|LAME3.97|LAME3.97|good - no shift/USHER - More - Redone Jimmy Joker Remix.mp3
-UNK|LAME3.92|LAME3.92UUUUUUUU(|good - no shift/UTAH SAINTS - Something Good '08 - Vanshe Tech Mix.mp3
-UNK|UNK|UNK|good - no shift/VOICE OF THE BEEHIVE - Don't Call Me Baby.mp3
-LAME3.98r|LAME3.98.4|LAME3.98r|good - no shift/WILL.I.AM ft. BRITNEY SPEARS - Scream and Shout - Explicit Edit.mp3
-UNK|LAME3.96.1|LAME3.96.1|good - no shift/YAZZ and THE PLASTIC POPULATION - The Only Way Is Up.mp3
-LAME3.98r|LAME3.98.2|LAME3.98r|good - no shift/YVES LAROCK - Rise Up - Original Cutedit Mix.mp3
-LAME3.99r|LAME3.99.5|LAME3.99r|good - no shift/ZEDD ft. FOXES - Clarity - Extended Mix.mp3
-UNK|LAME3.99.5|LAME3.99r|good - no shift/bensound-anewbeginning.mp3
-UNK|LAME3.82|LAME3.82|good - no shift/bensound-dance.mp3
-UNK|LAME3.82|LAME3.82|good - no shift/bensound-house.mp3
-UNK|LAME3.82|LAME3.82|good - no shift/bensound-popdance.mp3
-UNK|LAME3.97|LAME3.97|good - no shift/bensound-summer.mp3
-UNK|LAME3.99.5|LAME3.99r|good - no shift/bensound-ukulele.mp3
+LAME3.98r|LAME3.98.4|LAME3.98r|music/3 imported/1 good shift/0 ICONA POP - I Love It - Cobra Starship Radio Edit.mp3
+LAME3.93|LAME3.93|LAME3.93|music/3 imported/1 good shift/01 - ABOVE AND BEYOND FT. ALEX VARGAS - All Over The World - Above And Beyond Club Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/01 - ARMIN VAN BUUREN vs ARTY - Nehalennia.mp3
+LAME3.98r|LAME3.98.2|LAME3.98r|music/3 imported/1 good shift/01 - POBSKY - Final Cloud - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/01 - PURPLE HAZE Feat. BONUS CHECK - Light Me Up - DJ Estrela Intro.mp3
+LAME3.98r|LAME3.98.4|LAME3.98r|music/3 imported/1 good shift/02 - ABOVE AND BEYOND FT. ZOE JOHNSTON - Peace Of Mind - Arty Remix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/02 - ANDY MOOR - K Ta - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/02 - ERIC PRYDZ - Generate - Orkidea Remix.mp3
+LAME3.99r|LAME3.99.5|LAME3.99r|music/3 imported/1 good shift/02 - ERIC PRYDZ VS. CHVRCHES - Tether - Eric Prydz Private Remix.mp3
+LAME3.98r|LAME3.98.2|LAME3.98r|music/3 imported/1 good shift/02 - PROTOCULTURE - Cobalt.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/03 - ALEX M.O.R.P.H. - New York City - Original Mix.mp3
+LAME3.99r|LAME3.99.5|LAME3.99r|music/3 imported/1 good shift/03 - BEATSOLE - Before I Wake - Extended Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/03 - MAURO PICOTTO - Lizard - Solis And Sean Truby's Ibiza Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/03 - SHOGUN - Space Odyssey - Original Mix.mp3
+LAME3.99r|LAME3.99.5|LAME3.99r|music/3 imported/1 good shift/04 - KYAU ALBERT - Follow The Waves - Mino Safy Remix.mp3
+LAME3.98r|LAME3.98.2|LAME3.98r|music/3 imported/1 good shift/04 - MARK ETESON - Blackboard - Jon O'bir Remix.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/04 - OMNIA & IRA - The Fusion - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/04 - SOLARSTONE WITH ALY AND FILA - Fireisland - Future Disciple Remix.mp3
+LAME3.98r|LAME3.98.4|LAME3.98r|music/3 imported/1 good shift/05 - DARK MATTERS FT. ANA CRIADO - The Quest Of A Dream - Paul Webster Remix .mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/05 - DARK MATTERS FT. JESS MORGAN - The Perfect Lie - Beat Service Remix.mp3
+LAME3.92|LAME3.92|LAME3.92|music/3 imported/1 good shift/05 - GAIA - In Principio - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/05 - SEVEN LIONS FT. PAUL MEANY - Higher Love - DJ Estrela Beat.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/06 - ANDREW BAYER - Nobody Told Me - DJ Estrela Extended.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/06 - BEAT SERVICE AND NEEV KENNEDY - Not This Time - Original Mix.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/06 - FUTURE DISCIPLE - Kwiwakurra - Original Mix.mp3
+UNK|LAME3.93|LAME3.93|music/3 imported/1 good shift/06 - PAUL VAN DYK FT. SUE MCLAREN - Lights - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/06 - PROTOCULTURE FT. SHANNON HURLEY - Sun Gone Down - Original Mix.mp3
+LAME3.98|LAME3.98|LAME3.98|music/3 imported/1 good shift/06 - TRIPLE A - Winter Stayed - Alex Morph Mix .mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/07 - DEEP CARE - Blacks - Daniel Kandi Lifted Remix.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/07 - DRIFTMOON - Howl At The Moon - Solarstone Retouch.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/07 - FERRY CORSTEN - Eternity - Arkham Knights Extended Remix.mp3
+LAME3.99r|LAME3.99.5|LAME3.99r|music/3 imported/1 good shift/07 - KYAU AND ALBERT - Memory Lane - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/07 - PROTOCULTURE - Ode To The Ocean.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/07 - SOLIS AND SEAN TRUBY - Loaded - Ben Gold Remix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/08 - ID - Track 08 52.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/08 - LONDON GRAMMAR - Wasting My Young Years - Solarstone Pure Mix.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/08 - MICHAEL L. FT. ALYONA B. - I Will Never Burn Again - Stoneface And Terminal Remix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/08 - SOLARSTONE - Love Theme From Blade Runner - Pure Mix.mp3
+LAME3.99|LAME3.99|LAME3.99|music/3 imported/1 good shift/08 - ULTIMATE - Few Nights - Andy Tau Remix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/09 - ID - Track 09 48.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/09 - LEMON - We Can't Fly - Solarstone Pure Mix.mp3
+LAME3.98r|LAME3.98.4|LAME3.98r|music/3 imported/1 good shift/09 - PAUL VAN DYK - The Sun After Heartbreak - Nick Callaghan And Will Atkinson Remix.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/09 - THE THRILLSEEKERS - Just Because.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/09 - WILL ATKINSON - Numb The Pain - Original Mix.mp3
+LAME3.98r|LAME3.98.2|LAME3.98r|music/3 imported/1 good shift/10 - ANTON FIRTICH Pres. AF PROJECT - Something Wrong - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/10 - ID - Track 10 16.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/10 - ID - Track 10 17.mp3
+UNK|LAME3.90|LAME3.90|music/3 imported/1 good shift/10 - MATTI LAAMANEN - Flakes - Extended.mp3
+LAME3.98|LAME3.98|LAME3.98|music/3 imported/1 good shift/10 - MIKE FOYLE PRES STATICA - Deadly Nightshade - Phynn Remix.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/10 - PHOTOGRAPHER AND ABSTRACT VISION - Zero Gravity.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/10 - SIMON PATTERSON AND GREG DOWNEY FT. BO BRUCE - Come To Me.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/10 - THOMAS BRONZWAER - Still Waters - Original Mix.mp3
+UNK|LAME3.93|LAME3.93|music/3 imported/1 good shift/11 - AIRBASE - We Might Fall.mp3
+LAME3.97|LAME3.97|LAME3.97|music/3 imported/1 good shift/11 - MARK SHERRY - Gravitational Waves - Original Mix.mp3
+LAME3.99r|LAME3.99.4|LAME3.99r|music/3 imported/1 good shift/11 - MAX GRAHAM vs MAARTEN DE JONG - Lekker - Original Mix.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/3LAU, PARIS and SIMO ft. BRIGHT LIGHTS - Escape - Original Mix.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/1 good shift/ALEX FREI FT. LAURA JAMES - Still Thinking Of You - Alfredo Sandoval Remix.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/1 good shift/ANA MOURA - Dia De Folga - Djariep Gullez Rework.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/AVRIL LAVIGNE - Losing Grip.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/AVRIL LAVIGNE - Skater Boy.mp3
+Lavf|encoder|UNK|music/3 imported/1 good shift/Adam Beyer, Bart Skils - Your Mind (Original Mix).mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/Art Of Trance Feat. Caroline Lavelle - Breathe (Dawnseekers Remix).mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/1 good shift/BENNY BENASSI and CHRIS BROWN - Beautifull People - Extended.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/BRYAN FERRY - Slave To Love - Special 12 Remix.mp3
+UNK|LAME3.98.2|LAME3.98.2|music/3 imported/1 good shift/CHAVE D'OURO - O Pai Da Criança - Nuno Neto Remix 2.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/1 good shift/DAVID GUETTA ft. SIA - She Wolf - Radio Edit.mp3
+UNK|UNK|UNK|music/3 imported/1 good shift/DEEP CARE - Blacks - Daniel Kandi Lifted Remix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/01 - MARKUS SCHULZ FT. BROOKE TOMLINSON - In The Night.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/02 - GARETH EMERY AND BEN GOLD - Until We Meet Again - Extended Mix.mp3
+UNK|LAME3.98.2|LAME3.98|music/3 imported/2 bad shift/03 - COSMIC GATE AND EMMA HEWITT - Going Home - Gareth Emery Remix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/03 - ESTIVA - Blossom - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/04 - LANGE vs GARETH EMERY - Another You, Another Me - Solis And Sean Truby Remix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/04 - ORJAN NILSEN FT. RYKKA - The Hardest Part - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/05 - ARMIN VAN BUUREN FT. ERIC VLOEIMANS - Embrace - Arty Extended Remix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/05 - SUPER8 & TAB - Cosmo - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/08 - VENOM ONE - Elysia - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/08 - VINCENT DE MOOR - Fly Away - Khomha Extended Remix.mp3
+UNK|LAME3.98.2|LAME3.98|music/3 imported/2 bad shift/09 - LANGE - Imagineer - Alex M.o.r.p.h Remix.mp3
+UNK|LAME3.98.2|LAME3.98|music/3 imported/2 bad shift/11 - ID - Allen Watts - Gravity (original Mix).mp3
+UNK|LAME3.99.5|UNK|music/3 imported/2 bad shift/11 - ROBERT NICKSON Feat. CAT MARTIN - Every Sun - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/12 - SIMON PATTERSON FT. LUCY PULLIN - Now I Can Breathe Again - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/13 - ARMIN VAN BUUREN FT. LYRICA ANDERSON - Gotta Be Love - Giuseppe Ottaviani Remix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/13 - JOHN O'CALLAGHAN - Choice Of The Angels.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/14 - CRAIG CONNELLY - Out Of Orbit.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/14 - GARETH EMERY FT. GAVRIELLE - Far From Home - Craig Connelly Extended Remix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/14 - JOHN O'CALLAGHAN AND CLARE STAGG - Lies Cost Nothing - Will Atkinson Remix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/17 - BRYAN KEARNEY - Awaken - Ucast Rewake.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/18 - SIMON PATTERSON AND MAGNUS - Evoke - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/19 - RELOCATE vs ROBERT NICKSON - Proxima - Original Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/20 - RELOCATE vs ROBERT NICKSON - Everest - Extended Mix.mp3
+UNK|LAME3.98.2|LAME3.98|music/3 imported/2 bad shift/21 - DARREN PORTER - Terraforming - Original Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/21 - RELOCATE vs ROBERT NICKSON - Jetpack - Original Mix.mp3
+UNK|LAME3.98.2|LAME3.98|music/3 imported/2 bad shift/22 - RELOCATE vs ROBERT NICKSON - Vivid - Original Mix.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/22 - THE NOBLE SIX - Firewalker - Extended Mix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/23 - ECO & DRIFTMOON - Trust In The Wind - Extended Mix.mp3
+UNK|LAME3.99.5|LAME3.99|music/3 imported/2 bad shift/27 - FACTOR B - Luna Therapy - Extended Mix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/ABOVE & BEYOND Feat. JUSTINE SUISSA - Alright Now - Club Mix.mp3
+Lavc56.26|LAME3.99.5|UNK|music/3 imported/2 bad shift/ADELE - Hello - Paul Damixie Remix.mp3
+Lavc57.3.|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/AVICII - Seek Bromance - Tim Berg Vocal Extended.mp3
+Lavc57.48|LAME3.99.5|LAME|music/3 imported/2 bad shift/BASTILLE - Blame.mp3
+Lavf|LAME3.99.5|LAMEU)|music/3 imported/2 bad shift/CALVIN HARRIS and SAM SMITH - Promises - Radio Mix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/CRAIG CONNELLY and DAN DOBSON ft. ELLE VEE - Battleground - Extended Breakbeat Mix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/CRAIG CONNELLY ft. KATE MILES - Lost Without You - Sied Van Riel Remix.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/Clean Bandit - Rockabye ft. Sean Paul & Anne.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/DANNY DARKO - Mad World - 2014 Deep House Cover.mp3
+UNK|LAME3.98.4|LAME3.98.4|music/3 imported/2 bad shift/DAVID GUETTA ft. KID CUDI - Memories - Extended.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/DENNIS SHEPERD and DIM3NSION - Amigos.mp3
+Lavc56.41|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/DIOGO PIÇARRA - Dialeto.mp3
+Lavc57.48|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/ED SHEERAN - Shape Of You - Puller and Calgos Remix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/ESTIVA - Blossom - Extended Mix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/FERRY CORSTEN & HALIENE - Wherever You Are - Extended Mix.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/FERRY CORSTEN - Eternity - Instrumental.mp3
+Lavf|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/FERRY CORSTEN - Eternity - Narrated.mp3
+UNK|LAME3.99.5|LAME3.99.5|music/3 imported/2 bad shift/JUSTIN BIEBER ft. J BALVIN - Sorry - Spanish-latin Remix.mp3
+Lavc57.24|LAME3.99.5|LAME3.99.|music/3 imported/2 bad shift/ROBIN SCHULZ ft. JAMES BLUNT - Ok - Radio Edit.mp3
