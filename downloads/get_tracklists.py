@@ -95,7 +95,7 @@ def get_one_set(url, debug=False, detect_problem=True):
         if names == []:
             continue
 
-        i = i  + 1
+        i = i + 1
         #print(names)
         #print(cues)
 
@@ -108,37 +108,67 @@ def get_one_set(url, debug=False, detect_problem=True):
         line = "%-5s - %s" % (cue, name)
         print(line)
         
-        if detect_problem and i <= 4:
-            raise Exception
+    if detect_problem and i <= 4:
+        raise Exception
             
         
-def do_work(main_url, limit=5, start=None, grep=None, token=None, what=None):
-    global token_global
+def do_work(data, limit=5, start=None, grep=None, token=None, oper=None):
+    """
+    what:
+        index_sets:       single URL with a list -> get individual set urls
+        recursive_sets:   single URL with a list -> all sets details
+        isolated_sets:    input is a LIST of urls -> get set details
     
-    if token == token_global:
-        print("bad token")
+    """
+    if token != 1:
+        print("ERROR: Bad token")
         return
-    token_global = token
 
     ###
-    if what == "list":
-        get_latest_urls(main_url, limit=limit, start=start)
-    elif what == "sets":
-        get_latest_sets(main_url, limit=limit, start=start, grep=grep)
- 
+    for line in data.splitlines():
+        line = line.strip()
+        if not line:
+            continue
+            
+        if oper == "index_sets":
+            get_latest_urls(line, limit=limit, start=start)
+
+        elif oper == "recursive_sets":
+            get_latest_sets(line, limit=limit, start=start, grep=grep)
+
+        elif oper == "isolated_sets":
+            get_one_set(line)
+
+        else:
+            raise ValueError("Unknown value", what)
 
 
-main_url="https://www.1001tracklists.com/source/ummzhc/luminosity/index4.html"
-start=15
+data="https://www.1001tracklists.com/source/ummzhc/luminosity/index4.html"
+
+data="""
+https://www.1001tracklists.com/tracklist/bf7hbc1/andromedha-progressions-radio-041-luminosity-beach-festival-netherlands-2018-09-18.html
+https://www.1001tracklists.com/tracklist/f6bhqvt/andromedha-electronic-family-contest-mix-2018-06-20.html
+"""
+
+
+data="""
+
+https://www.1001tracklists.com/dj/andromedha/index.html
+
+"""
+    
+
+start=None
 limit=None
 grep=None
 
-what="list"
-what="sets"
+#oper="index_sets"
+oper="recursive_sets"
+#oper="isolated_sets"
+
 token=2
 
-
-do_work(main_url, limit=limit, start=start, grep=grep, token=token, what=what)
-
+do_work(data, limit=limit, start=start, grep=grep, token=token, oper=oper)
 
 print('\n\nALL DONE \n\n')
+
