@@ -1,13 +1,14 @@
 #!/bin/bash
 
-set -e
+#set -e
 set -u
 
 media_files_extensions="mp3|mp4|avi|m4a|opus|webm|wav|flac|alac|aiff"
+do_fhg=1
 tag_comment=0
 tag_filename=0
 debug=0
-output_type=1
+output_type=2
 wrote_csv_header=0
 full_output=0
 field_separator="|"
@@ -54,6 +55,9 @@ sub-tools:
   --ffmpeg|--ffprobe    ONLY run ffprobe 
   --mp3guessenc         ONLY run mp3guessenc
   --mediainfo           ONLY run mediainfo
+  
+fhg_analysis:
+  --fhg
   
 ffprobe json:
   --ffprobe_json|-J   files        (full dump only)
@@ -277,6 +281,14 @@ function array_to_csv ()
 }
 
 
+function last_field_or_unk()
+{
+  to_unk="$1"
+  
+  awk '{print $NF}' | awk -v to_unk="$to_unk" '{if(NF){A=1}} {if(NF){print }} END{if(A==0){print to_unk }}'
+
+}
+
 
 function massage_output()
 {
@@ -289,7 +301,7 @@ function massage_output()
   if [ $output_type -eq 0 ]; then
     cat - 
   else
-    cat - | awk '{print $NF }' | do_uniq | paste -s -d "$subfield_separator" | awk '{if(NF){A=1}} {if(NF){print }} END{if(A==0){print "UNK"}}'
+    cat - | awk '{print $NF }' | do_uniq | paste -s -d "$subfield_separator" | last_field_or_unk
   fi
 }
 
@@ -316,6 +328,41 @@ function run_tool()
   "$tool" "$@" "$file" 2>&1 | massage_output #"$tool"
 }
 
+
+function sed_out()
+{
+  if [ "${1:-}" == "" ]; then
+    cat -
+  else
+    sed "s/${1}//"
+  fi
+}
+
+function get_line_field()
+{
+  to_grep="$1"
+  
+  to_sed="${2:-}"
+  to_unk="${3:-UNK}"
+
+  egrep "$to_grep" | sed_out "$to_sed" | last_field_or_unk "$to_unk"
+}
+
+
+function get_line_field2()
+{
+  to_grep="$1"
+  
+  to_sed="${2:-}"
+  to_unk="${3:-UNK}"
+
+  filter="`egrep "$to_grep" | head -n 1 `"
+  if [ "$filter" == "" ]; then
+    echo "no"
+  else
+    echo "yes"
+  fi
+}
 
 
 function get_tags()
@@ -345,7 +392,39 @@ function get_tags()
     tags+=("${tag3}")
   fi
   
+  mp3guess="`mp3guessenc -v "$file" `"  || 
+  
+  #set -x
+  xing_tag_present="`echo "$mp3guess" | get_line_field2 "^Xing tag detected" `"
+  lame_tag_present="`echo "$mp3guess" | get_line_field "^  Lame tag"  "" "no"`"
+  lame_tag_valid="`echo "$mp3guess"   | get_line_field "^  Tag verification " `"
+  encoder_delay="`echo "$mp3guess"    | get_line_field "^  Encoder delay" "samples" `"
+  encoder_padding="`echo "$mp3guess"  | get_line_field "^  Encoder padding" "samples" `"
+  
+  highest_tag_present="unk"
+  if [ "$xing_tag_present" == "no" ]; then
+    highest_tag_present="none"
+  elif [ "$xing_tag_present" == "yes" ]; then
+    if [ "$lame_tag_present" == "no" ]; then
+      highest_tag_present="xing"
+    elif [ "$lame_tag_present" == "yes" ]; then
+      highest_tag_present="lame"
+    fi
+  fi 
+  
+  
+  tags+=( "$highest_tag_present" )
+  tags+=( "$xing_tag_present" )
+  tags+=( "$lame_tag_present" )
+  tags+=( "$lame_tag_valid" )
+  tags+=( "$encoder_delay" )
+  tags+=( "$encoder_padding" )
+  
+  
   tags+=("$file")
+  
+  #echo  "${tags[@]}"
+  #exit 1
   
   # nogap: 
   #eyeD3 -P lameinfo r.mp3  2>/dev/null | grep -a -c nogap
@@ -378,7 +457,8 @@ function get_tags()
   2)
     # csv or one-liner output
     if [ $wrote_csv_header -eq 0 ]; then
-      csv_header=( "ffprobe" "mp3guessenc"  "mediainfo" "file" )
+      #csv_header=( "ffprobe" "mp3guessenc"  "mediainfo" "file" )
+      csv_header=( "highest_tag_present"  "xing_tag_present"  "lame_tag_present" "lame_tag_valid"  "encoder_delay" "encoder_padding" "file" )
       array_to_csv   csv_header
       wrote_csv_header=1
     fi
@@ -418,11 +498,11 @@ require_tools "mpg123"  "mp3guessenc" "ffprobe" "ffmpeg" "mediainfo"
     
 while [ "$#" -ge 1 ]; do
   case "$1" in
-  -d|--debug)
+  -d|--debug|--d)
     debug=1
     ;;
     
-  -dd)
+  -dd|--dd)
     debug=2
     set -x
     ;;
@@ -492,7 +572,12 @@ while [ "$#" -ge 1 ]; do
   --ffprobe_json|-J)
     do_ffprobe_json=1
     ;;
-    
+  
+  --fhg)
+    do_fhg=1
+    ;;
+  
+  
   -h)
     display_help
     ;;
@@ -512,6 +597,11 @@ if [ "$argc" -eq 0 ]; then
   display_help
 fi
 
+if [ $do_fhg -ge 1 ]; then
+  run_tool1=0
+  run_tool2=0
+  run_tool3=0
+fi
 
 if [ "$do_ffprobe_json" -ge 1 ]; then
   echo "["
