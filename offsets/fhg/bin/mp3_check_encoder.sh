@@ -4,7 +4,6 @@
 set -u
 
 media_files_extensions="mp3|mp4|avi|m4a|opus|webm|wav|flac|alac|aiff"
-do_fhg=1
 tag_comment=0
 tag_filename=0
 debug=0
@@ -21,12 +20,19 @@ run_tool2=1
 run_tool3=1
 
 do_vbr=0
-do_csv_file=0
+do_recursive=1
+only_do_find=0
+
 
 # main operations follows
 do_operation="check_headers"
 do_raw_mp3guessenc=0
 
+file_out_csv="mp3_headers.csv"
+file_out_raw="mp3_headers.raw"
+    
+save_output_files=1
+dump_raw_tools=0
 
 
 #####
@@ -47,29 +53,42 @@ display_help()
 check encoder of files, using several tools
 usage: `basename $0` file1 [file2]
 
-repeated tags:
-  -u     filter out repeated tags    (default)
-  -r     show repeated tags 
+
+operation:
+  --headers         check mp3guessenc values (default)
+  --ffprobe_json    dump ffprobe
+  --encoder         only guess encoder (3x tools)
   
 options:
+  --fast      do NOT run VBR check
+  --slow      run VBR check
+  
+  --raw|-r    dump raw mp3guessenc / mediainfo output
+  -o          save output files in folder  (CSV, RAW)  
+    
+  --no_recursive    skip recursive 
+  --recursive       recursive (still neeeds '.')    
+    
+old options:    
   -j     size to justify one-liner output
+  --uniq_tags     filter out repeated tags    (default)
+  --repeated_tags     show repeated tags 
   
 sub-tools:
   --ffmpeg|--ffprobe    ONLY run ffprobe 
   --mp3guessenc         ONLY run mp3guessenc
   --mediainfo           ONLY run mediainfo
-  
-fhg_analysis:
-  --fhg
-  
-ffprobe json:
-  --ffprobe_json|-J   files        (full dump only)
+
   
  "
   exit 1
 
 }
 
+function pass()
+{
+  local nop="nop"
+}
 
 
 #
@@ -404,12 +423,10 @@ function get_line_field()
 }
 
 
-function get_line_field2()
+function see_if_line_present()
 {
-  to_grep="$1"
   
-  to_sed="${2:-}"
-  to_unk="${3:-UNK}"
+  to_grep="$1"
 
   filter="`egrep "$to_grep" | head -n 1 `"
   if [ "$filter" == "" ]; then
@@ -426,7 +443,7 @@ function do_guess_encoder()
   global csv_header 
   global tags
 
-  
+  ####
   tag1=""
   tag2=""
   tag3=""
@@ -442,6 +459,8 @@ function do_guess_encoder()
   if [ "$run_tool3" -ge 1 ]; then
     tag3="`run_tool "$file" mediainfo `"
   fi
+
+  tags=()
 
   tags+=( "${tag1}" )
   tags+=( "${tag2}" )
@@ -459,7 +478,12 @@ function do_check_headers()
   global tags
   
   ### run tools
+  raw_dd="` dd if="$file" bs=400000 count=1 2>/dev/null | strings | egrep "^Info$|^Xing$|^VBRi$" `"
+ 
   mp3guessenc="`mp3guessenc -v "$file" `"  
+
+  mp3guessenc_errors="`mp3guessenc -p "$file" `"  
+
   
   if [ "$do_vbr" -ge 1 ]; then
     mediainfo="`mediainfo "$file" `"
@@ -469,16 +493,56 @@ function do_check_headers()
   #eyeD3 -P lameinfo r.mp3  2>/dev/null | grep -a -c nogap
 
   
-  if [ "$do_raw_mp3guessenc" -ge 1 ]; then
-    echo "$mp3guessenc"
-    echo ""
-    echo "$mediainfo"
-    return
+  if [ "$dump_raw_tools" -ge 1 ]; then
+    mp3guessenc_full="`mp3guessenc "$file" `"  
+
+
+  (
+    echo "
+
+*************
+FILE: $file
+
+MEDIAINFO:
+$mediainfo
+    
+
+MP3GUESSENC FULL:
+$mp3guessenc_full
+
+
+RAW DD:
+$raw_dd
+*************
+
+
+"
+    ) | save_output "$file_out_raw"
+    
   fi
   
   ### massage outputs
   sep="___"
-  xing_tag_present="`echo "$mp3guessenc" | get_line_field2 "^Xing tag detected" `"
+
+
+  raw_dd_info="`echo "$raw_dd" | see_if_line_present "^Info$" `"
+  raw_dd_xing="`echo "$raw_dd" | see_if_line_present "^Xing$" `"
+  raw_dd_vbri="`echo "$raw_dd" | see_if_line_present "^VBRi$" `"
+  raw_dd_id3v2="`echo "$raw_dd" | see_if_line_present "^ID3$" `"
+
+  raw_dd_common="` echo "$raw_dd" | paste -s -d "_" `"
+  if [ "$raw_dd_common" == "" ]; then
+    raw_dd_common_any="no"
+  else
+    raw_dd_common_any="yes"
+  fi
+  
+  
+  first_frame_bad="`echo "$mp3guessenc_errors" | see_if_line_present "^Unexpected data at 0" `"
+ 
+  
+  xing_tag_present="`echo "$mp3guessenc" | see_if_line_present "^Xing tag detected" `"
+
   lame_tag_present="`echo "$mp3guessenc" | get_line_field "^  Lame tag"  "" "no"`"
   lame_tag_valid="`echo "$mp3guessenc"   | get_line_field "^  Tag verification " `"
   encoder_delay="`echo "$mp3guessenc"    | get_line_field "^  Encoder delay" "samples" `"
@@ -486,7 +550,6 @@ function do_check_headers()
   nogap_continued="`echo "$mp3guessenc"  | get_line_field "^  nogap continued" `"
   nogap_continuation="`echo "$mp3guessenc"  | get_line_field "^  nogap continuation" `"
   
-  #set -x
   bitrate_mode="`echo "$mediainfo"       | get_line_field "^Bit rate mode" `"
   bitrate_value="`echo "$mediainfo"      | get_line_field "^Bit rate     " "kb/s" `"
 
@@ -497,10 +560,21 @@ function do_check_headers()
   highest_tag_present="unk"
   case="unk"
   problem="unk"
-  
-  if [ "$xing_tag_present" == "no" ]; then
+
+  if [ "$first_frame_bad" == "yes" ]; then
+    # AKA null streams
+    highest_tag_present="null"
+    if [ $raw_dd_common_any == "no" ]; then
+      case="E"
+    else
+      case="F"
+    fi
+        
+    
+  elif [ "$xing_tag_present" == "no" ]; then
     highest_tag_present="none"
     case="A"
+    
   elif [ "$xing_tag_present" == "yes" ]; then
   
     if [ "$lame_tag_present" == "no" ]; then
@@ -525,24 +599,38 @@ function do_check_headers()
   
   
   case "$case" in
-  A|D)
+  A|D|E)
     correction="0"
     problem="no"
     ;;
-  B|C)
+  B|C|F)
     correction="26"
     problem="yes"
     ;;
+   
   *)
     correction="unk"
     problem="unk"
     ;;
   esac
   
+  tags=()
 
   tags+=( "$problem" )
   tags+=( "$case" )
   tags+=( "$correction" )
+
+  tags+=( "$sep" )
+  
+  tags+=( "$first_frame_bad" )
+  
+  tags+=( "$sep" )
+  
+  tags+=( "$raw_dd_common" )
+  tags+=( "$raw_dd_xing" )
+  tags+=( "$raw_dd_info" )
+  tags+=( "$raw_dd_vbri" )
+  tags+=( "$raw_dd_id3v2" )
   
   tags+=( "$sep" )
   
@@ -550,6 +638,7 @@ function do_check_headers()
   tags+=( "$xing_tag_present" )
   tags+=( "$lame_tag_present" )
   tags+=( "$lame_tag_valid" )
+  
 
   tags+=( "$sep" )
 
@@ -564,8 +653,12 @@ function do_check_headers()
   tags+=( "$bitrate_value" )
 
   csv_header=( "problem" "case" "correction" "sep1" \
-     "highest_tag"  "xing_present"  "lame_present" "lame_valid"  "sep2" \
-    "enc_delay" "enc_padding" "nogap_continued" "nogap_continuation"  "sep3" \
+    "first_frame_bad" "sep2" \
+    \
+    "raw_dd_common" "raw_dd_xing" "raw_dd_info"  "raw_dd_vbri"  "raw_dd_id3v2"  "sep3" \
+    \
+     "highest_tag"  "xing_present"  "lame_present" "lame_valid"  "sep4" \
+    "enc_delay" "enc_padding" "nogap_continued" "nogap_continuation"  "sep5" \
     "bitrate_mode" "bitrate_value" )
     
 }
@@ -579,14 +672,15 @@ function get_tags()
   global tags
   global csv_header
   
-  tags=()
-
   if [ "$do_operation" == "check_headers" ]; then
     do_check_headers "$file"
+    
   elif [ "$do_operation" == "guess_encoder" ]; then
     do_guess_encoder "$file"
+    
   else
     die "unk oper"
+    
   fi
 
   if [ "$do_raw_mp3guessenc" -ge 1 ]; then
@@ -601,20 +695,38 @@ function get_tags()
   
   ##########
   if [ $wrote_csv_header -eq 0 ]; then
-    array_to_csv   csv_header
+    array_to_csv   csv_header | save_output "$file_out_csv"
+
     wrote_csv_header=1
+    
   fi
     
-  array_to_csv tags
+  array_to_csv tags | save_output "$file_out_csv"
   
 }
 
+
+function save_output()
+{
+  local file_out="$1"
+
+  if [ $save_output_files -ge 1 ]; then
+    tee -a "$file_out"
+  else
+    cat -
+  fi
+}
 
 
 function test_1_file()
 {
   local file="$1"
 
+  if [ $only_do_find -ge 1 ]; then
+    echo "$file" 
+    return
+  fi    
+  
   if [ "$do_operation" == "ffprobe_json" ]; then
     ffprobe -v error -print_format json -show_format -show_streams  "$file"
     echo ","
@@ -705,14 +817,27 @@ while [ "$#" -ge 1 ]; do
     do_vbr=1
     ;;
     
+  --recursive|-R)
+    do_recursive=1
+    ;;
+
+  --no_recursive|+R)
+    do_recursive=0
+    ;;
+    
+  --find|--only_find)
+    only_do_find=1
+    
+    ;;
+
     
   --raw|-r)
-    do_raw_mp3guessenc=1
+    dump_raw_tools=1
     do_operation="check_headers"
     ;;
 
   --headers)
-    do_raw_mp3guessenc=0
+    dump_raw_tools=0
     do_operation="check_headers"
     ;;
 
@@ -721,13 +846,9 @@ while [ "$#" -ge 1 ]; do
     do_operation="ffprobe_json"
     ;;
   
-  --fhg)
-    do_fhg=1
-    ;;
-  
+ 
   -o)
-    do_csv_file=1
-    file_out="mp3_headers.csv"
+    save_output_files=1
     ;;
   
   
@@ -748,27 +869,36 @@ while [ "$#" -ge 1 ]; do
   shift
 done
 
+
+
 if [ "$argc" -eq 0 ]; then
   echo "Error: no files specified"
   echo ""
   display_help
 fi
 
-if [ $do_fhg -ge 1 ]; then
-  run_tool1=0
-  run_tool2=0
-  run_tool3=0
+if [ "$only_do_find" -ge 1 ]; then
+  save_output_files=0
 fi
 
 
+if [ $do_recursive -ge 1 ]; then
+  readarray -d '' tmp_array < \
+      <(find "${argv[@]}"  -print0)
+      
+  argv=( "${tmp_array[@]}" )
+fi
 
-(
+  
+
+
 if [ "$do_operation" == "ffprobe_json" ]; then
   echo "["
 fi
 
-if [ "$do_csv_file" -ge 1 ]; then
-  rm -f  "$file_out"
+if [ "$save_output_files" -ge 1 ]; then
+  rm -f "$file_out_csv"
+  rm -f "$file_out_raw"
 fi
 
 for file in "${argv[@]}" ; do
@@ -779,11 +909,16 @@ for file in "${argv[@]}" ; do
   ext="`extension_lower "$file" `"
   
   case "$ext" in
-  mp3|mp4|avi|m4a|opus|webm|wav|flac|alac|aiff)
+  mp3)
     test_1_file "$file"
     ;;
+
+  mp3|mp4|avi|m4a|opus|webm|wav|flac|alac|aiff)
+    pass
+    ;;
+    
   *)
-    nop="nop"
+    pass
     #echo "ignoring $file"
     ;;
   esac
@@ -794,11 +929,27 @@ if [ "$do_operation" == "ffprobe_json" ]; then
   echo "{ }]"
 fi
 
-)  | if [ "$do_csv_file" -ge 1 ]; then
-    tee -a "$file_out"
-  else
-    cat -
-  fi
 
 exit 0
+
+
+
+TODO: recursive
+rawcat : break info
+
+
+#define ID3V2_ID_STRING                      "ID3"
+
+#define LYRICS3_BEGIN_SIGNATURE      "LYRICSBEGIN"
+#define LYRICS3V1_END_SIGNATURE        "LYRICSEND"
+#define LYRICS3V2_END_SIGNATURE        "LYRICS200"
+#define APETAGEX_SIGNATURE              "APETAGEX"
+#define WAVE_RIFF_DATA_ID                   "data"
+
+#define VBRI_TAG_START_OFFSET                   36
+#define VBRI_TAG_ID_STRING                  "VBRI"
+#define LAME_TAG_ID_STRING                  "Info"
+#define XING_TAG_ID_STRING                  "Xing"
+
+
 
