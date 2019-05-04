@@ -4,6 +4,7 @@
 media_files_extensions="mp3|mp4|avi|m4a|opus|webm|wav|flac|alac|aiff"
 tag_comment=0
 tag_filename=0
+only_get_duration=0
 debug=0
 output_type=1
 wrote_csv_header=0
@@ -285,8 +286,10 @@ function array_to_csv ()
 function get_duration()
 {
   local file="$1"
+  local ret
   
-  mediainfo --Inform="Audio;%Duration%" "$file"
+  ret="`mediainfo --Inform="Audio;%Duration%" "$file" | awk '{print $1}'`"
+  echo -n "$ret"
 }
   
 function run_tool()
@@ -349,7 +352,8 @@ function test_1_file()
   dur1="`run_tool "$file" "$file_fhg_default"    -- mp3sDecoder -if "$full_file" -of "$file_fhg_default" -classic `"
   #dur2="`run_tool "$file" "$file_fhg_of1"        -- mp3sDecoder -if "$full_file" -of "$file_fhg_of1"     -classic -of1 `"
   dur2="0"
-  dur3="`run_tool "$file" "$file_mpg_default"    -- mpg123              -w "$file_mpg_default"   "$full_file" `"
+  #dur3="`run_tool "$file" "$file_mpg_default"    -- mpg123              -w "$file_mpg_default"   "$full_file" `"
+  dur3="0"
   dur4="`run_tool "$file" "$file_mpg_nogapless"  -- mpg123 --no-gapless -w "$file_mpg_nogapless" "$full_file" `"
   
   durs=()
@@ -360,10 +364,13 @@ function test_1_file()
     return 
   fi
   
-  durs+=("${dur2}")
-  durs+=("${dur3}")
+  #durs+=("${dur2}")
+  #durs+=("${dur3}")
   durs+=("${dur4}")
  
+  diff=$(( $dur1 - $dur4 ))     || true
+ 
+  durs+=( "${diff}" )
   durs+=("${full_file}")
   
   #declare -p durs
@@ -371,7 +378,8 @@ function test_1_file()
   #echo "$wrote_csv_header"
   
   if [ $wrote_csv_header -eq 0 ]; then
-    csv_header=( "fhg_default" "fhg_of1" "mpg_default" "mpg_nogapless" "file" )
+    #csv_header=( "fhg_default" "fhg_of1" "mpg_default" "mpg_nogapless" "file" )
+    csv_header=( "fhg_default" "mpg_nogapless" "diff" "file" )
     array_to_csv   csv_header
     wrote_csv_header=1
   fi
@@ -397,6 +405,10 @@ while [ "$#" -ge 1 ]; do
   -dd)
     debug=2
     set -x
+    ;;
+ 
+  -s)
+    only_get_duration=1
     ;;
  
   -C)
@@ -437,6 +449,17 @@ if [ "$argc" -eq 0 ]; then
   display_help
 fi
 
+echo ""
+
+if [ "$regenerate_cache" -ge 1 ]; then
+  echo "CACHE POLICY: regenerate"
+elif [ "$populate_cache" -ge 1 ]; then
+  echo "CACHE POLICY: populate"
+else
+  echo "CACHE POLICY: cached  (use -p or -f to control this)"
+fi
+
+
 out_csv1="mp3_offset.csv"
 out_csv2="mp3_encoder.csv"
 
@@ -453,6 +476,14 @@ for file in "${argv[@]}" ; do
   mp3)
     test_1_file "$file"
     ;;
+
+  wav)
+    if [ $only_get_duration -ge 1 ]; then
+      get_duration "$file"
+      echo -e "|${file}"
+    fi
+    ;;
+    
   *)
     nop="nop"
     #echo "ignoring $file"
@@ -467,4 +498,50 @@ if [ "$check_encoder" -ge 1 ]; then
 fi
 
 exit 0
+
+decoder list: http://mp3decoders.mp3-tech.org/decoders.html
+  http://mp3decoders.mp3-tech.org/decoders_l3dec.html
+  http://mp3decoders.mp3-tech.org/decoders_acm.html#acmnote
+  
+  
+hidrogen audio gapless: https://wiki.hydrogenaud.io/index.php?title=Gapless_playback
+foobar2000 fix header: https://hydrogenaud.io/index.php/topic,47531.0.html
+
+
+#####
+
+
+
+
+
+def display_examples(df, tag, what, n=3):
+    n = None
+    
+    print("DATASET: %s :  %s:" % (tag.upper(),what ))
+    
+    fields=['stem', 'tag', 'final_outcome']
+    df = df[fields]
+    
+    if what == "False Positives":
+        q = "final_outcome < -10"
+    elif what == "True Negatives":
+        q = "final_outcome > -5"
+    elif what == "True Positives":
+        q = "final_outcome > 15"
+    elif what == "False Negatives":
+        q = "final_outcome < 5"
+    else:
+        raise
+            
+    df = df.query("tag == '%s' and %s" % (tag, q)).head(n)
+    ipython_display(df)
+    
+display_examples(simple_df, 'good_shift', 'False Positives')
+display_examples(simple_df, 'good_shift', 'True Negatives')
+
+display_examples(simple_df, 'bad_shift', 'True Positives')
+display_examples(simple_df, 'bad_shift', 'False Negatives')
+
+
+
 
