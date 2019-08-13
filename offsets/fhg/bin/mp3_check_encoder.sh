@@ -17,8 +17,6 @@ justify=80
 
 dump_key_values=0
 
-
-
 run_tool1=1
 run_tool2=1
 run_tool3=1
@@ -39,7 +37,9 @@ do_csv=1
 do_stdout=1
 save_output_files=0
 dump_raw_tools=0
+do_only_one_file=0
 
+ 
 
 #####
 
@@ -61,13 +61,13 @@ usage: `basename $0` file1 [file2]
 
 
 operation:
-  --headers         check mp3guessenc values (default)
-  --ffprobe_json    dump ffprobe
-  --encoder         only guess encoder (3x tools)
+  --headers             check mp3guessenc values (default)
+  --ffprobe_json        dump ffprobe
+  --encoder             only guess encoder (3x tools)
   
 options:
-  --fast      do NOT run VBR check
-  --slow      run VBR check
+  --fast                do NOT run VBR check
+  --slow                run VBR check
   
   --raw|-r              dump raw mp3guessenc / mediainfo output
   --no_recursive        skip recursive 
@@ -80,10 +80,11 @@ output files:
   -o                    also save output files in folder    (CSV, RAW)
   -q                    no stdout output (only save files)
   
-key values:  
+key-value pairs:  
   -c                    skip CSV output (to stdout or file)
-  -1                    dump key-values 
+  -1                    dump key-values (some)
   -2                    dump key-values (ALL)
+  
   
     
 old options:    
@@ -96,6 +97,30 @@ sub-tools:
   --mp3guessenc         ONLY run mp3guessenc
   --mediainfo           ONLY run mediainfo
 
+  
+To open CSV in excel:
+  - double click, data, text to column, delimiter, add delimiter "|", save XLS  
+  
+  
+  
+  
+CURRENT AGORITHM:
+ if mp3guessenc does NOT see a Xing/INFO tag:
+     case = 'A'
+     correction = 0ms
+ 
+ elif eyeD3 does NOT see a LAME tag at all:
+     case = 'B'
+     correction = 26ms
+ 
+ elif eyeD3 sees an INVALID LAME tag:
+     case = 'C'
+     correction = 26ms
+     
+ elif eyeD3 sees a VALID LAME tag:
+     case = 'D'
+     correction = 0ms
+   
   
  "
   exit 1
@@ -509,12 +534,65 @@ function do_guess_encoder()
 }
 
 
+function tf_to_yn()
+{
+  local input="$1"
+  
+  case "$input" in
+  *true*)
+    ret="yes"
+    ;;
+  *)
+    ret="no"
+    ;;
+  esac
+  
+  echo "$ret"
+
+}
+
 
 function do_check_headers()
 {
   local file="$1"
   global csv_header 
   global tags
+  
+ 
+ 
+  ### run mp3 parser
+  mp3parser_full="`mp3-parser-linux-beta  "$file" `"  
+  
+  mp3parser_xing_present_tmp="`echo "$mp3parser_full" | get_line_field "xing-tag?" `"
+  mp3parser_xing_present="`tf_to_yn "$mp3parser_xing_present_tmp" `" 
+
+  mp3parser_lame_present="`echo "$mp3parser_full" | see_if_line_present "lame-tag?" `"
+  
+  mp3parser_lame_valid_tmp="`echo "$mp3parser_full" | get_line_field "lame-tag?" `"
+  mp3parser_lame_valid="`tf_to_yn "$mp3parser_lame_valid_tmp" `" 
+
+  
+  
+
+  if [ "$mp3parser_xing_present" == "no" ]; then
+    mp3parser_case="A"
+  
+  else
+    if [ "$mp3parser_lame_present" == "no" ]; then
+      mp3parser_case="B"
+    
+    else
+      if [ "$mp3parser_lame_valid" == "no" ]; then
+        mp3parser_case="C"
+       else
+        mp3parser_case="D"
+      fi
+    fi  
+  fi  
+  
+ 
+     
+  
   
   ### run mpgguessenc
   mp3guessenc_anciliary="`mp3guessenc -a "$file" `"  
@@ -523,7 +601,7 @@ function do_check_headers()
   
   mp3guessenc_tag_offset="`echo "$mp3guessenc_tag" | grep "Tag offset"  | head -n 1 | \
     awk 'BEGIN{OFFSET=0} {OFFSET=$(NF-1)} END{print OFFSET}' `"
- 
+  
  
   ### run DD
   raw_dd_go_back="3000" 
@@ -548,12 +626,22 @@ function do_check_headers()
   eyed3_no_lame_present="`echo "$eyed3_full" | see_if_line_present "No LAME Tag" `"
   eyed3_lame_corrupt="`echo "$eyed3_full" | see_if_line_present "Lame tag CRC check failed" `"
 
-  if [[ "$eyed3_no_lame_present" == "yes" || "$eyed3_lame_corrupt" == "yes"  ]]; then
+  if [[ "$eyed3_no_lame_present" == "yes"  ]]; then
     eyed3_lame_present="no"
+    eyed3_lame_tag_valid="unk"
+    
   else
     eyed3_lame_present="yes"
+    if [ "$eyed3_lame_corrupt" == "yes" ]; then
+      eyed3_lame_tag_valid="no"
+      
+    else
+      eyed3_lame_tag_valid="yes"
+      
+    fi
   fi
-  
+ 
+ 
  
   if [ $dump_raw_tools -ge 1 ]; then
     do_vbr=1      # confusing
@@ -575,20 +663,43 @@ function do_check_headers()
     echo "
 
 *************
-FILE: $file
+FILE: 
+-----
+$file
 
-MEDIAINFO:
-$mediainfo
-    
+
+
+
+MP3PARSER FULL:
+---------------
+$mp3parser_full
+
+
 
 MP3GUESSENC FULL:
+-----------------
 $mp3guessenc_full
 
-EYED3:
+
+
+EYED3 FULL:
+-----------
 $eyed3_full
 
+
+
+MEDIAINFO FULL:
+---------------
+$mediainfo
+
+
+
+
 RAW DD:
+-------
 $raw_dd
+
+
 *************
 
 "
@@ -626,20 +737,19 @@ $raw_dd
   ##  function: get_line_field "string" "to_sed" "UNK"
   ##  returns:  yes" if present, "no" if not present  
   ##
-  unexpected_data="`echo "$mp3guessenc_errors" | see_if_line_present "^Unexpected data at 0" `"
-  xing_or_info_tag_present="`echo "$mp3guessenc_tag" | see_if_line_present "^Xing tag detected" `"
-  vbri_tag_present="`echo "$mp3guessenc_tag" | see_if_line_present "^VBRI tag detected" `"
+  mp3guessenc_unexpected_data="`echo "$mp3guessenc_errors" | see_if_line_present "^Unexpected data at 0" `"
+  mp3guessenc_xing_or_info_tag_present="`echo "$mp3guessenc_tag" | see_if_line_present "^Xing tag detected" `"
+  mp3guessenc_vbri_tag_present="`echo "$mp3guessenc_tag" | see_if_line_present "^VBRI tag detected" `"
 
-  if [ "$xing_or_info_tag_present" == "yes" ]; then
-    mp3guess_lame_present="`echo "$mp3guessenc_tag" | get_line_field "^  Lame tag" `"
+  if [ "$mp3guessenc_xing_or_info_tag_present" == "yes" ]; then
+    mp3guessenc_lame_present="`echo "$mp3guessenc_tag" | get_line_field "^  Lame tag" `"
   else
-    mp3guess_lame_present="no"
+    mp3guessenc_lame_present="no"
   fi
   
-  lame_tag_valid="`echo "$mp3guessenc_tag"   | get_line_field "^  Tag verification " `"
+  mp3guessenc_lame_tag_valid="`echo "$mp3guessenc_tag"   | get_line_field "^  Tag verification " `"
   lame_tag_revision="`echo "$mp3guessenc_tag"   | get_line_field "^  Tag revision " `"
   lame_short_string="`echo "$mp3guessenc_tag"   | get_line_field "^  Lame short string " `"
-  
   
   mpeg_padding="`echo "$mp3guessenc_anciliary"   | get_line_field "^Padding used" `"
   
@@ -661,12 +771,13 @@ $raw_dd
   
   lame_derived_bitrate="unk"
   lame_derived_crc="unk"
-  lame_derived_tools_agree="unk"
+  tools_lame_present_agree="unk"
+  tools_lame_tag_valid_agree="unk"
   lame_summary="unk"
   
   
   # NULL STREAMS PROBLEM
-  #if [ "$unexpected_data" == "yes" ]; then
+  #if [ "$mp3guessenc_unexpected_data" == "yes" ]; then
   #  highest_tag_present="null_stream"
   #  
   #  if [ $raw_dd_anything_any == "no" ]; then
@@ -675,46 +786,87 @@ $raw_dd
   #    case="F"
   #  fi
 
+  
+  ##
+  ## MAIN ALGORITHM HERE - https://github.com/digital-dj-tools/dj-data-converter/issues/3
+  ##
+      
+  
   # VBRI CASES
-  if [ "$vbri_tag_present" == "yes" ]; then
+  if [ "$mp3guessenc_vbri_tag_present" == "yes" ]; then
     highest_tag_present="vbri"
     case="Z"
     
-    if [ "$xing_or_info_tag_present" == "yes" ]; then
+    if [ "$mp3guessenc_xing_or_info_tag_present" == "yes" ]; then
         die "VBRI + XING/INFO problem"
     fi
 
-  # NO TAG PRESENT
-  elif [ "$xing_or_info_tag_present" == "no" ]; then
+  # NO TAGS PRESENT
+  elif [ "$mp3guessenc_xing_or_info_tag_present" == "no" ]; then
     highest_tag_present="none"
     case="A"
     
     # either nothing, or broken lame tag
     
-  elif [ "$xing_or_info_tag_present" != "yes" ]; then
-      die "xing_or_info_tag_present error"
+  elif [ "$mp3guessenc_xing_or_info_tag_present" != "yes" ]; then
+      die "mp3guessenc_xing_or_info_tag_present error"
 
-  # HAS XING/INFO TAG, __GO DEEPER__
-  elif [ "$xing_or_info_tag_present" == "yes" ]; then
+  # HAS XING/INFO TAG?  ->  __GO DEEPER__
+  elif [ "$mp3guessenc_xing_or_info_tag_present" == "yes" ]; then
 
-    # catch disagreement
-    if [ "$eyed3_lame_present" == "$mp3guess_lame_present" ]; then
-      lame_derived_tools_agree="yes"
+    # simple translations here
+    if [ "$mp3guessenc_lame_tag_valid" == "passed" ]; then
+      mp3guessenc_lame_tag_valid="yes"
+      
+    elif [ "$mp3guessenc_lame_tag_valid" == "failed" ]; then
+      mp3guessenc_lame_tag_valid="no"
+      
     else
-      lame_derived_tools_agree="no"
+      #die "unk lame_tag_valid: $lame_tag_valid"
+      mp3guessenc_lame_tag_valid="unk"
+    fi
+ 
+ 
+  
+    # catch disagreement
+    if [ "$eyed3_lame_present" == "$mp3guessenc_lame_present" ]; then
+      tools_lame_present_agree="yes"
+    else
+      tools_lame_present_agree="no"
     fi
     
+    if [ "$eyed3_lame_tag_valid" == "$mp3guessenc_lame_tag_valid" ]; then
+      tools_lame_tag_valid_agree="yes"
+    else
+      tools_lame_tag_valid_agree="no"
+    fi    
+
+    
+    ##
+    ## MAIN ALGORITHM HERE - https://github.com/digital-dj-tools/dj-data-converter/issues/3
+    ##
+        
+
     # ONLY XING TAG?  (as seen by eyeD3)
     if [ "$eyed3_lame_present" == "no" ]; then
       highest_tag_present="xing"
       case="B"
       
-        
+    elif [ "$eyed3_lame_present" != "yes" ]; then
+      die "eyed3_lame_present error"
+
     elif [ "$eyed3_lame_present" == "yes" ]; then
-      highest_tag_present="lame"
-      case="D"
+      
+      if [ "$eyed3_lame_tag_valid" == "yes" ]; then
+        case="D"
+        highest_tag_present="lame.ok"
+      else
+        case="C"
+        highest_tag_present="lame.error"
+      fi
 
     fi
+    
     
 
     lame_derived_tag="unk"
@@ -746,10 +898,10 @@ $raw_dd
     fi
   
     # CRC check
-    if [ "$lame_tag_valid" == "passed" ]; then
+    if [ "$mp3guessenc_lame_tag_valid" == "passed" ]; then
       lame_derived_crc="CRC(GOOD)"
       
-    elif [ "$lame_tag_valid" == "failed" ]; then
+    elif [ "$mp3guessenc_lame_tag_valid" == "failed" ]; then
       lame_derived_crc="CRC(BAD)"
       
     else
@@ -763,14 +915,13 @@ $raw_dd
     
   fi
   
-  
-  
+   
   case "$case" in
   A|D|Z)
     correction="0"
     problem="no"
     ;;
-  B)
+  B|C)
     correction="26"
     problem="yes"
     ;;
@@ -789,16 +940,16 @@ $raw_dd
   tags+=( "$correction" )
   
   tags+=( "$sep" )
-  tags+=( "$unexpected_data" )
+  tags+=( "$mp3guessenc_unexpected_data" )
   tags+=( "$sep" )
   
   tags+=( "$highest_tag_present" )
-  tags+=( "$xing_or_info_tag_present" )
+  tags+=( "$mp3guessenc_xing_or_info_tag_present" )
   tags+=( "$eyed3_lame_present" )
-  tags+=( "$mp3guess_lame_present" )
+  tags+=( "$mp3guessenc_lame_present" )
   tags+=( "$sep" )
 
-  tags+=( "$lame_tag_valid" )
+  tags+=( "$mp3guessenc_lame_tag_valid" )
   tags+=( "$lame_tag_revision" )
   tags+=( "$lame_summary" )
   tags+=( "$sep" )
@@ -826,9 +977,9 @@ $raw_dd
   
     "case" "problem"  "correction"  "sep1" \
     \
-    "unexpected_data" "sep2" \
+    "mp3guessenc_unexpected_data" "sep2" \
     \
-    "highest_tag_present"  "xing_or_info_tag_present"  "eyed3_lame_present" "mp3guess_lame_present" "sep3" 
+    "highest_tag_present"  "mp3guessenc_xing_or_info_tag_present"  "eyed3_lame_present" "eyed3_lame_tag_valid" "mp3guessenc_lame_present" "mp3guessenc_lame_tag_valid""sep3" 
     \
     "lame_tag_valid" "lame_tag_revision" "lame_summary" "sep4" \
     \
@@ -846,6 +997,30 @@ $raw_dd
       echo ""
       
     case $dump_key_values in
+    1)
+      echo_var  case
+      
+      echo_var  mp3parser_case  mp3parser_xing_present  mp3parser_lame_present   mp3parser_lame_valid
+      ;;
+      
+    1)
+      echo_var  highest_tag_present 
+      echo_var  case
+      echo_var  correction  lame_tag_revision
+      
+      echo ""
+      
+      echo_var  eyed3_lame_present  eyed3_lame_tag_valid   
+      echo_var  mp3guessenc_lame_present mp3guessenc_lame_tag_valid
+      echo ""
+      echo_var  tools_lame_present_agree tools_lame_tag_valid_agree
+      
+      echo ""
+      echo_var raw_dd_anything 
+      ;;
+
+      
+    
     2)
         echo ""
         echo ""
@@ -858,8 +1033,8 @@ $raw_dd
         echo ""
         
         echo_var "highest_tag_present"
-        echo_var "xing_or_info_tag_present"
-        echo_var "mp3guess_lame_present"
+        echo_var "mp3guessenc_xing_or_info_tag_present"
+        echo_var "mp3guessenc_lame_present"
         echo_var "lame_tag_valid"
         echo_var "lame_tag_revision"
         echo ""
@@ -892,29 +1067,13 @@ $raw_dd
         ;;
    
        
-    1)
-      if [ 1 == 2 ]; then
-        echo_var raw_dd_anything 
-        echo_var lame_summary
-      
-        echo ""
-        echo_var xing_or_info_tag_present
-        echo_var eyed3_lame_present
-        echo_var mp3guess_lame_present
-      
-        echo ""
-      fi
-      
-      echo_var  highest_tag_present 
-      echo_var  case
-      echo_var  correction
-      
-      ;;
 
     esac
     
     echo ""
-  fi  
+  fi
+  
+  #exit 
 }
 
 
@@ -988,6 +1147,8 @@ function test_1_file()
     return
   fi    
   
+     
+  
   if [ "$do_operation" == "ffprobe_json" ]; then
     ffprobe -v error -print_format json -show_format -show_streams  "$file"
     echo ","
@@ -996,6 +1157,10 @@ function test_1_file()
   
 
   get_tags "$file" 
+  
+  if [ $do_only_one_file -ge 1 ]; then
+    exit 0
+  fi
    
 }
 
@@ -1148,6 +1313,10 @@ while [ "$#" -ge 1 ]; do
     display_help
     ;;
     
+  --only_one)
+     do_only_one_file=1
+     ;;
+    
   -*)  
     die "unk argument: $1"
     ;;
@@ -1287,7 +1456,7 @@ OLD COMPLEX DECISION TREE based on mp3guessenc lame story
 ---------------------------------------
  
    # catch disagreement
-    if [ "$eyed3_lame_present" != "$mp3guess_lame_present" ]; then
+    if [ "$eyed3_lame_present" != "$mp3guessenc_lame_present" ]; then
       die "mp3guess and eyeD3 do not agree"
     fi
     
@@ -1302,7 +1471,7 @@ OLD COMPLEX DECISION TREE based on mp3guessenc lame story
     # HAS LAME OR LACV/LAVF, __GO DEEPER__
     elif [ "$eyed3_lame_present" == "yes" ]; then
     
-      if [ "$mp3guess_lame_present" != "yes" ]; then
+      if [ "$mp3guessenc_lame_present" != "yes" ]; then
         die "eyed3 sees lame tag, mp3guessenc does not"
       fi
 
@@ -1357,34 +1526,8 @@ OLD COMPLEX DECISION TREE based on mp3guessenc lame story
   
 
 
-def dump_known_mp3_cases():
-    st = """
-## MP3 HEADER CASES
 
-| Case | Signature  | TK->RB Correction  |
-| ------ | ----- | ---- |
-| case A | no headers OR lame error | 0 ms |
-| case B | Only Xing   | 26 ms |
-| case C | (deprecated) |  |
-| case D | Lame valid | 0 ms |
-|        |            |    |
-| case Z | VBRI | (not tested) |
-
-
-## Current algorithm
-```
-if mp3guessenc sees VBRI tag:
-    case = "Z"
+for FILE in */*/03* ; do  printf "\n\n%s\n" "$FILE" ;  mp3-parser-linux-beta "$FILE" ; done > l.txt  
     
-elif ! mp3guessenc sees Xing/INFO tag:
-    case = "A"
-
-elif ! eyeD3 sees correct LAME tag:
-    case = "B"
-         
-else:
-    case = "D"
-
-"""
-    print(st)
+for DIR in */case* ; do   mp3_check_encoder.sh "$DIR"/* -1 -c --only_one ; done  > current_performance.txt
     
