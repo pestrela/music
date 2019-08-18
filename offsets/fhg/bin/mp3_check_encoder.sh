@@ -600,58 +600,8 @@ function to_upper()
 ########################
 ########################
 
-function do_check_dd()
-{
-  if [ "$do_run_dd" -eq 0 ]; then
-  
-    raw_dd_anything="not_run"
-    return
-  fi
 
 
-  mp3guessenc_tag="`mp3guessenc -v "$file" `"  
-  mp3guessenc_tag_offset="`echo "$mp3guessenc_tag" | grep "Tag offset"  | head -n 1 | \
-    awk 'BEGIN{OFFSET=0} {OFFSET=$(NF-1)} END{print OFFSET}' `"
-
-
-  ### run DD
-  raw_dd_go_back="3000" 
-  raw_dd_what_to_read="10000" 
-  
-  raw_dd_starting_point=$(( $mp3guessenc_tag_offset - $raw_dd_go_back ))  || true
-  if [[  "$raw_dd_starting_point" -lt 0 ]]; then
-    raw_dd_starting_point=0
-  fi
- 
-  raw_dd_block="`dd if="$file" bs=1 skip="$raw_dd_starting_point" count="$raw_dd_what_to_read"      2>/dev/null | strings `"   
-  raw_dd_insensitive_opt="-i"
-  
-  raw_dd_strings_strict="^Info$|^Xing$|^VBRi$"   # very strict. There are a lot of exceptions!
-  raw_dd_strings_loose="INFO|XING|VBRI|LAME|LAVC|LAVF|LA"    # loose. use with -i as well
-  
-  raw_dd_1="`echo "$raw_dd_block" |  sed 's|UUUUU|\n|g' | egrep -i "$raw_dd_strings_loose" `"
-  #   tr '[:lower:]' '[:upper:]'  | head -n 5
-  raw_dd_case_insensitive=0
-  
-  raw_dd_outcome="`echo "$raw_dd_1" | head -n 5 `"
-  
- 
- 
-  raw_dd_info="`echo  "$raw_dd_outcome" | see_if_line_present_upper "INFO"`"
-  raw_dd_xing="`echo  "$raw_dd_outcome" | see_if_line_present_upper "XING"`"
-  raw_dd_vbri="`echo  "$raw_dd_outcome" | see_if_line_present_upper "VBRI"`"
-  raw_dd_lavc="`echo  "$raw_dd_outcome" | see_if_line_present_upper "LAVC" `"
-  raw_dd_lavf="`echo  "$raw_dd_outcome" | see_if_line_present_upper "LAVF" `"
-  raw_dd_lame="`echo  "$raw_dd_outcome" | see_if_line_present_upper "LAME" `"
-  raw_dd_id3v2="`echo "$raw_dd_outcome" | see_if_line_present_upper "ID3" `"
-
-  raw_dd_anything="` echo "$raw_dd_outcome" | paste -s -d "_" `"
-  if [ "$raw_dd_anything" == "" ]; then
-    raw_dd_anything_any="no"
-  else
-    raw_dd_anything_any="yes"
-  fi 
-}
 
 
 
@@ -1017,7 +967,7 @@ $raw_dd_outcome
     case $dump_key_values in
      1)
       echo_var  case
-      echo_var  mp3parser_case      
+      echo_var  mp3parser_case
       echo_var  eyed3_case
       ;;
 
@@ -1116,16 +1066,72 @@ $raw_dd_outcome
 
 
 
-
-
-
-
 ########################
 ########################
 ########################
 
 
 
+function do_check_dd()
+{
+  if [ "$do_run_dd" -eq 0 ]; then
+  
+    raw_dd_anything="not_run"
+    mp3guessenc_tag_offset="not_run"
+    raw_dd_lame_positions="not_run"
+    return
+  fi
+
+
+   
+  
+  mp3guessenc_tag="`mp3guessenc -v "$file" `"  
+  mp3guessenc_tag_offset="`echo "$mp3guessenc_tag" | grep "Tag offset"  | head -n 1 | \
+    awk 'BEGIN{OFFSET=0} {OFFSET=$(NF-1)} END{print OFFSET}' `"
+
+
+  ### run DD
+  raw_dd_go_back="3000" 
+  raw_dd_what_to_read="10000" 
+  
+  raw_dd_starting_point=$(( $mp3guessenc_tag_offset - $raw_dd_go_back ))  || true
+  if [[  "$raw_dd_starting_point" -lt 0 ]]; then
+    raw_dd_starting_point=0
+  fi
+ 
+  raw_dd_block="`dd if="$file" bs=1 skip="$raw_dd_starting_point" count="$raw_dd_what_to_read"      2>/dev/null | strings `"   
+  raw_dd_insensitive_opt="-i"
+  
+  lame_positions_full="`mp3_get_lame_indexes.py "$file" -s "$raw_dd_starting_point" -n "$raw_dd_what_to_read"`"
+  raw_dd_lame_positions="`echo "$lame_positions_full" | get_line_field "lame positions" `"
+
+  
+  raw_dd_strings_strict="^Info$|^Xing$|^VBRi$"   # very strict. There are a lot of exceptions!
+  raw_dd_strings_loose="INFO|XING|VBRI|LAME|LAVC|LAVF|LA"    # loose. use with -i as well
+  
+  raw_dd_1="`echo "$raw_dd_block" |  sed 's|UUUUU|\n|g' | egrep -i "$raw_dd_strings_loose" `"
+  #   tr '[:lower:]' '[:upper:]'  | head -n 5
+  raw_dd_case_insensitive=0
+  
+  raw_dd_outcome="`echo "$raw_dd_1" | head -n 5 `"
+  
+ 
+ 
+  raw_dd_info="`echo  "$raw_dd_outcome" | see_if_line_present_upper "INFO"`"
+  raw_dd_xing="`echo  "$raw_dd_outcome" | see_if_line_present_upper "XING"`"
+  raw_dd_vbri="`echo  "$raw_dd_outcome" | see_if_line_present_upper "VBRI"`"
+  raw_dd_lavc="`echo  "$raw_dd_outcome" | see_if_line_present_upper "LAVC" `"
+  raw_dd_lavf="`echo  "$raw_dd_outcome" | see_if_line_present_upper "LAVF" `"
+  raw_dd_lame="`echo  "$raw_dd_outcome" | see_if_line_present_upper "LAME" `"
+  raw_dd_id3v2="`echo "$raw_dd_outcome" | see_if_line_present_upper "ID3" `"
+
+  raw_dd_anything="` echo "$raw_dd_outcome" | paste -s -d "_" `"
+  if [ "$raw_dd_anything" == "" ]; then
+    raw_dd_anything_any="no"
+  else
+    raw_dd_anything_any="yes"
+  fi 
+}
 
 
 
@@ -1240,6 +1246,9 @@ function do_check_headers_fast_only_tools()
   eyed3_no_lame_present="`echo "$eyed3_full" | see_if_line_present "No LAME Tag" `"
   eyed3_lame_corrupt="`echo "$eyed3_full" | see_if_line_present "Lame tag CRC check failed" `"
 
+  eyed3_mpeg_frame_len="`echo "$eyed3_full" | get_line_field "MPEG frame length" `"
+   
+   
   if [[ "$eyed3_no_lame_present" == "yes"  ]]; then
     eyed3_lame_present="no"
     eyed3_lame_valid="unk"
@@ -1388,6 +1397,8 @@ function do_check_headers_fast()
       echo_var  mp3guessenc_case       mp3guessenc_xing_present      mp3guessenc_lame_present       mp3guessenc_lame_valid 
       echo ""
       echo_var  raw_dd_anything  
+      echo_var  mp3guessenc_tag_offset  eyed3_mpeg_frame_len
+      echo_var  raw_dd_lame_positions
       ;;
       
     esac
