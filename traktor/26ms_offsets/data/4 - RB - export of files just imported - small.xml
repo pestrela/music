@@ -1,0 +1,2497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DJ_PLAYLISTS Version="1.0.0">
+  <PRODUCT Name="rekordbox" Version="5.4.1" Company="Pioneer DJ"/>
+  <COLLECTION Entries="6305">
+    <TRACK TrackID="15844" Name="0 ICONA POP - I Love It - Cobra Starship Radio Edit"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="212" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="128.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/0%20ICONA%20POP%20-%20I%20Love%20It%20-%20Cobra%20Starship%20Radio%20Edit.mp3"
+           Remixer="" Tonality="Db" Label="" Mix="">
+      <TEMPO Inizio="0.238" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="60.238" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="60.238" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15845" Name="01 - ABOVE AND BEYOND FT. ALEX VARGAS - All Over The World - Above And Beyond Club Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="412" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="128.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/01%20-%20ABOVE%20AND%20BEYOND%20FT.%20ALEX%20VARGAS%20-%20All%20Over%20The%20World%20-%20Above%20And%20Beyond%20Club%20Mix.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.211" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="60.212" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="60.212" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15846" Name="01 - ARMIN VAN BUUREN vs ARTY - Nehalennia"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="445" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/01%20-%20ARMIN%20VAN%20BUUREN%20vs%20ARTY%20-%20Nehalennia.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.078" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="74.623" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="74.623" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15847" Name="01 - MARKUS SCHULZ FT. BROOKE TOMLINSON - In The Night"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="232" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="128.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/01%20-%20MARKUS%20SCHULZ%20FT.%20BROOKE%20TOMLINSON%20-%20In%20The%20Night.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.074" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="75.073" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="75.073" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15848" Name="01 - POBSKY - Final Cloud - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="479" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="134.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/01%20-%20POBSKY%20-%20Final%20Cloud%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.276" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.721" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="249.166" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.277" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.277" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15849" Name="01 - PURPLE HAZE Feat. BONUS CHECK - Light Me Up - DJ Estrela Intro"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="268" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="123.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/01%20-%20PURPLE%20HAZE%20Feat.%20BONUS%20CHECK%20-%20Light%20Me%20Up%20-%20DJ%20Estrela%20Intro.mp3"
+           Remixer="" Tonality="Bm" Label="" Mix="">
+      <TEMPO Inizio="0.079" Bpm="124.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="77.499" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="77.499" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15850" Name="02 - ABOVE AND BEYOND FT. ZOE JOHNSTON - Peace Of Mind - Arty Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="301" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="128.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/02%20-%20ABOVE%20AND%20BEYOND%20FT.%20ZOE%20JOHNSTON%20-%20Peace%20Of%20Mind%20-%20Arty%20Remix.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.068" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="45.068" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="45.068" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15851" Name="02 - ANDY MOOR - K Ta - Original Mix" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="419" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="133.00"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/02%20-%20ANDY%20MOOR%20-%20K%20Ta%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.333" Bpm="133.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.551" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.551" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15852" Name="02 - ERIC PRYDZ - Generate - Orkidea Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="446" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/02%20-%20ERIC%20PRYDZ%20-%20Generate%20-%20Orkidea%20Remix.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.953" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="30.484" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="30.484" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15853" Name="02 - ERIC PRYDZ VS. CHVRCHES - Tether - Eric Prydz Private Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="340" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="126.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/02%20-%20ERIC%20PRYDZ%20VS.%20CHVRCHES%20-%20Tether%20-%20Eric%20Prydz%20Private%20Remix.mp3"
+           Remixer="" Tonality="Ab" Label="" Mix="">
+      <TEMPO Inizio="0.172" Bpm="127.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="8.204" Bpm="127.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="92.299" Bpm="127.00" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="160.331" Bpm="127.00" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="244.426" Bpm="127.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="328.521" Bpm="127.00" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="122.535" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="122.535" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15854" Name="02 - GARETH EMERY AND BEN GOLD - Until We Meet Again - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="383" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="132.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/02%20-%20GARETH%20EMERY%20AND%20BEN%20GOLD%20-%20Until%20We%20Meet%20Again%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.050" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.141" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.141" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15855" Name="02 - PROTOCULTURE - Cobalt" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="445"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="132.00" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/02%20-%20PROTOCULTURE%20-%20Cobalt.mp3"
+           Remixer="" Tonality="Bm" Label="" Mix="">
+      <TEMPO Inizio="0.508" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="58.690" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="58.690" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15856" Name="03 - ALEX M.O.R.P.H. - New York City - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="487" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/03%20-%20ALEX%20M.O.R.P.H.%20-%20New%20York%20City%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.230" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="76.593" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="76.593" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15857" Name="03 - BEATSOLE - Before I Wake - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="414" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/03%20-%20BEATSOLE%20-%20Before%20I%20Wake%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.053" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.144" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.144" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15858" Name="03 - COSMIC GATE AND EMMA HEWITT - Going Home - Gareth Emery Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="303" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/03%20-%20COSMIC%20GATE%20AND%20EMMA%20HEWITT%20-%20Going%20Home%20-%20Gareth%20Emery%20Remix.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="13.233" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="13.233" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15859" Name="03 - ESTIVA - Blossom - Extended Mix" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="383" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="125.99"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/03%20-%20ESTIVA%20-%20Blossom%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Cm" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="126.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.528" Bpm="126.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="126.719" Bpm="126.00" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="312.910" Bpm="126.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="1.956" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="1.956" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15860" Name="03 - MAURO PICOTTO - Lizard - Solis And Sean Truby&apos;s Ibiza Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="394" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="132.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/03%20-%20MAURO%20PICOTTO%20-%20Lizard%20-%20Solis%20And%20Sean%20Truby%27s%20Ibiza%20Mix.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.026" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.026" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.026" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15861" Name="03 - SHOGUN - Space Odyssey - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="548" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/03%20-%20SHOGUN%20-%20Space%20Odyssey%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="F#" Label="" Mix="">
+      <TEMPO Inizio="0.210" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.301" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.301" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15862" Name="04 - KYAU ALBERT - Follow The Waves - Mino Safy Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="391" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="132.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/04%20-%20KYAU%20ALBERT%20-%20Follow%20The%20Waves%20-%20Mino%20Safy%20Remix.mp3"
+           Remixer="" Tonality="Bbm" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.051" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.051" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15863" Name="04 - LANGE vs GARETH EMERY - Another You, Another Me - Solis And Sean Truby Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="390" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="132.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/04%20-%20LANGE%20vs%20GARETH%20EMERY%20-%20Another%20You,%20Another%20Me%20-%20Solis%20And%20Sean%20Truby%20Remix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.058" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.058" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.058" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15864" Name="04 - MARK ETESON - Blackboard - Jon O&apos;bir Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="472" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="134.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/04%20-%20MARK%20ETESON%20-%20Blackboard%20-%20Jon%20O%27bir%20Remix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.082" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.527" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.082" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.082" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15865" Name="04 - OMNIA &amp; IRA - The Fusion - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="368" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/04%20-%20OMNIA%20%26%20IRA%20-%20The%20Fusion%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.162" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="119.694" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="119.694" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15866" Name="04 - ORJAN NILSEN FT. RYKKA - The Hardest Part - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="388" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="129.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/04%20-%20ORJAN%20NILSEN%20FT.%20RYKKA%20-%20The%20Hardest%20Part%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Cm" Label="" Mix="">
+      <TEMPO Inizio="0.145" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.837" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.837" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15867" Name="04 - SOLARSTONE WITH ALY AND FILA - Fireisland - Future Disciple Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="524" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/04%20-%20SOLARSTONE%20WITH%20ALY%20AND%20FILA%20-%20Fireisland%20-%20Future%20Disciple%20Remix.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.253" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="78.534" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="78.534" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15868" Name="05 - ARMIN VAN BUUREN FT. ERIC VLOEIMANS - Embrace - Arty Extended Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="312" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/05%20-%20ARMIN%20VAN%20BUUREN%20FT.%20ERIC%20VLOEIMANS%20-%20Embrace%20-%20Arty%20Extended%20Remix.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.049" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.674" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.674" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15869" Name="05 - DARK MATTERS FT. JESS MORGAN - The Perfect Lie - Beat Service Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="488" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/05%20-%20DARK%20MATTERS%20FT.%20JESS%20MORGAN%20-%20The%20Perfect%20Lie%20-%20Beat%20Service%20Remix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.194" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.921" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.921" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15870" Name="05 - GAIA - In Principio - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="325" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/05%20-%20GAIA%20-%20In%20Principio%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.307" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.752" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="279.862" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="28.752" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="28.752" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15871" Name="05 - SEVEN LIONS FT. PAUL MEANY - Higher Love - DJ Estrela Beat"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="298" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="129.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/05%20-%20SEVEN%20LIONS%20FT.%20PAUL%20MEANY%20-%20Higher%20Love%20-%20DJ%20Estrela%20Beat.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.027" Bpm="129.99" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.566" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.566" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15872" Name="05 - SUPER8 &amp; TAB - Cosmo - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="327" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/05%20-%20SUPER8%20%26%20TAB%20-%20Cosmo%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.084" Bpm="131.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="5.581" Bpm="131.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.084" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.084" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15873" Name="06 - ANDREW BAYER - Nobody Told Me - DJ Estrela Extended"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="450" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="128.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/06%20-%20ANDREW%20BAYER%20-%20Nobody%20Told%20Me%20-%20DJ%20Estrela%20Extended.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.160" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="67.191" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="67.191" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15874" Name="06 - BEAT SERVICE AND NEEV KENNEDY - Not This Time - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="428" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="130.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/06%20-%20BEAT%20SERVICE%20AND%20NEEV%20KENNEDY%20-%20Not%20This%20Time%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.268" Bpm="131.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="2.101" Bpm="131.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="376.300" Bpm="131.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="14.925" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="14.925" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15875" Name="06 - FUTURE DISCIPLE - Kwiwakurra - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="461" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/06%20-%20FUTURE%20DISCIPLE%20-%20Kwiwakurra%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.398" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="63.680" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="63.680" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15876" Name="06 - PAUL VAN DYK FT. SUE MCLAREN - Lights - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="380" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/06%20-%20PAUL%20VAN%20DYK%20FT.%20SUE%20MCLAREN%20-%20Lights%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Eb" Label="" Mix="">
+      <TEMPO Inizio="0.026" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="61.844" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="61.844" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15877" Name="06 - PROTOCULTURE FT. SHANNON HURLEY - Sun Gone Down - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="478" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="132.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/06%20-%20PROTOCULTURE%20FT.%20SHANNON%20HURLEY%20-%20Sun%20Gone%20Down%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Cm" Label="" Mix="">
+      <TEMPO Inizio="0.088" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.088" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.088" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15878" Name="07 - DEEP CARE - Blacks - Daniel Kandi Lifted Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="450" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.97" DateAdded="" BitRate="128" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/07%20-%20DEEP%20CARE%20-%20Blacks%20-%20Daniel%20Kandi%20Lifted%20Remix.mp3"
+           Remixer="" Tonality="Bbm" Label="" Mix="">
+      <TEMPO Inizio="0.050" Bpm="137.97" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="41.362" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="41.362" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15879" Name="07 - DRIFTMOON - Howl At The Moon - Solarstone Retouch"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="529" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/07%20-%20DRIFTMOON%20-%20Howl%20At%20The%20Moon%20-%20Solarstone%20Retouch.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.110" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.805" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.805" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15880" Name="07 - FERRY CORSTEN - Eternity - Arkham Knights Extended Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="444" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="133.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/07%20-%20FERRY%20CORSTEN%20-%20Eternity%20-%20Arkham%20Knights%20Extended%20Remix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.172" Bpm="133.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.624" Bpm="133.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="122.428" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="122.428" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15881" Name="07 - KYAU AND ALBERT - Memory Lane - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="394" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/07%20-%20KYAU%20AND%20ALBERT%20-%20Memory%20Lane%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.251" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.524" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.524" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15882" Name="07 - PROTOCULTURE - Ode To The Ocean" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="474" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="134.00"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/07%20-%20PROTOCULTURE%20-%20Ode%20To%20The%20Ocean.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.527" Bpm="134.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="64.557" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="64.557" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15883" Name="07 - SOLIS AND SEAN TRUBY - Loaded - Ben Gold Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="460" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="133.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/07%20-%20SOLIS%20AND%20SEAN%20TRUBY%20-%20Loaded%20-%20Ben%20Gold%20Remix.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="134.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="14.380" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="14.380" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15884" Name="08 - ID - Track 08 52" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="446"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="140.00" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/08%20-%20ID%20-%20Track%2008%2052.mp3"
+           Remixer="" Tonality="Ab" Label="" Mix="">
+      <TEMPO Inizio="0.529" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.386" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.386" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15885" Name="08 - LONDON GRAMMAR - Wasting My Young Years - Solarstone Pure Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="534" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="136.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/08%20-%20LONDON%20GRAMMAR%20-%20Wasting%20My%20Young%20Years%20-%20Solarstone%20Pure%20Mix.mp3"
+           Remixer="" Tonality="Eb" Label="" Mix="">
+      <TEMPO Inizio="1.708" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="35.237" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="35.237" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15886" Name="08 - MICHAEL L. FT. ALYONA B. - I Will Never Burn Again - Stoneface And Terminal Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="473" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/08%20-%20MICHAEL%20L.%20FT.%20ALYONA%20B.%20-%20I%20Will%20Never%20Burn%20Again%20-%20Stoneface%20And%20Terminal%20Remix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.199" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.641" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="126.818" Bpm="136.00" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="297.995" Bpm="136.00" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="461.672" Bpm="136.00" Metro="4/4" Battito="3"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.641" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.641" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15887" Name="08 - SOLARSTONE - Love Theme From Blade Runner - Pure Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="523" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/08%20-%20SOLARSTONE%20-%20Love%20Theme%20From%20Blade%20Runner%20-%20Pure%20Mix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.411" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.853" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="70.558" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="70.558" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15888" Name="08 - ULTIMATE - Few Nights - Andy Tau Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="405" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/08%20-%20ULTIMATE%20-%20Few%20Nights%20-%20Andy%20Tau%20Remix.mp3"
+           Remixer="" Tonality="Dbm" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="34.399" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="34.399" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15889" Name="08 - VENOM ONE - Elysia - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="330" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="129.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/08%20-%20VENOM%20ONE%20-%20Elysia%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.098" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="49.944" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="49.944" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15890" Name="08 - VINCENT DE MOOR - Fly Away - Khomha Extended Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="289" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/08%20-%20VINCENT%20DE%20MOOR%20-%20Fly%20Away%20-%20Khomha%20Extended%20Remix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.114" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.770" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.770" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15891" Name="09 - ID - Track 09 48" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="540"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="134.99" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/09%20-%20ID%20-%20Track%2009%2048.mp3"
+           Remixer="" Tonality="Cm" Label="" Mix="">
+      <TEMPO Inizio="0.079" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.524" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="388.969" Bpm="135.00" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.635" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.635" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15892" Name="09 - LANGE - Imagineer - Alex M.o.r.p.h Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="344" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="132.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/09%20-%20LANGE%20-%20Imagineer%20-%20Alex%20M.o.r.p.h%20Remix.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.066" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.976" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.976" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15893" Name="09 - LEMON - We Can&apos;t Fly - Solarstone Pure Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="519" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/09%20-%20LEMON%20-%20We%20Can%27t%20Fly%20-%20Solarstone%20Pure%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.534" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.976" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="89.653" Bpm="136.00" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="215.830" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="334.507" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="460.684" Bpm="136.00" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.505" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.505" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15894" Name="09 - PAUL VAN DYK - The Sun After Heartbreak - Nick Callaghan And Will Atkinson Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="542" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/09%20-%20PAUL%20VAN%20DYK%20-%20The%20Sun%20After%20Heartbreak%20-%20Nick%20Callaghan%20And%20Will%20Atkinson%20Remix.mp3"
+           Remixer="" Tonality="D" Label="" Mix="">
+      <TEMPO Inizio="0.313" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.574" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.574" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15895" Name="09 - THE THRILLSEEKERS - Just Because"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="363" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/09%20-%20THE%20THRILLSEEKERS%20-%20Just%20Because.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.703" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.703" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15896" Name="09 - WILL ATKINSON - Numb The Pain - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="521" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="139.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/09%20-%20WILL%20ATKINSON%20-%20Numb%20The%20Pain%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="80.623" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="80.623" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15897" Name="10 - ANTON FIRTICH Pres. AF PROJECT - Something Wrong - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="483" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.03" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20ANTON%20FIRTICH%20Pres.%20AF%20PROJECT%20-%20Something%20Wrong%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Dm" Label="" Mix="">
+      <TEMPO Inizio="0.300" Bpm="135.03" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.745" Bpm="135.03" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="36.736" Bpm="135.03" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="72.727" Bpm="135.03" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="108.718" Bpm="135.03" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="144.709" Bpm="135.03" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="180.700" Bpm="135.03" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="216.691" Bpm="135.03" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="252.682" Bpm="135.03" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="288.673" Bpm="135.03" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="324.664" Bpm="135.03" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="373.541" Bpm="135.03" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="409.532" Bpm="135.03" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="445.523" Bpm="135.03" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="481.514" Bpm="135.03" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.407" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.407" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15898" Name="10 - ID - Track 10 16" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="371"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="131.99" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20ID%20-%20Track%2010%2016.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.036" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="20.036" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="20.036" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15899" Name="10 - ID - Track 10 17" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="509"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="136.00" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20ID%20-%20Track%2010%2017.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.406" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.612" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.612" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15900" Name="10 - MATTI LAAMANEN - Flakes - Extended"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="454" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="192" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20MATTI%20LAAMANEN%20-%20Flakes%20-%20Extended.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="1.120" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="32.860" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="32.860" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15901" Name="10 - MIKE FOYLE PRES STATICA - Deadly Nightshade - Phynn Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="446" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="134.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20MIKE%20FOYLE%20PRES%20STATICA%20-%20Deadly%20Nightshade%20-%20Phynn%20Remix.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.157" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.602" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="177.047" Bpm="135.00" Metro="4/4" Battito="3"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="22.824" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="22.824" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15902" Name="10 - PHOTOGRAPHER AND ABSTRACT VISION - Zero Gravity"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="447" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20PHOTOGRAPHER%20AND%20ABSTRACT%20VISION%20-%20Zero%20Gravity.mp3"
+           Remixer="" Tonality="Dm" Label="" Mix="">
+      <TEMPO Inizio="0.919" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="31.354" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="31.354" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15903" Name="10 - SIMON PATTERSON AND GREG DOWNEY FT. BO BRUCE - Come To Me"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="436" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="136.68" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20SIMON%20PATTERSON%20AND%20GREG%20DOWNEY%20FT.%20BO%20BRUCE%20-%20Come%20To%20Me.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.333" Bpm="136.69" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.161" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.161" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15904" Name="10 - THOMAS BRONZWAER - Still Waters - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="359" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/10%20-%20THOMAS%20BRONZWAER%20-%20Still%20Waters%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Bbm" Label="" Mix="">
+      <TEMPO Inizio="0.073" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.725" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.725" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15905" Name="11 - AIRBASE - We Might Fall" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="410" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="136.99"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/11%20-%20AIRBASE%20-%20We%20Might%20Fall.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.131" Bpm="137.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.204" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.204" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15906" Name="11 - ID - Allen Watts - Gravity (original Mix)"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="424" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="138.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/11%20-%20ID%20-%20Allen%20Watts%20-%20Gravity%20(original%20Mix).mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.921" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.443" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.443" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15907" Name="11 - MARK SHERRY - Gravitational Waves - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="511" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/11%20-%20MARK%20SHERRY%20-%20Gravitational%20Waves%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.126" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="43.803" Bpm="136.00" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.185" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.185" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15908" Name="11 - MAX GRAHAM vs MAARTEN DE JONG - Lekker - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="370" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="131.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/11%20-%20MAX%20GRAHAM%20vs%20MAARTEN%20DE%20JONG%20-%20Lekker%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Dbm" Label="" Mix="">
+      <TEMPO Inizio="0.084" Bpm="132.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.357" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.357" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15909" Name="11 - ROBERT NICKSON Feat. CAT MARTIN - Every Sun - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="367" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/11%20-%20ROBERT%20NICKSON%20Feat.%20CAT%20MARTIN%20-%20Every%20Sun%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="C" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.443" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.443" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15910" Name="12 - SIMON PATTERSON FT. LUCY PULLIN - Now I Can Breathe Again - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="412" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="134.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/12%20-%20SIMON%20PATTERSON%20FT.%20LUCY%20PULLIN%20-%20Now%20I%20Can%20Breathe%20Again%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="F#" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="134.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="62.738" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="62.738" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15911" Name="13 - ARMIN VAN BUUREN FT. LYRICA ANDERSON - Gotta Be Love - Giuseppe Ottaviani Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="384" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="136.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/13%20-%20ARMIN%20VAN%20BUUREN%20FT.%20LYRICA%20ANDERSON%20-%20Gotta%20Be%20Love%20-%20Giuseppe%20Ottaviani%20Remix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.054" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="33.583" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="33.583" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15912" Name="13 - JOHN O&apos;CALLAGHAN - Choice Of The Angels"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="524" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/13%20-%20JOHN%20O%27CALLAGHAN%20-%20Choice%20Of%20The%20Angels.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.114" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.288" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.288" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15913" Name="14 - CRAIG CONNELLY - Out Of Orbit" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="268" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="134.99"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/14%20-%20CRAIG%20CONNELLY%20-%20Out%20Of%20Orbit.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.273" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="48.718" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="245.163" Bpm="135.00" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.606" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="17.606" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15914" Name="14 - GARETH EMERY FT. GAVRIELLE - Far From Home - Craig Connelly Extended Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="475" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/14%20-%20GARETH%20EMERY%20FT.%20GAVRIELLE%20-%20Far%20From%20Home%20-%20Craig%20Connelly%20Extended%20Remix.mp3"
+           Remixer="" Tonality="Dbm" Label="" Mix="">
+      <TEMPO Inizio="0.486" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="33.095" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="33.095" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15915" Name="14 - JOHN O&apos;CALLAGHAN AND CLARE STAGG - Lies Cost Nothing - Will Atkinson Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="500" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="139.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/14%20-%20JOHN%20O%27CALLAGHAN%20AND%20CLARE%20STAGG%20-%20Lies%20Cost%20Nothing%20-%20Will%20Atkinson%20Remix.mp3"
+           Remixer="" Tonality="C" Label="" Mix="">
+      <TEMPO Inizio="0.053" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="61.767" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="61.767" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15916" Name="17 - BRYAN KEARNEY - Awaken - Ucast Rewake"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="421" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="139.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/17%20-%20BRYAN%20KEARNEY%20-%20Awaken%20-%20Ucast%20Rewake.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.053" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.624" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.624" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15917" Name="18 - SIMON PATTERSON AND MAGNUS - Evoke - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="398" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="139.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/18%20-%20SIMON%20PATTERSON%20AND%20MAGNUS%20-%20Evoke%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Ab" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.337" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="10.337" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15918" Name="19 - RELOCATE vs ROBERT NICKSON - Proxima - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="515" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/19%20-%20RELOCATE%20vs%20ROBERT%20NICKSON%20-%20Proxima%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="F" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.225" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.225" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15919" Name="20 - RELOCATE vs ROBERT NICKSON - Everest - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="330" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/20%20-%20RELOCATE%20vs%20ROBERT%20NICKSON%20-%20Everest%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="E" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.494" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.405" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.405" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15920" Name="21 - DARREN PORTER - Terraforming - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="399" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="139.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/21%20-%20DARREN%20PORTER%20-%20Terraforming%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="F#m" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.623" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.623" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15921" Name="21 - RELOCATE vs ROBERT NICKSON - Jetpack - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="474" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/21%20-%20RELOCATE%20vs%20ROBERT%20NICKSON%20-%20Jetpack%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.704" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="15.704" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15922" Name="22 - RELOCATE vs ROBERT NICKSON - Vivid - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="478" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="139.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/22%20-%20RELOCATE%20vs%20ROBERT%20NICKSON%20-%20Vivid%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="140.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="36.052" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="36.052" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15923" Name="22 - THE NOBLE SIX - Firewalker - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="497" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/22%20-%20THE%20NOBLE%20SIX%20-%20Firewalker%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Bm" Label="" Mix="">
+      <TEMPO Inizio="0.055" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.012" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.012" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15924" Name="23 - ECO &amp; DRIFTMOON - Trust In The Wind - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="448" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="134.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/23%20-%20ECO%20%26%20DRIFTMOON%20-%20Trust%20In%20The%20Wind%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.567" Bpm="134.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="58.776" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="58.776" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15925" Name="27 - FACTOR B - Luna Therapy - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="496" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/27%20-%20FACTOR%20B%20-%20Luna%20Therapy%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="138.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="26.138" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="26.138" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15926" Name="3LAU, PARIS and SIMO ft. BRIGHT LIGHTS - Escape - Original Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="280" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="128.00" DateAdded="" BitRate="320" SampleRate="48000"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/3LAU,%20PARIS%20and%20SIMO%20ft.%20BRIGHT%20LIGHTS%20-%20Escape%20-%20Original%20Mix.mp3"
+           Remixer="" Tonality="B" Label="" Mix="">
+      <TEMPO Inizio="1.428" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="43.147" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="43.147" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15927" Name="ABOVE &amp; BEYOND Feat. JUSTINE SUISSA - Alright Now - Club Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="418" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/ABOVE%20%26%20BEYOND%20Feat.%20JUSTINE%20SUISSA%20-%20Alright%20Now%20-%20Club%20Mix.mp3"
+           Remixer="" Tonality="E" Label="" Mix="">
+      <TEMPO Inizio="0.520" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="16.926" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="16.926" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15928" Name="ADELE - Hello - Paul Damixie Remix" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="279" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="114.99"
+           DateAdded="" BitRate="32" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/ADELE%20-%20Hello%20-%20Paul%20Damixie%20Remix.mp3"
+           Remixer="" Tonality="Ab" Label="" Mix="">
+      <TEMPO Inizio="0.127" Bpm="115.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.649" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="12.649" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15929" Name="ALEX FREI FT. LAURA JAMES - Still Thinking Of You - Alfredo Sandoval Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="315" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="123.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/ALEX%20FREI%20FT.%20LAURA%20JAMES%20-%20Still%20Thinking%20Of%20You%20-%20Alfredo%20Sandoval%20Remix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.091" Bpm="123.99" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="79.452" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="79.452" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15930" Name="ANA MOURA - Dia De Folga - Djariep Gullez Rework"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="251" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="129.99" DateAdded="" BitRate="192" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/ANA%20MOURA%20-%20Dia%20De%20Folga%20-%20Djariep%20Gullez%20Rework.mp3"
+           Remixer="" Tonality="D" Label="" Mix="">
+      <TEMPO Inizio="0.095" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="16.710" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="16.710" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15931" Name="AVICII - Seek Bromance - Tim Berg Vocal Extended"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="488" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="126.00" DateAdded="" BitRate="192" SampleRate="48000"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/AVICII%20-%20Seek%20Bromance%20-%20Tim%20Berg%20Vocal%20Extended.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.252" Bpm="126.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.775" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="29.775" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15932" Name="AVRIL LAVIGNE - Losing Grip" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="235" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="79.13"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/AVRIL%20LAVIGNE%20-%20Losing%20Grip.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.480" Bpm="79.14" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="1.239" Bpm="79.14" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="79.329" Bpm="79.14" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="157.419" Bpm="79.14" Metro="4/4" Battito="4"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.788" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.788" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15933" Name="AVRIL LAVIGNE - Skater Boy" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="206"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="149.95" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/AVRIL%20LAVIGNE%20-%20Skater%20Boy.mp3"
+           Remixer="" Tonality="F" Label="" Mix="">
+      <TEMPO Inizio="0.745" Bpm="149.96" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="17.150" Bpm="149.96" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="33.955" Bpm="149.96" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="50.760" Bpm="149.96" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="67.165" Bpm="149.96" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="83.970" Bpm="149.96" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="100.775" Bpm="149.96" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="117.580" Bpm="149.96" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="133.985" Bpm="149.96" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="150.790" Bpm="149.96" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="167.595" Bpm="149.96" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="184.400" Bpm="149.96" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="200.805" Bpm="149.96" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.745" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.745" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15934" Name="Adam Beyer, Bart Skils - Your Mind (Original Mix)"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="503" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="125.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/Adam%20Beyer,%20Bart%20Skils%20-%20Your%20Mind%20(Original%20Mix).mp3"
+           Remixer="" Tonality="Bm" Label="" Mix="">
+      <TEMPO Inizio="0.065" Bpm="126.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="1.018" Bpm="126.00" Metro="4/4" Battito="3"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.113" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="19.113" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15935" Name="Art Of Trance Feat. Caroline Lavelle - Breathe (Dawnseekers Remix)"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="453" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/Art%20Of%20Trance%20Feat.%20Caroline%20Lavelle%20-%20Breathe%20(Dawnseekers%20Remix).mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="1.086" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="1.528" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="45.205" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="111.382" Bpm="136.00" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="170.059" Bpm="136.00" Metro="4/4" Battito="4"/>
+      <TEMPO Inizio="236.236" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="294.913" Bpm="136.00" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="361.090" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="419.767" Bpm="136.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="13.881" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="13.881" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15936" Name="BASTILLE - Blame" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="175"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="84.99" DateAdded=""
+           BitRate="320" SampleRate="44100" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/BASTILLE%20-%20Blame.mp3"
+           Remixer="" Tonality="Bm" Label="" Mix="">
+      <TEMPO Inizio="0.062" Bpm="85.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.709" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="5.709" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15937" Name="BENNY BENASSI and CHRIS BROWN - Beautifull People - Extended"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="357" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/BENNY%20BENASSI%20and%20CHRIS%20BROWN%20-%20Beautifull%20People%20-%20Extended.mp3"
+           Remixer="" Tonality="Eb" Label="" Mix="">
+      <TEMPO Inizio="0.331" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="125.488" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="125.488" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15938" Name="BRYAN FERRY - Slave To Love - Special 12 Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="349" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="148.32" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/BRYAN%20FERRY%20-%20Slave%20To%20Love%20-%20Special%2012%20Remix.mp3"
+           Remixer="" Tonality="D" Label="" Mix="">
+      <TEMPO Inizio="0.114" Bpm="148.33" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="11.440" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="11.440" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15939" Name="CALVIN HARRIS and SAM SMITH - Promises - Radio Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="213" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="123.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/CALVIN%20HARRIS%20and%20SAM%20SMITH%20-%20Promises%20-%20Radio%20Mix.mp3"
+           Remixer="" Tonality="Ebm" Label="" Mix="">
+      <TEMPO Inizio="0.054" Bpm="123.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="41.029" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="41.029" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15940" Name="CHAVE D&apos;OURO - O Pai Da Criança - Nuno Neto Remix 2"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="605" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="192" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/CHAVE%20D%27OURO%20-%20O%20Pai%20Da%20Crian%c3%a7a%20-%20Nuno%20Neto%20Remix%202.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.171" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="24.077" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="24.077" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15941" Name="CRAIG CONNELLY and DAN DOBSON ft. ELLE VEE - Battleground - Extended Breakbeat Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="425" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="134.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/CRAIG%20CONNELLY%20and%20DAN%20DOBSON%20ft.%20ELLE%20VEE%20-%20Battleground%20-%20Extended%20Breakbeat%20Mix.mp3"
+           Remixer="" Tonality="Dbm" Label="" Mix="">
+      <TEMPO Inizio="0.162" Bpm="135.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="0.607" Bpm="135.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.607" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.607" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15942" Name="CRAIG CONNELLY ft. KATE MILES - Lost Without You - Sied Van Riel Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="342" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="135.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/CRAIG%20CONNELLY%20ft.%20KATE%20MILES%20-%20Lost%20Without%20You%20-%20Sied%20Van%20Riel%20Remix.mp3"
+           Remixer="" Tonality="Bbm" Label="" Mix="">
+      <TEMPO Inizio="0.103" Bpm="136.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.103" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="0.103" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15943" Name="Clean Bandit - Rockabye ft. Sean Paul &amp; Anne"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="253" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="101.99" DateAdded="" BitRate="128" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/Clean%20Bandit%20-%20Rockabye%20ft.%20Sean%20Paul%20%26%20Anne.mp3"
+           Remixer="" Tonality="Am" Label="" Mix="">
+      <TEMPO Inizio="0.768" Bpm="102.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="1.357" Bpm="102.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="52.534" Bpm="102.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="113.711" Bpm="102.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="184.888" Bpm="102.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="246.065" Bpm="102.00" Metro="4/4" Battito="2"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="89.004" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="89.004" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15944" Name="DANNY DARKO - Mad World - 2014 Deep House Cover"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="237" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="114.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/DANNY%20DARKO%20-%20Mad%20World%20-%202014%20Deep%20House%20Cover.mp3"
+           Remixer="" Tonality="Eb" Label="" Mix="">
+      <TEMPO Inizio="0.079" Bpm="115.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="20.948" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="20.948" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15945" Name="DAVID GUETTA ft. KID CUDI - Memories - Extended"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="318" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="130.00" DateAdded="" BitRate="192" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/DAVID%20GUETTA%20ft.%20KID%20CUDI%20-%20Memories%20-%20Extended.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.250" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.173" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="7.173" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15946" Name="DAVID GUETTA ft. SIA - She Wolf - Radio Edit"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="226" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="130.00" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/DAVID%20GUETTA%20ft.%20SIA%20-%20She%20Wolf%20-%20Radio%20Edit.mp3"
+           Remixer="" Tonality="G" Label="" Mix="">
+      <TEMPO Inizio="0.555" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="189.783" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="189.783" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15947" Name="DEEP CARE - Blacks - Daniel Kandi Lifted Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="450" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="137.97" DateAdded="" BitRate="128" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/1%20good%20shift/DEEP%20CARE%20-%20Blacks%20-%20Daniel%20Kandi%20Lifted%20Remix.mp3"
+           Remixer="" Tonality="Bbm" Label="" Mix="">
+      <TEMPO Inizio="0.052" Bpm="137.97" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.749" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="8.749" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15948" Name="DENNIS SHEPERD and DIM3NSION - Amigos"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="382" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="129.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/DENNIS%20SHEPERD%20and%20DIM3NSION%20-%20Amigos.mp3"
+           Remixer="" Tonality="Dm" Label="" Mix="">
+      <TEMPO Inizio="0.512" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="66.513" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="66.513" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15949" Name="DIOGO PIÇARRA - Dialeto" Artist="" Composer=""
+           Album="" Grouping="" Genre="" Kind="MP3 File" Size="0" TotalTime="214"
+           DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="100.00" DateAdded=""
+           BitRate="32" SampleRate="48000" Comments="" PlayCount="0" Rating="0"
+           Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/DIOGO%20PI%c3%87ARRA%20-%20Dialeto.mp3"
+           Remixer="" Tonality="Em" Label="" Mix="">
+      <TEMPO Inizio="1.503" Bpm="100.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="52.503" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="52.503" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15950" Name="ED SHEERAN - Shape Of You - Puller and Calgos Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="250" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="192" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/ED%20SHEERAN%20-%20Shape%20Of%20You%20-%20Puller%20and%20Calgos%20Remix.mp3"
+           Remixer="" Tonality="Dbm" Label="" Mix="">
+      <TEMPO Inizio="0.173" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="3.455" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="3.455" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15951" Name="ESTIVA - Blossom - Extended Mix" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="383" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="125.99"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/ESTIVA%20-%20Blossom%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="Cm" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="126.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="6.242" Bpm="126.00" Metro="4/4" Battito="2"/>
+      <TEMPO Inizio="172.433" Bpm="126.00" Metro="4/4" Battito="3"/>
+      <TEMPO Inizio="348.624" Bpm="126.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="36.242" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="36.242" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15952" Name="FERRY CORSTEN &amp; HALIENE - Wherever You Are - Extended Mix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="450" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="129.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/FERRY%20CORSTEN%20%26%20HALIENE%20-%20Wherever%20You%20Are%20-%20Extended%20Mix.mp3"
+           Remixer="" Tonality="C" Label="" Mix="">
+      <TEMPO Inizio="0.160" Bpm="130.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="14.467" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="14.467" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15953" Name="FERRY CORSTEN - Eternity - Instrumental"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="374" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="127.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/FERRY%20CORSTEN%20-%20Eternity%20-%20Instrumental.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.051" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="215.677" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="215.677" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15954" Name="FERRY CORSTEN - Eternity - Narrated" Artist=""
+           Composer="" Album="" Grouping="" Genre="" Kind="MP3 File" Size="0"
+           TotalTime="379" DiscNumber="0" TrackNumber="0" Year="0" AverageBpm="127.99"
+           DateAdded="" BitRate="320" SampleRate="44100" Comments="" PlayCount="0"
+           Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/FERRY%20CORSTEN%20-%20Eternity%20-%20Narrated.mp3"
+           Remixer="" Tonality="Abm" Label="" Mix="">
+      <TEMPO Inizio="0.218" Bpm="128.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="216.783" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="216.783" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15955" Name="JUSTIN BIEBER ft. J BALVIN - Sorry - Spanish-latin Remix"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="220" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="100.00" DateAdded="" BitRate="320" SampleRate="48000"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/JUSTIN%20BIEBER%20ft.%20J%20BALVIN%20-%20Sorry%20-%20Spanish-latin%20Remix.mp3"
+           Remixer="" Tonality="Fm" Label="" Mix="">
+      <TEMPO Inizio="0.325" Bpm="100.00" Metro="4/4" Battito="1"/>
+      <TEMPO Inizio="126.324" Bpm="100.00" Metro="4/4" Battito="3"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="42.925" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="42.925" Num="-1"/>
+    </TRACK>
+    <TRACK TrackID="15956" Name="ROBIN SCHULZ ft. JAMES BLUNT - Ok - Radio Edit"
+           Artist="" Composer="" Album="" Grouping="" Genre="" Kind="MP3 File"
+           Size="0" TotalTime="189" DiscNumber="0" TrackNumber="0" Year="0"
+           AverageBpm="121.99" DateAdded="" BitRate="320" SampleRate="44100"
+           Comments="" PlayCount="0" Rating="0" Location="file://localhost/C:/Root/1%20Unique/z%20shited%20cues/4_by_hand/music/3%20imported/2%20bad%20shift/ROBIN%20SCHULZ%20ft.%20JAMES%20BLUNT%20-%20Ok%20-%20Radio%20Edit.mp3"
+           Remixer="" Tonality="Gm" Label="" Mix="">
+      <TEMPO Inizio="0.263" Bpm="122.00" Metro="4/4" Battito="1"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="56.820" Num="0" Red="60" Green="235"
+                     Blue="80"/>
+      <POSITION_MARK Name="n.n." Type="0" Start="56.820" Num="-1"/>
+    </TRACK>
+  </COLLECTION>
+  <PLAYLISTS>
+    <NODE Type="0" Name="ROOT" Count="5">
+      <NODE Name="2019-02" Type="0" Count="3">
+        <NODE Name="trop other" Type="0" Count="3">
+          <NODE Name="3 - Trop Spain" Type="1" KeyType="0" Entries="65">
+            <TRACK Key="13562"/>
+            <TRACK Key="13563"/>
+            <TRACK Key="13564"/>
+            <TRACK Key="13565"/>
+            <TRACK Key="13566"/>
+            <TRACK Key="13567"/>
+            <TRACK Key="13568"/>
+            <TRACK Key="13569"/>
+            <TRACK Key="13570"/>
+            <TRACK Key="13571"/>
+            <TRACK Key="13572"/>
+            <TRACK Key="13573"/>
+            <TRACK Key="13574"/>
+            <TRACK Key="13575"/>
+            <TRACK Key="13576"/>
+            <TRACK Key="13577"/>
+            <TRACK Key="13578"/>
+            <TRACK Key="13579"/>
+            <TRACK Key="13580"/>
+            <TRACK Key="13581"/>
+            <TRACK Key="13582"/>
+            <TRACK Key="13583"/>
+            <TRACK Key="13584"/>
+            <TRACK Key="13585"/>
+            <TRACK Key="13586"/>
+            <TRACK Key="13587"/>
+            <TRACK Key="13588"/>
+            <TRACK Key="13589"/>
+            <TRACK Key="13590"/>
+            <TRACK Key="13591"/>
+            <TRACK Key="13592"/>
+            <TRACK Key="13593"/>
+            <TRACK Key="13594"/>
+            <TRACK Key="13595"/>
+            <TRACK Key="13596"/>
+            <TRACK Key="13597"/>
+            <TRACK Key="13598"/>
+            <TRACK Key="13599"/>
+            <TRACK Key="13600"/>
+            <TRACK Key="13601"/>
+            <TRACK Key="13602"/>
+            <TRACK Key="13603"/>
+            <TRACK Key="13604"/>
+            <TRACK Key="13605"/>
+            <TRACK Key="13606"/>
+            <TRACK Key="13607"/>
+            <TRACK Key="13608"/>
+            <TRACK Key="13609"/>
+            <TRACK Key="13610"/>
+            <TRACK Key="13611"/>
+            <TRACK Key="13612"/>
+            <TRACK Key="13613"/>
+            <TRACK Key="13614"/>
+            <TRACK Key="13615"/>
+            <TRACK Key="13616"/>
+            <TRACK Key="13617"/>
+            <TRACK Key="13618"/>
+            <TRACK Key="13619"/>
+            <TRACK Key="13620"/>
+            <TRACK Key="13621"/>
+            <TRACK Key="13622"/>
+            <TRACK Key="13623"/>
+            <TRACK Key="13624"/>
+            <TRACK Key="13625"/>
+            <TRACK Key="13626"/>
+          </NODE>
+          <NODE Name="4 - Trop English" Type="1" KeyType="0" Entries="24">
+            <TRACK Key="13627"/>
+            <TRACK Key="13628"/>
+            <TRACK Key="13629"/>
+            <TRACK Key="13630"/>
+            <TRACK Key="13631"/>
+            <TRACK Key="13632"/>
+            <TRACK Key="13633"/>
+            <TRACK Key="13634"/>
+            <TRACK Key="13635"/>
+            <TRACK Key="13636"/>
+            <TRACK Key="13637"/>
+            <TRACK Key="13638"/>
+            <TRACK Key="13639"/>
+            <TRACK Key="13640"/>
+            <TRACK Key="13641"/>
+            <TRACK Key="13642"/>
+            <TRACK Key="13643"/>
+            <TRACK Key="13644"/>
+            <TRACK Key="13645"/>
+            <TRACK Key="13646"/>
+            <TRACK Key="13647"/>
+            <TRACK Key="13648"/>
+            <TRACK Key="13649"/>
+            <TRACK Key="13650"/>
+          </NODE>
+          <NODE Name="2 - Trop PT Afro" Type="1" KeyType="0" Entries="42">
+            <TRACK Key="13520"/>
+            <TRACK Key="13521"/>
+            <TRACK Key="13522"/>
+            <TRACK Key="13523"/>
+            <TRACK Key="13524"/>
+            <TRACK Key="13525"/>
+            <TRACK Key="13526"/>
+            <TRACK Key="13527"/>
+            <TRACK Key="13528"/>
+            <TRACK Key="13529"/>
+            <TRACK Key="13530"/>
+            <TRACK Key="13531"/>
+            <TRACK Key="13532"/>
+            <TRACK Key="13533"/>
+            <TRACK Key="13534"/>
+            <TRACK Key="13535"/>
+            <TRACK Key="13536"/>
+            <TRACK Key="13537"/>
+            <TRACK Key="13538"/>
+            <TRACK Key="13539"/>
+            <TRACK Key="13540"/>
+            <TRACK Key="13541"/>
+            <TRACK Key="13542"/>
+            <TRACK Key="13543"/>
+            <TRACK Key="13544"/>
+            <TRACK Key="13545"/>
+            <TRACK Key="13546"/>
+            <TRACK Key="13547"/>
+            <TRACK Key="13548"/>
+            <TRACK Key="13549"/>
+            <TRACK Key="13550"/>
+            <TRACK Key="13551"/>
+            <TRACK Key="13552"/>
+            <TRACK Key="13553"/>
+            <TRACK Key="13554"/>
+            <TRACK Key="13555"/>
+            <TRACK Key="13556"/>
+            <TRACK Key="13557"/>
+            <TRACK Key="13558"/>
+            <TRACK Key="13559"/>
+            <TRACK Key="13560"/>
+            <TRACK Key="13561"/>
+          </NODE>
+        </NODE>
+        <NODE Name="Tuga" Type="0" Count="3">
+          <NODE Name="Tuga z_10s" Type="1" KeyType="0" Entries="9">
+            <TRACK Key="14045"/>
+            <TRACK Key="14046"/>
+            <TRACK Key="14047"/>
+            <TRACK Key="14048"/>
+            <TRACK Key="14049"/>
+            <TRACK Key="14050"/>
+            <TRACK Key="14051"/>
+            <TRACK Key="14052"/>
+            <TRACK Key="14053"/>
+          </NODE>
+          <NODE Name="Tuga Party" Type="1" KeyType="0" Entries="54">
+            <TRACK Key="13874"/>
+            <TRACK Key="13875"/>
+            <TRACK Key="13876"/>
+            <TRACK Key="13877"/>
+            <TRACK Key="13878"/>
+            <TRACK Key="13879"/>
+            <TRACK Key="13880"/>
+            <TRACK Key="13881"/>
+            <TRACK Key="13882"/>
+            <TRACK Key="13883"/>
+            <TRACK Key="13884"/>
+            <TRACK Key="13885"/>
+            <TRACK Key="13886"/>
+            <TRACK Key="13887"/>
+            <TRACK Key="13888"/>
+            <TRACK Key="13889"/>
+            <TRACK Key="13890"/>
+            <TRACK Key="13891"/>
+            <TRACK Key="13892"/>
+            <TRACK Key="13893"/>
+            <TRACK Key="13894"/>
+            <TRACK Key="13895"/>
+            <TRACK Key="13896"/>
+            <TRACK Key="13897"/>
+            <TRACK Key="13898"/>
+            <TRACK Key="13899"/>
+            <TRACK Key="13900"/>
+            <TRACK Key="13901"/>
+            <TRACK Key="13902"/>
+            <TRACK Key="13903"/>
+            <TRACK Key="13904"/>
+            <TRACK Key="13905"/>
+            <TRACK Key="13906"/>
+            <TRACK Key="13907"/>
+            <TRACK Key="13908"/>
+            <TRACK Key="13909"/>
+            <TRACK Key="13910"/>
+            <TRACK Key="13911"/>
+            <TRACK Key="13912"/>
+            <TRACK Key="13913"/>
+            <TRACK Key="13914"/>
+            <TRACK Key="13915"/>
+            <TRACK Key="13916"/>
+            <TRACK Key="13917"/>
+            <TRACK Key="13918"/>
+            <TRACK Key="13919"/>
+            <TRACK Key="13920"/>
+            <TRACK Key="13921"/>
+            <TRACK Key="13922"/>
+            <TRACK Key="13923"/>
+            <TRACK Key="13924"/>
+            <TRACK Key="13925"/>
+            <TRACK Key="13926"/>
+            <TRACK Key="13927"/>
+          </NODE>
+          <NODE Name="Tuga Pimba" Type="1" KeyType="0" Entries="117">
+            <TRACK Key="13928"/>
+            <TRACK Key="13929"/>
+            <TRACK Key="13930"/>
+            <TRACK Key="13931"/>
+            <TRACK Key="13932"/>
+            <TRACK Key="13933"/>
+            <TRACK Key="13934"/>
+            <TRACK Key="13935"/>
+            <TRACK Key="13936"/>
+            <TRACK Key="13937"/>
+            <TRACK Key="13938"/>
+            <TRACK Key="13939"/>
+            <TRACK Key="13940"/>
+            <TRACK Key="13941"/>
+            <TRACK Key="13942"/>
+            <TRACK Key="13943"/>
+            <TRACK Key="13944"/>
+            <TRACK Key="13945"/>
+            <TRACK Key="13946"/>
+            <TRACK Key="13947"/>
+            <TRACK Key="13948"/>
+            <TRACK Key="13949"/>
+            <TRACK Key="13950"/>
+            <TRACK Key="13951"/>
+            <TRACK Key="13952"/>
+            <TRACK Key="13953"/>
+            <TRACK Key="13954"/>
+            <TRACK Key="13955"/>
+            <TRACK Key="13956"/>
+            <TRACK Key="13957"/>
+            <TRACK Key="13958"/>
+            <TRACK Key="13959"/>
+            <TRACK Key="13960"/>
+            <TRACK Key="13961"/>
+            <TRACK Key="13962"/>
+            <TRACK Key="13963"/>
+            <TRACK Key="13964"/>
+            <TRACK Key="13965"/>
+            <TRACK Key="13966"/>
+            <TRACK Key="13967"/>
+            <TRACK Key="13968"/>
+            <TRACK Key="13969"/>
+            <TRACK Key="13970"/>
+            <TRACK Key="13971"/>
+            <TRACK Key="13972"/>
+            <TRACK Key="13973"/>
+            <TRACK Key="13974"/>
+            <TRACK Key="13975"/>
+            <TRACK Key="13976"/>
+            <TRACK Key="13977"/>
+            <TRACK Key="13978"/>
+            <TRACK Key="13979"/>
+            <TRACK Key="13980"/>
+            <TRACK Key="13981"/>
+            <TRACK Key="13982"/>
+            <TRACK Key="13983"/>
+            <TRACK Key="13984"/>
+            <TRACK Key="13985"/>
+            <TRACK Key="13986"/>
+            <TRACK Key="13987"/>
+            <TRACK Key="13988"/>
+            <TRACK Key="13989"/>
+            <TRACK Key="13990"/>
+            <TRACK Key="13991"/>
+            <TRACK Key="13992"/>
+            <TRACK Key="13993"/>
+            <TRACK Key="13994"/>
+            <TRACK Key="13995"/>
+            <TRACK Key="13996"/>
+            <TRACK Key="13997"/>
+            <TRACK Key="13998"/>
+            <TRACK Key="13999"/>
+            <TRACK Key="14000"/>
+            <TRACK Key="14001"/>
+            <TRACK Key="14002"/>
+            <TRACK Key="14003"/>
+            <TRACK Key="14004"/>
+            <TRACK Key="14005"/>
+            <TRACK Key="14006"/>
+            <TRACK Key="14007"/>
+            <TRACK Key="14008"/>
+            <TRACK Key="14009"/>
+            <TRACK Key="14010"/>
+            <TRACK Key="14011"/>
+            <TRACK Key="14012"/>
+            <TRACK Key="14013"/>
+            <TRACK Key="14014"/>
+            <TRACK Key="14015"/>
+            <TRACK Key="14016"/>
+            <TRACK Key="14017"/>
+            <TRACK Key="14018"/>
+            <TRACK Key="14019"/>
+            <TRACK Key="14020"/>
+            <TRACK Key="14021"/>
+            <TRACK Key="14022"/>
+            <TRACK Key="14023"/>
+            <TRACK Key="14024"/>
+            <TRACK Key="14025"/>
+            <TRACK Key="14026"/>
+            <TRACK Key="14027"/>
+            <TRACK Key="14028"/>
+            <TRACK Key="14029"/>
+            <TRACK Key="14030"/>
+            <TRACK Key="14031"/>
+            <TRACK Key="14032"/>
+            <TRACK Key="14033"/>
+            <TRACK Key="14034"/>
+            <TRACK Key="14035"/>
+            <TRACK Key="14036"/>
+            <TRACK Key="14037"/>
+            <TRACK Key="14038"/>
+            <TRACK Key="14039"/>
+            <TRACK Key="14040"/>
+            <TRACK Key="14041"/>
+            <TRACK Key="14042"/>
+            <TRACK Key="14043"/>
+            <TRACK Key="14044"/>
+          </NODE>
+        </NODE>
+        <NODE Name="brazileiro" Type="0" Count="2">
+          <NODE Name="Carnaval" Type="1" KeyType="0" Entries="12">
+            <TRACK Key="13451"/>
+            <TRACK Key="13452"/>
+            <TRACK Key="13453"/>
+            <TRACK Key="13454"/>
+            <TRACK Key="13455"/>
+            <TRACK Key="13456"/>
+            <TRACK Key="13457"/>
+            <TRACK Key="13458"/>
+            <TRACK Key="13459"/>
+            <TRACK Key="13460"/>
+            <TRACK Key="13461"/>
+            <TRACK Key="13462"/>
+          </NODE>
+          <NODE Name="1 - Trop Brazileiro" Type="1" KeyType="0" Entries="83">
+            <TRACK Key="13437"/>
+            <TRACK Key="13438"/>
+            <TRACK Key="13439"/>
+            <TRACK Key="13440"/>
+            <TRACK Key="13441"/>
+            <TRACK Key="13442"/>
+            <TRACK Key="13443"/>
+            <TRACK Key="13444"/>
+            <TRACK Key="13445"/>
+            <TRACK Key="13446"/>
+            <TRACK Key="13447"/>
+            <TRACK Key="13448"/>
+            <TRACK Key="13449"/>
+            <TRACK Key="13450"/>
+            <TRACK Key="13451"/>
+            <TRACK Key="13452"/>
+            <TRACK Key="13453"/>
+            <TRACK Key="13454"/>
+            <TRACK Key="13455"/>
+            <TRACK Key="13456"/>
+            <TRACK Key="13457"/>
+            <TRACK Key="13458"/>
+            <TRACK Key="13459"/>
+            <TRACK Key="13460"/>
+            <TRACK Key="13461"/>
+            <TRACK Key="13462"/>
+            <TRACK Key="13463"/>
+            <TRACK Key="13464"/>
+            <TRACK Key="13465"/>
+            <TRACK Key="13466"/>
+            <TRACK Key="13467"/>
+            <TRACK Key="13468"/>
+            <TRACK Key="13469"/>
+            <TRACK Key="13470"/>
+            <TRACK Key="13471"/>
+            <TRACK Key="13472"/>
+            <TRACK Key="13473"/>
+            <TRACK Key="13474"/>
+            <TRACK Key="13475"/>
+            <TRACK Key="13476"/>
+            <TRACK Key="13477"/>
+            <TRACK Key="13478"/>
+            <TRACK Key="13479"/>
+            <TRACK Key="13480"/>
+            <TRACK Key="13481"/>
+            <TRACK Key="13482"/>
+            <TRACK Key="13483"/>
+            <TRACK Key="13484"/>
+            <TRACK Key="13485"/>
+            <TRACK Key="13486"/>
+            <TRACK Key="13487"/>
+            <TRACK Key="13488"/>
+            <TRACK Key="13489"/>
+            <TRACK Key="13490"/>
+            <TRACK Key="13491"/>
+            <TRACK Key="13492"/>
+            <TRACK Key="13493"/>
+            <TRACK Key="13494"/>
+            <TRACK Key="13495"/>
+            <TRACK Key="13496"/>
+            <TRACK Key="13497"/>
+            <TRACK Key="13498"/>
+            <TRACK Key="13499"/>
+            <TRACK Key="13500"/>
+            <TRACK Key="13501"/>
+            <TRACK Key="13502"/>
+            <TRACK Key="13503"/>
+            <TRACK Key="13504"/>
+            <TRACK Key="13505"/>
+            <TRACK Key="13506"/>
+            <TRACK Key="13507"/>
+            <TRACK Key="13508"/>
+            <TRACK Key="13509"/>
+            <TRACK Key="13510"/>
+            <TRACK Key="13511"/>
+            <TRACK Key="13512"/>
+            <TRACK Key="13513"/>
+            <TRACK Key="13514"/>
+            <TRACK Key="13515"/>
+            <TRACK Key="13516"/>
+            <TRACK Key="13517"/>
+            <TRACK Key="13518"/>
+            <TRACK Key="13519"/>
+          </NODE>
+        </NODE>
+      </NODE>
+      <NODE Name="Testes cues" Type="0" Count="2">
+        <NODE Name="old" Type="0" Count="4">
+          <NODE Name="all libav" Type="0" Count="2">
+            <NODE Name="wav" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mp3" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="RB2" Type="0" Count="1">
+            <NODE Name="bad" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="dataconv" Type="0" Count="2">
+            <NODE Name="bad" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="weird" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="DAW" Type="0" Count="3">
+            <NODE Name="wav" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="bad" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="good" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+        </NODE>
+        <NODE Name="4_manual_good_dataset" Type="0" Count="3">
+          <NODE Name="all files" Type="1" KeyType="0" Entries="113">
+            <TRACK Key="15844"/>
+            <TRACK Key="15845"/>
+            <TRACK Key="15846"/>
+            <TRACK Key="15847"/>
+            <TRACK Key="15848"/>
+            <TRACK Key="15849"/>
+            <TRACK Key="15850"/>
+            <TRACK Key="15851"/>
+            <TRACK Key="15852"/>
+            <TRACK Key="15853"/>
+            <TRACK Key="15854"/>
+            <TRACK Key="15855"/>
+            <TRACK Key="15856"/>
+            <TRACK Key="15857"/>
+            <TRACK Key="15858"/>
+            <TRACK Key="15859"/>
+            <TRACK Key="15860"/>
+            <TRACK Key="15861"/>
+            <TRACK Key="15862"/>
+            <TRACK Key="15863"/>
+            <TRACK Key="15864"/>
+            <TRACK Key="15865"/>
+            <TRACK Key="15866"/>
+            <TRACK Key="15867"/>
+            <TRACK Key="15868"/>
+            <TRACK Key="15869"/>
+            <TRACK Key="15870"/>
+            <TRACK Key="15871"/>
+            <TRACK Key="15872"/>
+            <TRACK Key="15873"/>
+            <TRACK Key="15874"/>
+            <TRACK Key="15875"/>
+            <TRACK Key="15876"/>
+            <TRACK Key="15877"/>
+            <TRACK Key="15878"/>
+            <TRACK Key="15879"/>
+            <TRACK Key="15880"/>
+            <TRACK Key="15881"/>
+            <TRACK Key="15882"/>
+            <TRACK Key="15883"/>
+            <TRACK Key="15884"/>
+            <TRACK Key="15885"/>
+            <TRACK Key="15886"/>
+            <TRACK Key="15887"/>
+            <TRACK Key="15888"/>
+            <TRACK Key="15889"/>
+            <TRACK Key="15890"/>
+            <TRACK Key="15891"/>
+            <TRACK Key="15892"/>
+            <TRACK Key="15893"/>
+            <TRACK Key="15894"/>
+            <TRACK Key="15895"/>
+            <TRACK Key="15896"/>
+            <TRACK Key="15897"/>
+            <TRACK Key="15898"/>
+            <TRACK Key="15899"/>
+            <TRACK Key="15900"/>
+            <TRACK Key="15901"/>
+            <TRACK Key="15902"/>
+            <TRACK Key="15903"/>
+            <TRACK Key="15904"/>
+            <TRACK Key="15905"/>
+            <TRACK Key="15906"/>
+            <TRACK Key="15907"/>
+            <TRACK Key="15908"/>
+            <TRACK Key="15909"/>
+            <TRACK Key="15910"/>
+            <TRACK Key="15911"/>
+            <TRACK Key="15912"/>
+            <TRACK Key="15913"/>
+            <TRACK Key="15914"/>
+            <TRACK Key="15915"/>
+            <TRACK Key="15916"/>
+            <TRACK Key="15917"/>
+            <TRACK Key="15918"/>
+            <TRACK Key="15919"/>
+            <TRACK Key="15920"/>
+            <TRACK Key="15921"/>
+            <TRACK Key="15922"/>
+            <TRACK Key="15923"/>
+            <TRACK Key="15924"/>
+            <TRACK Key="15925"/>
+            <TRACK Key="15926"/>
+            <TRACK Key="15927"/>
+            <TRACK Key="15928"/>
+            <TRACK Key="15929"/>
+            <TRACK Key="15930"/>
+            <TRACK Key="15931"/>
+            <TRACK Key="15932"/>
+            <TRACK Key="15933"/>
+            <TRACK Key="15934"/>
+            <TRACK Key="15935"/>
+            <TRACK Key="15936"/>
+            <TRACK Key="15937"/>
+            <TRACK Key="15938"/>
+            <TRACK Key="15939"/>
+            <TRACK Key="15940"/>
+            <TRACK Key="15941"/>
+            <TRACK Key="15942"/>
+            <TRACK Key="15943"/>
+            <TRACK Key="15944"/>
+            <TRACK Key="15945"/>
+            <TRACK Key="15946"/>
+            <TRACK Key="15947"/>
+            <TRACK Key="15948"/>
+            <TRACK Key="15949"/>
+            <TRACK Key="15950"/>
+            <TRACK Key="15951"/>
+            <TRACK Key="15952"/>
+            <TRACK Key="15953"/>
+            <TRACK Key="15954"/>
+            <TRACK Key="15955"/>
+            <TRACK Key="15956"/>
+          </NODE>
+          <NODE Name="good" Type="1" KeyType="0" Entries="65">
+            <TRACK Key="15844"/>
+            <TRACK Key="15845"/>
+            <TRACK Key="15846"/>
+            <TRACK Key="15848"/>
+            <TRACK Key="15849"/>
+            <TRACK Key="15850"/>
+            <TRACK Key="15851"/>
+            <TRACK Key="15852"/>
+            <TRACK Key="15853"/>
+            <TRACK Key="15855"/>
+            <TRACK Key="15856"/>
+            <TRACK Key="15857"/>
+            <TRACK Key="15860"/>
+            <TRACK Key="15861"/>
+            <TRACK Key="15862"/>
+            <TRACK Key="15864"/>
+            <TRACK Key="15865"/>
+            <TRACK Key="15867"/>
+            <TRACK Key="15869"/>
+            <TRACK Key="15870"/>
+            <TRACK Key="15871"/>
+            <TRACK Key="15873"/>
+            <TRACK Key="15874"/>
+            <TRACK Key="15875"/>
+            <TRACK Key="15876"/>
+            <TRACK Key="15877"/>
+            <TRACK Key="15878"/>
+            <TRACK Key="15879"/>
+            <TRACK Key="15880"/>
+            <TRACK Key="15881"/>
+            <TRACK Key="15882"/>
+            <TRACK Key="15883"/>
+            <TRACK Key="15884"/>
+            <TRACK Key="15885"/>
+            <TRACK Key="15886"/>
+            <TRACK Key="15887"/>
+            <TRACK Key="15888"/>
+            <TRACK Key="15891"/>
+            <TRACK Key="15893"/>
+            <TRACK Key="15894"/>
+            <TRACK Key="15895"/>
+            <TRACK Key="15896"/>
+            <TRACK Key="15897"/>
+            <TRACK Key="15898"/>
+            <TRACK Key="15899"/>
+            <TRACK Key="15900"/>
+            <TRACK Key="15901"/>
+            <TRACK Key="15902"/>
+            <TRACK Key="15903"/>
+            <TRACK Key="15904"/>
+            <TRACK Key="15905"/>
+            <TRACK Key="15907"/>
+            <TRACK Key="15908"/>
+            <TRACK Key="15926"/>
+            <TRACK Key="15934"/>
+            <TRACK Key="15929"/>
+            <TRACK Key="15930"/>
+            <TRACK Key="15935"/>
+            <TRACK Key="15932"/>
+            <TRACK Key="15933"/>
+            <TRACK Key="15937"/>
+            <TRACK Key="15938"/>
+            <TRACK Key="15940"/>
+            <TRACK Key="15946"/>
+            <TRACK Key="15947"/>
+          </NODE>
+          <NODE Name="bad" Type="1" KeyType="0" Entries="48">
+            <TRACK Key="15847"/>
+            <TRACK Key="15854"/>
+            <TRACK Key="15858"/>
+            <TRACK Key="15859"/>
+            <TRACK Key="15863"/>
+            <TRACK Key="15866"/>
+            <TRACK Key="15868"/>
+            <TRACK Key="15872"/>
+            <TRACK Key="15889"/>
+            <TRACK Key="15890"/>
+            <TRACK Key="15892"/>
+            <TRACK Key="15906"/>
+            <TRACK Key="15909"/>
+            <TRACK Key="15910"/>
+            <TRACK Key="15911"/>
+            <TRACK Key="15912"/>
+            <TRACK Key="15913"/>
+            <TRACK Key="15914"/>
+            <TRACK Key="15915"/>
+            <TRACK Key="15916"/>
+            <TRACK Key="15917"/>
+            <TRACK Key="15918"/>
+            <TRACK Key="15919"/>
+            <TRACK Key="15920"/>
+            <TRACK Key="15921"/>
+            <TRACK Key="15922"/>
+            <TRACK Key="15923"/>
+            <TRACK Key="15924"/>
+            <TRACK Key="15925"/>
+            <TRACK Key="15927"/>
+            <TRACK Key="15928"/>
+            <TRACK Key="15931"/>
+            <TRACK Key="15936"/>
+            <TRACK Key="15939"/>
+            <TRACK Key="15943"/>
+            <TRACK Key="15941"/>
+            <TRACK Key="15942"/>
+            <TRACK Key="15944"/>
+            <TRACK Key="15945"/>
+            <TRACK Key="15948"/>
+            <TRACK Key="15949"/>
+            <TRACK Key="15950"/>
+            <TRACK Key="15951"/>
+            <TRACK Key="15953"/>
+            <TRACK Key="15954"/>
+            <TRACK Key="15952"/>
+            <TRACK Key="15955"/>
+            <TRACK Key="15956"/>
+          </NODE>
+        </NODE>
+      </NODE>
+      <NODE Name="2018-08" Type="0" Count="3">
+        <NODE Name="TRANCE_CDs" Type="0" Count="2">
+          <NODE Name="1 - Feitos" Type="0" Count="10">
+            <NODE Name="deep" Type="0" Count="2">
+              <NODE Name="deep cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="deep cd2 80s" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix08 - Classic Trance" Type="0" Count="7">
+              <NODE Name="mix08 cd3" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix08 cd4" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="30m sampler - src" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix08 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix08 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix08 cd3" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix08 cd4" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix09 - House" Type="0" Count="5">
+              <NODE Name="mix09 cd2" Type="0" Count="1">
+                <NODE Name="z_extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix09 cd3 - tribal" Type="0" Count="1">
+                <NODE Name="extra" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix09 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix09 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix09 cd3 - tribal" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix11 - Vocal trance" Type="0" Count="13">
+              <NODE Name="Mix11 CD03" Type="0" Count="1">
+                <NODE Name="extra" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="Mix11 CD04" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix11 cd06" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix11 cd09" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix11 cd01" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Mix11 CD02" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Mix11 CD03" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Mix11 CD04" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Mix11 CD05" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix11 cd06" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix11 cd07" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix11 cd08" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix11 cd09" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix12 - Uplifting Trance" Type="0" Count="11">
+              <NODE Name="mix12 cd4" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix12 cd5" Type="0" Count="1">
+                <NODE Name="extra" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix12 cd6" Type="0" Count="1">
+                <NODE Name="extra" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix12 cd7" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix12 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix12 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix12 cd3" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix12 cd4" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix12 cd5" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix12 cd6" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix12 cd7" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix13 - Progressive Trance" Type="0" Count="6">
+              <NODE Name="mix13 cd1" Type="0" Count="1">
+                <NODE Name="extra" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix13 cd2" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix13 cd3" Type="0" Count="1">
+                <NODE Name="extra" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix13 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix13 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix13 cd3" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix14 - Comercial Vocal Trance" Type="0" Count="8">
+              <NODE Name="mix14 cd1" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix14 cd2" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix14 cd3" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix14 cd4" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix14 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix14 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix14 cd3" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix14 cd4" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix15 - Tech Trance" Type="0" Count="4">
+              <NODE Name="mix15 cd1" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix15 cd2" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix15 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix15 cd2" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix16 - Markus Style" Type="0" Count="5">
+              <NODE Name="mix16 cd1" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix16 cd2" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix16 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix16 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix16 cd4" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="mix17 - T-Friends Style" Type="0" Count="8">
+              <NODE Name="mix17 cd2" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix17 cd3" Type="0" Count="1">
+                <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix17 cd5" Type="0" Count="1">
+                <NODE Name="extra versions" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="mix17 cd1" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix17 cd2" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix17 cd3" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="MIX17 cd4" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="mix17 cd5" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+          </NODE>
+          <NODE Name="2 - Ainda a fazer" Type="0" Count="6">
+            <NODE Name="mix13 cd6" Type="0" Count="1">
+              <NODE Name="extras" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="breaks CD1" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd10 - a fazer" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix13 cd5" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix13 cd6" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix17 cd6 - a fazer" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+        </NODE>
+        <NODE Name="PEDRO" Type="0" Count="4">
+          <NODE Name="MP3 Archive" Type="0" Count="1">
+            <NODE Name="3 - 95s Classics" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="sources CDs" Type="0" Count="4">
+            <NODE Name="mix09 cd2" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="breaks CD1" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd10 - a fazer" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix17 cd6 - a fazer" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="MP3 Recent" Type="0" Count="5">
+            <NODE Name="2 - Tomorrowland Festival" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="1 - House Comercial 10s (New)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - Pop e Rock 10s e 00s (New)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="3 - Latin e Preto 10s" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="4 - Kizomba, Braz, PT" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="MP3 Latest" Type="0" Count="6">
+            <NODE Name="1 - MP3 IMC Classics" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - MP3 Latest" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - MP3 IMC Infinity Party" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="999 - festa IMC ultima" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="99 - IMC Lexence party" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - IMC Infinity Party" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+        </NODE>
+        <NODE Name="SILVIA" Type="0" Count="2">
+          <NODE Name="VERSOES +" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="VERSOES -" Type="1" KeyType="0" Entries="0"/>
+        </NODE>
+      </NODE>
+      <NODE Name="2018-10" Type="0" Count="2">
+        <NODE Name="IMC party latest" Type="0" Count="5">
+          <NODE Name="1 - House Comercial 10s (New)" Type="0" Count="2">
+            <NODE Name="1 - House Comercial 10s (New)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - Tomorrowland Festival" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="2 - Pop e Rock 10s e 00s (New)" Type="0" Count="2">
+            <NODE Name="Pop 10s (Old)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - Pop e Rock 10s e 00s (New)" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="3 - Latin e Preto 10s" Type="0" Count="2">
+            <NODE Name="3 - Latin 10s (Old)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="4 - Preto 10s (Old)" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="4 - Kizomba, Braz, PT" Type="0" Count="1">
+            <NODE Name="4 - Kizomba, Braz, PT" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="9 - Especiais 10s" Type="0" Count="5">
+            <NODE Name="1 - IMC Classics" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - Latest" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - IMC Infinity Party" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - IMC Lexence party" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - Julien Energetic Pop 10s" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+        </NODE>
+        <NODE Name="Pedro CDs sources" Type="0" Count="3">
+          <NODE Name="mix11" Type="0" Count="10">
+            <NODE Name="mix11 cd10" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd09" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd08" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd07" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd06" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Mix11 CD05" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Mix11 CD04" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Mix11 CD03" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Mix11 CD02" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix11 cd01" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="mix13" Type="0" Count="3">
+            <NODE Name="mix13 cd1" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix13 cd2" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix13 cd3" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="mix17" Type="0" Count="6">
+            <NODE Name="mix17 cd6" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix17 cd5" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="MIX17 cd4" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix17 cd3" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix17 cd2" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="mix17 cd1" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+        </NODE>
+      </NODE>
+      <NODE Name="2018-11" Type="0" Count="3">
+        <NODE Name="1 Silvia" Type="0" Count="7">
+          <NODE Name="versoes -" Type="0" Count="1">
+            <NODE Name="il divo" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="Carnaval" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="kisomba lento" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="Latino" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="trance" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="versoes -" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="versoes +" Type="1" KeyType="0" Entries="0"/>
+        </NODE>
+        <NODE Name="8 Pedro Archived" Type="0" Count="5">
+          <NODE Name="1 Pop_Rock" Type="0" Count="8">
+            <NODE Name="70s DiscoSound" Type="0" Count="2">
+              <NODE Name="1 DiscoSound Orig" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="2 DiscoSound New" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="80s Pop" Type="0" Count="2">
+              <NODE Name="80s Italo Hits" Type="0" Count="1">
+                <NODE Name="Italo Sazook" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="80s Italo Hits" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="80s Rock" Type="0" Count="1">
+              <NODE Name="80s Rock FM" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="60s Rock n Roll" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="80s Pop" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="80s Rock" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="90s Rock new" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="ZZ Ambient e Soft" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="2 Party" Type="0" Count="6">
+            <NODE Name="Megamixes" Type="0" Count="6">
+              <NODE Name="3 Italo Megamixes" Type="0" Count="1">
+                <NODE Name="Max Mixes" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="1 Rock Megamixes" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="2 Pop Megamixes" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="3 Italo Megamixes" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="4 Eurodance Megamixes" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="5 Party Megamixes" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="Sounds" Type="0" Count="4">
+              <NODE Name="1 FX Sounds" Type="0" Count="10">
+                <NODE Name="0 Basics" Type="0" Count="5">
+                  <NODE Name="0 AirHorns" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="1 Sirens" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="boat horn" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="explosions" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="gunshots" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="Artificial" Type="0" Count="9">
+                  <NODE Name="1 Shepard tone" Type="0" Count="1">
+                    <NODE Name="shepard tone descent" Type="1" KeyType="0" Entries="0"/>
+                  </NODE>
+                  <NODE Name="lasers" Type="0" Count="1">
+                    <NODE Name="star wars" Type="1" KeyType="0" Entries="0"/>
+                  </NODE>
+                  <NODE Name="1 Shepard tone" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="2 white noise" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="lasers" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="robotic voices" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="sweeps Down" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="Sweeps Up" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="turntable spinbacks" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="DJ Intros" Type="0" Count="1">
+                  <NODE Name="tv themes" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="human talk" Type="0" Count="8">
+                  <NODE Name="2 Sentences" Type="0" Count="1">
+                    <NODE Name="1 sentences (Sang)" Type="1" KeyType="0" Entries="0"/>
+                  </NODE>
+                  <NODE Name="Kids" Type="0" Count="2">
+                    <NODE Name="kids" Type="1" KeyType="0" Entries="0"/>
+                    <NODE Name="muppets" Type="1" KeyType="0" Entries="0"/>
+                  </NODE>
+                  <NODE Name="1 Words" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="2 Sentences" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="3 Speeches" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="Countdowns 321" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="spooky" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="whistles" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="human various" Type="0" Count="6">
+                  <NODE Name="animal sounds" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="applauses" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="cheesy hua hua" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="crowd boos" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="laughs" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="sex" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="man-made devices" Type="0" Count="3">
+                  <NODE Name="cars" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="glass breaks" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="telephone rings" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="natural sounds" Type="0" Count="3">
+                  <NODE Name="instruments" Type="0" Count="2">
+                    <NODE Name="bells" Type="1" KeyType="0" Entries="0"/>
+                    <NODE Name="pratos bateria" Type="1" KeyType="0" Entries="0"/>
+                  </NODE>
+                  <NODE Name="instruments" Type="1" KeyType="0" Entries="0"/>
+                  <NODE Name="nature" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="Artificial" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="DJ Intros" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="man-made devices" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="8 Production" Type="0" Count="2">
+                <NODE Name="3 Single Beats" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="4 Full Loops" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="9 Scratch" Type="0" Count="3">
+                <NODE Name="8 Scratch Samples" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="9 Scratch Rhythms" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="later" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="3 Acappellas" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="Special Dates" Type="0" Count="1">
+              <NODE Name="christmas songs" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="00s Big Beat" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="90s Eurodance" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="90s Party" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="3 Tropical (Old)" Type="0" Count="6">
+            <NODE Name="1 - Trop Brazileiro" Type="0" Count="2">
+              <NODE Name="1 - Trop Brazileiro" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Carnaval" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="2 - Trop PT Afro" Type="0" Count="2">
+              <NODE Name="2 - Trop PT Afro" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Trop Kuduro" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="6 - Tuga" Type="0" Count="6">
+              <NODE Name="Tuga 60s" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Tuga 70s - 25 abril" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Tuga 80s" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Tuga Party" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Tuga Pimba" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="Tuga z_10s" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="3 - Trop Spain" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="4 - Trop English" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="5 - Reggae" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="4 Dance Music (Specific)" Type="0" Count="8">
+            <NODE Name="4 - House 2000s (Old)" Type="0" Count="1">
+              <NODE Name="Synergies" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="5 - Deep House" Type="0" Count="4">
+              <NODE Name="0 latest" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="1 deep malhas" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="deep comercial" Type="1" KeyType="0" Entries="0"/>
+              <NODE Name="deep pausa" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="8 - Trance TF Festas Selection" Type="0" Count="3">
+              <NODE Name="2 TF2__Selection" Type="0" Count="7">
+                <NODE Name="TF2 0 Tem que passar 1" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF2 0 Tem que passar 2" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF2 1 comercial" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF2 12" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF2 Armin" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF2 Classics" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF2 Pausa" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="3 TF3__Selection" Type="0" Count="7">
+                <NODE Name="TF3 0 Mesmo" Type="0" Count="1">
+                  <NODE Name="classic" Type="1" KeyType="0" Entries="0"/>
+                </NODE>
+                <NODE Name="TF3 0 Mesmo" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF3 2 Vocal" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF3 3 Instrumental" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF3 4 Comercial" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF3 8 Classics" Type="1" KeyType="0" Entries="0"/>
+                <NODE Name="TF3 9 Intros e Outros" Type="1" KeyType="0" Entries="0"/>
+              </NODE>
+              <NODE Name="1 J4T1__Selection" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="1 - 80s Remixes" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - 90s Early House" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="3 - 95s Classics" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="4 - House 2000s (Old)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - Trance Classics" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="5 Ismayil music" Type="0" Count="13">
+            <NODE Name="Dance" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Dutch" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Hiphop" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Kizumba" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Latin" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Oldies" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Oldies tech" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Reggae" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="RnB" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Rock" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Slow jam" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Sound Sample" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="Turks" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+        </NODE>
+        <NODE Name="9 Pedro Last" Type="0" Count="9">
+          <NODE Name="1 - House Comercial 10s (New)" Type="0" Count="1">
+            <NODE Name="2 - Tomorrowland Festival" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="2 - Pop e Rock 10s e 00s (New)" Type="0" Count="1">
+            <NODE Name="Pop 10s (Old)" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="3 - Latin e Preto 10s" Type="0" Count="2">
+            <NODE Name="3 - Latin 10s (Old)" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="4 - Preto 10s (Old)" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="4 - Kizomba, Braz, PT" Type="0" Count="1">
+            <NODE Name="PT latin rock" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="9 - Especiais 10s" Type="0" Count="7">
+            <NODE Name="2 - Latest" Type="0" Count="1">
+              <NODE Name="3 - Rock Covers" Type="1" KeyType="0" Entries="0"/>
+            </NODE>
+            <NODE Name="1 - IMC Classics" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="2 - Latest" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - IMC Infinity Party" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - IMC Lexence party" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="9 - Julien Energetic Pop 10s" Type="1" KeyType="0" Entries="0"/>
+            <NODE Name="0 - New year 2019" Type="1" KeyType="0" Entries="0"/>
+          </NODE>
+          <NODE Name="1 - House Comercial 10s (New)" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="2 - Pop e Rock 10s e 00s (New)" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="3 - Latin e Preto 10s" Type="1" KeyType="0" Entries="0"/>
+          <NODE Name="4 - Kizomba, Braz, PT" Type="1" KeyType="0" Entries="0"/>
+        </NODE>
+      </NODE>
+    </NODE>
+  </PLAYLISTS>
+</DJ_PLAYLISTS>
