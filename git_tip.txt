@@ -1,0 +1,6 @@
+to move folders around:
+ cd root
+ git add -A .
+ git status
+
+
