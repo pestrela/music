@@ -1,0 +1,1189 @@
+; ------- Bome MIDI Translator: Signed Project File
+; ------- You can modify this file as you like, but that will invalidate
+; ------- the signature so that it cannot be opened in MT Player anymore.
+;
+[MIDI.routes]
+In0=From Traktor
+Out0=To DDJ
+In1=From DDJ
+Out1=To Traktor
+
+[Preset.0]
+Name=INIT / MASTER CLOCK
+Active=1
+PresetSwitchIgnore=0
+Name0=OPEN PROJECT
+Incoming0=EnDi02
+Outgoing0=Tim0TimS000Bglobal_init1:0:1
+Options0=Actv01Stop00OutO00
+Name1=RESTART PROJECT
+Incoming1=KAM10000KSQ10006011010041241210211
+Outgoing1=Tim0TimS000Bglobal_init1:0:1
+Options1=Actv01Stop00OutO00
+Name2=Set Global Variables
+Incoming2=Tim0TimT000Bglobal_init
+Outgoing2=Tim0TimS0012reset_master_clock1:0:1
+Options2=Actv01Stop00OutO00StMa00000026label0015__cmt>/// bpm & tempog1=0g5=1label0006__cmt>h1=120h5=1label0006__cmt>i1=10i5=1label0006__cmt>label0012__cmt>///// needlelabel000D__cmt>// prevy1=0label000C__cmt>// degz1=0label0006__cmt>label001E__cmt>/// locks for 30ms inputht=0hs=0he=0hf=0hw=0label0006__cmt>label0015__cmt>// 10 ms periodhy=10label0006__cmt>label0013__cmt>/// seek calcia=0ib=0label0006__cmt>label0006__cmt>label0017__cmt>//jog touch blockko=127kp=127label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>
+Name3=------
+Incoming3=None
+Outgoing3=None
+Options3=Actv00Stop00OutO00
+Name4=------
+Incoming4=None
+Outgoing4=None
+Options4=Actv00Stop00OutO00
+Name5=START CLOCK PROCESS
+Incoming5=Tim0TimT0012reset_master_clock
+Outgoing5=Tim0TimS000Cmaster_clock0:0:hy
+Options5=Actv01Stop00OutO00
+Name6=------
+Incoming6=None
+Outgoing6=None
+Options6=Actv00Stop00OutO00
+Name7=------
+Incoming7=None
+Outgoing7=None
+Options7=Actv00Stop00OutO00
+Name8=------
+Incoming8=None
+Outgoing8=None
+Options8=Actv00Stop00OutO00
+Name9=------
+Incoming9=None
+Outgoing9=None
+Options9=Actv00Stop00OutO00
+Name10=CLOCK TICK
+Incoming10=Tim0TimT000Cmaster_clock
+Outgoing10=None
+Options10=Actv01Stop00OutO00StMa00000001hz=hz+1
+
+[Preset.1]
+Name=DEBUG CLOCK
+Active=0
+PresetSwitchIgnore=0
+Name0=STOP CLOCK
+Incoming0=KAM10000KSQ1000601101005A25A210211
+Outgoing0=Tim0TimK000Cmaster_clock
+Options0=Actv01Stop00OutO00
+Name1=START CLOCK - very fast
+Incoming1=KAM10000KSQ10006011010058258210211
+Outgoing1=Tim0TimS0012reset_master_clock1:0:1
+Options1=Actv01Stop00OutO00StMa00000002label0015__cmt>// 10 ms periodhy=10
+Name2=START CLOCK - medium
+Incoming2=KAM10000KSQ10006011010043243210211
+Outgoing2=Tim0TimS0012reset_master_clock1:0:1
+Options2=Actv01Stop00OutO00StMa00000003label0016__cmt>// 333 ms periodhy=333label000F__cmt>// hy=100
+Name3=START CLOCK - very slow
+Incoming3=KAM10000KSQ10006011010056256211210
+Outgoing3=Tim0TimS0012reset_master_clock1:0:1
+Options3=Actv01Stop00OutO00StMa00000003label0017__cmt>// 1000 ms periodhy=1000label0006__cmt>
+Name4=TOGGLE DEBUG
+Incoming4=KAM10000KSQ10006011010053253210211
+Outgoing4=None
+Options4=Actv01Stop00OutO00StMa0000000Dif(hw==1)goto0007disableif(hw==0)goto0006enablegoto0006enablelabel0006__cmt>label0006enablehw=1goto0003endlabel0006__cmt>label0007disablehw=0goto0003endlabel0006__cmt>label0003end
+
+[Preset.10]
+Name=------
+Active=0
+PresetSwitchIgnore=0
+
+[Preset.11]
+Name=------
+Active=0
+PresetSwitchIgnore=0
+
+[Preset.12]
+Name=Experiments
+Active=0
+PresetSwitchIgnore=0
+Name0=SYNC ON
+Incoming0=KAM10000KSQ10004011051251211
+Outgoing0=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x5A"/><Value2 num="0x00"/></Simple></Outgoing>
+Options0=Actv01Stop00OutO00
+Name1=SYNC OFF
+Incoming1=KAM10000KSQ10004011057257211
+Outgoing1=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x5A"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options1=Actv01Stop00OutO00
+Name2=MASTER ON
+Incoming2=KAM10000KSQ10004011045245211
+Outgoing2=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x59"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options2=Actv01Stop00OutO00
+Name3=MASTER OFF
+Incoming3=KAM10000KSQ10004011052252211
+Outgoing3=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x59"/><Value2 num="0x00"/></Simple></Outgoing>
+Options3=Actv01Stop00OutO00
+Name4=----
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing4=None
+Options4=Actv01Stop00OutO00
+Name5=show hide
+Incoming5=KAM10000KSQ10004011054254211
+Outgoing5=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x5D"/><Value2 num="0x00"/></Simple></Outgoing>
+Options5=Actv01Stop00OutO00
+Name6=show hide
+Incoming6=KAM10000KSQ10004011059259211
+Outgoing6=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x5D"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options6=Actv01Stop00OutO00
+
+[Preset.13]
+Name=------
+Active=0
+PresetSwitchIgnore=0
+
+[Preset.14]
+Name=DEBUG - CH1
+Active=0
+PresetSwitchIgnore=0
+Name0=-------
+Incoming0=None
+Outgoing0=None
+Options0=Actv01Stop00OutO00
+Name1=-------
+Incoming1=None
+Outgoing1=None
+Options1=Actv01Stop00OutO00
+Name2=-------
+Incoming2=None
+Outgoing2=None
+Options2=Actv01Stop00OutO00
+Name3=-------
+Incoming3=None
+Outgoing3=None
+Options3=Actv01Stop00OutO00
+Name4=-------
+Incoming4=None
+Outgoing4=None
+Options4=Actv01Stop00OutO00
+Name5=-------
+Incoming5=None
+Outgoing5=None
+Options5=Actv01Stop00OutO00
+Name6=-------
+Incoming6=None
+Outgoing6=None
+Options6=Actv01Stop00OutO00
+Name7=-------
+Incoming7=None
+Outgoing7=None
+Options7=Actv01Stop00OutO00
+Name8=-------
+Incoming8=None
+Outgoing8=None
+Options8=Actv01Stop00OutO00
+Name9=-------
+Incoming9=None
+Outgoing9=None
+Options9=Actv01Stop00OutO00
+Name10=DEBUG - header
+Incoming10=Tim0TimT000Fsend_timestamp1
+Outgoing10=EnDi01
+Options10=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name11=DEBUG - header
+Incoming11=Tim0TimT000Fsend_timestamp1
+Outgoing11=EnDi01
+Options11=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name12=DEBUG - header
+Incoming12=Tim0TimT000Fsend_timestamp1
+Outgoing12=EnDi01
+Options12=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name13=DEBUG - header
+Incoming13=Tim0TimT000Fsend_timestamp1
+Outgoing13=EnDi01
+Options13=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name14=-------
+Incoming14=None
+Outgoing14=None
+Options14=Actv01Stop00OutO00
+Name15=-------
+Incoming15=None
+Outgoing15=None
+Options15=Actv01Stop00OutO00
+Name16=-------
+Incoming16=None
+Outgoing16=None
+Options16=Actv01Stop00OutO00
+Name17=DEBUG - SEEK
+Incoming17=Tim0TimT000Fsend_timestamp1
+Outgoing17=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 var="ha"/><Value2 var="na"/></Simple></Outgoing>
+Options17=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name18=DEBUG - Seek
+Incoming18=Tim0TimT000Fsend_timestamp1
+Outgoing18=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="g1"/><Value2 var="h1"/></Simple></Outgoing>
+Options18=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name19=DEBUG - shifts
+Incoming19=Tim0TimT000Fsend_timestamp1
+Outgoing19=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="za"/><Value2 var="ga"/></Simple></Outgoing>
+Options19=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name20=DEBUG - header
+Incoming20=Tim0TimT000Fsend_timestamp1
+Outgoing20=EnDi01
+Options20=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name21=DEBUG - CLOCK position
+Incoming21=Tim0TimT000Fsend_timestamp1
+Outgoing21=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="ha"/><Value2 var="ma"/></Simple></Outgoing>
+Options21=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name22=DEBUG - CLOCK step
+Incoming22=Tim0TimT000Fsend_timestamp1
+Outgoing22=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="ia"/><Value2 var="ja"/></Simple></Outgoing>
+Options22=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name23=DEBUG - LOCKS
+Incoming23=Tim0TimT000Fsend_timestamp1
+Outgoing23=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="hs"/><Value2 var="he"/></Simple></Outgoing>
+Options23=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name24=-------
+Incoming24=None
+Outgoing24=None
+Options24=Actv01Stop00OutO00
+
+[Preset.15]
+Name=DEBUG - CH2
+Active=0
+PresetSwitchIgnore=0
+Name0=-------
+Incoming0=None
+Outgoing0=None
+Options0=Actv01Stop00OutO00
+Name1=-------
+Incoming1=None
+Outgoing1=None
+Options1=Actv01Stop00OutO00
+Name2=-------
+Incoming2=None
+Outgoing2=None
+Options2=Actv01Stop00OutO00
+Name3=-------
+Incoming3=None
+Outgoing3=None
+Options3=Actv01Stop00OutO00
+Name4=-------
+Incoming4=None
+Outgoing4=None
+Options4=Actv01Stop00OutO00
+Name5=-------
+Incoming5=None
+Outgoing5=None
+Options5=Actv01Stop00OutO00
+Name6=DEBUG - header
+Incoming6=Tim0TimT000Fsend_timestamp2
+Outgoing6=EnDi01
+Options6=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name7=DEBUG - header
+Incoming7=Tim0TimT000Fsend_timestamp2
+Outgoing7=EnDi01
+Options7=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name8=DEBUG - header
+Incoming8=Tim0TimT000Fsend_timestamp2
+Outgoing8=EnDi01
+Options8=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name9=DEBUG - header
+Incoming9=Tim0TimT000Fsend_timestamp2
+Outgoing9=EnDi01
+Options9=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name10=-------
+Incoming10=None
+Outgoing10=None
+Options10=Actv01Stop00OutO00
+Name11=-------
+Incoming11=None
+Outgoing11=None
+Options11=Actv01Stop00OutO00
+Name12=-------
+Incoming12=None
+Outgoing12=None
+Options12=Actv01Stop00OutO00
+Name13=DEBUG - see calculated Seek
+Incoming13=Tim0TimT000Fsend_timestamp2
+Outgoing13=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="hb"/><Value2 var="nb"/></Simple></Outgoing>
+Options13=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name14=DEBUG - see calculated Seek
+Incoming14=Tim0TimT000Fsend_timestamp2
+Outgoing14=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="g2"/><Value2 var="h2"/></Simple></Outgoing>
+Options14=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name15=debug - shifts
+Incoming15=Tim0TimT000Fsend_timestamp2
+Outgoing15=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="zb"/><Value2 var="gb"/></Simple></Outgoing>
+Options15=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name16=DEBUG - header
+Incoming16=Tim0TimT000Fsend_timestamp2
+Outgoing16=EnDi01
+Options16=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name17=debug - CLOCK position
+Incoming17=Tim0TimT000Fsend_timestamp2
+Outgoing17=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="hb"/><Value2 var="mb"/></Simple></Outgoing>
+Options17=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name18=debug - CLOCK step
+Incoming18=Tim0TimT000Fsend_timestamp2
+Outgoing18=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="ib"/><Value2 var="jb"/></Simple></Outgoing>
+Options18=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name19=debug - LOCKS
+Incoming19=Tim0TimT000Fsend_timestamp2
+Outgoing19=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="ht"/><Value2 var="hf"/></Simple></Outgoing>
+Options19=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
+Name20=-------
+Incoming20=None
+Outgoing20=None
+Options20=Actv01Stop00OutO00
+
+[Preset.16]
+Name=DEBUG - MIDI 
+Active=0
+PresetSwitchIgnore=0
+Name0=Debug - TK->DDJ NOTE ON
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel var="pp" Type="SetVar"/><Value1 var="oo" Type="SetVar"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing0=None
+Options0=Actv01Stop00OutO01
+Name1=Debug - TK->DDJ NOTE OFF
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="NoteOff"><Channel var="pp" Type="SetVar"/><Value1 var="oo" Type="SetVar"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing1=None
+Options1=Actv01Stop00OutO01
+Name2=Debug - TK->DDJ CC
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel var="pp" Type="SetVar"/><Value1 var="oo" Type="SetVar"/><Value2 var="rr" Type="SetVar"/></Simple></Incoming>
+Outgoing2=None
+Options2=Actv01Stop00OutO01
+Name3=----
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x40"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
+Outgoing3=None
+Options3=Actv00Stop00OutO00
+Name4=Debug - DDJ->TK NOTE ON
+Incoming4=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel var="pp" Type="SetVar"/><Value1 var="oo" Type="SetVar"/><Value2 var="rr" Type="SetVar"/></Simple></Incoming>
+Outgoing4=None
+Options4=Actv01Stop00OutO01
+Name5=Debug - DDJ->TK NOTE OFF
+Incoming5=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOff"><Channel var="pp" Type="SetVar"/><Value1 var="oo" Type="SetVar"/><Value2 var="rr" Type="SetVar"/></Simple></Incoming>
+Outgoing5=None
+Options5=Actv01Stop00OutO01
+Name6=Debug - DDJ->TK CC
+Incoming6=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="ControlChange"><Channel var="pp" Type="SetVar"/><Value1 var="oo" Type="SetVar"/><Value2 var="rr" Type="SetVar"/></Simple></Incoming>
+Outgoing6=None
+Options6=Actv01Stop00OutO01
+
+[Preset.2]
+Name=------
+Active=0
+PresetSwitchIgnore=0
+
+[Preset.3]
+Name=NEEDLE CH1
+Active=1
+PresetSwitchIgnore=0
+Name0=DDJ IN - Toggle Vinyl DOWN
+Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="23" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Outgoing0=MID3<Outgoing Action="MIDI"><Ports><Port>To DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x17"/><Value2 var="pp"/></Simple></Outgoing>
+Options0=Actv01Stop00OutO00StMa00000006oo=koif(oo==0)ko=127if(oo!=0)ko=0label0006__cmt>label0006__cmt>pp=ko
+Name1=DDJ IN - Toggle Vinyl UP
+Incoming1=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOff"><Channel num="0" Type="New Version Required"/><Value1 num="23" setvar="oo" Type="New Version Required"/><Value2 num="0" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Outgoing1=None
+Options1=Actv01Stop00OutO00
+Name2=-----------
+Incoming2=None
+Outgoing2=None
+Options2=Actv00Stop00OutO00
+Name3=DDJ IN - JOG TOUCH pt1
+Incoming3=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="54" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Outgoing3=Tim0TimS000Bjog_touch_11:0:1
+Options3=Actv01Stop00OutO00
+Name4=DDJ IN - JOG TOUCH pt2
+Incoming4=Tim0TimT000Bjog_touch_1
+Outgoing4=MID3<Outgoing Action="MIDI"><Ports><Port>To Traktor</Port></Ports><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x36"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options4=Actv01Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(ko==0)noexecute
+Name5=-----------
+Incoming5=None
+Outgoing5=None
+Options5=Actv00Stop00OutO00
+Name6=DDJ IN - JOG TURN #34
+Incoming6=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x22"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing6=Tim0TimS000Crefresh_jog11:0:1
+Options6=Actv01Stop00OutO01StMa00000031label0031__cmt>// Jog turn needs to be catched on the DDJ.label002D__cmt>// Traktor does not send this message!!label0006__cmt>label001E__cmt>// force vinyl "ON" caseko=127label0006__cmt>label0031__cmt>// Jog turn needs to be catched on the DDJ.label002D__cmt>// Traktor does not send this message!!label0006__cmt>label0042__cmt>// IMPORTANT: "jogging" comes from traktor itself. Thats whylabel0006__cmt>if(yo==0)goto000Bcur_stoppedif(yo==1)goto000Bcur_playingif(yo==2)goto000Acur_cueingif(yo==3)goto000Acur_pausedlabel0006__cmt>if(yo==4)goto0010cur_play_joggingif(yo==5)goto0012cur_paused_joggingif(yo==6)goto0013cur_stopped_jogginglabel0006__cmt>noexecutelabel0006__cmt>label0006__cmt>label0010cur_play_jogginglabel0013cur_stopped_jogginglabel0012cur_paused_jogginglabel0006__cmt>label0030__cmt>// normalize to -16..+16, accumulate in yspp=pp-64ys=ys+pplabel0006__cmt>label000A__cmt>////oo=36label0006__cmt>tt=ys/oorr=ys%ooys=rrlabel0006__cmt>y5=y5+tty5=y5%360if(y5<0)y5=y5+360label0006__cmt>label0006__cmt>label0003endlabel000Bcur_stoppedlabel000Bcur_playinglabel000Acur_cueinglabel000Acur_pausedlabel0006__cmt>
+Name7=DDJ IN - JOG TURN #35
+Incoming7=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x23"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing7=Tim0TimS000Crefresh_jog11:0:1
+Options7=Actv01Stop00OutO01StMa00000003label0006__cmt>label001F__cmt>// force vinyl "OFF" caseko=0
+Name8=DDJ OUT - SEND needle
+Incoming8=Tim0TimT000Crefresh_jog1
+Outgoing8=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="0"/><Value1 num="0x14"/><Value2 var="oo"/></Simple></Outgoing>
+Options8=Actv01Stop00OutO00StMa00000001oo=y5
+Name9=-----
+Incoming9=None
+Outgoing9=None
+Options9=Actv00Stop00OutO00
+Name10=JOG TURN timer
+Incoming10=Tim0TimT000Cmaster_clock
+Outgoing10=Tim0TimS000Crefresh_jog11:0:1
+Options10=Actv01Stop00OutO00StMa00000017label0061__cmt>// flag: do we need a refresh? yes if we accumulated jog turn, or if time has moved forwardpp=0label0006__cmt>label0023__cmt>// what is the current state?if(yo==1)goto000Bcur_playingif(yo==2)goto000Acur_cueingnoexecutelabel0006__cmt>label000B__cmt>/////label000Bcur_playinglabel000Acur_cueinglabel0006__cmt>label0023__cmt>// scale: 1 deg per each 10mslabel0036__cmt>// this needs to account to 360 deg per 4 beats!label0006__cmt>oo=hyoo=oo/5label0006__cmt>y5=y5+ooy5=y5%360if(y5<0)y5=y5+360label0006__cmt>label0003end
+Name11=-----------
+Incoming11=None
+Outgoing11=None
+Options11=Actv00Stop00OutO00
+Name12=TK IN - CUE
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x44"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing12=Tim0TimS000Bcalc_state11:10:1
+Options12=Actv01Stop00OutO00StMa00000001z1=pp
+Name13=TK IN - PLAY/PAUSE
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4D"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing13=Tim0TimS000Bcalc_state11:10:1
+Options13=Actv01Stop00OutO00StMa00000002zo=pplabel0006__cmt>
+Name14=TK IN - JOG TOUCH
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing14=Tim0TimS000Bcalc_state11:10:1
+Options14=Actv01Stop00OutO00StMa00000002zs=pplabel0006__cmt>
+Name15=
+Incoming15=None
+Outgoing15=None
+Options15=Actv00Stop00OutO00
+Name16=CALC STATE
+Incoming16=Tim0TimT000Bcalc_state1
+Outgoing16=Tim0TimS000Crefresh_cue11:0:1
+Options16=Actv01Stop00OutO00StMa000000B5label0034__cmt>// TODO: channels are #2, but variables are #1label002D__cmt>//  copy paste. On #1, change channels.label0025__cmt>//  on #2 change variable nameslabel0006__cmt>label0006__cmt>label0016__cmt>// IN PLAY  "zo"label0016__cmt>// IN CUE:  "z1"label001A__cmt>// IN JOGTOUCH: "zs"label0006__cmt>label001C__cmt>// CURRENT STATE: "yo"label001A__cmt>// NEEDLE FWD?  "xx"label0006__cmt>label002A__cmt>// OUT    "y5"    360 degree  NEEDLElabel0030__cmt>// OUT    "z5"    360 degree  CUE_POSITIONlabel000F__cmt>/////////label0006__cmt>label0006__cmt>label0023__cmt>// what is the current state?if(yo==0)goto000Bcur_stoppedif(yo==1)goto000Bcur_playingif(yo==2)goto000Acur_cueingif(yo==3)goto000Acur_pausedlabel0006__cmt>if(yo==4)goto0010cur_play_joggingif(yo==5)goto0012cur_paused_joggingif(yo==6)goto0013cur_stopped_jogginggoto0005ERRORlabel0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  NORMAL STATESlabel0016__cmt>////////////////label0006__cmt>label000A__cmt>////label000Bcur_stoppedif(zo==1)yo=1if(z1==1)yo=2if(zs==1)yo=6goto0003endlabel0006__cmt>label000C__cmt>//////label000Bcur_playingif(z1==1)goto0013playing_pressed_cueif(zo==0)goto0015playing_pressed_pauseif(zs==1)goto0013playing_pressed_joggoto0003endlabel0006__cmt>label0013playing_pressed_cuelabel0016__cmt>// move to fronty5=z5yo=0goto0003endlabel0006__cmt>label0013playing_pressed_jogyo=4goto0003endlabel0006__cmt>label0015playing_pressed_pauseyo=3goto0003endlabel0006__cmt>label000C__cmt>//////label000Acur_pausedif(z1==1)goto0012paused_pressed_cueif(zo==1)goto0013paused_pressed_playif(zs==1)goto0012paused_pressed_joggoto0003endlabel0006__cmt>label0012paused_pressed_cuelabel0014__cmt>// set new cuez5=y5yo=0goto0003endlabel0006__cmt>label0013paused_pressed_playyo=1goto0003endlabel0006__cmt>label0012paused_pressed_jogyo=5goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000C__cmt>//////label000Acur_cueingif(z1==0)goto0013cueing_released_cuelabel0045__cmt>///if zs==1 then goto "cueing_pressed_jog"  // not implemented!goto0003endlabel0006__cmt>label0013cueing_released_cuelabel0015__cmt>//move to fronty5=z5yo=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  JOGING STATESlabel0016__cmt>////////////////label0010cur_play_joggingif(zs==0)goto0019play_jogging_released_jogif(z1==1)goto0018play_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019play_jogging_released_jogyo=1goto0003endlabel0006__cmt>label0018play_jogging_pressed_cuelabel0014__cmt>// set new cuez5=y5label0021__cmt>// yo=0   /// NOT CHANGE !!goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0013cur_stopped_joggingif(zs==0)goto0019stop_jogging_released_jogif(z1==1)goto0018stop_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019stop_jogging_released_jogyo=3goto0003endlabel0006__cmt>label0018stop_jogging_pressed_cuelabel0014__cmt>// set new cuez5=y5yo=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0012cur_paused_joggingif(zs==0)goto001Apause_jogging_released_jogif(z1==1)goto0019pause_jogging_pressed_cuegoto0003endlabel0006__cmt>label001Apause_jogging_released_jogyo=3goto0003endlabel0006__cmt>label0019pause_jogging_pressed_cuelabel0014__cmt>// set new cuez5=y5yo=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0010__cmt>//////////label0003endlabel0006__cmt>label001F__cmt>// Below is just to debuglabel002C__cmt>// exit rules, execute Outgoing Actionlabel0006__cmt>label0017__cmt>// show new stateif(yo==0)goto000Bnow_stoppedif(yo==1)goto000Bnow_playingif(yo==2)goto000Anow_cueingif(yo==3)goto000Anow_pausedlabel0006__cmt>if(yo==4)goto0010now_play_joggingif(yo==5)goto0012now_paused_joggingif(yo==6)goto0013now_stopped_jogginggoto0005ERRORlabel0006__cmt>label000Bnow_stoppedlabel000Bnow_playinglabel000Anow_cueinglabel000Anow_pausedlabel0006__cmt>label0010now_play_jogginglabel0012now_paused_jogginglabel0013now_stopped_jogging
+Name17=REFRESH  jog
+Incoming17=Tim0TimT000Crefresh_cue1
+Outgoing17=Tim0TimS000Crefresh_jog11:0:1
+Options17=Actv01Stop00OutO00StMa00000002oo=z5label0006__cmt>
+Name18=SEND cue
+Incoming18=Tim0TimT000Crefresh_cue1
+Outgoing18=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="0"/><Value1 num="0x17"/><Value2 var="oo"/></Simple></Outgoing>
+Options18=Actv01Stop00OutO00StMa00000002oo=z5label0006__cmt>
+Name19=-----------
+Incoming19=None
+Outgoing19=None
+Options19=Actv00Stop00OutO00
+Name20=-----------
+Incoming20=None
+Outgoing20=None
+Options20=Actv00Stop00OutO00
+Name21=-----------
+Incoming21=None
+Outgoing21=None
+Options21=Actv00Stop00OutO00
+Name22=-----------
+Incoming22=None
+Outgoing22=None
+Options22=Actv00Stop00OutO00
+
+[Preset.4]
+Name=MAIN CH1
+Active=1
+PresetSwitchIgnore=0
+Name0=RESET SCREENS
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0" Type="New Version Required"/><Value1 num="77" Type="New Version Required"/><Value2 num="0" setvar="oo" Type="New Version Required"/></Simple></Incoming>
+Outgoing0=Tim0TimS0005calc11:0:1
+Options0=Actv01Stop00OutO00StMa00000004label0013__cmt>// reset seekja=-3jb=-3label0006__cmt>
+Name1=-----------
+Incoming1=None
+Outgoing1=None
+Options1=Actv00Stop00OutO00
+Name2=KEY value
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x51"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing2=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x49"/><Value2 var="pp"/></Simple></Outgoing>
+Options2=Actv01Stop00OutO00StMa00000005label0019__cmt>// 0 == disable keylabel0015__cmt>// 1 == key "C"label000C__cmt>//pp=0label0006__cmt>pp=1
+Name3=KEY variaton
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x51"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing3=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x4A"/><Value2 var="pp"/></Simple></Outgoing>
+Options3=Actv01Stop00OutO00StMa00000001pp=oo
+Name4=-----------
+Incoming4=None
+Outgoing4=None
+Options4=Actv00Stop00OutO00
+Name5=-----------
+Incoming5=None
+Outgoing5=None
+Options5=Actv00Stop00OutO00
+Name6=-----------
+Incoming6=None
+Outgoing6=None
+Options6=Actv00Stop00OutO00
+Name7=SHIFT - debug
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0" Type="New Version Required"/><Value1 num="75" Type="New Version Required"/><Value2 num="0" setvar="oo" Type="New Version Required"/></Simple></Incoming>
+Outgoing7=Tim0TimS0005calc11:0:1
+Options7=Actv01Stop00OutO00
+Name8=SHIFT1
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x45"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing8=Tim0TimS0005calc11:0:1
+Options8=Actv01Stop00OutO00StMa0000000Alabel0006__cmt>if(ga==0)goto0009handle_itif(ga==1)goto0009handle_itgoto0003endlabel0006__cmt>label0009handle_itif(oo==1)ga=1if(oo==0)ga=0label0006__cmt>label0003end
+Name9=SHIFT2
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x49"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing9=Tim0TimS0005calc11:0:1
+Options9=Actv01Stop00OutO00StMa0000000Flabel0037__cmt>// if ga==0 then exit rules, skip Outgoing Actionlabel0006__cmt>label0019__cmt>// this is disabed!goto0003endlabel0006__cmt>label0006__cmt>if(ga==0)goto0009handle_itif(ga==2)goto0009handle_itgoto0003endlabel0006__cmt>label0009handle_itif(oo==1)ga=2if(oo==0)ga=0label0006__cmt>label0003end
+Name10=CYCLE TIME MODE
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4A"/><Value2 num="0x00"/></Simple></Incoming>
+Outgoing10=Tim0TimS0005calc11:0:1
+Options10=Actv01Stop00OutO00StMa00000008oo=zaif(oo==0)za=1if(oo==1)za=0label0006__cmt>label001B__cmt>// if oo==2 then za=0label0006__cmt>label0006__cmt>label0006__cmt>
+Name11=LOOP active
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x4C"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing11=Tim0TimS0005calc11:0:1
+Options11=Actv01Stop00OutO00StMa00000006label0006__cmt>label0009handle_itif(oo==1)ga=4if(oo==0)ga=0label0006__cmt>label0003end
+Name12=-----------
+Incoming12=None
+Outgoing12=None
+Options12=Actv00Stop00OutO00
+Name13=LOOP size
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x46"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing13=Tim0TimS0005calc11:0:1
+Options13=Actv01Stop00OutO00StMa0000000Eif(oo<=4)pp=0if(oo==5)pp=1if(oo==6)pp=2if(oo==7)pp=4if(oo==8)pp=8if(oo==9)pp=16if(oo>=10)pp=32label0006__cmt>label0018__cmt>// external answerl1=pplabel0006__cmt>label0012__cmt>// loop caseif(n5==1)n1=l1label0006__cmt>
+Name14=LOOP size (timer)
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x46"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing14=Tim0TimS0008preview11:2000:1
+Options14=Actv01Stop00OutO00StMa00000002if(ga==0)ga=3label0006__cmt>
+Name15=MOVE size
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing15=Tim0TimS0005calc11:0:1
+Options15=Actv01Stop00OutO00StMa00000011if(oo<=5)pp=0if(oo==6)pp=1if(oo==7)pp=2if(oo==8)pp=4if(oo==9)pp=8if(oo==10)pp=16if(oo==11)pp=32if(oo>=12)pp=9999label0006__cmt>n1=pplabel0006__cmt>label0012__cmt>// loop caseif(oo==12)n5=1if(oo!=12)n5=0label0006__cmt>if(n5==1)n1=l1label0006__cmt>
+Name16=MOVE size (timer)
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x47"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing16=Tim0TimS0008preview11:2000:1
+Options16=Actv01Stop00OutO00StMa00000002if(ga==0)ga=3label0006__cmt>
+Name17=TEMPO range
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x42"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing17=Tim0TimS0005calc11:0:1
+Options17=Actv01Stop00OutO00StMa00000013label0006__cmt>if(oo==0)pp=2if(oo==1)pp=4if(oo==2)pp=6if(oo==3)pp=8if(oo==4)pp=10if(oo==5)pp=12if(oo==6)pp=14if(oo==7)pp=16if(oo==8)pp=18if(oo==9)pp=20if(oo==10)pp=25if(oo==11)pp=35if(oo==12)pp=50if(oo==13)pp=100label0006__cmt>i1=pplabel0006__cmt>label0006__cmt>
+Name18=TEMPO range (timer)
+Incoming18=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x42"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing18=Tim0TimS0008preview11:2000:1
+Options18=Actv01Stop00OutO00StMa00000001if(ga==0)ga=3
+Name19=SHIFT PREVIEWS - Stop Timer
+Incoming19=Tim0TimT0008preview1
+Outgoing19=Tim0TimS0005calc11:0:1
+Options19=Actv01Stop00OutO00StMa00000001if(ga==3)ga=0
+Name20=-----------
+Incoming20=None
+Outgoing20=None
+Options20=Actv00Stop00OutO00
+Name21=-----------
+Incoming21=None
+Outgoing21=None
+Options21=Actv00Stop00OutO00
+Name22=-----------
+Incoming22=None
+Outgoing22=None
+Options22=Actv00Stop00OutO00
+Name23=tempo adjust S1
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x65"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing23=Tim0TimS0005calc11:0:1
+Options23=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-100g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name24=tempo adjust S2
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x66"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing24=Tim0TimS0005calc11:0:1
+Options24=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-75g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name25=tempo adjust S3
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x67"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing25=Tim0TimS0005calc11:0:1
+Options25=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-50g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name26=tempo adjust S4
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x68"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing26=Tim0TimS0005calc11:0:1
+Options26=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-25g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name27=tempo adjust S5
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x69"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing27=Tim0TimS0005calc11:0:1
+Options27=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-0g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name28=tempo adjust S6
+Incoming28=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x6A"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing28=Tim0TimS0005calc11:0:1
+Options28=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp+25g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name29=tempo adjust S7
+Incoming29=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x6B"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing29=Tim0TimS0005calc11:0:1
+Options29=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp+50g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name30=tempo adjust S8
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x6C"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing30=Tim0TimS0005calc11:0:1
+Options30=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp+75g5=100label0006__cmt>label001D__cmt>///////// Decision treego=go+1if(go==1)goto000Bsimple caseif(pp<gs)goto000Agoing leftif(pp>=gs)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg1=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g1)g1=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g1)g1=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name31=-----------
+Incoming31=None
+Outgoing31=None
+Options31=Actv00Stop00OutO00
+Name32=bpm value S1
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x6E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing32=Tim0TimS0005calc11:0:1
+Options32=Actv01Stop00OutO00StMa00000010oo=pp*75oo=oo+0h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name33=bpm value S2
+Incoming33=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x6F"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing33=Tim0TimS0005calc11:0:1
+Options33=Actv01Stop00OutO00StMa00000011oo=pp*25oo=oo+7500h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name34=bpm value S3
+Incoming34=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x70"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing34=Tim0TimS0005calc11:0:1
+Options34=Actv01Stop00OutO00StMa00000011oo=pp*10oo=oo+10000h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name35=bpm value S4
+Incoming35=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x71"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing35=Tim0TimS0005calc11:0:1
+Options35=Actv01Stop00OutO00StMa00000010oo=pp*10oo=oo+11000h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name36=bpm value S5
+Incoming36=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x72"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing36=Tim0TimS0005calc11:0:1
+Options36=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+12000h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name37=bpm value S6
+Incoming37=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x73"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing37=Tim0TimS0005calc11:0:1
+Options37=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+12500h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name38=bpm value S7
+Incoming38=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x74"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing38=Tim0TimS0005calc11:0:1
+Options38=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+13000h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name39=bpm value S8
+Incoming39=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x75"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing39=Tim0TimS0005calc11:0:1
+Options39=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+13500h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name40=bpm value S9
+Incoming40=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x76"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing40=Tim0TimS0005calc11:0:1
+Options40=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+14000h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name41=bpm value S10
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x77"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing41=Tim0TimS0005calc11:0:1
+Options41=Actv01Stop00OutO00StMa00000010oo=pp*10oo=oo+14500h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name42=bpm value S11
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x78"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing42=Tim0TimS0005calc11:0:1
+Options42=Actv01Stop00OutO00StMa00000010oo=pp*45oo=oo+15500h5=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh1=ooho=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name43=bpm value FALLBACK
+Incoming43=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x79"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing43=Tim0TimS0005calc11:0:1
+Options43=Actv01Stop00OutO00StMa0000000Coo=pp*200oo=oo+0h5=100label0006__cmt>label0030__cmt>/// ignore this one if we saw an HR signalif(ho!=0)goto0003endlabel0006__cmt>label000ELow Resolutionh1=ooho=1label0006__cmt>label0003end
+Name44=-----------
+Incoming44=None
+Outgoing44=None
+Options44=Actv00Stop00OutO00
+Name45=-----------
+Incoming45=None
+Outgoing45=None
+Options45=Actv00Stop00OutO00
+Name46=ADD A DELAY
+Incoming46=Tim0TimT0005calc1
+Outgoing46=Tim0TimS0007calc1_b1:30:1
+Options46=Actv01Stop00OutO00StMa00000003if(hs==1)noexecutehs=1label0006__cmt>
+Name47=merge HR values
+Incoming47=Tim0TimT0007calc1_b
+Outgoing47=Tim0TimS0007calc1_c1:0:1
+Options47=Actv01Stop00OutO00StMa0000000Blabel001C__cmt>// manage tempo adjustif(go>0)ho=0go=0gs=g1label0006__cmt>label0019__cmt>// manage BPM valueho=0label0006__cmt>label0019__cmt>//unlock 30ms timerhs=0label0006__cmt>
+Name48=Calculations
+Incoming48=Tim0TimT0007calc1_c
+Outgoing48=Tim0TimS0007calc1_d1:0:1
+Options48=Actv01Stop00OutO00StMa0000001Flabel0006__cmt>label002E__cmt>// use this to skip calcs (debug faster)label002C__cmt>// exit rules, execute Outgoing Actionlabel0006__cmt>label0006__cmt>label0021__cmt>/// LINK LOOP & MOVE VALUESif(n5==1)n1=l1label0006__cmt>label0018__cmt>/// CALC TEMPO ADJlabel0032__cmt>// todo: move to local variables j1, j5, etcj1=g1*i1j5=g5*1label0006__cmt>ss=j5/10oo=j1/ssk1=oolabel0006__cmt>label0016__cmt>/// CALC NEW BPMm1=j1m5=j5*100label0006__cmt>m1=m1+m5m5=m5label0006__cmt>m1=m1*h1m5=m5*h5label0006__cmt>ss=m5/10oo=m1/ssk5=oolabel0006__cmt>
+Name49=-----------
+Incoming49=None
+Outgoing49=None
+Options49=Actv00Stop00OutO00
+Name50=SEND BPM
+Incoming50=Tim0TimT0007calc1_d
+Outgoing50=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="0"/><Value1 num="0x15"/><Value2 var="oo"/></Simple></Outgoing>
+Options50=Actv01Stop00OutO00StMa0000000Fif(ga==1)goto000Fsend_native_bpmgoto000Bsend_actuallabel0006__cmt>label0006__cmt>label000Bsend_actualoo=k5goto0003endlabel0006__cmt>label000Fsend_native_bpmoo=h1oo=oo*10oo=oo/h5goto0003endlabel0006__cmt>label0003end
+Name51=SEND PERCENTAGE
+Incoming51=Tim0TimT0007calc1_d
+Outgoing51=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="0"/><Value1 num="0x16"/><Value2 var="oo"/></Simple></Outgoing>
+Options51=Actv01Stop00OutO00StMa00000011if(ga==1)goto0010send_tempo_rangeif(ga==3)goto0010send_tempo_rangelabel0006__cmt>goto000Bsend_actuallabel0006__cmt>label0006__cmt>label000Bsend_actualoo=k1goto0003endlabel0006__cmt>label0010send_tempo_rangeoo=i1oo=oo*10goto0003endlabel0006__cmt>label0003endoo=oo+1000
+Name52=-----------
+Incoming52=None
+Outgoing52=None
+Options52=Actv00Stop00OutO00
+Name53=FALLTROUGH
+Incoming53=Tim0TimT0007calc1_d
+Outgoing53=Tim0TimS000Bcalc_clock11:0:1
+Options53=Actv01Stop00OutO00
+
+[Preset.5]
+Name=SEEK CH1
+Active=1
+PresetSwitchIgnore=0
+Name0=----
+Incoming0=None
+Outgoing0=None
+Options0=Actv00Stop00OutO00
+Name1=IN seek position S1
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5A"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing1=Tim0TimS000Bcalc_clock11:0:1
+Options1=Actv01Stop00OutO01StMa00000017pp=oo+0label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name2=IN seek position S2
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5B"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing2=Tim0TimS000Bcalc_clock11:0:1
+Options2=Actv01Stop00OutO01StMa00000017pp=oo+100label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name3=IN seek position S3
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5C"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing3=Tim0TimS000Bcalc_clock11:0:1
+Options3=Actv01Stop00OutO01StMa00000017pp=oo+200label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name4=IN seek position S4
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5D"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing4=Tim0TimS000Bcalc_clock11:0:1
+Options4=Actv01Stop00OutO01StMa00000017pp=oo+300label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name5=IN seek position S5
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5E"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing5=Tim0TimS000Bcalc_clock11:0:1
+Options5=Actv01Stop00OutO01StMa00000017pp=oo+400label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name6=IN seek position S6
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x5F"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing6=Tim0TimS000Bcalc_clock11:0:1
+Options6=Actv01Stop00OutO01StMa00000017pp=oo+500label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name7=IN seek position S7
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x60"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing7=Tim0TimS000Bcalc_clock11:0:1
+Options7=Actv01Stop00OutO01StMa00000017pp=oo+600label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name8=IN seek position S8
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x61"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing8=Tim0TimS000Bcalc_clock11:0:1
+Options8=Actv01Stop00OutO01StMa00000017pp=oo+700label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name9=IN seek position S9
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x62"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing9=Tim0TimS000Bcalc_clock11:0:1
+Options9=Actv01Stop00OutO01StMa00000017pp=oo+800label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name10=IN seek position S10
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x63"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing10=Tim0TimS000Bcalc_clock11:0:1
+Options10=Actv01Stop00OutO01StMa00000017pp=oo+900label0006__cmt>label0006__cmt>label000F__cmt>/////////no=no+1if(no==1)goto000Bsimple caselabel0006__cmt>if(pp<ja)goto000Agoing leftif(pp>ja)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<na)na=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>na)na=ppgoto0003endlabel0006__cmt>label000Bsimple casena=ppgoto0003endlabel0006__cmt>label0003end
+Name11=----
+Incoming11=None
+Outgoing11=None
+Options11=Actv00Stop00OutO00
+Name12=ADD A DELAY
+Incoming12=Tim0TimT000Bcalc_clock1
+Outgoing12=Tim0TimS000Dcalc_clock1_b1:30:1
+Options12=Actv01Stop00OutO00StMa00000003if(he==1)noexecutehe=1label0006__cmt>
+Name13=Merge HR Seek
+Incoming13=Tim0TimT000Dcalc_clock1_b
+Outgoing13=Tim0TimS000Dcalc_clock1_c1:0:1
+Options13=Actv01Stop00OutO00StMa00000005label0006__cmt>no=0label0006__cmt>label0012__cmt>// lock 30mshe=0
+Name14=Calc Clock
+Incoming14=Tim0TimT000Dcalc_clock1_c
+Outgoing14=Tim0TimS000Fsend_timestamp11:0:1
+Options14=Actv01Stop00OutO00StMa00000057label001B__cmt>/// nothing happened?if(na==ja)goto0004plotlabel0006__cmt>label0006__cmt>label0017__cmt>/// FORWARD SEEK?oo=napp=ja+1ja=ooif(pp==oo)goto0007seek_okgoto0007skippedlabel0006__cmt>label0014__cmt>/// WE SKIPPEDlabel0007skippedka=hzya=naia=0goto0004plotlabel0006__cmt>label0011__cmt>/// SEEK OKlabel0007seek_okia=ia+1if(ia==5)goto000Brecalculategoto0004plotlabel0006__cmt>label0021__cmt>//if ho!=0 then Goto "plot"label0017__cmt>/// WHY THIS HO??label0006__cmt>label0006__cmt>label0006__cmt>label0015__cmt>/// RECALCULATElabel000Brecalculaterr=hz-kass=na-yalabel0006__cmt>label0025__cmt>// exit if timer is not runningif(rr==0)goto0005resetlabel0037__cmt>// exit if we stopped too much. Normal Limit = 16if(rr>250)goto0005resetlabel0006__cmt>label0006__cmt>rr=rr*1000rr=rr/ssqq=1000/hyrr=rr/qqlabel0006__cmt>label0024__cmt>// new value calculated + lockha=rrho=1label0006__cmt>label0006__cmt>goto0004plotlabel0006__cmt>label000F__cmt>/// RESETlabel0005resetgoto0007skippedlabel0006__cmt>ja=-2ho=0goto0004plotlabel0006__cmt>label0006__cmt>label001C__cmt>//// PLOT FINAL VALUESlabel0004plotlabel0015__cmt>// elapsed timepp=ha*nalabel0037__cmt>// total track length (needs to be before REMAIN)qq=ha*1000label0014__cmt>// remain timerr=qq-pplabel0006__cmt>label001C__cmt>// DECIDE WHAT TO SHOWif(ga==2)oo=qqif(ga==2)goto0003endlabel0006__cmt>if(za==0)oo=ppif(za==0)goto0003endlabel0006__cmt>if(za==1)oo=rrif(za==1)goto0003endoo=pplabel0006__cmt>label0006__cmt>label000B__cmt>/////label0003endoo=oo/1000oo=oo/1ma=oo
+Name15=----
+Incoming15=None
+Outgoing15=None
+Options15=Actv00Stop00OutO00
+Name16=send sign
+Incoming16=Tim0TimT000Fsend_timestamp1
+Outgoing16=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x44"/><Value2 var="qq"/></Simple></Outgoing>
+Options16=Actv01Stop00OutO00StMa0000000Fif(ga>=1)goto0008positivelabel0006__cmt>if(za==0)goto0008positiveif(za==1)goto0008negativegoto0008positivelabel0006__cmt>label0008positiveqq=0goto0003endlabel0006__cmt>label0008negativeqq=127goto0003endlabel0006__cmt>label0003end
+Name17=send minutes
+Incoming17=Tim0TimT000Fsend_timestamp1
+Outgoing17=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x42"/><Value2 var="qq"/></Simple></Outgoing>
+Options17=Actv01Stop00OutO00StMa00000010label0006__cmt>if(ga==2)goto0009show timeif(ga==1)goto0009show loopif(ga>=3)goto0009show loopgoto0009show timelabel0006__cmt>label0009show loopqq=l1goto0003endlabel0006__cmt>label0009show timeqq=maqq=qq/60goto0003endlabel0006__cmt>label0003end
+Name18=send seconds
+Incoming18=Tim0TimT000Fsend_timestamp1
+Outgoing18=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x43"/><Value2 var="qq"/></Simple></Outgoing>
+Options18=Actv01Stop00OutO00StMa0000000Fif(ga==2)goto0009show timeif(ga==1)goto0009show loopif(ga>=3)goto0009show loopgoto0009show timelabel0006__cmt>label0009show loopqq=n1goto0003endlabel0006__cmt>label0009show timeqq=maqq=qq%60goto0003endlabel0006__cmt>label0003end
+Name19=----
+Incoming19=None
+Outgoing19=None
+Options19=Actv00Stop00OutO00
+Name20=----
+Incoming20=None
+Outgoing20=None
+Options20=Actv00Stop00OutO00
+
+[Preset.6]
+Name=--------
+Active=0
+PresetSwitchIgnore=0
+
+[Preset.7]
+Name=NEEDLE CH2
+Active=1
+PresetSwitchIgnore=0
+Name0=DDJ IN - Toggle Vinyl DOWN
+Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="23" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Outgoing0=MID3<Outgoing Action="MIDI"><Ports><Port>To DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x17"/><Value2 var="pp"/></Simple></Outgoing>
+Options0=Actv01Stop00OutO00StMa00000005oo=kpif(oo==0)kp=127if(oo!=0)kp=0label0006__cmt>pp=kp
+Name1=DDJ IN - Toggle Vinyl UP
+Incoming1=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOff"><Channel num="1" Type="New Version Required"/><Value1 num="23" setvar="oo" Type="New Version Required"/><Value2 num="0" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Outgoing1=None
+Options1=Actv01Stop00OutO00
+Name2=-----------
+Incoming2=None
+Outgoing2=None
+Options2=Actv00Stop00OutO00
+Name3=DDJ IN - JOG TOUCH pt1
+Incoming3=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="54" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
+Outgoing3=Tim0TimS000Bjog_touch_21:0:1
+Options3=Actv01Stop00OutO00
+Name4=DDJ IN - JOG TOUCH pt2
+Incoming4=Tim0TimT000Bjog_touch_2
+Outgoing4=MID3<Outgoing Action="MIDI"><Ports><Port>To Traktor</Port></Ports><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x36"/><Value2 num="0x7F"/></Simple></Outgoing>
+Options4=Actv01Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(kp==0)noexecute
+Name5=-----------
+Incoming5=None
+Outgoing5=None
+Options5=Actv00Stop00OutO00
+Name6=DDJ IN - JOG TURN #34
+Incoming6=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x22"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing6=Tim0TimS000Crefresh_jog21:0:1
+Options6=Actv01Stop00OutO01StMa0000002Clabel0031__cmt>// Jog turn needs to be catched on the DDJ.label002D__cmt>// Traktor does not send this message!!label0006__cmt>label001E__cmt>// force vinyl "ON" casekp=127label0006__cmt>label0006__cmt>if(yp==0)goto000Bcur_stoppedif(yp==1)goto000Bcur_playingif(yp==2)goto000Acur_cueingif(yp==3)goto000Acur_pausedlabel0006__cmt>if(yp==4)goto0010cur_play_joggingif(yp==5)goto0012cur_paused_joggingif(yp==6)goto0013cur_stopped_jogginglabel0006__cmt>noexecutelabel0006__cmt>label0006__cmt>label0010cur_play_jogginglabel0013cur_stopped_jogginglabel0012cur_paused_jogginglabel0006__cmt>label0030__cmt>// normalize to -16..+16, accumulate in yspp=pp-64yt=yt+pplabel0006__cmt>label000A__cmt>////oo=36label0006__cmt>tt=yt/oorr=yt%ooyt=rrlabel0006__cmt>y6=y6+tty6=y6%360if(y6<0)y6=y6+360label0006__cmt>label0006__cmt>label0003endlabel000Bcur_stoppedlabel000Bcur_playinglabel000Acur_cueinglabel000Acur_paused
+Name7=DDJ IN - JOG TURN #35
+Incoming7=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x23"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing7=Tim0TimS000Crefresh_jog21:0:1
+Options7=Actv01Stop00OutO01StMa00000003label0006__cmt>label001F__cmt>// force vinyl "OFF" casekp=0
+Name8=DDJ OUT - SEND needle
+Incoming8=Tim0TimT000Crefresh_jog2
+Outgoing8=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="1"/><Value1 num="0x14"/><Value2 var="oo"/></Simple></Outgoing>
+Options8=Actv01Stop00OutO00StMa00000001oo=y6
+Name9=-----
+Incoming9=None
+Outgoing9=None
+Options9=Actv00Stop00OutO00
+Name10=JOG TURN timer
+Incoming10=Tim0TimT000Cmaster_clock
+Outgoing10=Tim0TimS000Crefresh_jog21:0:1
+Options10=Actv01Stop00OutO00StMa00000017label0061__cmt>// flag: do we need a refresh? yes if we accumulated jog turn, or if time has moved forwardpp=0label0006__cmt>label0023__cmt>// what is the current state?if(yp==1)goto000Bcur_playingif(yp==2)goto000Acur_cueingnoexecutelabel0006__cmt>label000B__cmt>/////label000Bcur_playinglabel000Acur_cueinglabel0006__cmt>label0023__cmt>// scale: 1 deg per each 10mslabel0036__cmt>// this needs to account to 360 deg per 4 beats!label0006__cmt>oo=hyoo=oo/5label0006__cmt>y6=y6+ooy6=y6%360if(y6<0)y6=y6+360label0006__cmt>label0003end
+Name11=-----------
+Incoming11=None
+Outgoing11=None
+Options11=Actv00Stop00OutO00
+Name12=TK IN - CUE
+Incoming12=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x44"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing12=Tim0TimS000Bcalc_state21:10:1
+Options12=Actv01Stop00OutO00StMa00000001z2=pp
+Name13=TK IN - PLAY/PAUSE
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4D"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing13=Tim0TimS000Bcalc_state21:10:1
+Options13=Actv01Stop00OutO00StMa00000002zp=pplabel0006__cmt>
+Name14=TK IN - JOG TOUCH
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing14=Tim0TimS000Bcalc_state21:10:1
+Options14=Actv01Stop00OutO00StMa00000002zt=pplabel0006__cmt>
+Name15=
+Incoming15=None
+Outgoing15=None
+Options15=Actv00Stop00OutO00
+Name16=CALC STATE
+Incoming16=Tim0TimT000Bcalc_state2
+Outgoing16=Tim0TimS000Crefresh_cue21:0:1
+Options16=Actv01Stop00OutO00StMa000000B3label0034__cmt>// TODO: channels are #2, but variables are #1label002D__cmt>//  copy paste. On #1, change channels.label0025__cmt>//  on #2 change variable nameslabel0006__cmt>label0006__cmt>label0016__cmt>// IN PLAY  "zo"label0016__cmt>// IN CUE:  "z1"label001A__cmt>// IN JOGTOUCH: "zs"label0006__cmt>label001C__cmt>// CURRENT STATE: "yo"label001A__cmt>// NEEDLE FWD?  "xx"label0006__cmt>label002A__cmt>// OUT    "y5"    360 degree  NEEDLElabel0030__cmt>// OUT    "z5"    360 degree  CUE_POSITIONlabel000F__cmt>/////////label0006__cmt>label0006__cmt>label0023__cmt>// what is the current state?if(yp==0)goto000Bcur_stoppedif(yp==1)goto000Bcur_playingif(yp==2)goto000Acur_cueingif(yp==3)goto000Acur_pausedlabel0006__cmt>if(yp==4)goto0010cur_play_joggingif(yp==5)goto0012cur_paused_joggingif(yp==6)goto0013cur_stopped_jogginggoto0005ERRORlabel0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  NORMAL STATESlabel0016__cmt>////////////////label0006__cmt>label000A__cmt>////label000Bcur_stoppedif(zp==1)yp=1if(z2==1)yp=2if(zt==1)yp=6goto0003endlabel0006__cmt>label000C__cmt>//////label000Bcur_playingif(z2==1)goto0013playing_pressed_cueif(zp==0)goto0015playing_pressed_pauseif(zt==1)goto0013playing_pressed_joggoto0003endlabel0006__cmt>label0013playing_pressed_cuelabel0016__cmt>// move to fronty6=z6yp=0goto0003endlabel0006__cmt>label0013playing_pressed_jogyp=4goto0003endlabel0006__cmt>label0015playing_pressed_pauseyp=3goto0003endlabel0006__cmt>label000C__cmt>//////label000Acur_pausedif(z2==1)goto0012paused_pressed_cueif(zp==1)goto0013paused_pressed_playif(zt==1)goto0012paused_pressed_joggoto0003endlabel0006__cmt>label0012paused_pressed_cuelabel0014__cmt>// set new cuez6=y6yp=0goto0003endlabel0006__cmt>label0013paused_pressed_playyp=1goto0003endlabel0006__cmt>label0012paused_pressed_jogyp=5goto0003endlabel0006__cmt>label0006__cmt>label000C__cmt>//////label000Acur_cueingif(z2==0)goto0013cueing_released_cuelabel0045__cmt>///if zt==1 then goto "cueing_pressed_jog"  // not implemented!goto0003endlabel0006__cmt>label0013cueing_released_cuelabel0015__cmt>//move to fronty6=z6yp=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0016__cmt>////////////////label0025__cmt>////////////////  JOGING STATESlabel0016__cmt>////////////////label0010cur_play_joggingif(zt==0)goto0019play_jogging_released_jogif(z2==1)goto0018play_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019play_jogging_released_jogyp=1goto0003endlabel0006__cmt>label0018play_jogging_pressed_cuelabel0014__cmt>// set new cuez6=y6label0021__cmt>// yp=0   /// NOT CHANGE !!goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0013cur_stopped_joggingif(zt==0)goto0019stop_jogging_released_jogif(z2==1)goto0018stop_jogging_pressed_cuegoto0003endlabel0006__cmt>label0019stop_jogging_released_jogyp=3goto0003endlabel0006__cmt>label0018stop_jogging_pressed_cuelabel0014__cmt>// set new cuez6=y6yp=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label000B__cmt>/////label0012cur_paused_joggingif(zt==0)goto001Apause_jogging_released_jogif(z2==1)goto0019pause_jogging_pressed_cuegoto0003endlabel0006__cmt>label001Apause_jogging_released_jogyp=3goto0003endlabel0006__cmt>label0019pause_jogging_pressed_cuelabel0014__cmt>// set new cuez6=y6yp=0goto0003endlabel0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0010__cmt>//////////label0003endlabel0006__cmt>label001F__cmt>// Below is just to debuglabel002C__cmt>// exit rules, execute Outgoing Actionlabel0006__cmt>label0006__cmt>label0017__cmt>// show new stateif(yp==0)goto000Bnow_stoppedif(yp==1)goto000Bnow_playingif(yp==2)goto000Anow_cueingif(yp==3)goto000Anow_pausedif(yp==4)goto0010now_play_joggingif(yp==5)goto0012now_paused_joggingif(yp==6)goto0013now_stopped_jogginggoto0005ERRORlabel0006__cmt>label000Bnow_stoppedlabel000Bnow_playinglabel000Anow_cueinglabel000Anow_pausedlabel0010now_play_jogginglabel0012now_paused_jogginglabel0013now_stopped_jogging
+Name17=REFRESH  jog
+Incoming17=Tim0TimT000Crefresh_cue2
+Outgoing17=Tim0TimS000Crefresh_jog21:0:1
+Options17=Actv01Stop00OutO00StMa00000002oo=z6label0006__cmt>
+Name18=SEND cue
+Incoming18=Tim0TimT000Crefresh_cue2
+Outgoing18=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="1"/><Value1 num="0x17"/><Value2 var="oo"/></Simple></Outgoing>
+Options18=Actv01Stop00OutO00StMa00000002oo=z6label0006__cmt>
+Name19=-----------
+Incoming19=None
+Outgoing19=None
+Options19=Actv00Stop00OutO00
+Name20=-----------
+Incoming20=KAM10000KSQ1000601101004D24D210211
+Outgoing20=None
+Options20=Actv01Stop00OutO00StMa00000001ko=0
+Name21=-----------
+Incoming21=None
+Outgoing21=None
+Options21=Actv00Stop00OutO00
+
+[Preset.8]
+Name=MAIN CH2
+Active=1
+PresetSwitchIgnore=0
+Name0=RESET SCREENS
+Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1" Type="New Version Required"/><Value1 num="77" Type="New Version Required"/><Value2 num="0" setvar="oo" Type="New Version Required"/></Simple></Incoming>
+Outgoing0=Tim0TimS0005calc21:0:1
+Options0=Actv01Stop00OutO00StMa00000005label0006__cmt>label0013__cmt>// reset seekja=-3jb=-3label0006__cmt>
+Name1=-----------
+Incoming1=None
+Outgoing1=None
+Options1=Actv00Stop00OutO00
+Name2=KEY value
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x51"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing2=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x49"/><Value2 var="pp"/></Simple></Outgoing>
+Options2=Actv01Stop00OutO00StMa00000005label0019__cmt>// 0 == disable keylabel0015__cmt>// 1 == key "C"label000C__cmt>//pp=0label0006__cmt>pp=1
+Name3=KEY variaton
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x51"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing3=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x4A"/><Value2 var="pp"/></Simple></Outgoing>
+Options3=Actv01Stop00OutO00StMa00000001pp=oo
+Name4=-----------
+Incoming4=None
+Outgoing4=None
+Options4=Actv00Stop00OutO00
+Name5=-----------
+Incoming5=None
+Outgoing5=None
+Options5=Actv00Stop00OutO00
+Name6=-----------
+Incoming6=None
+Outgoing6=None
+Options6=Actv00Stop00OutO00
+Name7=SHIFT - debug
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1" Type="New Version Required"/><Value1 num="75" Type="New Version Required"/><Value2 num="0" setvar="oo" Type="New Version Required"/></Simple></Incoming>
+Outgoing7=Tim0TimS0005calc21:0:1
+Options7=Actv01Stop00OutO00
+Name8=SHIFT1
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x45"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing8=Tim0TimS0005calc21:0:1
+Options8=Actv01Stop00OutO00StMa0000000Alabel0006__cmt>if(gb==0)goto0009handle_itif(gb==1)goto0009handle_itgoto0003endlabel0006__cmt>label0009handle_itif(oo==1)gb=1if(oo==0)gb=0label0006__cmt>label0003end
+Name9=SHIFT2
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x49"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing9=Tim0TimS0005calc21:0:1
+Options9=Actv01Stop00OutO00StMa0000000Flabel0036__cmt>//if ga==0 then exit rules, skip Outgoing Actionlabel0006__cmt>label0006__cmt>label002B__cmt>// this whole section is now disabed!goto0003endlabel0006__cmt>if(gb==0)goto0009handle_itif(gb==2)goto0009handle_itgoto0003endlabel0006__cmt>label0009handle_itif(oo==1)gb=2if(oo==0)gb=0label0006__cmt>label0003end
+Name10=CYCLE TIME MODE
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4A"/><Value2 num="0x00"/></Simple></Incoming>
+Outgoing10=Tim0TimS0005calc21:0:1
+Options10=Actv01Stop00OutO00StMa00000008oo=zaif(oo==0)zb=1if(oo==1)zb=0label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>label0006__cmt>
+Name11=LOOP active
+Incoming11=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x4C"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing11=Tim0TimS0005calc21:0:1
+Options11=Actv01Stop00OutO00StMa00000006label0006__cmt>label0009handle_itif(oo==1)gb=4if(oo==0)gb=0label0006__cmt>label0003end
+Name12=-----------
+Incoming12=None
+Outgoing12=None
+Options12=Actv00Stop00OutO00
+Name13=LOOP size
+Incoming13=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x46"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing13=Tim0TimS0005calc21:0:1
+Options13=Actv01Stop00OutO00StMa0000000Dif(oo<=4)pp=0if(oo==5)pp=1if(oo==6)pp=2if(oo==7)pp=4if(oo==8)pp=8if(oo==9)pp=16if(oo>=10)pp=32label0006__cmt>label0018__cmt>// external answerl2=pplabel0006__cmt>label0012__cmt>// loop caseif(n6==1)n2=l2
+Name14=LOOP size (timer)
+Incoming14=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x46"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing14=Tim0TimS0008preview21:2000:1
+Options14=Actv01Stop00OutO00StMa00000002if(gb==0)gb=3label0006__cmt>
+Name15=MOVE size
+Incoming15=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x47"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing15=Tim0TimS0005calc21:0:1
+Options15=Actv01Stop00OutO00StMa00000011if(oo<=5)pp=0if(oo==6)pp=1if(oo==7)pp=2if(oo==8)pp=4if(oo==9)pp=8if(oo==10)pp=16if(oo==11)pp=32if(oo>=12)pp=9999label0006__cmt>n2=pplabel0006__cmt>label0012__cmt>// loop caseif(oo==12)n6=1if(oo!=12)n6=0label0006__cmt>if(n6==1)n2=l2label0006__cmt>
+Name16=MOVE size (timer)
+Incoming16=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x47"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing16=Tim0TimS0008preview21:2000:1
+Options16=Actv01Stop00OutO00StMa00000002if(gb==0)gb=3label0006__cmt>
+Name17=TEMPO range
+Incoming17=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x42"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing17=Tim0TimS0005calc21:0:1
+Options17=Actv01Stop00OutO00StMa00000014label0006__cmt>if(oo==0)pp=2if(oo==1)pp=4if(oo==2)pp=6if(oo==3)pp=8if(oo==4)pp=10if(oo==5)pp=12if(oo==6)pp=14if(oo==7)pp=16if(oo==8)pp=18if(oo==9)pp=20if(oo==10)pp=25if(oo==11)pp=35if(oo==12)pp=50if(oo==13)pp=100label0006__cmt>i2=pplabel0006__cmt>label0006__cmt>label0006__cmt>
+Name18=TEMPO range (timer)
+Incoming18=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x42"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing18=Tim0TimS0008preview21:2000:1
+Options18=Actv01Stop00OutO00StMa00000001if(gb==0)gb=3
+Name19=SHIFT PREVIEWS - Stop Timer
+Incoming19=Tim0TimT0008preview2
+Outgoing19=Tim0TimS0005calc21:0:1
+Options19=Actv01Stop00OutO00StMa00000001if(gb==3)gb=0
+Name20=-----------
+Incoming20=None
+Outgoing20=None
+Options20=Actv00Stop00OutO00
+Name21=-----------
+Incoming21=None
+Outgoing21=None
+Options21=Actv00Stop00OutO00
+Name22=-----------
+Incoming22=None
+Outgoing22=None
+Options22=Actv00Stop00OutO00
+Name23=tempo adjust S1
+Incoming23=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x65"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing23=Tim0TimS0005calc21:0:1
+Options23=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-100g6=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name24=tempo adjust S2
+Incoming24=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x66"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing24=Tim0TimS0005calc21:0:1
+Options24=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-75g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name25=tempo adjust S3
+Incoming25=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x67"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing25=Tim0TimS0005calc21:0:1
+Options25=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-50g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name26=tempo adjust S4
+Incoming26=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x68"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing26=Tim0TimS0005calc21:0:1
+Options26=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-25g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name27=tempo adjust S5
+Incoming27=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x69"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing27=Tim0TimS0005calc21:0:1
+Options27=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp-0g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name28=tempo adjust S6
+Incoming28=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x6A"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing28=Tim0TimS0005calc21:0:1
+Options28=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp+25g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name29=tempo adjust S7
+Incoming29=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x6B"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing29=Tim0TimS0005calc21:0:1
+Options29=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp+50g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name30=tempo adjust S8
+Incoming30=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x6C"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing30=Tim0TimS0005calc21:0:1
+Options30=Actv01Stop00OutO00StMa00000019pp=pp/4pp=pp+75g5=100label0006__cmt>label001D__cmt>///////// Decision treegp=gp+1if(gp==1)goto000Bsimple caseif(pp<gt)goto000Agoing leftif(pp>=gt)goto000Bgoing rightlabel0006__cmt>label0015__cmt>///////// Caseslabel000Bsimple caseg2=ppgoto0003endlabel0006__cmt>label000Agoing leftif(pp<g2)g2=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>g2)g2=ppgoto0003endlabel0006__cmt>label000F__cmt>///// ENDlabel0003end
+Name31=-----------
+Incoming31=None
+Outgoing31=None
+Options31=Actv00Stop00OutO00
+Name32=bpm value S1
+Incoming32=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x6E"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing32=Tim0TimS0005calc21:0:1
+Options32=Actv01Stop00OutO00StMa00000010oo=pp*75oo=oo+0h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name33=bpm value S2
+Incoming33=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x6F"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing33=Tim0TimS0005calc21:0:1
+Options33=Actv01Stop00OutO00StMa00000010oo=pp*25oo=oo+7500h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name34=bpm value S3
+Incoming34=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x70"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing34=Tim0TimS0005calc21:0:1
+Options34=Actv01Stop00OutO00StMa00000010oo=pp*10oo=oo+10000h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name35=bpm value S4
+Incoming35=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x71"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing35=Tim0TimS0005calc21:0:1
+Options35=Actv01Stop00OutO00StMa00000010oo=pp*10oo=oo+11000h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name36=bpm value S5
+Incoming36=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x72"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing36=Tim0TimS0005calc21:0:1
+Options36=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+12000h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name37=bpm value S6
+Incoming37=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x73"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing37=Tim0TimS0005calc21:0:1
+Options37=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+12500h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name38=bpm value S7
+Incoming38=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x74"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing38=Tim0TimS0005calc21:0:1
+Options38=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+13000h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name39=bpm value S8
+Incoming39=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x75"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing39=Tim0TimS0005calc21:0:1
+Options39=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+13500h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name40=bpm value S9
+Incoming40=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x76"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing40=Tim0TimS0005calc21:0:1
+Options40=Actv01Stop00OutO00StMa00000010oo=pp*5oo=oo+14000h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name41=bpm value S10
+Incoming41=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x77"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing41=Tim0TimS0005calc21:0:1
+Options41=Actv01Stop00OutO00StMa00000010oo=pp*10oo=oo+14500h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name42=bpm value S11
+Incoming42=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x78"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing42=Tim0TimS0005calc21:0:1
+Options42=Actv01Stop00OutO00StMa00000010oo=pp*45oo=oo+15500h6=100label0006__cmt>label001D__cmt>///////// Decision treeif(pp==0)goto0003endif(pp==100)goto0003endgoto000Cchange valuelabel0006__cmt>label0016__cmt>/// Change valuelabel000Cchange valueh2=oohp=2label0006__cmt>label000D__cmt>/// ENDlabel0003end
+Name43=bpm value FALLBACK
+Incoming43=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x79"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
+Outgoing43=Tim0TimS0005calc21:0:1
+Options43=Actv01Stop00OutO00StMa0000000Coo=pp*200oo=oo+0h6=100label0006__cmt>label0030__cmt>/// ignore this one if we saw an HR signalif(hp!=0)goto0003endlabel0006__cmt>label000ELow Resolutionh2=oohp=1label0006__cmt>label0003end
+Name44=-----------
+Incoming44=None
+Outgoing44=None
+Options44=Actv00Stop00OutO00
+Name45=-----------
+Incoming45=None
+Outgoing45=None
+Options45=Actv00Stop00OutO00
+Name46=ADD A DELAY
+Incoming46=Tim0TimT0005calc2
+Outgoing46=Tim0TimS0007calc2_b1:30:1
+Options46=Actv01Stop00OutO00StMa00000003if(ht==1)noexecuteht=1label0006__cmt>
+Name47=merge HR values
+Incoming47=Tim0TimT0007calc2_b
+Outgoing47=Tim0TimS0007calc2_c1:0:1
+Options47=Actv01Stop00OutO00StMa0000000Alabel001C__cmt>// manage tempo adjustif(gp>0)hp=0gp=0gt=g1label0006__cmt>label0019__cmt>// manage BPM valuehp=0label0006__cmt>label0019__cmt>//unlock 30ms timerht=0
+Name48=Calculations
+Incoming48=Tim0TimT0007calc2_c
+Outgoing48=Tim0TimS0007calc2_d1:0:1
+Options48=Actv01Stop00OutO00StMa0000001Flabel002E__cmt>// use this to skip calcs (debug faster)label0006__cmt>label002C__cmt>// exit rules, execute Outgoing Actionlabel0006__cmt>label0006__cmt>label0021__cmt>/// LINK LOOP & MOVE VALUESif(n6==1)n2=l2label0006__cmt>label0018__cmt>/// CALC TEMPO ADJlabel0032__cmt>// todo: move to local variables j1, j5, etcj2=g2*i2j6=g6*1label0006__cmt>ss=j6/10oo=j2/ssk2=oolabel0006__cmt>label0016__cmt>/// CALC NEW BPMm2=j2m6=j6*100label0006__cmt>m2=m2+m6m6=m6label0006__cmt>m2=m2*h2m6=m6*h6label0006__cmt>ss=m6/10oo=m2/ssk6=oolabel0006__cmt>
+Name49=-----------
+Incoming49=None
+Outgoing49=None
+Options49=Actv00Stop00OutO00
+Name50=SEND BPM
+Incoming50=Tim0TimT0007calc2_d
+Outgoing50=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="1"/><Value1 num="0x15"/><Value2 var="oo"/></Simple></Outgoing>
+Options50=Actv01Stop00OutO00StMa0000000Eif(gb==1)goto000Fsend_native_bpmgoto000Bsend_actuallabel0006__cmt>label000Bsend_actualoo=k6goto0003endlabel0006__cmt>label000Fsend_native_bpmoo=h2oo=oo*10oo=oo/h6goto0003endlabel0006__cmt>label0003end
+Name51=SEND PERCENTAGE
+Incoming51=Tim0TimT0007calc2_d
+Outgoing51=MID3<Outgoing Action="MIDI"><Simple Type="ControlChange14"><Channel num="1"/><Value1 num="0x16"/><Value2 var="oo"/></Simple></Outgoing>
+Options51=Actv01Stop00OutO00StMa00000011if(gb==1)goto0010send_tempo_rangeif(gb==3)goto0010send_tempo_rangelabel0006__cmt>goto000Bsend_actuallabel0006__cmt>label0006__cmt>label000Bsend_actualoo=k2goto0003endlabel0006__cmt>label0010send_tempo_rangeoo=i2oo=oo*10goto0003endlabel0006__cmt>label0003endoo=oo+1000
+Name52=-----------
+Incoming52=None
+Outgoing52=None
+Options52=Actv00Stop00OutO00
+Name53=FALLTROUGH
+Incoming53=Tim0TimT0007calc2_d
+Outgoing53=Tim0TimS000Bcalc_clock21:0:1
+Options53=Actv01Stop00OutO00
+
+[Preset.9]
+Name=SEEK CH2
+Active=1
+PresetSwitchIgnore=0
+Name0=----
+Incoming0=None
+Outgoing0=None
+Options0=Actv01Stop00OutO00
+Name1=IN seek position S1
+Incoming1=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x5A"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing1=Tim0TimS000Bcalc_clock21:10:1
+Options1=Actv01Stop00OutO01StMa00000017pp=oo+0label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name2=IN seek position S2
+Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x5B"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing2=Tim0TimS000Bcalc_clock21:10:1
+Options2=Actv01Stop00OutO01StMa00000017pp=oo+100label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name3=IN seek position S3
+Incoming3=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x5C"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing3=Tim0TimS000Bcalc_clock21:10:1
+Options3=Actv01Stop00OutO01StMa00000018pp=oo+200label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003endlabel0006__cmt>
+Name4=IN seek position S4
+Incoming4=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x5D"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing4=Tim0TimS000Bcalc_clock21:10:1
+Options4=Actv01Stop00OutO01StMa00000017pp=oo+300label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name5=IN seek position S5
+Incoming5=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x5E"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing5=Tim0TimS000Bcalc_clock21:10:1
+Options5=Actv01Stop00OutO01StMa00000017pp=oo+400label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name6=IN seek position S6
+Incoming6=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x5F"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing6=Tim0TimS000Bcalc_clock21:10:1
+Options6=Actv01Stop00OutO01StMa00000017pp=oo+500label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name7=IN seek position S7
+Incoming7=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x60"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing7=Tim0TimS000Bcalc_clock21:10:1
+Options7=Actv01Stop00OutO01StMa00000017pp=oo+600label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name8=IN seek position S8
+Incoming8=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x61"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing8=Tim0TimS000Bcalc_clock21:10:1
+Options8=Actv01Stop00OutO01StMa00000017pp=oo+700label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name9=IN seek position S9
+Incoming9=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x62"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing9=Tim0TimS000Bcalc_clock21:10:1
+Options9=Actv01Stop00OutO01StMa00000017pp=oo+800label0006__cmt>label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name10=IN seek position S10
+Incoming10=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x63"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
+Outgoing10=Tim0TimS000Bcalc_clock21:10:1
+Options10=Actv01Stop00OutO01StMa00000016pp=oo+900label0006__cmt>label000F__cmt>/////////np=np+1if(np==1)goto000Bsimple caselabel0006__cmt>if(pp<jb)goto000Agoing leftif(pp>jb)goto000Bgoing rightlabel0006__cmt>label000Agoing leftif(pp<nb)nb=ppgoto0003endlabel0006__cmt>label000Bgoing rightif(pp>nb)nb=ppgoto0003endlabel0006__cmt>label000Bsimple casenb=ppgoto0003endlabel0006__cmt>label0003end
+Name11=----
+Incoming11=None
+Outgoing11=None
+Options11=Actv01Stop00OutO00
+Name12=ADD A DELAY
+Incoming12=Tim0TimT000Bcalc_clock2
+Outgoing12=Tim0TimS000Dcalc_clock2_b1:30:1
+Options12=Actv01Stop00OutO00StMa00000003if(hf==1)noexecutehf=1label0006__cmt>
+Name13=Merge HR Seek
+Incoming13=Tim0TimT000Dcalc_clock2_b
+Outgoing13=Tim0TimS000Dcalc_clock2_c1:0:1
+Options13=Actv01Stop00OutO00StMa00000005label0006__cmt>np=0label0006__cmt>label0012__cmt>// lock 30mshf=0
+Name14=Calc Clock
+Incoming14=Tim0TimT000Dcalc_clock2_c
+Outgoing14=Tim0TimS000Fsend_timestamp21:0:1
+Options14=Actv01Stop00OutO00StMa00000056label001B__cmt>/// nothing happened?if(nb==jb)goto0004plotlabel0006__cmt>label0006__cmt>label0017__cmt>/// FORWARD SEEK?oo=nbpp=jb+1jb=ooif(pp==oo)goto0007seek_okgoto0007skippedlabel0006__cmt>label0014__cmt>/// WE SKIPPEDlabel0007skippedkb=hzyb=nbib=0goto0004plotlabel0006__cmt>label0011__cmt>/// SEEK OKlabel0007seek_okib=ib+1if(ib==5)goto000Brecalculategoto0004plotlabel0006__cmt>label0021__cmt>//if ho!=0 then Goto "plot"label0019__cmt>/// WHY THIS "HO"??label0006__cmt>label0006__cmt>label0015__cmt>/// RECALCULATElabel000Brecalculaterr=hz-kbss=nb-yblabel0006__cmt>label0025__cmt>// exit if timer is not runningif(rr==0)goto0005resetlabel0037__cmt>// exit if we stopped too much. Normal Limit = 16if(rr>250)goto0005resetlabel0006__cmt>label0006__cmt>rr=rr*1000rr=rr/ssqq=1000/hyrr=rr/qqlabel0006__cmt>label0024__cmt>// new value calculated + lockhb=rrhp=1label0006__cmt>label0006__cmt>goto0004plotlabel0006__cmt>label000F__cmt>/// RESETlabel0005resetgoto0007skippedlabel0006__cmt>jb=-2hp=0goto0004plotlabel0006__cmt>label0006__cmt>label001C__cmt>//// PLOT FINAL VALUESlabel0004plotlabel0015__cmt>// elapsed timepp=hb*nblabel0037__cmt>// total track length (needs to be before REMAIN)qq=hb*1000label0014__cmt>// remain timerr=qq-pplabel0006__cmt>label001C__cmt>// DECIDE WHAT TO SHOWif(gb==2)oo=qqif(gb==2)goto0003endlabel0006__cmt>if(zb==0)oo=ppif(zb==0)goto0003endlabel0006__cmt>if(zb==1)oo=rrif(zb==1)goto0003endoo=pplabel0006__cmt>label0006__cmt>label000B__cmt>/////label0003endoo=oo/1000oo=oo/1mb=oo
+Name15=----
+Incoming15=None
+Outgoing15=None
+Options15=Actv01Stop00OutO00
+Name16=send sign
+Incoming16=Tim0TimT000Fsend_timestamp2
+Outgoing16=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x44"/><Value2 var="qq"/></Simple></Outgoing>
+Options16=Actv01Stop00OutO00StMa0000000Fif(gb>=1)goto0008positivelabel0006__cmt>if(zb==0)goto0008positiveif(zb==1)goto0008negativegoto0008positivelabel0006__cmt>label0008positiveqq=0goto0003endlabel0006__cmt>label0008negativeqq=127goto0003endlabel0006__cmt>label0003end
+Name17=send minutes
+Incoming17=Tim0TimT000Fsend_timestamp2
+Outgoing17=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x42"/><Value2 var="qq"/></Simple></Outgoing>
+Options17=Actv01Stop00OutO00StMa00000010label0006__cmt>if(gb==2)goto0009show timeif(gb==1)goto0009show loopif(gb>=3)goto0009show loopgoto0009show timelabel0006__cmt>label0009show loopqq=l2goto0003endlabel0006__cmt>label0009show timeqq=mbqq=qq/60goto0003endlabel0006__cmt>label0003end
+Name18=send seconds
+Incoming18=Tim0TimT000Fsend_timestamp2
+Outgoing18=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x43"/><Value2 var="qq"/></Simple></Outgoing>
+Options18=Actv01Stop00OutO00StMa0000000Fif(gb==2)goto0009show timeif(gb==1)goto0009show loopif(gb>=3)goto0009show loopgoto0009show timelabel0006__cmt>label0009show loopqq=n2goto0003endlabel0006__cmt>label0009show timeqq=mbqq=qq%60goto0003endlabel0006__cmt>label0003end
+Name19=----
+Incoming19=None
+Outgoing19=None
+Options19=Actv01Stop00OutO00
+
+[Project]
+Version=2
+Author=Pedro Estrela
+AuthorContact=pedro.estrela@gmail.com
+Comments=DDJ-1000 screens implemeted in BOME.\nSee technical info on file "BOME implementation notes.txt".\nSee the technical discussion on the DJTT forum: http://forum.djtechtools.com/showthread.php?t=96024\n
+AuthorWWW=www.djestrela.com
+AuthorCopyright=Pedro Estrela
+DefaultInPorts=MIDA0001000CFrom Traktor
+DefaultOutPorts=MIDA00010006To DDJ
+
+[Signatures]
+SigName-1=[Midi Translator Pro Internal]
+Signature-1=lpJuet/Ivu4wCMswHNCHRQaE2U5MmcOi/cv4qEWlAeaCc9KlG21BNAoPYKaXZb0pdXmZpHXEmG9vqnH6W4rHME3ibPqVB9z7BM3PtKaGFhNtO/5MlidETU432hATNZbYjd9E8bW5WPEbT0LBC7IhQ7T2RspJFN0OdAlEvRzwwjg=
+SignedBy-1=Pedro Estrela
