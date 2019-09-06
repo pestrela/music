@@ -1,4 +1,6 @@
 
+
+
 help_text="""
 
 Main feature: clone CUEs
@@ -23,7 +25,7 @@ Secondary feature: merge collections
 	INPUT: "collection.nml", plus "*.nml" for the old collections
 
 How to run:
-  Simplest way to use this program is to use https://jupyter.org/try , then upload both the python code and the NML files. Run the program and download "collection.nml.merged"
+  traktor_clone_cues -c collection_file  [any number of old collection files]
 	
 Reference:
   [1] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
