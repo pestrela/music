@@ -1,23 +1,19 @@
 
-# Sub-folders
+# Contents
 
 This folder contains my Traktor tools and mappings
 
-## ddj_1000_traktor_mapping
-A backup of the my Traktor+BOME mapping for the DDJ-1000 with jog screens support.
-Main page: https://maps.djtechtools.com/mappings/9279
-
-## collections_without_playlists
-Tools to manage your collection using Operating System folders. See the below blog post as well.
-
-## tracklist_tools
-Tools to generate CUE files and timestamped tracklists. See the below blog post as well
-
-## 26ms offsets
-Finding mp3 cue shifts in DJ conversion apps. Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
-
-## macos_converters
-Scripts able to run the DJCU and Rekordbuddy tools in Windows. (these convert collections from Traktor to Rekordbox)
+* ddj_1000_traktor_mapping
+  * A backup of the my Traktor+BOME mapping for the DDJ-1000 with jog screens support.
+  * Main page: https://maps.djtechtools.com/mappings/9279
+*  collections_without_playlists
+   * Tools to manage your collection using Operating System folders. See the below blog post as well.
+* tracklist_tools
+  * Tools to generate CUE files and timestamped tracklists. See the below blog post as well
+* 26ms offsets
+  * Finding mp3 cue shifts in DJ conversion apps. Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
+* macos_converters
+  * Scripts able to run the DJCU and Rekordbuddy tools in Windows. (these convert collections from Traktor to Rekordbox)
 
 
 
