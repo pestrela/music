@@ -33,10 +33,10 @@ For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8
 MIDI Variables is also crucial to create more layers with additional shifts (one physical button = many functions). 
 Either Rekordbox and Serato lack this ability at all, and only allow you to assign a single command to a single button.
  
-note: the gold standard in MIDI scripting is VDJscript (https://www.virtualdj.com/wiki/VDJscript.html). Having said this, the jog screens can only be mapped using BOME midi translator pro (https://www.bome.com/products/miditranslator)
+  * note: the gold standard in MIDI scripting is VDJscript (https://www.virtualdj.com/wiki/VDJscript.html). Having said this, the jog screens can only be mapped using BOME midi translator pro (https://www.bome.com/products/miditranslator)
 
-There are some smaller features of Traktor which inevitably point to one of the two above-mentioned reasons. 
-For example, pressing a hotcue moves the temporary cue as well. This is not the case in other softwares.
+There are some smaller specific reasons, but which are related to the above-mentioned reasons. 
+* For example, pressing a hotcue moves the temporary cue as well. This is not the case in other softwares.
 Even if that was not the case, this would be trivial to fix with MIDI mapping, and impossible in eg Rekordbox.
  
 
@@ -49,19 +49,19 @@ This no longer the case, so thats why I've used this model using mappings.
 
 Second, the DDJ-1000 has the following features that I value signifiantly over the S4Mk3:
 
-A) actual BIG+mechanical jogs. I use the jogs for cueing, not scratching. Even so, I've optimized significantly the MIDI latency. 
+* A) actual BIG+mechanical jogs. I use the jogs for cueing, not scratching. Even so, I've optimized significantly the MIDI latency. 
   The S4 jogs are still way too small for my hands. Moving jogs are cool, but not a dealbreaker. Haptic feedback is basically a gimmick for me.
   I've mapped the jog screens that have the most important info (just like the 1000SRT)
   
-B) more pad modes. All my most useful functions are a maximum of 2 clicks away - and without using any shifts. 
+* B) more pad modes. All my most useful functions are a maximum of 2 clicks away - and without using any shifts. 
   Main Pad modes are hot cue, roll/padFX, macroFX, jogFX. Pressing twice the same pad mode cycles the top 2 sub-pages of that pad mode. This is way the new reloop elite mixer works. 
   I’ve got even more stuff on the secondary pad modes, accessible with a shift 
 
-C) jogFX combos on the jogs. Please see them in my demo videos. This is turnkey in my mapping, i’m not familiar if they have it on the S4mk3 (it was present for sure on the S4MK1 DJTT mappings)
+* C) jogFX combos on the jogs. Please see them in my demo videos. This is turnkey in my mapping, i’m not familiar if they have it on the S4mk3 (it was present for sure on the S4MK1 DJTT mappings)
 
-D) beatFx in the correct place of the mixer (lower right corner = right hand of the DJ), with a FX selector knob to select by name
+* D) beatFx in the correct place of the mixer (lower right corner = right hand of the DJ), with a FX selector knob to select by name
 
-E) more inputs and outputs, microphones etc. In particular, full FX suite for any external inputs
+* E) more inputs and outputs, microphones etc. In particular, full FX suite for any external inputs
 
 Note: the S4mk3 is a fantastic controller - I have recommended it to several people before. In particular the loop/beatjump encoders implementation is the gold standard for that. 
 The overall integration is better, of course, which is a plus if you prefer plug and play vs customization. 
@@ -105,10 +105,10 @@ Overview of the Cue tools:
   * renumbers mp3 files, in sequence. This is useful to make a sequenced playlist in your operating system folders, outside Traktor.
 
 * cue_make_tracklist.sh:
- *   from a folder, generates basic tracklist text files
+  * from a folder, generates basic tracklist text files
 
 * cue_convert_timestamps.sh:
-  *  convert MMM:SS to HH:MM:SS format. Winamp uses the first format, Adobe audition uses the second 
+  * convert MMM:SS to HH:MM:SS format. Winamp uses the first format, Adobe audition uses the second 
 
 * cue_merge_cues.py: 
   * this is the main tool. It merge back and forth any CUE file with any tracklist text file. 
