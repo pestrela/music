@@ -23,20 +23,17 @@ This folder contains my Traktor tools and mappings
 
 Traktor has two major features that other softwares don't have. My have built whole workflows around these 2x features.
 
-a) Mass-relocate: Traktor finds moved files across folders, and of the filename is changed, fully automatically. 
+* a) Mass-relocate: Traktor finds moved files across folders, and of the filename is changed, fully automatically. 
 This is because it identifies files by AUDIO_ID content, not by filename. This is crucial to manage music using operating system folders, and not DJ software playlists.
+This is also made possible because Traktor has a search box to search any file in your operating system folders. This was requested for years in Rekorxbox.
+More info: whole blog post on "How to manage your collection using operating systems folders and without DJ playlists"
 
- This is also made possible because Traktor has a search box to search any file in your operating system folders. This was requested for years in Rekorxbox.
+* b) MIDI mapping with variables: this is crucial to make complex FX chains on the jog Wheels. 
+For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
+MIDI Variables is also crucial to create more layers with additional shifts (one physical button = many functions). 
+Either Rekordbox and Serato lack this ability at all, and only allow you to assign a single command to a single button.
  
- More info: whole blog post on "How to manage your collection using operating systems folders and without DJ playlists"
-
-b) MIDI mapping with variables: this is crucial to make complex FX chains on the jog Wheels. 
- For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
- 
- MIDI Variables is also crucial to create more layers with additional shifts (one physical button = many functions). 
- Either Rekordbox and Serato lack this ability at all, and only allow you to assign a single command to a single button.
- 
- note: the gold standard in MIDI scripting is VDJscript (https://www.virtualdj.com/wiki/VDJscript.html). Having said this, the jog screens can only be mapped using BOME midi translator pro (https://www.bome.com/products/miditranslator)
+note: the gold standard in MIDI scripting is VDJscript (https://www.virtualdj.com/wiki/VDJscript.html). Having said this, the jog screens can only be mapped using BOME midi translator pro (https://www.bome.com/products/miditranslator)
 
 There are some smaller features of Traktor which inevitably point to one of the two above-mentioned reasons. 
 For example, pressing a hotcue moves the temporary cue as well. This is not the case in other softwares.
