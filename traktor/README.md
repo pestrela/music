@@ -21,7 +21,7 @@ This folder contains my Traktor tools and mappings
 
 ## Why is Traktor my main DJ system
 
-Traktor has two major features that other softwares don't have. My have built whole workflows around these 2x features.
+Traktor has two major features that other softwares don't have. And I builtmy whole workflows around these two features:
 
 * a) Mass-relocate: Traktor finds moved files across folders, and of the filename is changed, fully automatically. 
 This is because it identifies files by AUDIO_ID content, not by filename. This is crucial to manage music using operating system folders, and not DJ software playlists.
