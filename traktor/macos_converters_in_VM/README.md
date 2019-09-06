@@ -9,12 +9,4 @@ Please see help text in program for more details, usage and links to overviews
 ## DJCU+RECU aid
 
 * same idea as above, but for DJCU instead (please note that I'm only maitaining the above rekordbuddy process)
-
-## traktor_clone_cues.py
-
-* This script is able to clone CUEs of the Duplicate files in your Collection
-* Secondary feature is merging CUEs from multiple collections
-
-please see help text in program for full details
-
-
+ 
