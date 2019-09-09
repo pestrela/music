@@ -45,4 +45,7 @@ copy_files "$cue_files_in" "$cue_folder_out"
 copy_files "$mp3_files_in" "$mp3_folder_out"
 copy_files "$download_files_in" "$download_folder_out"
 
+git pull
+git status
+
 exit 0

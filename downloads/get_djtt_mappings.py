@@ -126,14 +126,23 @@ def get_all_controllers():
     return d
 
 
-def get_ids(controllers, djtt_table):
-    #djtt_table = get_all_controllers()
+def get_ids(controllers, djtt_table, exact=True):
 
     ret = {}
     for c in controllers:
         for k,v in djtt_table.items():
-            if c.lower() in k.lower():
-                #print(v)
+            c = c.lower()
+            k = k.lower()
+            
+            to_add = False
+            if exact:
+                if c == k:
+                    to_add = True
+            else:
+                if c in k:
+                    to_add = True
+             
+            if to_add:
                 ret[k] = v
     return ret
 
@@ -227,7 +236,7 @@ def get_table(cntl_id):
     
 def massage_table(df):
     
-    final_cols = ['author', 'age', 'downloads', 'X']
+    final_cols = ['author', 'age', 'likes', 'downloads', 'X']
     
     df['X'] = df['author'].where(df['author'].str.contains('pedro'), other="").str.replace("by pedro", "X")
         
@@ -235,8 +244,16 @@ def massage_table(df):
     df = df_split_serie(df, 'author', 1, count=None)
     df = df_split_serie(df, 'downloads', 0)
     
-    df = df_split_serie(df, 'likes2', 0, new_col="likes")
-    df = df_split_serie(df, 'likes2', 2, new_col="dislikes")
+    df = df_split_serie(df, 'likes2', 0, new_col="likes3")
+    df = df_split_serie(df, 'likes2', 2, new_col="dislikes3")
+
+    df['likes'] = ""
+    for index, row in df.iterrows():
+        new = "%2d/%d" % (row['likes3'], row['likes3']+row['dislikes3'])
+        #print(new)
+        df.loc[index,'likes'] = new
+    
+    
     
     df = df_split_serie(df, 'name', -3, count=2, new_col="age")
     df['age'] = df['age'].apply(date_to_months)
@@ -246,15 +263,47 @@ def massage_table(df):
     return df
     
     
-#djtt_table = get_all_controllers()    
-
+    
+################3    
 djtt_table = get_all_controllers()
    
-pedro_controllers = [ "DDJ-1000", "ddj-sx2", "ddj-sz", "AKAI amx"]
-other_controllers = ["DDJ-400", "DDJ-800", "ddj-sx", "ddj-sr", "DDJ-Rz", "DDJ-Rx", "DDJ-Rr", 'CDJ-2000' , "DDJ-RZX", 'Numark Party Mix' ]
+pedro_main_controllers = [ 
+    "Pioneer DDJ-1000", 
+    "Pioneer DDJ-800", 
+    "Pioneer DDJ-SZ",
+    "Pioneer DDJ-SX2", 
+    "AKAI amx",
+]
+#pedro_main_controllers = [ "Pioneer DDJ-1000", ]
+
+
+pedro_other_controllers = [ 
+    "Pioneer CDJ-2000 Nexus", 
+    "Pioneer CDJ-2000NXS2", 
+    "Numark Party Mix",
+    "Pioneer DDJ-SX3", 
+    "Pioneer DDJ-RZ",
+    "Pioneer DDJ-RZX",     
+]
+#pedro_other_controllers =[]
+
+other_controllers = [
+    "DDJ-400", "DDJ-800", "ddj-sx", "ddj-sr", "DDJ-Rz", "DDJ-Rx", 
+    "DDJ-Rr", 'CDJ-2000' , "DDJ-RZX", 'Numark Party Mix',
+
+    "Pioneer DDJ-RR",
+    "Pioneer DDJ-RX", 
+    "Pioneer DDJ-SR",
+    "Pioneer DDJ-SR2",
+    "Pioneer DDJ-SX",
+    "Pioneer DDJ-SX3", 
+    "Pioneer DDJ-SZ2",
+    ]
+
 other_controllers = []
 
-controllers = pedro_controllers + other_controllers
+
+controllers = pedro_main_controllers + pedro_other_controllers + other_controllers
 controllers = set(controllers)
 
 c_dict = get_ids(controllers, djtt_table)
@@ -271,4 +320,7 @@ for (cntl_name, cntl_id) in c_dict.items():
     
     #break
 
+    
+
+    
     
