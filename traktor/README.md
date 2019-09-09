@@ -21,24 +21,31 @@ This folder contains my Traktor tools and mappings
 
 ## Why is Traktor my software of choice
 
-Traktor has two major features that other softwares don't have. And I built my whole work-flows around these two features:
+Traktor has two major features that other softwares don't have. And I built my whole work-flows around these two features. 
+As I use the DDJ-1000 (see below), this comparison will be mostly about Rekordbox, but other softwares are similar in these aspects.
 
-* a) Mass-relocate: Traktor finds both any renamed files and any moved files fully automatically. 
+* a) Mass-relocate: Traktor finds both RENAMED and MOVED files fully automatically. 
 This is because Traktor identifies files by CONTENT, not by filename. This is crucial to manage music using operating system folders, and not DJ software playlists.
-This is also possible because it has search box to search any file in your operating system folders. This was requested for years in Rekorxbox.
+Also, it has a search box on your Operating System folders, so that you can see them without playlists. This feature was requested for years in Rekordbox.
 More info: see below for a whole blog post on "How to manage your collection using operating systems folders and without DJ playlists"
 
-* b) MIDI mapping with variables: this is crucial to make complex FX chains on the jog Wheels. 
+Comparison to Rekorbox: if you MOVE your files, you have to relocate FOLDER by FOLDER. If you RENAME your files, you have to relocate FILE by FILE.
+This tool finds moved files automatically, but not renamed files (https://github.com/edkennard/rekordbox-repair)
+Hotcue doesnt move temporary cue as well. No search box on explorer node (access directly your OS files)
+Ups: video, smart playlists, related tracks, plug and play for pioneer gear, GUI to remap pads very easily
+
+* b) MIDI mapping with variables and multiple actions: this is crucial to make complex FX chains on the jog Wheels. 
 For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
 MIDI Variables is also crucial to create more layers with additional shifts (one physical button = many functions). 
-Both Rekordbox and Serato lack completely this ability. They only allow you to assign a single command to a single button.
- 
+Both Rekordbox and Serato lack completely this ability. They only allow you to assign a single command to a single button. 
   * note: the gold standard in MIDI scripting is VDJscript (https://www.virtualdj.com/wiki/VDJscript.html). Having said this, the jog screens can only be mapped using BOME midi translator pro (https://www.bome.com/products/miditranslator)
 
 There are some other smaller reasons. In general these are related to the above-mentioned main reasons. 
-* For example, pressing a hotcue moves the temporary cue as well. This is not the case in other softwares, which causes massive confusion - as I use the hotcues also for internal "bookmarks".
-Even if Trakor would work like other softwares, this would be trivial to fix via MIDI mapping. Again, this is currently impossible to address in both Rekordbox and Serato.
+* Example: I use the hotcues as internal "bookmarks". In Traktor, presing a hotcue moves the temporary cue as well. Very useful when previewing a tagged song.  This is not the case in Rekordbox, which causes massive confusion. 
+Even this was not the case in Trakor, this would be trivial to fix via MIDI mapping; such is impossible to address in both Rekordbox and Serato.
  
+On the Con side, the other softwares have great features that Traktor lacks: Video, smart playlists, related tracks, plug and play for pioneer gear, a great GUI to remap the pads very easily. But these do not offset the mass-relovate and midi mapping limitations.
+
 
 ## Why is DDJ-1000 my hardware of choice
 
@@ -58,12 +65,14 @@ Having said this, the DDJ-1000 has major features that I personally value signif
   Pressing twice the same pad mode cycles the top 2 sub-pages of that pad mode. This is way the reloop Elite mixer works. 
   I’ve got even more stuff on the secondary pad modes, accessible with a shift+mode. 
 
-* C) jogFX combos on the jogs. Please see them in my demo videos (eg 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s ). 
+* C) two USB ports. This is crucial for seamless handovers between DJs; and for safety of connecting a backup laptop ready at any time.
+  
+* D) jogFX combos on the jogs. Please see them in my demo videos (eg 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s ). 
   This is turnkey in my mapping, i’m not familiar if they have it on the S4mk3 (it was present for sure on the S4MK1 DJTT mappings)
 
-* D) beatFx in the correct place of the mixer (lower right corner = right hand of the DJ), with a FX selector knob to select the effect by name
+* E) beatFx in the correct place of the mixer (lower right corner = right hand of the DJ), with a FX selector knob to select the effect by name
 
-* E) more inputs and outputs, microphones etc. In particular, the mixer has a full FX suite for any external inputs (colorFX + beatFX)
+* F) more inputs and outputs, microphones etc. In particular, the mixer has a full FX suite for any external inputs (colorFX + beatFX)
 
 Note: the S4mk3 is a fantastic controller - I have recommended it to several people before. In particular the loop/beatjump encoders implementation is the gold standard for that. 
 The overall integration is better, of course, which is a plus if you prefer plug-and-play vs customization. 
@@ -73,20 +82,21 @@ But in the end its really the big jogswheels that is the crucial deal breaker; T
  
 ## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
 
-	My multi-genre, large collection is organized on OS folders (Operating System folders), instead of Playlists. 
-  
-  This is to be independent of any possible DJ software, and also itunes. I find A LOT easier just to have many Windows Explorer windows open, plus logically group and sub-group files on folders on the folder tree. 
-  
-  Because of this is use the “explorer” node of the DJ programs all the time instead of DJ playlists.
 
-	My workflow is fully automated:
+My multi-genre, large collection is organized on OS folders (Operating System folders), instead of Playlists. 
+
+This is to be independent of any possible DJ software, and also itunes. I find A LOT easier just to have many Windows Explorer windows open, plus logically group and sub-group files on folders on the folder tree. 
+
+Because of this is use the “explorer” node of the DJ programs all the time instead of DJ playlists.
+
+My workflow is fully automated:
 	 b) I change filenames continuously to correct artist/title. I use MP3tag_scripts to a) capitalize the names (format is “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix” and b) rename the internal tags  [1].
 	 c) Traktor mass-relocate finds files everywhere by AUDIO-ID (ie, content). This is much superior than rekordbox and others [2].
 	 d) I made a custom python script that duplicates cues of the duplicated files inside the Traktor collection.nml [1]. This is comparable to [3].
 	 e) I use DJCU+RECU/Rekordbuddy2 to generate the rekordbox.xml file. This is done inside a MacOS VM [4] [5]. There were some manual steps, so I made a script to convert the filenames [1]. A Windows-only alternative is [6]
-   f) I only need playlists for CDJs. To make playlists, I mass-convert all folders to itunes playlists, recursively. Mac version is [7]; Windows version is [8]. Then I do the usual rekordbox step to prepare USBs pens.
+   f) I only need playlists for CDJs. To make playlists, I mass-convert all folders to itunes playlists, recursively. Mac version is [7]; A windows version is [8]. Then I do the usual rekordbox step to prepare USBs pens.
 
-   
+references:   
 	[1] My scripts: https://github.com/pestrela/music_scripts 
 	[2] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
 	[3] Duplicate tool: http://www.flowrl.com/librarian/
@@ -102,7 +112,24 @@ But in the end its really the big jogswheels that is the crucial deal breaker; T
 I use a set of tools to generate a CUE file with the timings of my sets.
 Once I have this file, I can generate tracklists with timestamps like in this example: https://www.mixcloud.com/dj_estrela/mix-17-cd07-trance-jun-2019/
 
+Steps BEFORE the set (for prepared sets):
+* group the files in folders, per style (Vocal Trance, Uplitfing trance, etc)
+* select the tracks and their order using winamp; Once this is OK, run "cue_renumber_files.py" and "cue_make_tracklist.sh".
 
+Steps AFTER the set (both live sets and prepared sets):
+* convert the NML to a text tracklist using https://slipmat.io/playlists/
+* listen the recording in winamp to spot major mistakes. Tag the locations in MMM:SS format. At the end, use "cue_convert_timestamps.sh" to convert to HH:MM:SS format
+* open the huge WAV file in Adobe audition, and perform the following:
+  * normalize volume of all tracks
+  * fix any obvious mistakes if necessary (eg, track ended too early when playing live, etc)
+  * tag the divisions of the tracks inside the wav file
+* convert the tags inside the WAV into a CUE file, using this software: http://www.stefanbion.de/cuelisttool/index_e.htm
+  * note: this sowftare fails on files bigger than 2Gb. Workaround is splittingthe file at the 3hour mark, exactly, then use an option in cue_merge_cues.py to add this offset back in the second file
+* convert the tags inside the WAV into a CUE file, using this software: http://www.stefanbion.de/cuelisttool/index_e.htm
+* merge the CUE file with the Tracklist file using cue_merge_cues.py
+* upload the mix to http://mixcloud.com/dj_estrela
+  
+  
 Overview of the Cue tools:
 
 * cue_renumber_files.py:
@@ -120,3 +147,17 @@ Overview of the Cue tools:
 
 * cue_rename_cue.sh: 
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
+
+## What is the 26ms shift issue when converting cues/loops between softwares?
+
+* We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
+* This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
+* Root cause is that different MP3 decoders treat differently the tricky MP3 LAME tag (+the derived LACV tag).
+* After a lot of research we found a way to predict this difference by interpreting the eyeD3 tool. See below for the current algorithm.
+* Now that we understand what is going, we are adding this capability to the dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL)
+
+Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
+To run the analysis code in an ipython notebook: https://mybinder.org/v2/gh/pestrela/music_scripts/master
+
+  
+  

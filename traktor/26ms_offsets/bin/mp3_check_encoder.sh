@@ -1092,7 +1092,8 @@ function do_check_dd()
 
   ### run DD
   raw_dd_go_back="3000" 
-  raw_dd_what_to_read="10000" 
+  raw_dd_what_to_read="10000"
+  raw_dd_what_to_read="2000"
   
   raw_dd_starting_point=$(( $mp3guessenc_tag_offset - $raw_dd_go_back ))  || true
   if [[  "$raw_dd_starting_point" -lt 0 ]]; then
@@ -1213,11 +1214,12 @@ function do_check_headers_fast_only_tools()
 
   ################
   ### mp3 parser
-  mp3parser_full="`mp3-parser-linux-beta  "$file" | strings `"
+  mp3parser_full="`mp3-parser-linux  "$file" | strings `"
   
   mp3parser_xing_present_tmp="`echo "$mp3parser_full" | get_line_field "xing-tag?" `"
   mp3parser_xing_present="`tf_to_yn "$mp3parser_xing_present_tmp" `"
-  mp3parser_lame_present="`echo "$mp3parser_full" | see_if_line_present "lame-tag?" `"
+  mp3parser_lame_present_tmp="`echo "$mp3parser_full" | get_line_field "lame-tag?" `"
+  mp3parser_lame_present="`tf_to_yn "$mp3parser_lame_present_tmp" `"
   mp3parser_lame_valid_tmp="`echo "$mp3parser_full" | get_line_field "lame-tag?" `"
   mp3parser_lame_valid="`tf_to_yn "$mp3parser_lame_valid_tmp" `" 
 
@@ -1382,11 +1384,12 @@ function do_check_headers_fast()
       
     case $dump_key_values in
      1)
-      echo_var  case problem correction
-      echo ""
+      #echo_var  case problem correction
+      #echo ""
+      
       echo_var  eyed3_case
-      echo_var  mp3parser_case      
-      echo_var  mp3guessenc_case
+      echo_var  mp3parser_case
+      #echo_var  mp3guessenc_case
       ;;
 
     2)      
@@ -1394,8 +1397,8 @@ function do_check_headers_fast()
       echo ""
       echo_var  mp3parser_case   mp3parser_xing_present  mp3parser_lame_present   mp3parser_lame_valid
       echo ""
-      echo_var  mp3guessenc_case       mp3guessenc_xing_present      mp3guessenc_lame_present       mp3guessenc_lame_valid 
-      echo ""
+      #echo_var  mp3guessenc_case       mp3guessenc_xing_present      mp3guessenc_lame_present       mp3guessenc_lame_valid 
+      #echo ""
       echo_var  raw_dd_anything  
       echo_var  mp3guessenc_tag_offset  eyed3_mpeg_frame_len
       echo_var  raw_dd_lame_positions
@@ -1833,4 +1836,24 @@ for FILE in */*/03* ; do  printf "\n\n%s\n" "$FILE" ;  mp3-parser-linux-beta "$F
 for DIR in */case* ; do   mp3_check_encoder.sh "$DIR"/* -1 -c --only_one ; done  > current_performance.txt
     
     
+
+"""
+case a: no tags
+  0
+case b: only xing/info tags
+  26
+case c: lame tag, but crc ==0 / invalid crc
+  26
+case d: lame tag, but crc valid
+  0
+
+case m: lavc tag
+  26
+case n: lavf tag
+  26
+
+case v: vbri tag
+  unk
+  
+"""  
     
