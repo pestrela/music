@@ -7,6 +7,7 @@ media_files_extensions="mp3|mp4|avi|m4a|opus|webm|wav|flac|alac|aiff"
 tag_comment=0
 tag_filename=0
 debug=0
+verbose=0
 output_type=2
 wrote_csv_header=0
 full_output=0
@@ -41,7 +42,7 @@ append_output_file=1
 dump_raw_tools=0
 do_only_one_file=0
 
- 
+validate_mp3_parser=0
 
 #####
 
@@ -102,10 +103,11 @@ sub-tools:
   --ffmpeg|--ffprobe    ONLY run ffprobe 
   --mp3guessenc         ONLY run mp3guessenc
   --mediainfo           ONLY run mediainfo
-
+ 
+  --validate_mp3_parser  confirm that mp3_parser gives the same case as eyeD3 
   
 To open CSV in excel:
-  - double click, data, text to column, delimiter, add delimiter "|", save XLS  
+  - double click, data, text to column, delimiter, add delimiter '|', and save as XLS  
   
   
   
@@ -248,6 +250,20 @@ function require_tools ()
 function echo_stderr ()
 {
 	echo -e "$@" >&2
+}
+
+#
+# Generic warning function. 
+# Shows a message, continues the program
+#
+function warning()
+{
+	set +x
+	echo  "********************"
+	echo  "WARNING: ${1:-}"
+	echo  "********************"
+	
+  
 }
 
 
@@ -1203,6 +1219,32 @@ $mp3guessenc_full
 }
 
 
+function the_26ms_classication_algorimn()
+{
+  local xing_present="$1"
+  local lame_present="$2"
+  local lame_valid="$3"
+  
+  
+  if [ ! "$xing_present" == "yes"   ]; then
+    case="A"
+  
+  elif [ ! "$mp3parser_lame_present" == "yes" ]; then
+    case="B"
+    
+  elif [ ! "$mp3parser_lame_valid" == "yes" ]; then
+    case="C"
+    
+  else
+    case="D"
+    
+  fi  
+  
+  echo "$case"
+}
+
+
+
 function do_check_headers_fast_only_tools()
 {
 
@@ -1220,22 +1262,10 @@ function do_check_headers_fast_only_tools()
   mp3parser_xing_present="`tf_to_yn "$mp3parser_xing_present_tmp" `"
   mp3parser_lame_present_tmp="`echo "$mp3parser_full" | get_line_field "lame-tag?" `"
   mp3parser_lame_present="`tf_to_yn "$mp3parser_lame_present_tmp" `"
-  mp3parser_lame_valid_tmp="`echo "$mp3parser_full" | get_line_field "lame-tag?" `"
+  mp3parser_lame_valid_tmp="`echo "$mp3parser_full" | get_line_field "crc-valid?" `"
   mp3parser_lame_valid="`tf_to_yn "$mp3parser_lame_valid_tmp" `" 
 
-  if [ "$mp3parser_xing_present" == "no" ]; then
-    mp3parser_case="A"
-  
-  elif [ "$mp3parser_lame_present" == "no" ]; then
-    mp3parser_case="B"
-    
-  elif [ "$mp3parser_lame_valid" == "no" ]; then
-    mp3parser_case="C"
-    
-  else
-    mp3parser_case="D"
-    
-  fi  
+  mp3parser_case="`the_26ms_classication_algorimn  "$mp3parser_xing_present" "$mp3parser_lame_present"  "$mp3parser_lame_valid" `"
   
  
  
@@ -1265,27 +1295,8 @@ function do_check_headers_fast_only_tools()
       
   fi
  
-  
-  if [ "$eyed3_vbri_tag_present" == "yes" ]; then
-    # not implemented!
-    eyed3_case="Z"
-    
-  elif [ "$eyed3_xing_present" == "no" ]; then
-    eyed3_case="A"
-    
-  elif [ "$eyed3_lame_present" == "no" ]; then
-    eyed3_case="B"
-    
-  elif [ "$eyed3_lame_valid" == "no" ]; then
-    eyed3_case="C"
+  eyed3_case="`the_26ms_classication_algorimn  "$eyed3_xing_present" "$eyed3_lame_present"  "$eyed3_lame_valid" `"
 
-  elif [ "$eyed3_lame_valid" == "yes" ]; then
-    eyed3_case="D"
-    
-  else
-    die "uncatched error - bad eyeD3 case"
-    
-  fi
 
   
   ####################
@@ -1302,27 +1313,7 @@ function do_check_headers_fast_only_tools()
   mp3guessenc_lame_valid="`passed_to_yn "$mp3guessenc_lame_verification" `" 
 
   
-  if [ "$mp3guessenc_vbri_present" == "yes" ]; then
-    # not implemented!
-    mp3guessenc_case="Z"
-    
-  elif [ "$mp3guessenc_xing_present" == "no" ]; then
-    mp3guessenc_case="A"
-    
-  elif [ "$mp3guessenc_lame_present" == "no" ]; then
-    mp3guessenc_case="B"
-    
-  elif [ "$mp3guessenc_lame_valid" == "no" ]; then
-    mp3guessenc_case="C"
-
-  elif [ "$mp3guessenc_lame_valid" == "yes" ]; then
-    mp3guessenc_case="D"
-    
-  else
-    die "uncatched error - bad mp3guessenc case"
-    
-  fi
-  
+  mp3guessenc_case="`the_26ms_classication_algorimn  "$mp3guessenc_xing_present" "$mp3guessenc_lame_present"  "$mp3guessenc_lame_valid" `"
   
   
   do_dump_raw_values
@@ -1374,6 +1365,18 @@ function do_check_headers_fast()
     
     )    
   
+  #  eyed3_case="A"
+  if [ $validate_mp3_parser -ge 1 ]; then
+    if [ "$eyed3_case" == "$mp3parser_case" ]; then
+      if [ "$verbose" -ge 1 ]; then
+        echo "${file}:  EYED3: ${eyed3_case}   MP3Parser: ${mp3parser_case} "
+      fi
+    
+    else
+        warning "${file}:  EYED3: ${eyed3_case}   MP3Parser: ${mp3parser_case} "
+ 
+    fi
+  fi
     
   if [ $dump_key_values -ge 1 ]; then
       echo ""
@@ -1560,6 +1563,7 @@ while [ "$#" -ge 1 ]; do
 
     ;;
     
+    
   --mp3guessenc)
     run_tool1=0
     run_tool2=1
@@ -1626,6 +1630,21 @@ while [ "$#" -ge 1 ]; do
     dump_raw_tools=0
     do_operation="check_headers"
     ;;
+    
+  --verbose)
+    verbose=1
+    ;;
+  
+  --validate_mp3_parser)
+    do_operation="check_headers"
+    validate_mp3_parser=1
+
+    dump_key_values=0
+    dump_raw_tools=0
+    do_stdout=0
+    do_csv=0
+
+    ;;
 
   
   --ffprobe_json|-J)
@@ -1645,7 +1664,6 @@ while [ "$#" -ge 1 ]; do
     save_output_files=1
     append_output_file=0
     wrote_csv_header=0
-    
     ;;
     
   -O)
@@ -1742,6 +1760,10 @@ if [ "$save_output_files" -ge 1 ]; then
   fi
 fi
 
+
+if [ "$validate_mp3_parser" -ge 1 ]; then
+  echo "validating that mp3_parser gives the same case as eyeD3. Use --verbose to see TPs."
+fi
 
 
 for file in "${argv[@]}" ; do
