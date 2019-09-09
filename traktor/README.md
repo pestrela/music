@@ -28,8 +28,7 @@ As I use the DDJ-1000 (see below), this comparison will be mostly about Rekordbo
 This is because Traktor identifies files by CONTENT, not by filename. This is crucial to manage music using operating system folders, and not DJ software playlists.
 Also, it has a search box on your Operating System folders, so that you can see them without playlists. This feature was requested for years in Rekordbox.
 More info: see below for a whole blog post on "How to manage your collection using operating systems folders and without DJ playlists"
-
-Comparison to Rekorbox: if you MOVE your files, you have to relocate FOLDER by FOLDER. If you RENAME your files, you have to relocate FILE by FILE.
+  * Comparison to Rekorbox: if you MOVE your files, you have to relocate FOLDER by FOLDER. If you RENAME your files, you have to relocate FILE by FILE.
 This tool finds moved files automatically, but not renamed files (https://github.com/edkennard/rekordbox-repair)
 Hotcue doesnt move temporary cue as well. No search box on explorer node (access directly your OS files)
 Ups: video, smart playlists, related tracks, plug and play for pioneer gear, GUI to remap pads very easily
@@ -43,8 +42,7 @@ Both Rekordbox and Serato lack completely this ability. They only allow you to a
 There are some other smaller reasons. In general these are related to the above-mentioned main reasons. 
 * Example: I use the hotcues as internal "bookmarks". In Traktor, presing a hotcue moves the temporary cue as well. Very useful when previewing a tagged song.  This is not the case in Rekordbox, which causes massive confusion. 
 Even this was not the case in Trakor, this would be trivial to fix via MIDI mapping; such is impossible to address in both Rekordbox and Serato.
- 
-On the Con side, the other softwares have great features that Traktor lacks: Video, smart playlists, related tracks, plug and play for pioneer gear, a great GUI to remap the pads very easily. But these do not offset the mass-relovate and midi mapping limitations.
+* On the Con side, the other softwares have great features that Traktor lacks: Video, smart playlists, related tracks, plug and play for pioneer gear, a great GUI to remap the pads very easily. But these do not offset the mass-relovate and midi mapping limitations.
 
 
 ## Why is DDJ-1000 my hardware of choice
@@ -90,21 +88,21 @@ This is to be independent of any possible DJ software, and also itunes. I find A
 Because of this is use the “explorer” node of the DJ programs all the time instead of DJ playlists.
 
 My workflow is fully automated:
-	 b) I change filenames continuously to correct artist/title. I use MP3tag_scripts to a) capitalize the names (format is “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix” and b) rename the internal tags  [1].
-	 c) Traktor mass-relocate finds files everywhere by AUDIO-ID (ie, content). This is much superior than rekordbox and others [2].
-	 d) I made a custom python script that duplicates cues of the duplicated files inside the Traktor collection.nml [1]. This is comparable to [3].
-	 e) I use DJCU+RECU/Rekordbuddy2 to generate the rekordbox.xml file. This is done inside a MacOS VM [4] [5]. There were some manual steps, so I made a script to convert the filenames [1]. A Windows-only alternative is [6]
-   f) I only need playlists for CDJs. To make playlists, I mass-convert all folders to itunes playlists, recursively. Mac version is [7]; A windows version is [8]. Then I do the usual rekordbox step to prepare USBs pens.
+* b) I change filenames continuously to correct artist/title. I use MP3tag_scripts to a) capitalize the names (format is “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix” and b) rename the internal tags  [1].
+* c) Traktor mass-relocate finds files everywhere by AUDIO-ID (ie, content). This is much superior than rekordbox and others [2].
+* d) I made a custom python script that duplicates cues of the duplicated files inside the Traktor collection.nml [1]. This is comparable to [3].
+* e) I use DJCU+RECU/Rekordbuddy2 to generate the rekordbox.xml file. This is done inside a MacOS VM [4] [5]. There were some manual steps, so I made a script to convert the filenames [1]. A Windows-only alternative is [6]
+* f) I only need playlists for CDJs. To make playlists, I mass-convert all folders to itunes playlists, recursively. Mac version is [7]; A windows version is [8]. Then I do the usual rekordbox step to prepare USBs pens.
 
-references:   
-	[1] My scripts: https://github.com/pestrela/music_scripts 
-	[2] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
-	[3] Duplicate tool: http://www.flowrl.com/librarian/
-	[4] MacOS VM: https://saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/
-	[5] rekordbuddy VM: https://www.reddit.com/r/Beatmatch/comments/52dvst/how_to_transfer_your_windowsbased_dj_library_from/
-	[6] Windows conversion:	https://github.com/ErikMinekus/traktor-scripts/blob/master/playlist-export.py
-	[7] MAC folders to itunes playlist: https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake
-	[8] Windows folders to itunes playlists: http://samsoft.org.uk/iTunes/scripts.asp
+References:   
+* [1] My scripts: https://github.com/pestrela/music_scripts 
+* [2] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
+* [3] Duplicate tool: http://www.flowrl.com/librarian/
+* [4] MacOS VM: https://saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/
+* [5] rekordbuddy VM: https://www.reddit.com/r/Beatmatch/comments/52dvst/how_to_transfer_your_windowsbased_dj_library_from/
+* [6] Windows conversion:	https://github.com/ErikMinekus/traktor-scripts/blob/master/playlist-export.py
+* [7] MAC folders to itunes playlist: https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake
+* [8] Windows folders to itunes playlists: http://samsoft.org.uk/iTunes/scripts.asp
  
  
 ## How I build perfect tracklists using CUE files
