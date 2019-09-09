@@ -28,8 +28,8 @@ Format Specifier:
 
 Options:
  -k      keep intermediate files
- -q      query formats
- -Q      only query formats, and exit
+ -Q      query formats and download 
+ -q      ONLY query formats, and exit
 
 General options: 
  -h      help
@@ -188,11 +188,11 @@ while [ "$#" -ge 1 ]; do
     set -x
     ;;
  
-  -q|--query)
+  -q|--also_query)
      force_query_format=1
      ;;
       
-  -Q|--only_query_format)
+  -i|-Q|--only_query_format)
      only_query_format=1
      force_query_format=1
      ;;
@@ -261,7 +261,7 @@ if [ "$url" == "-" ]; then
   fi
 
   #  echo "please enter urls"
-  cat - | egrep "youtube|soundcloud" > "$playlist"
+  cat - | egrep "http" > "$playlist"
 
   # https://mywiki.wooledge.org/bashfaq/005#loading_lines_from_a_file_or_stream
   mapfile -t files < "$playlist"
@@ -312,13 +312,13 @@ if [ "$url" == "-" ]; then
   exit 0
 fi
 
-url="`echo "$url" | sed 's/&/ /' | awk '{print $1}'`"
+url="`echo "$url" | sed 's/&.*$/ /' | awk '{print $1}'`"
 case "$url" in 
 http*)
   ok=1
   ;;
 *)
-  echo "ERROR: URL doesnt start with http    ($url)"
+  echo "ERROR: URL doesnt start with httpt    ($url)"
   exit 1
   ;;
 esac
@@ -394,6 +394,15 @@ mp3|3|a)
 	# see also: https://appuals.com/why-converting-youtube-to-320kbps-mp3-is-a-waste-of-time/
 	;;
 
+wav*|w)
+	format="251/bestaudio"
+	tool_local_options="--extract-audio --audio-format wav "
+	
+	# generate vbr instead of cbr 
+	# see also: https://appuals.com/why-converting-youtube-to-320kbps-mp3-is-a-waste-of-time/
+	;;
+  
+  
 default)
 	format=""
 	tool_local_options=""
