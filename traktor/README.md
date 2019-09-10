@@ -77,6 +77,29 @@ The overall integration is better, of course, which is a plus if you prefer plug
 
 But in the end its really the big jogswheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
 
+
+## Is the DDJ-1000SRT mappable to Traktor? how does it compare to the original DDJ-1000-RB?
+
+Physically, the 1000SRT look physically the same as the original 1000. However there are quite big differences inside that impact the mappings. 
+I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it I will update the below list.
+
+* MIDI codes: 
+  * the SRT has the classic SX2/SZ pad codes, which are different from the 1000RB style. This means the proper mapping for this device is my SX2/SZ map, and not the 1000 mapping. 
+  * The SX2/SZ map is on version v6.1 (https://maps.djtechtools.com/mappings/9222), the 1000 is on version v6.5 (https://maps.djtechtools.com/mappings/9279).
+  * More info: https://github.com/pestrela/music_scripts/tree/master/ddj/1%20MIDI%20codes
+  
+* Jog Screens:
+  * While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version
+  * Only when I can test this in a shop I can derive if the current 1000 BOME screens work could be ported to the SRT
+  * More info: https://github.com/pestrela/music_scripts/tree/master/ddj/1%20MIDI%20codes
+  
+* Effects: 
+  * the SRT runs in external mode, the 1000RB ran in internal mode. This means that all Pioneer effects are there, for both color FX and beat FXmper channel. This is not the case for the 1000, which 
+  * potentially this means the SRT could be the first controller with **ALL** the Pionner effects (ColorFX, BeatFX), plus **ALL** the  Traktor effects (jogFX, mixerFX, macroFX, padFX)
+  * comparison of HW and SW effects: [here](ddj_1000_traktor_mapping/Support%20files/Traktor%20mappings%20for%20DDJ%20Controllers%20-%20HW%20vs%20SW%20Effects.xlsx)
+  * more info:  https://github.com/pestrela/music_scripts/tree/master/ddj/3%20Signal%20flows
+  
+  
  
 ## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
 
