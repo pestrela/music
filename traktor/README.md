@@ -99,7 +99,37 @@ I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it 
   * comparison of HW and SW effects: [here](ddj_1000_traktor_mapping/Support%20files/Traktor%20mappings%20for%20DDJ%20Controllers%20-%20HW%20vs%20SW%20Effects.xlsx)
   * more info:  https://github.com/pestrela/music_scripts/tree/master/ddj/3%20Signal%20flows
   
+
+## What documentation comes with the Traktor mappings?
+
+My zip files have alot of documentation to support the TSI mapping. Included is:
+* Quick reference (only pictures): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf))
+* User manual: [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Full%20manual.pdf))
+* Installation manual: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Installation%20and%20Verification%20of%20the%20two%20required%20mappings.pdf)
+* FAQ: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Frequently%20Asked%20Questions.pdf)
+
+Plus:
+* Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
+* Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
+
+## Can I get a demo of the mappings?
+
+Please see the below Youtube videos. 
+I have both long 30m videos where I cover every single function step-by-step, plus short "update" 5m video with the latest stuff only.
+
+* DDJ-1000/800 playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0XHlFyINdT6P42noqvkPISD
+  * DDJ-1000 v6.3 - **main video** - http://youtu.be/EkSJ9Ug9Zuk
+  * DDJ-1000 V6.5 - **jog screens** - https://youtu.be/h9tQZEHr8hk
   
+* DDJ-SX2/SZ/SRT playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0V3SUnYFYq4hpeu0o_XyP2l
+  * DDJ-SX2/SZ/SRT v6.0 - **main video** - http://youtu.be/H_TE2mtuM6Q
+  * DDJ-SX2/SZ/SRT v6.1 - **update** - http://youtu.be/sanF35CYeSg
+
+*  AKAI AMX playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0Vi7aguzxbmOJdVQCW6CohR
+  * AMX v1.0 - **main video** - http://youtu.be/TzAgENM55DE
+   
+ 
+
  
 ## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
 
