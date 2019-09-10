@@ -102,9 +102,11 @@ I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it 
 
 ## What documentation comes with the Traktor mappings?
 
-My zip files have alot of documentation to support the TSI mapping. Included is:
-* Quick reference (only pictures): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf))
-* User manual: [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Full%20manual.pdf))
+My zip files have a lot of documentation besides the TSI file. IMO it has no comparision to the typical mappings avalaible on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks/default.aspx. 
+
+Included is:
+* Quick reference (pictures only): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf)
+* User manual: [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Full%20manual.pdf)
 * Installation manual: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Installation%20and%20Verification%20of%20the%20two%20required%20mappings.pdf)
 * FAQ: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Frequently%20Asked%20Questions.pdf)
 
