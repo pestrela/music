@@ -125,7 +125,7 @@ I have both long 30m videos where I cover every single function step-by-step, pl
   * DDJ-SX2/SZ/SRT v6.0 - **main video** - http://youtu.be/H_TE2mtuM6Q
   * DDJ-SX2/SZ/SRT v6.1 - **update** - http://youtu.be/sanF35CYeSg
 
-*  AKAI AMX playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0Vi7aguzxbmOJdVQCW6CohR
+* AKAI AMX playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0Vi7aguzxbmOJdVQCW6CohR
   * AMX v1.0 - **main video** - http://youtu.be/TzAgENM55DE
    
  
