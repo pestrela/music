@@ -20,14 +20,14 @@ This folder contains my Traktor tools and mappings
 
 
 * Table of Contents
-      * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
-      * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
-      * [Is the DDJ-1000SRT mappable to Traktor? how does it compare to the original DDJ-1000-RB?](#is-the-ddj-1000srt-mappable-to-traktor-how-does-it-compare-to-the-original-ddj-1000-rb)
-      * [What documentation comes with the Traktor mappings?](#what-documentation-comes-with-the-traktor-mappings)
-      * [Can I get a demo of the mappings?](#can-i-get-a-demo-of-the-mappings)
-      * [How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
-      * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
-      * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
+  * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
+  * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
+  * [Is the DDJ-1000SRT mappable to Traktor? how does it compare to the original DDJ-1000-RB?](#is-the-ddj-1000srt-mappable-to-traktor-how-does-it-compare-to-the-original-ddj-1000-rb)
+  * [What documentation comes with the Traktor mappings?](#what-documentation-comes-with-the-traktor-mappings)
+  * [Can I get a demo of the mappings?](#can-i-get-a-demo-of-the-mappings)
+  * [How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
+  * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
+  * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
       
       
 ## Why is Traktor my software of choice
