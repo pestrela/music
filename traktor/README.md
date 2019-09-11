@@ -188,7 +188,7 @@ Steps AFTER the set (both live sets and prepared sets):
   * fix any obvious mistakes if necessary (eg, track ended too early when playing live, etc)
   * tag the divisions of the tracks inside the wav file
 * convert the tags inside the WAV into a CUE file, using this software: http://www.stefanbion.de/cuelisttool/index_e.htm
-  * note: this sowftare fails on files bigger than 2Gb. Workaround is splittingthe file at the 3hour mark, exactly, then use an option in cue_merge_cues.py to add this offset back in the second file
+  * note: this software fails on files bigger than 2Gb (https://forums.adobe.com/thread/309254). Workaround is splittingthe file at the 3hour mark, exactly, then use an option in cue_merge_cues.py to add this offset back in the second file
 * convert the tags inside the WAV into a CUE file, using this software: http://www.stefanbion.de/cuelisttool/index_e.htm
 * merge the CUE file with the Tracklist file using cue_merge_cues.py
 * upload the mix to http://mixcloud.com/dj_estrela
