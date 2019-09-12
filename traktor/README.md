@@ -17,14 +17,13 @@ This folder contains my Traktor tools and mappings
 
 # Blog posts
 
-
-
 * Table of Contents
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
   * [Is the DDJ-1000SRT mappable to Traktor? how does it compare to the original DDJ-1000-RB?](#is-the-ddj-1000srt-mappable-to-traktor-how-does-it-compare-to-the-original-ddj-1000-rb)
   * [What documentation comes with the Traktor mappings?](#what-documentation-comes-with-the-traktor-mappings)
   * [Can I get a demo of the mappings?](#can-i-get-a-demo-of-the-mappings)
+  
   * [How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
@@ -212,6 +211,22 @@ Overview of the Cue tools:
 * cue_rename_cue.sh: 
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
+  
+  I've recorded all my 15 cassttes in a single go. Then added cues in adobe audition. Then split it by sessions (sometimes it was isolated tracks, sometimes it was 10 tracks). Then I've combined it in good packages of 2 hours each. 
+[0:31:02][dj_estrela] them made the known tracklist and exact timestamps using a CUE file
+[0:31:28][dj_estrela] the first pack is online (  https://www.mixcloud.com/Dj_Estrela_House/radio-cidade-superpista-1997-recordings/); I have a lot more to finish
+[0:31:58][dj_estrela] Then, inspirised by your ID folders, I've extracted JUST the IDs into yet another pack. And uploaded it to mixcloud
+[0:32:24][dj_estrela] this has the benefit of being much easier to listen in a single go, for the interested people of course like us
+[0:33:32][dj_estrela] I also have pyhton programs to merge CUE files, and to create beautiful tracklists from CUE files: https://github.com/pestrela/music_scripts/tree/master/traktor/tracklist_tools
+[0:34:33][dj_estrela] what is your name? I want to give you a massic thanks when I update the tracklist of the IDs
+[0:34:39][dj_estrela] massive 
+  
+  
+  https://www.mixcloud.com/Dj_Estrela_House/radio-cidade-superpista-1997-recordings/
+  
+  https://www.mixcloud.com/Dj_Estrela_House/superpista-ids-1997-recordings-full-versions/
+  
+  
 ## What is the 26ms shift issue when converting cues/loops between softwares?
 
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
