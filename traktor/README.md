@@ -211,20 +211,27 @@ Overview of the Cue tools:
 * cue_rename_cue.sh: 
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
-  
-  I've recorded all my 15 cassttes in a single go. Then added cues in adobe audition. Then split it by sessions (sometimes it was isolated tracks, sometimes it was 10 tracks). Then I've combined it in good packages of 2 hours each. 
-[0:31:02][dj_estrela] them made the known tracklist and exact timestamps using a CUE file
-[0:31:28][dj_estrela] the first pack is online (  https://www.mixcloud.com/Dj_Estrela_House/radio-cidade-superpista-1997-recordings/); I have a lot more to finish
-[0:31:58][dj_estrela] Then, inspirised by your ID folders, I've extracted JUST the IDs into yet another pack. And uploaded it to mixcloud
-[0:32:24][dj_estrela] this has the benefit of being much easier to listen in a single go, for the interested people of course like us
-[0:33:32][dj_estrela] I also have pyhton programs to merge CUE files, and to create beautiful tracklists from CUE files: https://github.com/pestrela/music_scripts/tree/master/traktor/tracklist_tools
-[0:34:33][dj_estrela] what is your name? I want to give you a massic thanks when I update the tracklist of the IDs
-[0:34:39][dj_estrela] massive 
-  
-  
-  https://www.mixcloud.com/Dj_Estrela_House/radio-cidade-superpista-1997-recordings/
-  
-  https://www.mixcloud.com/Dj_Estrela_House/superpista-ids-1997-recordings-full-versions/
+## How I recorded my old radio show recordings and found the IDs
+
+I had old K7s mixtapes from around 1996 from local radio shows that I really liked. 
+These shows have significantly shaped my electronic music tastes. 
+Recently I've took the time to preserve these relics, and find the IDs for the tracks that I've been looking for 22 years. 
+
+The steps were:
+* I've first recorded all my 15 cassttes in a single go. 
+* Then added the cues in adobe audition. 
+* Then split it by mix sessions. Sometimes it were just isolated tracks, sometimes it was a sequence of 10 tracks. 
+* Then I've combined these into packs of 2 hours each. The first pack is now online: https://www.mixcloud.com/Dj_Estrela_House/radio-cidade-superpista-1997-recordings/ 
+* Them made the known tracklist and exact timestamps using a CUE file
+
+Regrading the IDs:
+* I've first extracted JUST the IDs into yet another pack. 
+* This was uploaded to mixcloud:   https://www.mixcloud.com/Dj_Estrela_House/superpista-ids-1997-recordings-full-versions/
+* Benefits:
+  * its much easier to show to knowleageble DJs in a single go
+  * mixcloud is able to identify some tracks for you
+ 
+
   
   
 ## What is the 26ms shift issue when converting cues/loops between softwares?
