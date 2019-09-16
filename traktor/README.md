@@ -236,6 +236,7 @@ Regrading the IDs:
   
 ## What is the 26ms shift issue when converting cues/loops between softwares?
 
+
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
 * This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
 * Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF).
@@ -244,9 +245,10 @@ Regrading the IDs:
 * We’ve now SOLVED this problem in dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL). 
   * This is done without any dependencies using our own home-grown mp3 LAME headers decoder.
 
-Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
-MIXXX ticket: https://github.com/mixxxdj/mixxx/pull/2119
-Tagged examples: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
-To run the analysis code in an ipython notebook: https://mybinder.org/v2/gh/pestrela/music_scripts/master
+### links
+* 26ms research work: https://github.com/digital-dj-tools/dj-data-converter/issues/3
+* MIXXX ticket: https://github.com/mixxxdj/mixxx/pull/2119
+* Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
+* Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
   
   
