@@ -620,7 +620,6 @@ function to_upper()
 
 
 
-
 function do_check_headers_slow()
 {
   ### OLD VERSION. ONLY FOR DD and MP3GUESSENC
@@ -976,7 +975,7 @@ $raw_dd_outcome
   if [ $dump_key_values -ge 1 ]; then
       echo ""
       echo "**********************"
-      echo_var file
+      echo_var file  dump_key_values
       echo ""
       
       
@@ -1082,6 +1081,10 @@ $raw_dd_outcome
 
 
 
+
+
+
+
 ########################
 ########################
 ########################
@@ -1148,8 +1151,14 @@ function do_check_dd()
   else
     raw_dd_anything_any="yes"
   fi 
+  
+  
+  if [ "$do_run_dd" -ge 2 ]; then
+    #set -x
+    hexdump "$file" -C  -v -s "$raw_dd_starting_point" -n 300
+    #exit 
+  fi
 }
-
 
 
 
@@ -1381,7 +1390,7 @@ function do_check_headers_fast()
   if [ $dump_key_values -ge 1 ]; then
       echo ""
       echo "**********************"
-      echo_var file
+      echo_var file dump_key_values
       echo ""
       
       
@@ -1395,7 +1404,7 @@ function do_check_headers_fast()
       #echo_var  mp3guessenc_case
       ;;
 
-    2)      
+    2|*)      
       echo_var  eyed3_case       eyed3_xing_present      eyed3_lame_present       eyed3_lame_valid 
       echo ""
       echo_var  mp3parser_case   mp3parser_xing_present  mp3parser_lame_present   mp3parser_lame_valid
@@ -1620,6 +1629,19 @@ while [ "$#" -ge 1 ]; do
     do_operation="check_headers"
     ;;
 
+  --hex*)
+    do_run_dd=2
+    do_operation="check_headers"
+    
+    dump_key_values=9
+    #dump_raw_tools=0
+    do_stdout=1
+    do_csv=1
+    
+    ;;
+
+    
+    
   --dump|--raw|-r)
     dump_raw_tools=1
     do_operation="check_headers"
@@ -1799,6 +1821,10 @@ exit 0
 
 
 rawcat : break info
+
+
+
+
 
 
 #define ID3V2_ID_STRING                      "ID3"
