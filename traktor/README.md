@@ -238,12 +238,15 @@ Regrading the IDs:
 
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
 * This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
-* Root cause is that different MP3 decoders treat differently the tricky MP3 LAME tag (+the derived LACV tag).
-* After a lot of research we found a way to predict this difference by interpreting the eyeD3 tool. See below for the current algorithm.
-* Now that we understand what is going, we are adding this capability to the dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL)
+* Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF).
+  * **Zero LAME CRC:** Traktor doesn't accept the LAME tag, but then interprets the whole MPEG frame as "music", producing 26ms of garbage; Rekordbox is the same, but skips the whole MPEG frame instead ("case c").
+  * **LAVC/LAVF:** Traktor produces 26ms of garbage; Rekordbox accepts it as a control frame ("case b") 
+* We’ve now SOLVED this problem in dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL). 
+  * This is done without any dependencies using our own home-grown mp3 LAME headers decoder.
 
 Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
+MIXXX ticket: https://github.com/mixxxdj/mixxx/pull/2119
+Tagged examples: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
 To run the analysis code in an ipython notebook: https://mybinder.org/v2/gh/pestrela/music_scripts/master
-
   
   
