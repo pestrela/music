@@ -236,14 +236,23 @@ Regrading the IDs:
   
 ## What is the 26ms shift issue when converting cues/loops between softwares?
 
+
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
 * This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
-* Root cause is that different MP3 decoders treat differently the tricky MP3 LAME tag (+the derived LACV tag).
-* After a lot of research we found a way to predict this difference by interpreting the eyeD3 tool. See below for the current algorithm.
-* Now that we understand what is going, we are adding this capability to the dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL)
+* Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF).
+* **Problem: Zero LAME CRC ("case c"):**
+  * Traktor doesn't accept the LAME tag, but interprets the whole MPEG frame as "music", producing 26ms of garbage; 
+  * Rekordbox the same, but skips the whole MPEG frame instead.
+* **Problem: LAVC/LAVF reduced tags ("case b"):**
+  * Traktor produces 26ms of garbage because it doesnt understand this tag; 
+  * Rekordbox accepts the tag as a control frame
+* We’ve now SOLVED this problem in dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL). 
+  * This is done without any dependencies using our own home-grown mp3 LAME headers decoder.
 
-Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
-To run the analysis code in an ipython notebook: https://mybinder.org/v2/gh/pestrela/music_scripts/master
-
+### links
+* 26ms research work: https://github.com/digital-dj-tools/dj-data-converter/issues/3
+* MIXXX ticket: https://github.com/mixxxdj/mixxx/pull/2119
+* Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
+* Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
   
   
