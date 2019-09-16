@@ -1,0 +1,11 @@
+case|problem|correction|sep1|eyed3_case|eyed3_xing_present|eyed3_lame_present|eyed3_lame_valid|sep2|mp3parser_case|mp3parser_xing_present|mp3parser_lame_present|mp3parser_lame_valid|sep3| |mp3guessenc_case|mp3guessenc_xing_present|mp3guessenc_lame_present|mp3guessenc_lame_valid|raw_dd_anything|sep99|file
+A|no|0|___|A|no|yes|no|___|A|no|unk|unk|___|A|no|unk|unk|___|LAME3.93_LAME3.93|___|case_a__airbase_fall__no_xing_only_lame.mp3
+A|no|0|___|A|no|no|unk|___|A|no|unk|unk|___|A|no|unk|unk|___||___|case_a__armin_Nehalennia__nothing.mp3
+B|yes|26|___|B|yes|no|unk|___|B|yes|no|unk|___|B|yes|yes|yes|___|Xing_Lavc56.26|___|case_b__adele_paul_damixie__xing_lavc.mp3
+B|yes|26|___|B|yes|no|unk|___|B|yes|no|unk|___|B|yes|yes|yes|___|Info_Lavc57.3._LAME3.99.5_UUUULAME3.99.5_LAME3.99.5|___|case_b__avicci_tim_berg__info_lavc.mp3
+B|yes|26|___|B|yes|no|unk|___|B|yes|no|unk|___|B|yes|no|unk|___|Xing_LAME3.98.4_UUUULAME3.98.4_LAME3.98.4_LAME3.98.4|___|case_b__david_guetta_memories__xing_lame_on_second_frame.mp3
+B|yes|26|___|B|yes|no|unk|___|B|yes|no|unk|___|B|yes|yes|yes|___|Xing_Lavc56.41_LAME3.99.5_UUUULAME3.99.5_UUUULAME3.99.5|___|case_b__diogo_dialeto__xng_lavc.mp3
+B|yes|26|___|B|yes|no|unk|___|B|yes|no|unk|___|B|yes|no|unk|___|Info_Lavf|___|case_b__estiva__info_lavf.mp3
+C|yes|26|___|C|yes|yes|no|___|C|yes|yes|no|___|C|yes|yes|no|___|Info_<LAME3.99|___|case_c__factorb_luna__crc_zero.mp3
+D|no|0|___|D|yes|yes|yes|___|D|yes|yes|yes|___|D|yes|yes|yes|___|Info_:LAME3.98r|___|case_d__pobsky__crc_ok.mp3
+B|yes|26|___|B|yes|no|unk|___|B|yes|no|unk|___|B|yes|no|unk|___|Info_Lavf|___|wrong_classification__adam_beyer_mind__info_lavf.mp3
