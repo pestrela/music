@@ -41,6 +41,7 @@ save_output_files=0
 append_output_file=1
 dump_raw_tools=0
 do_only_one_file=0
+do_debug_conversion=0
 
 validate_mp3_parser=0
 
@@ -87,13 +88,12 @@ output files:
 key-value pairs:  
   (default)             append CSV to file, no key/vlue
   -c                    skip CSV output (to stdout or file)
-  -1                    dump key-values (only cases)
+  -1        c            dump key-values (only cases)
   -2                    dump key-values (cases and tags)
   
-  -9                   dump all values
+  -9                    dump all values
   
-  
-    
+                       
 old options:    
   -j                    size to justify one-liner output
   --uniq_tags           filter out repeated tags    (default)
@@ -106,6 +106,11 @@ sub-tools:
  
   --validate_mp3_parser  confirm that mp3_parser gives the same case as eyeD3 
   
+Manual grepping:
+  --debug_conv1|2        <grep> [collection.nml] [rekordbox.xml]
+                         debug aid to inspect the output of the NML and XML tools. Use the grep to isolate a single track
+                        
+                         
 To open CSV in excel:
   - double click, data, text to column, delimiter, add delimiter '|', and save as XLS  
   
@@ -200,6 +205,19 @@ function echo_var()
   done
 }
 
+function warn_command_nost_exists ()
+{
+	local FILE="$1"
+	local RET=0
+	check_command_exists "$FILE"  || RET=1
+
+	if [ $RET -ge 1 ]; then
+		#echo_var PATH
+		echo "warn_command_exists: '${1:-}' command was not found in PATH. Continuing anyway."
+	fi
+
+	return 0
+}
 
 
 function assert_command_exists ()
@@ -243,6 +261,20 @@ function require_tools ()
 
 	for FILE in "$@" ; do
 		assert_command_exists "$FILE"
+	done
+}
+
+
+
+#
+# $@ - tools names
+#
+function warn_if_tools_not_installed ()
+{
+	local FILE=""
+
+	for FILE in "$@" ; do
+		warn_command_nost_exists "$FILE"
 	done
 }
 
@@ -784,8 +816,10 @@ function the_26ms_classication_algorimn()
   local lame_present="$2"
   local lame_valid="$3"
   
+  if [ "$xing_present" == "unk"   ]; then
+    case="unk"
   
-  if [ ! "$xing_present" == "yes"   ]; then
+  elif [ ! "$xing_present" == "yes"   ]; then
     case="A"
   
   elif [ ! "$mp3parser_lame_present" == "yes" ]; then
@@ -810,6 +844,10 @@ function do_check_headers_fast_only_tools()
   local file="$1"
   global csv_header 
   global tags
+  
+  
+  require_tools "eyeD3" 
+  warn_if_tools_not_installed "mp3-parser-linux" "mp3guessenc"
   
   do_check_dd
 
@@ -873,7 +911,6 @@ function do_check_headers_fast_only_tools()
 
   
   mp3guessenc_case="`the_26ms_classication_algorimn  "$mp3guessenc_xing_present" "$mp3guessenc_lame_present"  "$mp3guessenc_lame_valid" `"
-  
   
   do_dump_raw_values
    
@@ -1071,9 +1108,12 @@ function test_1_file()
 #####
 #####
 
-require_tools "mpg123"  "mp3guessenc" "ffprobe" "ffmpeg" "mediainfo"  
 
-    
+require_tools "eyeD3" 
+#warn_tools_not_installed "mpg123"  "mp3guessenc" "ffprobe" "ffmpeg" "mediainfo"  
+
+ 
+ 
 while [ "$#" -ge 1 ]; do
   case "$1" in
   -d|--debug|--d)
@@ -1086,7 +1126,13 @@ while [ "$#" -ge 1 ]; do
     set -x
     ;;
   
+  --debug_conv1)
+    do_debug_conversion=1
+    ;;
 
+  --debug_conv2)
+    do_debug_conversion=2
+    ;;
     
   -C)
     wrote_csv_header=1
@@ -1293,6 +1339,42 @@ done
 if [ $append_output_file -ge 1 ]; then
   wrote_csv_header=1
     
+fi
+    
+    
+if [ $do_debug_conversion  -ge 1 ]; then
+  tk_collection="collection.nml"
+  rb_collection="rekordbox.xml"
+  
+  if [ "$argc" -eq 0 ]; then
+    die "specify grep string for debug"
+  fi
+
+  grep_st="${argv[1]}"
+  
+  if [ "$argc" -ge 2 ]; then
+    tk_collection="${argv[2]}"
+  fi
+  if [ "$argc" -ge 3 ]; then
+    rb_collection="${argv[3]}"
+  fi
+
+
+  tk_info="` cat "$tk_collection" | grep -A10 -i "$grep_st"  `"
+  rb_info="`cat "$rb_collection" | sed 's/<TRACK/\n/g' | grep -i "$grep_st"`"
+  
+  if [ $do_debug_conversion -eq 1 ]; then
+    echo "*************"
+    echo "$tk_info"
+    echo "$rb_info"
+    echo ""
+  else  
+    
+    echo "*************"
+    echo "$tk_info" | grep CUE_V2
+    echo "$rb_info" | sed 's/POSITION/\n/g' | grep MARK
+  fi
+  exit 0
 fi
     
 
