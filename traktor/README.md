@@ -37,11 +37,11 @@ Traktor has one major feature that no other DJ software has: Mass-relocate. And 
 \
 I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
 When Traktor starts, it does a "consistency check" to check if all collection files are still there. ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
-Then a mass-relocate process finds **all** missing files in a single by analysing everything that is on your Root Music folder 
+Then the "magic" mass-relocate process is able to automatically fix everything, just by searching recursivelly on the Root music folder 
 ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-Other softwares do this just for MOVED files; Traktor is unique as it does this for RENAMED files as well. This is only possible because Traktor identifies files by CONTENT instead of FILENAME ("[AudioId field](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
-When this process ends the renamed files are all found again, keeping all my CUE points and beat grid intact, and without any need for re-analysis. 
-  * Comparison to Rekorbox: Renamed files need to be relocated FILE by FILE.\
+Other softwares do this only for MOVED files; only Traktor is able to do this for RENAMED files as well, because it identifies files by CONTENT instead of FILENAME ("[AudioId field](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
+When this process ends, the renamed files are all magically found again. All metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc. 
+  * Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
   Moved files can be done FOLDER by FOLDER.\
   If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
   [An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case.
@@ -54,7 +54,7 @@ Traktor allows searching inside any OS folders. I don't have DJ playlists inside
 I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
 When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.\
 ([See this blog post for more detail on these methods](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc))
-  * Comparison to Rekorbox: Rekordbox displays OS folders, but you can't search inside them
+  * Comparison to Rekordbox: Rekordbox displays OS folders, but you can't search inside them
   * Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
   * Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
   
