@@ -36,13 +36,10 @@ Traktor has an unique feature missing from every other DJ software: Mass-relocat
 * **a) Mass-relocate: find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis**\
 \
 I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
-\
-When Traktor starts, it does a "consistency check" to confirm if all files are still there. (demo: [0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). This finds all missing files (demo: [0:50 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
-\
-Then, the mass-relocate process automatically fixes everything in a single go. Only requirement is to give it the Root music folder, which in the worst case is your whole hard drive
-(demo: [5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-\
-This task is reasonably straightforward for MOVED files. However it is much harder for RENAMED files. Traktor is the only software that achives that because it fingerprints everything in a private field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")_\
+When Traktor starts, it does a "consistency check" to confirm if all files are still there. (demo: [0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). This finds all missing files in a single go (demo: [0:50 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
+Then, the mass-relocate process fixes everything in a single go as well; you just select the root folder that contains your files "somewhere". In the extreme worst case this would be your whole hard drive. (demo: [5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)). 
+The relocate process is reasonably straightforward for MOVED files. However it is much much harder for RENAMED files.\
+Traktor is the only software that achives that because it fingerprints everything in a private field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
 \
 When the mass-relocate process ends, everything is magically found again. Crucially all metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
 Together with the OS-search feature described below, this enables me to use folders as "virtual playlists".
