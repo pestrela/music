@@ -20,14 +20,18 @@ This folder contains my Traktor tools and mappings
 * Table of Contents
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
-  * [Is the DDJ-1000SRT mappable to Traktor? how does it compare to the original DDJ-1000-RB?](#is-the-ddj-1000srt-mappable-to-traktor-how-does-it-compare-to-the-original-ddj-1000-rb)
-  * [What documentation comes with the Traktor mappings?](#what-documentation-comes-with-the-traktor-mappings)
-  * [Can I get a demo of the mappings?](#can-i-get-a-demo-of-the-mappings)
+  * [Is the DDJ-1000SRT mappable to Traktor?](#is-the-ddj-1000srt-mappable-to-traktor)
+  * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
+  * [Can I see a video demo of your mappings?](#can-i-see-a-video-demo-of-your-mappings)
   
-  * [How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
+  * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
+      
+     
+
+
       
 ## Why is Traktor my software of choice
 
@@ -122,7 +126,7 @@ The overall integration is better, of course, which is a plus if you prefer plug
 But in the end its really the big jogswheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
 
 
-## Is the DDJ-1000SRT mappable to Traktor? how does it compare to the original DDJ-1000-RB?
+## Is the DDJ-1000SRT also mappable to Traktor?
 
 Physically, the 1000SRT look physically the same as the original 1000. However there are quite big differences inside that impact the mappings. 
 I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it I will update the below list.
@@ -144,7 +148,7 @@ I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it 
   * more info:  https://github.com/pestrela/music_scripts/tree/master/ddj/3%20Signal%20flows
   
 
-## What documentation comes with the Traktor mappings?
+## What documentation comes with your mappings?
 
 My zip files have a lot of documentation besides the TSI file. IMO it has no comparision to the typical mappings avalaible on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks/default.aspx. 
 
@@ -158,7 +162,7 @@ Plus:
 * Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
 * Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
 
-## Can I get a demo of the mappings?
+## Can I see a video demo of your mappings?
 
 Please see the below Youtube videos. 
 I have both long 30m videos where I cover every single function step-by-step, plus short "update" 5m video with the latest stuff only.
