@@ -34,10 +34,8 @@ This folder contains my Traktor tools and mappings
 
 Traktor has major features that other softwares don't have. And I built my whole workflows around these two major features. 
 
-* **a) Mass-relocate: find RENAMED files fully automatically (without losing CUE points and without re-analysis)**
-
-I rename files all the time on the OS-folders level. 
-
+* **a) Mass-relocate: find RENAMED files fully automatically (without losing CUE points and without re-analysis)**\
+I rename files all the time on the OS-folders level.  \
 When Traktor starts, it does a "consistency check" process. This process confirms if any files were changed or moved ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). 
 At that stage the renamed files are just seen as "missing". But then I just mass-relocate everything by pointing it to the root folder. It then recursively finds all renamed files by searching its CONTENT ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)). When it finds it keeps all my CUE points intact, and all existing Stripes analysis 
   * Comparison to Rekorbox: RENAMED files need to be relocated FILE by FILE. MOVED files can be done FOLDER by FOLDER. 
