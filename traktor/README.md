@@ -31,28 +31,48 @@ This folder contains my Traktor tools and mappings
       
 ## Why is Traktor my software of choice
 
-Traktor has two major features that other softwares don't have. And I built my whole work-flows around these two features. 
-As I use the DDJ-1000 (see below), this comparison will be mostly about Rekordbox, but other softwares are similar in these aspects.
 
-* **a) Mass-relocate: Traktor finds both RENAMED and MOVED files fully automatically.**
-This is because Traktor identifies files by CONTENT, not by filename. This is crucial to manage music using operating system folders, and not DJ software playlists.
-Also, it has a search box on your Operating System folders, so that you can see them without playlists. This feature was requested for years in Rekordbox.
-More info: see below for a whole blog post on "How to manage your collection using operating systems folders and without DJ playlists"
-  * Comparison to Rekorbox: if you MOVE your files, you have to relocate FOLDER by FOLDER. If you RENAME your files, you have to relocate FILE by FILE.
-This tool finds moved files automatically, but not renamed files (https://github.com/edkennard/rekordbox-repair)
-Hotcue doesnt move temporary cue as well. No search box on explorer node (access directly your OS files)
-Ups: video, smart playlists, related tracks, plug and play for pioneer gear, GUI to remap pads very easily
+Traktor has major features that other softwares don't have. And I built my whole workflows around these two major features. 
 
-* **b) MIDI mapping with variables and multiple actions: this is crucial to make complex FX chains on the jog Wheels.**
-For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
-MIDI Variables is also crucial to create more layers with additional shifts (one physical button = many functions). 
-Both Rekordbox and Serato lack completely this ability. They only allow you to assign a single command to a single button. 
-  * note: the gold standard in MIDI scripting is VDJscript (https://www.virtualdj.com/wiki/VDJscript.html). Having said this, the jog screens can only be mapped using BOME midi translator pro (https://www.bome.com/products/miditranslator)
+* **a) Mass-relocate: find RENAMED files fully automatically (without losing CUE points and without re-analysis)**
+I rename files all the time on the OS-folders level. 
+When Traktor starts, it does a "consistency check" process. This process confirms if any files were changed or moved ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). 
+At that stage the renamed files are just seen as "missing". But then I just mass-relocate everything by pointing it to the root folder. It then recursively finds all renamed files by searching its CONTENT ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)). When it finds it keeps all my CUE points intact, and all existing Stripes analysis 
+  * Comparison to Rekorbox: RENAMED files need to be relocated FILE by FILE. MOVED files can be done FOLDER by FOLDER. 
+  [this external tool](https://github.com/edkennard/rekordbox-repair) improves moved files (but not renamed files)
+  * Comparison to VDJ: RENAMED or MOVED files need to be relocated FILE by FILE.
+  * Comparison to Serato: RENAMED or MOVED files - To test.
 
-There are some other **smaller reasons**. In general these are related to the above-mentioned main reasons. 
-* Example: I use the hotcues as internal "bookmarks". In Traktor, presing a hotcue moves the temporary cue as well. Very useful when previewing a tagged song.  This is not the case in Rekordbox, which causes massive confusion. 
-Even this was not the case in Trakor, this would be trivial to fix via MIDI mapping; such is impossible to address in both Rekordbox and Serato.
-* On the Con side, the other softwares have great features that Traktor lacks: Video, smart playlists, related tracks, plug and play for pioneer gear, a great GUI to remap the pads very easily. But these do not offset the mass-relovate and midi mapping limitations.
+* **b) OS Folders searching (managing music without playlists)**
+Traktor allows searching inside any OS folders. I don't have DJ playlists inside Traktor; instead, my OS-folders are my "virtual playlists". I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders. 
+When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.
+([See this blog post for more info on this](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc))
+  * Comparison to Rekorbox: Rekordbox displays OS folders, but you can't search inside them
+  * Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
+  * Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
+  
+* **c) Complex MIDI mapping with 8 variables and multiple actions**
+My [AKAI AMX mapping has 10 layers using shifts and states](music_scripts/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons. My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
+This is only possible if midi mapping has variables and multiple actions per physical input.
+  * Comparison to VDJ: this is even better than traktor, has it has [a full scripting language built-in](https://www.virtualdj.com/wiki/VDJscript.html). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
+  * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+  * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+
+* **d) Hotcues move the temporary cue as well**
+I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well. This is very useful when previewing a previously tagged song. 
+  * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping.
+  * Comparison to Serato: untested
+  * Comparison to VDJ: fixable for sure
+
+* **e) What other softwares do better than Traktor**
+Well, quite a lot. But the above-mentioned features are more important to me.
+  * Elastic beatgrids
+  * Plug-and-Play to Pioneer gear / DDJ controllers.
+  * Fantastic pad editor / pad modes to remap the pads very easily
+  * Turntable start/stop on play/pause button
+  * Video support
+  * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)
+  * smart playlists and related tracks
 
 
 ## Why is DDJ-1000 my hardware of choice
