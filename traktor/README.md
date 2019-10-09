@@ -36,16 +36,16 @@ Traktor has an unique feature missing from every other DJ software: Mass-relocat
 * **a) Mass-relocate: find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis**\
 \
 I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
-When Traktor starts, it does a "consistency check" to confirm if all files are still there. (demo: [0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
-If not, both RENAMED and MOVED files appear as MISSING (demo: [0:50 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
 \
-Then the mass-relocate process automatically fixes everything in a single go. You just point it to the Root music folder that contains the files somewhere
+When Traktor starts, it does a "consistency check" to confirm if all files are still there. (demo: [0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). This finds all missing files (demo: [0:50 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
+\
+Then, the mass-relocate process automatically fixes everything in a single go. Only requirement is to give it the Root music folder, which in the worst case is your whole hard drive
 (demo: [5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-Other softwares can relocate MOVED files; but Traktor is unique to perform this for RENAMED files as well.\
-_(this is only possible because Traktor fingerprints all files using a field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")_\
 \
-When this process ends, the renamed files are all magically found again. All metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
-Together with the OS-search feature described below, this enables me use folders as "virtual playlists".
+This task is reasonably straightforward for MOVED files. However it is much harder for RENAMED files. Traktor is the only software that achives that because it fingerprints everything in a private field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")_\
+\
+When the mass-relocate process ends, everything is magically found again. Crucially all metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
+Together with the OS-search feature described below, this enables me to use folders as "virtual playlists".
   * Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
   Moved files can be done FOLDER by FOLDER.\
   If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
