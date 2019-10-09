@@ -31,15 +31,16 @@ This folder contains my Traktor tools and mappings
       
 ## Why is Traktor my software of choice
 
+Traktor has one major feature that no other DJ software has: Mass-relocate. And I built my whole workflows around this feature.
 
-Traktor has major features that other softwares don't have. And I built my whole workflows around these two major features. 
-
-* **a) Mass-relocate: find RENAMED files fully automatically (without losing CUE points and without re-analysis)**\
+* **a) Mass-relocate: find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis**\
 \
-I rename files all the time on the OS-folders level.\
-When Traktor starts, it does a "consistency check" process. This process confirms if any files were changed or moved ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
-At that stage the renamed files are just seen as "missing". But then I just mass-relocate everything by giving it the root folder. Traktor then recursively finds all renamed files by searching by their CONTENT ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-When finished the files are all found, keeping all my CUE points and beat grid intact, and without any need for re-analysis. 
+I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
+When Traktor starts, it does a "consistency check" to check if all collection files are still there. ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
+Then a mass-relocate process finds **all** missing files in a single by analysing everything that is on your Root Music folder 
+([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
+Other softwares do this just for MOVED files; Traktor is unique as it does this for RENAMED files as well. This is only possible because Traktor identifies files by CONTENT instead of FILENAME ("[AudioId field](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
+When this process ends the renamed files are all found again, keeping all my CUE points and beat grid intact, and without any need for re-analysis. 
   * Comparison to Rekorbox: Renamed files need to be relocated FILE by FILE.\
   Moved files can be done FOLDER by FOLDER.\
   If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
