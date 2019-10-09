@@ -73,8 +73,8 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
   * Comparison to Serato: untested
   * Comparison to VDJ: fixable for sure
 
-* **e) What other softwares do better than Traktor**
-Well, quite a lot. But the above-mentioned features are more important to me.
+* **e) What other softwares do better than Traktor**\
+Well, quite a lot. But in the end the above-mentioned features are more important to me.
   * Elastic beatgrids
   * Plug-and-Play to Pioneer gear / DDJ controllers.
   * Fantastic pad editor / pad modes to remap the pads very easily
