@@ -31,18 +31,20 @@ This folder contains my Traktor tools and mappings
       
 ## Why is Traktor my software of choice
 
-Traktor has one major feature that no other DJ software has: Mass-relocate. And I built my whole workflows around this feature.
+Traktor has an unique feature missing from every other DJ software: Mass-relocate. This is crucial to me, as I built my whole workflows around it.
 
 * **a) Mass-relocate: find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis**\
 \
 I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
-When Traktor starts, it does a "consistency check" to confirm if files are where they should be. ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
-Both RENAMED and MOVED files will then appear as MISSING ([demo: 0:50 of this video]https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
-Then the mass-relocate process can automatically fix everything in a single go, magically, just by pointing to the current Root music folder 
+When Traktor starts, it does a "consistency check" to confirm if all files are still there. ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
+If not, both RENAMED and MOVED files appear as MISSING ([demo: 0:50 of this video]https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
+\
+Then the mass-relocate process automatically fixes everything in a single go. You just point it to the Root music folder that contains the files somewhere
 ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-Other softwares do this only with various degress of sucesss for MOVED files; Traktor is unique to support RENAMED files as it identifies them by CONTENT instead of FILENAME (see "[AudioId field](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
+Other softwares can relocate MOVED files; but Traktor is unique todo this for RENAMED files as well (crucially it identifies files by CONTENT, in a field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
+\
 When this process ends, the renamed files are all magically found again. All metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
-Together with OS searching (please see below) this enables managing music without playlists.
+Together with the OS-search feature described below, this enables me use folders as "virtual playlists".
   * Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
   Moved files can be done FOLDER by FOLDER.\
   If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
