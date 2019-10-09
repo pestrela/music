@@ -296,7 +296,7 @@ Every year laptops get faster. As people want them lighter, it can only be done 
 If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable Intel turbo boost or anything related to power saving everywhere you can.\
 \
 To fix this:
-* Recommended: Use quick CPU software: https://www.coderbag.com/product/quickcpu
+* Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
 * Change your BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
 * Change your Windows Power settings: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
 \
