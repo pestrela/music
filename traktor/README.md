@@ -59,10 +59,10 @@ When I'm playing a specific genre I can search only that decade (=OS folder). If
   
 * **c) Complex MIDI mapping with 8 variables and multiple actions**\
 \
-My [AKAI AMX mapping has 10 layers using shifts and states](music_scripts/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
+My [AKAI AMX mapping has 10 layers using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
 My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s \
 This is only possible if midi mapping has variables and multiple actions per physical input.
-  * Comparison to VDJ: this is even better than traktor, has it has [a full scripting language built-in](https://www.virtualdj.com/wiki/VDJscript.html). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
+  * Comparison to VDJ: this is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
   * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
   * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
 
