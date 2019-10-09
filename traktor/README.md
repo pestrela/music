@@ -27,7 +27,7 @@ This folder contains my Traktor tools and mappings
   * [How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
-      
+  * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](##how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
       
 ## Why is Traktor my software of choice
 
