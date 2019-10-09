@@ -289,4 +289,14 @@ Regrading the IDs:
 * Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
 * Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
   
-  
+## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
+
+Every year laptops get faster and faster, but also lighter and lighter. These are conflicting requirements, only made possible by force by using all kinds of power saving tricks. These tricks are very damaging for DJ software.\
+If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable Intel turbo boost or anything related to power saving everywhere you can.\
+\
+to fix this:\
+* Change it with this very powerfull windows program (recommended): https://www.coderbag.com/product/quickcpu
+* Change it in you BIOS: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
+* Change it on your windows Power settings: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
+
+For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
