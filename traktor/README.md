@@ -36,11 +36,13 @@ Traktor has one major feature that no other DJ software has: Mass-relocate. And 
 * **a) Mass-relocate: find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis**\
 \
 I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
-When Traktor starts, it does a "consistency check" to check if all collection files are still there. ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
-Then the "magic" mass-relocate process is able to automatically fix everything, just by searching recursivelly on the Root music folder 
+When Traktor starts, it does a "consistency check" to confirm if files are where they should be. ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
+Both RENAMED and MOVED files will then appear as MISSING ([demo: 0:50 of this video]https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
+Then the mass-relocate process can automatically fix everything in a single go, magically, just by pointing to the current Root music folder 
 ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-Other softwares do this only for MOVED files; only Traktor is able to do this for RENAMED files as well, because it identifies files by CONTENT instead of FILENAME ("[AudioId field](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
-When this process ends, the renamed files are all magically found again. All metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc. 
+Other softwares do this only with various degress of sucesss for MOVED files; Traktor is unique to support RENAMED files as it identifies them by CONTENT instead of FILENAME (see "[AudioId field](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
+When this process ends, the renamed files are all magically found again. All metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
+Together with OS searching (please see below) this enables managing music without playlists.
   * Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
   Moved files can be done FOLDER by FOLDER.\
   If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
