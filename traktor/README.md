@@ -20,7 +20,8 @@ This folder contains my Traktor tools and mappings
 * Table of Contents
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
-  * [Is the DDJ-1000SRT mappable to Traktor?](#is-the-ddj-1000srt-mappable-to-traktor)
+  * [Is the DDJ-1000SRT mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
+  
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
   * [Can I see a video demo of your mappings?](#can-i-see-a-video-demo-of-your-mappings)
   
