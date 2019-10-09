@@ -40,7 +40,10 @@ I rename files all the time on the OS-folders level.\
 When Traktor starts, it does a "consistency check" process. This process confirms if any files were changed or moved ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
 At that stage the renamed files are just seen as "missing". But then I just mass-relocate everything by giving it the root folder. Traktor then recursively finds all renamed files by searching by their CONTENT ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
 When finished the files are all found, keeping all my CUE points and beat grid intact, and without any need for re-analysis. 
-  * Comparison to Rekorbox: Renamed files need to be relocated FILE by FILE. Moved files can be done FOLDER by FOLDER. If this manual process is skipped, the files are seen as brand new, losing all meta-data. [An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case.
+  * Comparison to Rekorbox: Renamed files need to be relocated FILE by FILE.\
+  Moved files can be done FOLDER by FOLDER.\
+  If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
+  An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case.
   * Comparison to VDJ: all cases need to be relocated FILE by FILE.
   * Comparison to Serato: To test.
 
