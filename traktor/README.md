@@ -35,30 +35,37 @@ This folder contains my Traktor tools and mappings
 Traktor has major features that other softwares don't have. And I built my whole workflows around these two major features. 
 
 * **a) Mass-relocate: find RENAMED files fully automatically (without losing CUE points and without re-analysis)**\
-I rename files all the time on the OS-folders level.  \
-When Traktor starts, it does a "consistency check" process. This process confirms if any files were changed or moved ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). 
-At that stage the renamed files are just seen as "missing". But then I just mass-relocate everything by pointing it to the root folder. It then recursively finds all renamed files by searching its CONTENT ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)). When it finds it keeps all my CUE points intact, and all existing Stripes analysis 
+\
+I rename files all the time on the OS-folders level.\
+When Traktor starts, it does a "consistency check" process. This process confirms if any files were changed or moved ([demo: 0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)).\
+At that stage the renamed files are just seen as "missing". But then I just mass-relocate everything by pointing it to the root folder. It then recursively finds all renamed files by searching its CONTENT ([demo: 5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
+When it finds it keeps all my CUE points intact, and all existing Stripes analysis 
   * Comparison to Rekorbox: RENAMED files need to be relocated FILE by FILE. MOVED files can be done FOLDER by FOLDER. 
   [this external tool](https://github.com/edkennard/rekordbox-repair) improves moved files (but not renamed files)
   * Comparison to VDJ: RENAMED or MOVED files need to be relocated FILE by FILE.
   * Comparison to Serato: RENAMED or MOVED files - To test.
 
-* **b) OS Folders searching (managing music without playlists)**
-Traktor allows searching inside any OS folders. I don't have DJ playlists inside Traktor; instead, my OS-folders are my "virtual playlists". I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders. 
-When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.
-([See this blog post for more info on this](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc))
+* **b) OS Folders searching (managing music without playlists)**\
+\
+Traktor allows searching inside any OS folders. I don't have DJ playlists inside Traktor; instead, my OS-folders are my "virtual playlists".\
+I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
+When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.\
+([See this blog post for more detail on these methods](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc))
   * Comparison to Rekorbox: Rekordbox displays OS folders, but you can't search inside them
   * Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
   * Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
   
-* **c) Complex MIDI mapping with 8 variables and multiple actions**
-My [AKAI AMX mapping has 10 layers using shifts and states](music_scripts/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons. My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
+* **c) Complex MIDI mapping with 8 variables and multiple actions**\
+\
+My [AKAI AMX mapping has 10 layers using shifts and states](music_scripts/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
+My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s \
 This is only possible if midi mapping has variables and multiple actions per physical input.
   * Comparison to VDJ: this is even better than traktor, has it has [a full scripting language built-in](https://www.virtualdj.com/wiki/VDJscript.html). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
   * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
   * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
 
 * **d) Hotcues move the temporary cue as well**
+\
 I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well. This is very useful when previewing a previously tagged song. 
   * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping.
   * Comparison to Serato: untested
