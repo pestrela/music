@@ -345,3 +345,87 @@ Friedemann Becker: "When we say: Tractor is back !, we mean that it is much broa
 
 
 The tractor GUI got a facelift. Factual, darker, club suitable
+
+
+https://de-bug.de/musiktechnik/entwickler-talk-traktor-scratch-pro/
+
+Friedemann Becker from Native Instruments has been a major player in the development of Traktor for years. We talked to him about the new Pro version.
+friedemann01Photo: Andreas Chudowski
+
+by Thaddeus Herrmann from De: Bug 128
+
+Everything new, everything better
+
+Debug: You start with the slogan "DJs are so overrated" for the new tractor version. Is "Traktor Pro" really the definitive democratization of music-making or simply the imposition of a new quasi-standard?
+
+Friedemann Becker:Of course that's very funny. Tractor is a tool, an instrument, and every tool must be mastered. This is a learning process. Tractor is not the easy entry into DJing, it is the reaction to the increasing digitization of the hang up. That it exists is a fact. Rather, we are talking about standards. That means: We want to pick up the users where they already felt comfortable without a tractor. Example: The Pioneer CDJs. You do not have to get used to Traktor Pro, you can just keep going. Because Traktor picks up the operation of this CD player. The same goes for the vinyl DJs. It's all about integrating old ways of working into a new system. Optimization of the workflow. This does not mean, conversely, that anyone who buys tractor is immediately a professional DJ.
+
+Debug: The new version has the abbreviation "Pro" in its name. That is a clear reorientation.
+
+Friedemann Becker: There was a lot of work done last year at Traktor. Since we released the vinyl version, there's a whole new level of attention, Tractor is taken much more seriously, especially by DJs who have been around for a long time and make their money by hanging up. The needs of these professionals were central to the development of the new version. That does not mean that even hobby DJs can not use the new version, on the contrary. But Traktor has grown up and is used by professionals, so the "pro" in the name and a radical optimization of the workflow.
+
+Debug: What did you personally think about the new version?
+
+Friedemann Becker: Convergence. Traktor has got more and more features over the years and versions and became more and more confusing. This was reflected above all in the workflow. I've spent a lot of time trying to figure out how best to locate the functions, which button makes the most sense, which features need to be immediately accessible. The other focus was the controllers. The operation of Traktor by MIDI controller is still on the rise and these users were in the new version in the center.
+
+friedemann02Photo: Andreas Chudowski
+
+Debug: Then let's get straight to the topic of MIDI. There are radical changes, which among other things lead to the fact that the controller assignments are no longer compatible with the new version ...
+
+Friedemann Becker:In Traktor 3 we had the term "Controller-Zoo" internally, meaning the internally assignable controller, for example the volume of a deck. These controllers have become more and more over time and therefore not really comprehensible in every situation. This has now been arranged, we have cleaned up and cloned. Very important: We have also unified. Imagine five MIDI controllers with a jogwheel. You can be sure that all jog wheels have a different range, different resolutions. We have adjusted everything internally and at the same time integrated even more controllers. We now provide presets for the 20 most popular controllers, so we're on the safe side for now. Unfortunately, that also means that the controllers, which we did not immediately consider with a preset, now have to be remapped by the user. In the beta test, however, we quickly realized that the users are quite satisfied. The new possibilities weigh more heavily than the work of the new mapping.
+
+Debug: Traktor software-wise, although a kind of quasi-standard, on the hardware side, but that looks quite different, which you have just described yourself. In the club and on the stage that leads to irritation, because the old wisdom: Aha, there comes a DJ who needs two Technics, simply no longer applies.
+
+Friedemann Becker: That's right. But it is far from telling us: this is how it has to work. We do not want to set a standard. What hardware you work with, whether you just hang up or mix your DJ and live set ... you can not predict that. These limits dissolve more and more anyway. We just want to provide enough interfaces so that everyone can be as creative with Traktor as they want. It's about supporting creativity and individuality, not the Native Instruments standard.
+
+Debug: Let's take a look at the new interface ...
+
+Friedemann Becker:The deck is still in the foreground. So there is no need for new familiarization. The detail section was in Traktor 3 but a big construction site, because we have changed a lot. In the old version that was the catch pool for all additional functions for all decks. This had consequences, for example, we had to work with certain colors for certain decks to make the assignments clear. Not ideal in the club. Now all Deck functions are back in their respective Deck, in a fold-in and drop-down menu below the waveform. Loops, cues, beatjumps are now where they belong. We also treat loops and cues on an equal footing. In other words, a loop in the Traktor Pro is nothing more than a cue point with a certain length and also responds to the same hotkey. The third submenu is reserved for beatmatching and the grid. Here you can create a grid, edit and also define as default, so it is not lost. We have arranged all these features thematically and given them a corresponding priority even after their emergence in the DJ culture. Some things you just have to stop just once and then do not want to deal with it. Above the decks there are only global functions, the master panel, effects etc. Some things you just have to stop just once and then do not want to deal with it. Above the decks there are only global functions, the master panel, effects etc. Some things you just have to stop just once and then do not want to deal with it. Above the decks there are only global functions, the master panel, effects etc.
+
+friedemann03Photo: Andreas Chudowski
+
+Debug: The effects have also changed a lot.
+
+Friedemann Becker: Yes. At first, the routing is different. Effects are now set globally and then routed to the decks, as well as many new ones added. Each deck can access both effect racks simultaneously. The view of the effects has also been redesigned. This is also related to the MIDI controllers, you only have a certain number of pots available to change the effects. There are different possibilities here.
+
+Debug: Tricky topic: The sound of effects. We all remember the Pioneer DJM-500 because the effects had such a distinctive sound. After which modalities do you decide which effects are to be on board, and how to make sure that you do not hear from a safe distance: Aha, this is a tractor ...
+
+Friedemann Becker: There are certain standards that have to be covered. And we've actually looked at Pioneer devices to follow a widely used standard. However, some effects on Traktor Pro continue: Rhythmic is not only based on the BPM number, but also on the transients, so it is even more precise. They follow the Beatgrid and that's tight. Our users appreciate tractor effects very much and therefore have high priority with us. I do not want a characteristic tractor-effect sound, so we're working on effects that deal with beat-slicing, etc. Since it can not come so quickly to clearly identifiable sounds.
+
+Debug: The mixer is still enthroned in the middle ...
+
+Friedemann Becker: ... but also adapted. If you work with an external mixer, the one in Traktor Pro disappears immediately, you only have functions that are kind of AddOns. For example: one filter for each deck. Gain of course and the headphones, because you can listen to the beatgrid.
+
+Debug: Essentially for a system like Traktor is the browser ... I see in the new version Cover Art!
+
+Friedemann Becker: Exactly, cover art is the one innovation. We are cooperating with Beatport and the plan is for Beatport to deliver all tracks with the artwork in a timely manner. And complete with all tags and already with the tractor beatgrid. We've been working on the artwork for a while. How do you get that in the list view of the browser? Without loading times and actually for the entire view in the browser ... that was tricky.
+
+Debug: I was surprised because you only see the upper part of the artwork if you operate on a longer list ...
+
+Friedemann Becker: But actually it exactly corresponds to the record box. You skip through there quickly and just see the top edge of the plates. I think that's a good adaptation. DJs work the same way. Another important innovation in file management: all changes in files are written directly into the file. This facilitates the data exchange immensely. With Traktor 3 these settings were stored in the program. This new style also makes it easier to share with iTunes, a standard we had to face.
+
+Debug: How important is the support of such quasi-standards as iTunes?
+
+Friedemann Becker: Extremely important. Many people manage their digital music with iTunes, are used to features that they expect in other programs. Exactly, as every spreadsheet program will always have an Excel import and export, we have to pay attention to accepted interfaces.
+
+Debug: What else is new?
+
+Friedemann Becker: For example, things that you deliberately do not even think about. Readability of the font in the interface, color between font and background, the possibility to make the font bigger ... the lighting conditions in clubs and on stages are simply not ideal, so we tried to react.
+
+Debug: Computers are getting smaller, more portable. Programs but more complex. How do you deal with the contradiction of having to communicate incredibly much on a small display?
+
+Friedemann Becker: The redesign of the interface was, among other things, a reaction to exactly this trend. In addition: The resolutions of the displays are getting smaller. If you have no tools to implement a gentle resizing, you suddenly have an interface with completely wrong proportions. That's a challenge, of course. The trend towards ever smaller displays also contradicts what we know from our users: they do not want to call submenus or change levels during the gig.
+
+Debug: Let's finish it technically: Beatgrid and Beatjump were also redesigned.
+
+Friedemann Becker:Yes, for example, the Quantize mode is new, this goes very much in the direction of remixing and sequencing. Any jumps can be done quantized. Traktor Pro jumps, unlike Ableton, immediately, but not to the starting point of the loop, but always to the appropriate point in the new section, it is inserted as an exact offset, we remain in the grid. Especially in conjunction with our four decks you can prepare yourself for proper loop tracks and use them accordingly. This is a real sample player. Also revised was the sync mode. There is a kind of semi-intelligent master clock that always follows the deck, which is straight. Once jumped, she will look for the next-best reference. So you always have a tight synchronization. This is a can feature, You can also hide it, if you want. Hard tempo jumps are "smoothed" when using Traktor as master in a multi-program set-up. Big innovation: automatic beatgrid, new tracks are automatically analyzed. That was a great request of our users, works very well at 4/4. In other rhythm structures can be improved quickly by hand ...
+
+Debug: DJs are so overrated. Why are such features so important? What was so painfully learned in classical DJing, but ultimately fun, is now completely automated.
+
+Friedemann Becker: The craftsmanship shifts to other functions, but thus remains. You have a lot more options, you can play more sources at the same time, you can do more fun with more fun. And it's not that we impose these features on the user. It will always be the case that two tracks are perfectly mathematically perfect, but it just does not groov. This is a central concept for us. All of these features are for reference only and can be ignored or tuned as soon as you realize that it just does not groov. Conversely, we hope these features will give the DJ a lot of work and time to invest in more refined and detailed sets.
+
+Debug: We talked a lot about Traktor Pro and little about Traktor Scratch Pro. How important do you think the timecode vinyl and the timecode CDs are and how long will they still be.
+
+Friedemann Becker: I am relatively sure that this will have done in a few years, because what the users with the vinyl still experience today, soon with controllers will be experienced. This "hands on" is very, very relevant and currently not feasible with MIDI, because the timecode wins. The "touch" of the music will remain important, always.
+
+
