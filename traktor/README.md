@@ -91,24 +91,28 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
   * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping.
   * Comparison to Serato: untested
   * Comparison to VDJ: fixable for sure
+\
+See also the [most popular DJ softwares census](census_graphs).\
 
 ## What I miss in Traktor
 \
 Well, quite a lot:
-  * Elastic beatgrids
-  * Plug-and-Play to all Pioneer gear / DDJ controllers.
-  * Multiple pad modes and an associated pad editor
-  * Turntable start_stop on the play_pause button
-  * Video support
-  * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html) -  the gold standard of mapping
-  * smart playlists and related tracks
-
-But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
+  * #1: Elastic beatgrids 
+  * #2: Plug-and-Play to Pioneer gear / DDJ controllers ([this is the most popular equipment](census_graphs))
+  * #3: Multiple pad modes, and an associated pad editor (like Rekordbox)
+  * #4: Turntable start&stop on the play/pause button
+  * #5: Video support
+  * #6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html), with a lot more than 8x variables and 2x conditions
+  * #7: smart playlists and related tracks
+\
+But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).\
+\
+See also the [most popular DJ softwares census](census_graphs).
 
 
 ## Why i like BIG mechanical jogwheels
 
-Spoiler: its not for scratching!
+Spoiler: its not scratching!
 
 I use jogs all the time in a controller - full list below. As I have big hands, I love them to be as BIG as possible. 
 
@@ -117,7 +121,7 @@ Sorted by usage frequency:
 * Cueing / fast preview to the exact spot where the track will start
 * Doing effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
 * Adjusting beatgrids on the fly
-* Very occasional live scratching or tricks
+* Very occasional live scratching / tricks
 
 What I dont use:
 * Moving jogs are cool, but not a dealbreaker
