@@ -18,7 +18,12 @@ This folder contains my Traktor tools and mappings
 # Blog posts
 
 * Table of Contents
+  * [Why I manage music using OS-folders only]([#Why-I-manage-music-using-OS-folders-only)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
+  * [What I miss in Traktor](#What-I-miss-in-Traktor)
+
+  * [Why i like BIG mechanical jogwheels](#why-i-like-big-mechanical-jogwheels)
+  
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
   * [Is the DDJ-1000SRT mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
   
@@ -33,7 +38,8 @@ This folder contains my Traktor tools and mappings
      
 ## Why I manage music using OS-folders only
 
-To write up.
+To write up.\
+\
 In the meantime, please see "## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)" 
 
       
@@ -86,15 +92,18 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
   * Comparison to Serato: untested
   * Comparison to VDJ: fixable for sure
 
-* **e) What other softwares do better than Traktor**\
-Well, quite a lot. But in the end the above-mentioned features are more important to me.
+## What I miss in Traktor
+\
+Well, quite a lot.\
   * Elastic beatgrids
-  * Plug-and-Play to Pioneer gear / DDJ controllers.
+  * Plug-and-Play to all Pioneer gear / DDJ controllers.
   * Fantastic pad editor / pad modes to remap the pads very easily
   * Turntable start/stop on play/pause button
   * Video support
   * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)
   * smart playlists and related tracks
+
+But in the end Traktor has the above-mentioned unique features that I depend on.
 
 ## Why i like BIG mechanical jogwheels
 
@@ -102,7 +111,7 @@ Spoiler: its not for scratching!
 
 I use jogs all the time in a controller - full list below. As I have big hands, I love them to be as BIG as possible. 
 
-In frequency of usage:
+Sorted by usage frequency:
 * Adjusting tempo drift for older tracks
 * Cueing / fast preview to the exact spot where the track will start
 * Doing effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
