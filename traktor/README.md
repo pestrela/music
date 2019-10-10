@@ -156,6 +156,9 @@ The overall integration is better, of course, which is a plus if you prefer plug
 
 But in the end its really the big jogswheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
 
+Result: I've built a huge DDJ-1000 mapping for Traktor, using [BOME](https://www.bome.com/products/miditranslator) to support the jog screens.
+* Main page: https://maps.djtechtools.com/mappings/9279
+* Documentaton: https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
@@ -181,7 +184,8 @@ I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it 
 
 ## What documentation comes with your mappings?
 
-My zip files have a lot of documentation besides the TSI file. IMO it has no comparision to the typical mappings avalaible on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks/default.aspx. 
+My zip files have **a lot** of documentation besides the TSI file.\
+IMO it has no comparision to the typical mappings available on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks/default.aspx. 
 
 Included is:
 * Quick reference (pictures only): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf)
