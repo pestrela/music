@@ -18,7 +18,7 @@ This folder contains my Traktor tools and mappings
 # Blog posts
 
 * Table of Contents
-  * [Why I manage music using OS-folders only]([#why-i-manage-music-using-os-folders-only)
+  * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [What I miss in Traktor](#What-I-miss-in-Traktor)
 
