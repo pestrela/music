@@ -93,18 +93,18 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
   * Comparison to VDJ: fixable for sure
 \
 \
-See also the [most popular DJ softwares census](../census_graphs).\
+See also the [most popular DJ softwares census](../census_graphs).
 
 ## What I miss in Traktor
 \
 Well, quite a lot:
-  * #1: Elastic beatgrids 
-  * #2: Plug-and-Play to Pioneer gear / DDJ controllers ([this is the most popular equipment](../census_graphs))
-  * #3: Multiple pad modes, and an associated pad editor (like Rekordbox)
-  * #4: Turntable start&stop on the play/pause button
-  * #5: Video support
-  * #6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html), with a lot more than 8x variables and 2x conditions
-  * #7: smart playlists and related tracks
+* #1: Elastic beatgrids 
+* #2: Plug-and-Play to Pioneer gear / DDJ controllers ([this is the most popular equipment](../census_graphs))
+* #3: Multiple pad modes, and an associated pad editor (like Rekordbox)
+* #4: Turntable start&stop on the play/pause button
+* #5: Video support
+* #6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html), with a lot more than 8x variables and 2x conditions
+* #7: smart playlists and related tracks
 \
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).\
 \
