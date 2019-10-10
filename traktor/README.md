@@ -97,10 +97,10 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
 Well, quite a lot:
   * Elastic beatgrids
   * Plug-and-Play to all Pioneer gear / DDJ controllers.
-  * Fantastic pad editor / pad modes to remap the pads very easily
-  * Turntable start/stop on play/pause button
+  * Multiple pad modes and an associated pad editor
+  * Turntable start_stop on the play_pause button
   * Video support
-  * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)
+  * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html) -  the gold standard of mapping
   * smart playlists and related tracks
 
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
