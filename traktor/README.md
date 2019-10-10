@@ -31,7 +31,10 @@ This folder contains my Traktor tools and mappings
   * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
       
      
+## Why I manage music using OS-folders only
 
+To write up.
+In the meantime, please see "## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)" 
 
       
 ## Why is Traktor my software of choice
@@ -93,6 +96,23 @@ Well, quite a lot. But in the end the above-mentioned features are more importan
   * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)
   * smart playlists and related tracks
 
+## Why i like BIG mechanical jogwheels
+
+Spoiler: its not for scratching!
+
+I use jogs all the time in a controller - full list below. As I have big hands, I love them to be as BIG as possible. 
+
+In frequency of usage:
+* Adjusting tempo drift for older tracks
+* Cueing / fast preview to the exact spot where the track will start
+* Doing effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
+* Adjusting beatgrids on the fly
+* Very occasional live scratching or tricks
+
+What I dont use:
+* Moving jogs are cool, but not a dealbreaker
+* Haptic feedback is basically a gimmick for me.
+  
 
 ## Why is DDJ-1000 my hardware of choice
 
