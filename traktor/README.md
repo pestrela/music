@@ -92,13 +92,14 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
   * Comparison to Serato: untested
   * Comparison to VDJ: fixable for sure
 \
-See also the [most popular DJ softwares census](census_graphs).\
+\
+See also the [most popular DJ softwares census](../census_graphs).\
 
 ## What I miss in Traktor
 \
 Well, quite a lot:
   * #1: Elastic beatgrids 
-  * #2: Plug-and-Play to Pioneer gear / DDJ controllers ([this is the most popular equipment](census_graphs))
+  * #2: Plug-and-Play to Pioneer gear / DDJ controllers ([this is the most popular equipment](../census_graphs))
   * #3: Multiple pad modes, and an associated pad editor (like Rekordbox)
   * #4: Turntable start&stop on the play/pause button
   * #5: Video support
@@ -107,7 +108,7 @@ Well, quite a lot:
 \
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).\
 \
-See also the [most popular DJ softwares census](census_graphs).
+See also the [most popular DJ softwares census](../census_graphs).
 
 
 ## Why i like BIG mechanical jogwheels
@@ -155,11 +156,11 @@ Having said this, the DDJ-1000 has major features that I personally value signif
 
 * F) more inputs and outputs, microphones etc. In particular, the mixer has a full FX suite for any external inputs (colorFX + beatFX)
 
-Note: the S4mk3 is a fantastic controller - I have recommended it to several people before. In particular the loop/beatjump encoders implementation is the gold standard for that. 
+Note: the S4mk3 is a fantastic controller - I have recommended it to several people before. In particular the loop/beatjump encoders implementation is the gold standard for that.\
 The overall integration is better, of course, which is a plus if you prefer plug-and-play vs customization. 
-
+\
 But in the end its really the big jogswheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
-
+\
 Result: I've built a huge DDJ-1000 mapping for Traktor, using [BOME](https://www.bome.com/products/miditranslator) to support the jog screens.
 * Main page: https://maps.djtechtools.com/mappings/9279
 * Documentaton: https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/
