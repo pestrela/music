@@ -94,7 +94,7 @@ I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves t
 
 ## What I miss in Traktor
 \
-Well, quite a lot.\
+Well, quite a lot:
   * Elastic beatgrids
   * Plug-and-Play to all Pioneer gear / DDJ controllers.
   * Fantastic pad editor / pad modes to remap the pads very easily
@@ -103,7 +103,8 @@ Well, quite a lot.\
   * [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)
   * smart playlists and related tracks
 
-But in the end Traktor has the above-mentioned unique features that I depend on.
+But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
+
 
 ## Why i like BIG mechanical jogwheels
 
