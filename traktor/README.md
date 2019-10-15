@@ -16,7 +16,6 @@ This folder contains my Traktor tools and mappings
   * Scripts able to run the DJCU and Rekordbuddy tools in Windows. (these convert collections from Traktor to Rekordbox)
 
 # Table of Contents
-* TOC
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [What I miss in Traktor](#What-I-miss-in-Traktor)
@@ -50,7 +49,7 @@ I have a large collection composed of multiple genres / sub-genres / decades. It
  * 7000 individual tracks
 
 This is an example of how my "playlists" look like. The full tree is far larger.
-![DJ Genres](various/dj_genres.pnh?raw=true)
+![DJ Genres](various/dj_genres.png?raw=true)
 
 Playlists are supported by all DJ softwares, but I find far easier to do it OS-filesystem instead. Main reasons:
 
