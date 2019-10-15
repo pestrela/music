@@ -15,9 +15,8 @@ This folder contains my Traktor tools and mappings
 * macos_converters
   * Scripts able to run the DJCU and Rekordbuddy tools in Windows. (these convert collections from Traktor to Rekordbox)
 
-# Blog posts
-
-* Table of Contents
+# Table of Contents
+* TOC
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [What I miss in Traktor](#What-I-miss-in-Traktor)
@@ -35,13 +34,34 @@ This folder contains my Traktor tools and mappings
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
       
-     
+# Mindmap summary
+
+The picture below summarizes the main ideas and dependencies explained in these blog posts.
+![traktor_mindmap](various/traktor_mindmap.png?raw=true "Traktor Mindmap")
+
+# Blog posts
 ## Why I manage music using OS-folders only
 
-To write up.\
-\
-In the meantime, please see "## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc)" 
+I have a large collection composed of multiple genres / sub-genres / decades. It covers:
+ * 2 seperate DJs
+ * 10 major-genres
+ * 50 sub-genres
+ * 300 playlist folders
+ * 7000 individual tracks
 
+This is an example of how my "playlists" look like. The full tree is far larger.
+![DJ Genres](various/dj_genres.pnh?raw=true)
+
+Playlists are supported by all DJ softwares, but I find far easier to do it OS-filesystem instead. Main reasons:
+
+* **Multiple views:** this allows me have many Windows Explorer windows open, and move files in-between them. Explorer windows are always available, and [now support tabs](http://qttabbar.wikidot.com/)
+* **Easy file renaming:** I change filenames continuously to correct artist/title. Then use [MP3tag_scripts](https://www.mp3tag.de/en/) to capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and change the internal tags as well.
+* **Grouping**: Folders contain sub-folders or files. This model [was invented in the 1960s](https://en.wikipedia.org/wiki/Path_(computing)#History). Itunes uses a more bureaucratic model with 3 levels instead (folders -> playlists -> files)
+* **Independence:** this model is independent of any possible DJ software, and also itunes. 
+
+
+See also [this blog post for more details on this workflow](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
+  
       
 ## Why is Traktor my software of choice
 
