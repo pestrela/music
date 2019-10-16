@@ -329,18 +329,16 @@ Regrading the IDs:
   * mixcloud is able to identify some tracks for you
  
 
-  
-  
+ 
 ## What is the 26ms shift issue when converting cues/loops between softwares?
-
 
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
 * This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
-* Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF).
-* **Problem: Zero LAME CRC ("case c"):**
+* Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF). Issues are:
+* **Zero LAME CRC ("case c"):**
   * Traktor doesn't accept the LAME tag, but interprets the whole MPEG frame as "music", producing 26ms of garbage; 
   * Rekordbox the same, but skips the whole MPEG frame instead.
-* **Problem: LAVC/LAVF reduced tags ("case b"):**
+* **LAVC/LAVF reduced tags ("case b"):**
   * Traktor produces 26ms of garbage because it doesnt understand this tag; 
   * Rekordbox accepts the tag as a control frame
 * We’ve now SOLVED this problem in dj-data-converter, a free command-line tool that works in all systems (Windows, Mac, Linux, WSL). 
@@ -351,6 +349,22 @@ Regrading the IDs:
 * MIXXX ticket: https://github.com/mixxxdj/mixxx/pull/2119
 * Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
 * Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
+  
+  
+![26ms_problem](various/26ms_problem.png?raw=true "26ms_problem")
+
+## Which DJ converters avoid the 26ms shift issue?
+
+Historically, there was no way to convert your collection on Windows. The only converters available were for MacOS. This has now changed recently.\
+All softwares take different approaches to solve the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).\
+This is the current situation as far as I tested it myself:
+* **[DJ Data Converter](https://github.com/digital-dj-tools/dj-data-converter)**: This is a command line tool for Windows, WSL, and macOS. This is where the full research of the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) was done, and where it was first implemented.
+* **[Rekord Cloud](https://rekord.cloud/wiki/convert-library)**: This is a web application, so it supports all OSes. It also has many other useful features other than DJ conversion. The authors have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares), implemented it for the 26ms case, and then extended it for virtualDJ with a 50ms value. As it is a web app, it created added an offline optional app just to scan shift mp3s.
+* **[DJCU](https://www.facebook.com/DJConversionUtility/posts/568896026977298)**: This is a macOS-only application. Recently it got the hability to convert windows files, but still from macOS only. They have a manual tool to correct the shifts after conversion (REKU). More recently they correct shifts automatically using the encoder strings. This is something that I researched before and replaced with LAME/LAVC/LAVF tags instead.
+* **[Rekordbuddy](https://next.audio/)**: This is also a macOS-only application. A Windows version is on the works for many years. This app corrects some shift cases correctly automaticlaly, but it misses others as well (when I tested it on a macOS VM).
+* **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
+
+
   
 ## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
 
