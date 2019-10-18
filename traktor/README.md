@@ -17,6 +17,8 @@ This folder contains my Traktor tools and mappings
 
 # Table of Contents
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
+  * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
+
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
   * [What I miss in Traktor](#What-I-miss-in-Traktor)
 
@@ -28,13 +30,12 @@ This folder contains my Traktor tools and mappings
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
   * [Can I see a video demo of your mappings?](#can-i-see-a-video-demo-of-your-mappings)
   
-  * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
-  * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
-  * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   
+  * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
   
   * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
+  * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
       
 # Mindmap summary
 
@@ -42,6 +43,7 @@ The picture below summarizes the main ideas and dependencies explained in these 
 ![traktor_mindmap](various/traktor_mindmap.png?raw=true "Traktor Mindmap")
 
 # Blog posts
+
 ## Why I manage music using OS-folders only
 
 I have a large collection composed of multiple genres / sub-genres / decades. It covers:
@@ -57,14 +59,26 @@ This is an example of how my "playlists" look like. The full tree is far larger.
 Playlists are supported by all DJ softwares, but I find far easier to do it OS-filesystem instead. Main reasons:
 
 * **Multiple views:** this allows me have many Windows Explorer windows open, and move files in-between them. Explorer windows are always available, and [now support tabs](http://qttabbar.wikidot.com/)
+* **Grouping**: Folders can contain both sub-folders or files. I find this a very natural model to organize genres and sub-genres. It is also a proven mode, it was [was invented in the 1960s](https://en.wikipedia.org/wiki/Path_(computing)#History). Itunes a more bureaucratic model with 3 levels instead (folders -> playlists -> files). This 3-step model was later copied to all DJ softwares.
 * **Easy file renaming:** I change filenames continuously to correct artist/title. Then use [MP3tag_scripts](https://www.mp3tag.de/en/) to capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and change the internal tags as well.
-* **Grouping**: Folders contain sub-folders or files. This model [was invented in the 1960s](https://en.wikipedia.org/wiki/Path_(computing)#History). Itunes uses a more bureaucratic model with 3 levels instead (folders -> playlists -> files)
-* **Independence:** this model is independent of any possible DJ software, and also itunes. 
-
+* **Software Independence:** Using OS-folders you are independent of any possible DJ software, and also itunes. It also trivial to sync between DJ collections and make perfect backups to my NAS using [resilio sync](https://www.resilio.com/individuals/). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
 See also [this blog post for more details on this workflow](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
   
-      
+
+## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
+
+Above I've described [why I use OS-folders only](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc). In this post I will describe how this workflow works and how it can be have **fully automated**.
+
+* **#1: Mp3tag:** Using multiple Explorers, I change filenames continuously to correct the artist/title. [MP3tag](https://www.mp3tag.de/en/) has support for scripts to cleanup the filenames; [my actions](Mp3tagSettings.zip) automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and copy these to the internal tags.
+* **#2: Database repair:** Traktor repairs the internal database to match what is on disk. [more info on mass-relocate](#why-is-traktor-my-software-of-choice)
+* **#3: Duplicate Cues**: I made a [small python script](collections_without_playlists/traktor_clone_cues.py) to duplicate the cues for the physically duplicated files. This is comparable to [the traktor Librarian](http://www.flowrl.com/librarian).
+* **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
+* **#5: Rekordbox Video:** When playling video gigs I use the explorer node inside Rekordbox. As this one still lacks a search box ([see point B) of this post](#why-is-traktor-my-software-of-choice)), I use a real File Explorer window in parallel when needed.
+* **#6: CDJ export:** I only really need playlists for CDJs. There are scripts to mass-convert all folders to DJ playlists. Windows version is http://samsoft.org.uk/iTunes/ImportFolderStructure.vbs; Mac version is https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake; Then I do the usual rekordbox step to prepare USBs pens.
+
+See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGovQ).
+ 
 ## Why is Traktor my software of choice
 
 Traktor has an unique feature missing from every other DJ software: Mass-relocate. This is crucial to me, as I built my whole workflows around it.
@@ -110,34 +124,38 @@ This is only possible if midi mapping has variables and multiple actions per phy
 * **d) Hotcues move the temporary cue as well**
 \
 I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well. This is very useful when previewing a previously tagged song. 
-  * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping.
+  * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping. [This was requested in their forum](https://forums.pioneerdj.com/hc/en-us/community/posts/360021313752-Is-there-any-way-at-all-to-reassign-the-cue-button-to-cue-to-the-most-recently-selected-hot-cue-rather-than-only-being-used-to-make-cue-points-)
   * Comparison to Serato: untested
-  * Comparison to VDJ: fixable for sure
+  * Comparison to VDJ: untested, but this woudl be fixable with MIDI mapping for sure
 \
 \
 See also the [most popular DJ softwares census](../census_graphs).
 
-## What I miss in Traktor
-\
-Well, quite a lot:
+## Which features I miss in Traktor
+
+Specific features:
 * #1: Elastic beatgrids 
-* #2: Plug-and-Play to Pioneer gear / DDJ controllers ([this is the most popular equipment](../census_graphs))
-* #3: Multiple pad modes, and an associated pad editor (like Rekordbox)
+* #2: Plug-and-Play to Pioneer gear / DDJ controllers ([because this is the most popular equipment today](../census_graphs))
+* #3: Multiple pad modes on screen, and an associated pad editor (like Rekordbox and VirtualDJ)
 * #4: Turntable start&stop on the play/pause button
 * #5: Video support
 * #6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html), with a lot more than 8x variables and 2x conditions
 * #7: smart playlists and related tracks
-\
-But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).\
-\
+
+For more general comments, I fully agree with [this Digitial DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
+# #1: “Please embrace hardware partners again…”
+# #2: “Please speed up software development!”
+# #3: “Please, no more reinventing the wheel :)”
+
+But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
+
 See also the [most popular DJ softwares census](../census_graphs).
 
-
-## Why i like BIG mechanical jogwheels
+## Why I like BIG mechanical jogwheels
 
 Spoiler: its not scratching!
 
-I use jogs all the time in a controller - full list below. As I have big hands, I love them to be as BIG as possible. 
+I use jogs all the time in a controller - full list below. As I have big hands, I love them to be as BIG as possible.
 
 Sorted by usage frequency:
 * Adjusting tempo drift for older tracks
@@ -148,8 +166,7 @@ Sorted by usage frequency:
 
 What I dont use:
 * Moving jogs are cool, but not a dealbreaker
-* Haptic feedback is basically a gimmick for me.
-  
+* Haptic feedback is basically a gimmick for me
 
 ## Why is DDJ-1000 my hardware of choice
 
@@ -240,35 +257,56 @@ I have both long 30m videos where I cover every single function step-by-step, pl
 * AKAI AMX playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0Vi7aguzxbmOJdVQCW6CohR
   * AMX v1.0 - **main video** - http://youtu.be/TzAgENM55DE
    
- 
+  
+## What is the 26ms shift issue when converting cues/loops between softwares?
 
- 
-## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
+* We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
+* This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
+* Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF). Issues are:
+* **Zero LAME CRC ("case c"):**
+  * Traktor doesn't accept the LAME tag, but interprets the whole MPEG frame as "music", producing 26ms of garbage; 
+  * Rekordbox the same, but skips the whole MPEG frame instead.
+* **LAVC/LAVF reduced tags ("case b"):**
+  * Traktor produces 26ms of garbage because it doesnt understand this tag; 
+  * Rekordbox accepts the tag as a control frame
+* Please see [this blog post](#which-dj-converters-avoid-the-26ms-shift-issue) to know who implemented this work
+
+### links
+* 26ms research work: https://github.com/digital-dj-tools/dj-data-converter/issues/3
+* Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
+* Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
+  
+  
+![26ms_problem](various/26ms_problem.png?raw=true "26ms_problem")
+
+## Which DJ converters avoid the 26ms shift issue?
+
+Historically, there was no way to convert your collection on Windows. The only converters available were for MacOS. This has now changed recently.\
+All softwares take different approaches to solve the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).\
+\
+This is the current situation as far as I tested it myself:
+* **[DJ Data Converter](https://github.com/digital-dj-tools/dj-data-converter)**: This is a command line tool for Windows, WSL, and macOS. This is where the full research of the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) was done, and where it was first implemented. This is [another python converter](https://github.com/ErikMinekus/traktor-scripts/blob/master/playlist-export.py).
+* **[Rekord Cloud](https://rekord.cloud/wiki/convert-library)**: This is a web application, so it supports all OSes. It also has many other useful features other than DJ conversion. The authors have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares), implemented it for the 26ms case, and then extended it for virtualDJ with a 50ms value. As it is a web app, it created added an offline optional app just to scan shift mp3s.
+* **[DJCU](https://www.facebook.com/DJConversionUtility/posts/568896026977298)**: This is a macOS-only application. Recently it got the hability to convert windows files, but still from macOS only. They have a manual tool to correct the shifts after conversion (REKU). More recently they correct shifts automatically using the encoder strings. This is something that I researched before and replaced with LAME/LAVC/LAVF tags instead.
+* **[Rekordbuddy](https://next.audio/)**: This is also a macOS-only application. A Windows version is on the works for many years. This app corrects some shift cases correctly automaticlaly, but it misses others as well (when I tested it on a macOS VM).
+* **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
 
 
-My multi-genre, large collection is organized on OS folders (Operating System folders), instead of Playlists. 
+  
+## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
 
-This is to be independent of any possible DJ software, and also itunes. I find A LOT easier just to have many Windows Explorer windows open, plus logically group and sub-group files on folders on the folder tree. 
+Every year laptops get faster. As people want them lighter, it can only be done by using all kinds of Power saving tricks. These tricks are very damaging for DJ software.\
+\
+If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable Intel turbo boost or anything related to power saving everywhere you can.\
+\
+To fix this:
+* Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
+* Change your BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
+* Change your Windows Power settings: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
+\
+For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
 
-Because of this is use the “explorer” node of the DJ programs all the time instead of DJ playlists.
 
-My workflow is fully automated:
-* b) I change filenames continuously to correct artist/title. I use MP3tag_scripts to a) capitalize the names (format is “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix” and b) rename the internal tags  [1].
-* c) Traktor mass-relocate finds files everywhere by AUDIO-ID (ie, content). This is much superior than rekordbox and others [2].
-* d) I made a custom python script that duplicates cues of the duplicated files inside the Traktor collection.nml [1]. This is comparable to [3].
-* e) I use DJCU+RECU/Rekordbuddy2 to generate the rekordbox.xml file. This is done inside a MacOS VM [4] [5]. There were some manual steps, so I made a script to convert the filenames [1]. A Windows-only alternative is [6]
-* f) I only need playlists for CDJs. To make playlists, I mass-convert all folders to itunes playlists, recursively. Mac version is [7]; A windows version is [8]. Then I do the usual rekordbox step to prepare USBs pens.
-
-References:   
-* [1] My scripts: https://github.com/pestrela/music_scripts 
-* [2] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
-* [3] Duplicate tool: http://www.flowrl.com/librarian/
-* [4] MacOS VM: https://saintlad.com/install-macos-sierra-in-virtualbox-on-windows-10/
-* [5] rekordbuddy VM: https://www.reddit.com/r/Beatmatch/comments/52dvst/how_to_transfer_your_windowsbased_dj_library_from/
-* [6] Windows conversion:	https://github.com/ErikMinekus/traktor-scripts/blob/master/playlist-export.py
-* [7] MAC folders to itunes playlist: https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake
-* [8] Windows folders to itunes playlists: http://samsoft.org.uk/iTunes/scripts.asp
- 
  
 ## How I build perfect tracklists using CUE files
 
@@ -332,50 +370,4 @@ Regrading the IDs:
   * mixcloud is able to identify some tracks for you
  
 
- 
-## What is the 26ms shift issue when converting cues/loops between softwares?
 
-* We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
-* This shift is very noticeable and breaks beatgrids/loops. See below for a graphical example of this issue.
-* Root issue is different interpretations of the **tricky MP3 LAME tag** (and their derivations  LACV/LAVF). Issues are:
-* **Zero LAME CRC ("case c"):**
-  * Traktor doesn't accept the LAME tag, but interprets the whole MPEG frame as "music", producing 26ms of garbage; 
-  * Rekordbox the same, but skips the whole MPEG frame instead.
-* **LAVC/LAVF reduced tags ("case b"):**
-  * Traktor produces 26ms of garbage because it doesnt understand this tag; 
-  * Rekordbox accepts the tag as a control frame
-* Please see [this blog post](#which-dj-converters-avoid-the-26ms-shift-issue) to know who implemented this work
-
-### links
-* 26ms research work: https://github.com/digital-dj-tools/dj-data-converter/issues/3
-* Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
-* Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
-  
-  
-![26ms_problem](various/26ms_problem.png?raw=true "26ms_problem")
-
-## Which DJ converters avoid the 26ms shift issue?
-
-Historically, there was no way to convert your collection on Windows. The only converters available were for MacOS. This has now changed recently.\
-All softwares take different approaches to solve the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).\
-This is the current situation as far as I tested it myself:
-* **[DJ Data Converter](https://github.com/digital-dj-tools/dj-data-converter)**: This is a command line tool for Windows, WSL, and macOS. This is where the full research of the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) was done, and where it was first implemented.
-* **[Rekord Cloud](https://rekord.cloud/wiki/convert-library)**: This is a web application, so it supports all OSes. It also has many other useful features other than DJ conversion. The authors have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares), implemented it for the 26ms case, and then extended it for virtualDJ with a 50ms value. As it is a web app, it created added an offline optional app just to scan shift mp3s.
-* **[DJCU](https://www.facebook.com/DJConversionUtility/posts/568896026977298)**: This is a macOS-only application. Recently it got the hability to convert windows files, but still from macOS only. They have a manual tool to correct the shifts after conversion (REKU). More recently they correct shifts automatically using the encoder strings. This is something that I researched before and replaced with LAME/LAVC/LAVF tags instead.
-* **[Rekordbuddy](https://next.audio/)**: This is also a macOS-only application. A Windows version is on the works for many years. This app corrects some shift cases correctly automaticlaly, but it misses others as well (when I tested it on a macOS VM).
-* **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
-
-
-  
-## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
-
-Every year laptops get faster. As people want them lighter, it can only be done by using all kinds of Power saving tricks. These tricks are very damaging for DJ software.\
-\
-If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable Intel turbo boost or anything related to power saving everywhere you can.\
-\
-To fix this:
-* Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
-* Change your BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
-* Change your Windows Power settings: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
-\
-For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
