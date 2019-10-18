@@ -33,6 +33,11 @@ This folder contains my Traktor tools and mappings
   * [Why i like BIG mechanical jogwheels](#why-i-like-big-mechanical-jogwheels)
   
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
+  
+  
+  * [What are the features of your DDJ-1000 Traktor mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
+
+
   * [Is the DDJ-1000SRT mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
   
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
@@ -251,6 +256,48 @@ Result: I've built a huge DDJ-1000 mapping for Traktor, using [BOME](https://www
 * Main page: https://maps.djtechtools.com/mappings/9279
 * Documentaton: https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/
 
+## What are the features of your DDJ-1000 Traktor mapping?
+
+**Feature list:**
+FEATURE LIST:
+*	Jog Screens
+*	7x Jogwheel FX chains
+*	5x MixerFX
+*	11x MacroFX
+*	21x padFX (“instant gratification”)
+*	3x tone play modes (“keyboard mode”)
+*	8x Rolls
+*	Slicer
+*	Dedicated preview player
+*	Loops manual adjust (via jogs)
+*	Beatjump and Loops pages
+*	End of track warning blinks and other CDJ emulation
+*	All functions reachable without shifts
+*	
+*	Download Link: https://maps.djtechtools.com/mappings/9279
+*	Video demo: https://youtu.be/h9tQZEHr8hk
+
+
+**About this mapping:**
+* This is the only mapping for the DDJ-1000 supporting Jog Screens. It works on both Traktor 3 and 2. It requires the 3rd-party BOME Pro MIDI translator. Free trial versions are available to test everything. 
+*	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
+
+## What documentation comes with your mappings?
+
+My zip files have **a lot** of documentation besides the TSI file.\
+IMO it has no comparision to the typical mappings available on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks/default.aspx. 
+
+Included is:
+* Quick reference (pictures only): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf)
+* User manual: [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Full%20manual.pdf)
+* Installation manual: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Installation%20and%20Verification%20of%20the%20two%20required%20mappings.pdf)
+* FAQ: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Frequently%20Asked%20Questions.pdf)
+
+Plus:
+* Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
+* Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
+
+
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
@@ -274,20 +321,6 @@ I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it 
   * more info:  https://github.com/pestrela/music_scripts/tree/master/ddj/3%20Signal%20flows
   
 
-## What documentation comes with your mappings?
-
-My zip files have **a lot** of documentation besides the TSI file.\
-IMO it has no comparision to the typical mappings available on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks/default.aspx. 
-
-Included is:
-* Quick reference (pictures only): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf)
-* User manual: [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Full%20manual.pdf)
-* Installation manual: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Installation%20and%20Verification%20of%20the%20two%20required%20mappings.pdf)
-* FAQ: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Frequently%20Asked%20Questions.pdf)
-
-Plus:
-* Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
-* Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
 
 ## Can I see a video demo of your mappings?
 
