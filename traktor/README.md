@@ -20,7 +20,7 @@ This folder contains my Traktor tools and mappings
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
 
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
-  * [What I miss in Traktor](#What-I-miss-in-Traktor)
+  * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
 
   * [Why i like BIG mechanical jogwheels](#why-i-like-big-mechanical-jogwheels)
   
@@ -81,18 +81,24 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
  
 ## Why is Traktor my software of choice
 
-Traktor has an unique feature missing from every other DJ software: Mass-relocate. This is crucial to me, as I built my whole workflows around it.
+Below the 4x main reasons that I love Traktor.
 
-* **a) Mass-relocate: find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis**\
-\
-I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.\
-\
+See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
+See also the graph showing the [most popular DJ softwares over time](../census_graphs).
+
+
+## Why is Traktor my software of choice: a) Database repair
+
+Traktor is above to find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis.
+
+I RENAME and MOVE files very regularly at the OS-folders level, using Windows Explorer/macOS finder.
+
 When Traktor starts, it does a "consistency check" to confirm if all files are still there. (demo: [0:24 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=24s)). This finds all missing files in a single go (demo: [0:50 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=50))\
-Then, the mass-relocate process fixes everything in a single go as well; you just select the root folder that contains your files "somewhere". In the extreme worst case this would be your whole hard drive. (demo: [5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).\
-\
+Then, the mass-relocate process fixes everything in a single go as well; you just select the root folder that contains your files "somewhere". In the extreme worst case this would be your whole hard drive. (demo: [5:36 of this video](https://www.youtube.com/watch?v=i_zYavcCa7k&t=320s)).
+
 The relocate process is reasonably straightforward for MOVED files. However it is much much harder for RENAMED files.\
-Traktor is the only software that achives that because it fingerprints everything in a private field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")\
-\
+Traktor is the only software that achives that because it fingerprints everything in a private field called "[AudioId](https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html)")
+
 When the mass-relocate process ends, everything is magically found again. Crucially all metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
 Together with the OS-search feature described below, this enables me to use folders as "virtual playlists".
   * Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
@@ -102,8 +108,8 @@ Together with the OS-search feature described below, this enables me to use fold
   * Comparison to VDJ: Everyhting need to be relocated FILE by FILE.
   * Comparison to Serato: To test.
 
-* **b) OS Folders searching (managing music without playlists)**\
-\
+## Why is Traktor my software of choice: b) OS-search
+
 Traktor allows searching inside any OS folders. I don't have DJ playlists inside Traktor; instead, my OS-folders are my "virtual playlists".\
 I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
 When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.\
@@ -112,24 +118,26 @@ When I'm playing a specific genre I can search only that decade (=OS folder). If
   * Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
   * Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
   
-* **c) Complex MIDI mapping with 8 variables and multiple actions**\
-\
-My [AKAI AMX mapping has 10 layers using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
+## Why is Traktor my software of choice: c) Advanced MIDI mapping and Lots of FX
+  
+Traktor supports complex MIDI mapping with 8x variables, 2x conditionals and any number of actions per MIDI input
+
+My [AKAI AMX mapping has 10 layers built using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
 My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s \
 This is only possible if midi mapping has variables and multiple actions per physical input.
-  * Comparison to VDJ: this is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
-  * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
   * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+  * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+  * Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
 
-* **d) Hotcues move the temporary cue as well**
-\
-I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well. This is very useful when previewing a previously tagged song. 
+See also ["Why I moved to BOME midi mapping"](#Why-I-moved-to-BOME-midi-mapping).
+
+## Why is Traktor my software of choice: d) Hotcues move the temporary cue as well
+
+I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well.\
+This is very useful for  previewing an old song that you dont remember anymore. When you are done, you just move it to the last point using the big round button.
   * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping. [This was requested in their forum](https://forums.pioneerdj.com/hc/en-us/community/posts/360021313752-Is-there-any-way-at-all-to-reassign-the-cue-button-to-cue-to-the-most-recently-selected-hot-cue-rather-than-only-being-used-to-make-cue-points-)
   * Comparison to Serato: untested
-  * Comparison to VDJ: untested, but this woudl be fixable with MIDI mapping for sure
-\
-\
-See also the [most popular DJ softwares census](../census_graphs).
+  * Comparison to VDJ: untested, but not a problem for sure (trivial to change using advanced MIDI mapping)
 
 ## Which features I miss in Traktor
 
@@ -140,16 +148,33 @@ Specific features:
 * #4: Turntable start&stop on the play/pause button
 * #5: Video support
 * #6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html), with a lot more than 8x variables and 2x conditions
-* #7: smart playlists and related tracks
+* #7: Smart playlists and related tracks
 
-For more general comments, I fully agree with [this Digitial DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
-# #1: “Please embrace hardware partners again…”
-# #2: “Please speed up software development!”
-# #3: “Please, no more reinventing the wheel :)”
+In general I fully agree with [this Digitial DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
+* #1: “Please embrace hardware partners again…”
+* #2: “Please speed up software development!”
+* #3: “Please, no more reinventing the wheel :)”
 
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
 
 See also the [most popular DJ softwares census](../census_graphs).
+
+## Why I moved to BOME midi mapping
+
+As [explained above](#Why-is-Traktor-my-software-of-choice:-c)-Advanced-MIDI-mapping-and-Lots-of-FX), Traktor mapping rocks.\
+Sadly I've hit its limits multiple times :). It also lacks essential features required on the [DDJ-1000 screens mapping](ddj_1000_traktor_mapping).
+
+* Impossible features in Traktor:
+  * **#1: 14-bit out messages**: Trakor supports *receiving* high resolution midi messages. I need to *send* them as well [on my DDJ-1000 mapping](../ddj/1%20MIDI%20codes/DDJ-1000RB%20-%20MIDI%20Messages.pdf)
+  * **#2: Sequence of Events**: For PadFX, I *first* need to change the FX, and *then* need to turn it on. This is not something Traktor support; both actions are tried simultaneously resulting in something else. More info: page 88 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+  * **#3: Timers**: Something simple as end-of-track blinking require timers to schedule actions for later. Same story for [vinyl break on the play/pause nutton](https://www.youtube.com/watch?v=EPnmyDiaJTE), as implemented by [Traktor Mapping Service](http://traktormappingservice.com/)
+  * **#4: Any event as a conditional**: Some events can be inputs to conditionals, like "is in active loop". However many events are missing, for example "which deck is master." To implement this, please see page 87 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+* Possible features in Traktor (with a lot of hacking!):
+  * **A) More modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings.
+  * **B) More conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
+  * **C) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+  * **D) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
+
 
 ## Why I like BIG mechanical jogwheels
 
