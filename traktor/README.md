@@ -28,6 +28,7 @@ This folder contains my Traktor tools and mappings
  
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
   * [Why I moved to BOME midi mapping](#Why-I-moved-to-BOME-midi-mapping)
+  * [The future of Traktor mappings](#The-future-of-Traktor-mappings)
 
   * [Why i like BIG mechanical jogwheels](#why-i-like-big-mechanical-jogwheels)
   
@@ -183,6 +184,19 @@ Sadly I've hit its limits multiple times :). It also lacks essential features re
   * **C) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
   * **D) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
 
+## The future of Traktor mappings
+
+A major Traktor strength is the MIDI mappings system. Very flexible and powerful.\
+Traktor maps are by far the most popular in https://maps.djtechtools.com/.\
+Large mappings are really complex to build - but once this is done other users immediately benefit by just installing them.
+
+However the Traktor mappings system didn't get improvements for years, and [is is now quite old](#Why-I-moved-to-BOME-midi-mapping).
+It now is also not powerful enough [to map recent controllers](#Why-I-moved-to-BOME-midi-mapping).
+
+For example in my DDJ-1000 mapping I had to use BOME midi translator as a middle man:
+https://maps.djtechtools.com/mappings/9279
+
+In my view the mappings are a unique sucess story of Traktor. This could continue to give great results with just some quality-of-life improvements.
 
 ## Why I like BIG mechanical jogwheels
 
@@ -236,6 +250,7 @@ But in the end its really the big jogswheels that is the crucial deal breaker; T
 Result: I've built a huge DDJ-1000 mapping for Traktor, using [BOME](https://www.bome.com/products/miditranslator) to support the jog screens.
 * Main page: https://maps.djtechtools.com/mappings/9279
 * Documentaton: https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/
+
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
