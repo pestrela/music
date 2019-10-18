@@ -272,15 +272,12 @@ Result: I've built a huge DDJ-1000 mapping for Traktor, using [BOME](https://www
 *	Beatjump and Loops pages
 *	End of track warning blinks and other CDJ emulation
 *	All functions reachable without shifts\
-\
-*	Download Link: https://maps.djtechtools.com/mappings/9279
-*	Video demo: https://youtu.be/h9tQZEHr8hk
-
-\
 
 **About this mapping:**
 * This is the only mapping for the DDJ-1000 supporting Jog Screens. It works on both Traktor 3 and 2. It requires the 3rd-party BOME Pro MIDI translator. Free trial versions are available to test everything. 
 *	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
+*	Download Link: https://maps.djtechtools.com/mappings/9279
+*	Video demo: https://youtu.be/h9tQZEHr8hk
 
 ## What documentation comes with your mappings?
 
