@@ -1,9 +1,15 @@
+MARKDOWN REFERENCE:
+  https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+  
 GIT:
   to move folders around:
    cd root
    git add -A .
    git status
 
-MARKDOWN:
-  https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+   
+TO GENERATE TABLE OF CONTENTS:
+  summarizeMD README.md
+  cat summarized_README.md  | awk '/div/{exit} {print}'  
   
