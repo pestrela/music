@@ -1,11 +1,12 @@
 
 # Table of Contents
 
-* OS-Folders
+* [MindMap Summary](MindMap-Summary)
+* [OS-Folders](#OS-Folders)
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
 
-* Traktor software
+* [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
     * [database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
     * [OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
@@ -14,17 +15,17 @@
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
  
   
-* BOME migration
+* [BOME migration](#BOME-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
   * [How I see the future of Traktor mappings](How-I-see-the-future-of-Traktor-mappings)
 
-* Hardware Controllers  
+* [Hardware Controllers](#Hardware-Controllers)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
   * [Why i like BIG mechanical jogwheels](#why-i-like-big-mechanical-jogwheels)
   * [But can I still scratch using MIDI?](#But-can-i-still-scratch-using-MIDI)
 
-* Custom Mappings
+* [Custom Mappings](#Custom-Mappings)
   * [What are the features of your Traktor mappings?](#section-id-293)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ mapping](#section-id-327)
@@ -34,29 +35,17 @@
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
   * [Is the DDJ-1000SRT also mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
  
-
-* DJ converters
+* [DJ collection converters](#DJ-collection-converters)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
 
-* Other
+* [Other topics](#Other-topics)
   * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
-  * [Software tools](#Traktor-Software-Contents)
+  * [What software you built for Traktor?](#What-software-you-built-for-Traktor)
 
-
- 
-  
-
-- [Other](#section-id-481)
-  - [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#section-id-483)
-  - [How I build perfect tracklists using CUE files](#section-id-498)
-  - [How I recorded my old radio show recordings and found the IDs](#section-id-539)
-- [What sofwtare did you do for Traktor?](#section-id-560)
-  
-  
-  
+     
 
 # MindMap Summary
 
@@ -167,13 +156,13 @@ This is very useful for  previewing an old song that you dont remember anymore. 
 ## Which features I miss in Traktor
 
 Specific features:
-* #1: Elastic beatgrids 
-* #2: Plug-and-Play to Pioneer gear / DDJ controllers ([because this is the most popular equipment today](../census_graphs))
-* #3: Multiple pad modes on screen, and an associated pad editor (like Rekordbox and VirtualDJ)
-* #4: Turntable start&stop on the play/pause button
-* #5: Video support
-* #6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html), with a lot more than 8x variables and 2x conditions
-* #7: Smart playlists and related tracks
+* **#1: Elastic beatgrids**: This is crucial as I play very old music and many music styles
+* **#2: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
+* **#3: Pad modes**: I have them in my mappings, but would love to see them on screen, and have an associated pad editor like Rekordbox and VirtualDJ
+* **#4: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
+* **#5: Video support**
+* **#6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)**, with a lot more than 8x variables and 2x conditions
+* **#7: Smart playlists** and related tracks
 
 In general I fully agree with [this Digitial DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
 * #1: “Please embrace hardware partners again…”
@@ -184,13 +173,8 @@ But in the end Traktor has [has unique features that I depend on](#why-is-trakto
 
 See also the [most popular DJ softwares census](../census_graphs).
 
-## 
 
-
-
-
-
-# Mappings
+# BOME migration
 
 ## Why I moved to BOME midi mapping: Impossible features
 
@@ -236,15 +220,15 @@ I use jogs all the time in a controller - full list below.
 As I have big hands, I love them to be as BIG as possible.
 
 There are the usages sorted by frequency:
-* #1: Adjusting tempo drift for older tracks
-* #2: Cueing / fast preview to the exact spot where the track will start
-* #3: Doing effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
-* #4: Adjusting beatgrids on the fly
-* #5: Very occasional live scratching / tricks  (see also [this post](#But-can-you-still-scratch-using-MIDI))
+* **#1: Tempo**: Adjusting tempo drift for older tracks (because of no elastic beatgrid)
+* **#2: Cueing**: / fast preview to the exact spot where the track will start
+* **#3: JogFX chains**: I do effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
+* **#4: beagrids**: by far the quickest way to adjust beatgrids on the fly
+* **#5: Scratch**: Very occasional live scratching / tricks  (see also [this post](#But-can-you-still-scratch-using-MIDI))
 
 What I dont use on jogs:
-* Moving jogs are cool, but not a dealbreaker
-* Haptic feedback is basically a gimmick for me
+* **Moving jogs**: these are cool, but not a dealbreaker for me
+* **Haptic feedback**: this is basically a gimmick for me
 
 ## But can I still scratch using MIDI?
 
@@ -275,7 +259,7 @@ Having said this, the DDJ-1000 has major features that I personally value signif
   Pressing twice the same pad mode cycles the top 2 sub-pages of that pad mode. This is way the reloop Elite mixer works. 
   I’ve got even more stuff on the secondary pad modes, accessible with a shift+mode. 
 
-* **C) Two USB ports. This is crucial for seamless handovers between DJs; and for safety of connecting a backup laptop ready at any time.
+* **C) Two USB ports.** This is crucial for seamless handovers between DJs; and for safety of connecting a backup laptop ready at any time.
   
 * **D) JogFX combos on the jogs.** Please see them in my demo videos (eg 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s ). 
   This is turnkey in my mapping, i’m not familiar if they have it on the S4mk3 (it was present for sure on the S4MK1 DJTT mappings)
@@ -365,7 +349,7 @@ But in the end its really the big jogswheels that is the crucial deal breaker; T
 *	Loops
 *	BeatJump
 *	Preview player
-	
+\
 *	5x MixerFX
 *	7x MacroFX
 *	1x Resonant Filter
@@ -428,9 +412,9 @@ All videos are timestamp tagged in Minute:second format, for you to find explana
 
 Yes. All my mappings work fine with the demo versions of both Traktor and BOME. So if you have these controllers you can just try them in no time. 
 
-If you are considering buying, you can easily test this in a shop showroom (I did this many times by asking permission to the shop personnel).
+If you are considering buying equipment then I recommend that you test the mapping yourself in a shop showroom. I do this all the time before I buy anything (just mention this to the shop personnel).
 
-Finally, all my mappings are a free gift to the community, to enable DJs to use their preferred Software with their preferred. If you want further appreciation, PayPal donations are welcome (pedro.estrela@gmail.com
+Finally, all my mappings are a free gift to the community, to enable DJs to use their preferred Software with their preferred. If you want further appreciation, PayPal donations are welcome (pedro.estrela@gmail.com)
 
   
 
@@ -455,8 +439,7 @@ I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it 
   * comparison of HW and SW effects: [here](ddj_1000_traktor_mapping/Support%20files/Traktor%20mappings%20for%20DDJ%20Controllers%20-%20HW%20vs%20SW%20Effects.xlsx)
   * more info:  https://github.com/pestrela/music_scripts/tree/master/ddj/3%20Signal%20flows
   
-# 
-
+# DJ collection converters
 ## What is the 26ms shift issue when converting cues/loops between softwares?
 
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
@@ -490,7 +473,7 @@ This is the current situation as far as I tested it myself:
 * **[Rekordbuddy](https://next.audio/)**: This is also a macOS-only application. A Windows version is on the works for many years. This app corrects some shift cases correctly automaticlaly, but it misses others as well (when I tested it on a macOS VM).
 * **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
 
-# Other 
+# Other topics
   
 ## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
 
@@ -534,17 +517,13 @@ Overview of the Cue tools:
 
 * cue_renumber_files.py:
   * renumbers mp3 files, in sequence. This is useful to make a sequenced playlist in your operating system folders, outside Traktor.
-
 * cue_make_tracklist.sh:
   * from a folder, generates basic tracklist text files
-
 * cue_convert_timestamps.sh:
   * convert MMM:SS to HH:MM:SS format. Winamp uses the first format, Adobe audition uses the second 
-
 * cue_merge_cues.py: 
   * this is the main tool. It merge back and forth any CUE file with any tracklist text file. 
     It can read either case from seperate or single files. It also cleans the artist - title fields, and generates timestamped tracklists 
-
 * cue_rename_cue.sh: 
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
