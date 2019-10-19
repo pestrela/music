@@ -26,6 +26,7 @@
   * [But can I still scratch using MIDI?](#But-can-i-still-scratch-using-MIDI)
 
 * [Custom Mappings](#Custom-Mappings)
+  * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
   * [What are the features of your Traktor mappings?](#section-id-293)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ mapping](#section-id-327)
