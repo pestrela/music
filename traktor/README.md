@@ -92,7 +92,7 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
  
 
  
-# Traktor
+# Traktor software
 ## Why is Traktor my software of choice
 
 Below the 4x main reasons that I love Traktor.
@@ -274,7 +274,7 @@ The overall integration is better, of course, which is a plus if you prefer plug
 But in the end its really the big jogswheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
 
 
-# Traktor Mappings
+# Custom Mappings
 
 ## What are your main Traktor mappings?
 
