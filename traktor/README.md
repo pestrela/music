@@ -1,7 +1,7 @@
 
 # Table of Contents
 
-* [MindMap Summary](MindMap-Summary)
+* [MindMap Summary](#MindMap-Summary)
 * [OS-Folders](#OS-Folders)
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
@@ -49,7 +49,7 @@
 
 # MindMap Summary
 
-This page has my knowledge sharing about Traktor, Mappings, Hardware, DJing, DJ Set, etc.
+This page has my knowledge sharing about Traktor, Mappings, Hardware, DJing, DJ Set, etc.\
 The picture below summarizes the main ideas and dependencies explained in these blog posts.
 ![traktor_mindmap](various/traktor_mindmap.png?raw=true "Traktor Mindmap")
 
@@ -238,9 +238,9 @@ Of course that If you are a 100% scratch DJ, then you should look for a native H
 But for the extreme vast majority of DJs I know, this solution is more than enough.
 
 Some relevant points:
-* Scratching is the [least important reason for my jogwheels](#why-i-like-big-mechanical-jogwheels)
+* Scratching is [only the 5th criteria for my jogwheels](#why-i-like-big-mechanical-jogwheels)
 * The [latest DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping) helps a lot. You can now can see the jog needle and your hand simultaneously.
-* Pioneer has sold products with this solution for many years [example](https://www.pioneerdj.com/en/support/software-information/archive/ddj-sz/#traktor)
+* Pioneer has sold products with this solution for many years ([example](https://www.pioneerdj.com/en/support/software-information/archive/ddj-sz/#traktor))
 
 
 ## Why is DDJ-1000 my hardware of choice
