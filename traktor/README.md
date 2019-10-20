@@ -215,7 +215,7 @@ In my view the mappings are a unique sucess story of Traktor. This could continu
 
 In importance order:
 
-* **A) Arrays**: [forum request](https://www.bome.com/support/kb/mt-pro-script-arrays)
+* **A) Arrays**: [forum request](https://www.bome.com/support/kb/mt-pro-script-arrays). See also Bug#3 from the FAQ file.
 * **B) Cascaded devices**: [forum request](https://www.bome.com/support/kb/cascaded-presets-loopback-devices)
 * **C) More variables**: this is a lot more than Traktor, but still not enough as I'm emulating arrays
 
