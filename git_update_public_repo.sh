@@ -36,8 +36,11 @@ function copy_mapping_files()
   local root_dst="$2"
 
   rsync -av --progress  --delete "${root_src}/" "${root_dst}"
-  rm  --verbose "${root_dst}"/*.tsi    #,TSI}
   
+  #set -x
+  
+  # note: this will fail on purpose using "set -e"
+  rm --verbose "${root_dst}"/*.tsi
   
 }
 
@@ -57,9 +60,9 @@ function do_banner()
 
 
 # 
-do_bin_files=0
+do_bin_files=1
 do_mapping_files=1
-do_git_operations=0
+do_git_operations=1
 
 
 
@@ -118,6 +121,8 @@ if [ $do_mapping_files -ge 1 ]; then
 fi  
 
 if [ $do_git_operations -ge 1 ]; then
+  do_banner "DOING GIT OPERATIONS"
+  
   git pull
   #git diff
   git status
