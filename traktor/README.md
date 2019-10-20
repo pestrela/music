@@ -209,7 +209,7 @@ https://maps.djtechtools.com/mappings/9279
 
 In my view the mappings are a unique sucess story of Traktor. This could continue to give great results with just some quality-of-life improvements.
 
-## Some Limitations of doing BOME mappings
+## Some Limitations of BOME mappings
 
 [BOME](https://www.bome.com/products/miditranslator) is essential to [build my new mappings](#Why-I-moved-to-BOME-midi-mapping-Impossible-features). But it also have some improvement points.
 
