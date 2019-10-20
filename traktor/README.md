@@ -18,7 +18,7 @@
 * [BOME migration](#BOME-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
-  * [How I see the future of Traktor mappings](How-I-see-the-future-of-Traktor-mappings)
+  * [How I see the future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
 
 * [Hardware Controllers](#Hardware-Controllers)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
@@ -27,10 +27,9 @@
 
 * [Custom Mappings](#Custom-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
-  * [What are the features of your Traktor mappings?](#section-id-293)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
-    * [DDJ-SX2 / DDJ-SZ mapping](#section-id-327)
-    * [AKAI AMX Traktor mapping](#section-id-354)
+    * [DDJ-SX2 / DDJ-SZ mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
+    * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
   * [Can I see a video demo of your mappings?](#can-i-see-a-video-demo-of-your-mappings)
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
@@ -179,7 +178,7 @@ See also the [most popular DJ softwares census](../census_graphs).
 
 ## Why I moved to BOME midi mapping: Impossible features
 
-As [explained above](#Why-is-Traktor-my-software-of-choice:-c)-Advanced-MIDI-mapping-and-Lots-of-FX), Traktor mapping rocks. However it lacks essential features required on the [DDJ-1000 screens mapping](ddj_1000_traktor_mapping).
+As [explained above](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx), Traktor mapping rocks. However it lacks essential features required on the [DDJ-1000 screens mapping](ddj_1000_traktor_mapping).
 
 * **#1: 14-bit out messages**: Trakor supports *receiving* high resolution midi messages. I need to *send* them as well [on my DDJ-1000 mapping](../ddj/1%20MIDI%20codes/DDJ-1000RB%20-%20MIDI%20Messages.pdf)
 * **#2: Sequence of Events**: For PadFX, I *first* need to change the FX, and *then* need to turn it on. This is not something Traktor support; both actions are tried simultaneously resulting in something else. More info: page 88 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
@@ -190,7 +189,6 @@ As [explained above](#Why-is-Traktor-my-software-of-choice:-c)-Advanced-MIDI-map
 ## Why I moved to BOME midi mapping: Traktor Limits
 
 Also, I've also hit the limits of Traktor mappings multiple times. Below are the features that are possible in Traktor but only by significantly increasing the mapping complexity.
-
 
 * **A) More modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings.
 * **B) More conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
@@ -210,6 +208,17 @@ For example in my DDJ-1000 mapping I had to use BOME midi translator as a middle
 https://maps.djtechtools.com/mappings/9279
 
 In my view the mappings are a unique sucess story of Traktor. This could continue to give great results with just some quality-of-life improvements.
+
+## Some Limitations of doing BOME mappings
+
+[BOME](https://www.bome.com/products/miditranslator) is essential to [build my new mappings](#Why-I-moved-to-BOME-midi-mapping-Impossible-features). But it also have some improvement points.
+
+In importance order:
+
+* **A) Arrays**: [forum request](https://www.bome.com/support/kb/mt-pro-script-arrays)
+* **B) Cascaded devices**: [forum request](https://www.bome.com/support/kb/cascaded-presets-loopback-devices)
+* **C) More variables**: this is a lot more than Traktor, but still not enough as I'm emulating arrays
+
 
 # Hardware Controllers
 
@@ -273,6 +282,17 @@ Note: the S4mk3 is a fantastic controller - I have recommended it to several peo
 The overall integration is better, of course, which is a plus if you prefer plug-and-play vs customization. 
 \
 But in the end its really the big jogswheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
+
+## Comparison to DDJ-SZ1 and AKAI AMX
+
+Besides [my DDJ-1000](#why-is-ddj-1000-my-hardware-of-choice), I have several other controllers fully [mapped to Traktor](#What-are-your-main-Traktor-mappings). Differences are:
+
+DDJ-SZ1:
+* Very spacious
+
+
+
+
 
 
 # Custom Mappings
