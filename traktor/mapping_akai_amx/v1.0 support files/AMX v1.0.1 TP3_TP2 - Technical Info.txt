@@ -1,0 +1,529 @@
+
+URLs to relevant Mappings:
+--------------------------
+- Dj_Estrela:
+  - DJTT: https://my.djtechtools.com/users/830428
+  - YT:   https://www.youtube.com/user/djestrela2/videos
+  - FB:   https://www.facebook.com/pedro.vale.estrela
+	
+- Stewe:
+  - DJTT: https://my.djtechtools.com/users/3776
+	- FB:   https://www.facebook.com/TRAKTOR-mappings-212701598798065/
+	- YT:   https://www.youtube.com/user/vstijah/videos
+	- WWW:  http://traktormappingservice.com/index.html#about]
+	
+	
+
+History Overview / Future plans:
+--------------------------------
+	- I’m maintaining the most advanced traktor mapping made for the AKAI AMX, made by STEWE 
+		(v0.2.0, the map with the most functions and most downloads). 
+
+	- v0.3.0 of this mapping added a lot of functions. This version was never released.
+
+	- v1.0.0 added support for Traktor Pro 3 features: MixerFX and reverse Flux; 
+  Also added was a resonant filter and a Preview player
+	
+
+AKAI AMX mapping Change Log:
+------------------------------
+V1.0.1 - July 2019 - dj_estrela:
+	- Maintenance release: 
+	  - New feature: reverse crossfader (SH1+CF=No CF; SH2+CF=Normal CF; SH3+CF=Rev CF)
+	  - Fixed beatjump bug (SH2+BRW)
+		- Fixed Beatmasher combo for right deck (SH1+PN; LD2+SY2+CU2...)
+		
+	- URL:
+		- DJTT: https://maps.djtechtools.com/mappings/9323
+
+v1.0.0 - MArch 2019 - by dj_estrela:
+	- new features: 
+	  - TraktorPro3 Mixer FX
+	  - TraktorPro3 Reverse Slip
+		- Preview Player
+		- BeatGrid control
+		- Resonant Filter (dedicated FX3+4 because of TP2 FX select glitch)
+		- Sampler
+		
+	- URL:
+		- DJTT: https://maps.djtechtools.com/mappings/9323
+		- YT:   https://www.youtube.com/watch?v=TzAgENM55DE
+		- FB:   https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2271291466256713
+
+		
+V0.3.0 - August 2018 - dj_estrela:  (not released)
+	- New features:
+		-	Beatjump, Loop move (both with custom sizes)
+		-	Macro FX
+		-	FilterRoll effect
+		-	Sample control
+		-	Reverse slip
+		-	Safety: safe load, safe  crossfader
+		-	Browser: page up/page down, favorites, search
+		-	Transport: tempo set, pitch bend
+		-	Other: zoom, deck select, layout select, options
+
+	- URL:
+		- YT: https://www.youtube.com/watch?v=bZMWppDiqw8
+		- Filter Roll: https://www.youtube.com/watch?v=fRWOgBHNtF8
+		
+V0.2.0 - April 205 - by Stewe: 
+  - Features:
+	  -	4 Decks full control
+	  -	6 HotCues
+	  -	Loop control
+	  - 5x pages of “Instant-grat FX”
+	  -	SuperFilter (= crossfader+filter)
+
+	- URL:
+    - DJTT: https://maps.djtechtools.com/mappings/4397
+		
+
+
+
+TSI - all pages - Layer navigation:
+-----------------------------------
+			
+	MAIN PAGE: 
+	----------
+													 M1=0
+														 Z 
+														 Z 
+						M1=2  -Left-  ((M1=6))  -Right-  M1=3
+							M              M                M
+						M1=4 	          M1=1             M1=7
+							
+				
+	OTHER PAGES:
+	------------
+														 M1=0     	
+															Z	
+															Z              M4=6      	
+															Z               M        					
+					 M4=7          (((M1=6))  -----> ((M4=2))  (Macro FX)			                
+						 |                |     <-----    |                                    
+						 |                |               |  
+		 <---((M4=4) (Pad FX)     |               |
+					 	 |                |               |   
+					 M4=1    <-------  M=1              |
+						 |                                |  
+						 | ---------------------------> M4=3        
+						 | <---------------------------
+
+
+	MAIN PAGES (NORMAL):
+		M1=6 / M4=2 / M4=4	
+
+	MAIN PAGES (LOCKED):
+    M1=5 / M4=5	
+
+
+M1/M4 state machine:		 
+--------------------
+   M1: main shifts 
+	   0: INIT
+	 
+     1/2/3: main shift, left shift, right shift
+		 4,7: delete hot cues
+		 
+		 5 ------->>> EXTENDED!
+     6: Main Page, nothing pressed
+		 
+   m4: SECOND PAGE
+	   0: INIT
+		 
+   	 1: PFX panel, M shift
+		 2: MFX panel, main
+		 3: MFX panel, M shift
+     4: PFX panel, main
+     
+		 5 ------>>> EXTENDED
+     
+		 6: PFX, L+R shift
+		 7: MFX, L+R shift
+		 
+		 
+		MIDI codes:
+		-----------
+			panel: 1 note c#-1
+		
+			search left: 1 note D-1  
+			main shift: C-1
+			search right: 1 note D#-1
+
+			
+		LOCKED STATES: 
+		--------------
+      M1=0     INIT    (only 4x per page!)		  
+		  M1=5     LOCK
+			M4=5     LOCK
+
+			
+		INIT/DEADLOCK:
+		--------------
+		    (init): M1=0, M2=0, M3=0, M4=0   -> shift ->  ...
+        (procedure): press shift, press panel 3x 
+				(FIX: move state zero to locked)
+		    (deadlock): M1=5 & M4=5  -> M1=0  (and keep M4=5!)
+			
+				
+
+TSI page #1 - Main pages, PadFX, etc:
+-------------------------------------
+   m2: left side selection
+     0 - unassigned, waiting for input, resets all deck values
+ 	   1/2/3/4 - deck A/B/C/D
+		 5 – same as “0”, but doesn’t reset deck values
+	 
+   m3: right side selection
+     (same as m2, but for right side)
+	
+	
+   m5: beatmasher super combo FX1 
+      0 = NOT USED
+		
+      1 = ARMED. No button pressed   
+			2 = 1x pressed (any)
+      3 = 2x pressed
+      ...
+      5 = all pressed -> activates super combo
+
+			7 = NOT ARMED (we are on another SUB-PAGE / another MODE)
+      
+    	(TODO 20190726: 
+        M5 is now shared between A and B. Pressing the other side buttons kicks the hidden combo. releasing keeps a betmasher running (easy to cancel))
+		 
+   m6: FREE
+	 
+   m7 = left  super-FX PAGE  (0..5)
+   m8 = right super-FX PAGE  (0..5)
+	
+		TODO: merge left and right beatmasher modifiers
+
+		
+		
+TSI page #2 - PREVIEW PLAYER / BROWSER / HEADPHONE CUES:
+--------------------------------------------------------
+  m1..m4 = same as main page
+
+	
+	M5: preview player / JFX in progress?
+	  0: nothing
+		1: browser pressed -> preview player (hold)
+		2: touch on -> JFX (hold)
+	
+	m6: left+right headphone (shared)
+	  0 - OFF / OFF
+		1 - ON  / OFF
+		2 - OFF / ON 
+		3 - ON  / ON
+	
+	
+	M7: LOAD modifiers (for BROWSER)
+			2: left mod
+			4: right mod
+			6: both mod
+
+	M8: FREE 	 
+				
+		
+		
+TSI page #3 - MFX / RESONANT FILTER / JOG_FX:
+---------------------------------------------
+	M1..M4 = same as main page
+
+	m5: MFX mode   (touch button)  - shared on both decks!
+		0 = Resonant_filter OFF
+		3 = MFX             OFF 
+		4 = MixerFX         OFF
+
+		2 = Resonant_filter ON 
+		1 = MFX             ON
+		5 = MixerFX         ON
+		6 = MixerFX         (SELECTING)    
+		 
+		(note: this complexity is required because we select mixerFX using filter itself)
+		
+	m6: JogFX and Filter roll enabled
+	
+	m7: free
+	
+	M8: USER MFX selection  (permanent. This is just for the LED)
+
+
+	Toggle functionality:
+	 reset =-> filter on
+
+	resonant filter: implementation
+	
+	
+	MFX Building block:
+	-------------------
+	  direct:  (alphabetical sort)
+		 - button #3 ON, other 2x OFF (FX3+4)
+		 - dry/wet = 0
+		 - effect #3 = iceverb, other 2x none
+		 - FX store preset
+		 - FX3 routed to A; FX4 routed to B   (others OFF)
+		 - mode = group mode
+		 - all 2x knobs = 0.5
+	   - modifier #8 value set
+		 
+	  invert:
+		 - store preset
+		 - dry wet = 100%
+		
+	todo:
+	  cores out
+		led out no M4=2
+		
+		
+		
+TSI page #4 - USER-SELECTED FX: 
+-------------------------------
+   main shift: echo, flanger, reverb
+	 left/right shift: custom MFX  (as of today)
+	 right shift only: custom FX (permanent)
+
+  features:
+    - user FX
+    - user macro FX
+
+  disabling of FX units:
+   MFX page
+	 PFX: always
+	 main page: after MFX
+
+	
+  Modifiers:
+   M1..M4 = same as main page
+	 
+   M5 = custom MFX:  left OR right shift pressed  <<< to simplify!    (additional condition: correct state)
+   M6 = custom MFX:  auto de-activate MFX   (on main page only)
+
+	 M7 = 3FX dry/wet setting  (left side)
+	   0: none selected
+		 1: echo
+		 2: flanger
+		 3: reverb
+	 M8 = same (right side)
+	
+
+	
+		
+TSI page #5 -	VARIOUS:  BEATGRID / FILTER ROLL / DECK INIT / FX HACK LIST / SAMPLE DECK:
+----------------------------------------------------------------------------------------
+	Modifiers:
+	----------
+ 	  - M1..M4: same as main page
+
+		- m5: JogFX and Filter roll enabled
+		
+		- m6: filter roll in progress   (shared)
+		   0: none
+			 1: deck 1
+			 2: deck 2
+			 3: deck 2
+			 4: deck 4
+		
+		- m7: tracks position of the LEFT filter knob
+				0 = left filter: is on negative angle 
+				7 = left filter: is on positive angle
+		- M8: tracks position of the RIGHT filter knob
+				0 = right filter: is on negative angle 
+				7 = right filter: is on positive angle
+
+
+FILTER ROLL DISCUSSION:
+-----------------------
+ - Serato:
+   - touching top: nothing
+	 - marginal movement: nothing
+	 - small movement: does 1/2 roll, with 1/2 quantize.
+	 - maximum turn: till 1/16
+	 - release touch: filter still applied
+	 - re-touch: continue on existing loop position (eg, 1/4)
+	 
+	 
+try:
+ 0: start
+   1: seem 0
+	 2: seem 7
+	 
+	 3: armed
+	 
+	 4: touched
+	 5: seem 0
+	 6: seem 7
+	 7: done
+	 
+	 
+ 1: touched filter
+ 2: moved to left
+ 3: moved to right - armed for next touch
+ 
+	 
+	 
+AMX MIDI CODES:
+---------------
+  (all buttons are always on channel 1)
+  (from bottom to top)
+
+  CROSSFADER CURVE:   1 CC 049
+  CROSSFADER ITSELF:  1 CC 033 + 1.CC.00
+  CROSSFADER REVERSE: 1 CC 58
+
+  LEFT FADER: 	 	1 cc 039 + 1 cc 007
+  RIGHT FADER:		1 cc 043 + 1 cc 11
+  PFL CUE LEFT: 	1 note C0
+  PFL CUE RIGHT:	1 note C#0
+  
+  MASTER VOLUME:	1 cc 50
+  CUE MIX: 				1 cc 55
+  CUE GAIN: 			1 cc 51
+
+  PANEL:        1 note c#-1    <<<<<<
+  SEARCH LEFT:  1 note D-1  
+  MAIN SHIFT:   1 note C-1     <<<<<<
+  SEARCH RIGHT: 1 note D#-1
+ 	TOUCH ENABLE: 1 note c#1
+ 
+	---
+  FILTER LEFT: 1 cc 47 + 1 cc 15
+  BASS LEFT:   1 cc 40 + 1 cc 8
+  MID LEFT:    1 cc 41 + 1 cc 9
+  HIGH LEFT:   1 cc 42 + 1 cc 10
+  GAIN LEFT:   1 cc 60
+	
+  FILTER RIGHT: 1 cc 48 + 1 cc 16
+  BASS RIGHT:   1 cc 44 + 1 cc 12
+  MID RIGHT:    1 cc 45 + 1 cc 13
+  HIGH RIGHT:   1 cc 46 + 1 cc 14
+  GAIN RIGHT:   1 cc 61
+  
+	--
+  LOAD LEFT: 		1 note E-1
+  SYNC LEFT: 		1 note F#-1
+  CUE LEFT:  		1	note G#-1
+  PLAY LEFT:		1 note A#-1
+    
+  LOAD RIGHT:   1 note F-1
+  SYNC RIGHT:   1 note G-1
+  CUE RIGHT:    1 note A-1
+  PLAY RIGHT:   1 note B-1
+ 
+	--
+  BROWSER TURN:  1 CC   59
+  BROWSER PRESS: 1 note D1
+
+	
+	TOUCH ENABLE:       1 note C#1
+  TOUCH LEFT HIGH:    1 note F0
+  TOUCH LEFT MID:     1 note G0 
+  TOUCH LEFT LOW:     1 note A0
+  TOUCH LEFT FILTER:  1 note B0
+  TOUCH RIGHT HIGH:   1 note F#0
+  TOUCH RIGHT MID:    1 note G#0
+  TOUCH RIGHT LOW:    1 note A#0
+  TOUCH RIGHT FILTER: 1 note C1
+  TOUCH BROWSE:       1 note D0	
+	
+
+	
+MIDI OUT-ONLY LEDS (next to the volume faders):
+-----------------------------------------------
+	ch01.CC.C#-1 – LED panels (0..127)
+
+	CC 64 – LED left side PFL
+	CC 62 – LED left side MAIN
+	CC 63 – LED right side MAIN
+	CC 65 – LED right side PFL
+		All are: fader, 0..80 blend
+
+	Loop size: ½->16  (4..9) (0..97)  (62/63) blend
+	
+	Seek Position: (62/63)  (0..127), with blend
+
+	0  – off; 
+	1  - first led, ligt; 20: full; 
+	21 – second start...
+	41 – third led 
+	61 – fourth led
+	81 - last led
+
+	
+AMX firmware state machines:
+----------------------------
+
+- Touch enable:
+  - hold style - sends note off on second press
+
+	- midi codes:
+		- TOUCH ENABLE:       1 note C#1  
+
+
+- HeadPhones:
+  - Summary: headphone lights can be disabled during preview player, but the internal state machine is not updated. 
+
+  - firmware control:
+		- FW keeps track of current headphone. If pressing "other", it sends "off" on the "first".
+		- lights are managed by the firmware as well
+	 
+	- software control:
+		- lights react to commands sent by software (ON/OFF)
+		- ISSUE: state machine is not updated in this case!
+		- WORKAROUND: state machine is replicated on traktor when doing preview player, so that the situation is restored properly
+		
+  - midi codes:
+		- PFL CUE LEFT: 	1 note C0
+		- PFL CUE RIGHT:	1 note C#0
+		
+	
+Encoders - ALL are 7Fh/01h:
+-----------------------
+  BROWSER TURN:  1 CC 59       7Fh/01h
+  GAIN LEFT:     1 cc 60       7Fh/01h
+  GAIN RIGHT:    1 cc 61       7Fh/01h
+  
+  
+
+Traktor Bugs / Caveats:
+-----------------------
+ - Options to button-style:
+   - Hold: 127 -> on / 0 -> off
+   - Direct: 127 -> on; 0: nothing 
+   - Inc: 127: 127-> +1; 0 -> nothing
+  
+ - LED-out operation:
+   - example for modifier1:
+		 - controller range:  MIN:1  MAX:2
+		 - midi range:        MIN:0  MAX: 127
+	 - rules without conditions are always applied (+blend):
+   	 - value <= tk MIN                    -> send midi MIN
+   	 - controller MIN  < value <= tk max  -> send midi MAX
+		 - tk MAX  < value                    -> send midi MAX
+		 
+   
+		 always applied: value <=min -> midi min
+	
+ - How to avoid some Traktor bugs:
+   - 1x page with all "select directs". This is to force the whole FX list
+	 - CMDR bug: assumes endless encoder is per page (7Fh/01h behavior) -> is per page/per unique knob 
+	
+ - CMDR TP3 missing commands:
+   - to create page:
+	   - slip reverse = ok
+		 - reverse = change to toggle
+   - to create mapping:
+		 - import TSI
+		 - delete page
+		 - add page
+		 - export TSI
+
+
+	- settings to export:
+	  - Controllers
+		- GUI
+		- Audio device settings
+		- FX
+		- Other
