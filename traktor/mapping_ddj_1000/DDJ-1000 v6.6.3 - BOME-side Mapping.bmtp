@@ -7,10 +7,10 @@ In0=From Traktor
 Out0=To DDJ
 In1=From DDJ
 Out1=To Traktor
-
 [Preset.0]
 Name=INIT / MASTER CLOCK
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=OPEN PROJECT
 Incoming0=EnDi02
@@ -60,10 +60,10 @@ Name11=CLOCK TICK
 Incoming11=Tim0TimT000Cmaster_clock
 Outgoing11=None
 Options11=Actv01Stop00OutO00StMa00000001hz=hz+1
-
 [Preset.1]
 Name=DEBUG CLOCK
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=STOP CLOCK
 Incoming0=KAM10000KSQ1000601101005A25A210211
@@ -117,10 +117,10 @@ Name12=------
 Incoming12=None
 Outgoing12=None
 Options12=Actv01Stop00OutO00
-
 [Preset.10]
 Name=MAIN CH2
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=RESET SCREENS
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1" Type="New Version Required"/><Value1 num="77" Type="New Version Required"/><Value2 num="0" setvar="oo" Type="New Version Required"/></Simple></Incoming>
@@ -342,10 +342,10 @@ Name54=FALLTROUGH
 Incoming54=Tim0TimT0007calc2_d
 Outgoing54=Tim0TimS000Bcalc_clock21:0:1
 Options54=Actv01Stop00OutO00
-
 [Preset.11]
 Name=SEEK CH2
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=----
 Incoming0=None
@@ -435,15 +435,15 @@ Name21=----
 Incoming21=None
 Outgoing21=None
 Options21=Actv00Stop00OutO00
-
 [Preset.12]
 Name=------
 Active=0
+Comments=
 PresetSwitchIgnore=0
-
 [Preset.13]
 Name=Experiments
 Active=0
+Comments=
 PresetSwitchIgnore=0
 Name0=SYNC ON
 Incoming0=KAM10000KSQ10004011051251211
@@ -473,25 +473,25 @@ Name6=show hide
 Incoming6=KAM10000KSQ10004011059259211
 Outgoing6=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x5D"/><Value2 num="0x7F"/></Simple></Outgoing>
 Options6=Actv01Stop00OutO00
-
 [Preset.14]
 Name=------
 Active=0
+Comments=
 PresetSwitchIgnore=0
-
 [Preset.15]
 Name=------
 Active=0
+Comments=
 PresetSwitchIgnore=0
-
 [Preset.16]
 Name=------
 Active=0
+Comments=
 PresetSwitchIgnore=0
-
 [Preset.17]
 Name=DBG - CH1
 Active=0
+Comments=
 PresetSwitchIgnore=0
 Name0=-------
 Incoming0=None
@@ -593,10 +593,10 @@ Name24=-------
 Incoming24=None
 Outgoing24=None
 Options24=Actv01Stop00OutO00
-
 [Preset.18]
 Name=DBG - CH2
 Active=0
+Comments=
 PresetSwitchIgnore=0
 Name0=-------
 Incoming0=None
@@ -682,10 +682,10 @@ Name20=-------
 Incoming20=None
 Outgoing20=None
 Options20=Actv01Stop00OutO00
-
 [Preset.19]
-Name=DBG - from DDJ 
+Name=DBG - from DDJ
 Active=0
+Comments=
 PresetSwitchIgnore=0
 Name0=Debug - DDJ->TK NOTE ON
 Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="Any"/><Value1 num="0x00" Type="Any"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
@@ -699,15 +699,15 @@ Name2=Debug - DDJ->TK CC
 Incoming2=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="ControlChange"><Channel num="0" Type="Any"/><Value1 num="0x00" Type="Any"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
 Outgoing2=None
 Options2=Actv01Stop00OutO01
-
 [Preset.2]
 Name=------
 Active=0
+Comments=
 PresetSwitchIgnore=0
-
 [Preset.20]
 Name=DBG - from TK
 Active=0
+Comments=
 PresetSwitchIgnore=0
 Name0=Debug - TK->DDJ NOTE ON
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="NoteOn"><Channel num="0" Type="Any"/><Value1 num="0x00" Type="Any"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
@@ -721,10 +721,10 @@ Name2=Debug - TK->DDJ CC
 Incoming2=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0" Type="Any"/><Value1 num="0x00" Type="Any"/><Value2 num="0x00" Type="Any"/></Simple></Incoming>
 Outgoing2=None
 Options2=Actv01Stop00OutO01
-
 [Preset.3]
 Name=NEEDLE CH1
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=DDJ IN - Toggle Vinyl DOWN
 Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="23" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
@@ -830,10 +830,10 @@ Name25=-----------
 Incoming25=None
 Outgoing25=None
 Options25=Actv00Stop00OutO00
-
 [Preset.4]
 Name=BLINK CH1
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=END WARNING
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x52"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
@@ -883,10 +883,10 @@ Name11=-----------
 Incoming11=None
 Outgoing11=None
 Options11=Actv00Stop00OutO00
-
 [Preset.5]
 Name=MAIN CH1
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=RESET SCREENS
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="0" Type="New Version Required"/><Value1 num="77" Type="New Version Required"/><Value2 num="0" setvar="oo" Type="New Version Required"/></Simple></Incoming>
@@ -1104,10 +1104,10 @@ Name53=FALLTROUGH
 Incoming53=Tim0TimT0007calc1_d
 Outgoing53=Tim0TimS000Bcalc_clock11:0:1
 Options53=Actv01Stop00OutO00
-
 [Preset.6]
 Name=SEEK CH1
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=----
 Incoming0=None
@@ -1193,15 +1193,15 @@ Name20=----
 Incoming20=None
 Outgoing20=None
 Options20=Actv00Stop00OutO00
-
 [Preset.7]
 Name=--------
 Active=0
+Comments=
 PresetSwitchIgnore=0
-
 [Preset.8]
 Name=NEEDLE CH2
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=DDJ IN - Toggle Vinyl DOWN
 Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="23" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
@@ -1327,10 +1327,10 @@ Name30=-----------
 Incoming30=None
 Outgoing30=None
 Options30=Actv00Stop00OutO00
-
 [Preset.9]
 Name=BLINK CH2
 Active=1
+Comments=
 PresetSwitchIgnore=0
 Name0=END WARNING
 Incoming0=MID3<Incoming Action="MIDI"><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x52"/><Value2 var="oo" Type="SetVar"/></Simple></Incoming>
@@ -1376,7 +1376,6 @@ Name10=-----------
 Incoming10=None
 Outgoing10=None
 Options10=Actv00Stop00OutO00
-
 [Project]
 Version=2
 Author=Pedro Estrela
@@ -1386,8 +1385,7 @@ AuthorWWW=www.djestrela.com
 AuthorCopyright=Pedro Estrela
 DefaultInPorts=MIDA0001000CFrom Traktor
 DefaultOutPorts=MIDA00010006To DDJ
-
 [Signatures]
 SigName-1=[Midi Translator Pro Internal]
-Signature-1=BZ/RbuCZOd7/WXKnqqCXOwEycuHIcGYs28MMGYWMkG22nXn0jI9GK6rxVBx5bMyeBGGo4iD6XeX5VRWEbpmjzNW1+EpXIR5kqIFf/eKTqysIPN6WmAyKxKzM1svCHdYC5skghTvZUz80Be8fejbyFmZkGFyBbBNSa2UETqntimA=
+Signature-1=uOFPXrQ/x7D7W7DMmar3VoBcozWtecXf7pLiCxB31SPqX1R05vTyMbYm2NDAucJdZ62Kj1+ZgZ+7Q27oiJeXLuulT8iYBuPE69w4UbTCMqQ4toYAtr+wKgNW4XZz84J8gt8o2kXC46IFwbraFdal94Oo+YQYSN10MfElkVyOfN0=
 SignedBy-1=Pedro Estrela

@@ -6,35 +6,36 @@ Height=304
 [Current]
 DontShowSaveInfo=Y
 ColumnWidthOptions=150
-PresetInstallVersion=1.8.3.892
+PresetInstallVersion=1.8.4.953
 DontAskForClose=Y
-ColumnWidthIn=390
+ColumnWidthIn=221
 ColumnWidthName=164
 MainMaximized=N
-ProjectPanelWidth=134
-AutoStart=N
-MainLeft=292
+ProjectPanelWidth=229
+AutoStart=Y
+SettingsFilename=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.6.0 - DDJ-1000 - TP3_TP2 BOME\DDJ-1000 v6.6.2 - BOME-side Settings.bmts
+MainLeft=177
 DontAskForDeleteTranslator=Y
 DoNotShowLoggerWarning=Y
 OneInstance=Y
-VirtualMidiShortNames=Y
+VirtualMidiShortNames=N
 MainHeight=1038
-LastProjectDir=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.5.0 - DDJ-1000 - TP3_TP2 BOME
+LastProjectDir=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.6.0 - DDJ-1000 - TP3_TP2 BOME
 MainWidth=1637
-DontShowSaveNoPortsWarning=Y
 VirtualMidiPortsCount=1
+DontShowSaveNoPortsWarning=Y
 ShowLoggerForm=Y
-MainEditorPanelWidth=384
-CurrentVersion=1.8.3.892
+MainEditorPanelWidth=529
+CurrentVersion=1.8.4.953
 DontAskForDeletePreset=Y
 ColumnWidthOut=438
-MainTop=-11
+MainTop=13
 EventMonitor=Y
-MainLTabPanelHeight=515
+MainLTabPanelHeight=491
 EditWindowIndex=2
 VirtualMidiPorts=Y
 ShowEditWindow=Y
-CurrentProject=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.5.0 - DDJ-1000 - TP3_TP2 BOME\DDJ-1000 v6.5.0 BOME - Main File - please run before traktor.bmtp
+CurrentProject=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.6.0 - DDJ-1000 - TP3_TP2 BOME\DDJ-1000 v6.6.3 - BOME-side Mapping.bmtp
 FirstTime=0
 
 [EditWindow]
@@ -74,7 +75,7 @@ Left=681
 Height=363
 
 [LogWindow]
-LogMidiOut=N
+LogMidiOut=Y
 Height=363
 LogOut=N
 Left=681
@@ -83,39 +84,31 @@ Timestamps=N
 LogRules=N
 Top=359
 LoggerStarted=Y
-LogMidiIn=N
+LogMidiIn=Y
 Width=558
 IsDialog=N
 
 [MIDI.alias]
-Name0=Bome MIDI Translator 1 Virtual In
-Device0=1:Bome MIDI Translator 1 Virtual In
-Name1=DDJ-1000
-Device1=1:DDJ-1000
-Name2=Bome MIDI Translator 1 Virtual Out
-Device2=2:Bome MIDI Translator 1 Virtual Out
-Name3=DDJ-1000
-Device3=2:DDJ-1000
-Name4=To DDJ
-Device4=2:DDJ-1000
-Name5=From Traktor
-Device5=1:Bome MIDI Translator 1 Virtual In
-Name6=From DDJ
-Device6=1:DDJ-1000
-Name7=To Traktor
-Device7=2:Bome MIDI Translator 1 Virtual Out
+Name0=To DDJ
+Device0=2:DDJ-1000
+Name1=From Traktor
+Device1=1:Bome MIDI Translator 1 Virtual In
+Name2=From DDJ
+Device2=1:DDJ-1000
+Name3=To Traktor
+Device3=2:Bome MIDI Translator 1 Virtual Out
 
 [MIDI.in]
-Name0=Bome MIDI Translator 1 Virtual In
-Options0=FTTF44494D42T
-Name1=DDJ-1000
-Options1=FTFF4944494DT
+Name0=DDJ-1000
+Options0=FTFF4944494DT
+Name1=Bome MIDI Translator 1 Virtual In
+Options1=FTTF44494D42T
 
 [MIDI.out]
-Name0=Bome MIDI Translator 1 Virtual Out
-Options0=TF44494D42T
-Name1=DDJ-1000
-Options1=FF4944494DT
+Name0=DDJ-1000
+Options0=FF4944494DT
+Name1=Bome MIDI Translator 1 Virtual Out
+Options1=TF44494D42T
 
 [MIDIAction]
 MIDIOutActionValue2Expanded=Y
@@ -136,11 +129,11 @@ File4=
 File3=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\BOME Screens\DDJ 1000 Screens - BOME main file - v0.41.bmtp
 File2=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\BOME Screens\DDJ 1000 Screens - BOME main file - v0.40.bmtp
 File1=
-File0=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.5.0 - DDJ-1000 - TP3_TP2 BOME\DDJ-1000 v6.5.0 BOME - Main File - please run before traktor.bmtp
+File0=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.6.0 - DDJ-1000 - TP3_TP2 BOME\DDJ-1000 v6.6.3 - BOME-side Mapping.bmtp
 
 [SettingsWindow]
-Width=558
-Top=359
-Left=681
-Height=363
+Width=560
+Top=187
+Left=1023
+Height=391
 
