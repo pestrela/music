@@ -638,7 +638,8 @@ Concrete steps:
 ## How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS
 
 I have **all** my Traktor files synchronized between laptops. This includes [100Gb of music](#why-i-manage-music-using-os-folders-only)
- and all Traktor files.\
+ and all Traktor files.
+ 
 I can use any laptop at any time, one at the time, and my whole collection is there fully analyzed. As my NAS is just another client, I get automatic RAID-0 backups as well.\
 In a nutshell this is like having everything inside your own private google drive, without size limits.
 
@@ -666,9 +667,7 @@ Steps were:
 
 **Warning:** do a manual backup first before changing your traktor files and music collection!
     
-[more info #1](https://www.resilio.com/blog/sync-hacks-how-to-use-bittorrent-sync-for-djs-and-producers)
-[more info #2](https://www.native-instruments.com/forum/threads/resilio-sync-synchronizing-traktor-libraries-across-computers.355599)
-[more info #3](https://www.native-instruments.com/forum/threads/syncing-traktor-across-multiple-computers-with-resilio-sync.348405)
+[more info #1](https://www.resilio.com/blog/sync-hacks-how-to-use-bittorrent-sync-for-djs-and-producers) / [more info #2](https://www.native-instruments.com/forum/threads/resilio-sync-synchronizing-traktor-libraries-across-computers.355599) / [more info #3](https://www.native-instruments.com/forum/threads/syncing-traktor-across-multiple-computers-with-resilio-sync.348405)
   
 
 ## What scripts and documentation did you built for Traktor?
