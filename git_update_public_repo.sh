@@ -89,7 +89,7 @@ mapping_1_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_
 mapping_1_root_dst="${root_dst_all}/traktor/mapping_ddj_1000"
 
 mapping_2_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.1.1 - DDJ-SX2_SZ - TP3_TP2"
-mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_SX2_SZ"
+mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_sx2_sz1"
 
 mapping_3_root_src="${mapping_all_root_src}/AKAI AMX/v1.0.1 - AKAI AMX TP2_TP3"
 mapping_3_root_dst="${root_dst_all}/traktor/mapping_akai_amx"
