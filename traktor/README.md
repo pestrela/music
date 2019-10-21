@@ -6,6 +6,8 @@
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
 
+  
+  
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
     * [database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
@@ -46,7 +48,7 @@
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
-  * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#How-I-synchronize-and-backup-my-whole-Traktor-structure-across-laptops-and-NAS)
+  * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [What scripts and documentation did you built for Traktor?](#What-scripts-and-documentation-you-built-for-Traktor)
 
      
@@ -76,7 +78,7 @@ Playlists are supported by all DJ softwares, but I find far easier to do it OS-f
 * **#1: Multiple views:** this allows me have many Windows Explorer windows open, and move files in-between them. Explorer windows are always available, and [now support tabs](http://qttabbar.wikidot.com/)
 * **#2:Grouping**: Folders can contain both sub-folders or files. I find this a very natural model to organize genres and sub-genres. It is also a proven mode, it was [was invented in the 1960s](https://en.wikipedia.org/wiki/Path_(computing)#History). Itunes a more bureaucratic model with 3 levels instead (folders -> playlists -> files). This 3-step model was later copied to all DJ softwares.
 * **#3:Easy file renaming:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip) 
-* **#4:Software Independence:** Using OS-folders you are independent of any possible DJ software, and also itunes. It also trivial to sync between DJ collections and make perfect backups to my NAS using [resilio sync](#How-I-synchronize-and-backup-my-whole-Traktor-structure-across-laptops-and-NAS). It is also trivial to load a whole genres to USB sticks to listen in cars.
+* **#4:Software Independence:** Using OS-folders you are independent of any possible DJ software, and also itunes. It also trivial to sync between DJ collections and make perfect backups to my NAS using [resilio sync](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
 See also [this blog post for more details on this workflow](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
   
@@ -632,7 +634,6 @@ Concrete steps:
   * ...
  
 
-[How I synchronize and backup my whole Traktor structure across laptops and a NAS](#How-I-synchronize-and-backup-my-whole-Traktor-structure-across-laptops-and-NAS)
 
 ## How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS
 
