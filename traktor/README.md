@@ -645,20 +645,24 @@ In a nutshell this is like having everything inside your own private google driv
 My folder structure is:
 * C:\Main - Contains all my private files
   * \Traktor - Whole folder synchronized by resilio sync
-    * \Root_dir  - All settings, stripes, etc go here
     * \Samples  - All samples go here
     * \Remix_sets - all remix sets go here
+    * \Root_dir  - All settings, stripes, etc go here
+      * \Logs
+      * \Stripes
+      * etc
     * \Music  - all my music goes here. Organization is [by genres](#why-i-manage-music-using-os-folders-only)
       * \Genre_1
       * \Genre_2
       * etc
       
 Steps were:
+* Install [resilio sync](https://www.resilio.com/individuals/)
 * Point your traktor root folder to "C:\Main\Traktor\Root_dir" (Settings / File / Directories / Root_dir)
 * Restart traktor
 * Do the same for samples and remix sets  (Settings / File / Directories / Samples | Remixe_sets)
 * Move your files to "C:\Main\Traktor\Music"
-* Install resilio Sync. Share the whole "C:\Main\Traktor" folder
+* Share the whole "C:\Main\Traktor" folder in resilio sync
 
 **Warning:** do a manual backup first before changing your traktor files and music collection!
     
