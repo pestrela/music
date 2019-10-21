@@ -49,10 +49,30 @@ All Demo Videos, Collected:
    - AMX v0.3 - old version - http://youtu.be/bZMWppDiqw8
    
 
-   
-DDJ-1000/SZ/SX2 mapping Change Log:
------------------------------------
+DDJ Mappings - Summary history:
+-------------------------------
 
+  V6.6.0 - DDJ-1000 - BOME - "CDJ-like features"
+  v6.5.0 - DDJ-1000 - BOME - First edition with JogScreens
+  v6.3.3 - DDJ-1000 - TK   - Last edition with traktor-only
+  v6.1.1 - DDJ-SX2  - TK   - Merged SX2 and SZ 
+
+	
+- v6.1.0 - Feb 2019 - First DDJ-SX2 release by DJ_Estrela (for TP3)
+
+- v6.0.0 - Aug 2018 - First DDJ-SZ release by DJ_Estrela (for TP2)
+
+- v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (for TP2)
+
+- v1.3.0 - Nov 2014 - Last DDJ-SX2 release by JAJA for TP2
+
+- v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (for TP2)	
+
+   
+   
+   
+DDJ Mapping ChangeLog - By DJ estrela:
+--------------------------------------
   V6.6.0 - September 2019 - "the CDJ edition"
   - Short summary:
      - CDJ-like features (loop IN/OUT, loop adjust, cue/Play blink, warning blink)
@@ -62,18 +82,17 @@ DDJ-1000/SZ/SX2 mapping Change Log:
      - Several bugfixes on the jog screens 
      
   
-  - New features:
+  - New features (detailed):
      - Loop: Loop section now works like CDJs via IN/OUT button. 4-beat loop and auto-loop is still there.
-     - Loop: Can now adjust the loop start/end with the jog. This is a major feature for 80s music (no beatgrids).  (shift+loop_in)
+     - Loop: Can now adjust the loop start/end with the jog. This is a major feature for eighties music (no beatgrids).  (shift+loop_in)
      - Loop: can now activate a saved loops (shift+auto_loop), and manually set loops (memory+auto_loop)
-     - Beatjump: Search buttons are now beatjump/loop move size. Shift+search does  beatjump/loop move; use memory+search to "move you by one beat" 
+     - Beatjump: Search buttons are now beatjump/loop move size. Shift+search does beatjump/loop move; use memory+search to "move you by one beat" 
      - Pad Beatjump: added whole new pad mode for manual beatjumps and autoloops
-     - End Warning: jog now blinks on end track warning like rekordbox. 
      - Keyboard: added a key shift page with 3x sub-modes: CUP mode, CUE mode and Play mode
      - Blink: Cue and play button now blink like CDJs. The Cue button blinks when you can redefine the temporary cue; the Play button blinks when the track is paused.
      - End warning: Jog ring now blinks when the track is ending. There is 3x urgency speeds.
 
-  - Bug fixes:
+  - Bug fixes (detailed):
      - Screens: Jog needle no longer starts playing by itself
      - Screens: Jog needle now resets when pressing hotcue
      - Screens: BPM now works with changing tempo range (shift+master_tempo)
@@ -81,7 +100,7 @@ DDJ-1000/SZ/SX2 mapping Change Log:
      - Decks 3&4: added MixerFX, Loops and Beatjump to deck 3&4. More functions will be ported gradually. See also the FAQ on this. Not yet covered: jogFX, padFX, macroFX
      - Layout: now has classic and parallel waveforms layouts (both 2 and 4 decks) 
      
-   - New selectable options:
+   - New selectable options (detailed):
      - Sync type: Can now select Traktor/Serato sync (shift+memory+beat_sync)
      - Cue monitor: Can now select internal/external cue monitor (shift+memory+cue_channel_1)
      - CrossFader: can now change crossfader curve (memory+crossfader)
@@ -161,6 +180,9 @@ DDJ-1000/SZ/SX2 mapping Change Log:
     - DJTT: https://maps.djtechtools.com/mappings/8671
     - YT:   http://youtu.be/H_TE2mtuM6Q
 
+    
+DDJ Mapping ChangeLog - By JaJA and Viper:
+------------------------------------------
 - v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (for TP2)
   - Features: 
 	  - JogFX, PadFX, Slicer, ...
@@ -178,7 +200,7 @@ DDJ-1000/SZ/SX2 mapping Change Log:
     - FB:   https://www.facebook.com/Artwork.Mapping.TSI
     - YT:   https://www.youtube.com/user/artworkmixs/videos
 
-- v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (for TP2)	
+- v0.9.4 - Sep 2014 - Last DDJ-SX1 by JAJA (for TP2)	
   - Features:
     - JogFX, ComboFX 	
   - URL:
@@ -186,11 +208,13 @@ DDJ-1000/SZ/SX2 mapping Change Log:
     - FB:   https://www.facebook.com/Artwork.Mapping.TSI
     - YT:   https://www.youtube.com/watch?v=L-biJ-nuwWc
 
+- v0.6.2 - December 2012 - Last DDJ-SX1 by Viper (for TP2)
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/851
+    - Blog: https://djtechtools.com/2014/03/19/10-unconventional-midi-mappings-designed-by-djtts-community/
+    - T_Bible: https://www.traktorbible.com/freaks/mappingview.aspx?id=528
     
-		
-
-
-        
+    
     
 		
 Pioneer Official mappings (All are now outdated):
@@ -390,17 +414,21 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 		1: TP3 mixerFX
 		2: Second macroFX
 		
-	M3: WHICH SPECIFIC FX IS ON, ON PAGE 1 (MFX)?
+	M3: WHICH SPECIFIC FX IS ON, ON PAGE 1 (Macro FX base + beatFX)?
  		0: inactive / unknown
 		1: MFX1
+    2: MFX2
+    3: MFX3
+    4: MFX4
+    5: MFX5
 		...
 		
-	M4: WHICH SPECIFIC FX IS ON, ON PAGE 2 (MIXERFX)?
+	M4: WHICH SPECIFIC FX IS ON, ON PAGE 2 (MIXER FX)?
 		0: inactive
     1: mixerFX1
     5: mixerFX5 = Filter
 		
-	M5: WHICH SPECIFIC FX IS ON, ON PAGE 3 (MFX EXTRA)?
+	M5: WHICH SPECIFIC FX IS ON, ON PAGE 3 (MacroFX EXTRA)?
  		0: inactive / unknown
 		1: MFX9
 		...
@@ -411,11 +439,11 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
     	
     cue 1: C6/G#7  
 	
-	M7: CURRENT PADMODE (THIS IS FOR SHORTCUT)
-		0: HC
-		1: ROLL
-		2: SLICER
-		3: SAMPLER
+	M7: CURRENT PADMODE (THIS IS FOR MODE SHORTCUT)
+		0: MODE1
+		1: MODE2
+		2: MODE3
+		3: MODE4
 		4: other (=main shift is pressed)
 		
 	M8: INIT DECK
@@ -811,24 +839,7 @@ DDJ-SZ encoder mode:
 	FX beat:  01/7E
 		
 
-ddj-400 support:
-----------------
-  I've now tried my mapping on a DDJ-400 on a shop. 
-  Most of the features do work - but it is definitively not ideal. 
-  If I had a DDJ-400 myself I could easily make a specific version for it.
 
-
-  Large parts of the DDJ-1000 map are compatible with the DDJ-400. 
-  Caveats:
-  - the DDJ-1000 cue mix / cue volume is done in hardware, so I don't duplicate this in traktor;  
-    - the 400 requires adding these 2x commands (which are trivial to map)
-  - RGB colors are not supported, so pad user feedback is gone. 
-    - in the 1000 you get beautiful RBG colors for each function
-  - "shift2" button does not exist, so my overlayed functions do not work (Beatjump, vinyl stop)
-    - this can easily be mapped to the memory call buttons
-  - the pad modes have a differnt order than the 1000 (Hot cue / beatlop / beatjump / sampler)
-    - the functions are still accessible, but not on the documented positions
-	
   
 DDJ-SR/RR support:
 ------------------
@@ -900,9 +911,6 @@ deck shift codes:
 	cue:        c0  / c5
 	
 	
-  
-  
-  
 	
 CMDR TP3 missing commands:
 --------------------------
@@ -916,27 +924,27 @@ CMDR TP3 missing commands:
 		add page
 		export TSI
 
-
     
 DDJ-1000 screens support:
 -------------------------
-Method 1: 
- - VirtualDJ managed to hack the proprietary Pioneer protocol to display full information. 
- - Documentation: nothing is public
- - Demo: https://www.youtube.com/watch?v=z8yeW9ONtGI
+  Method 1: 
+   - VirtualDJ managed to hack the proprietary Pioneer protocol to display full information. 
+   - Documentation: nothing is public
+   - Demo: https://www.youtube.com/watch?v=z8yeW9ONtGI
 
-Method 2: 
- - DjayPro uses simple MIDI commands to display only basic information. 
- - I've tried to use these midi out, but the traktor controller manager was not expressive enough to generate these exact midi out values 
- - MIDI-out is documented by pioneer on page 8 of their MIDI list. Screenshot: https://github.com/pestrela/music_scripts/blob/master/other/ddj-1000%20screens%20midi%20out.PNG
- - Demo: https://www.youtube.com/watch?v=jCUpDQD7i_M
- - Demo2: https://www.youtube.com/watch?v=aAUo4KMD70k   (Djay + Rekordbox)
- 
+  Method 2: 
+   - DjayPro uses simple MIDI commands to display only basic information. 
+   - I've tried to use these midi out, but the traktor controller manager was not expressive enough to generate these exact midi out values 
+   - MIDI-out is documented by pioneer on page 8 of their MIDI list. Screenshot: https://github.com/pestrela/music_scripts/blob/master/other/ddj-1000%20screens%20midi%20out.PNG
+   - Demo: https://www.youtube.com/watch?v=jCUpDQD7i_M
+   - Demo2: https://www.youtube.com/watch?v=aAUo4KMD70k   (Djay + Rekordbox)
+   
  
  
 TP3 MixerFX:
 ------------
  These can be changed in settings / mixer / mixerFX
+ 
  The default favorites are: 
   #1 flanger 
   #2 time gater 
@@ -962,26 +970,7 @@ TP3 MixerFX:
  
 
 
-DDJ-1000SRT vs DDJ-1000RB:
---------------------------
- INTERNAL vs EXTERNAL:
- - SRT version is fully external mode; RB version is fully internal mode (except for beatFX master). 
- - For traktor this means we can have all the Pioneer effects (color + beat), and still put mixer/deck FX via the pads
- 
- MIDI codes:
- - Decks: overall all the SRT physical buttons seem to match the RB midi codes. Example: search == beatjump
- - Pads: the pad codes match the SX2/SZ style of codes, and not the 1000RB style. This means that my SX2/SZ mapping is the best starting point for the 1000SRT
- 
- JOGS SCREENS:
- - While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version
- 
- I've now looked at the MIDI codes for the 1000 SRT version released today, and it is quite surprising: 
- - the SRT pad codes match the SX2/SZ style of codes, and not the 1000RB style 
- - While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version 
- 
- this means that my SX2/SZ mapping is the best starting point for the 1000SRT for Traktor:  https://maps.djtechtools.com/mappings/9222
- 
-  
+    
   
 DDJ-SX2 vs DDJ-SX3 vs DDJ-SZ:
 -----------------------------
@@ -1012,14 +1001,52 @@ DDJ-SX2 vs DDJ-SX3 vs DDJ-SZ:
    
    - result: these are the same midi codes, just different labelling
   
+
+DDJ-1000SRT vs DDJ-1000RB:
+--------------------------
+  INTERNAL vs EXTERNAL:
+  - SRT version is fully external mode; RB version is fully internal mode (except for beatFX master). 
+  - For traktor this means we can have all the Pioneer effects (color + beat), and still put mixer/deck FX via the pads
+
+  MIDI codes:
+  - Decks: overall all the SRT physical buttons seem to match the RB midi codes. Example: search == beatjump
+  - Pads: the pad codes match the SX2/SZ style of codes, and not the 1000RB style. This means that my SX2/SZ mapping is the best starting point for the 1000SRT
+
+  JOGS SCREENS:
+  - While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version
+
+  I've now looked at the MIDI codes for the 1000 SRT version released today, and it is quite surprising: 
+  - the SRT pad codes match the SX2/SZ style of codes, and not the 1000RB style 
+  - While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version 
+
+  this means that my SX2/SZ mapping is the best starting point for the 1000SRT for Traktor:  https://maps.djtechtools.com/mappings/9222
+
   
+DDJ-400 SUPPORT:
+----------------
+  I've now tried my mapping on a DDJ-400 on a shop. 
+  Most of the features do work - but it is definitively not ideal. 
+  If I had a DDJ-400 myself I could easily make a specific version for it.
+
+
+  Large parts of the DDJ-1000 map are compatible with the DDJ-400. 
+  Caveats:
+  - the DDJ-1000 cue mix / cue volume is done in hardware, so I don't duplicate this in traktor;  
+    - the 400 requires adding these 2x commands (which are trivial to map)
+  - RGB colors are not supported, so pad user feedback is gone. 
+    - in the 1000 you get beautiful RBG colors for each function
+  - "shift2" button does not exist, so my overlayed functions do not work (Beatjump, vinyl stop)
+    - this can easily be mapped to the memory call buttons
+  - the pad modes have a differnt order than the 1000 (Hot cue / beatlop / beatjump / sampler)
+    - the functions are still accessible, but not on the documented positions
+	
   
 DDJ-800 test in a shop:
 -----------------------
   what works fine:
    - all pads, hotcues, preview player, etc: all ok
    - jogFX: all ok
-   - jogs scracth: same as ddj-1000
+   - jogs scratch: same as ddj-1000
  
   probelms:
   - loops: pioneer changes the codes quite a bit. 
@@ -1029,7 +1056,6 @@ DDJ-800 test in a shop:
   bugs:   
    - beatFX: the channel selector is dead. the FX selector +depth works fine
    - colorFX selectors: this is now hold style instead of toggle style. So it needs to be hold
-  
   
   -----   
   
@@ -1047,13 +1073,58 @@ DDJ-800 test in a shop:
      800:
         reloop/exit = f5/g#5  
   
-  beat fx selecotr:
+  beat fx selector:
     E0/F0/F#0 etc  -> E1/F1 etc
     
-  color fx selcotr:
+  color fx selector:
     0,1,2,3 ->   0,1,2,3 (toggle)
   
 
+  
+Pioneer DDJ-1000 MIDI firmware bugs:
+------------------------------------
+ I've experienced the following bugs on the DDJ-1000 firmware (v1.0.6).
+ This was confirmed by inpecting the MIDI messages generated / sent by the firmwar in both BOME and MIDI-OX.
+ 
+ Test conditions:
+   - both in "MIDI forced mode" and "Automatic mode". 
+   - The issues were seen in DJay (https://www.algoriddim.com/hardware) 
+   - and Traktor (https://www.youtube.com/watch?v=h9tQZEHr8hk)
+ 
+ 
+ a) RELEASING pads generates extra messages on the second page. Example:
+      mode 1, page1, pad 1 (P1-L):
+        97 00 7F
+        97 00 00
+        97 08 00    <<<<<< extra
+
+ b) Deck 1/3 button (D6-L) always sends commands on channel 1. 
+    As such the software cannot know which deck is active
+    
+    (same story for deck 2/4 button)
+
+ c) jog screen sync indicator doesn't react (ch1 note F#6). 
+    The master indicator works fine, however (ch1 note F6)
+        
+ d) Pressing and moving jog very slowing doesn't generate any midi messages.
+    This was not the case for the DDJ-SZ, SX2, etc in MIDI mode. 
+    This is also not the case for DDJ-1000 HID mode.
+    
+    This results in very poor accuracy for very tiny jog movements (beatgrid adjust, small scratch, high zooom levels).
+    
+ e) when channel 1..4 is selected (F9), the beatFX button (F11) still does not respond to ON/OFF messages. It seems it has its own state machine.
+    result: button blinks when software is in off state
+ 
+ 
+Pioneer DDJ-800 MIDI firmware bugs:
+------------------------------------
+  On the DDJ-800, firmware v1.0.1, I couldn't make the screens produce any MIDI output.
+  this was both in "MIDI forced mode" and "Automatic mode". 
+  The midi table is exactly the same as the DDJ-1000, but using the same code was a no-go.
+  Sending the note A6 command directly also did not result at all.
+  
+ 
+  
 
   
   

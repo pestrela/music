@@ -82,6 +82,7 @@ mp3_folder_out="traktor/26ms_offsets/bin"
 download_files_in="youtube_dl.sh"
 download_folder_out="downloads"
 
+
 ### MAPPING FILES
 mapping_all_root_src="/mnt/c/Root/google_drive/Pedro/2 Music - Controllers/0_MAPS_Traktor"
 mapping_1_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME"
@@ -93,9 +94,14 @@ mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_SX2_SZ"
 mapping_3_root_src="${mapping_all_root_src}/AKAI AMX/v1.0.1 - AKAI AMX TP2_TP3"
 mapping_3_root_dst="${root_dst_all}/traktor/mapping_akai_amx"
 
+### TECNICHAL FILES
 
-#ddj_files_in='  "DDJ-1000 v6.5.0 - User manual.pdf" "DDJ-1000 v6.6.0 - User quickstart.pdf"   "Installation Help/DDJ-1000 - Frequently Asked Questions.pdf"    "Installation Help/DDJ-1000 - Installation Guide.pdf"  '
-#ddj_folder_out="traktor/ddj_1000_traktor_mapping"
+tech_1_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - DDJ Controllers.txt"
+tech_2_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - BOME DDJ 1000 Screens.txt"
+tech_all_dst="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME/Support files"
+
+
+
 
 
 
@@ -114,11 +120,15 @@ fi
 if [ $do_mapping_files -ge 1 ]; then
   do_banner "COPYING MAPPING FILES"
 
+  cp -f "$tech_1_src" "$tech_all_dst"
+  cp -f "$tech_2_src" "$tech_all_dst"
+  
+  #exit 0
   copy_mapping_files   "$mapping_1_root_src"   "$mapping_1_root_dst"
   copy_mapping_files   "$mapping_2_root_src"   "$mapping_2_root_dst"
   copy_mapping_files   "$mapping_3_root_src"   "$mapping_3_root_dst"
 
-fi  
+fi
 
 if [ $do_git_operations -ge 1 ]; then
   do_banner "DOING GIT OPERATIONS"

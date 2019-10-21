@@ -145,7 +145,53 @@ BOME variables:
         
   FREE VARIABLES:
 
+  
+DDJ-SZ to DDJ-1000 translation:
+-------------------------------
 
+
+  
+DDJ KEYBOARD EMULATION:
+-----------------------
+ DDJ-SZ keyboard:
+  "mo" - channel  (0..3)
+  "mp" - which mode (0..7) 
+  "mq" - which sub-page (0..1)
+  "mr" - shift enabled (0..1)
+  
+  "ms" - which pad pressed (0..7)
+  "mt" - up/down pressed (0..127) 
+
+ DDJ-1000 emulation:
+  "mu" - FREE
+  "mv" - which sub page (DDJ-1000 emulation)
+
+ COMMUNICATION:
+  "mx" - channel
+  "my" - code
+  "mw" - velocity
+  "mz" - 
+  
+  channel 1..4   114/115   (SAME)
+  
+    shift:   63        (SAME)
+     
+    mode 0 - 27
+    mode 1 - 30
+    mode 2 - 32
+    mode 3 - 34
+    mode 4 - 105
+    mode 5 - 107
+    mode 6 - 109
+    mode 7 - 111
+    
+    left:  36..43   1..8           (SAME)
+    right: 44..51   9 + 122..127+0 (SAME)
+  
+  
+  
+  16  
+  
 What blinks in CDJs:
 -------------------- 
   cue button: flashes when a new cue can be set
@@ -511,8 +557,67 @@ GENERATE ZERO VARIABLES:
           assigment = "%s = 0" % (var)
           print(assigment)
           
+          
+          
+ADVANCED BOME INTEGRATION - 14-bit out messages:
+------------------------------------------------
+  Q2: The BPM and Percentage values are very close, but not exactly the same, of what it displayed on the laptop screen
+  A2: Reason: Traktor lacks high-resolution MIDI out messages. Even so, a trick was already implemented to improve accuracy 10x times (compared to a naive mapping).
+
+  T2: Traktor receives 14-bit messages just fine (combo messages), but cannot send it.
+  This was confirmed by hacking CMDR to generate a valid TSI of a combo message - nothing got sent by Traktor.
+
+  As a workaround, accuracy was improved 10x by creating 10x separate 7-bit ranges, each on a separate CC, and reacting to only a part of the whole range, eg: 0.0->0.1; 0.1->0.2; 0.2->0.3; ...
+  This lead to the next problem: when the value crosses multiple ranges, potentially all, then all of them independently react with their extreme values. Note that these output values also follow a non-deterministic order.
+  This was addressed as follows: collect all outputs until a 10ms timer expires, and ignore the extreme values, keeping only the final intermediate value (which can come in any order).
+  If really going to an extreme value, in particular 0.0 or 1.0, collect that with 11th low resolution CC that encompasses the whole range.
+  After the timer expires, process the single value as normal
+  Q3: The time elapsed/remain is approximate to what is displayed on the laptop screen. Ans/Or, the seconds advances either too fast or too slow.
+  A3: Reason: Traktor doesn't send the absolute minutes:seconds position, only the relative percentage position instead.
+  The mapping guesses the total track length using an internal clock.
+  press shift+quantize (="Wake up") while the track is playing to reset the measurement process.
+
+  
+ADVANCED BOME INTEGRATION - Absolute track position emulation:
+-------------------------------------------------------------
+  T3: even with the high-resolution trick explained above, it is still a relative position.
+  To transform this into an absolute value, we implement a master clock in BOME with a timer every 100ms. On the seek position code we measure how many ticks elapsed when 0.5% of the track has elapsed without any jumps or interruptions.
+  When we have this value, a simple multiplication by 200 gives the estimated track length, to which is then trivial to calculate elapsed/remain values in MM:SS format.
+  As mentioned, pressing shift+quantize triggers a "send monitor state" command that resends all values, restarting the measurement process.
+
+  
+ADVANCED BOME INTEGRATION - Needle progress emulation:
+------------------------------------------------------
+  Q4: Needle position sometimes jumps around after scratching.
+  A4: Traktor lacks a "jog turn out message", so this is emulated in BOME. Please join the DJTT discussion to improve this in the next version.
+
+  T4: The best message to implement the needle position is "beat phase". Significant amount of time was spend using this message. It only sends the -45deg..45deg information. This is accumulated internally to a 0deg..360deg value that is displayed for the user.
+  When the user seeks away, we just get a new 45deg position, unlinked to the actual 360 position. (this could be improved by merging with the 1000 points seek relative position descried above).
+  Instead, we implemented the full state machine of the deck (stopped, playing, cueing), interpreted the jog touch and jog turn messages directly from the device (instead of traktor), and advanced the needle using the internal fake clock.
     
     
-   #1 #4 7 10
+Experiments on Midi linked modifiers (MLM):
+------------------------------------------
+  please read the MLM discussion on page 86 and following of 
+   "RUDI-Js ELEPHANT TSI for VCI-400SE + Maschine (MK1) + BCR 2000 v2.0"
+   
+  experiment:
+   CC 1..4 - sync on
+   modifier 1..4 = sync on, per deck
+   
+   CC 11..14 - master on
+   modifier 8 = master deck 
+   
+   cc 21 - send value of modifier 8 out
+   
+   page 2: modifier 8 = global modifier
    
 
+
+    
+
+
+    
+    
+    
+    
