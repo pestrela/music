@@ -504,10 +504,11 @@ Pioneer has **dozens** of controllers. I own 3x of them, so ONLY there the mappi
 * DDJ-SZ
 * DDJ-SX2
 
-The other controllers [are compatible](../ddj/1%20MIDI%20codes) - but there are always differences. **So for these please try the mapping FOR FREE in a shop/friend.**
+The other controllers [are compatible](../ddj/1%20MIDI%20codes) - but there are always differences.\
+**So for these [please try the mapping FOR FREE](#can-i-test-your-mappings-for-free) in a shop/friend.**
 
-Sometimes I test other controllers myself; ONLY in this case I describe the results in the first page of the mapping manual.
-The 1000SRT is a special case, [which I cover here](#is-the-ddj-1000srt-also-mappable-to-traktor)
+Once in a while I test controllers in a shop myself; ONLY in this case I describe the results in the first page of the mapping manual.\
+The DDJ-1000SRT is a special case, [which I cover in detail here](#is-the-ddj-1000srt-also-mappable-to-traktor)
 
 
 Regarding the Jogs: this is exactly the same story, plus the [all the comments about MIDI jogs](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
