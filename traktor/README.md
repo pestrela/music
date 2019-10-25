@@ -246,9 +246,12 @@ What I dont use on jogs:
 * **Moving jogs**: these are cool, but not a deal-breaker for me
 * **Haptic feedback**: this is basically a gimmick for me
 
-## But can I still scratch using MIDI?
+## But can I still scratch using MIDI? How much is the latency of your maps?
 
-YES - if you have a fast computer. For a demo please see at 4:10 of [this video](https://www.youtube.com/watch?v=h9tQZEHr8hk&t=249). 
+TL;DR: Yes you can scratch as long you have a fast computer. Please see at 4:10 of [this video](https://www.youtube.com/watch?v=h9tQZEHr8hk&t=249) for a demo. 
+Even better, try it [completely for free](#can-i-test-your-mappings-for-free), and see for youself.
+
+Longer answer follows:
 
 Of course that If you are a 100% scratch DJ, then you should look for a native HID solution.\
 But for the extreme vast majority of DJs I know, this solution is more than enough.
@@ -454,6 +457,25 @@ Finally, all my mappings are a free gift to the community, to enable DJs to use 
   
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
+
+### UPDATE:
+
+I've now tested my SZ map to the SRT. It worked surprisingly well. See below for the notes.
+
+* Jog screens are NOT supported. This is because they are not documented on the Pioneer MIDI map file 
+  * https://github.com/pestrela/music_scripts/blob/master/ddj/1%20MIDI%20codes/DDJ-1000SRT%20-%20MIDI%20Messages.pdf
+* Please put your jog weight to “heavy”
+  * This will significantly improve scratching and jogFX
+* Audio device in external mode. 
+  * This means that ALL the pioneer effects (both colorFX and beatFX work for USB sources
+  * See next slides for config
+* Please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode
+* Beatjump buttons added. Please use shift+IN/OUT to configure the loop size (=jump size)
+* BeatFX ON/OFF is now for pioneer beatFX only
+* Automatic layout changing was removed
+
+
+### OLD POST FOLLOWS:
 
 Physically, the 1000SRT look physically the same as the original 1000. However there are quite big differences inside that impact the mappings. 
 I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it I will update the below list.
