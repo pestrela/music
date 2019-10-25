@@ -248,10 +248,10 @@ What I dont use on jogs:
 
 ## But can I still scratch using MIDI? How much is the latency of your maps?
 
-TL;DR: Yes you can scratch as long you have a fast computer. Please see at 4:10 of [this video](https://www.youtube.com/watch?v=h9tQZEHr8hk&t=249) for a demo. 
+**TL;DR:** YES you can scratch - as long you have a fast computer. Please see at 4:10 of [this video](https://www.youtube.com/watch?v=h9tQZEHr8hk&t=249) for a demo.\
 Even better, try it [completely for free](#can-i-test-your-mappings-for-free), and see for youself.
 
-Longer answer follows:
+**Long answer:**
 
 Of course that If you are a 100% scratch DJ, then you should look for a native HID solution.\
 But for the extreme vast majority of DJs I know, this solution is more than enough.
