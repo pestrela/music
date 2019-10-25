@@ -102,7 +102,6 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 ## Why is Traktor my software of choice
 
 Below the 4x main reasons that I love Traktor.
-
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
@@ -201,6 +200,17 @@ Also, I've also hit the limits of Traktor mappings multiple times. Below are the
 * **C) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 * **D) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
 
+## Some Limitations of BOME mappings
+
+[BOME](https://www.bome.com/products/miditranslator) is essential to [build my new mappings](#Why-I-moved-to-BOME-midi-mapping-Impossible-features). But it also have some improvement points.
+
+In importance order:
+
+* **A) Arrays**: [forum request](https://www.bome.com/support/kb/mt-pro-script-arrays). See also Bug#3 from the FAQ file.
+* **B) Cascaded devices**: [forum request](https://www.bome.com/support/kb/cascaded-presets-loopback-devices)
+* **C) More variables**: this is a lot more than Traktor, but still not enough as I'm emulating arrays
+
+
 ## How I see the future of Traktor mappings
 
 A major Traktor strength is the MIDI mappings system. Very flexible and powerful.\
@@ -215,52 +225,9 @@ https://maps.djtechtools.com/mappings/9279
 
 In my view the mappings are a unique sucess story of Traktor. This could continue to give great results with just some quality-of-life improvements.
 
-## Some Limitations of BOME mappings
-
-[BOME](https://www.bome.com/products/miditranslator) is essential to [build my new mappings](#Why-I-moved-to-BOME-midi-mapping-Impossible-features). But it also have some improvement points.
-
-In importance order:
-
-* **A) Arrays**: [forum request](https://www.bome.com/support/kb/mt-pro-script-arrays). See also Bug#3 from the FAQ file.
-* **B) Cascaded devices**: [forum request](https://www.bome.com/support/kb/cascaded-presets-loopback-devices)
-* **C) More variables**: this is a lot more than Traktor, but still not enough as I'm emulating arrays
 
 
 # Hardware Controllers
-
-## Why I like BIG jogwheels
-
-Spoiler: its not scratching!
-
-I use jogs all the time in a controller - full list below. 
-As I have big hands, I love them to be as BIG as possible.
-
-There are the usages sorted by frequency:
-* **#1: Tempo**: Adjusting tempo drift for older tracks (because of no elastic beatgrid)
-* **#2: Cueing**: / fast preview to the exact spot where the track will start
-* **#3: JogFX chains**: I do effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
-* **#4: Beagrids**: by far the quickest way to adjust beatgrids on the fly
-* **#5: Scratch**: Very occasional live scratching / tricks  (see also [this post](#But-can-you-still-scratch-using-MIDI))
-
-What I dont use on jogs:
-* **Moving jogs**: these are cool, but not a deal-breaker for me
-* **Haptic feedback**: this is basically a gimmick for me
-
-## But can I still scratch using MIDI? How much is the latency of your maps?
-
-**TL;DR:** YES you can scratch - as long you have a fast computer. Please see at 4:10 of [this video](https://www.youtube.com/watch?v=h9tQZEHr8hk&t=249) for a demo.\
-Even better, try it [completely for free](#can-i-test-your-mappings-for-free), and see for youself.
-
-**Long answer:**
-
-Of course that If you are a 100% scratch DJ, then you should look for a native HID solution.\
-But for the extreme vast majority of DJs I know, this solution is more than enough.
-
-Some relevant points:
-* Scratching is [only the 5th criteria for my jogwheels](#why-i-like-big-jogwheels)
-* The [latest DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping) helps a lot. You can now can see the jog needle and your hand simultaneously.
-* Pioneer has sold products with this solution for many years ([example](https://www.pioneerdj.com/en/support/software-information/archive/ddj-sz/#traktor))
-
 
 ## Why is DDJ-1000 my hardware of choice
 
@@ -315,6 +282,43 @@ AKAI AMX:
 * ** C) Mapping** to control all TP3 functions
 
 See also [this DDJ-SZ comparison](https://www.reddit.com/r/Beatmatch/comments/c6vquf/help_me_ddj_sz_vs_ddj_1000/)
+
+
+
+## Why I like BIG jogwheels
+
+Spoiler: its not scratching!
+
+I use jogs all the time in a controller - full list below. 
+As I have big hands, I love them to be as BIG as possible.
+
+There are the usages sorted by frequency:
+* **#1: Tempo**: Adjusting tempo drift for older tracks (because of no elastic beatgrid)
+* **#2: Cueing**: / fast preview to the exact spot where the track will start
+* **#3: JogFX chains**: I do effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
+* **#4: Beagrids**: by far the quickest way to adjust beatgrids on the fly
+* **#5: Scratch**: Very occasional live scratching / tricks  (see also [this post](#But-can-you-still-scratch-using-MIDI))
+
+What I dont use on jogs:
+* **Moving jogs**: these are cool, but not a deal-breaker for me
+* **Haptic feedback**: this is basically a gimmick for me
+
+## But can I still scratch using MIDI? How much is the latency of your maps?
+
+**TL;DR:** YES you can scratch - as long you have a fast computer. Please see at 4:10 of [this video](https://www.youtube.com/watch?v=h9tQZEHr8hk&t=249) for a demo.\
+Even better, try it [completely for free](#can-i-test-your-mappings-for-free), and see for youself.
+
+**Long answer:**
+
+Of course that If you are a 100% scratch DJ, then you should look for a native HID solution.\
+But for the extreme vast majority of DJs I know, this solution is more than enough.
+
+Some relevant points:
+* Scratching is [only the 5th criteria for my jogwheels](#why-i-like-big-jogwheels)
+* The [latest DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping) helps a lot. You can now can see the jog needle and your hand simultaneously.
+* Pioneer has sold products with this solution for many years ([example](https://www.pioneerdj.com/en/support/software-information/archive/ddj-sz/#traktor))
+
+
 
 # Custom Mappings
 
@@ -458,17 +462,14 @@ Finally, all my mappings are a free gift to the community, to enable DJs to use 
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
-### UPDATE:
+### UPDATE 25 Oct 2019:
 
-I've now tested my SZ map to the SRT. It worked surprisingly well. See below for the notes.
+I've now tested my SZ map to the SRT in a shop. It worked surprisingly well! See below for the notes.
 
 * Jog screens are NOT supported. This is because they are not documented on the Pioneer MIDI map file 
   * https://github.com/pestrela/music_scripts/blob/master/ddj/1%20MIDI%20codes/DDJ-1000SRT%20-%20MIDI%20Messages.pdf
-* Please put your jog weight to “heavy”
-  * This will significantly improve scratching and jogFX
-* Audio device in external mode. 
-  * This means that ALL the pioneer effects (both colorFX and beatFX work for USB sources
-  * See next slides for config
+* Audio device runs very well in external mode. This means that ALL the pioneer effects (both colorFX and beatFX work for USB sources
+* Please put your jog weight to “heavy”.  This will significantly improve scratching and jogFX.
 * Please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode
 * Beatjump buttons added. Please use shift+IN/OUT to configure the loop size (=jump size)
 * BeatFX ON/OFF is now for pioneer beatFX only
@@ -503,11 +504,13 @@ Pioneer has **dozens** of controllers. I own 3x of them, so ONLY there the mappi
 * DDJ-SZ
 * DDJ-SX2
 
-The other controllers [are compatible](../ddj/1%20MIDI%20codes) but there are always differences. **So for these please try the mapping in a shop/friend.**
+The other controllers [are compatible](../ddj/1%20MIDI%20codes) - but there are always differences. **So for these please try the mapping FOR FREE in a shop/friend.**
 
 Sometimes I test other controllers myself; ONLY in this case I describe the results in the first page of the mapping manual.
+The 1000SRT is a special case, [which I cover here](#is-the-ddj-1000srt-also-mappable-to-traktor)
 
-The jogs is exactly the same story, plus the [comments about MIDI jogs](#But-can-i-still-scratch-using-MIDI)
+
+Regarding the Jogs: this is exactly the same story, plus the [all the comments about MIDI jogs](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
 
   
 # DJ collection converters
