@@ -25,7 +25,7 @@
 * [Hardware Controllers](#Hardware-Controllers)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
   * [Why i like BIG jogwheels](#why-i-like-big-jogwheels)
-  * [But can I still scratch using MIDI?](#But-can-i-still-scratch-using-MIDI)
+  * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
 
 * [Custom Mappings](#Custom-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
