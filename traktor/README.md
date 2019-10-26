@@ -9,7 +9,7 @@
   
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
-    * [database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
+    * [Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
     * [OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
     * [Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
     * [Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
@@ -62,7 +62,8 @@ The picture below summarizes the main ideas and dependencies explained in these 
 # OS-Folders
 ## Why I manage music using OS-folders only
 
-I have a large collection composed of multiple genres / sub-genres / decades. It covers:
+I have a large collection composed of multiple genres / sub-genres / decades.\
+It covers:
 * 2x separate DJs
 * 10x major-genres
 * 50x sub-genres
@@ -73,31 +74,36 @@ I have a large collection composed of multiple genres / sub-genres / decades. It
 This is an example of how my "playlists" look like. The full tree is far larger.
 ![DJ Genres](various/dj_genres.png?raw=true)
 
-Playlists are supported by all DJ softwares, but I find far easier to do it OS-filesystem instead. Main reasons:
+DJ Playlists are supported by all DJ softwares, but I find far easier to do it OS-filesystem instead.\
+Main reasons are:
 
-* **#1: Multiple views:** this allows me have many Windows Explorer windows open, and move files in-between them. Explorer windows are always available, and [now support tabs](http://qttabbar.wikidot.com/)
-* **#2:Grouping**: Folders can contain both sub-folders or files. I find this a very natural model to organize genres and sub-genres. It is also a proven mode, it was [was invented in the 1960s](https://en.wikipedia.org/wiki/Path_(computing)#History). Itunes a more bureaucratic model with 3 levels instead (folders -> playlists -> files). This 3-step model was later copied to all DJ softwares.
-* **#3:Easy file renaming:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip) 
-* **#4:Software Independence:** Using OS-folders you are independent of any possible DJ software, and also itunes. It also trivial to sync between DJ collections and make perfect backups to my NAS using [resilio sync](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas). It is also trivial to load a whole genres to USB sticks to listen in cars.
+* **#1: Multiple views:** this allows me have many File Explorer windows open in multiple monitors, each with the whole tree visible, and just move files in-between them. These windows open instantaneously with Win+E, and [also support tabs](http://qttabbar.wikidot.com/)
+* **#2: Natural group**: Folders have both sub-folders and files inside them. I find this a very natural model to organize my files into genres and sub-genres. This is also [simpler](https://en.wikipedia.org/wiki/Path_(computing)#History) than the itunes 3-step model of "folders -> playlists -> files" (ie, itunes folders cannot contain playlists). Sadly this bureaucratic model was later copied in to all DJ softwares for their playlists.
+
+
+* **#3: Trivial renaming:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip) 
+* **#4: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to sync between DJ collections and make perfect backups to my NAS using [resilio sync](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
 See also [this blog post for more details on this workflow](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
   
 
 ## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
-Above I've described [why I use OS-folders only](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc). In this post I will describe how this workflow works and how it can be have **fully automated**.
+Above I've described [why I use OS-folders](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc). In this post I will describe *how* my workflow is **fully automated**.
 
-* **#1: Mp3tag:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip)
-* **#2: Database repair:** Traktor repairs the internal database to match what is on disk. [more info on mass-relocate](#why-is-traktor-my-software-of-choice)
-* **#3: Duplicate Cues**: I made a [small python script](collections_without_playlists/traktor_clone_cues.py) to duplicate the cues for the physically duplicated files. This is comparable to [the traktor Librarian](http://www.flowrl.com/librarian).
+* **#1: File renaming and Mp3tag:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip)
+* **#2: Moved and Renamed files :** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair). For this I just run a mass-relocate on my whole music root folder. This will be the bulk of the changes will catch almost all changes I've done since the last time.
+* **#3: New and Removed files:** The second step is to just import the whole music root folder into the collection.  In practice this will only import the New files. The last step is to delete the remaining missing files, which were really deleted (otherwise it would have been found on step #2) 
+* **#4: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [simple python script](collections_without_playlists/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
 * **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
-* **#5: Rekordbox Video:** When playling video gigs I use the explorer node inside Rekordbox. As this one still lacks a search box ([see point B) of this post](#why-is-traktor-my-software-of-choice)), I use a real File Explorer window in parallel when needed.
-* **#6: CDJ export:** I only really need playlists for CDJs. There are scripts to mass-convert all folders to DJ playlists. Windows version is http://samsoft.org.uk/iTunes/ImportFolderStructure.vbs; Mac version is https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake; Then I do the usual rekordbox step to prepare USBs pens.
+* **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures Rekordbox is updated with all metadata.
+* **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and use the main csearch of whole collection to find them. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox still lacks a search box in OS-folders ([see point B) of this post](#why-is-traktor-my-software-of-choice))
+* **#6: CDJ export:** I only really need playlists for CDJs. There are scripts to mass-convert all folders to DJ playlists. Then I do the usual rekordbox step to prepare USBs pens.
+  * Windows version is http://samsoft.org.uk/iTunes/ImportFolderStructure.vbs; 
+  * Mac version is https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake; 
 
 See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGovQ).
  
- 
-
- 
+  
 # Traktor software
 ## Why is Traktor my software of choice
 
