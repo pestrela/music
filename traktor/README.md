@@ -7,7 +7,6 @@
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
 
   
-  
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
     * [database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
@@ -696,6 +695,30 @@ Steps were:
 [more info #1](https://www.resilio.com/blog/sync-hacks-how-to-use-bittorrent-sync-for-djs-and-producers) / [more info #2](https://www.native-instruments.com/forum/threads/resilio-sync-synchronizing-traktor-libraries-across-computers.355599) / [more info #3](https://www.native-instruments.com/forum/threads/syncing-traktor-across-multiple-computers-with-resilio-sync.348405)
   
 
+## How to replace the DDJ-1000 filter knobs with Silver knobs.
+
+Both 1000 and 1000SRT have extremly dull filter knobs. Thats a pity.\
+For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. Sadly this is not a perfect fit.
+
+* DAA1309:
+  * This has the best fit overall. The knob is slightly higher than desired.
+  * [Part list](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer): \
+    DJM-900NX2/2000NX1/750\
+    DDJ-SZ/ DDJ-RZ/ DDJ-RZX
+  
+* DAA1320/DAA1350:
+  * this was confirmed NOT to work
+  * [parts list]((https://www.pacparts.com/part.cfm?part_no=DAA1320&mfg=Pioneer)): DJM-S9 / DJM-900SRT / XDJ-RX / XDJ-RX2
+
+* 100-SX3-3009:    
+  * not tested
+  * [part list](https://www.pacparts.com/part.cfm?part_no=100-SX3-3009&mfg=Pioneer): DDJ-RX
+  
+* Rane 2015:
+  * this confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
+
+    
+  
 ## What scripts and documentation did you built for Traktor?
 
 This github folder contains my Traktor tools, and the documentation of the mappings.
