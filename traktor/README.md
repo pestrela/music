@@ -697,25 +697,27 @@ Steps were:
 
 ## How to replace the DDJ-1000 filter knobs with Silver knobs.
 
-Both 1000 and 1000SRT have extremly dull filter knobs. Thats a pity.\
+Both 1000 and 1000SRT have extremly dull filter knobs. Which is a pity.\
 For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. Sadly this is not a perfect fit.
-
-* DAA1309:
+\
+Folder with pictures of the knobs: [here](../pics/silver_knobs)
+\
+* [DAA1309](../pics/silver_knobs/DAA1309.png):
   * This has the best fit overall. The knob is slightly higher than desired.
   * [Part list](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer): \
     DJM-900NX2/2000NX1/750\
     DDJ-SZ/ DDJ-RZ/ DDJ-RZX
   
-* DAA1320/DAA1350:
+* [DAA1320/DAA1350](../silver_knobs/DAA1320.jpg):
   * this was confirmed NOT to work
   * [parts list]((https://www.pacparts.com/part.cfm?part_no=DAA1320&mfg=Pioneer)): DJM-S9 / DJM-900SRT / XDJ-RX / XDJ-RX2
 
-* 100-SX3-3009:    
+* [100-SX3-3009](../pics/silver_knobs/100-SX3-3009.jpg):
   * not tested
   * [part list](https://www.pacparts.com/part.cfm?part_no=100-SX3-3009&mfg=Pioneer): DDJ-RX
   
-* Rane 2015:
-  * this confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
+* [Rane 2015](../pics/silver_knobs/rane%202015%20filters.jpg):
+  * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
     
   
