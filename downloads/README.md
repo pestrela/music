@@ -1,6 +1,8 @@
 
 # Download helpers
 
+To launch these utilities interactively, use [my binder](https://mybinder.org/v2/gh/pestrela/music_scripts/master)
+
 * get_djtt_mappings.py	
   * shows mappings downloads for selected controllers
   
