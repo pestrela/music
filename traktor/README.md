@@ -3,6 +3,7 @@
 
 * [MindMap Summary](#MindMap-Summary)
 * [OS-Folders](#OS-Folders)
+  * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
 
@@ -60,47 +61,61 @@ The picture below summarizes the main ideas and dependencies explained in these 
 ![traktor_mindmap](various/traktor_mindmap.png?raw=true "Traktor Mindmap")
 
 # OS-Folders
-## Why I manage music using OS-folders only
 
-I have a large collection composed of multiple genres / sub-genres / decades.\
-It covers:
-* 2x separate DJs
-* 10x major-genres
-* 50x sub-genres
-* 5x decades
-* 300x playlist folders
+## How large is your collection? How broad is your collection?
+
+I have a large collection with thousands of files. It is also quite broad, featuring hundreds of playlists, and dozens of genres / sub-genres / decades combinations.
+
+My numbers are:
 * 7000x individual tracks
+* 300x individual playlists
+* 50x sub-genres
+* 10x major-genres
+* 5x decades
+* 2x separate DJs
 
-This is an example of how my "playlists" look like. The full tree is far larger.
+To manage this complexity I've build my own set of personal tags that I fully trust.
+As such, the first action on new files is to tag them into my structure. This ignores any previous tags made by someone else.
+
+Below an example how my structure looks like; the full tree is far larger.
 ![DJ Genres](various/dj_genres.png?raw=true)
 
-DJ Playlists are supported by all DJ softwares, but I find far easier to do it OS-filesystem instead.\
+See also [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only).
+  
+
+## Why I manage music using OS-folders only
+
+Above, I've explained [the size and complexity of my collection](#How-large-is-your-collection-How-broad-is-your-collection).\
+This is nothing new; I know many DJs with [the same "problem"](https://code.google.com/archive/p/serato-itch-sync/). The difference is on the *how*; In my case I manage the collection only in OS-folders, instead of DJ-playlists.
+
 Main reasons are:
+* **#1: Multiple Windows:** File explorer opens instantaneously with Win+E, and allows any number of windows, monitors and [tabs](http://qttabbar.wikidot.com/). 
+* **#2: Tree Tagging:** More crucially, all windows have the whole tree visible. This is essential to quickly tag my files by just moving them to the correct correct folder. Similarly, the structure grows just by creating new sub-folders as needed.
+* **#3: Simpler Folders**: OS-Folders contain either files, sub-folders, or both. [This 2-step organization](https://en.wikipedia.org/wiki/Path_(computing)#History) is simpler is than the iTunes 3-step model of "folders -> playlists -> files" (later copied by almost all DJ softwares).
+* **#4: Local Searches:** By far my most common task is to check if I already have a particular track, and where is it tagged. File explorer allows local searches on a folder and its sub-folders only. This enables me to quickly find things by just typing a few letters of the filename. AFAIK only Serato has this feature (called ["include subcrates"](https://support.serato.com/hc/en-us/articles/227626268-Subcrates))
+* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formattingm, using [my own scripts](collections_without_playlists/Mp3tagSettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
+* **#6: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to [sync between laptops](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas) and make perfect backups [to my NAS](https://www.synology.com/en-global/products/DS718+). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
-* **#1: Multiple views:** this allows me have many File Explorer windows open in multiple monitors, each with the whole tree visible, and just move files in-between them. These windows open instantaneously with Win+E, and [also support tabs](http://qttabbar.wikidot.com/)
-* **#2: Natural group**: Folders have both sub-folders and files inside them. I find this a very natural model to organize my files into genres and sub-genres. This is also [simpler](https://en.wikipedia.org/wiki/Path_(computing)#History) than the itunes 3-step model of "folders -> playlists -> files" (ie, itunes folders cannot contain playlists). Sadly this bureaucratic model was later copied in to all DJ softwares for their playlists.
 
-
-* **#3: Trivial renaming:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip) 
-* **#4: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to sync between DJ collections and make perfect backups to my NAS using [resilio sync](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas). It is also trivial to load a whole genres to USB sticks to listen in cars.
-
-See also [this blog post for more details on this workflow](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
+See also [this blog post for more details on my workflow between DJ softwares ](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
   
 
 ## How to manage your collection using operating systems folders and without DJ playlists (ie, using only Finder, Windows Explorer, etc) 
-Above I've described [why I use OS-folders](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc). In this post I will describe *how* my workflow is **fully automated**.
 
-* **#1: File renaming and Mp3tag:** Using multiple Explorers, I change filenames continuously to correct the artist/title. My [MP3tag](https://www.mp3tag.de/en/) scripts automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and update the internal mp3 tags to match this. [Link to mp3tag scripts](collections_without_playlists/Mp3tagSettings.zip)
-* **#2: Moved and Renamed files :** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair). For this I just run a mass-relocate on my whole music root folder. This will be the bulk of the changes will catch almost all changes I've done since the last time.
-* **#3: New and Removed files:** The second step is to just import the whole music root folder into the collection.  In practice this will only import the New files. The last step is to delete the remaining missing files, which were really deleted (otherwise it would have been found on step #2) 
-* **#4: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [simple python script](collections_without_playlists/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
+Above I've described [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only). In this post I will describe *how* I manged to **fully automate** my workflow between DJ softwares.
+
+* **#0: File operations:** [As explained above](#why-i-manage-music-using-os-folders-only) I continuously search files, change the filenames and move the files around left and right.
+* **#1: Traktor Repair:** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair). For this I just run a mass-relocate on my whole music root folder, which refinds all moved and renames files in a single go.
+* **#2: Update collection:** The second step is just to import the whole music root folder into Traktor. As this skips previous files, in practice it only imports the New files. The last step is to delete the remaining missing files (that are really deleted - otherwise they would been found on step #1) 
+* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](collections_without_playlists/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
 * **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
-* **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures Rekordbox is updated with all metadata.
-* **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and use the main csearch of whole collection to find them. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox still lacks a search box in OS-folders ([see point B) of this post](#why-is-traktor-my-software-of-choice))
-* **#6: CDJ export:** I only really need playlists for CDJs. There are scripts to mass-convert all folders to DJ playlists. Then I do the usual rekordbox step to prepare USBs pens.
+* **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures the Rekordbox collection matches the Traktor collection.
+* **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and search for files in the whole collection. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox [still lacks a search box in OS-folders](#why-is-traktor-my-software-of-choice-b-os-search))
+* **#7: CDJ export:** I only really need playlists for CDJs. There are scripts to mass-convert all folders to DJ playlists. Then I do the usual rekordbox step to prepare USBs pens.
   * Windows version is http://samsoft.org.uk/iTunes/ImportFolderStructure.vbs; 
   * Mac version is https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake; 
-
+  * A Serato-specific version is in https://code.google.com/archive/p/serato-itch-sync/
+  
 See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGovQ).
  
   
@@ -126,12 +141,13 @@ Traktor is the only software that achives that because it fingerprints everythin
 
 When the mass-relocate process ends, everything is magically found again. Crucially all metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
 Together with the OS-search feature described below, this enables me to use folders as "virtual playlists".
-  * Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
-  Moved files can be done FOLDER by FOLDER.\
-  If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
-  [An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case.
-  * Comparison to VDJ: Everything need to be relocated FILE by FILE.
-  * Comparison to Serato: To test.
+* Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
+Moved files can be done FOLDER by FOLDER.\
+If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
+[An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case. [Example of Pioneer forum request](https://forums.pioneerdj.com/hc/en-us/community/posts/115018095303-Reasons-to-think-i-leave-from-rekordbox-?page=1#community_comment_360000392646)
+* Comparison to VDJ: Everything need to be relocated FILE by FILE.
+* Comparison to Serato: To test.
+
 
 ## Why is Traktor my software of choice: b) OS-search
 
@@ -139,10 +155,12 @@ Traktor allows searching inside any OS folders. I don't have DJ playlists inside
 I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
 When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.\
 ([See this blog post for more detail on these methods](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc))
-  * Comparison to Rekordbox: Rekordbox displays OS folders, but you can't search inside them
-  * Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
-  * Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
-  
+* Comparison to Rekordbox: Rekordbox displays OS folders, but you can't search inside them. [Example of Pioneer forum request](https://forums.pioneerdj.com/hc/en-us/community/posts/115018095303-Reasons-to-think-i-leave-from-rekordbox-?page=1#community_comment_360000392646)
+* Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
+* Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
+
+
+
 ## Why is Traktor my software of choice: c) Advanced MIDI mapping and Lots of FX
   
 Traktor supports complex MIDI mapping with 8x variables, 2x conditionals and any number of actions per MIDI input
@@ -150,30 +168,42 @@ Traktor supports complex MIDI mapping with 8x variables, 2x conditionals and any
 My [AKAI AMX mapping has 10 layers built using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
 My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s \
 This is only possible if midi mapping has variables and multiple actions per physical input.
-  * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
-  * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
-  * Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
+* Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+* Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+* Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
 
 See also ["Why I moved to BOME midi mapping"](#Why-I-moved-to-BOME-midi-mapping).
+
 
 ## Why is Traktor my software of choice: d) Hotcues move the temporary cue as well
 
 I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well.\
 This is very useful for  previewing an old song that you dont remember anymore. When you are done, you just move it to the last point using the big round button.
-  * Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping. [This was requested in their forum](https://forums.pioneerdj.com/hc/en-us/community/posts/360021313752-Is-there-any-way-at-all-to-reassign-the-cue-button-to-cue-to-the-most-recently-selected-hot-cue-rather-than-only-being-used-to-make-cue-points-)
-  * Comparison to Serato: untested
-  * Comparison to VDJ: untested, but not a problem for sure (trivial to change using advanced MIDI mapping)
+* Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping. [This was requested in their forum](https://forums.pioneerdj.com/hc/en-us/community/posts/360021313752-Is-there-any-way-at-all-to-reassign-the-cue-button-to-cue-to-the-most-recently-selected-hot-cue-rather-than-only-being-used-to-make-cue-points-)
+* Comparison to Serato: untested
+* Comparison to VDJ: untested, but not a problem for sure (trivial to change using advanced MIDI mapping)
 
+## Why is Traktor my software of choice: e) Stronger Sync than others
+
+Traktor features a very strong master clock that was built for the remix decks. As such its sync is in general stronger than the other softwares I tested. 
+Using Beatsync the phrasing is always kept for any action I might do to the track: Beatjump, Hot cues, Temporary Cue, Pitch bend, Tempo change, Scratch, etc.
+
+* Comparison to Serato: see [this comparison video](https://www.youtube.com/watch?v=pyAj4IyFNCs). Even there I still found myself having the "gold" sync instead of the desired "blue" sync
+* Comparison to Rekordbox: It has the best sync outside Traktor 
+* Comparison to VDJ: untested
+
+    
 ## Which features I miss in Traktor
 
 Specific features:
 * **#1: Elastic beatgrids**: This is crucial as I play very old music and many music styles
 * **#2: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
-* **#3: Pad modes**: I have them in my mappings, but would love to see them on screen, and have an associated pad editor like Rekordbox and VirtualDJ
+* **#3: Pad modes**: I have multiple pad modes in my mappings, but would love to see them on screen, and have an associated pad editor just like Rekordbox and VirtualDJ
 * **#4: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
 * **#5: Video support**
 * **#6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)**, with a lot more than 8x variables and 2x conditions
 * **#7: Smart playlists** and related tracks
+* **#8: Include subcrates** like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
 
 In general I fully agree with [this Digital DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
 * #1: “Please embrace hardware partners again…”
