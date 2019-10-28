@@ -41,6 +41,7 @@ function copy_mapping_files()
   
   # note: this will fail on purpose using "set -e"
   rm --verbose "${root_dst}"/*.tsi
+  rm --verbose "${root_dst}"/*/*.tsi
   
 }
 
@@ -58,19 +59,21 @@ function do_banner()
 }
 
 
-
-# 
+#########
+######### Options
+#########
 do_bin_files=1
 do_mapping_files=1
+do_lists=1
 do_git_operations=1
 
 
 
-### DESTINATION 
+### DESTINATION folder
 root_dst_all="/mnt/c/Root/0_linux_home/git/music_scripts"
 
 
-### $HOME/BIN  files
+### BIN  files
 root_src_bin="/home/pestrela/bin"
 
 cue_files_in="cue_convert_timestamps.sh  cue_merge_cues.py   cue_renumber_files.py  cue_make_tracklist.sh      cue_rename_cue_files.sh "
@@ -84,23 +87,30 @@ download_folder_out="downloads"
 
 
 ### MAPPING FILES
-mapping_all_root_src="/mnt/c/Root/google_drive/Pedro/2 Music - Controllers/0_MAPS_Traktor"
+google_drive_root="/mnt/c/Root/google_drive/Pedro"
+
+mapping_all_root_src="${google_drive_root}/2 Music - Controllers/0_MAPS_Traktor"
 mapping_1_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME"
 mapping_1_root_dst="${root_dst_all}/traktor/mapping_ddj_1000"
 
-mapping_2_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.1.1 - DDJ-SX2_SZ - TP3_TP2"
-mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_sx2_sz1"
+mapping_2_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.1.2 - DDJ-SX2_SZ_SRT - TP3_TP2"
+mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_sx2_sz_srt"
 
 mapping_3_root_src="${mapping_all_root_src}/AKAI AMX/v1.0.1 - AKAI AMX TP2_TP3"
 mapping_3_root_dst="${root_dst_all}/traktor/mapping_akai_amx"
 
 ### TECNICHAL FILES
-
 tech_1_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - DDJ Controllers.txt"
 tech_2_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - BOME DDJ 1000 Screens.txt"
 tech_all_dst="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME/Support files"
 
 
+### LIST FILES
+list_all_root_src="${google_drive_root}/9 Listas/listas de discos"
+
+list_1_src="${list_all_root_src}/vinyl list.txt"
+list_2_src="${list_all_root_src}/CD and DVD list.txt"
+list_all_dst="${root_dst_all}/lists"
 
 
 
@@ -117,18 +127,32 @@ if [ $do_bin_files -ge 1 ]; then
   copy_files "$root_src_bin"   "$download_files_in" "$download_folder_out"
 fi
 
+
+
+if [ $do_lists -ge 1 ]; then
+  do_banner "COPYING VINYL LISTS"
+
+  # Copy specific files into the mapping in google drive
+  cp -f "$list_1_src" "$list_all_dst"
+  cp -f "$list_2_src" "$list_all_dst"
+  
+fi
+
+exit 0
+
 if [ $do_mapping_files -ge 1 ]; then
   do_banner "COPYING MAPPING FILES"
 
+  # Copy specific files into the mapping in google drive
   cp -f "$tech_1_src" "$tech_all_dst"
   cp -f "$tech_2_src" "$tech_all_dst"
   
-  #exit 0
+  # rsync the folders, then delete the TSIs
   copy_mapping_files   "$mapping_1_root_src"   "$mapping_1_root_dst"
   copy_mapping_files   "$mapping_2_root_src"   "$mapping_2_root_dst"
   copy_mapping_files   "$mapping_3_root_src"   "$mapping_3_root_dst"
-
 fi
+
 
 if [ $do_git_operations -ge 1 ]; then
   do_banner "DOING GIT OPERATIONS"

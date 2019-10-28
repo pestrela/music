@@ -4,7 +4,9 @@
 * [MindMap Summary](#MindMap-Summary)
 * [OS-Folders](#OS-Folders)
   * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
-  * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
+  * [Why I manage music using OS-folders only](
+  #why-i-manage-music-using-os-folders-only
+  #why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
 
   
@@ -731,7 +733,9 @@ Steps were:
     
 [more info #1](https://www.resilio.com/blog/sync-hacks-how-to-use-bittorrent-sync-for-djs-and-producers) / [more info #2](https://www.native-instruments.com/forum/threads/resilio-sync-synchronizing-traktor-libraries-across-computers.355599) / [more info #3](https://www.native-instruments.com/forum/threads/syncing-traktor-across-multiple-computers-with-resilio-sync.348405)
   
-
+See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments.com/forum/attachments/tsp2_tutorial-01_sidebysideinstalls_ver1-0_web-pdf.46430)
+  
+  
 ## How to replace the DDJ-1000 filter knobs with Silver knobs.
 
 Both 1000 and 1000SRT have extremly dull filter knobs. Which is a pity.\
