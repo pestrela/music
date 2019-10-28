@@ -326,6 +326,11 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	FX1|FX2 = PADFX
 	FX3 = JOG FX
 	FX4 = delay release
+  
+      
+      -> DDJ-1000SRT: emulate vinyl off
+        5: VINYL ON
+        6: VINYL OFF
  
 	 
 	 
@@ -848,7 +853,8 @@ DDJ-SR/RR support:
   Only differences are:
   - higher resolution jogwheels require higher sensitivity in all jog commands
     - jog turn
-    - jogFX knob
+    - jogFX kno
+    b
   - shift2 button is missing. This is now mapped to loop capture button  
   - pad modes sequence: minor or no differences at all
    

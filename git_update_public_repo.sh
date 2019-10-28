@@ -41,7 +41,7 @@ function copy_mapping_files()
   
   # note: this will fail on purpose using "set -e"
   rm --verbose "${root_dst}"/*.tsi
-  rm --verbose "${root_dst}"/*/*.tsi
+  rm --verbose "${root_dst}"/*/*.tsi      || true
   
 }
 
@@ -133,19 +133,17 @@ if [ $do_lists -ge 1 ]; then
   do_banner "COPYING VINYL LISTS"
 
   # Copy specific files into the mapping in google drive
-  cp -f "$list_1_src" "$list_all_dst"
-  cp -f "$list_2_src" "$list_all_dst"
+  cp -v -f "$list_1_src" "$list_all_dst"
+  cp -v -f "$list_2_src" "$list_all_dst"
   
 fi
-
-exit 0
 
 if [ $do_mapping_files -ge 1 ]; then
   do_banner "COPYING MAPPING FILES"
 
   # Copy specific files into the mapping in google drive
-  cp -f "$tech_1_src" "$tech_all_dst"
-  cp -f "$tech_2_src" "$tech_all_dst"
+  cp -v -f "$tech_1_src" "$tech_all_dst"
+  cp -v -f "$tech_2_src" "$tech_all_dst"
   
   # rsync the folders, then delete the TSIs
   copy_mapping_files   "$mapping_1_root_src"   "$mapping_1_root_dst"
