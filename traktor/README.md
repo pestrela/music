@@ -738,8 +738,8 @@ See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments
   
 ## How to replace the DDJ-1000 filter knobs with Silver knobs.
 
-Both 1000 and 1000SRT have extremly dull filter knobs. Which is a pity.\
-For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. Sadly this is not a perfect fit.
+Both 1000 and 1000SRT have extremely [dull filter knobs](../pics/silver_knobs/DDJ-1000RB.jpg). Which is a pity.\
+For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. This is an almost perfect fit.
 \
 Folder with pictures of the knobs: [here](../pics/silver_knobs)
 \
@@ -749,13 +749,17 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
     DJM-900NX2/2000NX1/750\
     DDJ-SZ/ DDJ-RZ/ DDJ-RZX
   
-* [DAA1320/DAA1350](../silver_knobs/DAA1320.jpg):
+* [DAA1320/DAA1350](../pics/silver_knobs/DAA1320.jpg):
   * this was confirmed NOT to work
   * [parts list]((https://www.pacparts.com/part.cfm?part_no=DAA1320&mfg=Pioneer)): DJM-S9 / DJM-900SRT / XDJ-RX / XDJ-RX2
 
 * [100-SX3-3009](../pics/silver_knobs/100-SX3-3009.jpg):
   * not tested
   * [part list](https://www.pacparts.com/part.cfm?part_no=100-SX3-3009&mfg=Pioneer): DDJ-RX
+  
+* [DAA1373](../pics/silver_knobs/DAA1373.jpg):
+  * not tested
+  * [parts list](https://www.pacparts.com/part.cfm?part_no=DAA1373&mfg=Pioneer): DJM750 MK2 / 250MK2 / 450 / S3
   
 * [Rane 2015](../pics/silver_knobs/rane%202015%20filters.jpg):
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
