@@ -8,7 +8,6 @@
   #why-i-manage-music-using-os-folders-only
   #why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
-
   
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
@@ -16,6 +15,8 @@
     * [OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
     * [Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
     * [Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
+    * [Why is Traktor my software of choice: e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
+    
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
  
   
@@ -198,14 +199,14 @@ Using Beatsync the phrasing is always kept for any action I might do to the trac
 ## Which features I miss in Traktor
 
 Specific features:
-* **#1: Elastic beatgrids**: This is crucial as I play very old music and many music styles
-* **#2: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
-* **#3: Pad modes**: I have multiple pad modes in my mappings, but would love to see them on screen, and have an associated pad editor just like Rekordbox and VirtualDJ
-* **#4: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
-* **#5: Video support**
-* **#6: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)**, with a lot more than 8x variables and 2x conditions
-* **#7: Smart playlists** and related tracks
-* **#8: Include subcrates** like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
+* **#1: Include subcrates** just like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
+* **#2: Elastic beatgrids**: This is crucial as I play very old music and many music styles
+* **#3: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
+* **#4: Pad modes**: I have multiple pad modes in my mappings, but would love to see them on screen, and have an associated pad editor just like Rekordbox and VirtualDJ
+* **#5: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
+* **#6: Video support**
+* **#7: [VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)**, with a lot more than 8x variables and 2x conditions
+* **#8: Smart playlists** and related tracks
 
 In general I fully agree with [this Digital DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
 * #1: “Please embrace hardware partners again…”
@@ -740,9 +741,9 @@ See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments
 
 Both 1000 and 1000SRT have extremely [dull filter knobs](../pics/silver_knobs/DDJ-1000RB.jpg). Which is a pity.\
 For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. This is an almost perfect fit.
-\
+
 Folder with pictures of the knobs: [here](../pics/silver_knobs)
-\
+
 * [DAA1309](../pics/silver_knobs/DAA1309.png):
   * This has the best fit overall. The knob is slightly higher than desired.
   * [Part list](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer): \
