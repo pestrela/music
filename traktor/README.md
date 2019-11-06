@@ -4,18 +4,16 @@
 * [MindMap Summary](#MindMap-Summary)
 * [OS-Folders](#OS-Folders)
   * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
-  * [Why I manage music using OS-folders only](
-  #why-i-manage-music-using-os-folders-only
-  #why-i-manage-music-using-os-folders-only)
+  * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
   
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
-    * [Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
-    * [OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
-    * [Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
-    * [Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
-    * [Why is Traktor my software of choice: e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
+    * [a) Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
+    * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
+    * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
+    * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
+    * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
     
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
  
@@ -765,7 +763,32 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
 * [Rane 2015](../pics/silver_knobs/rane%202015%20filters.jpg):
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
+## Why I use Windows instead of Mac
     
+Apple and MacOS is in general a better choice to do audio work (both DJing and Production). 
+
+The operating system is stronger because it was built on Unix. The hardware and software are better 
+integrated as they are built by the same company. And there is generally less bugs across the board as the hardware are standardized (ie, all macs are basically the same).
+
+Nevertheless its definitely not perfect; while I've more issues in Windows, I've also seen many issues in Mac. 
+In particular, as of Nov 2019 there is a lot of problems with MacOS Catalina. This is both the migration to 64-bit only drivers, and the removal of itunes/music App. Hopefully these are temporary situations until the dust settles.
+
+So if I say the mac is overall a better choice for Music, so why I'm using a Dell XPS 15 windows? 
+Main reasons are:
+* **a) Folder Tree:** I use File explorer with the [full tree visible all the time](#why-i-manage-music-using-os-folders-only). I've tried Finder several times but did not enjoyed their paradigms. 
+Also tried to use a windows file explorer clone for mac, it was completely abandoned by the author.
+* **b) No flexibility:** Also Known As the "one apple way". Never got used to their GUI and keyboard shortcuts. 
+In particular there is the extremely annoying decision of having to use 2 hands for the [forward delete key](https://forums.macrumors.com/threads/why-no-delete-key.1360799/). 
+Same story for Maximize. Same story for lack of ports and dongles.
+In all cases the answer is "get used to it". Well, I didn't. 
+* **c) Software library:** Very limited choice on software and freeware, as compared to Windows
+* **d) Expensive** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
+
+
+See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
+from a production company.
+
+  
   
 ## What scripts and documentation did you built for Traktor?
 
@@ -785,8 +808,5 @@ Please note that the *mapping themselves* are only available on https://maps.djt
 * macos_converters
   * Scripts able to run the DJCU and Rekordbuddy tools in Windows. (these convert collections from Traktor to Rekordbox)
 
-  
- 
- 
  
  
