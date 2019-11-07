@@ -124,8 +124,15 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 # Traktor software
 ## Why is Traktor my software of choice
 
-Below the 4x main reasons that I love Traktor.
+Below the 4x main reasons that I love Traktor:
+  * [a) Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
+  * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
+  * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
+  * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
+  * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
+
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
+
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
 
@@ -769,12 +776,13 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
 Apple and MacOS is in general a better choice to do audio work (both DJing and Production). 
 
 The operating system is stronger because it was built on Unix. The hardware and software are better 
-integrated as they are built by the same company. And there is generally less bugs across the board as the hardware are standardized (ie, all macs are basically the same).
+integrated as they are built by the same company. 
+And there is generally less bugs across the board as the hardware are standardized (ie, all macs are the same inside the same model).
 
-Nevertheless its definitely not perfect; while I've more issues in Windows, I've also seen many issues in Mac. 
-In particular, as of Nov 2019 there is a lot of problems with MacOS Catalina. This is both the migration to 64-bit only drivers, and the removal of itunes/music App. Hopefully these are temporary situations until the dust settles.
+Nevertheless its definitely not perfect; while for sure I've seen more issues in Windows, I've also seen (too many) issues in Mac. 
+In particular, as of Nov 2019 this got a lot worse with MacOS Catalina, namely as it migrated to 64-bit only drivers and the removal of itunes/music App. 
 
-So if I say the mac is overall a better choice for Music, so why I'm using a Dell XPS 15 windows? 
+So if I say the mac is still overall a better choice for Music, so why I'm using a Dell XPS 15 windows? 
 Main reasons are:
 * **a) Folder Tree:** I use File explorer with the [full tree visible all the time](#why-i-manage-music-using-os-folders-only). I've tried Finder several times but did not enjoyed their paradigms. 
 Also tried to use a windows file explorer clone for mac, it was completely abandoned by the author.
@@ -787,7 +795,7 @@ In all cases the answer is  "get used to it". Well, I didn't.
 * **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming. 
 For years I've used a linux VM inside windows, but now I only use WSL. 
 ([more info1](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd) 
-[more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
+/ [more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
 
 
 See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
