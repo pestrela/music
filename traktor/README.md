@@ -51,7 +51,7 @@
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
-  * [Why I use Windows instead of Mac][#Why-I-use-Windows-instead-of-Mac]
+  * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
   * [What scripts and documentation did you built for Traktor?](#what-scripts-and-documentation-did-you-built-for-traktor)
 
      
@@ -784,7 +784,7 @@ Same story for the Maximize feature. Same story for lack of USB-A ports, SD card
 In all cases the answer is  "get used to it". Well, I didn't. 
 * **c) Software library:** Very limited choice on software and freeware, as compared to Windows
 * **d) Expensive:** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
-* **e) Command Line:** I use the command heavily to automate tasks in bash and python programming. 
+* **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming. 
 For years I've used a linux VM inside windows, but now I only use WSL. 
 ([more info1](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd) 
 [more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
