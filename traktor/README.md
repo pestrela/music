@@ -778,16 +778,20 @@ So if I say the mac is overall a better choice for Music, so why I'm using a Del
 Main reasons are:
 * **a) Folder Tree:** I use File explorer with the [full tree visible all the time](#why-i-manage-music-using-os-folders-only). I've tried Finder several times but did not enjoyed their paradigms. 
 Also tried to use a windows file explorer clone for mac, it was completely abandoned by the author.
-* **b) No flexibility:** Also Known As the "one apple way". Never got used to their GUI and keyboard shortcuts. 
+* **b) No flexibility:** AKA the "one apple way". I've never got used to their GUI, their keyboard shortcuts, and the keyboard itself. 
 In particular there is the extremely annoying decision of having to use 2 hands for the [forward delete key](https://forums.macrumors.com/threads/why-no-delete-key.1360799/). 
-Same story for Maximize. Same story for lack of ports and dongles.
-In all cases the answer is "get used to it". Well, I didn't. 
+Same story for the Maximize feature. Same story for lack of USB-A ports, SD cards and dongles. Ditto for no headphone jack in recent iphones.
+In all cases the answer is  "get used to it". Well, I didn't. 
 * **c) Software library:** Very limited choice on software and freeware, as compared to Windows
-* **d) Expensive** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
+* **d) Expensive:** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
+* **e) Command Line:** I use the command heavily to automate tasks in bash and python programming. 
+For years I've used a linux VM inside windows, but now I only use WSL. 
+([more info1](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd) 
+[more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
 
 
 See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
-from a production company.
+from a Music company.
 
   
   
