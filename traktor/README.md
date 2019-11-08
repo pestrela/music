@@ -17,7 +17,6 @@
     
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
  
-  
 * [BOME migration](#BOME-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
@@ -25,6 +24,7 @@
 
 * [Hardware Controllers](#Hardware-Controllers)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
+  * [DDJ-1000 comparison to DDJ-SZ and AKAI AMX](#DDJ-1000-comparison-to-DDJ-SZ-and-AKAI-AMX)
   * [Why i like BIG jogwheels](#why-i-like-big-jogwheels)
   * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
 
@@ -38,7 +38,6 @@
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
   * [Is the DDJ-1000SRT also mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
- 
  
 * [DJ collection converters](#DJ-collection-converters)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
@@ -179,7 +178,11 @@ My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/
 This is only possible if midi mapping has variables and multiple actions per physical input.
 * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
 * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
-* Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.
+* Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). 
+It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.\
+  VDJ also features extremely nice [mapping editor](https://www.youtube.com/watch?v=4SU2OyDB9PQ&t=200),
+  [pad editor](https://www.youtube.com/watch?v=eT1nZVpUUr8&t=50),
+  and [custom button editor](https://www.youtube.com/watch?v=nGbw2RHV_j0&t=180), all with dropdowns and chained together.
 
 See also ["Why I moved to BOME midi mapping"](#Why-I-moved-to-BOME-midi-mapping).
 
@@ -305,26 +308,28 @@ The overall integration is better, of course, which is a plus if you prefer plug
 But in the end its really the big jogwheels that is the crucial deal breaker; This was completely abandoned by NI in 2014 with the release of the S8, and was only picked-up in 2018 with the S4MK3 (although, in my opinion, still not the same as the DDJ-1000).
 
 
-## Comparison to DDJ-SZ1 and AKAI AMX
+## DDJ-1000 comparison to DDJ-SZ and AKAI AMX
 
 Besides [my DDJ-1000](#why-is-ddj-1000-my-hardware-of-choice), I have several other controllers fully [mapped to Traktor](#What-are-your-main-Traktor-mappings). 
 
-Differences are:
+Main differences are:\
+
 DDJ-1000:
-* CDJ big Jogwheels 
-* Jog screens
-* More portable than SZ, but more cramped as well
-* BeatFX in the lower right corner to the mixer
+* **Jogs:** CDJ big Jogwheels 
+* **Screens:** Jog screens
+* **Size**: More portable than SZ, but more cramped as well
+* **BeatFX:** BeatFX in the lower right corner to the mixer
 
 DDJ-SZ:
-* Very spacious. A joy to use!
-* Extra-smooth big Jogwheels
-* Real soundcolor FXs, including the Pioneer filter with a lot of Resonance
+* **Size:** Very spacious. A joy to use!
+* **Jogs:** Extra-smooth big Jogwheels
+* **Filter:** Pioneer soundcolor FXs in hardware, including the Pioneer filter with a lot of Resonance
 
 AKAI AMX:
-* ** A) Ultra portable:** A single device is equivalent of a Z1+X1+TwisterFighter
-* ** B) DVS** This is the cheapest and smallest way to unlock DVS 
-* ** C) Mapping** to control all TP3 functions
+* **Ultra portable:** The AMX replaces 4x devices: Z1 Mixer + X1 controller + Twister Fighter + Audio2. 
+Its so small I carry it everywhere I go. 
+* **DVS:** The AMX is the cheapest and smallest way to unlock DVS 
+* **Mapping:** My mapping unlocks all TP3 functions
 
 See also [this DDJ-SZ comparison](https://www.reddit.com/r/Beatmatch/comments/c6vquf/help_me_ddj_sz_vs_ddj_1000/)
 
