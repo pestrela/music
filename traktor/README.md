@@ -45,6 +45,7 @@
 
 * [Other topics](#Other-topics)
   * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
+  * [Read this if you have erratic USB cable problems](#Read-this-if-you-have-erratic-USB-cable-problems)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
@@ -616,13 +617,27 @@ To fix this:
 For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
 
  
+   
+## Read this if you have erratic USB cable problems
+
+USB cables may be too thin and not deliver enough power to your controller.\
+Confirm your cable does NOT have these labels:
+* 28/2C
+* 28AWGX2C
+* AWG 28X2C
+ 
+In general you want the "2C" label to have "24" and not "28".\
+full info: https://support.native-instruments.com/hc/en-us/articles/210293725-Choosing-the-Correct-USB-Cable-for-Your-NI-Hardware-Device
+more info2: https://goughlui.com/2014/10/01/usb-cable-resistance-why-your-phonetablet-might-be-charging-slow/
+
+
 ## How I build perfect tracklists using CUE files
 
 I use a set of tools to generate a CUE file with the timings of my sets.
 Once I have this file, I can generate tracklists with timestamps like in this example: https://www.mixcloud.com/dj_estrela/mix-17-cd07-trance-jun-2019/
 
 Steps BEFORE the set (for prepared sets):
-* group the files in folders, per style (Vocal Trance, Uplitfing trance, etc)
+* group the files in folders, per style (Vocal Trance, Uplifting trance, etc)
 * select the tracks and their order using winamp; Once this is OK, run "cue_renumber_files.py" and "cue_make_tracklist.sh".
 
 Steps AFTER the set (both live sets and prepared sets):
@@ -788,8 +803,8 @@ Every year I update this page with the new data points over time. Source files a
 See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time" | width=70)
-![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" | width=70)
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time" | width=70)!
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" | width=70)!
 
   
 ## Why I use Windows instead of Mac
