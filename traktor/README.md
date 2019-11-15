@@ -270,8 +270,8 @@ A major Traktor strength is the MIDI mappings system. Very flexible and powerful
 Traktor maps are by far the most popular in https://maps.djtechtools.com \
 Large mappings are really complex to build - but once this is done other users immediately benefit by just installing them.
 
-However the Traktor mappings system didn't get improvements for years, and [is is now quite old](#Why-I-moved-to-BOME-midi-mapping).
-It now is also not powerful enough [to map recent controllers](#Why-I-moved-to-BOME-midi-mapping).
+However the Traktor mappings system didn't get improvements for years, and [is is now quite old](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits).\
+It now is also impossible to use it alone [to map the latest controllers](#Why-I-moved-to-BOME-midi-mapping-Impossible-features).
 
 For example in my DDJ-1000 mapping I had to use BOME midi translator as a middle man:\
 https://maps.djtechtools.com/mappings/9279
