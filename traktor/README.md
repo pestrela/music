@@ -51,7 +51,7 @@
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
-  * [What scripts and documentation did you built for Traktor?](#what-scripts-and-documentation-did-you-built-for-traktor)
+  * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
   * [What generic software tools did you built for Windows?](#What-generic-software-tools-did-you-built-for-Windows)
   * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
 
@@ -787,12 +787,11 @@ Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular softwa
 Every year I update this page with the new data points over time. Source files are [here](../census_graphs)
 
 
-
-See also the [most popular DJ softwares census](../census_graphs).
+See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](pics/dj_software_over_time.jpg?raw=true "dj_software_over_time")
-![dj controllers over time](pics/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time")
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time")
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time")
 
   
 ## Why I use Windows instead of Mac
@@ -810,10 +809,14 @@ So if I say the mac is still overall a better choice for Music, so why I'm using
 Main reasons are:
 * **a) Folder Tree:** I use File explorer with the [full tree visible all the time](#why-i-manage-music-using-os-folders-only). I've tried Finder several times but did not enjoyed their paradigms. 
 Also tried to use a windows file explorer clone for mac, it was completely abandoned by the author.
-* **b) No flexibility:** AKA the "one apple way". I've never got used to their GUI, their keyboard shortcuts, and the keyboard itself. 
-In particular there is the extremely annoying decision of having to use 2 hands for the [forward delete key](https://forums.macrumors.com/threads/why-no-delete-key.1360799/). 
-Same story for the Maximize feature. Same story for lack of USB-A ports, SD cards and dongles. Ditto for no headphone jack in recent iphones.
-In all cases the answer is  "get used to it". Well, I didn't. 
+* **b) No flexibility:** AKA the "one apple way". I've never got used to their GUI, their keyboard shortcuts, 
+and the keyboard itself. 
+In particular there is the extremely annoying decision of having to use 2 hands for the
+ [forward delete key](https://forums.macrumors.com/threads/why-no-delete-key.1360799/). 
+Same story for the Maximize feature. Same story for lack of USB-A ports, SD cards and dongles. 
+Ditto for no headphone jack in recent iphones.
+In all cases the answer is  "get used to it". Well, I didn't.\
+See also [my Windows tweaks](#Generic-Windows-tweaks-and-programs-I-use)
 * **c) Software library:** Very limited choice on software and freeware, as compared to Windows
 * **d) Expensive:** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
 * **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming. 
