@@ -782,16 +782,14 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
   
 ## DJ Census over time results
 
-
 Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular software and controllers. 
 Every year I update this page with the new data points over time. Source files are [here](../census_graphs)
-
 
 See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time")
-![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time")
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time"){:height="500px" width="500px"}.
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time"){:height="500px" width="500px"}.
 
   
 ## Why I use Windows instead of Mac
