@@ -144,7 +144,7 @@ function die_if_failure()
 function do_sleep()
 {
   local time="$1"
-  echo "slepping $time seconds"
+  #echo "slepping $time seconds"
   sleep "$time"
 }
 
@@ -158,7 +158,6 @@ only_query_format=0
     
 dump_format=0
 need_format=0
-had_format=0
 tool="youtube-dl"
 
 tool_disabled_options="--verbose --restrict-filenames --add-metadata --merge-output-format mp4"
@@ -219,21 +218,21 @@ done
 
 case $argc in
 0)
-	die  "No arguments specified"
+	url="-"
+	need_format=0
+  format="3"
   ;;
   
 1)
 	url="${argv[1]}"
 	need_format=0
-	format="both"
-  had_format=0
+  format="3"
 	;;
 
 2)
 	url="${argv[1]}"
 	need_format=0
 	format="${argv[2]}"
-  had_format=1
 	;;
 	
 *)
@@ -245,7 +244,6 @@ esac
 if [ $force_query_format -ge 1 ]; then
 	need_format=0
 	format="q"
-  had_format=1
 fi
   
 
@@ -255,19 +253,12 @@ if [ "$url" == "-" ]; then
   error_summary="youtube_dl_errors.txt"
   got_errors=0
   
-  
-  if [ $had_format -eq 0 ]; then
-    format="mp4"
-  fi
 
   #  echo "please enter urls"
   cat - | egrep "http" > "$playlist"
 
   # https://mywiki.wooledge.org/bashfaq/005#loading_lines_from_a_file_or_stream
   mapfile -t files < "$playlist"
-  
-  echo "" >>  "$error_summary"
-  echo "*******" >> "$error_summary"
     
   
   for file in "${files[@]}" ; do 
@@ -276,7 +267,6 @@ if [ "$url" == "-" ]; then
     echo ""
     echo "********************"
     echo "processing:  $file"
-    echo ""
     if [ $dry_run -ge 1 ]; then
       echo $0 "$file" "$format"
       
@@ -287,9 +277,14 @@ if [ "$url" == "-" ]; then
       #set +x
       
       if [ $ret -ge 1 ]; then
-        echo "$file" >> "$error_summary"
+        (
+        echo "" 
+        echo "*******" 
+        echo "$file"
+        ) >> "$error_summary"
+        
         got_errors=1
-        exit 1
+        #exit 1
       fi
       
       do_sleep 2
@@ -423,19 +418,19 @@ else
 	format_option=""
 fi
 
-echo "format_option: $format_option"
-	
+echo "format option: $format_option"
+echo ""	
   
 mkdir -p "/tmp/youtube_dl"
 old_pwd="`pwd`"
 cd "/tmp/youtube_dl"
-rm /tmp/youtube_dl/*
+rm /tmp/youtube_dl/*   2> /dev/null
 
   
 ret=0
 set -x
 $tool $format_option $tool_local_options  --postprocessor-args "$post_processor_args"   $tool_global_options  $keep_opt $filename_options "$url"  < /dev/null || ret=$?
-#set +x
+set +x
 die_if_failure "$ret"
 
 #flac_tester.sh  -m /tmp/youtube_dl/*
