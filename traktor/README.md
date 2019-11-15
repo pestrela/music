@@ -51,6 +51,7 @@
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
+  * [DJ Census over time results](#DJ-Census-over-time-results)
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
   * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
   * [What generic software tools did you built for Windows?](#What-generic-software-tools-did-you-built-for-Windows)
@@ -803,8 +804,8 @@ Every year I update this page with the new data points over time. Source files a
 See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time" | width=70)!
-![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" | width=70)!
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time" )!
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" )!
 
   
 ## Why I use Windows instead of Mac
