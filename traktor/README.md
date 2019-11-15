@@ -788,8 +788,8 @@ Every year I update this page with the new data points over time. Source files a
 See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time"){:height="500px" width="500px"}.
-![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time"){:height="500px" width="500px"}.
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time" | width=70)
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" | width=70)
 
   
 ## Why I use Windows instead of Mac
