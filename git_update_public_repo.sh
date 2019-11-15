@@ -40,7 +40,7 @@ function copy_mapping_files()
   #set -x
   
   # note: this will fail on purpose using "set -e"
-  rm --verbose "${root_dst}"/*.tsi
+  rm --verbose "${root_dst}"/*.tsi        || true
   rm --verbose "${root_dst}"/*/*.tsi      || true
   
 }
@@ -76,14 +76,18 @@ root_dst_all="/mnt/c/Root/0_linux_home/git/music_scripts"
 ### BIN  files
 root_src_bin="/home/pestrela/bin"
 
-cue_files_in="cue_convert_timestamps.sh  cue_merge_cues.py   cue_renumber_files.py  cue_make_tracklist.sh      cue_rename_cue_files.sh "
-cue_folder_out="traktor/cue_tools"
+download_files_in="youtube_dl.sh  "
+download_folder_out="downloads"
 
 mp3_files_in="mp3_analyse_fhg_offset.sh  mp3_check_encoder.sh   mp3_get_lame_indexes.py"
 mp3_folder_out="traktor/26ms_offsets/bin"
 
-download_files_in="youtube_dl.sh"
-download_folder_out="downloads"
+traktor_tools_files_in=" traktor_clone_cues.py
+cue_convert_timestamps.sh  cue_merge_cues.py   cue_renumber_files.py  cue_make_tracklist.sh 
+   cue_rename_cue_files.sh cue_search_youtube.py  cue_scrape_lyrics.py
+ "
+traktor_tools_folder_out="traktor/tools_traktor"
+
 
 
 ### MAPPING FILES
@@ -99,22 +103,32 @@ mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_sx2_sz_srt"
 mapping_3_root_src="${mapping_all_root_src}/AKAI AMX/v1.0.1 - AKAI AMX TP2_TP3"
 mapping_3_root_dst="${root_dst_all}/traktor/mapping_akai_amx"
 
-### TECNICHAL FILES
+mapping_4_root_src="${mapping_all_root_src}/z_other mappings/Numark Party Mix/PartyMix VDJ - v0.7.0"
+mapping_4_root_dst="${root_dst_all}/traktor/mapping_party_mix"
+
+
+
+### TEXT FILES (TECHINCAL)
 tech_1_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - DDJ Controllers.txt"
 tech_2_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - BOME DDJ 1000 Screens.txt"
 tech_all_dst="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME/Support files"
 
 
-### LIST FILES
+
+### COLLECTION LIST FILES
 list_all_root_src="${google_drive_root}/9 Listas/listas de discos"
 
 list_1_src="${list_all_root_src}/vinyl list.txt"
 list_2_src="${list_all_root_src}/CD and DVD list.txt"
-list_all_dst="${root_dst_all}/lists"
+list_all_dst="${root_dst_all}/collection"
 
 
+ahk_file_in="/mnt/c/Users/Pedro/Documents/AutoHotkey.ahk"
+ahk_file_out="${root_dst_all}/downloads"
 
 
+##############################
+##############################
 ##############################
 ## main program goes here
 
@@ -122,9 +136,11 @@ list_all_dst="${root_dst_all}/lists"
 if [ $do_bin_files -ge 1 ]; then
   do_banner "COPYING BIN FILES"
 
-  copy_files "$root_src_bin"   "$cue_files_in"      "$cue_folder_out"
+  copy_files "$root_src_bin"   "$traktor_tools_files_in"      "$traktor_tools_folder_out"
   copy_files "$root_src_bin"   "$mp3_files_in"      "$mp3_folder_out"
   copy_files "$root_src_bin"   "$download_files_in" "$download_folder_out"
+  
+  cp -v -f  "$ahk_file_in" "$ahk_file_out"
 fi
 
 
@@ -149,6 +165,8 @@ if [ $do_mapping_files -ge 1 ]; then
   copy_mapping_files   "$mapping_1_root_src"   "$mapping_1_root_dst"
   copy_mapping_files   "$mapping_2_root_src"   "$mapping_2_root_dst"
   copy_mapping_files   "$mapping_3_root_src"   "$mapping_3_root_dst"
+  copy_mapping_files   "$mapping_4_root_src"   "$mapping_4_root_dst"
+
 fi
 
 

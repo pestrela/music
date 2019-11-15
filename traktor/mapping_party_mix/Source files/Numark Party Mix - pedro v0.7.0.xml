@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper device="NMPARTY" author="Atomix Productions" version="802" date="2017-12-25">
+	<info>http://www.virtualdj.com/manuals/hardware/numark/partymix.html</info>
+	<map value="PLAY" action="var &apos;$m1&apos; ? 
+  goto 0%  : 
+  play_pause " />
+	<map value="CUE" action="var &apos;$m1&apos; ? pad_param +1 : cue_stop " />
+	<map value="SYNC" action="var &apos;$m1&apos; ? 
+    pad_param -1 : 
+    sync &amp; set &apos;$Syncdown&apos; 1 while_pressed " />
+	<map value="VOLUME" action="var &apos;$m1&apos; ? 
+    nothing : 
+    volume " />
+	<map value="CROSSFADER" action="crossfader &amp; 
+var &apos;$filtercf&apos; ? 
+   param_multiply 0.5 &amp; param_add 0.5 &amp; deck left filter &amp; param_invert &amp; param_add 0.5 &amp; deck right filter : 
+   nothing" />
+	<map value="EQ_LOW" action="var &apos;$m1&apos; ?
+   effect_slider &apos;Echo&apos; 1  :
+var  &apos;$Syncdown&apos; ?
+   effect_slider &apos;Echo&apos; 2  :
+   eq_low" />
+	<map value="EQ_HIGH" action="var &apos;$m1&apos; ? 
+   effect_slider 1    : 
+   eq_high &amp; eq_mid" />
+	<map value="GAIN" action="var &apos;$m1&apos; ?  
+   gain : 
+var  &apos;$Syncdown&apos; ?
+     filter 0.5  : 
+filter_resonance 200%  &amp;   filter &amp;  effect_active &apos;FilterRoll&apos;  off 
+" />
+	<map value="BROWSE" action="var &apos;$m1&apos; ?
+  param_bigger 0 ? 
+    cycle &apos;$program&apos; 3 : 
+    cycle &apos;$program&apos; -3 : 
+   browser_scroll" />
+	<map value="LOAD" action="holding ? 
+   unload : 
+   load " />
+	<map value="MASTER_VOLUME" action="var &apos;$m1&apos; ?
+  nothing: 
+  master_volume " />
+	<map value="HEADPHONES_MIX" action="var &apos;$m1&apos; ? 
+  nothing :
+  headphone_mix" />
+	<map value="HEADPHONES_VOLUME" action="var &apos;$m1&apos; ? 
+  nothing :
+  headphone_volume" />
+	<map value="PITCH" action="var &apos;$m1&apos; ? 
+    zoom_scratch :
+var &apos;$Syncdown&apos; ?
+   param_multiply 0.2 &amp; pitch_range : 
+  pitch 
+
+" />
+	<map value="CUES_MODE" action="var &apos;$syncdown&apos; ? 
+  pad_page +1 :
+var &apos;$m1&apos; ?
+  pad_page &apos;PM index&apos; :
+  pad_page &apos;hotcues&apos;" />
+	<map value="LOOP_MODE" action="var &apos;$syncdown&apos; ? 
+  pad_page +1 :
+var &apos;$m1&apos; ?
+  pad_page &apos;PM index&apos; :
+   pad_page &apos;PM Loop&apos;" />
+	<map value="SAMPLER_MODE" action="var &apos;$syncdown&apos; ? 
+  pad_page +1 :
+var &apos;$m1&apos; ?
+  pad_page &apos;PM index&apos; :
+  pad_page &apos;sampler&apos;" />
+	<map value="EFFECT_MODE" action="var &apos;$syncdown&apos; ? 
+  pad_page +1 :
+var &apos;$m1&apos; ?
+  pad_page &apos;PM index&apos; :
+  pad_page &apos;PM FX&apos;" />
+	<map value="PAD2" action="var &apos;$m1&apos; ?
+    pad 6 :
+var  &apos;$syncdown&apos; ?
+  padshift 2 :
+  pad 2 
+" />
+	<map value="PAD3" action="var &apos;$m1&apos; ?
+    pad 7 :
+var  &apos;$syncdown&apos; ?
+  padshift 3 :
+  pad 3 
+" />
+	<map value="BROWSE_PUSH" action="holding ? 
+  browser_window &apos;folders&apos; ? 
+     browser_folder : 
+    browser_window &apos;songs&apos; : 
+  browser_window &apos;folders&apos; ? 
+     browser_enter : 
+     browser_window &apos;folders&apos;" />
+	<map value="PARTY_BALL_MODE" action="param_bigger 82% ? set &apos;$ballmode&apos; 4 : param_bigger 62% ? set &apos;$ballmode&apos; 3 : param_bigger 42% ? set &apos;$ballmode&apos; 2 : param_bigger 22% ? set &apos;$ballmode&apos; 1 : set &apos;$ballmode&apos; 0" />
+	<map value="PARTY_BALL_RED" action="var &apos;$ballmode&apos; 1 ? var &apos;$program&apos; 2 ? get_vu_meter &apos;master&apos; : var &apos;$program&apos; 1 ? deck left masterdeck ? deck left get_beat_num 1 3 ? deck left param_bigger 70% get_beatgrid ? constant 0.99 : constant 0.1 : constant 0.0 : deck right get_beat_num 1 3 ? deck right param_bigger 70% get_beatgrid ? constant 0.99 : constant 0.1 : constant 0.0 : deck left masterdeck ? deck left get_beat_num 1 3 ? constant 0.9 : constant 0.0 : deck right get_beat_num 1 3 ? constant 0.9 : constant 0.0 : nothing" />
+	<map value="PARTY_BALL_GREEN" action="var &apos;$ballmode&apos; 1 ? var &apos;$program&apos; 2 ? get_vu_meter &apos;master&apos; : var &apos;$program&apos; 1 ? deck left masterdeck ? deck left get_beat_num 2 3 ? deck left param_bigger 70% get_beatgrid ? constant 0.99 : constant 0.1 : constant 0.0 : deck right get_beat_num 2 3 ? deck right param_bigger 70% get_beatgrid ? constant 0.99 : constant 0.1 : constant 0.0 : deck left masterdeck ? deck left get_beat_num 2 3 ? constant 0.9 : constant 0.0 : deck right get_beat_num 2 3 ? constant 0.9 : constant 0.0 : nothing" />
+	<map value="PARTY_BALL_BLUE" action="var &apos;$ballmode&apos; 1 ? var &apos;$program&apos; 2 ? get_vu_meter &apos;master&apos; : var &apos;$program&apos; 1 ? deck left masterdeck ? deck left get_beat_num 3 3 ? deck left param_bigger 70% get_beatgrid ? constant 0.99 : constant 0.1 : constant 0.0 : deck right get_beat_num 3 3 ? deck right param_bigger 70% get_beatgrid ? constant 0.99 : constant 0.1 : constant 0.0 : deck left masterdeck ? deck left get_beat_num 3 3 ? constant 0.9 : constant 0.0 : deck right get_beat_num 3 3 ? constant 0.9 : constant 0.0 : nothing" />
+	<map value="PARTY_BALL_AUTO" action="var &apos;$ballmode&apos; 2 ? deck left masterdeck ? deck left get_beatgrid 100%  : deck right get_beatgrid 100% : nothing" />
+	<map value="LED_PLAY" action="loaded ? 
+   pause ? 
+     blink : 
+     on : 
+    off" />
+	<map value="PFL" action="var &apos;$m1&apos; ? 
+  nothing :
+   pfl" />
+	<map value="LED_CUES_MODE" action="pad_page &apos;hotcues&apos;" />
+	<map value="LED_LOOP_MODE" action="pad_page &apos;PM loop&apos;" />
+	<map value="LED_SAMPLER_MODE" action="pad_page &apos;sampler&apos;" />
+	<map value="LED_EFFECT_MODE" action="pad_page &apos;PM FX&apos;" />
+	<map value="LED_SYNC" action="var &apos;$syncdown&apos;" />
+	<map value="LED_SCRATCH" action="var &quot;$m1&quot;" />
+	<map value="SCRATCH" action="set &apos;$m1&apos; 1 while_pressed " />
+	<map value="JOG" action="var &apos;$m1&apos; ? 
+   param_multiply 60 &amp; goto  :
+   vinyl_mode 1 &amp; jogwheel " />
+	<map value="PAD4" action="var &apos;$m1&apos; ?
+    pad 8 :
+var  &apos;$syncdown&apos; ?
+  padshift 4 :
+  pad 4 
+" />
+	<map value="LED_PFL" action="nothing
+" />
+	<map value="PAD1" action="var &apos;$m1&apos; ?
+    pad 5 :
+var  &apos;$syncdown&apos; ?
+  padshift 1 :
+  pad 1 
+" />
+</mapper>
