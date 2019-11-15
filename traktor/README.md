@@ -52,6 +52,9 @@
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
   * [What scripts and documentation did you built for Traktor?](#what-scripts-and-documentation-did-you-built-for-traktor)
+  * [What generic software tools did you built for Windows?](#What-generic-software-tools-did-you-built-for-Windows)
+  * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
+
 
      
 
@@ -59,7 +62,7 @@
 
 This page has my knowledge sharing about Traktor, Mappings, Hardware, DJing, DJ Set, etc.\
 The picture below summarizes the main ideas and dependencies explained in these blog posts.
-![traktor_mindmap](various/traktor_mindmap.png?raw=true "Traktor Mindmap")
+![traktor_mindmap](pics/traktor_mindmap.png?raw=true "Traktor Mindmap")
 
 # OS-Folders
 
@@ -79,7 +82,7 @@ To manage this complexity I've build my own set of personal tags that I fully tr
 As such, the first action on new files is to tag them into my structure. This ignores any previous tags made by someone else.
 
 Below an example how my structure looks like; the full tree is far larger.
-![DJ Genres](various/dj_genres.png?raw=true)
+![DJ Genres](pics/dj_genres.png?raw=true)
 
 See also [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only).
   
@@ -234,9 +237,9 @@ See also the [most popular DJ softwares census](../census_graphs).
 As [explained above](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx), Traktor mapping rocks. However it lacks essential features required on the [DDJ-1000 screens mapping](ddj_1000_traktor_mapping).
 
 * **#1: 14-bit out messages**: Trakor supports *receiving* high resolution midi messages. I need to *send* them as well [on my DDJ-1000 mapping](../ddj/1%20MIDI%20codes/DDJ-1000RB%20-%20MIDI%20Messages.pdf)
-* **#2: Sequence of Events**: For PadFX, I *first* need to change the FX, and *then* need to turn it on. This is not something Traktor support; both actions are tried simultaneously resulting in something else. More info: page 88 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+* **#2: Sequence of Events**: For PadFX, I *first* need to change the FX, and *then* need to turn it on. This is not something Traktor support; both actions are tried simultaneously resulting in something else. More info: page 88 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 * **#3: Timers**: Something simple as end-of-track blinking require timers to schedule actions for later. Same story for [vinyl break on the play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE), as implemented by [Traktor Mapping Service](http://traktormappingservice.com/)
-* **#4: Any event as a Conditional**: Some events can be inputs to conditionals, like "is in active loop". However many events are missing, for example "which deck is master." To implement this, please see page 87 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+* **#4: Any event as a Conditional**: Some events can be inputs to conditionals, like "is in active loop". However many events are missing, for example "which deck is master." To implement this, please see page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 
 
 ## Why I moved to BOME midi mapping: Traktor Limits
@@ -245,7 +248,7 @@ Also, I've also hit the limits of Traktor mappings multiple times. Below are the
 
 * **A) More modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings.
 * **B) More conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
-* **C) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](various/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+* **C) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 * **D) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
 
 ## Some Limitations of BOME mappings
@@ -583,7 +586,7 @@ Regarding the Jogs: this is exactly the same story, plus the [all the comments a
 * Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
 * Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
     
-![26ms_problem](various/26ms_problem.png?raw=true "26ms_problem")
+![26ms_problem](pics/26ms_problem.png?raw=true "26ms_problem")
 
 ## Which DJ converters avoid the 26ms shift issue?
 
@@ -776,6 +779,22 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
 * [Rane 2015](../pics/silver_knobs/rane%202015%20filters.jpg):
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
+  
+## DJ Census over time results
+
+
+Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular software and controllers. 
+Every year I update this page with the new data points over time. Source files are [here](../census_graphs)
+
+
+
+See also the [most popular DJ softwares census](../census_graphs).
+See also the graph showing the [most popular DJ softwares over time](../census_graphs).
+
+![dj software over time](pics/dj_software_over_time.jpg?raw=true "dj_software_over_time")
+![dj controllers over time](pics/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time")
+
+  
 ## Why I use Windows instead of Mac
     
 Apple and MacOS is in general a better choice to do audio work (both DJing and Production). 
@@ -806,25 +825,59 @@ For years I've used a linux VM inside windows, but now I only use WSL.
 See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
 from a Music company.
 
-  
-  
-## What scripts and documentation did you built for Traktor?
+ 
+## What software tools did you built for Traktor?
 
-This github folder contains my Traktor tools, and the documentation of the mappings.
-Please note that the *mapping themselves* are only available on https://maps.djtechtools.com
+[This folder](tools_traktor) contains my Traktor tools and my mappings's documentation.\ 
+Note: the *mapping files themselves* are only available on https://maps.djtechtools.com
 
-
+* Traktor_clone_cues
+  * Clones cues between physically duplicated files. Is also albel to merge traktor NML files.
+* traktor_tools
+  * Tools to generate CUE files and timestamped tracklists
+  * Tools to search youtube and scrape lyrics
+  * My mp3tag actions scripts
+  * Adaptor scripts to run DJCU and Rekordbuddy in Windows
 * ddj_1000_traktor_mapping
-  * A backup of the my Traktor+BOME mapping for the DDJ-1000 with jog screens support.
+  * This is a backup of my main Traktor mapping supporting jog screens.
   * Main page: https://maps.djtechtools.com/mappings/9279
-* collections_without_playlists
-   * Tools to manage your collection using Operating System folders. See the below blog post as well.
-* tracklist_tools
-  * Tools to generate CUE files and timestamped tracklists. See the below blog post as well
 * 26ms offsets
-  * Finding mp3 cue shifts in DJ conversion apps. Main ticket: https://github.com/digital-dj-tools/dj-data-converter/issues/3
-* macos_converters
-  * Scripts able to run the DJCU and Rekordbuddy tools in Windows. (these convert collections from Traktor to Rekordbox)
+  * Research about the 26ms mp3 cue shifts in DJ conversion apps. [More info](https://github.com/digital-dj-tools/dj-data-converter/issues/3)
 
  
+## What generic software tools did you built for Windows?
+
+[This folder](../downloads) contains Windows tweaks and other generic tools.
+
+My [autohotkey file](../downloads/AutoHotkey.ahk) has all kinds of useful *glabal* shortcuts that *work for any text of any program*
+* CTRL+F08: Search in Google
+* CTRL+F09: Search in Explorer
+* CTRL+F10: Current url to clipboard
+* CTRL+F11: Search in Youtube (list)
+* CTRL+F12: Search in Youtube (first hit)
+* Win+backspace: toggle any window to be always on top for
+
+More scripts in this folder:
+* a youtube-dl wrapper
+* a tool to search 1001tracklists, ticketswap and DJTT maps.
+
+
+## Generic Windows tweaks and programs I use 
+
+I love [customization](https://www.neogaf.com/threads/some-of-my-cant-live-without-progams-what-are-yours.1482889/), so I have installed several tweaker apps. These are all GUIS to edit the refgistry and change / unlock / customize windows features. Below the reviews:
+* [Activaid](https://www.ghacks.net/2014/09/24/activaid-is-a-useful-autohotkey-script-collection/)
+* [Winareo tweraker](https://winaero.com/comment.php?comment.news.1836)
+* [Ultimate windows tweaker](https://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10)
+* [NirSoft utils](https://www.nirsoft.net/utils/)
+
+Plus some specific programs:
+* [QQTabbar](https://www.techsupportalert.com/content/qttabbar.htm): Adds tabs to File Explorer, plus A LOT more.
+* [Link Clump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj?hl=en): Make a rectangle around hyperlinks; open all in new tabs.
+* [WinDirStat](https://windirstat.net/): find missing disk space hogs
+* [Resilio sync](https://www.techadvisor.co.uk/download/backup-recovery/resilio-sync-263-3331463/): automatic folder synchronization
+* [Allway Sync](https://www.tomsguide.com/us/file-sync-backup,review-1060-4.html): manual folder synchronization
+
+ 
+ 
+
  
