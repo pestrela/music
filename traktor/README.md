@@ -33,6 +33,7 @@
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
     * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
+  * [How to download my Traktor mappings](#How-to-download-my-Traktor-mappings)
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
   * [Can I see a video demo of your mappings?](#can-i-see-a-video-demo-of-your-mappings)
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
@@ -383,11 +384,23 @@ Some relevant points:
 * DDJ-SZ / DDJ-SX2 / DDJ-SRT: https://maps.djtechtools.com/mappings/9222
 * AKAI AMX: https://maps.djtechtools.com/mappings/9323
 
+## How to download my Traktor mappings:
+
+TO DOWNLOAD: you can ONLY download my mappings from the [DJ tech tools site]().\ 
+To do this you MUST register and then verify your email there.\
+
+Note: sometimes that site is under maintenance. Please try later in this case.
+
 
 ## What are the features of your DDJ-1000 Traktor mapping?
 
+**Links:**
+* Download Link: https://maps.djtechtools.com/mappings/9279
+* Documentation: https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/
+*	Video demo: https://youtu.be/h9tQZEHr8hk
+
 **Feature list:**
-*	Jog Screens
+*	Only mapping with Jog Screens
 *	7x Jogwheel FX chains
 *	5x MixerFX
 *	11x MacroFX
@@ -399,20 +412,20 @@ Some relevant points:
 *	Loops manual adjust (via jogs)
 *	Beatjump and Loops pages
 *	End of track warning blinks and other CDJ emulation
-*	All functions reachable without shifts\
+*	All functions reachable without shifts
 
-**Links:**
-* Download Link: https://maps.djtechtools.com/mappings/9279
-* Documentation: https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/
-*	Video demo: https://youtu.be/h9tQZEHr8hk
 
-**About this mapping:**
+**Summary:**
 * This is the *only mapping* for the DDJ-1000 supporting Jog Screens. It works on both Traktor 3 and 2. It requires the 3rd-party BOME Pro MIDI translator. Free trial versions are available to test everything. 
 *	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
 
 
 ## What are the features of your DDJ-SX2 / DDJ-SZ / DDJ-SRT Traktor mapping?
 
+**Links:**
+*	Download Link: https://maps.djtechtools.com/mappings/9222 
+*	Documentation: https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2263179753734551 
+*	Video demo: http://youtu.be/H_TE2mtuM6Q 
 
 **Feature list:**
 *	7x Jogwheel FX chains
@@ -427,18 +440,17 @@ Some relevant points:
 *	Beatjump controls
 *	All  functions reachable without shifts
 
-**Links:**
-*	Download Link: https://maps.djtechtools.com/mappings/9222 
-*	Documentation: https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2263179753734551 
-*	Video demo: http://youtu.be/H_TE2mtuM6Q 
-
-
-**About this mapping:**
+**Summary:**
 *	This a 2019 mapping for the Pioneer DDJ family of controllers. It works on both Traktor 3 and 2. The mapping was **tested extensively** in both the **DDJ-SX2** and **DDJ-SZ**. Other DDJs are supported as well (please see below).
 *	It is also the most complete by far. It supports TP3 MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, Slip reverse, and a Preview Player. Be sure to see the documentation for all the features.
 
 
 ## What are the features of your AKAI AMX Traktor mapping?
+
+**Links:**
+*	Download Link: https://maps.djtechtools.com/mappings/9323 
+*	Documentation: https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2271291466256713 
+*	Video demo: https://www.youtube.com/watch?v=TzAgENM55DE 
 
 **Feature list:**
 *	DVS TP3
@@ -462,12 +474,8 @@ Some relevant points:
 *	Key Adjust
 *	Filter Roll
 
-**Links:**
-*	Download Link: https://maps.djtechtools.com/mappings/9323 
-*	Documentation: https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2271291466256713 
-*	Video demo: https://www.youtube.com/watch?v=TzAgENM55DE 
 
-**About this mapping:**
+**Summary:**
 *	This is a 2019 mapping for the Akai AMX. This is by far the cheapest and smallest way to unlock both DVS and almost all Traktor Pro 3 functions. In a single device you have the equivalent of a Z1+X1+TwisterFighter, at least.
 *	It is also the most complete by far. It supports 10x layers, 4 decks, full transport and tempo control, TP3 MixerFX, MacroFX, Cues, Loops, beatjump,  Rolls, Slip reverse, Sampler, Key adjust, and a Preview Player. 
 
@@ -485,7 +493,6 @@ Included is:
 Plus:
 * Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
 * Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
-
 
 ## Can I see a video demo of your mappings?
 
@@ -506,7 +513,7 @@ All videos are timestamp tagged in Minute:second format, for you to find explana
   * AMX v1.0 - **main video** - http://youtu.be/TzAgENM55DE
    
   
-## Can I test your mappings for free?
+## Can I test your mappings for FREE?
 
 Yes. All my mappings work fine with the demo versions of both Traktor and BOME. So if you have these controllers you can just try them in no time. 
 
@@ -570,6 +577,7 @@ Regarding the Jogs: this is exactly the same story, plus the [all the comments a
 
   
 # DJ collection converters
+
 ## What is the 26ms shift issue when converting cues/loops between softwares?
 
 * We have found that 6% of the files have a shift of 26 milliseconds when going from Traktor to Rekordbox. The other 94% of the files will be fine.
@@ -845,19 +853,17 @@ from a Music company.
  
 ## What software tools did you built for Traktor?
 
-[This folder](tools_traktor) contains my Traktor tools and my mappings's documentation.\ 
-Note: the *mapping files themselves* are only available on https://maps.djtechtools.com
+[This folder](tools_traktor) contains my Traktor tools and CUE tools.
+Below is a summary; see [here](traktor_tools/README.md) for more details
 
 * Traktor_clone_cues
-  * Clones cues between physically duplicated files. Is also albel to merge traktor NML files.
-* traktor_tools
+  * Clones cues between physically duplicated files. 
+  * Is also able to merge traktor NML files.
+* CUE_tools
   * Tools to generate CUE files and timestamped tracklists
-  * Tools to search youtube and scrape lyrics
+  * Tools to search a whole set in youtube tabs and to scrape lyrics
   * My mp3tag actions scripts
   * Adaptor scripts to run DJCU and Rekordbuddy in Windows
-* ddj_1000_traktor_mapping
-  * This is a backup of my main Traktor mapping supporting jog screens.
-  * Main page: https://maps.djtechtools.com/mappings/9279
 * 26ms offsets
   * Research about the 26ms mp3 cue shifts in DJ conversion apps. [More info](https://github.com/digital-dj-tools/dj-data-converter/issues/3)
 

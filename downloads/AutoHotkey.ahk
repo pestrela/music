@@ -155,7 +155,6 @@ find_in_explorer( query ){
   SendInput, %query%
   
   return_current_window()
-
 }
 
 
