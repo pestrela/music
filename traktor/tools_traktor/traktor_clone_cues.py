@@ -1,39 +1,50 @@
 #!/usr/bin/env python3
 
-help_text="""
 
-Main feature: clone CUEs
-
-  This script is able to clone CUEs of the Duplicate files in your Collection.
-	
-  This is useful when you organise your music using OS folders (instead of traktor playlists).
-  In that case, you physically copy files to have them in different "playlists".
-  Ignoring the wasted space, the biggest issue is that the CUEs do not propagate to the other duplicates.
-  This script fixes this by matching the files by AUDIO_ID [1], and copy the one that has the biggest number of CUEs into their duplicates.
-
-	INPUT: latest "collection.nml" file (with duplicate files)
-
-Secondary feature: merge collections
-
-	Using the same method as above, this script can merge CUEs from multiple collections.
-
-	This is useful when you had an old collection that had CUEs, and somehow they have been lost.
-	Simply load both the old and the current collection, and the script will carry missing CUEs forward into the latest collection.
-  Note that as above the merging criteria is again the file with the biggest number of CUEs - not the time of last update!!
-	
-	INPUT: "collection.nml", plus "*.nml" for the old collections
-
-How to run:
-  traktor_clone_cues -s -c collection_file  [any number of old collection files]
-	
-Reference:
-  [1] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
-
-More info on my workflow based on folders:
-  https://github.com/pestrela/music_scripts/blob/master/traktor/README.md#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc
-  
-  
 """
+todo in this software:
+ - confirm all collection files are case-sensitive. fix them if not.
+ - confirm all collection files start with c:\root\sync_traktor (instead of desktop)
+ 
+ - check consistency: confirm all files are from root folder were imported 
+ - deleted files: confirm all files exist. Delete the deleted one.
+
+ 
+Example steps: 
+--------------
+ - import \folder1\a.mp3 
+ - add 3 cues (lock?)
+ - copy to \folder2. Import receives 3 cues
+ - add 4th cue to \folder2
+ - move \folder1 to \folder3
+ - check consistency:   \folder1 not found -> mass relocate on root -> finds \folder2
+ 
+ 
+NEW METHOD:
+-----------
+- SMALL MOVES:  (like rekordbox)
+  - Traktor:
+    - import all tracks "as-is"
+    - analyse new tracks  
+  - Python:
+    - run clone cues  (uses old tracks)
+    - delete missing tracks 
+ 
+- BIG MOVES:
+   - Traktor:
+     - check consistency
+     - mass relocate 
+  - Python:
+    - run clone cues  (uses old tracks)
+    - delete missing tracks 
+
+
+CONFIRMED:
+ - adding tracks is incremental
+ - tracks already in collection show as "[]" in the icons.
+ 
+"""
+  
 
 import sys, os, glob, string, marshal
 import string, re
@@ -152,55 +163,41 @@ class VersionedOutputFile:
                 os.remove(pathname)
                 
                 
+help_text="""
 
+Main feature: clone CUEs
 
+  This script is able to clone CUEs of the Duplicate files in your Collection.
+	
+  This is useful when you organise your music using OS folders (instead of traktor playlists).
+  In that case, you physically copy files to have them in different "playlists".
+  Ignoring the wasted space, the biggest issue is that the CUEs do not propagate to the other duplicates.
+  This script fixes this by matching the files by AUDIO_ID [1], and copy the one that has the biggest number of CUEs into their duplicates.
 
+	INPUT: latest "collection.nml" file (with duplicate files)
 
+Secondary feature: merge collections
+
+	Using the same method as above, this script can merge CUEs from multiple collections.
+
+	This is useful when you had an old collection that had CUEs, and somehow they have been lost.
+	Simply load both the old and the current collection, and the script will carry missing CUEs forward into the latest collection.
+  Note that as above the merging criteria is again the file with the biggest number of CUEs - not the time of last update!!
+	
+	INPUT: "collection.nml", plus "*.nml" for the old collections
+
+How to run:
+  traktor_clone_cues -s -c collection_file  [any number of old collection files]
+	
+Reference:
+  [1] AUDIO_ID: https://www.mail-archive.com/mixxx-devel@lists.sourceforge.net/msg05061.html
+
+More info on my workflow based on folders:
+  https://github.com/pestrela/music_scripts/blob/master/traktor/README.md#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc
+  
+  
 """
-todo in this software:
- - confirm all collection files are case-sensitive. fix them if not.
- - confirm all collection files start with c:\root\sync_traktor (instead of desktop)
- 
- - check consistency: confirm all files are from root folder were imported 
- - deleted files: confirm all files exist. Delete the deleted one.
 
- 
-Example steps: 
---------------
- - import \folder1\a.mp3 
- - add 3 cues (lock?)
- - copy to \folder2. Import receives 3 cues
- - add 4th cue to \folder2
- - move \folder1 to \folder3
- - check consistency:   \folder1 not found -> mass relocate on root -> finds \folder2
- 
- 
-NEW METHOD:
------------
-- SMALL MOVES:  (like rekordbox)
-  - Traktor:
-    - import all tracks "as-is"
-    - analyse new tracks  
-  - Python:
-    - run clone cues  (uses old tracks)
-    - delete missing tracks 
- 
-- BIG MOVES:
-   - Traktor:
-     - check consistency
-     - mass relocate 
-  - Python:
-    - run clone cues  (uses old tracks)
-    - delete missing tracks 
-
-
-CONFIRMED:
- - adding tracks is incremental
- - tracks already in collection show as "[]" in the icons.
- 
-"""
- 
- 
 
 # https://docs.python.org/3.4/library/xml.etree.elementtree.html
 import xml.etree.ElementTree as ET
@@ -464,9 +461,5 @@ if(opts.grep_only):
   opts.grep = opts.grep_only
            
 analyse_collection_files(opts.final_file, opts.other_collection)
-
-
-
-
 
 
