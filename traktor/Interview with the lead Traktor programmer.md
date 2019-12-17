@@ -1,4 +1,11 @@
 
+https://de-bug.de/musiktechnik/entwickler-talk-traktor-scratch-pro/
+
+
+
+https://djtechtools.com/2011/02/11/the-history-of-traktor/
+
+
 https://www.bonedo.de/artikel/einzelansicht/native-instruments-traktor-evolution-der-dj-software.html
 
 
