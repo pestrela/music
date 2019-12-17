@@ -8,6 +8,7 @@
 #
 #
 # More info / overviews:
+#   installing a macOS VM in windows: https://www.reddit.com/r/Beatmatch/comments/52dvst/how_to_transfer_your_windowsbased_dj_library_from/
 #   DJTT post: http://forum.djtechtools.com/showthread.php?t=95570&page=3
 #   Conversion programs: https://mixxx.org/wiki/doku.php/traktor_cue_storage_format
 #   Manual process: https://www.dropbox.com/s/4tyyi3me9tpm2uk/Windows%20Collection%20conversion%20whitepaper.pdf
