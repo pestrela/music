@@ -129,17 +129,16 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 # Traktor software
 ## Why is Traktor my software of choice
 
-Below the 4x main reasons that I love Traktor:
+I'm using Traktor as it has crucial features that I depend on. These features are missing in other Softwares:
   * [a) Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
   * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
   * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
   * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
   * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
 
+https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
+
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
-
-See also the graph showing the [most popular DJ softwares over time](../census_graphs).
-
 
 ## Why is Traktor my software of choice: a) Database repair
 
@@ -249,10 +248,10 @@ As [explained above](#why-is-traktor-my-software-of-choice-c-advanced-midi-mappi
 
 Also, I've also hit the limits of Traktor mappings multiple times. Below are the features that are possible in Traktor but only by significantly increasing the mapping complexity.
 
-* **A) More modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings.
-* **B) More conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
-* **C) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
-* **D) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
+* **A) More modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings. This in turn freezes your preferences window - please see below.
+* **B) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
+* **C) More conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
+* **D) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 
 ## Some Limitations of BOME mappings
 
@@ -720,11 +719,11 @@ Concrete steps:
 
 * Editing part 1: merge everything to a single video
   * Download [openshot](https://www.openshot.org). Read this [tutorial for basics](https://www.howtoforge.com/tutorial/an-introduction-to-video-editing-in-openshot-2-0/). [this is another tutorial](https://gist.github.com/peanutbutterandcrackers/f0f666243133e0ed25abbc12a4ba23d7)
-  * change profile to a 4:3 format. This is crucial to fit both the controller and the top traktor screen
+  * Change profile to a 4:3 format, 30fps (preferences / profile). This is crucial to fit both the controller and the top traktor screen
   * Add the Controller video on Track 1. Click in the very first frame. Use effects / crop to crop the controller to size. Use right click / transform to center and scale it to the bottom of the screen
-  * move the video to the middle of the timeline. lock track 1 so that it no longer moves
-  * Add the Traktor video to Track 2. Do the same steps as before to crop and scale / center the video on the top part of the screen
-  * Sync the two videos by finding somthing unique (eg press play). Zoom in a lot. Disable snap for precise aligment. Confirm aligment in the end of the video
+  * Move the video to the middle of the timeline. Lock track 1 so that it no longer moves
+  * Add the Screen video to Track 2. Do the same steps as before to crop and scale / center the video on the top part of the screen
+  * Sync the two videos by finding something unique (eg press play). Zoom in a lot. Disable snap for precise aligment. Confirm aligment in the end of the video
   * Render the video to a 4:3 format (1024x728, 30fps, MP4). Create a profile in your documents / .openshot / profiles folder, based on 
   
 
