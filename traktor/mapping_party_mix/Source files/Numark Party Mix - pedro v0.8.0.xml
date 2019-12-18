@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mapper device="NMPARTY" author="Atomix Productions" version="802" date="2017-12-25">
+<mapper device="NMPARTY" author="Atomix Productions" version="840" date="2019-12-13">
 	<info>http://www.virtualdj.com/manuals/hardware/numark/partymix.html</info>
 	<map value="PLAY" action="var &apos;$m1&apos; ? 
   goto 0%  : 
@@ -16,18 +16,22 @@ var &apos;$filtercf&apos; ?
    param_multiply 0.5 &amp; param_add 0.5 &amp; deck left filter &amp; param_invert &amp; param_add 0.5 &amp; deck right filter : 
    nothing" />
 	<map value="EQ_LOW" action="var &apos;$m1&apos; ?
-   effect_slider &apos;Echo&apos; 1  :
+   effect_slider  1  :
 var  &apos;$Syncdown&apos; ?
-   effect_slider &apos;Echo&apos; 2  :
-   eq_low" />
-	<map value="EQ_HIGH" action="var &apos;$m1&apos; ? 
-   effect_slider 1    : 
-   eq_high &amp; eq_mid" />
-	<map value="GAIN" action="var &apos;$m1&apos; ?  
-   gain : 
-var  &apos;$Syncdown&apos; ?
-     filter 0.5  : 
-filter_resonance 200%  &amp;   filter &amp;  effect_active &apos;FilterRoll&apos;  off 
+   effect_slider  2  :
+   eq_low
+
+" />
+	<map value="EQ_HIGH" action="var  &apos;$Syncdown&apos; ?
+  eq_high &amp; eq_mid
+: var &apos;$m1&apos; ? 
+   eq_high &amp; eq_mid
+: filter_resonance 200%  &amp;   filter &amp;  effect_active &apos;FilterRoll&apos;  off " />
+	<map value="GAIN" action="gain
+
+
+
+
 " />
 	<map value="BROWSE" action="var &apos;$m1&apos; ?
   param_bigger 0 ? 
@@ -56,22 +60,22 @@ var &apos;$Syncdown&apos; ?
 	<map value="CUES_MODE" action="var &apos;$syncdown&apos; ? 
   pad_page +1 :
 var &apos;$m1&apos; ?
-  pad_page &apos;PM index&apos; :
+  pad_page &apos;PM colorFX&apos; :
   pad_page &apos;hotcues&apos;" />
 	<map value="LOOP_MODE" action="var &apos;$syncdown&apos; ? 
   pad_page +1 :
 var &apos;$m1&apos; ?
-  pad_page &apos;PM index&apos; :
+  pad_page &apos;PM colorFX&apos; :
    pad_page &apos;PM Loop&apos;" />
 	<map value="SAMPLER_MODE" action="var &apos;$syncdown&apos; ? 
   pad_page +1 :
 var &apos;$m1&apos; ?
-  pad_page &apos;PM index&apos; :
+  pad_page &apos;PM colorFX&apos; :
   pad_page &apos;sampler&apos;" />
 	<map value="EFFECT_MODE" action="var &apos;$syncdown&apos; ? 
   pad_page +1 :
 var &apos;$m1&apos; ?
-  pad_page &apos;PM index&apos; :
+  pad_page &apos;PM colorFX&apos; :
   pad_page &apos;PM FX&apos;" />
 	<map value="PAD2" action="var &apos;$m1&apos; ?
     pad 6 :
@@ -112,9 +116,13 @@ var  &apos;$syncdown&apos; ?
 	<map value="LED_SYNC" action="var &apos;$syncdown&apos;" />
 	<map value="LED_SCRATCH" action="var &quot;$m1&quot;" />
 	<map value="SCRATCH" action="set &apos;$m1&apos; 1 while_pressed " />
-	<map value="JOG" action="var &apos;$m1&apos; ? 
-   param_multiply 60 &amp; goto  :
-   vinyl_mode 1 &amp; jogwheel " />
+	<map value="JOG" action="var  &apos;$Syncdown&apos; ?
+  param_multiply 60 &amp; goto  
+: var &apos;$m1&apos; ? 
+   vinyl_mode 1 &amp; jogwheel 
+ : vinyl_mode 0 &amp; jogwheel
+
+" />
 	<map value="PAD4" action="var &apos;$m1&apos; ?
     pad 8 :
 var  &apos;$syncdown&apos; ?

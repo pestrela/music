@@ -30,10 +30,12 @@ Options:
  -k      keep intermediate files
  -Q      query formats and download 
  -q      ONLY query formats, and exit
-
+ -B      rename backup extensions to windows style (version before the extension)
+ 
 General options: 
  -h      help
  -d      debug trace
+  
   
   "
   exit 1
@@ -177,6 +179,21 @@ function display_formats()
 	local url="$1"
 
 	$tool -F "$url"
+}
+
+
+function rename_backup_extension()
+{
+  shopt -s nullglob
+  
+  for f_name in *.~*~; do 
+      f_bak_ext="${f_name##*.}"
+      f_bak_num="${f_bak_ext//[^0-9]/}"
+      f_orig_name="${f_name%.*}"
+      f_only_name="${f_orig_name%.*}"
+      f_only_ext="${f_orig_name##*.}"
+      mv --backup=numbered  "$f_name" "$f_only_name ($f_bak_num).$f_only_ext"
+  done
 
 }
 
@@ -201,6 +218,11 @@ while [ "$#" -ge 1 ]; do
     keep_opt="--keep-video"
     filename_options=" -o %(title)s-%(format_id)s.%(ext)s "
 	  ;;
+    
+  -B)    
+    rename_backup_extension
+    exit 0
+    ;;
     
   -h)
     display_help
@@ -287,7 +309,7 @@ if [ "$url" == "-" ]; then
         #exit 1
       fi
       
-      do_sleep 2
+      do_sleep 1
     fi
     
   done
@@ -307,7 +329,9 @@ if [ "$url" == "-" ]; then
   exit 0
 fi
 
-url="`echo "$url" | sed 's/&.*$/ /' | awk '{print $1}'`"
+#url="`echo "$url" | sed 's/&.*$/ /' | awk '{print $1}'`"
+url="`echo "$url" | awk '{print $1}'`"
+
 case "$url" in 
 http*)
   ok=1
@@ -436,6 +460,9 @@ die_if_failure "$ret"
 #flac_tester.sh  -m /tmp/youtube_dl/*
 
 mv  --backup=numbered  --target-directory="$old_pwd" /tmp/youtube_dl/*
+
+cd "$old_pwd"
+rename_backup_extension
 
 exit 0
 

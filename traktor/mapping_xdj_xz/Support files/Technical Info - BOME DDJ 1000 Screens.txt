@@ -145,11 +145,10 @@ BOME variables:
         
   FREE VARIABLES:
 
-
   
-
 DDJ-SZ to DDJ-1000 translation:
 -------------------------------
+
 
   
 DDJ KEYBOARD EMULATION:
@@ -248,8 +247,8 @@ CLOCK IMPLEMENTARION:
     calculated timestamp:   "ma"   (not used for calculations)
 
     
- 30ms timer (for BPM):      "hs"  (lock)
- 30ms timer (seek):         "he"  (lock)   (THIS IS TO MERGE!)
+ 30ms timer (for BPM):        "hs"  (lock)
+ 30ms timer (seek):           "he"  (lock)   (THIS IS TO MERGE!)
      
 
      
@@ -259,7 +258,7 @@ CCs messages sent FROM traktor TO BOME:
 JOG NEEDLE:
   CDJ/VINYL MODE   "ko"               (<<< catched and filtered on DDJ!!!)
    
-  IN LOADED: note  A#4 / C5      B4 / C#5   (this 
+  IN LOADED: note  A#4 / C5      B4 / C#5
                           ->  "ks"
 
   IN CUE:           CC 68 -> "z1" (cue being pressed)  
@@ -349,6 +348,7 @@ NEW CCs - High resolution - sent to BOME:
     - LOCK:         "ho"   (0 = none; 1 = LR ; 2 = HR)
                            (algorithm: accept any LR if not HR; accept any HR if not 0 or 100) 
     
+ 
     CC 110 -   0..75  (75)
     CC 111 -  75..100 (25)
     CC 112 - 100..110 (10)
@@ -400,7 +400,7 @@ jog dynamics:
   BOME SIDE:
     "ys" accumulated jog value, with full ticks resolution.
       "tt" how many degrees to send
-      "rr" remainder degrees for next iteration
+      "rr" remainer degress for next iteration
     "y5" TO SEND needle position (360 deg)
     
      
@@ -544,7 +544,18 @@ bugs:
  
   
 
+GENERATE ZERO VARIABLES:
+------------------------
+  import strng
+  globals="ghijklmnyz"
+  
+  todo = list(range(10)) + [ch for ch in string.ascii_lowercase]
 
+  for letter in globals:
+      for n in todo:
+          var="%s%s" % (letter, n)
+          assigment = "%s = 0" % (var)
+          print(assigment)
           
           
           
@@ -603,82 +614,10 @@ Experiments on Midi linked modifiers (MLM):
    
 
 
-Denon HC4500 info:
-------------------
-  midi codes: https://raw.githubusercontent.com/Sonnenstrahl/traktor-now-playing/master/readme-img/denon_midi_commands.jpg
-  run out of global variables:  https://www.bome.com/forums/viewtopic.php?t=5193
-    - multiple MT instances
-    - bitwise manipulaton: "XOR" to clear, "XOR" to write, "AND" + "DIV" to read
-  find all used variables: https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project
-  
-  clear HC45000 video: https://www.youtube.com/watch?v=jJI-fCfn-6M
     
-  
-Unused variables:
------------------
-  ****
-  "gx"  
 
-  *****
-  "hi"  
-  "hx"  
 
-  *****
-  "ie"  
-  "ii"  
-  "io"  
-  "is"  
-  "ix"  
-
-  *****
-  "je"  
-  "ji"  
-  "js"  
-  "jx"  
-
-  *****
-  "ke"  
-  "ki"  
-  "kx"  
-
-  *****
-  "l5"  
-  "la"  
-  "le"  
-  "li"  
-  "lo"  
-  "ls"  
-  "lx"  
-
-  *****
-  "me"  
-  "mi"  
-  "mo"  
-  "ms"  track_number_msb
-  "mx"  track_number_lsb 
-
-  *****
-  "ne"   HC4500 minutes
-  "ni"   HC4500 seconds 
-  "ns"   HC4500 frames
-  "nx"   
-
-  *****
-  "y1"  pitch_polarity  (-1/0/1)
-  "ye"  pitch_msb
-  "yi"  pitch_lsb
-  "yx"  
-
-  *****
-  "ze"  track_positon_normal 
-  "zi"  track_positon_normal 
-  "zx"  
     
     
-DDJ-1000 undocumented notes:
-----------------------------
-  DJ App Connect: ch 16 note A-1
-
- 
     
     

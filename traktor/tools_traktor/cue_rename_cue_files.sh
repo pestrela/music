@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 # 
 # Overview of the Cue tools:
 #
@@ -25,6 +23,34 @@
 
 
 
+
+display_help()
+{
+  echo "
+usage: `basename $0` file1.mp3 [file2.mp3]
+
+Rewrites the FILE line of each CUE to its associated mp3.
+MP3 and CUE need to have the  have the same basefilename!
+
+Is also an wrapper to mmv to rename all files in a single go
+
+options:
+   <default>     Inplace operation
+  -b             do backup as .bak 
+  -d             debug
+  
+file rename operation:  
+  -r|-rename  BASE1 BASE2  - wrapper to mmv 
+    (in this case, it also calls the basic tool after mmv)
+    
+    (command that will be called:  mmv 'base1*' 'base2#1' )
+  
+ "
+  exit 1
+
+}
+
+
 set -e
 set -u
 
@@ -43,27 +69,6 @@ function add_argv()
 }
 
 
-display_help()
-{
-  echo "
-usage: `basename $0` file1.mp3 [file2.mp3]
-
-Rewrites the FILE line of each CUE to its associated mp3.
-MP3 and CUE need to have the  have the same basefilename!
-
-Is also an wrapper to mmv to rename all files in a single go
-
-options:
-   <default>     Inplace operation
-  -b             do backup as .bak 
-  -d             debug
-  
-file rename operation:  
-  -r|-rename  BASE1 BASE2  - wrapper to mmv
- "
-  exit 1
-
-}
 
 
 function echo_var()

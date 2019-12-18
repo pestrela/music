@@ -69,6 +69,7 @@ do_git_operations=1
 
 
 
+
 ### DESTINATION folder
 root_dst_all="/mnt/c/Root/0_linux_home/git/music_scripts"
 
@@ -76,7 +77,7 @@ root_dst_all="/mnt/c/Root/0_linux_home/git/music_scripts"
 ### BIN  files
 root_src_bin="/home/pestrela/bin"
 
-download_files_in="youtube_dl.sh  "
+download_files_in="youtube_dl.sh  AutoHotkey.ahk"
 download_folder_out="downloads"
 
 mp3_files_in="mp3_analyse_fhg_offset.sh  mp3_check_encoder.sh   mp3_get_lame_indexes.py"
@@ -103,16 +104,17 @@ mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_sx2_sz_srt"
 mapping_3_root_src="${mapping_all_root_src}/AKAI AMX/v1.0.1 - AKAI AMX TP2_TP3"
 mapping_3_root_dst="${root_dst_all}/traktor/mapping_akai_amx"
 
-mapping_4_root_src="${mapping_all_root_src}/z_other mappings/Numark Party Mix/PartyMix VDJ - v0.7.0"
+mapping_4_root_src="${mapping_all_root_src}/z_other mappings/Numark Party Mix/PartyMix VDJ - v0.8.1"
 mapping_4_root_dst="${root_dst_all}/traktor/mapping_party_mix"
 
+mapping_5_root_src="${mapping_all_root_src}/z_other mappings/v6.1.3 - XDJ-XZ mapping"
+mapping_5_root_dst="${root_dst_all}/traktor/mapping_xdj_xz"
 
 
-### TEXT FILES (TECHINCAL)
+### TECHNICAL DDJ FILES (this is to update DDJ-1000 mapping only)
 tech_1_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - DDJ Controllers.txt"
 tech_2_src="${mapping_all_root_src}/DDJ Pioneer/Technical Info - BOME DDJ 1000 Screens.txt"
 tech_all_dst="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME/Support files"
-
 
 
 ### COLLECTION LIST FILES
@@ -123,8 +125,8 @@ list_2_src="${list_all_root_src}/CD and DVD list.txt"
 list_all_dst="${root_dst_all}/collection"
 
 
-ahk_file_in="/mnt/c/Users/Pedro/Documents/AutoHotkey.ahk"
-ahk_file_out="${root_dst_all}/downloads"
+#ahk_file_in="/mnt/c/Users/Pedro/Documents/AutoHotkey.ahk"
+#ahk_file_out="${root_dst_all}/downloads"
 
 
 ##############################
@@ -140,7 +142,7 @@ if [ $do_bin_files -ge 1 ]; then
   copy_files "$root_src_bin"   "$mp3_files_in"      "$mp3_folder_out"
   copy_files "$root_src_bin"   "$download_files_in" "$download_folder_out"
   
-  cp -v -f  "$ahk_file_in" "$ahk_file_out"
+  #cp -v -f  "$ahk_file_in" "$ahk_file_out"
 fi
 
 
@@ -166,6 +168,7 @@ if [ $do_mapping_files -ge 1 ]; then
   copy_mapping_files   "$mapping_2_root_src"   "$mapping_2_root_dst"
   copy_mapping_files   "$mapping_3_root_src"   "$mapping_3_root_dst"
   copy_mapping_files   "$mapping_4_root_src"   "$mapping_4_root_dst"
+  copy_mapping_files   "$mapping_5_root_src"   "$mapping_5_root_dst"
 
 fi
 
