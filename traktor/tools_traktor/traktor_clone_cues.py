@@ -222,25 +222,63 @@ def file_append_suffix(filename, suffix):
   return "{name}_{uid}{ext}".format(name=name, uid=suffix, ext=ext)
 
 
-def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_process = None):
-  global opts
+class Stats():
+  
+  def print(stats):
+    print("""
+n_colisions_prev_longer: %d
+n_colisions_new_longer: %d
+n_colisions_samelen: %d
+n_colisions_samelen_prev_newer: %d
+n_colisions_samelen_prev_older: %d
+n_colisions_samelen_samedate: %d
+""" % (
+  stats.n_colisions_prev_longer,
+  stats.n_colisions_new_longer,
+  stats.n_colisions_samelen,
+  stats.n_colisions_samelen_prev_newer,
+  stats.n_colisions_samelen_prev_older,
+  stats.n_colisions_samelen_samedate)
+)
+  
+  
+def parse_nml(opts, file, phase, db, verbose=False, debug=False, quiet=False):
 
   
   max_process=opts.max_process
-
+  verbose = opts.verbose
+  
   print("")
   print("-------\nDoing phase '%d' for '%s'\n" % (phase, file) )
   
   #verbose  = True
   #quiet = False
   
+  
+  debug = opts.debug
+  verbose = opts.verbose
+  quiet = opts.quiet
+  
   very_debug=False
   
   if debug:
       verbose = True
       
-  n_only_on_target=0
-  n_processed=0
+      
+      
+  stats = Stats()    
+  stats.n_only_on_target=0
+  stats.n_processed=0
+  stats.n_colisions=0
+  
+  stats.n_colisions_prev_longer = 0
+  stats.n_colisions_new_longer = 0
+  stats.n_colisions_samelen = 0
+  stats.n_colisions_samelen_prev_newer = 0
+  stats.n_colisions_samelen_prev_older = 0
+  stats.n_colisions_samelen_samedate = 0
+ 
+  
   root = ET.parse(file).getroot()
   collection=root.find('COLLECTION')
   for entry in collection:
@@ -255,6 +293,14 @@ def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_proc
       print("skipping missing date: ", name)
       continue
    
+    if opts.deep_analysis:
+      file = "C:"
+      
+      file = "c:%s%s" % ( folder.replace("/:", "/"), name)
+
+      import pathlib
+      pathlib.Path(file)
+
     if (opts.grep != "") and (name is not None):
       #print(opts.grep, name, folder)
       if not re.search(opts.grep, name, re.IGNORECASE):
@@ -283,6 +329,8 @@ def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_proc
             print("  FOLDER_NEW: %s" % ( folder ))
 
       else:
+          stats.n_colisions += 1
+          
           previous        = db[audio_id]
           previous_name   = previous['name']
           previous_folder = previous['folder']
@@ -292,27 +340,34 @@ def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_proc
           
           ####
           if len_previous > len_new:
+            stats.n_colisions_prev_longer += 1
             use_new = False
             report  = True
             debug_msg = "PREVIOUS had more cues. Keeping previous value"
 
           elif len_previous < len_new:
+            stats.n_colisions_new_longer += 1
             use_new = True
             report  = True
             debug_msg = "NEW has more cues. Using new value"
 
           elif len_previous == len_new:
+              stats.n_colisions_samelen += 1
+
               if previous_date > date:
+                stats.n_colisions_samelen_prev_newer += 1
                 debug_msg = "same number of cues. previous is NEWER = Keeping previous value"
                 report = False
                 use_new = False
                 
               elif previous_date < date:
+                stats.n_colisions_samelen_prev_older += 1
                 debug_msg = "same number of cues. previous is OLDER = using new value"
                 report = True
                 use_new = True
                   
               elif previous_date == date:
+                stats.n_colisions_samelen_samedate += 1
                 debug_msg = "same number of cues. Same date"
                 report = False
                 use_new = False
@@ -347,6 +402,9 @@ def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_proc
     elif phase== 2:
       ## keep the locations unchanged. potentially raise the number of cues
       
+      
+      
+      
       for cue in cues:
         entry.remove(cue)
 
@@ -360,11 +418,11 @@ def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_proc
     else:
         raise ValueError("Unknown phase")
             
-    n_processed += 1
-    if max_process and (n_processed > max_process):
-        print("Breaking early after processing %d entries" % (n_processed) )
+    stats.n_processed += 1
+    if max_process and (stats.n_processed > max_process):
+        print("Breaking early after processing %d entries" % (stats.n_processed) )
         break
-              
+
   #########
   ### exit steps                    
   if phase == 2:
@@ -389,15 +447,23 @@ def parse_nml(file, phase, db, verbose=False, debug=False, quiet=False, max_proc
       print("Generated file: %s" % (file_out))
       
       
-  print("\nDone  phase '%d' for '%s'. Processed %d entries.\n------------------" % (phase, file, n_processed) )
+  print("\nDone  phase '%d' for '%s'. Processed %d entries. %d collisions" % (
+    phase, file, stats.n_processed, stats.n_colisions) )
+    
+  if opts.verbose:
+    stats.print()
+    
+  print("------------------")
         
+ 
+ 
   print("")
   print("")
   print("")
   return db
 
 #####
-def analyse_collection_files(current_collection, previous_collection_list=[]):
+def analyse_collection_files(opts, current_collection, previous_collection_list=[]):
 
     if current_collection is None:
         display_help()
@@ -412,11 +478,11 @@ def analyse_collection_files(current_collection, previous_collection_list=[]):
     previous_collection_list.append(current_collection)
     
     for file in previous_collection_list:
-        db = parse_nml(file, phase=1, db=db, debug=False, quiet=True)
+        db = parse_nml(opts, file, phase=1, db=db, debug=False, quiet=True)
 
-    if not opts.grep_only:
+    if not opts.single_pass_only:
       # phase 2
-      db = parse_nml(current_collection, phase=2, db=db)
+      db = parse_nml(opts, current_collection, phase=2, db=db)
 
     print("")
     print("All done")
@@ -437,7 +503,19 @@ parser.add_argument('-c', dest="final_file", required=True,
 parser.add_argument('-n', dest="max_process", default=None, type=int,
                     help='Max tracks to process')
 
+parser.add_argument('-d', dest="debug", default=False, action="store_true",
+                    help='Debug flag')
 
+parser.add_argument('-q', dest="quiet", default=False, action="store_true",
+                    help='Quiet flag')
+
+parser.add_argument('-v', dest="verbose", default=False, action="store_true",
+                    help='Verbose flag')
+                    
+parser.add_argument('--single', dest="single_pass_only", default=False, action="store_true",
+                    help='single pass only')
+
+                    
 parser.add_argument('-g', dest="grep", type=str, default="", 
                     help='optional string to grep. Shows verbosity for that entry')
 
@@ -447,6 +525,8 @@ parser.add_argument('-G', dest="grep_only", type=str, default="",
 parser.add_argument('--report_folders', dest="report_folders", default=False, action="store_true",
                     help='optional string to grep. Shows verbosity for that entry')
                     
+parser.add_argument('--deep', dest="deep_analysis", default=False, action="store_true",
+                    help='Checks actual file is they are missing and case sensitivity problems')
                     
                     
                     
@@ -457,9 +537,13 @@ opts = parser.parse_args()
 ###########
            
 if(opts.grep_only):
-  opts.report_folders = True
-  opts.grep = opts.grep_only
+  opts.grep = True
+  opts.single_pass = True
            
-analyse_collection_files(opts.final_file, opts.other_collection)
+if(opts.grep):
+  opts.report_folders = True
+
+  
+analyse_collection_files(opts, opts.final_file, opts.other_collection)
 
 

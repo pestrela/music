@@ -235,6 +235,12 @@ def generate_cue(file_music, input_tl, input_cue):
       minute = int(minute) + opts.cue_offset_minutes
       minute = "%02d" % minute
       
+      frame = int(frame)
+      if(frame>59):
+        #print("warning: adjusting non-standard frame to 59f")
+        frame = 59
+      
+      
       timestamp = "%s:%s:%s" % (minute, second, frame)
       st = "%s %s %s" % (a, b, timestamp)
       if opts.debug:
@@ -505,8 +511,9 @@ def process_one_set(opts):
     if os.path.isfile(file_music):
       print("WAV file found")
     else:
-      die("No mp3 or WAV file found")
+      die("No mp3 or WAV file found. Check for case sensitivity problems.")
    
+  #print(file_base) 
     
   opts.file_cue = "%s.cue" % file_base
   opts.file_tl = "%s.txt" % file_base

@@ -259,32 +259,6 @@ History Overview / Future plans:
 		This will be a one way process, and I expect to need to maintain the two maps in parallel for years.﻿
  
   
-Merged mapping DDJ-1000 and DDJ-SZ:
------------------------------------  
-  on CMDR, select interaction: "encoder relative"
-  - scratch (dug)
-    - SX2:
-      - sensitivity:  10
-      - acceleration: 19
-    - SR:
-      - sensitivity:  25
-      - acceleration: 19
-    - 1000:
-      - sensitivity:  5
-      - acceleration: 14
-
-  - JFX2 knobs:
-    - SX2:
-      - knob1:  25/0
-      - knob2+3: 20/0
-    - SR:
-      - (NOT FIXED - SAME AS SX2)
-    - 1000:
-      - knob1:   12/0
-      - knob2+3:  8/0
-      
-      
-  
 Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWSER, SX2
 ---------------------
 	M1: (EXTRA SHIFTS - HOLD STYLE)
@@ -316,15 +290,15 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	  1-7: which jog FX
 	
 	m4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
-    0: nothing     (DEPTECATED: memory = NO)
+    0: nothing
     1: Doing loop both adjust
     2: Doing loop out adjust
+    3: Doing loop in adjust
     
-    DEPRECATED?  3: Doing loop in adjust
-    DEPRECATED 4: Doing nothing         + memory
-    DEPRECATED 5: Doing loop both adjust + memory
-    DEPRECATED 6: Doing loop out adjust + memory
-    DEPRECATED 7: Doing loop in adj     + memory
+    4: Doing nothing         + memory
+    5: Doing loop both adjust + memory
+    6: Doing loop out adjust + memory
+    7: Doing loop in adj     + memory
     
   state machine:
       0->shift+in->1->memory ->5->shift+in->7->~memory->3  (both)
@@ -335,21 +309,19 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	 1-4: censor echo_out (toggle)
 		 (from: button or fx1_button or jog_fx)
 	
-  M6: Configurable sync mode (Trakor/Serato)  
+  M6: Sync mode (Trakor/Serato)
     0: Sync toggle (Traktor and Rekordbox mode)
     1: Sync phase  (Serato and VirtualDJ mode)
     
     ch1, E6/G#6
     
-    (comment is "DECK SYNC" - good candidate to move away to BOME page)
-    
+	
 	M7: GRID IN PROGRESS?
-   0: no grid in progress
 	 1-4: which deck A-D active + 2x grid 
 
 	M8: ECHO OUT FAVORITE
 		(sequence is 3,1,2,0 )
-	  this is shared with play pause FX  <<<<
+	  shared with play pause FX  <<<<
 	 
 	FX1|FX2 = PADFX
 	FX3 = JOG FX
@@ -512,7 +484,7 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 				
 Modifiers TSI page5:     TRAKTOR 3 mixerFX support
 --------------------
-	(note: this is only a temporary page only until CMDR gets updated to TP3)
+	(note: this ia a temporay page only until CMDR gets updated to TP3)
 	CLONE OF PAGE4
 	
 	M2: WHICH MFX PAGE ARE WE?
@@ -881,44 +853,66 @@ DDJ-SR/RR support:
   Only differences are:
   - higher resolution jogwheels require higher sensitivity in all jog commands
     - jog turn
-    - jogFX knob
-    
+    - jogFX kno
+    b
   - shift2 button is missing. This is now mapped to loop capture button  
   - pad modes sequence: minor or no differences at all
    
    
+  on CMDR, select interaction: "encoder relative"
+  - scratch (dug)
+    - SX2:
+      - sensitivity:  10
+      - acceleration: 19
+    - SR:
+      - sensitivity:  25
+      - acceleration: 19
+    - 1000:
+      - sensitivity:  5
+      - acceleration: 14
 
+  - JFX2 knobs:
+    - SX2:
+      - knob1:  25/0
+      - knob2+3: 20/0
+    - SR:
+      - (NOT FIXED - SAME AS SX2)
+    - 1000:
+      - knob1:   12/0
+      - knob2+3:  8/0
+      
 
 	
 deck shift codes:
 -----------------
-  shift2:
-    DDJ-SZ deck change:
-      deck 1: ch1 F#8 / g#8
-      deck 2: ch2 F#8 / g#8
-      deck 3: ch3 F#8 / g#8
-      deck 4: ch4 F#8 / g#8
-    
-    DDJ-1000 deck change: 
-      only ch3 F#8, both ON and OFF
-    
-    memory: c#4 / d4
+  deck 1: ch1 F#8 / g#8
+  deck 2: ch2 F#8 / g#8
+  deck 3: ch3 F#8 / g#8
+  deck 4: ch4 F#8 / g#8
 	
-  
+	DDJ-1000: only ch3 F#8, 0 and invert
+		
+	
+	search left  A#6
+    +shift     A5
+	search right B6
+    +shift     B5
+    
+	memory: c#4 / d4
+	
 	quantize (hot cue long): a#7
-	quantize (ddj-1000):     F3 / A3
+	quantize 1000: F3 / A3
 
 	
-	auto loop:  G#0 / G#5   (DDJ-1000 + DDJ-SZ)
+	auto loop: G#0 / G#5
 	
-	loop in:    E0 / E5     (DDJ-1000 + DDJ-SZ)
-	loop out:   F0 / F5     (DDJ-1000 + DDJ-SZ)
+	loop in:   E0 / E5
+	loop out:  F0 / F5
 	
-  loop 1/2:   F#0 / c#7   (DDJ-SZ)
-  loop 2x:    G0  / D7    (DDJ-SZ)
-  search <<:  a#6 (e8=long) / a5    (DDJ-1000)
-  search >>:  b6  (f8=long) / b5    (DDJ-1000)
-    
+	loop 1/2:  F#0 / c#7
+	loop 2x:   G0  / D7
+	
+	
 	play/pause: b-1 / b4
 	cue:        c0  / c5
 	
@@ -927,20 +921,14 @@ deck shift codes:
 CMDR TP3 missing commands:
 --------------------------
   to create page:
-		- slip reverse = ok
-		- reverse = change to toggle behavior
-
-	to create TP3-specific mapping:
-		- edit in cmdr
-    - change "set to value" on each command one by one  (just click the same value)
-    - test
-		- export just that page
-
-	to create TP3-specific mapping:
-		- import whole TSI
-		- delete TP3 page
-		- add TP3 page
-		- export whole TSI
+		slip reverse = ok
+		reverse = change to toggle
+	
+	to create mapping:
+		import TSI
+		delete page
+		add page
+		export TSI
 
     
 DDJ-1000 screens support:
@@ -1142,43 +1130,7 @@ Pioneer DDJ-800 MIDI firmware bugs:
   Sending the note A6 command directly also did not result at all.
   
  
-About faders positions:
------------------------
-  DDJ-SZ family has a 
+  
 
   
-How to force a certain sequence of events / sequential processing:
-------------------------------------------------------------------
-  Simple tricks:
-    - Invert: using "invert on note ON is the simplest way to separate commands
-    - "save snapshot FX": helps changing effects in instant gratification, as the next time it is already with the last value you put
-
-  Midimasher: 
-    https://forum.djtechtools.com/showthread.php?t=32001&page=36
-    https://djrankings.org/community/forum/thread-42226/
-    - middleware to send sequential commands
-    
-  MLM midi linked modifiers: 
-    https://forum.djtechtools.com/showthread.php?t=79344
-    https://www.youtube.com/watch?v=rkGZRU8Wvdg&feature=emb_logo
-    - Global Modifiers (used here for inter-communication between involved Traktor devices)
-    - Route any command as a Modifier 
-    - put a given set of mapping statements into a conrolled sequence of processing
-    
-  String Theory:
-    https://djtechtools.com/2011/11/08/string-theory-for-djs/
-    midipipe: free OSX application 
-
-  Tests:
-    Sequence: 
-      loop move by loop amount
-      loop size decrease
-    result: 
-      first it moves by 4, then decrease loop to size 2
-      (this was the case when the commands had different IDs, ie, different entering orders on the TSI)
   
-  
-  
-  
-    
-    

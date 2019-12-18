@@ -121,7 +121,7 @@ def rename_files(debug_print, *, dry_run=True):
 		if not p.is_file():
 			continue
 
-		if not p.suffix.lower() in [".mp3", ".wav", ".flac", ".wma"]:
+		if not p.suffix.lower() in [".mp3", ".wav", ".flac", ".wma", ".m4a", ]:
 			print("ignoring %s " % (file))
 			continue
 
