@@ -810,9 +810,9 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
 
 This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. This saves you to having to open the preferences window to change the audio device, which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
 
-To use this program, just drop it in your desktop, make it executable with 'chmod +x' and point the 'traktor_root_folder' variable to your traktor root.
+To use this program, just drop it in your desktop, make it executable with 'chmod +x' and redefine the 'traktor_root_folder' variable to your documents traktor root.
 
-download: [url](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh)
+download: [url](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh)   (right-click, "save-as")
   
 ## DJ Census over time results
 
