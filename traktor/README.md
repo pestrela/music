@@ -803,6 +803,14 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
   
+## How to swap Traktor configurations easily
+
+[This script](tools_traktor/traktor_swap_configuration.sh) lets you swap between two traktor configurations easily. 
+
+This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. This saves you to having to open the preferences window to change the audio device, which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
+
+To use this program, just drop it in your desktop and point the 'traktor_root_folder' variable to your traktor root.
+  
 ## DJ Census over time results
 
 Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular software and controllers. 
