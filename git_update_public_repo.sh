@@ -83,7 +83,7 @@ download_folder_out="downloads"
 mp3_files_in="mp3_analyse_fhg_offset.sh  mp3_check_encoder.sh   mp3_get_lame_indexes.py"
 mp3_folder_out="traktor/26ms_offsets/bin"
 
-traktor_tools_files_in=" traktor_clone_cues.py
+traktor_tools_files_in=" traktor_clone_cues.py traktor_swap_configuration.sh
 cue_convert_timestamps.sh  cue_merge_cues.py   cue_renumber_files.py  cue_make_tracklist.sh 
    cue_rename_cue_files.sh cue_search_youtube.py  cue_scrape_lyrics.py
  "
