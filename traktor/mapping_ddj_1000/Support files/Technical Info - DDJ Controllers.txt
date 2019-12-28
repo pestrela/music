@@ -315,23 +315,23 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	  0- none
 	  1-7: which jog FX
 	
-	m4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
-    0: nothing     (DEPTECATED: memory = NO)
-    1: Doing loop both adjust
-    2: Doing loop out adjust
+	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
+    0: nothing                     (HAD DEPRECATED)
+    1: Doing loop IN+OUT adjust
+    2: Doing loop OUT adjust
+    3: Doing loop IN adjust 
     
-    DEPRECATED?  3: Doing loop in adjust
-    DEPRECATED 4: Doing nothing         + memory
-    DEPRECATED 5: Doing loop both adjust + memory
-    DEPRECATED 6: Doing loop out adjust + memory
-    DEPRECATED 7: Doing loop in adj     + memory
+    4: Doing nothing          + memory
+    5: Doing loop both adjust + memory
+    6: Doing loop out adjust  + memory
+    7: Doing loop in adj      + memory
     
   state machine:
       0->shift+in->1->memory ->5->shift+in->7->~memory->3  (both)
       3->shift_out->2   ....
     
 
-	m5: RELEASE FX  __IN PROGRESS__  -> this is for color
+	M5: RELEASE FX  __IN PROGRESS__  -> this is for color
 	 1-4: censor echo_out (toggle)
 		 (from: button or fx1_button or jog_fx)
 	
@@ -472,7 +472,7 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
     	
     cue 1: C6/G#7  
 	
-	M7: CURRENT PADMODE (THIS IS FOR MODE SHORTCUT)
+	M7: CURRENT MAIN PADMODE (THIS IS FOR DOUBLE CLICK PAD MODE)
 		0: MODE1
 		1: MODE2
 		2: MODE3
@@ -523,16 +523,16 @@ Modifiers TSI page5:     TRAKTOR 3 mixerFX support
 
 BOME support page 6:
 --------------------
-  M1 = SHIFT1 (HOLD STYLE) -> SEE LOOP SIZE
+  M1: = SHIFT1 (HOLD STYLE) -> SEE LOOP SIZE
     press "main shift"
     
-  M2 = SHIFT2 (HOLD STYLE) -> NO CHANGE
+  M2: = SHIFT2 (HOLD STYLE) -> NO CHANGE
     press "memory"
     
-  M3 = TOGGLE ELAPSED / REMAIN
+  M3: = TOGGLE ELAPSED / REMAIN
     press "memory" + "master tempo"
   
-  M4 = RESET SCREENS
+  M4: = RESET SCREENS
     press "shift"+"quantize"
 
 
@@ -789,9 +789,10 @@ DDJ-SZ MIDI codes:
 DDJ-1000 Loop LEDS:
 -------------------
   normal: IN+OUT solid
-  4 beat lop: IN+OUT blink; auto loop solid
+  4 beat loop: IN+OUT blink; auto loop solid
   cancel: back to normal
 
+  
   IN: blinks for 2 seconds
   OUT: both blinks, auto loop solid
   shift+IN fast blink IN; OUT off; 4 beat solid
@@ -800,6 +801,13 @@ DDJ-1000 Loop LEDS:
     4 beat = exit
   shift+IN: cancel edit mode  
     
+    
+  DE NOVO LEDS:
+   normal: solid, off
+   in loop: solid, blink
+   loop adjust: blink, blink
+   out adjust: solid, blink, blink
+   
     
   
 DDJ-1000 CONFIGURATION MIDI mode:
@@ -1066,7 +1074,7 @@ DDJ-800 test in a shop:
    - jogFX: all ok
    - jogs scratch: same as ddj-1000
  
-  probelms:
+  problems:
   - loops: pioneer changes the codes quite a bit. 
      to start loop: ddj-1000 autoloop button is now ddj-800 loop in long press
      to exit loop: simplest is to use shift+reloop/exit. 
