@@ -230,7 +230,7 @@ MODE CYCLE:
  
 CLOCK IMPLEMENTARION:
 ---------------------
-  CLOCK:
+ CLOCK:
    master debug             "hw"   (global)
    10ms ticks per second:   "hy"   (global)
    current clock value:     "hz"   (global)
@@ -259,7 +259,7 @@ CCs messages sent FROM traktor TO BOME:
 JOG NEEDLE:
   CDJ/VINYL MODE   "ko"               (<<< catched and filtered on DDJ!!!)
    
-  IN LOADED: note  A#4 / C5      B4 / C#5   (this 
+  IN LOADED: note  A#4 / C5      B4 / C#5   (these are the load codes)
                           ->  "ks"
 
   IN CUE:           CC 68 -> "z1" (cue being pressed)  
@@ -306,11 +306,13 @@ Loops:
 
   
 Jog Ring (End warning):                         
-  IN END warning    CC 82 -> 
+  IN END warning    CC 82 ->  (GENERATED ON BOME ITSELF)
   IN deck volume    CC 83 -> "jo"
+  IN jogFX state    CC 84 -> "gx"   (could be a single variable)
   
-  
-              
+Double click:
+  DDJ IN C#4              -> "ie"   (double click memory)
+               
               
               
                          
@@ -602,7 +604,19 @@ Experiments on Midi linked modifiers (MLM):
    page 2: modifier 8 = global modifier
    
 
-
+  to send a value directly to a MODIFIER:
+    bome: set variable to 0..7; send it as a value
+    traktor: modifier IN / Fader / Relative / 100% sensitivity / 0% Acceleration
+    
+  to send a value directly to a deck layout:
+    bome: set variable to 0..4; (send it + 0) * 127 / 4
+    traktor: modifier IN / Fader / Direct
+    (doing this to a modifier will print garbage, and use the last digits only)
+    
+  to send simple boolean ON/OFF:
+    traktor: modifier IN / button / hold / 1 
+    
+    
 Denon HC4500 info:
 ------------------
   midi codes: https://raw.githubusercontent.com/Sonnenstrahl/traktor-now-playing/master/readme-img/denon_midi_commands.jpg
@@ -616,16 +630,19 @@ Denon HC4500 info:
   
 Unused variables:
 -----------------
-  ****
-  "gx"  
-
+  global variables:
+  "gx"  jogFX state   (4 variables)
+  
   *****
   "hi"  
   "hx"  
 
   *****
-  "ie"  
-  "ii"  
+  "ie" double click memory  
+  
+  "ii" current left deck
+  
+  
   "io"  
   "is"  
   "ix"  
@@ -679,6 +696,36 @@ DDJ-1000 undocumented notes:
 ----------------------------
   DJ App Connect: ch 16 note A-1
 
+  
+layout deck shift:
+------------------
+  "ii" - active left deck  (1/3)
+  "ij" - active right deck (2/4)
+  "il" - classic / parallel mode (0/1)
+  "im" - empty
+  
  
-    
+CUSTOM DDJ-1000 bome notes:
+---------------------------
+  ch1..ch4:
+   114 F#8 - firmware deck change message 
+   115 G8 - deck change (corrected channel)  ch1..4; value=127
+   
+  ch 16: 
+   116 G#8 - new deck layout:  ch 16;
+       0 = LAST layout
+       1 = 2-classic
+       2 = 4-classic
+       3 = 2-parallel 
+       4 = 4-parallel
+       
+   117 A8  - classic / parallel mode
+   
+   118 - 
+   119 - 
+   120 -
+   121 -
+   122 - page > 
+  
+
     
