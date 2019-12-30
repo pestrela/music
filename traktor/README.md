@@ -101,7 +101,7 @@ Main reasons are:
 * **#2: Tree Tagging:** More crucially, all windows have the whole tree visible. This is essential to quickly tag my files by just moving them to the correct correct folder. Similarly, the structure grows just by creating new sub-folders as needed.
 * **#3: Simpler Folders**: OS-Folders contain either files, sub-folders, or both. [This 2-step organization](https://en.wikipedia.org/wiki/Path_(computing)#History) is simpler is than the iTunes 3-step model of "folders -> playlists -> files" (later copied by almost all DJ softwares).
 * **#4: Local Searches:** By far my most common task is to check if I already have a particular track, and where is it tagged. File explorer allows local searches on a folder and its sub-folders only. This enables me to quickly find things by just typing a few letters of the filename. AFAIK only Serato has this feature (called ["include subcrates"](https://support.serato.com/hc/en-us/articles/227626268-Subcrates))
-* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formattingm, using [my own scripts](collections_without_playlists/Mp3tagSettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
+* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formatting, using [my own scripts](collections_without_playlists/Mp3tagSettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
 * **#6: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to [sync between laptops](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas) and make perfect backups [to my NAS](https://www.synology.com/en-global/products/DS718+). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
 
@@ -808,12 +808,38 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
 
 [This script](tools_traktor/traktor_swap_configuration.sh) lets you swap between two traktor configurations easily. 
 
-This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. This saves you to having to open the preferences window to change the audio device, which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
+This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. 
+This saves you to having to open the preferences window to change the audio device, 
+which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
 
-To use this program, just drop it in your desktop, make it executable with 'chmod +x' and redefine the 'traktor_root_folder' variable to your documents traktor root.
+Script installation:
+* save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
+* make the script executable with 'chmod +x traktor_swap_configuration.sh '
+* redefine the 'traktor_root_folder' variable to your documents traktor root
+* *run it once* to copy the first config
 
-download: [url](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh)   (right-click, "save-as")
-  
+First time setup:
+* Open Traktor
+* change the config to DDJ-1000
+* close traktor
+* *run script*
+* open traktor
+* change config to internal soundcard
+* close traktor
+
+To Activate configuration #1:
+* *run the script*
+* open traktor
+* confirm the audio card is ddj-1000
+* Close taktor
+
+To Activate configuration #2:
+* *run the script*
+* open traktor
+* confirm the audio card is Internal Soundcard
+* Close taktor
+
+
 ## DJ Census over time results
 
 Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular software and controllers. 
