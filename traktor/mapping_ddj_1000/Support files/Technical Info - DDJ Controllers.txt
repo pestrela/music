@@ -7,6 +7,7 @@ A friendly request:
   In the majority of the cases this will actually be an user error. Thank you.
 
   
+  
 URLs to relevant Mappings:
 --------------------------
 - Dj_Estrela:
@@ -49,6 +50,7 @@ All Demo Videos, Collected:
    - AMX v0.3 - old version - http://youtu.be/bZMWppDiqw8
    
 
+   
 DDJ Mappings - Summary history:
 -------------------------------
 
@@ -68,7 +70,6 @@ DDJ Mappings - Summary history:
 
 - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (for TP2)	
 
-   
    
    
 DDJ Mapping ChangeLog - By DJ estrela:
@@ -181,6 +182,7 @@ DDJ Mapping ChangeLog - By DJ estrela:
     - YT:   http://youtu.be/H_TE2mtuM6Q
 
     
+    
 DDJ Mapping ChangeLog - By JaJA and Viper:
 ------------------------------------------
 - v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (for TP2)
@@ -213,7 +215,6 @@ DDJ Mapping ChangeLog - By JaJA and Viper:
     - DJTT: https://maps.djtechtools.com/mappings/851
     - Blog: https://djtechtools.com/2014/03/19/10-unconventional-midi-mappings-designed-by-djtts-community/
     - T_Bible: https://www.traktorbible.com/freaks/mappingview.aspx?id=528
-    
     
     
 		
@@ -257,6 +258,7 @@ History Overview / Future plans:
 
 	- A spin-off will be translating 1000s of entries for the ddj-1000/ddj-400 midi codes. 
 		This will be a one way process, and I expect to need to maintain the two maps in parallel for years.﻿
+ 
  
   
 Merged mapping DDJ-1000 and DDJ-SZ:
@@ -306,6 +308,7 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 		 2: jog FX is being touched
 	 
      3: loop adjust in progress  <<<<<  NEW
+     4: memory pressed (for quick search)
    
 		 5: grid ADJUST pressed  -> this cancels jogfx mode
 		 6: grid SLIDE  pressed  -> this cancels jogfx mode
@@ -520,6 +523,7 @@ Modifiers TSI page5:     TRAKTOR 3 mixerFX support
 		1: macroFX1
 		2: macroFX2
 
+    
 
 BOME support page 6:
 --------------------
@@ -536,9 +540,6 @@ BOME support page 6:
     press "shift"+"quantize"
 
 
-    
-    
-    
 
 Pioneer DDJ pad colors:
 -----------------------
@@ -585,7 +586,7 @@ JOG MIDI codes:  (encoder mode: 41/3F ; channels 1..4)
       
 - rotate (CC):
 		PLATTER (vinyl_on)   34  --> SCRATCH
-		PLATTER (vinyl_off)  35  --> m8 =0  <<<<<<
+		PLATTER (vinyl_off)  35  --> 
 
  		search+PLATTER       41  (nothing)
    	shift +PLATTER       31  --> QUICK SEARCH
@@ -604,10 +605,10 @@ JOG MIDI codes:  (encoder mode: 41/3F ; channels 1..4)
     (also _NO_ spin-forward!!)    
     
   BAD SEQUENCE:     33 (bend) -> 33 (bend) -> 35 (scratch) -> F#3 (touch) -> 34 (scratch)
-     
-		(copy paste = same sequence, even wi`th holes)
+		(copy paste = produces the same sequence, even with holes of Ids)
     
-		
+	search problem: sensitivity 30% / acceleration 0%	
+    
     
 BROWSER MIDI CODES:  (encoder mode: 01/7F)
 -------------------
@@ -816,6 +817,7 @@ DDJ-1000 CONFIGURATION MIDI mode:
 	slip reverse on  = forced midi mode
 	slip reverse off = automatic change when rekordbox is running
 
+  
 	
 DDJ-1000 Back-2-back USAGE (2x USB):
 ------------------------------------
@@ -951,6 +953,7 @@ CMDR TP3 missing commands:
 		- export whole TSI
 
     
+    
 DDJ-1000 screens support:
 -------------------------
   Method 1: 
@@ -993,8 +996,6 @@ TP3 MixerFX:
   #5 streetch
   #6 streetch
   #7 crush
- 
-
 
     
   
