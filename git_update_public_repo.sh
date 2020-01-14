@@ -73,7 +73,7 @@ do_git_operations=1
 ### DESTINATION folder
 root_dst_all="/mnt/c/Root/0_linux_home/git/music_scripts"
 
-
+  
 ### BIN  files
 root_src_bin="/home/pestrela/bin"
 
@@ -83,7 +83,7 @@ download_folder_out="downloads"
 mp3_files_in="mp3_analyse_fhg_offset.sh  mp3_check_encoder.sh   mp3_get_lame_indexes.py"
 mp3_folder_out="traktor/26ms_offsets/bin"
 
-traktor_tools_files_in=" traktor_clone_cues.py traktor_swap_configuration.sh
+traktor_tools_files_in=" traktor_clone_cues.py traktor_swap_configuration.sh  rekordbox_add_beatmarkers.py 
 cue_convert_timestamps.sh  cue_merge_cues.py   cue_renumber_files.py  cue_make_tracklist.sh 
    cue_rename_cue_files.sh cue_search_youtube.py  cue_scrape_lyrics.py
  "
@@ -98,7 +98,7 @@ mapping_all_root_src="${google_drive_root}/2 Music - Controllers/0_MAPS_Traktor"
 mapping_1_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.6.0 - DDJ-1000 - TP3_TP2 BOME"
 mapping_1_root_dst="${root_dst_all}/traktor/mapping_ddj_1000"
 
-mapping_2_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.1.2 - DDJ-SX2_SZ_SRT - TP3_TP2"
+mapping_2_root_src="${mapping_all_root_src}/DDJ Pioneer/v6.1.3 - DDJ-SX2_SZ_SRT - TP3_TP2"
 mapping_2_root_dst="${root_dst_all}/traktor/mapping_ddj_sx2_sz_srt"
 
 mapping_3_root_src="${mapping_all_root_src}/AKAI AMX/v1.0.1 - AKAI AMX TP2_TP3"

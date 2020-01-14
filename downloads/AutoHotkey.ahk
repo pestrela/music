@@ -4,11 +4,12 @@
 ;
 ;
 ; User Commmands:
-;   CTRL+F08: Search in Google
+;   CTRL+F08: Search in Discogs
+;   CTRL+ALT+F08: Search in Google
 ;
 ;   CTRL+F09: search text in File Explorer
 ;   CTRL+F10: search text in soulseek
-;   CTRL+F11: search text in Youtube (list)
+;   CTRL+F11: search text in Youtube (first 5 hits to clipboard)
 ;   CTRL+F12: search text in Youtube (first hit)
 ;   
 ;   CTRL+ALT+F11: send chrome url to clipboard  (all tabs)
@@ -230,6 +231,7 @@ diacritic_get_char(letter, shift, count){
 }
  
 
+
 diacritic_do_operation(letter, shift)
 {
   global diacritic_current
@@ -312,16 +314,23 @@ url_prepare_query( query ){
 }
 
 
-get_google_url(query){
+get_search_engine_url(query, what)
+{
   query := url_prepare_query(query)
   
-	url := "http://www.google.com/search?q=" query
+  if(what == "google"){ 
+    url := "http://www.google.com/search?q=" query
+  }
+  else if (what == "discogs"){ 
+    url := "https://www.discogs.com/search?q=" query
+  }
   return url
 }
 
 ; gets the first youtube result for a string
-open_google( query ){
-	url := get_google_url(query)
+open_search_engine( query , what)
+{
+	url := get_search_engine_url(query, what)
   Run % url
 }
 
@@ -621,7 +630,7 @@ exe_activate(exe){
 
 slsk_activate(){
   if not WinExist("ahk_exe SoulseekQt.exe"){
-   MsgBox, Soulseek not running
+   MsgBox, Soulseek window not present
    return
   } 
   
@@ -632,15 +641,18 @@ slsk_activate(){
   return get_active_window_id()
 }
 
+
 print( var )
 {
   debug_print_kv(true, "Quick debug: ", var)
 }
 
+
 debug( var )
 {
   debug_print_kv(true, "Quick debug: ", var)
 }
+
 
 debug_print( debug, var )
 {
@@ -698,7 +710,8 @@ print_array(name, array, show_elements := true)
 
 
 
-mouse_move(win_x, win_y){
+mouse_move(win_x, win_y)
+{
   ;velocity := 10
   velocity := 0
   
@@ -707,14 +720,16 @@ mouse_move(win_x, win_y){
 }
 
 
-mouse_click(win_x, win_y){
+mouse_click(win_x, win_y)
+{
   mouse_move(win_x, win_y)
   click
   sleep 200
 }
 
 
-do_soulseek_one_query(query){
+do_soulseek_one_query(query)
+{
   set_clipboard(query)
   
   CoordMode, Mouse, window
@@ -723,7 +738,6 @@ do_soulseek_one_query(query){
   }
   
   ;return
-  
   
   WinGetPos, , , slsk_width, slsk_height
   
@@ -745,7 +759,8 @@ do_soulseek_one_query(query){
 
 
 ; Find correct bash.exe file
-get_bash_exe(){
+get_bash_exe()
+{
   bash_exe = %A_WinDir%\sysnative\bash.exe
   if (!FileExist(bash_exe)) {
       bash_exe = %A_WinDir%\system32\bash.exe
@@ -757,15 +772,30 @@ get_bash_exe(){
 }
 
 
-do_open_google(){
+
+do_open_search_engine(what := "google")
+{
 	debug_beep()
   query := copy_selection_to_clipboard()
   if(query == "")
     return
   
-  open_google( query )
+  open_search_engine( query , what)
   return
 }  
+
+
+do_open_google()
+{
+  do_open_search_engine("google")
+
+}
+
+do_open_discogs()
+{
+  do_open_search_engine("discogs")
+
+}
 
 
 do_find_explorer(){
@@ -825,7 +855,32 @@ array_to_ml_space(Array, sep=" ")
 
 }
 
+
+ 
+duplicate_string(st, count=2)
+{
+  ret := 
   
+  ;debug(count)
+  
+  Loop, %count%
+  {
+    ;debug(ret)
+    ret .= ret . st
+  }  
+  
+  ;debug(ret)
+  return ret
+}
+
+
+array_to_ml_spaced(Array, seperator_lines=3)
+{
+  sep := duplicate_string("`n", seperator_lines)
+  
+  ;debug(sep)
+  return array_to_ml(Array, sep)
+}  
   
   
 do_get_all_chrome_tab_url()
@@ -840,13 +895,16 @@ do_get_all_chrome_tab_url()
   url_list := []
   
   first_url := ""
-  pass := 1
+  count := 1
   url := ""
-  
   
   
   Loop
   {
+    if(A_Index > 30){
+      break
+    }
+    
     url := get_chrome_url()
  
     if (url == first_url){
@@ -857,11 +915,15 @@ do_get_all_chrome_tab_url()
         
     url_list.push(url)
     Send, ^{tab}
-    
+
+    ; count := count + 1    
   }
+  
   ; Clipboard := ClipSave
   ; MsgBox % array_to_ml(url_list)
-  Clipboard := array_to_ml(url_list)
+  Clipboard := array_to_ml_spaced(url_list)
+  
+  beep()  
 }
 
  
@@ -921,6 +983,7 @@ copy_selection_to_array()
   
   return ret
 }
+
 
 return_to_previous_state_if_single(array)
 {
@@ -1040,8 +1103,6 @@ array_prepend_string_to_entries(array, st)
 }
 
 
-
-
 array_remove_duplicates(arr) 
 { 
   ; Leaves the original intact, only loops once, preserves order:
@@ -1067,11 +1128,13 @@ array_concat(array1, array2)
   return array1
 }
 
+
 array_to_clipboard(array)
 {
   st := array_to_ml(array)
   set_clipboard(st)
 }
+
 
 array_limit(array, top := 5)
 {
@@ -1129,7 +1192,8 @@ init_beep()              ; Signal that we finished autoexec section
 ^#!F11:: XY_analyse_init()
 ^#!F12:: reload
 
-^F8::   do_open_google()
+^F8::   do_open_discogs()
+^!F8::   do_open_google()
 
 ^F9::   do_find_explorer()
 ^F10::  do_soulseek()  
@@ -1161,6 +1225,7 @@ init_beep()              ; Signal that we finished autoexec section
 ^u::  diacritic_do_operation("u", False)
 ^+u:: diacritic_do_operation("u", True)
 #if 
+
 
 
 

@@ -304,15 +304,15 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 
 	M2: JOG STATUS / WHICH DECK IS BEING USED FOR JOG FX?
 	   0: SCRATCH enabled (HOT CUE  mode)
-		 1: jog FX armed - touching the jog will still make scratch!
-		 2: jog FX is being touched
-	 
-     3: loop adjust in progress  <<<<<  NEW
-     4: memory pressed (for quick search)
+		 1: Jog FX armed - touching the jog will still make scratch!
+		 2: Jog FX is being touched
+     3: Loop adjust in progress  <<<<<  NEW
+     
+     4: Memory/search pressed (for quick search)
    
-		 5: grid ADJUST pressed  -> this cancels jogfx mode
-		 6: grid SLIDE  pressed  -> this cancels jogfx mode
-		 7: normal shift pressed -> this cancels jogfx mode
+		 5: Grid ADJUST pressed  -> this cancels jogfx mode
+		 6: Grid SLIDE  pressed  -> this cancels jogfx mode
+		 7: (empty)
 		 
 	M3: JOGFX SELECTION  (SHARED BETWEEN ALL DECKS)
 	  0- none
