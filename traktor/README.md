@@ -31,7 +31,7 @@
 * [Custom Mappings](#Custom-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
-    * [DDJ-SX2 / DDJ-SZ mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
+    * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
     * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
   * [How to download my Traktor mappings](#How-to-download-my-Traktor-mappings)
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
@@ -231,6 +231,13 @@ In general I fully agree with [this Digital DJ Tips article](https://www.digital
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
 
 See also the [most popular DJ softwares census](../census_graphs).
+
+## Missing Traktor features: Elastic Beatgrids
+
+TBD
+
+
+
 
 
 # BOME migration
@@ -524,40 +531,17 @@ Finally, all my mappings are a free gift to the community, to enable DJs to use 
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
-### UPDATE 25 Oct 2019:
+Yes. I've updated [my SZ/SX2 mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
+to work on the SRT. 
+Please see the demo video here: https://www.youtube.com/watch?v=aU3QnOez56A&t=2s
 
-I've now tested my SZ map to the SRT in a shop. It worked surprisingly well! See below for the notes.
+Specific comments:
+* *Jogs screens:* Jog Screens are NOT supported in MIDI. This is a business decision of the Serato company. If this affects you, please voice your opinion on this feature request thread: 
+  * https://serato.com/forum/discussion/1736390
+* *Pioneer Effects*: Mixer runs in external mode. This means that you have all pioneer effects for Traktor music. 
+  * This is very different from the regular DDJ-1000, which runs in internal mode and only has Pionner beatFX in the master channel for Traktor sources.
+* *Scratching:* Please put your jog weight to “heavy”.  This will significantly improve scratching and jogFX. Also please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode;
 
-* Jog screens are NOT supported. This is because they are not documented on the Pioneer MIDI map file 
-  * https://github.com/pestrela/music_scripts/blob/master/ddj/1%20MIDI%20codes/DDJ-1000SRT%20-%20MIDI%20Messages.pdf
-* Audio device runs very well in external mode. This means that ALL the pioneer effects (both colorFX and beatFX work for USB sources
-* Please put your jog weight to “heavy”.  This will significantly improve scratching and jogFX.
-* Please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode
-* Beatjump buttons added. Please use shift+IN/OUT to configure the loop size (=jump size)
-* BeatFX ON/OFF is now for pioneer beatFX only
-* Automatic layout changing was removed
-
-
-### OLD POST FOLLOWS:
-
-Physically, the 1000SRT look physically the same as the original 1000. However there are quite big differences inside that impact the mappings. 
-I only own the 1000RB, and did not yet tested the SRT in a shop. When I test it I will update the below list.
-
-* MIDI codes: 
-  * the SRT has the classic SX2/SZ pad codes, which are different from the 1000RB style. This means the proper mapping for this device is my SX2/SZ map, and not the 1000 mapping. 
-  * The SX2/SZ map is on version v6.1 (https://maps.djtechtools.com/mappings/9222), the 1000 is on version v6.5 (https://maps.djtechtools.com/mappings/9279).
-  * More info: https://github.com/pestrela/music_scripts/tree/master/ddj/1%20MIDI%20codes
-  
-* Jog Screens:
-  * While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version
-  * Only when I can test this in a shop I can derive if the current 1000 BOME screens work could be ported to the SRT
-  * More info: https://github.com/pestrela/music_scripts/tree/master/ddj/1%20MIDI%20codes
-  
-* Effects: 
-  * the SRT runs in external mode, the 1000RB ran in internal mode. This means that all Pioneer effects are there, for both color FX and beat FXmper channel. This is not the case for the 1000, which 
-  * potentially this means the SRT could be the first controller with **ALL** the Pionner effects (ColorFX, BeatFX), plus **ALL** the  Traktor effects (jogFX, mixerFX, macroFX, padFX)
-  * comparison of HW and SW effects: [here](ddj_1000_traktor_mapping/Support%20files/Traktor%20mappings%20for%20DDJ%20Controllers%20-%20HW%20vs%20SW%20Effects.xlsx)
-  * more info:  https://github.com/pestrela/music_scripts/tree/master/ddj/3%20Signal%20flows
   
 ## Does (random DDJ controller) works with your mapping? Are the jogs good?
 
