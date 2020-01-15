@@ -130,7 +130,8 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 # Traktor software
 ## Why is Traktor my software of choice
 
-Traktor has unique features that I depend on. Some features are quite big, others are small. The point is that they are absent in the other softwares.
+Traktor has unique features that I depend on. Some features are quite big while others are quite small.\
+The point is that the these features are absent in the other softwares.
 
   * [a) Automatic database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
   * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
@@ -242,8 +243,8 @@ TBD
 
 # BOME migration
 
-Traktor has advanced MIDI mapping ([link](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping). This was an important way to extend its longevitity.
-However every year Controllers get more complex, so it is no longer enough to map them.
+Traktor has advanced MIDI mapping ([link](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)), which is important to extend its longevitity.\
+However every year Controllers get more complex, so mapping is ranging between harder to impossible.
 
   * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [b) Possible, but with major limits ](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
