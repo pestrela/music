@@ -134,6 +134,7 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 Traktor has unique features that I depend on. Some features are quite big while others are quite small.\
 The point is that the these features are absent in the other softwares.
 
+Blog Posts:
   * [a) Automatic database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
   * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
   * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
@@ -247,7 +248,8 @@ TBD
 
 Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.
 
-However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).\
+However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).
+
 Some other anedotic evidence on this are the preferences freeze, the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
 and the HC-4500 mapping to get track details.
 
