@@ -245,8 +245,9 @@ TBD
 
 # BOME migration
 
-Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.\
-However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).
+Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.
+
+However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).\
 Some other anedotic evidence on this are the preferences freeze, the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
 and the HC-4500 mapping to get track details.
 
