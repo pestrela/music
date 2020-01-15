@@ -141,8 +141,6 @@ Blog Posts:
   * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
   * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
 
-https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
-
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
 
 ## Why is Traktor my software of choice: a) Database repair
