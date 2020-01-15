@@ -244,8 +244,9 @@ TBD
 # BOME migration
 
 Traktor has advanced MIDI mapping ([link](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)), which is important to extend its longevitity.\
-However every year Controllers get more complex, so mapping is ranging between harder to impossible.
+However every year Controllers get more complex, so mapping is ranging between getting harder to being impossible.
 
+Examples:
   * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [b) Possible, but with major limits ](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
   * [c) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
