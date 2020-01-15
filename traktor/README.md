@@ -11,7 +11,7 @@
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
     * [a) Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
     * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
-    * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
+    * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
     
@@ -130,10 +130,11 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 # Traktor software
 ## Why is Traktor my software of choice
 
-I'm using Traktor as it has crucial features that I depend on. These features are missing in other Softwares:
-  * [a) Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
+Traktor has unique features that I depend on. Some features are quite big, others are small. The point is that they are absent in the other softwares.
+
+  * [a) Automatic database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
   * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
-  * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx)
+  * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
   * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
   * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
 
@@ -175,13 +176,14 @@ When I'm playing a specific genre I can search only that decade (=OS folder). If
 
 
 
-## Why is Traktor my software of choice: c) Advanced MIDI mapping and Lots of FX
+## Why is Traktor my software of choice: c) Advanced MIDI mapping
   
 Traktor supports complex MIDI mapping with 8x variables, 2x conditionals and any number of actions per MIDI input
 
-My [AKAI AMX mapping has 10 layers built using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
 My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/music_scripts/blob/master/traktor/ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf). For a demo, see at 6:30 of this video: https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s \
+My [AKAI AMX mapping has 10 layers built using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
 This is only possible if midi mapping has variables and multiple actions per physical input.
+\
 * Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
 * Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
 * Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). 
@@ -238,13 +240,18 @@ TBD
 
 
 
-
-
 # BOME migration
 
-## Why I moved to BOME midi mapping: Impossible features
+Traktor has advanced MIDI mapping ([link](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping). This was an important way to extend its longevitity.
+However every year Controllers get more complex, so it is no longer enough to map them.
 
-As [explained above](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping-and-lots-of-fx), Traktor mapping rocks. However it lacks essential features required on the [DDJ-1000 screens mapping](ddj_1000_traktor_mapping).
+  * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
+  * [b) Possible, but with major limits ](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
+  * [c) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
+
+  
+
+## Why I moved to BOME midi mapping: Impossible features
 
 * **#1: 14-bit out messages**: Trakor supports *receiving* high resolution midi messages. I need to *send* them as well [on my DDJ-1000 mapping](../ddj/1%20MIDI%20codes/DDJ-1000RB%20-%20MIDI%20Messages.pdf)
 * **#2: Sequence of Events**: For PadFX, I *first* need to change the FX, and *then* need to turn it on. This is not something Traktor support; both actions are tried simultaneously resulting in something else. More info: page 88 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
@@ -387,7 +394,7 @@ Some relevant points:
 
 ## What are your main Traktor mappings?
 
-* DDJ-1000: https://maps.djtechtools.com/mappings/9279
+* DDJ-1000 with jog screens: https://maps.djtechtools.com/mappings/9279
 * DDJ-SZ / DDJ-SX2 / DDJ-SRT: https://maps.djtechtools.com/mappings/9222
 * AKAI AMX: https://maps.djtechtools.com/mappings/9323
 
@@ -593,6 +600,7 @@ This is the current situation as far as I tested it myself:
 * **[DJCU](https://www.facebook.com/DJConversionUtility/posts/568896026977298)**: This is a macOS-only application. Recently it got the hability to convert windows files, but still from macOS only. They have a manual tool to correct the shifts after conversion (REKU). More recently they correct shifts automatically using the encoder strings. This is something that I researched before and replaced with LAME/LAVC/LAVF tags instead.
 * **[Rekordbuddy](https://next.audio/)**: This is also a macOS-only application. A Windows version is on the works for many years. This app corrects some shift cases correctly automaticlaly, but it misses others as well (when I tested it on a macOS VM).
 * **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
+* **[Choones](https://support.choones.app/guides)**: To be tested. Choones is an upcoming web application that does cloud-based conversion among many other features. At time of writing this is not publicly available. I've contated the team by email, and they told me they are aware of the 26ms shift issue.
 
 # Other topics
   
