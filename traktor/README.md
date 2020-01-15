@@ -20,6 +20,7 @@
 * [BOME migration](#BOME-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
+  * [BOME limits](#Some-Limitations-of-BOME-mappings)
   * [How I see the future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
 
 * [Hardware Controllers](#Hardware-Controllers)
@@ -246,17 +247,15 @@ TBD
 
 Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.\
 However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).
+Some other anedotic evidence on this are the preferences freeze, the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
+and the HC-4500 mapping to get track details.
 
-Examples:
+Blog posts:
   * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
-  * [c) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
+  * [c) BOME limits](#Some-Limitations-of-BOME-mappings)
+  * [d) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
 
-Also, some anedotic evidence:
-* **a) Preferences freeze**: opening preferences still freezes with multiple pages
-* **b) turntable Play/pause**: any FX emulation still requires an external midi looper sofwtare
-* **c) DDJ-1000SRT:*** DDJ-1000 has MIDI jog screens, but DDJ-1000SRT has them locked out
-* **d) track details:** getting perfect position, track title and BPM% still requires the obsolete HC-4500 mapping
   
 
 ## Why I moved to BOME midi mapping: Impossible features
