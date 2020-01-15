@@ -241,16 +241,22 @@ TBD
 
 
 
+
 # BOME migration
 
-Traktor has advanced MIDI mapping ([link](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)), which is important to extend its longevitity.\
-However every year Controllers get more complex, so mapping is ranging between getting harder to being impossible.
+Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.\
+However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).
 
 Examples:
   * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
-  * [b) Possible, but with major limits ](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
+  * [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
   * [c) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
 
+Also, some anedotic evidence:
+* **a) Preferences freeze**: opening preferences still freezes with multiple pages
+* **b) turntable Play/pause**: any FX emulation still requires an external midi looper sofwtare
+* **c) DDJ-1000SRT:*** DDJ-1000 has MIDI jog screens, but DDJ-1000SRT has them locked out
+* **d) track details:** getting perfect position, track title and BPM% still requires the obsolete HC-4500 mapping
   
 
 ## Why I moved to BOME midi mapping: Impossible features
@@ -265,10 +271,11 @@ Examples:
 
 Also, I've also hit the limits of Traktor mappings multiple times. Below are the features that are possible in Traktor but only by significantly increasing the mapping complexity.
 
-* **A) More modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings. This in turn freezes your preferences window - please see below.
-* **B) Preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
-* **C) More conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
-* **D) Global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+* **a) more modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings. This in turn freezes your preferences window - please see below.
+* **b) preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
+* **c) more conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
+* **d) global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+
 
 ## Some Limitations of BOME mappings
 
