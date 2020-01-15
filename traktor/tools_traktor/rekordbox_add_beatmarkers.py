@@ -12,8 +12,6 @@ This is useful to convert later to traktor, that lacks dynamic beatgrids
 help_text2=""
   
 
- 
-
 import sys, os, glob, string, marshal
 import string, re
 
@@ -33,6 +31,8 @@ import os, sys
 import pandas as pd
 import glob, os
 import copy
+
+from urllib.parse import urlparse
 
 
 
@@ -150,7 +150,11 @@ def display_help():
 
   sys.exit(1)
 		
-
+    
+    
+def die(msg):
+  print("Error: %s" % (msg))
+  sys.exit(1)
 
 def file_append_suffix(filename, suffix):
   name, ext = os.path.splitext(filename)
@@ -198,14 +202,14 @@ def find_offset(bpm1, cue1, bpm2, cue2):
     return find_min_beat(bpm1, cue1) - find_min_beat(bpm2, cue2)
 
 def beats_period(bpm, beats):
-    print(bpm, beats)
+    #print(bpm, beats)
     
     period = bpm_period(bpm)
     ret = period * beats
     return ret
     
     
-def advance_beat(bpm, inizio, beats=4):
+def advance_beat(bpm, inizio, beats):
     position = inizio + beats_period(bpm, beats)
     return position
 
@@ -216,15 +220,44 @@ def bpm_to_st(bpm):
 def inizio_to_st(inizio):
     return "%.3f" % (inizio)
 
+    
+import re
 
+def lreplace(pattern, sub, string):
+    """
+    Replaces 'pattern' in 'string' with 'sub' if 'pattern' starts 'string'.
+    """
+    return re.sub('^%s' % pattern, sub, string)
+
+def rreplace(pattern, sub, string):
+    """
+    Replaces 'pattern' in 'string' with 'sub' if 'pattern' ends 'string'.
+    """
+    return re.sub('%s$' % pattern, sub, string)
+
+def location_to_wsl(location):
+  p = urlparse(location)
+  st = os.path.abspath(os.path.join(p.netloc, p.path))
+  st = lreplace("/C:/", "/mnt/c/", st)
+
+  return Path(st)
+  
+    
+    
 
   
-def add_regular_beatmarkers(opts, file_in):
+def add_regular_beatmarkers(opts):
   print("")
-  
-  
+    
+  file_in = opts.file_in  
   file_in2 = Path(file_in)
   file_out = Path(file_in2).stem + ".enriched.xml"
+  
+  if not (opts.file_out is None):
+    file_out = opts.file_out
+    
+  if not file_in2.exists():
+    die("Unreadsable file: %s " % (file_in))
   
   max_process=opts.max_process
   
@@ -252,10 +285,23 @@ def add_regular_beatmarkers(opts, file_in):
     #entry = collection[0]
     #entry = copy.deepcopy(entry)
     
-    
+    if opts.max_process and (stats.n_processed > opts.max_process):
+      print("Breaking early because of MAX_PROCESS")
+      break
+
     
     track_name = entry.get('Name')
     track_location = entry.get('Location').replace("%20", " ")
+    track_wsl = location_to_wsl(track_location)
+    
+    if opts.remove_unreadable_files:
+      if not track_wsl.exists():
+        dprint(verbose, "Ignoring unreadable track: %s" % (track_wsl))
+        # HACK: this still needs to remove the entry in the XML :(
+        
+        continue
+      else:
+        print( "readable track: %s" % (track_wsl))
     
     # this is for this entry only
     debug = opts.debug
@@ -268,14 +314,7 @@ def add_regular_beatmarkers(opts, file_in):
       verbose = True
     if verbose:
       quiet = False
-      
-      
- 
-    stats.n_processed += 1
-    if opts.max_process and (stats.n_processed > opts.max_process):
-      print("Breaking early because of MAX_PROCESS")
-      break
-      
+    
     
     if (opts.grep != "") and (track_location is not None):
       #print(opts.grep, name, folder)
@@ -294,8 +333,8 @@ def add_regular_beatmarkers(opts, file_in):
     
 
     ####    
-    dprint(debug, "Track:", track_name)
-    dprint(debug, "BPM: ", entry.get('AverageBpm'))
+    dprint(very_debug, "Track:", track_name)
+    dprint(very_debug, "BPM: ", entry.get('AverageBpm'))
     input_avg_bpm = float(entry.get('AverageBpm'))
 
     set_bpm_to_first_entry = True
@@ -303,25 +342,30 @@ def add_regular_beatmarkers(opts, file_in):
     tempos = entry.findall('TEMPO')
     len_cur = len(tempos)
     
+    dprint(very_debug, tempos[0].items())
+    
     if len_cur < opts.min_number_cues:
       dprint(verbose, 'IGNORING non-dynamic track (%d cues): %s' % (len_cur, track_name))
       continue
     else:
       dprint(debug, "processing dynamic Track (%d cues): %s" % (len_cur, track_name) )
         
-    input_inizios = [x.get("Inizio") for x in tempos]
-    input_bpms = [x.get("Bpm") for x in tempos]
+    stats.n_processed += 1
 
-    
-    
+        
+    input_inizios = [ x.get("Inizio") for x in tempos ]
+    input_bpms = [ x.get("Bpm") for x in tempos ]
+
+    dprint(very_debug, "input_inizios :", input_inizios )
+      
     if opts.limit_cues:
       print("Limiting cues for debugging")
       input_inizios = input_inizios[:opts.limit_cues]
       input_bpms = input_bpms[:opts.limit_cues]
     
-      print("input_inizios :", input_inizios )
-      print("input_bpms :", input_bpms )
-      
+      #print("input_inizios :", input_inizios )
+      #print("input_bpms :", input_bpms )
+
     len_input = len(input_bpms)
 
     if set_bpm_to_first_entry:
@@ -337,34 +381,33 @@ def add_regular_beatmarkers(opts, file_in):
     output_inizios = []
     output_bpms = []
     for i in range(len_input - 1):
-      print("_", i)
       input_pos = float(input_inizios[i])
       input_bpm = float(input_bpms[i])
 
       pos = input_pos
-      dprint(debug, i , len_input)
+      #dprint(debug, i , len_input)
       next_pos = float(input_inizios[i+1])
       
       pos_margin = 0.005
       next_pos = next_pos - pos_margin
+      
+      dprint(debug, "")
       dprint(debug, "")
       
-      
-      print(beats_period(input_bpm, opts.beats_window))
-      dprint(debug, "Before inner loop: this_BM: %f  period: %f    next_BM: %f     " %(
+      #dprint(debug, beats_period(input_bpm, opts.beats_window))
+      dprint(debug, "Before entering while: this_BM: %f  period: %f    next_BM: %f     " %(
         pos, beats_period(input_bpm, opts.beats_window), next_pos )
         )
         
+     # print(pos, next_pos)  
       while pos < next_pos:
         output_inizios.append(pos) 
         output_bpms.append(input_bpm) 
         
         pos = advance_beat(input_bpm, pos, opts.beats_window)
-        dprint(very_debug, "After iteration inside INNER loop: pos: %f  next_pos: %f " %( pos, next_pos) )
-
-        break
+        dprint(debug, "before re-iterating: pos: %f  next_pos: %f " %( pos, next_pos) )
       
-      break
+      #break
       
     stats.n_enriched += 1
         
@@ -381,7 +424,7 @@ def add_regular_beatmarkers(opts, file_in):
     for x in entry.findall('TEMPO'):
       entry.remove(x)
 
-    for inizio, bpm in zip(output_bpms, output_inizios):
+    for bpm, inizio in zip(output_bpms, output_inizios):
       new_tempo_xml = copy.deepcopy(entry_xml)
       new_tempo_xml.set("Inizio", inizio_to_st(inizio))
       new_tempo_xml.set("Bpm", bpm_to_st(bpm))
@@ -392,7 +435,7 @@ def add_regular_beatmarkers(opts, file_in):
   #########
   ### exit steps                    
   if not opts.save_output:
-    print("==> SKIPPING final save. %s   (use -f to force changes)" % (file_out))
+    print("==> SKIPPING final save. '%s' (use -f to force changes)" % (file_out))
     
   else:  
     file_out2 = VersionedOutputFile(file_out, numSavedVersions=3)
@@ -422,13 +465,15 @@ def add_regular_beatmarkers(opts, file_in):
  
 #########
 parser = argparse.ArgumentParser(description='clone traktor cues based on number of cues')
-parser.add_argument('-c', dest="final_file", required=True,
-                    help='Main collection file. It will be replaced with a new version (old files are saved)')
+parser.add_argument('-i', dest="file_in", required=True, type=str,
+                    help='Input file')
+parser.add_argument('-o', dest="file_out", required=False, type=str, 
+                    help='Output file. If not given, adds "enriched" to the input file')
 
                       
   
-parser.add_argument('-b', dest="beats_window", default=8, type=int,
-                    help='Maximum sequential beats WITHOUT a beatmarket')
+parser.add_argument('-b', dest="beats_window", default=4, type=int,
+                    help='Maximum sequential beats WITHOUT a beatmarker')
 
 parser.add_argument('-m', dest="min_number_cues", default=15, type=int,
                     help='minimum numbe of cues to consider track as dynamic')
@@ -462,6 +507,9 @@ parser.add_argument('-n', dest="max_process", default=None, type=int,
                     
 parser.add_argument('-N', dest="limit_cues", default=None, type=int,
                     help='Max cues to  process')
+
+parser.add_argument('-r', dest="remove_unreadable_files", default=False, action="store_true",
+                    help='Remove files that cannot be read (WSL style)')
                     
       
 
@@ -476,14 +524,25 @@ if(opts.grep):
   opts.report_folders = True
 
   
-add_regular_beatmarkers(opts, opts.final_file )
+add_regular_beatmarkers(opts )
 
 
 
 
+### Steps:
+"""
 
 
- 
+rekordbox_add_beatmarkers.py -f -i s2\ -\ from_Rekordbox\ -\ small.xml -o s3\ -\ from_Rekordbox\ -\ enriched.xml                                          
+dj-data-converter-linux -w  s3\ -\ from_Rekordbox\ -\ enriched.xml
+mv collection.nml s4\ -\ converted\ collection.nml                                             
+xml_pretty_print.sh s4\ -\ converted\ collection.nml  
+
+traktor_clone_cues.py s4\ -\ converted\ collection.nml -c ../collection.nml -M -f
+
+
+
+"""
 
 
 
