@@ -944,10 +944,12 @@ an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and
 I use this every day to open WSL linux terminals in the current folder, and to open audio files programs directly.
 
 Usage:
-![qqtabbar_usage](pics/qqtabbar_usage.png?raw=true "QQTabBar Usage")
+![qqtabbar_usage](pics/qqtabbar_usage.jpg?raw=true "QQTabBar Usage")
 
 Configuring Launchers:
-![qqtabbar_launchers](pics/qqtabbar_launchers.png?raw=true "QQTabBar Launchers")
+![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true "QQTabBar Launchers")
+
+
 
 
 
