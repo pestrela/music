@@ -59,7 +59,7 @@
   * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
   * [What generic software tools did you built for Windows?](#What-generic-software-tools-did-you-built-for-Windows)
   * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
-
+  * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
 
      
 
@@ -87,7 +87,7 @@ To manage this complexity I've build my own set of personal tags that I fully tr
 As such, the first action on new files is to tag them into my structure. This ignores any previous tags made by someone else.
 
 Below an example how my structure looks like; the full tree is far larger.
-![DJ Genres](pics/dj_genres.png?raw=true)
+![DJ Genres](pics/folder_organization_dj_genres.png?raw=true)
 
 See also [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only).
   
@@ -725,7 +725,7 @@ Concrete steps:
   * Add the Controller video on Track 1. Click in the very first frame. Use effects / crop to crop the controller to size. Use right click / transform to center and scale it to the bottom of the screen
   * Move the video to the middle of the timeline. Lock track 1 so that it no longer moves
   * Add the Screen video to Track 2. Do the same steps as before to crop and scale / center the video on the top part of the screen
-  * Sync the two videos by finding something unique (eg press play). Zoom in a lot. Disable snap for precise aligment. Confirm aligment in the end of the video
+  * Sync the two videos by finding something unique (eg press play). Zoom in a lot. Disable snap for precise alignment. Confirm alignment in the end of the video
   * Render the video to a 4:3 format (1024x728, 30fps, MP4). Create a profile in your documents / .openshot / profiles folder, based on 
   
 
@@ -931,11 +931,26 @@ I love [customization](https://www.neogaf.com/threads/some-of-my-cant-live-witho
 * [NirSoft utils](https://www.nirsoft.net/utils/)
 
 Plus some specific programs:
-* [QQTabbar](https://www.techsupportalert.com/content/qttabbar.htm): Adds tabs to File Explorer, plus A LOT more.
+* [QQTabbar](https://www.techsupportalert.com/content/qttabbar.htm): Adds tabs to File Explorer, folder bookmarks and program shortcuts. Please see below pictures.
 * [Link Clump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj?hl=en): Make a rectangle around hyperlinks; open all in new tabs.
 * [WinDirStat](https://windirstat.net/): find missing disk space hogs
 * [Resilio sync](https://www.techadvisor.co.uk/download/backup-recovery/resilio-sync-263-3331463/): automatic folder synchronization
 * [Allway Sync](https://www.tomsguide.com/us/file-sync-backup,review-1060-4.html): manual folder synchronization
+
+## How to use QQTabBar with multiple tabs, folder bookmarks and program launchers
+
+QQTabbar ([link to a review](https://www.techsupportalert.com/content/qttabbar.htm)) is 
+an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and program launchers.
+I use this every day to open WSL linux terminals in the current folder, and to open audio files programs directly.
+
+Usage:
+![qqtabbar_usage](pics/qqtabbar_usage.png?raw=true "QQTabBar Usage")
+
+Configuring Launchers:
+![qqtabbar_launchers](pics/qqtabbar_launchers.png?raw=true "QQTabBar Launchers")
+
+
+
 
  
  
