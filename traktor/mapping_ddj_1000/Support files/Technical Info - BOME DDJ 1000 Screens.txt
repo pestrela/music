@@ -1,4 +1,7 @@
- 
+TODO:
+  - merge shift values ga, gb
+  - remove shift CC
+  
 
   
 Information Sources:
@@ -104,16 +107,16 @@ BOME variables:
   Abecedario: https://i.pinimg.com/originals/d0/ff/a6/d0ffa62f47ddae6abc349b9941ba14f9.png
 
   BOME Local:
-    "OO"
-    "PP"
-    "QQ"
-    "RR"
-    "SS"
-    "TT"
-    "UU"
-    "VV"
-    "WW"
-    "XX"
+    "oo"
+    "pp"
+    "qq"
+    "rr"
+    "ss"
+    "tt"
+    "uu"
+    "vv"
+    "ww"
+    "xx"
 
   BOME Global:
     ga-g9
@@ -129,16 +132,16 @@ BOME variables:
     za-z9
 
   Fake array variables (per channel):
-    1234   
+    1234
     5678
-    ABCD   
+    ABCD
     
     EFGH
     IJLM
     OPQR
     STUV
     
-    XYWZ    
+    XYWZ
     
   BOME Global variables (do not follow array notation):
     HZ / HY / ...   
@@ -206,26 +209,30 @@ What blinks in CDJs:
   play blink state:  "gi"
 
   
-  slip:           E4  -> "ke"
+  flux:           E4  -> "ke"
   reverse:        G#3 -> "ki"
-	slip reverse:   A0  -> (TBD)
+	flux reverse:   A0  -> (TBD)
   
       
 MODE CYCLE:
 -----------
-  CYCLE MODE: variable "za"  
+  TIME MODE: variable "za"  
     0: elapsed
     1: remain
     
     
   PREVIEW MODE: variable "ga" 
-    0: none
+    DEPRECATED - STILL TO CLEANUP!!!
+   
+    0: TIME
     1: shift1 -> previewing loop value
     2: shift2 -> previewing total time   (disabled)  -> M2 = handled by traktor
     
     3: timer  -> previewing loop/move values (TIMER)
-    4: loop active: 
     
+    4: loop active, shift not pressed 
+    5: loop active, shift pressed
+  
   
  
 CLOCK IMPLEMENTARION:
@@ -263,7 +270,8 @@ JOG NEEDLE:
                           ->  "ks"
 
   IN CUE:           CC 68 -> "z1" (cue being pressed)  
-  IN beat phase     CC 67 ->  
+  IN beat phase     CC 67 ->   (NOT USED)
+  
   IN PLAY           CC 77 -> "zo" (playing)
   IN JOG touch      CC 78 -> "zs" 
   IN HOTCUE ANY     CC 79 -> "immediate" 
@@ -277,22 +285,26 @@ JOG NEEDLE:
  
 
 BPM & SEEK:
-  IN seek position: CC 90..99   -> na/no/ja       RANGE
-  IN tempo adjust:  CC 101..108 -> g1/g5 (=100)   RANGE
-  IN BPM value:     CC 110..120 -> h1/h5 (=100)   RANGE
+  IN seek position: CC 90..99   -> "na"/"no"/"ja"       RANGE
+  IN tempo adjust:  CC 101..108 -> "g1"/"g5" (=100)   RANGE
+  IN BPM value:     CC 110..120 -> "h1"/"h5" (=100)   RANGE
 
   IN tempo range:   CC 66 -> "i1"  (real?)   "i5" (new value, only valid when soft takeover is used) 
      
-  CALC tempo perc:       -> "j1"/"j5" (int) -> k1 (ext)
-  CALC new bpm:          -> "m1"/"m5" (int) -> k5 (ext)
+  CALC tempo perc:       -> "j1"/"j5" (int) -> "k1" (ext)
+  CALC new bpm:          -> "m1"/"m5" (int) -> "k5" (ext)
 
-  Tempo Range enlarger:   "io"    0= nothing; +100 
+  Tempo Range enlarger:   "io"    
+     0 = nothing
+     1 = to enlarge in next iteration
+     2 = waiting to move back
 
+  
   
     
 modifiers:
   IN shift1:             M1 = CC 69  -> "ga"
-  IN shift2:             M2 = CC 73  -> "ga"
+  IN shift2:             M2 = CC 73  -> DIRECT HANDLE
   IN cycle time mode:    M3 = CC 74  -> "za"
   IN WAKE UP             M4 = CC 75  -> "RESET"  (if needed!)
 
@@ -311,11 +323,24 @@ Loops:
 Jog Ring (End warning):                         
   IN END warning    CC 82 ->  (GENERATED ON BOME ITSELF)
   IN deck volume    CC 83 -> "jo"
-  IN jogFX state    CC 84 -> "gx"   (could be a single variable)
+  IN jogFX state    CC 84 -> "gx"   (could be a single variable)    (THIS IS IN PAGE #1!)
+  IN phase          CC 85 -> "je"
+
+
+phase feature:
+--------------
+  0 = -0.1
+100 = +0.1
   
-               
-              
-              
+  x - 50 (center zero)
+  x / 5
+  
+  0 --> -10
+  50 --> 0
+  100 -> +10
+  
+  
+  
                          
 NEW CCs - High resolution - sent to BOME:
 -----------------------------------------
@@ -632,13 +657,18 @@ Denon HC4500 info:
 Unused variables:
 -----------------
   global variables:
-  "gx"  jogFX state   (4 variables)
+  "ga"  shift1  (was mega-state loop)
+  "gb"  shift2
+  "gc"  free
+  "gd"  free
+  
+  "gx"  jogFX state   (set of 4 variables)
   
   *****
-  "hi"  
-  "hx"  
+  "hi"  long press support
+  "hx"  Hertz Timers / INIT timers
 
-  *****
+  *****   
   "ie" (double click -> 4 separate variables)
   "ii" active deck firmware bugfixes -> 4 separate variables
   
@@ -647,26 +677,30 @@ Unused variables:
   "ix" pad MLM - previous pad pressed
 
   *****
-  "je"  
-  "ji"  
-  "js"  
-  "jx"  
+  "je"  deck Phase
+  "ji"  WANTED tempo value (soft takeover)
+  "js"  tempo is blinking (soft takeover)
+    0 - same tempo
+    1 - to arm
+    2 - armed = blinking
+  "jx"  CFX double click  
 
   *****
-  "ke"  
-  "ki"  
-  "kx"  
-
+  "ke"  flux (AKA slip)
+  "ki"  reverse 
+  "kx"  previewing after changing loop values
+  
   *****
-  "l5"  
-  "la"  
-  "le"  
+  "l5"  filter polarity  
+  "la"  filter something
+  "le"  is in active loop (WAS MOVED)
+
   "li"  
   "lo"  
   "ls"  
   "lx"  
 
-  *****
+  *****  HC-4500 
   "me"  
   "mi"  
   "mo"  
@@ -683,7 +717,7 @@ Unused variables:
   "y1"  pitch_polarity  (-1/0/1)
   "ye"  pitch_msb
   "yi"  pitch_lsb
-  "yx"  
+  "yx"    FREE  (includes yy) 
 
   *****
   "ze"  track_positon_normal 
@@ -701,20 +735,158 @@ layout deck shift:
 ------------------
   "ii"/1 - active left deck  (1/3)
   "ij"/2 - active right deck (2/4)
-  "il"/3 - parallel /classic mode (0/1)
+  "il"/3 - 0 - Parallel / 1 - Classic / 2 - Disabled mode (0/1)
   "im"/4 - PC APP CONNECT TIMER (disables forced side)
   
   
-double click support:
+Generic Double click support:
 ---------------------
-  "ie" - DlbClick: in progress  (0: None; 1: In timer; 2: Triggered)
+  "ie" - DlbClick: in progress  (0: None; 1: Inside timer; 2: Triggered)
   "if" - DlbClick: which channel
   "ig" - DlbClick: which note
   
-  "ih" - previous track (with 2 seconds)
+  "ih" - previous track (with 2 seconds)  (?????)
+   
+  
+Generic long press support:
+-------------------
+  "hi" - long press: current state  (0- nothing; 1-long press
+
+  "hj" - long press: which channel
+  "hl" - long press: which note
+  "hm" - long press: triggered state  (0 =none; 1 = triggerd)
+
   
   
-pad MLM and macroFX knob:
+Turntable FX:
+-------------  
+  deck is paused: 
+    pass B-1 normally
+  
+  deck is playing, flux OFF:
+    received from DDJ:
+      B-1: filter out if its playing
+      B-1 invert: filter out always
+    
+    stepA: sends C#7:
+      activates FX 
+      dry wet 100%
+      
+    stepB: sends B-1:   (these actions can be swapped)
+      pauses track
+      beatjump
+      dry wet 0%
+      
+    stepC: sends C#7 invert:
+      turns off FX
+  
+    stepD: sends B-1 INVERT:
+      dry wet 100%
+       
+  with flux ON:
+    does C#7 action
+    does C#7 INV action when the user releases the button
+    
+    
+    
+Stewe version:  https://maps.djtechtools.com/mappings/9325
+--------------  
+  sequence is m4= 0..7 -> 0
+  step 1: C#7
+    wet 100%
+    knob 0.62
+    button ON
+  step 2:  B-1
+    play/pause = PAUSE
+    beatjump -1
+  step:
+    beatjump -1/2
+  step: C-7 INV
+    dry = 0%
+    knob=1
+    button=off
+    store preset
+  step:
+     same
+    
+    
+Gestures on CFX ColorFX selectors:
+------------------------------
+	NORMAL:
+  	C-1  C#-1    (all on ch7_
+	  D-1  D#-1 
+	 
+	SHIFTED:
+	  G#-1  A-1
+	  A#-1  B-1
+
+  LONG PRESSES:
+    macrofx1 macrofx2   (G#1 32   A1 33)  chnanel 8 or 10
+    macrofx3 macrofx4   (a#1 34   b1 35)
+    
+  DOUBLE CLICK:
+    noise       beatdelay    (ch07.G#-1 8    c2 36)  channel 8 or 10
+    beatflanger beatreverb   (c#2 37      d2 38)
+		
+  
+  timeline:
+   - assumptions:
+     - correct led is blinking if enabled
+     - we always disable the led during analysis
+
+  case1:     
+   - b1 bliking
+   - press b2
+     - reset b1
+        (ignored)
+     - set b2
+         - reset b2
+   - timer:
+      - set b2
+      - return b2_single
+      
+  case1:     
+   - b1 bliking
+   - press b2
+     - reset b1
+        (ignored)
+     - set b2
+         - reset b2
+   - press b2
+     - set b2
+         - reset b2
+         
+   - timer:
+      - set b2
+      - return b2_double
+  
+    
+    
+  rules state machine:
+    send 00 - gets returned
+    send 7f - NO RETURN
+    
+ 
+  VARIABLES:
+    jx - state: 0: waiting, 1: in progress; 2: waiting final echo
+    jy - which CFX button
+    jw - press count  
+    jz - free
+    
+    
+  loopback feedback:
+   - method: all commands are looped back if they change the state.
+   - example:
+    sent 00 7f
+      recv 00 7f
+    send 01 7f
+      recv 00 00 
+      recv 01 7f
+    send 01 7f
+      <nothing>
+      
+      
+Pad MLM and macroFX knob:
 -------------------------  
   "is" macroFX Knob value (14 bit)
   "ix" pad MLM - previous pad pressed
@@ -722,16 +894,29 @@ pad MLM and macroFX knob:
   sequence is:
     change knob -> "is"
     press pad: remember pad ("ix") -> timer 30ms -> send knob -> send pad again
+
+    
+Fliter dual polarity:
+---------------------    
+  "l5"  filter polarity 
+     1 - positive; 2 - positive, needs refresh
+    -1 - negative; -2 - ...
+    
+  "la"  filter something
+
   
-  
+    
  
 CUSTOM DDJ-1000 bome notes:
 ---------------------------
   ch1..ch4:
   
-  
+   
    96 - master tempo
-   97 - free
+   
+   97 C#7 - TTFX normal play/pause
+   11 B-1 - STANDARD play/pause
+   117 A8 - TTFX flux mode fake play/pause
   
    114 F#8 - STANDARD deck change message 
    115 G8 - seek to front
@@ -741,7 +926,9 @@ CUSTOM DDJ-1000 bome notes:
        2 = 4-classic
        3 = 2-parallel 
        4 = 4-parallel
-   117 A8  - classic / parallel mode  (NOT USED)
+       
+   117 A8 - TTFX flux mode 
+   
    118 A#8 = tempo range down     (NEW PEDRO)
         (C7 = tempo range cycle - original pioneer)
    119 B8 - tempo Reset to 6%

@@ -86,6 +86,8 @@ mp3_folder_out="traktor/26ms_offsets/bin"
 traktor_tools_files_in=" traktor_clone_cues.py traktor_swap_configuration.sh  rekordbox_add_beatmarkers.py 
 cue_convert_timestamps.sh  cue_merge_cues.py   cue_renumber_files.py  cue_make_tracklist.sh 
    cue_rename_cue_files.sh cue_search_youtube.py  cue_scrape_lyrics.py
+   bome_analyse_project.sh  bome_find_unused_vars.py  bome_show_globals.2020-01-29.awk
+   
  "
 traktor_tools_folder_out="traktor/tools_traktor"
 

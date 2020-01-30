@@ -1,169 +1,26 @@
 #!/usr/bin/env python3
 
-  
+ 
+# base libraries 
 import sys, os, glob, string, marshal
 import string
+import argparse
+import os
+import re
+from collections import defaultdict
+from functools import partial
+from pathlib import Path
+import glob
 
-class VersionedOutputFile:
-    """ 
-    Like a file object opened for output, but with versioned backups
-    of anything it might otherwise overwrite 
-    
-    #https://www.oreilly.com/library/view/python-cookbook/0596001673/ch04s27.html
-    """
+## extra libraries
+from cueparser import CueSheet
+import textwrap
 
-    def __init__(self, pathname, numSavedVersions=3):
-        """ Create a new output file. pathname is the name of the file to 
-        [over]write. numSavedVersions tells how many of the most recent
-        versions of pathname to save. """
-        self._pathname = pathname
-        self._tmpPathname = "%s.~new~" % self._pathname
-        self._numSavedVersions = numSavedVersions
-        self._outf = open(self._tmpPathname, "w")   # use "wb" and str.encode() for better compatibility.
+## YAPU
+from yapu.imports.internal import *
+from yapu.multiline import grep_1, grep_not, grep
 
-    def __del__(self):
-        self.close(  )
-
-    def close(self):
-        if self._outf:
-            self._outf.close(  )
-            self._replaceCurrentFile(  )
-            self._outf = None
-
-    def asFile(self):
-        """ Return self's shadowed file object, since marshal is
-        pretty insistent on working with real file objects. """
-        return self._outf
-
-    def __getattr__(self, attr):
-        """ Delegate most operations to self's open file object. """
-        return getattr(self._outf, attr)
-
-    def _replaceCurrentFile(self):
-        """ Replace the current contents of self's named file. """
-        self._backupCurrentFile(  )
-        os.rename(self._tmpPathname, self._pathname)
-
-    def _backupCurrentFile(self):
-        """ Save a numbered backup of self's named file. """
-        # If the file doesn't already exist, there's nothing to do
-        if os.path.isfile(self._pathname):
-            newName = self._versionedName(self._currentRevision(  ) + 1)
-            os.rename(self._pathname, newName)
-
-            # Maybe get rid of old versions
-            if ((self._numSavedVersions is not None) and
-                (self._numSavedVersions > 0)):
-                self._deleteOldRevisions(  )
-
-    def _versionedName(self, revision):
-        """ Get self's pathname with a revision number appended. """
-        return "%s.~%s~" % (self._pathname, revision)
-
-    def _currentRevision(self):
-        """ Get the revision number of self's largest existing backup. """
-        revisions = [0] + self._revisions(  )
-        return max(revisions)
-
-    def _revisions(self):
-        """ Get the revision numbers of all of self's backups. """
-        revisions = []
-        backupNames = glob.glob("%s.~[0-9]*~" % (self._pathname))
-        for name in backupNames:
-            try:
-                revision = int(str.split(name, "~")[-2])
-                revisions.append(revision)
-            except ValueError:
-                # Some ~[0-9]*~ extensions may not be wholly numeric
-                pass
-        revisions.sort(  )
-        return revisions
-
-    def _deleteOldRevisions(self):
-        """ Delete old versions of self's file, so that at most
-        self._numSavedVersions versions are retained. """
-        revisions = self._revisions(  )
-        revisionsToDelete = revisions[:-self._numSavedVersions]
-        for revision in revisionsToDelete:
-            pathname = self._versionedName(revision)
-            if os.path.isfile(pathname):
-                os.remove(pathname)
-
-
-
-def is_list(l):
-    return isinstance(l, (list, tuple))
-
-def listify(l):
-    if l is None:
-        return None
-    
-    if not is_list(l):
-        l = [l]
-    return l
-
-def unlistify(l):
-    if l is None:
-        return None
-
-    if not is_list(l):
-        return l
-    
-    if len(l) == 0:
-        return None
  
-    if len(l) == 1:
-        l = l[0]
-        
-    return l
-
-def die(st, die=True):
-    print("\n\nError: %s\n\n" % st)
-    if die:
-      sys.exit(1)
-
-def warn(st):
-    die(st, die=False)
-    
-
-    
-def grep_1(l, s, rev=False):
-    if rev:
-        return [i for i in l if s not in i]
-    else:
-        return [i for i in l if s in i]
-     
-def grep_not(l, s):
-    return grep(l, s, rev=True)
-
-def grep(items, to_find, rev=False, verbose=False):
-    items = listify(items)
-    to_find = listify(to_find)
-    
-    if verbose:
-        print(items, "\n", to_find)
-    
-    #return [i for i in items if to_find in i]
-    ret =  [i for i in items if any(j in i for j in to_find) ]
-
-    ret  = unlistify(ret )
-    if verbose:
-        print(ret)
-    return ret
-
-def list_break(l, n=2):
-  ret = [l[x:x+n] for x in range(0, len(l),n)]
-  return ret
-		
-		
-def test_grep():
-    grep('noa', 'aaa')
-    grep('a', 'bbb')
-    grep('a', ['aaa', 'bbbb'])
-    grep('b', ['aaa', 'bbbb'])
-    grep(['a', 'b'], ['aaa', 'bbbb', 'ccc'])
-    grep(['d', 'a', 'b'], ['aaa', 'bbbb', 'ccc'])
-    None
 
       
 	
@@ -280,7 +137,7 @@ def generate_cue(file_music, input_tl, input_cue):
     if opts.debug:
       print(st)
       
-    st = grep(st, ["-"])
+    st = grep("-", st)
     
     if st is None or st == "":
       continue
@@ -646,19 +503,7 @@ def convert_time2(base):
 
         
   
-# base libraries 
-import argparse
-import os
-import re
-from collections import defaultdict
-from functools import partial
-from pathlib import Path
-import glob
 
-
-## extra libraries
-from cueparser import CueSheet
-import textwrap
 
 parser = argparse.ArgumentParser(description="merge cues and tracklists",
   formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -674,6 +519,8 @@ examples:
      
 """
 )
+
+
 parser.add_argument('base', type=str, nargs='?',
                     help='Specify basename for all files')
 
@@ -765,13 +612,10 @@ else:
   cleanup mixcloud:
      \1 - trance    SIM   (trackliss nos comentarios, cues regeneradas)
     
-    
     tudo o resto nao:
-    
   
   audition markers:
     https://community.adobe.com/t5/Audition/Export-via-markers-not-possible/td-p/4027389
-  
     
 """
 

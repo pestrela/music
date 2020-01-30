@@ -373,6 +373,11 @@ both|b)
 	exit 0
 	;;
 
+v|video)
+    format="bestvideo[height<=?1080]/best"
+    ;;
+    
+  
 mp4_full_HQ)
 	
 	#FORMAT="bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4"

@@ -30,117 +30,17 @@ import lxml.etree as ET
 import os, sys
 import pandas as pd
 import glob, os
-import copy
+import copy, math
+
 
 from urllib.parse import urlparse
 
 
-
-def print_nonl(*args, **kwargs):
-    """
-    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
-
-    Prints the values to a stream, or to sys.stdout by default.
-    Optional keyword arguments:
-      file:  a file-like object (stream); defaults to the current sys.stdout.
-      sep:   string inserted between values, default a space.
-      end:   string appended after the last value, default a newline.
-      flush: whether to forcibly flush the stream.
-    """
-    print(*args, end="", ** kwargs)
-    
-
-    
+from yapu.imports.internal import *
 
 
-class VersionedOutputFile:
-    """ 
-    Like a file object opened for output, but with versioned backups
-    of anything it might otherwise overwrite 
-    
-    #https://www.oreilly.com/library/view/python-cookbook/0596001673/ch04s27.html
-    """
 
-    def __init__(self, pathname, numSavedVersions=3):
-        """ Create a new output file. pathname is the name of the file to 
-        [over]write. numSavedVersions tells how many of the most recent
-        versions of pathname to save. """
-        self._pathname = pathname
-        self._tmpPathname = "%s.~new~" % self._pathname
-        self._numSavedVersions = numSavedVersions
-        self._outf = open(self._tmpPathname, "w")   # use "wb" and str.encode() for better compatibility.
-
-    def __del__(self):
-        self.close(  )
-
-    def close(self):
-        if self._outf:
-            self._outf.close(  )
-            self._replaceCurrentFile(  )
-            self._outf = None
-
-    def asFile(self):
-        """ Return self's shadowed file object, since marshal is
-        pretty insistent on working with real file objects. """
-        return self._outf
-
-    def __getattr__(self, attr):
-        """ Delegate most operations to self's open file object. """
-        return getattr(self._outf, attr)
-
-    def _replaceCurrentFile(self):
-        """ Replace the current contents of self's named file. """
-        self._backupCurrentFile(  )
-        os.rename(self._tmpPathname, self._pathname)
-
-    def _backupCurrentFile(self):
-        """ Save a numbered backup of self's named file. """
-        # If the file doesn't already exist, there's nothing to do
-        if os.path.isfile(self._pathname):
-            newName = self._versionedName(self._currentRevision(  ) + 1)
-            os.rename(self._pathname, newName)
-
-            # Maybe get rid of old versions
-            if ((self._numSavedVersions is not None) and
-                (self._numSavedVersions > 0)):
-                self._deleteOldRevisions(  )
-
-    def _versionedName(self, revision):
-        """ Get self's pathname with a revision number appended. """
-        return "%s.~%s~" % (self._pathname, revision)
-
-    def _currentRevision(self):
-        """ Get the revision number of self's largest existing backup. """
-        revisions = [0] + self._revisions(  )
-        return max(revisions)
-
-    def _revisions(self):
-        """ Get the revision numbers of all of self's backups. """
-        revisions = []
-        backupNames = glob.glob("%s.~[0-9]*~" % (self._pathname))
-        for name in backupNames:
-            try:
-                revision = int(str.split(name, "~")[-2])
-                revisions.append(revision)
-            except ValueError:
-                # Some ~[0-9]*~ extensions may not be wholly numeric
-                pass
-        revisions.sort(  )
-        return revisions
-
-    def _deleteOldRevisions(self):
-        """ Delete old versions of self's file, so that at most
-        self._numSavedVersions versions are retained. """
-        revisions = self._revisions(  )
-        revisionsToDelete = revisions[:-self._numSavedVersions]
-        for revision in revisionsToDelete:
-            pathname = self._versionedName(revision)
-            if os.path.isfile(pathname):
-                os.remove(pathname)
-                
-  
-
-
+ 
 
 def display_help():
   global help_text, help_text2
@@ -182,9 +82,6 @@ n_colisions_samelen_samedate: %d
 )
   
   
-def dprint(debug, *args, **kwargs):
-    if debug > 0:
-      print(*args, **kwargs)
       
   
   
@@ -243,7 +140,8 @@ def location_to_wsl(location):
   return Path(st)
   
     
-    
+def far_away_bpm(bpm1, bpm2):
+  return not math.isclose(bpm1, bpm2, rel_tol=0.10)
 
   
 def add_regular_beatmarkers(opts):
@@ -272,7 +170,7 @@ def add_regular_beatmarkers(opts):
   stats.n_colisions_samelen_prev_newer = 0
   stats.n_colisions_samelen_prev_older = 0
   stats.n_colisions_samelen_samedate = 0
- 
+  stats.n_swings_bpm = 0
   
   root = ET.parse(file_in).getroot()
   #root = ET.fromstring(xml_data.encode('utf-8'))
@@ -285,7 +183,7 @@ def add_regular_beatmarkers(opts):
     #entry = collection[0]
     #entry = copy.deepcopy(entry)
     
-    if opts.max_process and (stats.n_processed > opts.max_process):
+    if opts.max_process and (stats.n_processed >= opts.max_process):
       print("Breaking early because of MAX_PROCESS")
       break
 
@@ -307,14 +205,8 @@ def add_regular_beatmarkers(opts):
     debug = opts.debug
     verbose = opts.verbose
     quiet = opts.quiet
-    very_debug=opts.very_debug
-    if very_debug:
-      debug = True
-    if debug:
-      verbose = True
-    if verbose:
-      quiet = False
-    
+    very_debug = opts.very_debug
+    regular = opts.regular
     
     if (opts.grep != "") and (track_location is not None):
       #print(opts.grep, name, folder)
@@ -336,9 +228,8 @@ def add_regular_beatmarkers(opts):
     dprint(very_debug, "Track:", track_name)
     dprint(very_debug, "BPM: ", entry.get('AverageBpm'))
     input_avg_bpm = float(entry.get('AverageBpm'))
-
-    set_bpm_to_first_entry = True
-
+    input_total_time = float(entry.get('TotalTime'))
+    
     tempos = entry.findall('TEMPO')
     len_cur = len(tempos)
     
@@ -353,9 +244,20 @@ def add_regular_beatmarkers(opts):
     stats.n_processed += 1
 
         
-    input_inizios = [ x.get("Inizio") for x in tempos ]
-    input_bpms = [ x.get("Bpm") for x in tempos ]
+    input_inizios = [ float(x.get("Inizio")) for x in tempos ]
+    input_bpms = [ float(x.get("Bpm")) for x in tempos ]
 
+
+    
+    # add fake "last" entry
+    input_inizios.append(input_total_time)
+    input_bpms.append(input_avg_bpm)
+    
+    #print(type(input_inizios[0]))
+    #print(input_inizios)
+    #return
+    
+    
     dprint(very_debug, "input_inizios :", input_inizios )
       
     if opts.limit_cues:
@@ -368,7 +270,7 @@ def add_regular_beatmarkers(opts):
 
     len_input = len(input_bpms)
 
-    if set_bpm_to_first_entry:
+    if opts.set_bpm_to_first_entry:
       output_avg_bpm = float(input_bpms[0])
       dprint(debug, "Original average BPM: %s" % (bpm_to_st(input_avg_bpm)))
       dprint(debug, "Using first BPM instead: %.2f" % (output_avg_bpm))
@@ -383,6 +285,15 @@ def add_regular_beatmarkers(opts):
     for i in range(len_input - 1):
       input_pos = float(input_inizios[i])
       input_bpm = float(input_bpms[i])
+
+      if far_away_bpm(input_bpm, input_avg_bpm):
+        dprint(debug, "found swing BPM: %s" % (bpm_to_st(input_bpm)) )
+        if opts.keep_bpm_swings:
+          dprint(regular, "Warning: KEEPING swing BPM unchanged: %s" % (bpm_to_st(input_bpm)))
+        else:
+          dprint(regular, "Warning: IGNORING swing BPM %s;  using AVG instead: %s" % (
+            bpm_to_st(input_bpm), bpm_to_st(input_avg_bpm)))
+          input_bpm = input_avg_bpm
 
       pos = input_pos
       #dprint(debug, i , len_input)
@@ -405,7 +316,7 @@ def add_regular_beatmarkers(opts):
         output_bpms.append(input_bpm) 
         
         pos = advance_beat(input_bpm, pos, opts.beats_window)
-        dprint(debug, "before re-iterating: pos: %f  next_pos: %f " %( pos, next_pos) )
+        dprint(debug, "  before reloop: pos: %f  next_pos: %f " %( pos, next_pos) )
       
       #break
       
@@ -440,6 +351,7 @@ def add_regular_beatmarkers(opts):
   else:  
     file_out2 = VersionedOutputFile(file_out, numSavedVersions=3)
     
+    #sys.exit(0)
     if very_debug:
         ET.dump(root)
      
@@ -452,8 +364,8 @@ def add_regular_beatmarkers(opts):
     print("SAVED FILE: %s" % (file_out))
       
       
-  print("\nDone '%s'. Processed %d entries. Enriched %d entries." % (
-    file_in, stats.n_processed, stats.n_enriched) )
+  print("\nDone '%s'. Processed %d entries. Enriched %d entries. %d BPM swings" % (
+    file_in, stats.n_processed, stats.n_enriched, stats.n_swings_bpm  ) )
     
   if opts.verbose:
     stats.print()
@@ -463,58 +375,101 @@ def add_regular_beatmarkers(opts):
  
 
  
+#class DebuggedArgumentParser(ArgumentParser):
+ # def __init__
+ 
+ 
+ 
+                    
+def add_debug_arguments(parser):
+  parser.add_argument('-q', "--quiet", dest="quiet", default=False, action="store_true",
+                      help='Quiet flag')
+                      
+  parser.add_argument('-R', "--regular", dest="regular", default=True, action="store_false",
+                      help='Verbose flag')
+
+  parser.add_argument('-v', "--verbose", dest="verbose", default=False, action="store_true",
+                      help='Verbose flag')
+
+  parser.add_argument('-d', "--debug", dest="debug", default=False, action="store_true",
+                      help='Debug flag')
+                      
+  parser.add_argument('-D', "--very_debug", dest="very_debug", default=False, action="store_true",
+                      help='Verbose flag')
+  
+  return parser
+  
+ 
+def parse_debug_arguments(opts):
+  if opts.very_debug:
+    opts.debug = True
+    
+  if opts.debug:
+    opts.verbose = True
+    
+  if opts.verbose:
+    opts.regular = True
+    
+ 
+  if opts.quiet:
+    opts.regular = False
+    opts.verbose = False
+    opts.debug = False
+    opts.very_debug = False
+ 
+  return opts
+  
+ 
 #########
 parser = argparse.ArgumentParser(description='clone traktor cues based on number of cues')
-parser.add_argument('-i', dest="file_in", required=True, type=str,
+parser.add_argument('-i', "--file_in", dest="file_in", required=True, type=str,
                     help='Input file')
-parser.add_argument('-o', dest="file_out", required=False, type=str, 
+parser.add_argument('-o', "--file_out", dest="file_out", required=False, type=str, 
                     help='Output file. If not given, adds "enriched" to the input file')
 
                       
   
-parser.add_argument('-b', dest="beats_window", default=4, type=int,
+parser.add_argument('-b', "--beats_window",dest="beats_window", default=4, type=int,
                     help='Maximum sequential beats WITHOUT a beatmarker')
 
-parser.add_argument('-m', dest="min_number_cues", default=15, type=int,
+parser.add_argument('-m', "--min_number_cues", dest="min_number_cues", default=15, type=int,
                     help='minimum numbe of cues to consider track as dynamic')
 
-                    
-parser.add_argument('-d', dest="debug", default=False, action="store_true",
-                    help='Debug flag')
-
-parser.add_argument('-q', dest="quiet", default=False, action="store_true",
-                    help='Quiet flag')
-
-parser.add_argument('-v', dest="verbose", default=False, action="store_true",
-                    help='Verbose flag')
-
-parser.add_argument('-V', dest="very_debug", default=False, action="store_true",
-                    help='Verbose flag')
 
                     
-parser.add_argument('-g', dest="grep", type=str, default="", 
+parser.add_argument('-g', "--grep", dest="grep", type=str, default="", 
                     help='optional string to grep. Shows verbosity for that entry. Still processes that entry')
 
-parser.add_argument('-G', dest="grep_only", type=str, default="", 
+parser.add_argument('-G', "--grep_only", dest="grep_only", type=str, default="", 
                     help='same, but skips processing of other entries')
 
                     
-parser.add_argument('-f', dest="save_output", action="store_true", default=False, 
+parser.add_argument('-f', "--force", dest="save_output", action="store_true", default=False, 
                     help='Actualy do save the final file')
 
-parser.add_argument('-n', dest="max_process", default=None, type=int,
+parser.add_argument('-n', "--max_process", dest="max_process", default=None, type=int,
                     help='Max tracks to process')
                     
-parser.add_argument('-N', dest="limit_cues", default=None, type=int,
+parser.add_argument('-N', "--max_cues", dest="limit_cues", default=None, type=int,
                     help='Max cues to  process')
 
-parser.add_argument('-r', dest="remove_unreadable_files", default=False, action="store_true",
+parser.add_argument('-r', "--remove_unreadable_files", dest="remove_unreadable_files", default=False, action="store_true",
                     help='Remove files that cannot be read (WSL style)')
+                                        
+parser.add_argument('-F', "--set_bpm_to_first_entry", dest="set_bpm_to_first_entry", default=False, action="store_true",
+                    help='Sets BPM to first entry (instead of the default AVG)')
+                    
+parser.add_argument('-B', "--keep_bpm_swings", dest="keep_bpm_swings", default=False, action="store_true",
+                    help='Keeps BPM swings "as-is" in the output. By default, these are filtered out and the average BPM value is used')
+                    
                     
       
+parser=add_debug_arguments(parser)
 
 ###########
 opts = parser.parse_args()
+           
+opts = parse_debug_arguments(opts)
            
 if(opts.grep_only):
   opts.grep = True
@@ -539,6 +494,15 @@ mv collection.nml s4\ -\ converted\ collection.nml
 xml_pretty_print.sh s4\ -\ converted\ collection.nml  
 
 traktor_clone_cues.py s4\ -\ converted\ collection.nml -c ../collection.nml -M -f
+
+
+
+todo: 
+- final part
+- add detailed phase to jogs
+- disable sync when pitch bend (add option to it)
+
+- prepare transtions
 
 
 
