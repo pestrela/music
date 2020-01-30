@@ -222,23 +222,30 @@ def file_append_suffix(filename, suffix):
   return "{name}_{uid}{ext}".format(name=name, uid=suffix, ext=ext)
 
 
+def percentage(a,b):
+  ret =  (a * 100) / b
+  ret = int(ret)
+  return ret
+  
+  
+  
 class Stats():
   
   def print(stats):
     print("""
-n_colisions_prev_longer: %d
-n_colisions_new_longer: %d
-n_colisions_samelen: %d
-n_colisions_samelen_prev_newer: %d
-n_colisions_samelen_prev_older: %d
-n_colisions_samelen_samedate: %d
+n_matches_prev_longer: %d
+n_matches_new_longer: %d
+n_matches_samelen: %d
+n_matches_samelen_prev_newer: %d
+n_matches_samelen_prev_older: %d
+n_matches_samelen_samedate: %d
 """ % (
-  stats.n_colisions_prev_longer,
-  stats.n_colisions_new_longer,
-  stats.n_colisions_samelen,
-  stats.n_colisions_samelen_prev_newer,
-  stats.n_colisions_samelen_prev_older,
-  stats.n_colisions_samelen_samedate)
+  stats.n_matches_prev_longer,
+  stats.n_matches_new_longer,
+  stats.n_matches_samelen,
+  stats.n_matches_samelen_prev_newer,
+  stats.n_matches_samelen_prev_older,
+  stats.n_matches_samelen_samedate)
 )
   
   
@@ -255,21 +262,24 @@ def parse_nml(opts, file, phase, db):
   max_process=opts.max_process
       
   stats = Stats()    
-  stats.n_only_on_target=0
-  stats.n_processed=0
-  stats.n_colisions=0
+  stats.n_only_on_target = 0
+  stats.n_processed = 0
+  stats.n_entries = 0
+  stats.n_matches = 0
   
-  stats.n_colisions_prev_longer = 0
-  stats.n_colisions_new_longer = 0
-  stats.n_colisions_samelen = 0
-  stats.n_colisions_samelen_prev_newer = 0
-  stats.n_colisions_samelen_prev_older = 0
-  stats.n_colisions_samelen_samedate = 0
- 
+  stats.n_matches_prev_longer = 0
+  stats.n_matches_new_longer = 0
+  stats.n_matches_samelen = 0
+  stats.n_matches_samelen_prev_newer = 0
+  stats.n_matches_samelen_prev_older = 0
+  stats.n_matches_samelen_samedate = 0
+  stats.no_audio_id = 0
   
   root = ET.parse(file).getroot()
   collection=root.find('COLLECTION')
   for entry in collection:
+    stats.n_entries += 1
+  
     debug = opts.debug
     verbose = opts.verbose
     quiet = opts.quiet
@@ -286,9 +296,15 @@ def parse_nml(opts, file, phase, db):
     full_path = "c:%s%s" % ( folder.replace("/:", "/"), name)
     date = pd.to_datetime(entry.get('MODIFIED_DATE'))
 
+    
+    ###
+    
     if opts.match_by_filename:
       audio_id = full_path      # this is an hack
     
+    if audio_id is None:
+      stats.no_audio_id += 1
+      continue
     
     if date is None:
       print("skipping missing date: ", name)
@@ -306,6 +322,7 @@ def parse_nml(opts, file, phase, db):
         debug = True  
         quiet = False
         verbose = True
+        
       else:
         
         if opts.grep_only:
@@ -331,7 +348,7 @@ def parse_nml(opts, file, phase, db):
             print("  FOLDER (NEW): %s" % ( folder ))
 
       else:
-          stats.n_colisions += 1
+          stats.n_matches += 1
           
           previous        = db[audio_id]
           previous_name   = previous['name']
@@ -342,34 +359,34 @@ def parse_nml(opts, file, phase, db):
           
           ####
           if len_previous > len_new:
-            stats.n_colisions_prev_longer += 1
+            stats.n_matches_prev_longer += 1
             use_new = False
             report  = True
             debug_msg = "PREVIOUS had more cues (%d). Keeping previous value (%d)" % (len_previous, len_previous)
 
           elif len_previous < len_new:
-            stats.n_colisions_new_longer += 1
+            stats.n_matches_new_longer += 1
             use_new = True
             report  = True
             debug_msg = "NEW has more cues (%d). Using new value" % (len_new)
 
           elif len_previous == len_new:
-              stats.n_colisions_samelen += 1
+              stats.n_matches_samelen += 1
 
               if previous_date > date:
-                stats.n_colisions_samelen_prev_newer += 1
+                stats.n_matches_samelen_prev_newer += 1
                 debug_msg = "same number of cues (%d). previous is NEWER = Keeping previous value (%d) " % (len_previous, len_previous)
                 report = False
                 use_new = False
                 
               elif previous_date < date:
-                stats.n_colisions_samelen_prev_older += 1
+                stats.n_matches_samelen_prev_older += 1
                 debug_msg = "same number of cues (%d). previous is OLDER = using new value (%d)" % (len_previous, len_previous)
                 report = True
                 use_new = True
                   
               elif previous_date == date:
-                stats.n_colisions_samelen_samedate += 1
+                stats.n_matches_samelen_samedate += 1
                 debug_msg = "same number of cues (%d). Same date" % (len_previous)
                 report = False
                 use_new = False
@@ -448,8 +465,15 @@ def parse_nml(opts, file, phase, db):
       print("SAVED FILE: %s" % (file_out))
       
       
-  print("\nDone  phase '%d' for '%s'. Processed %d entries. Matched %d entries." % (
-    phase, file, stats.n_processed, stats.n_colisions) )
+  print("")
+  
+  if not opts.match_by_filename:
+    print(stats.no_audio_id, stats.n_entries)
+    if percentage(stats.no_audio_id, stats.n_entries) > 30:
+      print("Warning: %s non-analysed files. Did you forgot -M ?" % (stats.no_audio_id))
+    
+  print("Done  phase '%d' for '%s'. Processed %d entries. Matched %d entries." % (
+    phase, file, stats.n_processed, stats.n_matches) )
     
   if opts.verbose:
     stats.print()
@@ -476,7 +500,7 @@ def analyse_collection_files(opts, current_collection, previous_collection_list=
     for file in previous_collection_list:
         db = parse_nml(opts, file, phase=1, db=db)
 
-    if not opts.single_pass_only:
+    if not opts.single_pass:
       # phase 2
       db = parse_nml(opts, current_collection, phase=2, db=db)
 
@@ -504,7 +528,7 @@ parser.add_argument('-q', dest="quiet", default=False, action="store_true",
 parser.add_argument('-v', dest="verbose", default=False, action="store_true",
                     help='Verbose flag')
                     
-parser.add_argument('--single', dest="single_pass_only", default=False, action="store_true",
+parser.add_argument('--single', "--single_pass_only", dest="single_pass", default=False, action="store_true",
                     help='single pass only')
 
                     
@@ -527,6 +551,12 @@ parser.add_argument('-M', '--match_by_filename', dest="match_by_filename", defau
 parser.add_argument('-f', dest="save_output", action="store_true", default=False, 
                     help='Actualy do save the final file')
                     
+
+parser.add_argument('-f', dest="save_output", action="store_true", default=False, 
+                    help='Actualy do save the final file')
+
+                    
+#                    <MODIFICATION_INFO AUTHOR_TYPE="user"></MODIFICATION_INFO>
                 
                     
                     

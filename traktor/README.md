@@ -903,7 +903,8 @@ Below is a summary; see [here](traktor_tools/README.md) for more details
   * Adaptor scripts to run DJCU and Rekordbuddy in Windows
 * 26ms offsets
   * Research about the 26ms mp3 cue shifts in DJ conversion apps. [More info](https://github.com/digital-dj-tools/dj-data-converter/issues/3)
-
+* BOME tools:
+  * Easy wrapper around the [BOME analyser that documents variables](https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project), and a new script to find unused variables
  
 ## What generic software tools did you built for Windows?
 
@@ -940,7 +941,7 @@ Plus some specific programs:
 ## How to use QQTabBar with multiple tabs, folder bookmarks and program launchers
 
 QQTabbar ([link to a review](https://www.techsupportalert.com/content/qttabbar.htm)) is 
-an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and program launchers.
+an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and program launchers.\
 I use this every day to open WSL linux terminals in the current folder, and to open audio files programs directly.
 
 Usage:
@@ -950,11 +951,5 @@ Configuring Launchers:
 ![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true "QQTabBar Launchers")
 
 
-
-
-
-
- 
- 
 
  

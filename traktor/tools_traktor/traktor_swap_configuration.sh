@@ -1,5 +1,12 @@
 #!/bin/bash
 
+
+
+#pwd
+#read
+
+
+
 set -u
 set -e
 
