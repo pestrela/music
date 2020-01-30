@@ -29,7 +29,7 @@
   * [Why i like BIG jogwheels](#why-i-like-big-jogwheels)
   * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
 
-* [Custom Mappings](#Custom-Mappings)
+* [Free Mappings](#Free-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
@@ -45,22 +45,35 @@
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
 
-* [Other topics](#Other-topics)
-  * [How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
-  * [Read this if you have erratic USB cable problems](#Read-this-if-you-have-erratic-USB-cable-problems)
+* [Free DJ Software Tools](#Free-DJ-Software-Tools)
+  * [Custom DJ Tools](#Custom-DJ-Software-Tools)
+  * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
+  * [How to emulate elastic beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
+  * [How to swap Traktor configurations without the preferences window](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
+  * [What shortcuts you added for youtube, Google and Discogs?](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+
+  
+* [DJ Software optimization](#DJ-Software-optimization)
+  * [Generic optimization guides](#How-to-optimize-a-laptop-for-DJ-Software)
+  * [Intel turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
+  * [Deep trace anaysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
+  * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
+  
+* Windows usage
+  * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
+  * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
+  * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
+
+* [Other topics](#Other-topics)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
-  * [How to swap Traktor configurations easily](#How-to-swap-Traktor-configurations-easily)
   * [DJ Census over time results](#DJ-Census-over-time-results)
-  * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
-  * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
-  * [What generic software tools did you built for Windows?](#What-generic-software-tools-did-you-built-for-Windows)
-  * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
-  * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
 
+  
+  
      
 
 # MindMap Summary
@@ -399,7 +412,7 @@ Some relevant points:
 
 
 
-# Custom Mappings
+# Free Mappings
 
 ## What are your main Traktor mappings?
 
@@ -611,36 +624,98 @@ This is the current situation as far as I tested it myself:
 * **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
 * **[Choones](https://support.choones.app/guides)**: To be tested. Choones is an upcoming web application that does cloud-based conversion among many other features. At time of writing this is not publicly available. I've contated the team by email, and they told me they are aware of the 26ms shift issue.
 
-# Other topics
+
+
+
+# Free DJ Software Tools
+
+This section groups the DJ software tools written by me, all freely available.
+ 
+* [DJ software tools overview](#what-software-tools-did-you-built-for-Traktor)
+* [Elastic beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
+* [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
+* [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
+* [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+
+
+## What software tools did you built for Traktor?
+
+[This folder](tools_traktor) contains my Traktor tools and CUE tools.
+Below is a summary; see [here](traktor_tools/README.md) for more details
+
+* Traktor_clone_cues
+  * Clones cues between physically duplicated files. 
+  * Is also able to merge traktor NML files.
+* rekordbox_add_beatmarkers  
+  * adds a beatmarker every 4 beats. Part of the [elastic beatgrid emulation]()
+* CUE_tools
+  * Tools to generate CUE files and timestamped tracklists
+  * Tools to search a whole set in youtube tabs and to scrape lyrics
+  * My mp3tag actions scripts
+  * Adaptor scripts to run DJCU and Rekordbuddy in Windows
+* 26ms offsets
+  * Research about the 26ms mp3 cue shifts in DJ conversion apps. [More info](https://github.com/digital-dj-tools/dj-data-converter/issues/3)
+* BOME tools:
+  * Easy wrapper around the [BOME analyser that documents variables](https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project), and a new script to find unused variables
+ 
+ 
+## How to emulate elastic beatgrids in Traktor
+
+Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.\
+There is impossible to do perfect *beatjumps* because you cannot compensate with jogs.\
+Same story for perfect *delay-based Effects*.\
+This was the #1 request from the [Digital DJ Tips intervew](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
+
+
+Below a recipe to *approximate* Elastic beatgrids in Traktor using Rekordbox conversion and putting a beatmarker every 4 beats:
   
-## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
+Steps:
+* Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
+* Analyse ONLY these tracks in dynamic mode in Rekordbox: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
+* Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
+* Manually remove the non-dynamic tracks from the XML
+* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
+* Convert your collection without the 26-ms shift issue: [guide]](#which-dj-converters-avoid-the-26ms-shift-issue
+* Patch your files into Traktor using [Traktor_clone_cues.py] or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
 
-Every year laptops get faster. As people want them lighter, it can only be done by using all kinds of Power saving tricks. These tricks are very damaging for DJ software.
 
-If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable Intel turbo boost or anything related to power saving everywhere you can.
+## How to swap Traktor configurations without the slow preferences window
 
-To fix this:
-* Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
-* Change your BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
-* Change your Windows Power settings: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
+[This script](tools_traktor/traktor_swap_configuration.sh) lets you swap between two traktor configurations easily. 
 
-For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
+This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. 
+This saves you to having to open the preferences window to change the audio device, 
+which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
+
+Script installation:
+* save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
+* make the script executable with 'chmod +x traktor_swap_configuration.sh '
+* redefine the 'traktor_root_folder' variable to your documents traktor root
+* *run it once* to copy the first config
+
+First time setup:
+* Open Traktor
+* change the config to DDJ-1000
+* close traktor
+* *run script*
+* open traktor
+* change config to internal soundcard
+* close traktor
+
+To Activate configuration #1:
+* *run the script*
+* open traktor
+* confirm the audio card is ddj-1000
+* Close taktor
+
+To Activate configuration #2:
+* *run the script*
+* open traktor
+* confirm the audio card is Internal Soundcard
+* Close taktor
+  
 
  
-   
-## Read this if you have erratic USB cable problems
-
-USB cables may be too thin and not deliver enough power to your controller.\
-Confirm your cable does NOT have these labels:
-* 28/2C
-* 28AWGX2C
-* AWG 28X2C
- 
-In general you want the "2C" label to have "24" and not "28".\
-full info: https://support.native-instruments.com/hc/en-us/articles/210293725-Choosing-the-Correct-USB-Cable-for-Your-NI-Hardware-Device
-more info2: https://goughlui.com/2014/10/01/usb-cable-resistance-why-your-phonetablet-might-be-charging-slow/
-
-
 ## How I build perfect tracklists using CUE files
 
 I use a set of tools to generate a CUE file with the timings of my sets.
@@ -678,6 +753,177 @@ Overview of the Cue tools:
 * cue_rename_cue.sh: 
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
+
+## What shortcuts you added for Youtube, Google and Discogs?
+
+[This folder](../downloads) contains Windows tweaks and other generic tools.
+
+My [autohotkey file](../downloads/AutoHotkey.ahk) has all kinds of useful *glabal* shortcuts that *work for any text of any program*
+* CTRL+F08: Search in Discogs
+* CTRL+F09: Search in Explorer
+* CTRL+F10: Current url to clipboard
+* CTRL+F11: Search in Youtube (list)
+* CTRL+F12: Search in Youtube (first hit)
+* Win+backspace: toggle any window to be always on top for
+
+More scripts in this folder:
+* a youtube-dl wrapper
+* a tool to search 1001tracklists, ticketswap and DJ TechTools maps.
+
+  
+
+
+  
+  
+  
+# DJ Software optimization
+
+This section covers DJ software optimization.
+
+* [Generic optimization guides](#How-to-optimize-a-laptop-for-DJ-Software)
+* [Intel turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
+* [Deep trace anaysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
+* [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
+
+
+
+
+## How to optimize a laptop for DJ Software
+  
+Every year laptops get lighter via having smaller batteries.\
+This means more and more Power saving tricks to keep the same autonomy.\
+These Power saving tricks are *VERY* damaging for DJ software.
+
+To optimize *continuous* crackle
+* Raise the driver buffer
+* Disable turbo boost
+
+To optimize *random* crackle
+* Disable all power saving features
+* Disable turbo boost
+
+
+  
+## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
+
+
+If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable all power saving features and especially Intel turbo boost.
+
+For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
+
+To fix this:
+* Specific software (best way): Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
+* Windows Configuration: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
+* BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
+
+
+## How to make a deep trace of everything that runs in your laptop
+   
+TODO: document windows performance analyser   
+   
+   
+## Read this if you have erratic USB cable problems
+
+USB cables may be too thin and not deliver enough power to your controller.\
+Confirm your cable does NOT have these labels:
+* 28/2C
+* 28AWGX2C
+* AWG 28X2C
+ 
+In general you want the "2C" label to have "24" and not "28".\
+full info: https://support.native-instruments.com/hc/en-us/articles/210293725-Choosing-the-Correct-USB-Cable-for-Your-NI-Hardware-Device
+more info2: https://goughlui.com/2014/10/01/usb-cable-resistance-why-your-phonetablet-might-be-charging-slow/
+
+
+
+
+# Windows usage
+
+Windows-specific tips go here.
+
+* [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
+* [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
+* [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
+
+
+## Why I use Windows instead of Mac
+    
+Apple and MacOS is in general a better choice to do audio work (both DJing and Production). 
+
+The operating system is stronger because it was built on Unix. The hardware and software are better 
+integrated as they are built by the same company. 
+And there is generally less bugs across the board as the hardware are standardized (ie, all macs are the same inside the same model).
+
+Nevertheless its definitely not perfect; while I've seen more issues in Windows, I've also seen issues in Macs. 
+In particular, as of Nov 2019 this got a lot worse with MacOS Catalina, namely as it migrated to 64-bit only drivers and the removal of itunes/music App. 
+
+So if I say the mac is still overall a better choice for Music, so why I'm using a Dell XPS 15 windows? 
+Main reasons are:
+* **a) Folder Tree:** I use File explorer with the [full tree visible all the time](#why-i-manage-music-using-os-folders-only). I've tried Finder several times but did not enjoyed their paradigms. 
+Also tried to use a windows file explorer clone for mac, it was completely abandoned by the author.
+* **b) No flexibility:** AKA the "one apple way". I've never got used to their GUI, their keyboard shortcuts, 
+and the keyboard itself. 
+In particular there is the extremely annoying decision of having to use 2 hands for the
+ [forward delete key](https://forums.macrumors.com/threads/why-no-delete-key.1360799/). 
+Same story for the Maximize feature. Same story for lack of USB-A ports, SD cards and dongles. 
+Ditto for no headphone jack in recent iphones.
+In all cases the answer is  "get used to it". Well, I didn't.\
+See also [my Windows tweaks](#Generic-Windows-tweaks-and-programs-I-use)
+* **c) Software library:** Very limited choice on software and freeware, as compared to Windows
+* **d) Expensive:** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
+* **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming. 
+For years I've used a linux VM inside windows, but now I only use WSL. 
+([more info1](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd) 
+/ [more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
+
+
+See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
+from a Music company.
+
+ 
+
+
+## Generic Windows tweaks and programs I use 
+
+I love [customization](https://www.neogaf.com/threads/some-of-my-cant-live-without-progams-what-are-yours.1482889/), so I have installed several tweaker apps. These are all GUIS to edit the refgistry and change / unlock / customize windows features. Below the reviews:
+* [Activaid](https://www.ghacks.net/2014/09/24/activaid-is-a-useful-autohotkey-script-collection/)
+* [Winareo tweraker](https://winaero.com/comment.php?comment.news.1836)
+* [Ultimate windows tweaker](https://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10)
+* [NirSoft utils](https://www.nirsoft.net/utils/)
+
+Plus some specific programs:
+* [QQTabbar](https://www.techsupportalert.com/content/qttabbar.htm): Adds tabs to File Explorer, folder bookmarks and program shortcuts. Please see below pictures.
+* [Link Clump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj?hl=en): Make a rectangle around hyperlinks; open all in new tabs.
+* [WinDirStat](https://windirstat.net/): find missing disk space hogs
+* [Resilio sync](https://www.techadvisor.co.uk/download/backup-recovery/resilio-sync-263-3331463/): automatic folder synchronization
+* [Allway Sync](https://www.tomsguide.com/us/file-sync-backup,review-1060-4.html): manual folder synchronization
+
+## How to use QQTabBar with multiple tabs, folder bookmarks and program launchers
+
+QQTabbar ([link to a review](https://www.techsupportalert.com/content/qttabbar.htm)) is 
+an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and program launchers.\
+I use this every day to open WSL linux terminals in the current folder, and to open audio files programs directly.
+
+Usage:
+![qqtabbar_usage](pics/qqtabbar_usage.jpg?raw=true "QQTabBar Usage")
+
+Configuring Launchers:
+![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true "QQTabBar Launchers")
+
+
+  
+
+# Other topics
+
+
+* [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
+* [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
+* [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
+* [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
+* [DJ Census over time results](#DJ-Census-over-time-results)
+
+  
+  
 ## How I recorded my old radio show recordings and found the IDs
 
 I had old K7s mixtapes from around 1996 from local radio shows that I really liked. 
@@ -737,7 +983,6 @@ Concrete steps:
   * change project to 4:3 format 
   * ...
  
-
 
 ## How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS
 
@@ -805,41 +1050,6 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
   
-## How to swap Traktor configurations easily
-
-[This script](tools_traktor/traktor_swap_configuration.sh) lets you swap between two traktor configurations easily. 
-
-This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. 
-This saves you to having to open the preferences window to change the audio device, 
-which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
-
-Script installation:
-* save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
-* make the script executable with 'chmod +x traktor_swap_configuration.sh '
-* redefine the 'traktor_root_folder' variable to your documents traktor root
-* *run it once* to copy the first config
-
-First time setup:
-* Open Traktor
-* change the config to DDJ-1000
-* close traktor
-* *run script*
-* open traktor
-* change config to internal soundcard
-* close traktor
-
-To Activate configuration #1:
-* *run the script*
-* open traktor
-* confirm the audio card is ddj-1000
-* Close taktor
-
-To Activate configuration #2:
-* *run the script*
-* open traktor
-* confirm the audio card is Internal Soundcard
-* Close taktor
-
 
 ## DJ Census over time results
 
@@ -853,103 +1063,4 @@ See also the graph showing the [most popular DJ softwares over time](../census_g
 ![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" )!
 
   
-## Why I use Windows instead of Mac
-    
-Apple and MacOS is in general a better choice to do audio work (both DJing and Production). 
-
-The operating system is stronger because it was built on Unix. The hardware and software are better 
-integrated as they are built by the same company. 
-And there is generally less bugs across the board as the hardware are standardized (ie, all macs are the same inside the same model).
-
-Nevertheless its definitely not perfect; while for sure I've seen more issues in Windows, I've also seen (too many) issues in Mac. 
-In particular, as of Nov 2019 this got a lot worse with MacOS Catalina, namely as it migrated to 64-bit only drivers and the removal of itunes/music App. 
-
-So if I say the mac is still overall a better choice for Music, so why I'm using a Dell XPS 15 windows? 
-Main reasons are:
-* **a) Folder Tree:** I use File explorer with the [full tree visible all the time](#why-i-manage-music-using-os-folders-only). I've tried Finder several times but did not enjoyed their paradigms. 
-Also tried to use a windows file explorer clone for mac, it was completely abandoned by the author.
-* **b) No flexibility:** AKA the "one apple way". I've never got used to their GUI, their keyboard shortcuts, 
-and the keyboard itself. 
-In particular there is the extremely annoying decision of having to use 2 hands for the
- [forward delete key](https://forums.macrumors.com/threads/why-no-delete-key.1360799/). 
-Same story for the Maximize feature. Same story for lack of USB-A ports, SD cards and dongles. 
-Ditto for no headphone jack in recent iphones.
-In all cases the answer is  "get used to it". Well, I didn't.\
-See also [my Windows tweaks](#Generic-Windows-tweaks-and-programs-I-use)
-* **c) Software library:** Very limited choice on software and freeware, as compared to Windows
-* **d) Expensive:** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
-* **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming. 
-For years I've used a linux VM inside windows, but now I only use WSL. 
-([more info1](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd) 
-/ [more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
-
-
-See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
-from a Music company.
-
- 
-## What software tools did you built for Traktor?
-
-[This folder](tools_traktor) contains my Traktor tools and CUE tools.
-Below is a summary; see [here](traktor_tools/README.md) for more details
-
-* Traktor_clone_cues
-  * Clones cues between physically duplicated files. 
-  * Is also able to merge traktor NML files.
-* CUE_tools
-  * Tools to generate CUE files and timestamped tracklists
-  * Tools to search a whole set in youtube tabs and to scrape lyrics
-  * My mp3tag actions scripts
-  * Adaptor scripts to run DJCU and Rekordbuddy in Windows
-* 26ms offsets
-  * Research about the 26ms mp3 cue shifts in DJ conversion apps. [More info](https://github.com/digital-dj-tools/dj-data-converter/issues/3)
-* BOME tools:
-  * Easy wrapper around the [BOME analyser that documents variables](https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project), and a new script to find unused variables
- 
-## What generic software tools did you built for Windows?
-
-[This folder](../downloads) contains Windows tweaks and other generic tools.
-
-My [autohotkey file](../downloads/AutoHotkey.ahk) has all kinds of useful *glabal* shortcuts that *work for any text of any program*
-* CTRL+F08: Search in Google
-* CTRL+F09: Search in Explorer
-* CTRL+F10: Current url to clipboard
-* CTRL+F11: Search in Youtube (list)
-* CTRL+F12: Search in Youtube (first hit)
-* Win+backspace: toggle any window to be always on top for
-
-More scripts in this folder:
-* a youtube-dl wrapper
-* a tool to search 1001tracklists, ticketswap and DJTT maps.
-
-
-## Generic Windows tweaks and programs I use 
-
-I love [customization](https://www.neogaf.com/threads/some-of-my-cant-live-without-progams-what-are-yours.1482889/), so I have installed several tweaker apps. These are all GUIS to edit the refgistry and change / unlock / customize windows features. Below the reviews:
-* [Activaid](https://www.ghacks.net/2014/09/24/activaid-is-a-useful-autohotkey-script-collection/)
-* [Winareo tweraker](https://winaero.com/comment.php?comment.news.1836)
-* [Ultimate windows tweaker](https://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10)
-* [NirSoft utils](https://www.nirsoft.net/utils/)
-
-Plus some specific programs:
-* [QQTabbar](https://www.techsupportalert.com/content/qttabbar.htm): Adds tabs to File Explorer, folder bookmarks and program shortcuts. Please see below pictures.
-* [Link Clump](https://chrome.google.com/webstore/detail/linkclump/lfpjkncokllnfokkgpkobnkbkmelfefj?hl=en): Make a rectangle around hyperlinks; open all in new tabs.
-* [WinDirStat](https://windirstat.net/): find missing disk space hogs
-* [Resilio sync](https://www.techadvisor.co.uk/download/backup-recovery/resilio-sync-263-3331463/): automatic folder synchronization
-* [Allway Sync](https://www.tomsguide.com/us/file-sync-backup,review-1060-4.html): manual folder synchronization
-
-## How to use QQTabBar with multiple tabs, folder bookmarks and program launchers
-
-QQTabbar ([link to a review](https://www.techsupportalert.com/content/qttabbar.htm)) is 
-an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and program launchers.\
-I use this every day to open WSL linux terminals in the current folder, and to open audio files programs directly.
-
-Usage:
-![qqtabbar_usage](pics/qqtabbar_usage.jpg?raw=true "QQTabBar Usage")
-
-Configuring Launchers:
-![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true "QQTabBar Launchers")
-
-
-
  
