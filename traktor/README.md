@@ -783,40 +783,108 @@ More scripts in this folder:
 This section covers DJ software optimization.
 
 * [Generic optimization guides](#How-to-optimize-a-laptop-for-DJ-Software)
-* [Intel turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
+* [Intel turbo boost problems](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
 * [Deep trace anaysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
 * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
 
 
 
 
-## How to optimize a laptop for DJ Software
+## How to optimize a laptop for DJ Software - Summary
   
-Every year laptops get lighter via having smaller batteries.\
-This means more and more Power saving tricks to keep the same autonomy.\
-These Power saving tricks are *VERY* damaging for DJ software.
+Every year laptops have more and more Power saving tricks.\
+These tricks are *VERY* damaging for DJ software.\
 
-To optimize *continuous* crackle
-* Raise the driver buffer
-* Disable turbo boost
+For a demo of theses issues please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
 
-To optimize *random* crackle
-* Disable all power saving features
-* Disable turbo boost
+Below some *quick fixes* to try first you have crackle / glitches / noise:
+
+* a) *Continuous* crackle when playing:
+  * Raise the driver buffer
+* b) Crackle when when *moving the Jogs*:
+  * Disable turbo boost ([steps](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost))
+* c) *Random* crackle:
+  * Disable wireless
+  * Update the BIOS and all Drivers from your laptop manufacturer
+  * Disable all power saving features (Turbo boost, Speedsteep, USB selective sleep, ...)
+  
+if not enough, please read below  
+  
+
+## How to optimize a laptop for DJ Software - Complex case
+  
+If the quick fixes above were not enough then there is no easy solution**. 
+
+The way forward is complex:
+* **Measure:** Measure the problems using [LatencyMon], [DPCLatency], [IDLT] and [SMI_reporter] to establish an objective baseline
+* **Performance Guides:** Study performance guides that are specifi
+* **Disable drivers:** disable the drivers one by one measuring in between 
+* **Downgrade drivers:** as above, but downgrading components one by one while re-measuring 
+* **Trace:** Generate a trace of the whole system using Windows Performance tools
+
+Only solution is to read optimization guides , 
+still not 
+  
+d) if the *mouse stops* for whole seconds:
+  *  
+
 
 
   
 ## How to avoid crackle / glitches / noise on Windows by disabling Intel turbo boost?
 
+If you have an HP laptop and have crackle when move the jogs then please disable Intel turbo boost.
 
-If you have random crackle / glitches / noise - especially when you move the jogwheels - then please disable all power saving features and especially Intel turbo boost.
+There are 3 ways to disable turbo boost:
+a) Specific program (best way): Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
+b) Set windows power to 99% CPU: [guide](https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj)
+c) BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
 
-For a demo of this issue, please see at 1:20 of https://www.youtube.com/watch?time_continue=85&v=ijFJZf_KSM8
 
-To fix this:
-* Specific software (best way): Use the "Quick CPU" software: https://www.coderbag.com/product/quickcpu
-* Windows Configuration: https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
-* BIOS config: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
+## List of every possible performance audio optimization
+
+Things to try while measuring:
+- USB: gauge USB cables; use usb 2.0 port;  
+- Battery: windows best performance; plugged-in vs battery; Intel DPTF (power throttling); ACPI battery control;  
+- device manager: USB root hub power management (DM
+- windows power options: perfomance profile; turn off after ...; wireless adptor power saving; 
+- Windows configuration: process affinity; optimize to background processes; paging file; 
+
+- CPU: Turbo boost; SpeedStep; SpeedShift; Core parking; Frequency scaling; UnderVolting; C states;
+- Devices: disable onborad audio, camera, SD card, etc; 
+- Wireless: Wifi / Bluetooth; 
+
+
+
+
+Set "thunderbolt adapter configuration" to "no security"
+Uninstall "Intel Dynamic Platform & Thermal Framework"
+Uninstall Bonjour, MaxxAudioPro, OneDrive, XBox Companion, Skype, Xbox Live, Microsoft Weather, Mail and Calendar, Solitaire, OneNote, Office, Paint3d, Print3d, Sticky Notes, Voice Recorder, Groove Music
+bcdedit /set disabledynamictick yes (run cmd as administrator)
+Install Latency-Mon and Process Lasso, observe that high DPC latency processes limited to cores 0, 2, and 10.  
+Set process affinity in Process Lasso for studioone.exe to avoid those cores.
+
+Turn off "energy efficient ethernet" in advanced options of ethernet connection
+Turn off "Allow the computer to turn off this device to save power" in power management tab for both ethernet and wireless nic
+Set roaming aggressiveness to "lowest" for Wireless nic
+Turn off "Link Power Management" in Intel Rapid storage technology 
+Turn off Windows system sounds
+Set Performance Options, adjust for best performance of Background Services
+Performance Options -> Visual Effects "Adjust for best performance"
+Advanced > Data Execution Prevention > ensured set for DEP for essential Windows programs and services only.
+Settings->Privacy->Background Apps-> Let apps run in the background = Off
+Device Manager > Universal Serial Bus Controllers > right-click on a "USB Root Hub" > Properties > Power Management > deselect "Allow the computer to turn off this device to save power" > press "OK." 
+Device Manager -> Sound, Video and game controllers -> Disable "AMD High Definition Audio Device", "Intel Display Audio", and "Realtek(R) Audio"
+Turn off "Allow downloads from other PCs" in windows update delivery optimization
+In power & sleep, set both screen and sleep timeout to "never"
+In power options-> system settings, set power button to "shutdown", remove sleep from shutdown settings
+In power options ensure "Turn on Fast Startup" is deselected
+Task Manager -> Startup -> Disable "Realtek HD Audio Universal Service"
+Task Manager -> Startup -> Disable Waves MaxxAudio Service Application"
+
+
+ 
+Another list: [here](https://answers.microsoft.com/en-us/windows/forum/all/high-dpc-latency-from-acpisys-causing-audio-clicks/a7977dd5-6a52-4ee7-91bd-83180c21c1c2)
 
 
 ## How to make a deep trace of everything that runs in your laptop
@@ -837,6 +905,21 @@ full info: https://support.native-instruments.com/hc/en-us/articles/210293725-Ch
 more info2: https://goughlui.com/2014/10/01/usb-cable-resistance-why-your-phonetablet-might-be-charging-slow/
 
 
+## How to enable Traktor verbose log
+
+**important:** this will affect performance, so use only for manual tests!
+
+log file: traktor_root\log\traktor.log
+    
+Windows:
+*  TBD
+
+MacOS:
+*  close traktor
+*  go to User:Library: Preferences:com.native-instruments.de:Traktor.plist
+*  add key Log.Verbosity with value 5
+*  default value: 2
+      
 
 
 # Windows usage

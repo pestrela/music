@@ -427,7 +427,7 @@ wav*|w)
 	;;
   
   
-default)
+default|raw)
 	format=""
 	tool_local_options=""
 	;;

@@ -43,7 +43,7 @@ match($0, /(\[.\].*)(Preset.*)/)	{next}
 #ignore Label
 /Label/  {next}
 #ignore Goto
-/Goto/  {next}
+#/Goto/  {next}
 # Ignore incoming and outgoing
 # /^Incoming/ {next}
 # /^Outgoing/ {next}
