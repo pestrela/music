@@ -44,7 +44,51 @@ function add_argv()
 	argv[$argc]="$1"
 }
 
+function clear_argv()
+{
+	argc=0
+  unset argv
+  declare -a argv
+}
 
+
+#
+# $1 - number of places to shift
+#
+function shift_argv()
+{
+	local n=${1:-1}
+	local argc_orig="$argc"
+  local i
+  local j
+  
+	argc=$(( $argc - $n ))
+
+	if [ $argc -le 0 ]; then
+		argc=0
+		unset argv
+
+		return 0
+	fi
+	
+	
+	##### shift the new values
+	i=1
+	j=$(( $n + 1 ))
+	while [ $i -le $argc ]; do
+		argv[$i]="${argv[$j]}"
+		i=$(( $i + 1 ))
+		j=$(( $j + 1 ))
+	done
+
+	#### unset the shifted values
+	while [ $i -le $argc_orig ]; do
+		#echo unset "argv[i]"
+		unset "argv[i]"
+		i=$(( $i + 1 ))
+	done
+	
+}
 
 
 
@@ -108,12 +152,18 @@ function display_help()
   
   Wrapper around the BOME AWK analyser. 
   All operations supports an grep string for trimming down the output 
-  
+
+operations:  
   -v: show used variables + rules
   -o: show outgoing + translator
   -r: show rules
   
+  
+options:  
   -k: keep translator header
+  -1: merge greps using OR  (default)
+  -2: merge greps using AND
+  -0: greps once at a time 
   "
   exit 0
 }
@@ -124,6 +174,8 @@ do_grep=0
 keep_header=0
 #oper="show_globals"
 oper="none"
+    
+merge_grep="or"    
     
 while [ "$#" -ge 1 ]; do
   case "$1" in
@@ -165,6 +217,18 @@ while [ "$#" -ge 1 ]; do
     keep_header=1
     ;;
     
+  -0)
+    merge_grep="one_at_a_time"
+    ;;
+
+  -1)
+    merge_grep="or"
+    ;;
+  -2)
+    merge_grep="and"
+    ;;
+
+    
   *)
     add_argv "$1"
     ;;
@@ -185,11 +249,12 @@ awk_program="$HOME/bin/bome_show_globals.2020-01-29.awk"
 file_in="${argv[1]}" 
 file_out="`remove_extension "$file_in"`.vars"
  
-#echo  "${argv[@]}"
+shift_argv 1
 
-if [ $argc -ge 2 ]; then
+
+if [ $argc -ge 1 ]; then
   do_grep=1
-  to_grep="${argv[2]}"
+  #to_grep="${argv[2]}"
 fi
 
  
@@ -215,10 +280,36 @@ case "$oper" in
     
 esac    
 
+if [ $do_grep -eq 1 ]; then
 
-if [ $do_grep -ge 1 ]; then
-  output="`echo "$output" | grep -i "$to_grep" `"
-fi
+  if [ $merge_grep == "or" ]; then
+    collected="${argv[1]}"
+    shift_argv
+    
+    while [ $argc -ge 1 ]; do
+      collected="${collected}|${argv[1]}"
+      shift_argv
+    done
+
+    add_argv "$collected"
+  fi
+      
+  ## Do one at a time
+  while [ $argc -ge 1 ]; do
+    to_grep="${argv[1]}"
+    shift_argv
+    
+    output2="`echo "$output" | egrep -i "$to_grep" `"
+    
+    echo ""
+    echo "$output2" 
+  done
   
-echo "$output" 
+  echo ""
+else
 
+  echo "$output" 
+fi
+
+
+exit 0

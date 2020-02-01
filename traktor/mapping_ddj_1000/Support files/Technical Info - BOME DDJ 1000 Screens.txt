@@ -692,7 +692,7 @@ Unused variables:
   
   *****
   "l5"  filter polarity  
-  "la"  filter something
+  "la"  free
   "le"  is in active loop (WAS MOVED)
 
   "li"  
@@ -813,12 +813,12 @@ Stewe version:  https://maps.djtechtools.com/mappings/9325
 Gestures on CFX ColorFX selectors:
 ------------------------------
 	NORMAL:
-  	C-1  C#-1    (all on ch7_
-	  D-1  D#-1 
+  	C-1 0    C#-1 1   (all on ch7)
+	  D-1 2    D#-1 3
 	 
 	SHIFTED:
-	  G#-1  A-1
-	  A#-1  B-1
+	  G#-1 8   A-1  9
+	  A#-1 10  B-1  11
 
   LONG PRESSES:
     macrofx1 macrofx2   (G#1 32   A1 33)  chnanel 8 or 10
@@ -868,10 +868,10 @@ Gestures on CFX ColorFX selectors:
     
  
   VARIABLES:
-    jx - state: 0: waiting, 1: in progress; 2: waiting final echo
-    jy - which CFX button
-    jw - press count  
-    jz - free
+    "jx" - state: 0: waiting, 1: in progress; 2: waiting final echo
+    "jy" - which CFX button
+    "jw" - press count  
+    "jz" - free
     
     
   loopback feedback:
@@ -896,13 +896,14 @@ Pad MLM and macroFX knob:
     press pad: remember pad ("ix") -> timer 30ms -> send knob -> send pad again
 
     
+    
 Fliter dual polarity:
 ---------------------    
   "l5"  filter polarity 
      1 - positive; 2 - positive, needs refresh
     -1 - negative; -2 - ...
     
-  "la"  filter something
+  "la"  FREE   <<<< simplify needs refresh
 
   
     
