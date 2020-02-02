@@ -9,32 +9,46 @@ function display_help()
   echo "
   
 Displays the count of SMI (System Management Interrupts) / SMM (System Management Mode) in Windows.
+It also saves a log file to show average events per hour.
+  
   
 Pre-requisites:
- - WSL
- - Windows Kernel Debugger:
-   - install windows SDK, select ONLY 'Debugging Tools for Windows'
-   - https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/
+  - WSL
+  - Windows Kernel Debugger:
+    - install windows SDK, select ONLY 'Debugging Tools for Windows'
+    - https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/
   
 To install this script:
-- disable secure boot in BIOS
-- enable debug in windows kernel  (bcdedit.exe -debug on)
-   https://alfredmyers.com/2017/11/26/the-system-does-not-support-local-kernel-debugging/
-- reboot
-    
+  - Disable secure boot in BIOS
+  - Enable debug in windows kernel  (bcdedit.exe -debug on)
+    - https://alfredmyers.com/2017/11/26/the-system-does-not-support-local-kernel-debugging/
+  - Reboot
+     
 To measure SMI LATENCY impact:
-  - run IDTL (In Depth Latency Tests) with HIGH_LEVEL IRQL
+  - Run IDTL (In Depth Latency Tests) with HIGH_LEVEL IRQL
   - https://www.resplendence.com/latencymon_idlt
   - https://www.resplendence.com/latencymon_cpustalls
    
 Intel register:
- - https://stackoverflow.com/questions/50790715/is-there-a-way-to-determine-that-smm-interrupt-has-occured/
- - See chapter 34 of https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf
+  - https://stackoverflow.com/questions/50790715/is-there-a-way-to-determine-that-smm-interrupt-has-occured/
+  - See chapter 34 of https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf
  
 Tools to read MSR in windows:
   - rdmsr: https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/rdmsr--read-msr-
-  - old info about PI: https://kevinwlocke.com/bits/2017/03/27/checking-msrs-for-x2apic-in-windows/
-      
+  - Old info about PI: https://kevinwlocke.com/bits/2017/03/27/checking-msrs-for-x2apic-in-windows/
+ 
+How to find the BIOS update history in Dell:
+  - Dell update logs: C:\ProgramData\Dell\UpdateService\Log  
+  - Activity.log:
+    - log format: https://www.dell.com/support/manuals/ie/en/iebsdt1/dell-command-update-v2.3/dcu_ug_2.3/activity-log?guid=guid-31fdd315-57c4-48d5-9847-a3f9f1dd86d7&lang=en-us
+    - iconv -f UTF-16LE -t UTF-8 ../Activity.log  -o - | tr [:upper:] [:lower:] | awk '/timestamp/{a=$0} /installing/{ print a, $0; }' |  sed -e 's/<[^>]*>/ /g;s/t/ /;s/\./ /' | dos2unix > activity.txt
+    - cat activity.txt | grep -i installing 
+  - service.log:
+    - cat service.6.log | grep -i installing
+  
+
+    
+ 
 "
 
 }
@@ -146,10 +160,15 @@ function end_program()
   get_date
   stop_time="$now"
   
+  time_elapsed_s=$( hrtime_subtract "$now" "$start_time" )
+  time_elapsed_h=$( hrdelta_divide "$time_elapsed_s" 3600 ) 
+  
   dump_stats_stop
   
   echo "End time: $( convert_human_date $stop_time )"
   echo "stats file: ${stats_file}"
+  echo "Analysis duration: ${time_elapsed_s} seconds"
+  echo "Analysis duration: ${time_elapsed_h} hours"
 
   echo ""
   exit 0
@@ -197,6 +216,18 @@ function dump_stats_smi()
   echo "$( convert_human_date_full $now ) $now SMI $delta" >> "$stats_file"
 
 }
+
+function hrdelta_divide()
+{
+  local a="$1"
+  local b="$2"
+  local precision=1
+
+  ret="$( echo "$a" "$b" | awk '{ret=($1/$2); printf("%.1f", ret)}'; )"
+  echo "$ret"
+
+}
+
 
 function hrtime_subtract()
 {
@@ -289,15 +320,4 @@ while true ; do
 done
 
 end_program
-
-
-ver cpu bios setembro
-
-
-
-
-
-
-
-
-
+ 
