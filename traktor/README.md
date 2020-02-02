@@ -715,7 +715,11 @@ Steps:
 * Manually remove the non-dynamic tracks from the XML
 * Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
 * Convert your collection without the 26-ms shift issue: [guide]](#which-dj-converters-avoid-the-26ms-shift-issue)
-* Patch your files into Traktor using [Traktor_clone_cues.py] or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
+* Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor) or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
+
+---
+ 
+![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.png?raw=true "traktor_elastic_beatgrids")
 
 
 ## How to swap Traktor configurations without the slow preferences window
@@ -890,37 +894,40 @@ Official recommendation from Pioneer: https://forums.pioneerdj.com/hc/en-us/arti
 ## List of every possible performance audio optimization
 
 Things to try while measuring:
-- USB: gauge USB cables; use usb 2.0 port;  
-- Battery: windows best performance; plugged-in vs battery; Intel DPTF (power throttling); ACPI battery control;  
-- Device Manager: "USB root hub" power management; 
-- Windows Power options: performance profile; change "turn X off after"; "turn off device"; wireless adaptor power saving; Fast Startup;
-- Windows Configs: optimize to background processes; paging file; Spectre patches; Visual Effects; 
-- Services: TBD
-- Processes: process affinity; process lasso; DEP
-- CPU: Turbo boost; SpeedStep; SpeedShift; Core parking; Frequency scaling; UnderVolting; C states;
-- Sounds: Realtk HD audio; Wavs Maxxaudio; disable onboard audio; No sounds profile; audio 3d enhancements;  
-- Wireless: Wifi / Bluetooth; 
+- **USB:** gauge USB cables; use usb 2.0 port;  
+- **Windows Power options:** performance profile; change "turn X off after"; "turn off device"; wireless adaptor power saving; Fast Startup;
+- **Windows Configs:** optimize to background processes; paging file; Spectre patches; Visual Effects; 
+- **Battery:** windows best performance; plugged-in vs battery; Intel DPTF (power throttling); ACPI battery control;  
+- **Device Manager:** "USB root hub" power management; 
+- **Services:** TBD
+- **Processes:** process affinity; process lasso; DEP
+- **CPU:** Turbo boost; SpeedStep; SpeedShift; Core parking; Frequency scaling; UnderVolting; C states;
+- **Sounds:** Realtk HD audio; Wavs Maxxaudio; disable onboard audio; No sounds profile; audio 3d enhancements;  
+- **Wireless:** Wifi / Bluetooth; 
  
 Another list: [here](https://answers.microsoft.com/en-us/windows/forum/all/high-dpc-latency-from-acpisys-causing-audio-clicks/a7977dd5-6a52-4ee7-91bd-83180c21c1c2)
 
 ## List of performance guides specific to audio
 
-* Native Instruments: 
+* **Native Instruments:**
   * Guide: https://support.native-instruments.com/hc/en-us/articles/209571729-Windows-Tuning-Tips-for-Audio-Processing
   * Specific drivers to disable: https://support.native-instruments.com/hc/en-us/article_attachments/205621745/Driver_List_EN.pdf
-* Serato: 
+* **Serato:**
   * Guide: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
-* Sweetwater: 
+* **Sweetwater:**
   * Guide: https://www.sweetwater.com/sweetcare/articles/pc-optimization-guide-for-windows-10/?fbclid=IwAR2z4UFZVRYLW2XpMGUgge51-UCe1ZhlF6gq2ZcR90HWEp33fI7TkMOJfO0
-* PCDJ:
+* **PCDJ:**
   * https://www.pcdj.com/dj-software-windows-10-system-optimization-guide/
    
 Very old guides:
-* djtechtools: https://djtechtools.com/2011/08/14/optimizing-windows-for-djing-part-i-power-script/
-* numark: https://www.numark.com/kb/article/1424
+* **djtechtools:** 
+  * https://djtechtools.com/2011/08/14/optimizing-windows-for-djing-part-i-power-script/
+* **Numark:** 
+  * https://www.numark.com/kb/article/1424
 
 DDJ-1000 specific:
-* https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
+* **DDJ-1000:** 
+  * https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
   
   
 ## How to count SMI (=hidden interrupts) in Windows
@@ -960,7 +967,10 @@ Dell XPS 15 9560 BIOS versions (click "version" [here](https://www.dell.com/supp
 ----
   
 ![dell_smi_heavy_problems](pics/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
+
+-----
   
+![dell_smi_light_problems](pics/dell_smi_light_problems.jpg?raw=true "Dell SMI")
 
 ## How to make a deep trace of everything that runs in your laptop
    
@@ -1032,14 +1042,21 @@ In all cases the answer is  "get used to it". Well, I didn't.\
 See also [my Windows tweaks](#Generic-Windows-tweaks-and-programs-I-use)
 * **c) Software library:** Very limited choice on software and freeware, as compared to Windows
 * **d) Expensive:** Underpowered machines, when compared to their direct windows counterparts [in the same price range](https://musiccritic.com/equipment/disk-jockey/best-laptops-for-djing/)
-* **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming. 
-For years I've used a linux VM inside windows, but now I only use WSL. 
-([more info1](https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd) 
-/ [more info2](https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/) )
-
+* **e) Command Line:** I use the command heavily to automate tasks in bash, git updates, and python programming.
 
 See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
 from a Music company.
+
+
+## WSL Linux shell on Windows
+
+I use the command heavily to automate tasks in bash, git updates, and python programming.
+
+For years I've used a linux VM inside windows, but now I only use WSL. 
+
+* instalation guide: https://adamtheautomator.com/windows-subsystem-for-linux/
+* Integration with python: https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd
+* integration with visual studio: https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/
 
  
 
@@ -1051,6 +1068,7 @@ I love [customization](https://www.neogaf.com/threads/some-of-my-cant-live-witho
 * [Winareo tweraker](https://winaero.com/comment.php?comment.news.1836)
 * [Ultimate windows tweaker](https://www.thewindowsclub.com/ultimate-windows-tweaker-4-windows-10)
 * [NirSoft utils](https://www.nirsoft.net/utils/)
+* [Win 10 annoyances](https://www.pcmag.com/how-to/how-to-fix-the-most-annoying-things-in-windows-10)
 
 Plus some specific programs:
 * [QQTabbar](https://www.techsupportalert.com/content/qttabbar.htm): Adds tabs to File Explorer, folder bookmarks and program shortcuts. Please see below pictures.
