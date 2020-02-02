@@ -1,36 +1,46 @@
 #!/bin/bash
 
 
+set -u
+set -e
+ 
 function display_help()
 {
   echo "
   
-Displays the count of SMI (System Management Interrupts) in windows.
+Displays the count of SMI (System Management Interrupts) / SMM (System Management Mode) in Windows.
   
 Pre-requisites:
  - WSL
- - Windows Kernel Debugger: 
-     https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/
-    (install windows SDK, select only 'Debugging Tools for Windows')
+ - Windows Kernel Debugger:
+   - install windows SDK, select ONLY 'Debugging Tools for Windows'
+   - https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/
   
 To install this script:
 - disable secure boot in BIOS
-- enable debug in windows kernel: 
+- enable debug in windows kernel  (bcdedit.exe -debug on)
+   https://alfredmyers.com/2017/11/26/the-system-does-not-support-local-kernel-debugging/
 - reboot
     
-    
-    
-  To measure SMI LATENCY impact:
-   IDTL - In Depth Latency Tests, using HIGH_LEVEL IRQL
-   https://www.resplendence.com/latencymon_idlt
+To measure SMI LATENCY impact:
+  - run IDTL (In Depth Latency Tests) with HIGH_LEVEL IRQL
+  - https://www.resplendence.com/latencymon_idlt
+  - https://www.resplendence.com/latencymon_cpustalls
    
-  how to check MSRs in windows:
-    rdmsr - 
-    https://kevinwlocke.com/bits/2017/03/27/checking-msrs-for-x2apic-in-windows/
+Intel register:
+ - https://stackoverflow.com/questions/50790715/is-there-a-way-to-determine-that-smm-interrupt-has-occured/
+ - See chapter 34 of https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-vol-3c-part-3-manual.pdf
+ 
+Tools to read MSR in windows:
+  - rdmsr: https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/rdmsr--read-msr-
+  - old info about PI: https://kevinwlocke.com/bits/2017/03/27/checking-msrs-for-x2apic-in-windows/
       
 "
 
 }
+
+# todo: add usb device dump, versions, etc
+
 
 function pass()
 {
@@ -117,11 +127,15 @@ function start_program()
   echo "will append stats to: $stats_file"
   
   echo "config:"
-  echo "min_to_report: $min_to_report"
+  echo "min_to_report_screen: $min_to_report_screen"
   echo "min_to_stats: $min_to_stats"
   echo "min_passage_time_minutes: $min_passage_time_minutes"
 
   echo ""
+  echo "Use 'q' to quit"
+  echo ""
+  
+  dump_stats_start 
 }
 
 
@@ -131,6 +145,8 @@ function end_program()
   
   get_date
   stop_time="$now"
+  
+  dump_stats_stop
   
   echo "End time: $( convert_human_date $stop_time )"
   echo "stats file: ${stats_file}"
@@ -147,12 +163,38 @@ function dump_human_smi()
 
 }
 
+function dump_stats_stop()
+{
+  dump_stats_string "STOP"
+
+}
+
+
+function dump_stats_start()
+{
+
+  dump_stats_string "START"
+
+}
+
+function dump_stats_string()
+{
+  global now  delta
+  local command="$1"
+  local test_desc="$test_description"
+  
+  echo ""
+  echo "$( convert_human_date_full $now ) $now $command '$test_desc'" >> "$stats_file"
+  echo ""
+ 
+}
+
 
 function dump_stats_smi()
 {
   global now  delta
   
-  echo "$( convert_human_date_full $now ) $now $delta" >> "$stats_file"
+  echo "$( convert_human_date_full $now ) $now SMI $delta" >> "$stats_file"
 
 }
 
@@ -180,7 +222,7 @@ function show_passage_of_time()
   #echo "$time_elapsed $now $last_refresh"
   
   if [ "$time_elapsed" -ge "$min_passage_time_seconds" ]; then
-    echo "."
+    echo -n "."
   
     last_refresh="$now"
   fi
@@ -196,25 +238,36 @@ last_counter=0
 counter=0
 sleep_time="0.3"
 sleep_time="0.1"
-min_to_report=1
+min_to_report_screen=10
 min_to_stats=50
-min_to_stats=1
+#min_to_stats=1
 
-min_passage_time_minutes=1
+min_passage_time_minutes=5
+min_passage_time_minutes2=60
 #min_passage_time_minutes=60
 min_passage_time_seconds="$(( 60 * min_passage_time_minutes ))"
 
 get_smi_count
 last_counter="$counter"
 
+if [ $# -ge 1 ]; then
+  test_description="$1"
+  
+else
+
+  read -p "Please input your test description:  " test_description
+  
+fi
+
 start_program
 
 while true ; do
   
+  #sleep 1
   get_smi_count
   delta=$((  ${counter} - ${last_counter} ))
   
-  if [ $delta -ge $min_to_report ]; then
+  if [ $delta -ge $min_to_report_screen ]; then
     dump_human_smi
   fi
 
@@ -225,9 +278,26 @@ while true ; do
   show_passage_of_time
   
   last_counter="${counter}"
+  
+  RET=0
+  read -t 0.1 -n 1 answer    || RET=$?
+  
+  if [[ $RET -eq 0 && "$answer" == "q" ]]; then
+    break
+  fi
+  
 done
 
 end_program
+
+
+ver cpu bios setembro
+
+
+
+
+
+
 
 
 
