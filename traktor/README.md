@@ -696,7 +696,7 @@ Steps:
 
 ---
  
-![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.png?raw=true "traktor_elastic_beatgrids")
+![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
 
 
 
