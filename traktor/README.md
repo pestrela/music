@@ -16,7 +16,8 @@
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
     
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
- 
+  * [How to emulate elastic beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
+  
 * [BOME migration](#BOME-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
@@ -48,7 +49,6 @@
 * [Free DJ Software Tools](#Free-DJ-Software-Tools)
   * [Custom DJ Tools](#Custom-DJ-Software-Tools)
   * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
-  * [How to emulate elastic beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
   * [How to swap Traktor configurations without the preferences window](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
   * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
   * [What shortcuts you added for youtube, Google and Discogs?](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
@@ -236,7 +236,7 @@ Using Beatsync the phrasing is always kept for any action I might do to the trac
 
 Specific features:
 * **#1: Include subcrates** just like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
-* **#2: Elastic beatgrids**: This is crucial as I play very old music and many music styles
+* **#2: Elastic beatgrids**: This is crucial as I play very old music and many music styles. [tool](#How-to-emulate-elastic-beatgrids-in-Traktor)
 * **#3: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
 * **#4: Pad modes**: I have multiple pad modes in my mappings, but would love to see them on screen, and have an associated pad editor just like Rekordbox and VirtualDJ
 * **#5: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
@@ -253,14 +253,31 @@ But in the end Traktor has [has unique features that I depend on](#why-is-trakto
 
 See also the [most popular DJ softwares census](../census_graphs).
 
-## Missing Traktor features: Elastic Beatgrids
 
-TBD
+## How to emulate elastic beatgrids in Traktor
+
+Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
+
+There is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
+Same story for perfect **delay-based Effects**.
+
+This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
+
+
+Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats:
+  
+Steps:
+* Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
+* Analyse ONLY these tracks in dynamic mode in Rekordbox: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
+* Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
+* Manually remove the non-dynamic tracks from the XML
+* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
+* Convert your collection without the 26-ms shift issue: [guide]](#which-dj-converters-avoid-the-26ms-shift-issue)
+* Patch your files into Traktor using [Traktor_clone_cues.py] or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
 
 
 
-
-# BOME migration
+# BOME mappings migration
 
 Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.
 
@@ -270,13 +287,12 @@ Some other anedotic evidence on this are the preferences freeze, the turntable p
 and the HC-4500 mapping to get track details.
 
 Blog posts:
-  * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
-  * [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
-  * [c) BOME limits](#Some-Limitations-of-BOME-mappings)
-  * [d) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
+* [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
+* [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
+* [c) BOME limits](#Some-Limitations-of-BOME-mappings)
+* [d) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
 
   
-
 ## Why I moved to BOME midi mapping: Impossible features
 
 * **#1: 14-bit out messages**: Trakor supports *receiving* high resolution midi messages. I need to *send* them as well [on my DDJ-1000 mapping](../ddj/1%20MIDI%20codes/DDJ-1000RB%20-%20MIDI%20Messages.pdf)
@@ -656,7 +672,7 @@ See also the CMDR editor changes.
   * Clones cues between physically duplicated files. 
   * Is also able to merge traktor NML files.
 * rekordbox_add_beatmarkers  
-  * adds a beatmarker every 4 beats. Part of the [elastic beatgrid emulation]()
+  * adds a beatmarker every 4 beats. Part of the [elastic beatgrid emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
 * CUE_tools
   * Tools to generate CUE files and timestamped tracklists
   * Tools to search a whole set in youtube tabs and to scrape lyrics
@@ -687,7 +703,7 @@ Traktor misses elastic beatgrids. This is crucial for live drummers and old elec
 There is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
 Same story for perfect **delay-based Effects**.
 
-This was also the #1 request from the [Digital DJ Tips intervew](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
+This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
 
 
 Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats:
@@ -915,18 +931,36 @@ SMIs are "hidden interrupts" that the BIOS can issue at any time and will *lock 
 As these are not visible to the OS, these will confuse latencyMon, but not [IDLT](https://www.resplendence.com/latencymon_idlt).
 
 These interrupts are used, for example, when you change the laptop brightness. 
-
 The CPU has a special counter for these interrupts. 
-I've made a small wrapper to read this in Windows: [count_smi tool](tools_traktor/windows_count_smi.sh) 
+
+I've made a small wrapper to read this special counter in Windows: [count_smi tool](tools_traktor/windows_count_smi.sh) 
+
 Installation and pre-requisites are in the help text of the tool itself.
+The help of tool also tells how to find your bios update history (ie when you [installed/downgraded your bios](https://serverfault.com/questions/594196/dell-bios-update-date)) 
+
+
+## Dell XPS 15 9560 BIOS SMI problems
+
+I've [recently measured](#How-to-count-SMI--hidden-interrupts-in-Windows) that latest bios lock my dell XPS 15 9560 *for whole seconds*.
+Downgrading to a very old firmware solved this problem.
+
+Dell XPS 15 9560 BIOS versions (click *version* on [here](https://www.dell.com/support/home/ie/en/iebsdt1/drivers/driversdetails?driverid=1pmdc&oscode=wt64a&productcode=xps-15-9560-laptop]))
+* 1.18.0 - 27 Dec 2019 (Battery Sweeling)
+  * **Affected**
+* 1.16.0 - 07 Aug 2019 (DPC fixes)
+  * **Affected**
+* 1.15.0 - 27 Jun 2019 (RST Manager)
+  * Not tested
+* 1.14.3 - 27 May 2019 (Dock Station WD19)
+  * Not tested
+* 1.12.1 - 23 Oct 2018 (Sleep mode resume password)
+  * **Not affected**
 
 ![dell_smi_heavy_problems](pics/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
-
-
+  
 
 ## How to make a deep trace of everything that runs in your laptop
    
-
    
 TODO: document windows performance analyser   
    
