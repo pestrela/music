@@ -941,10 +941,11 @@ The help of tool also tells how to find your bios update history (ie when you [i
 
 ## Dell XPS 15 9560 BIOS SMI problems
 
-I've [recently measured](#How-to-count-SMI--hidden-interrupts-in-Windows) that latest bios lock my dell XPS 15 9560 *for whole seconds*.
+I've [recently measured](#How-to-count-SMI--hidden-interrupts-in-Windows) that latest bios lock my dell XPS 15 9560 *for whole seconds*.\
 Downgrading to a very old firmware solved this problem.
-
-Dell XPS 15 9560 BIOS versions (click *version* on [here](https://www.dell.com/support/home/ie/en/iebsdt1/drivers/driversdetails?driverid=1pmdc&oscode=wt64a&productcode=xps-15-9560-laptop]))
+\
+\
+Dell XPS 15 9560 BIOS versions (click "version" [here](https://www.dell.com/support/home/ie/en/iebsdt1/drivers/driversdetails?driverid=1pmdc&oscode=wt64a&productcode=xps-15-9560-laptop]))
 * 1.18.0 - 27 Dec 2019 (Battery Sweeling)
   * **Affected**
 * 1.16.0 - 07 Aug 2019 (DPC fixes)
@@ -956,6 +957,8 @@ Dell XPS 15 9560 BIOS versions (click *version* on [here](https://www.dell.com/s
 * 1.12.1 - 23 Oct 2018 (Sleep mode resume password)
   * **Not affected**
 
+----
+  
 ![dell_smi_heavy_problems](pics/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
   
 
