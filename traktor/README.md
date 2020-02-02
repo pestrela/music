@@ -236,7 +236,7 @@ Using Beatsync the phrasing is always kept for any action I might do to the trac
 
 Specific features:
 * **#1: Include subcrates** just like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
-* **#2: Elastic beatgrids**: This is crucial as I play very old music and many music styles. [tool](#How-to-emulate-elastic-beatgrids-in-Traktor)
+* **#2: Elastic beatgrids**: This is crucial as I play very old music and many music styles. [tool](#how-to-emulate-elastic-beatgrids-in-traktor)
 * **#3: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
 * **#4: Pad modes**: I have multiple pad modes in my mappings, but would love to see them on screen, and have an associated pad editor just like Rekordbox and VirtualDJ
 * **#5: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
@@ -252,29 +252,6 @@ In general I fully agree with [this Digital DJ Tips article](https://www.digital
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
 
 See also the [most popular DJ softwares census](../census_graphs).
-
-
-## How to emulate elastic beatgrids in Traktor
-
-Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
-
-There is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
-Same story for perfect **delay-based Effects**.
-
-This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
-
-
-Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats:
-  
-Steps:
-* Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
-* Analyse ONLY these tracks in dynamic mode in Rekordbox: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
-* Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
-* Manually remove the non-dynamic tracks from the XML
-* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
-* Convert your collection without the 26-ms shift issue: [guide]](#which-dj-converters-avoid-the-26ms-shift-issue)
-* Patch your files into Traktor using [Traktor_clone_cues.py] or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
-
 
 
 # BOME mappings migration
@@ -720,6 +697,7 @@ Steps:
 ---
  
 ![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.png?raw=true "traktor_elastic_beatgrids")
+
 
 
 ## How to swap Traktor configurations without the slow preferences window
