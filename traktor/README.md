@@ -691,7 +691,7 @@ Steps:
 * Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
 * Manually remove the non-dynamic tracks from the XML
 * Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
-* Convert your collection without the 26-ms shift issue: [guide]](#which-dj-converters-avoid-the-26ms-shift-issue)
+* Convert your collection without the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
 * Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor) or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
 
 ---
