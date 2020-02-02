@@ -55,10 +55,15 @@
 
   
 * [DJ Software optimization](#DJ-Software-optimization)
-  * [Generic optimization guides](#How-to-optimize-a-laptop-for-DJ-Software)
-  * [Intel turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
-  * [Deep trace anaysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
+  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
+  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
+  * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
+  * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
   * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
+  * [SMI hidden interrupts](#How-to-count-SMI--hidden-interrupts-in-Windows)
+  * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
+  * [Every possible optimization](#List-of-every-possible-performance-audio-optimization)
+  * [Traktor verbose log](#How-to-enable-Traktor-verbose-log)
   
 * [Windows usage](#Windows-usage)
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
@@ -636,12 +641,16 @@ This section groups the DJ software tools written by me, all freely available.
 * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
 * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
 * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+* [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
+* [Programming libraries](#What-programming-libraries-did-you-author)
 
 
 ## What software tools did you built for Traktor?
 
 [This folder](tools_traktor) contains my Traktor tools and CUE tools.
 Below is a summary; see [here](traktor_tools/README.md) for more details
+
+See also the CMDR editor changes.
 
 * Traktor_clone_cues
   * Clones cues between physically duplicated files. 
@@ -659,6 +668,18 @@ Below is a summary; see [here](traktor_tools/README.md) for more details
   * Easy wrapper around the [BOME analyser that documents variables](https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project), and a new script to find unused variables
  
  
+## What features did you add to the CMDR TSI editor?
+
+The CMDR editor did not get new features for 2.5 years. In Jan 2020 I've revived this project
+Download: https://github.com/pestrela/cmdr/releases
+
+Highlights:
+* TP3 and S4-MK3 support
+* Grid quick filter
+* many new Shortcuts (channel change, modifier rotation
+* FX list and encoder mode fixes; same sorting as controller manager
+
+
 ## How to emulate elastic beatgrids in Traktor
 
 Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
@@ -756,6 +777,16 @@ Overview of the Cue tools:
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
 
+## What Programming libraries did you author?
+
+* python3
+  * this is a python3 library of utilities
+  * https://github.com/pestrela/yapu
+* bash
+  * TBD
+  
+
+  
 ## What shortcuts you added for Youtube, Google and Discogs?
 
 [This folder](../downloads) contains Windows tweaks and other generic tools.
@@ -772,6 +803,8 @@ More scripts in this folder:
 * a youtube-dl wrapper
 * a tool to search 1001tracklists, ticketswap and DJ TechTools maps.
 
+  
+  
   
 # DJ Software optimization
 
