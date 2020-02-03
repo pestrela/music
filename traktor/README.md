@@ -883,6 +883,8 @@ Things to try while measuring:
 - **Sounds:** Realtk HD audio; Wavs Maxxaudio; disable onboard audio; No sounds profile; audio 3d enhancements;  
 - **Wireless:** Wifi / Bluetooth; 
  
+[maxxaudio-less driver](http://forum.notebookreview.com/threads/kevin-shroffs-modded-realtek-audio-drivers-for-dell-xps-15-9560-and-more.807060/)
+ 
 Another list: [here](https://answers.microsoft.com/en-us/windows/forum/all/high-dpc-latency-from-acpisys-causing-audio-clicks/a7977dd5-6a52-4ee7-91bd-83180c21c1c2)
 
 ## List of performance guides specific to audio
@@ -892,10 +894,15 @@ Another list: [here](https://answers.microsoft.com/en-us/windows/forum/all/high-
   * Specific drivers to disable: https://support.native-instruments.com/hc/en-us/article_attachments/205621745/Driver_List_EN.pdf
 * **Serato:**
   * Guide: https://support.serato.com/hc/en-us/articles/203057850-PC-Optimization-Guide-for-Windows
+* **Ableton:**
+  * https://help.ableton.com/hc/en-us/articles/209071469-Optimizing-Windows-for-Audio
 * **Sweetwater:**
   * Guide: https://www.sweetwater.com/sweetcare/articles/pc-optimization-guide-for-windows-10/?fbclid=IwAR2z4UFZVRYLW2XpMGUgge51-UCe1ZhlF6gq2ZcR90HWEp33fI7TkMOJfO0
 * **PCDJ:**
   * https://www.pcdj.com/dj-software-windows-10-system-optimization-guide/
+* **Dell guide:**
+  * https://www.dell.com/support/article/us/en/19/sln317113/xps-9570-resolving-intermittent-crackling-audio-issues?lang=en*   
+   
    
 Very old guides:
 * **djtechtools:** 
@@ -907,6 +914,9 @@ DDJ-1000 specific:
 * **DDJ-1000:** 
   * https://forums.pioneerdj.com/hc/en-us/articles/360015455971-To-those-who-have-crackling-noise-when-using-DDJ-1000-with-rekordbox-dj
   
+  
+Finally, Cantabile software produced a 97 page pdf guide on audio optimization:
+https://www.cantabilesoftware.com/glitchfree/
   
 ## How to count SMI (=hidden interrupts) in Windows
 
@@ -941,6 +951,9 @@ Dell XPS 15 9560 BIOS versions (click "version" [here](https://www.dell.com/supp
   * Not tested
 * 1.12.1 - 23 Oct 2018 (Sleep mode resume password)
   * **Not affected**
+
+  
+[Dell Ticket](https://www.dell.com/community/XPS/Dell-XPS-15-9560-BIOS-0-18-0-causes-SECONDS-of-SMI-latency-not/td-p/7477967)
 
 ----
   
