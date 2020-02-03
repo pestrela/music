@@ -55,12 +55,13 @@
 
   
 * [DJ Software optimization](#DJ-Software-optimization)
-  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
-  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
+  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
+  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
   * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
   * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
   * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
-  * [SMI hidden interrupts](#How-to-count-SMI--hidden-interrupts-in-Windows)
+  * [Dell XPS 15 BIOS problems](#dell-xps-15-9560-bios-smi-problems)
+  * [SMI hidden interrupts](#How-to-count-SMI-hidden-interrupts-in-Windows)
   * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
   * [Every possible optimization](#List-of-every-possible-performance-audio-optimization)
   * [Traktor verbose log](#How-to-enable-Traktor-verbose-log)
@@ -808,17 +809,16 @@ More scripts in this folder:
 
 This section covers DJ software optimization.
 
-* [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
-* [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
+* [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
+* [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
 * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
 * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
 * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
-* [SMI hidden interrupts](#How-to-count-SMI--hidden-interrupts-in-Windows)
+* [SMI hidden interrupts](#How-to-count-SMI-hidden-interrupts-in-Windows)
+* [Dell XPS 15 BIOS problems](#dell-xps-15-9560-bios-smi-problems)
 * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
-* [Every possible optimization](#List-of-every-possible-performance-audio-optimization)
+* [Every possible optimization](#list-of-every-possible-performance-audio-optimization)
 * [Traktor verbose log](#How-to-enable-Traktor-verbose-log)
-
-
 
 ## How to optimize a laptop for DJ Software - Summary
   
