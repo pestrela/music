@@ -677,13 +677,13 @@ Highlights:
 
 Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
 
-There is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
+It is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
 Same story for perfect **delay-based Effects**.
 
 This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
 
 
-Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats:
+Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats using the accurate dynamic BPM value:
   
 Steps:
 * Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
