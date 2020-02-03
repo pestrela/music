@@ -918,25 +918,9 @@ DDJ-1000 specific:
 Finally, Cantabile software produced a 97 page pdf guide on audio optimization:
 https://www.cantabilesoftware.com/glitchfree/
   
-## How to count SMI (=hidden interrupts) in Windows
-
-If your whole laptop stops once in a while for several seconds - including the mouse - it can be [SMI issues](https://www.resplendence.com/latencymon_cpustalls).
-
-SMIs are "hidden interrupts" that the BIOS can issue at any time and will *lock all cores*.
-As these are not visible to the OS, these will confuse latencyMon, but not [IDLT](https://www.resplendence.com/latencymon_idlt).
-
-These interrupts are used, for example, when you change the laptop brightness. 
-The CPU has a special counter for these interrupts. 
-
-I've made a small wrapper to read this special counter in Windows: [count_smi tool](tools_traktor/windows_count_smi.sh) 
-
-Installation and pre-requisites are in the help text of the tool itself.
-The help of tool also tells how to find your bios update history (ie when you [installed/downgraded your bios](https://serverfault.com/questions/594196/dell-bios-update-date)) 
-
-
 ## Dell XPS 15 9560 BIOS SMI problems
 
-I've [recently measured](#How-to-count-SMI--hidden-interrupts-in-Windows) that latest bios lock my dell XPS 15 9560 *for whole seconds*.\
+I've [measured](https://www.dell.com/community/XPS/Dell-XPS-15-9560-BIOS-0-18-0-causes-SECONDS-of-SMI-latency-not/td-p/7477967) that latest bios lock my dell XPS 15 9560 *for whole seconds*.\
 Downgrading to a very old firmware solved this problem.
 \
 \
@@ -951,17 +935,34 @@ Dell XPS 15 9560 BIOS versions (click "version" [here](https://www.dell.com/supp
   * Not tested
 * 1.12.1 - 23 Oct 2018 (Sleep mode resume password)
   * **Not affected**
-
-  
+\
 [Dell Ticket](https://www.dell.com/community/XPS/Dell-XPS-15-9560-BIOS-0-18-0-causes-SECONDS-of-SMI-latency-not/td-p/7477967)
+\
+Results:
+\ 
+![dell_smi_heavy_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
 
-----
-  
-![dell_smi_heavy_problems](pics/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
+This issue is caused by SMI interrupts. 
+See below [what this means and how is this measured](#How-to-count-SMI-hidden-interrupts-in-Windows)
 
------
-  
-![dell_smi_light_problems](pics/dell_smi_light_problems.jpg?raw=true "Dell SMI")
+
+## How to count SMI (=hidden interrupts) in Windows
+
+If your whole laptop stops once in a while for several seconds - including the mouse - it can be [SMI issues](https://www.resplendence.com/latencymon_cpustalls).
+
+SMIs are "hidden interrupts" that the BIOS can issue at any time and will *lock all cores*.
+As these are not visible to the OS, these will confuse latencyMon, but not [IDLT](https://www.resplendence.com/latencymon_idlt).
+
+These interrupts are used, for example, when you change the laptop brightness. 
+The CPU has a special counter for these interrupts. 
+
+I've made a small wrapper to read this special counter in Windows: [count_smi tool](tools_traktor/windows_count_smi.sh) 
+
+Below a simple test that shows that changing the brightness in Dell XPS "costs" 4 SMIs:
+
+![dell_smi_light_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_counter.jpg?raw=true "Dell SMI")
+
+
 
 ## How to make a deep trace of everything that runs in your laptop
    
