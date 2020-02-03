@@ -46,9 +46,6 @@ How to find the BIOS update history in Dell:
   - service.log:
     - cat service.6.log | grep -i installing
   
-
-    
- 
 "
 
 }
@@ -82,6 +79,13 @@ function private()
   pass
 }
 
+function die()
+{
+  echo "$@"
+  exit 1
+
+}
+
 
 function get_smi_count()
 {
@@ -94,7 +98,16 @@ function get_smi_count()
 
   to_exec="${kernel_debugger_dir}/${kernel_debugger_file}"
 
-  output="$( "${to_exec}" -kl -c "RDMSR 0x34;q" )"
+  RET=0
+  output="$( "${to_exec}" -kl -c "RDMSR 0x34;q" )" || RET=$?
+  
+  if [ $RET -ge 1 ]; then
+    echo "$output"
+    echo ""
+  
+    echo "******"
+    die "ERROR: Cannot call KD. Please confirm this WSL terminal has windows administrator priviledges (ie, not sudo!), and kernel is enabled for debugging"
+  fi
   
   counter="$( echo "$output" | grep "msr\[34\]"  | sed 's/`/ /' | awk --non-decimal-data '{ printf("%d", "0x"$NF ); }' )"
   
