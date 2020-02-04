@@ -938,12 +938,11 @@ Dell XPS 15 9560 BIOS versions (click "version" [here](https://www.dell.com/supp
 \
 [Dell Ticket](https://www.dell.com/community/XPS/Dell-XPS-15-9560-BIOS-0-18-0-causes-SECONDS-of-SMI-latency-not/td-p/7477967)
 \
-Results:
-\ 
+### Results
+These are the results. This issue is caused by SMI interrupts. ([blog post about SMI](#How-to-count-SMI-hidden-interrupts-in-Windows))
+
 ![dell_smi_heavy_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
 
-This issue is caused by SMI interrupts. 
-See below [what this means and how is this measured](#How-to-count-SMI-hidden-interrupts-in-Windows)
 
 
 ## How to count SMI (=hidden interrupts) in Windows
@@ -956,7 +955,7 @@ As these are not visible to the OS, these will confuse latencyMon, but not [IDLT
 These interrupts are used, for example, when you change the laptop brightness. 
 The CPU has a special counter for these interrupts. 
 
-I've made a small wrapper to read this special counter in Windows: [count_smi tool](tools_traktor/windows_count_smi.sh) 
+I've made a small tool to read this special counter in Windows: [count_smi tool](https://github.com/pestrela/smi_counter) 
 
 Below a simple test that shows that changing the brightness in Dell XPS "costs" 4 SMIs:
 
