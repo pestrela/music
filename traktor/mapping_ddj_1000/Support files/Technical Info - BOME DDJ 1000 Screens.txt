@@ -903,8 +903,12 @@ Fliter dual polarity:
      1 - positive; 2 - positive, needs refresh
     -1 - negative; -2 - ...
     
+  "l8" active filter for all decks 
+  "l9" free  
+    
   "la"  FREE   <<<< simplify needs refresh
 
+  VER i5!!!! tempo range
   
     
  
