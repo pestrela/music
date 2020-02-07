@@ -150,19 +150,19 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 # Traktor software
 ## Why is Traktor my software of choice
 
-Traktor has unique features that I depend on. Some features are quite big while others are quite small.\
-The point is that the these features are absent in the other softwares.
+Traktor has unique features - big and small - that I depend on.\
+Other softwares have nice unique features too, but miss these ones that I depend on.
 
 Blog Posts:
-  * [a) Automatic database repair](#why-is-traktor-my-software-of-choice-a-database-repair)
-  * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
-  * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
-  * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
-  * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
+* [a) Automatic database repair (mass relocate)](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
+* [b) OS Search (no playlists)](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists)
+* [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
+* [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
+* [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
 
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
 
-## Why is Traktor my software of choice: a) Database repair
+## Why is Traktor my software of choice: a) Database repair (mass relocate)
 
 Traktor is above to find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis.
 
@@ -184,7 +184,7 @@ If this manual process is skipped, the files are seen as brand new, losing all m
 * Comparison to Serato: To test.
 
 
-## Why is Traktor my software of choice: b) OS-search
+## Why is Traktor my software of choice: b) OS-search (no playlists)
 
 Traktor allows searching inside any OS folders. I don't have DJ playlists inside Traktor; instead, my OS-folders are my "virtual playlists".\
 I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
