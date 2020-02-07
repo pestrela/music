@@ -9,8 +9,8 @@
   
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
-    * [a) Database Repair](#why-is-traktor-my-software-of-choice-a-database-repair)
-    * [b) OS Search](#why-is-traktor-my-software-of-choice-b-os-search)
+    * [a) Automatic database repair (mass relocate)](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
+    * [b) OS Search (no playlists)](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists)
     * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
