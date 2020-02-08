@@ -874,7 +874,7 @@ Official recommendation from Pioneer: https://forums.pioneerdj.com/hc/en-us/arti
 Things to try while measuring:
 - **USB:** gauge USB cables; use usb 2.0 port;  
 - **Windows Power options:** performance profile; change "turn X off after"; "turn off device"; wireless adaptor power saving; Fast Startup;
-- **Windows Configs:** optimize to background processes; paging file; Spectre patches; Visual Effects; 
+- **Windows Configs:** optimize to background processes; paging file; Spectre patches; Visual Effects; SuperFetch;
 - **Battery:** windows best performance; plugged-in vs battery; Intel DPTF (power throttling); ACPI battery control;  
 - **Device Manager:** "USB root hub" power management; 
 - **Services:** TBD

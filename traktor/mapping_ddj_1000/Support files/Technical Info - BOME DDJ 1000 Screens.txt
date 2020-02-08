@@ -238,8 +238,12 @@ MODE CYCLE:
 CLOCK IMPLEMENTARION:
 ---------------------
  CLOCK:
-   master debug             "hw"   (global)
+ 
+ XYWZ
+ 
+   Need reset when device is up "hx"   (global)   (0=init; 1= done reset)
    10ms ticks per second:   "hy"   (global)
+   master debug             "hw"   (global)
    current clock value:     "hz"   (global)
    REFERENCE clock value:   "ka"
 
@@ -666,7 +670,7 @@ Unused variables:
   
   *****
   "hi"  long press support
-  "hx"  Hertz Timers / INIT timers
+  "hx"  SPECIAL GROUP: Timers / INIT
 
   *****   
   "ie" (double click -> 4 separate variables)
@@ -727,8 +731,13 @@ Unused variables:
     
 DDJ-1000 undocumented notes:
 ----------------------------
-  PC App Connect: ch 16 note A-1
-
+  PC APP Connect: ch 16 note A-1  (=9)    
+    (mapping: page 1, linked to master volume)
+    
+  shift+quantize: ch 1..4 note A3 (=57)  IN/OUT  (modifier #4)
+    (mapping:)
+  
+  
   
   
 layout deck shift:

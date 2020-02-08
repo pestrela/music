@@ -552,8 +552,6 @@ parser.add_argument('-f', dest="save_output", action="store_true", default=False
                     help='Actualy do save the final file')
                     
 
-parser.add_argument('-f', dest="save_output", action="store_true", default=False, 
-                    help='Actualy do save the final file')
 
                     
 #                    <MODIFICATION_INFO AUTHOR_TYPE="user"></MODIFICATION_INFO>

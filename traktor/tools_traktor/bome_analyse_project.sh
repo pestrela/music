@@ -118,8 +118,12 @@ function sort_output()
 
 function show_globals()
 {
-  output="$( cat "$file_in" | awk -f "$awk_program"  | grep -v "Set Global Variables" | grep -v "Total Translators" )"
+  output="$( cat "$file_in" | awk -f "$awk_program"  | grep -v "Total Translators" )"
 
+  if [ $remove_startup -ge 1 ]; then
+    output="$( echo "$output" | grep -v "Set Global Variables" )"
+  fi
+  
   if [ $keep_header -eq 0 ]; then
     output="`echo "$output" | awk '{print $1, $NF}' `"
   fi 
@@ -174,6 +178,7 @@ do_grep=0
 keep_header=0
 #oper="show_globals"
 oper="none"
+emove_startup=1
     
 merge_grep="or"    
     
@@ -211,6 +216,10 @@ while [ "$#" -ge 1 ]; do
     
   -r)
     oper="show_rules"
+    ;;
+    
+  -s)
+    remove_startup=0
     ;;
     
   -k)
