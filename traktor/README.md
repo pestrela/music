@@ -1,16 +1,10 @@
 
-<<<<<<< HEAD
 # Start here first
 
-
-
-
+TBD
 
 # Table of Contents
-=======
-# Table of Contents
 
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 * [MindMap Summary](#MindMap-Summary)
 * [OS-Folders](#OS-Folders)
   * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
@@ -271,11 +265,7 @@ Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is imp
 
 However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).
 
-<<<<<<< HEAD
 Some other anedotic evidence on this are the [preferences freeze](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879), the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
-=======
-Some other anedotic evidence on this are the preferences freeze, the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 and the HC-4500 mapping to get track details.
 
 Blog posts:
@@ -297,13 +287,8 @@ Blog posts:
 
 Also, I've also hit the limits of Traktor mappings multiple times. Below are the features that are possible in Traktor but only by significantly increasing the mapping complexity.
 
-<<<<<<< HEAD
 * **a) more modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings. This in turn [freezes your preferences](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879) window - please see below.
 * **b) preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879) **even if they are completely empty**.
-=======
-* **a) more modifiers**: I use a lot more than [8 modifiers](https://www.native-instruments.com/forum/threads/controllerism-more-modifiers-more-bits-more-conditions.329045/). I use a lot more than 3 bits per modifier state. To go around this I add a lot of complexity to my mappings. This in turn freezes your preferences window - please see below.
-* **b) preferences window freeze:** To add more variables, you need to add extra mapping pages. Having more than 6 pages [freeze your preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) **even if they are completely empty**.
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 * **c) more conditionals**: I use a lot more than [2 conditions in my mappings](https://www.native-instruments.com/forum/threads/add-3rd-slot-for-modifier-conditions-in-controller-manager.325569/#post-1622169). To go around this I [squeezed multipe states into each modifier](https://www.traktorbible.com/en/squeezing-modifiers.aspx). Again, this added a lot of complexity to my mappings.
 * **d) global modifiers:** I miss [global modifiers](https://www.native-instruments.com/forum/threads/named-variables-operators.326339/#post-1628411), to link the state in multiple pages. More info: page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 
@@ -726,11 +711,7 @@ Steps:
 
 This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. 
 This saves you to having to open the preferences window to change the audio device, 
-<<<<<<< HEAD
 which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879).
-=======
-which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/).
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 
 Script installation:
 * save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
