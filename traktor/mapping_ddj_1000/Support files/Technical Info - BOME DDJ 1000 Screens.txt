@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 https://meanderful.blogspot.com/2020/01/out-of-touch.html
 
@@ -22,6 +23,13 @@ ja:
  - slip blinks
  - beat sync blinks
  - OFF 
+=======
+TODO:
+  - merge shift values ga, gb
+  - remove shift CC
+  
+
+>>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
   
 Information Sources:
 --------------------
@@ -138,6 +146,7 @@ BOME variables:
     "xx"
 
   BOME Global:
+<<<<<<< HEAD
     3-"g9"
     "ha"-"h9"
     "ia"-"i9"
@@ -149,6 +158,19 @@ BOME variables:
     
     "ya"-"y9"
     "za"-"z9"
+=======
+    ga-g9
+    ha-h9
+    ia-i9
+    ja-j9
+    ka-k9
+    la-l9
+    ma-m9
+    na-n9
+    
+    ya-y9
+    za-z9
+>>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 
   Fake array variables (per channel):
     1234
@@ -764,7 +786,11 @@ layout deck shift:
   "ii"/1 - active left deck  (1/3)
   "ij"/2 - active right deck (2/4)
   "il"/3 - 0 - Parallel / 1 - Classic / 2 - Disabled mode (0/1)
+<<<<<<< HEAD
   "im"/4 - PC APP CONNECT TIMER (disables forced side because of auto-detect)
+=======
+  "im"/4 - PC APP CONNECT TIMER (disables forced side)
+>>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
   
   
 Generic Double click support:
@@ -939,6 +965,7 @@ Fliter dual polarity:
   VER i5!!!! tempo range
   
     
+<<<<<<< HEAD
 Beat FX state machine:
 ---------------------
   ON/OFF = ch05 B4 (=71)
@@ -991,6 +1018,8 @@ ALL GLOBAL VARIABLES:
   "z9" - free
     
     
+=======
+>>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
  
 CUSTOM DDJ-1000 bome notes:
 ---------------------------

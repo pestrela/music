@@ -86,6 +86,7 @@ def please_input_yes(st=""):
 		return False	
 	
 def reduce_file(file, count):
+<<<<<<< HEAD
   new_file=[]
 
   accept=False
@@ -113,6 +114,32 @@ def reduce_file(file, count):
 
 
 
+=======
+	new_file=[]
+	
+	accept=False
+	accept_next=False
+	for field in file.split():
+		#print(field)
+		if len(field) > 3:
+			accept=True
+
+		if accept_next:
+			accept=True
+			
+		if '-' in field:
+			accept_next=True
+			
+		if accept:
+			new_file.append(field)
+			
+	new_file = " ".join(new_file)
+	new_file = "%02d - %s" % (count, new_file)
+	return new_file
+	
+
+	
+>>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 def rename_files(debug_print, *, dry_run=True):
 
 	orig_list = isorted(os.listdir("."))
