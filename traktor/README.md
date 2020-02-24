@@ -1,12 +1,11 @@
 
+# Start here first
+
+
+
+
+
 # Table of Contents
-
-
-https://github.com/pestrela/music_scripts/blob/master/traktor/README.md?fbclid=IwAR0MYItq8RPuOLfcetBbGiIe0gBK0g2ag332e85Ag92h_23l8SW5tDKMel8#why-is-traktor-my-software-of-choice
-
-
-
-# 
 * [MindMap Summary](#MindMap-Summary)
 * [OS-Folders](#OS-Folders)
   * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
