@@ -86,30 +86,33 @@ def please_input_yes(st=""):
 		return False	
 	
 def reduce_file(file, count):
-	new_file=[]
-	
-	accept=False
-	accept_next=False
-	for field in file.split():
-		#print(field)
-		if len(field) > 3:
-			accept=True
+  new_file=[]
 
-		if accept_next:
-			accept=True
-			
-		if '-' in field:
-			accept_next=True
-			
-		if accept:
-			new_file.append(field)
-			
-	new_file = " ".join(new_file)
-	new_file = "%02d - %s" % (count, new_file)
-	return new_file
-	
+  accept=False
+  accept_next=False
+  for field in file.split():
+  #print(field)
+    if field.lower() == "dj":
+      accept=True
+      
+    if len(field) >= 3:
+      accept=True
 
-	
+    if accept_next:
+      accept=True
+
+    if '-' in field:
+      accept_next=True
+
+    if accept:
+      new_file.append(field)
+    
+  new_file = " ".join(new_file)
+  new_file = "%02d - %s" % (count, new_file)
+  return new_file
+
+
+
 def rename_files(debug_print, *, dry_run=True):
 
 	orig_list = isorted(os.listdir("."))

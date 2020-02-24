@@ -1,8 +1,27 @@
-TODO:
+
+https://meanderful.blogspot.com/2020/01/out-of-touch.html
+
+
+
+musicas karas
+ - masters at work - work
+ - anoniue clamaran zoo
+ - helder o rei do kuduro - ladei night
+ - 
+
+
+
+
+release DDJ-1000:
   - merge shift values ga, gb
   - remove shift CC
-  
 
+
+ja: 
+ - state machine ON/OF
+ - slip blinks
+ - beat sync blinks
+ - OFF 
   
 Information Sources:
 --------------------
@@ -119,17 +138,17 @@ BOME variables:
     "xx"
 
   BOME Global:
-    ga-g9
-    ha-h9
-    ia-i9
-    ja-j9
-    ka-k9
-    la-l9
-    ma-m9
-    na-n9
+    3-"g9"
+    "ha"-"h9"
+    "ia"-"i9"
+    "ja"-"j9"
+    "ka"-"k9"
+    "la"-"l9"
+    "ma"-"m9"
+    "na"-"n9"
     
-    ya-y9
-    za-z9
+    "ya"-"y9"
+    "za"-"z9"
 
   Fake array variables (per channel):
     1234
@@ -745,7 +764,7 @@ layout deck shift:
   "ii"/1 - active left deck  (1/3)
   "ij"/2 - active right deck (2/4)
   "il"/3 - 0 - Parallel / 1 - Classic / 2 - Disabled mode (0/1)
-  "im"/4 - PC APP CONNECT TIMER (disables forced side)
+  "im"/4 - PC APP CONNECT TIMER (disables forced side because of auto-detect)
   
   
 Generic Double click support:
@@ -919,6 +938,58 @@ Fliter dual polarity:
 
   VER i5!!!! tempo range
   
+    
+Beat FX state machine:
+---------------------
+  ON/OFF = ch05 B4 (=71)
+    traktor: hold (=remote control)
+    testes that this always sends 127 when pressed, 0 when release. NO VISIBILITY ON TRUE VALUE.
+    PC app connect - no reaction
+    
+     
+  channel select: ch05 E0..G0 (16..19);  other = 20..22
+  
+  "h0" = real ON/OFF button
+  "h9" = which deck selected: 0 = master/mic/sampler; 1..4 = decks
+
+  (
+
+
+
+traktor remote control by BOME:
+-------------------------------
+  direct = 0/1  (change state) 
+  hold = remote control :   127 -> 1  /  0 -> 0
+  toggle:   (no visibility except if an OUT command as well)    
+    
+    
+ALL GLOBAL VARIABLES:
+---------------------
+  "g9": pure debug toggle
+  "g0" - free
+  
+  "h0" - beatFX
+  "h9" - beatFX
+  "i0" - free
+  "i9" - free
+  
+  "j0" - free
+  "j9" - free
+  "k0" - free
+  "k9" - free
+  
+  "l9" - free
+  "l0" - free
+  "m0" - free
+  "m9" - free
+  "n0" - free
+  "n9" - free
+  
+  "y0" - free
+  "y9" - free
+  "z0" - free
+  "z9" - free
+    
     
  
 CUSTOM DDJ-1000 bome notes:

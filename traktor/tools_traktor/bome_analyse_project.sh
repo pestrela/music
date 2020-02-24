@@ -178,7 +178,7 @@ do_grep=0
 keep_header=0
 #oper="show_globals"
 oper="none"
-emove_startup=1
+remove_startup=1
     
 merge_grep="or"    
     
