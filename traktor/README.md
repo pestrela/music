@@ -1271,9 +1271,9 @@ Every year I update this page with the new data points over time. Source files a
 See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time" )!
-![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time" )!
-![dj platforms over time](../census_graphs/dj_platform_over_time.jpg?raw=true "dj_platforms_over_time" )!
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time")!
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time")!
+![dj platforms over time](../census_graphs/dj_platform_over_time.jpg?raw=true "dj_platforms_over_time")!
 
   
  
