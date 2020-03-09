@@ -74,6 +74,32 @@ DDJ Mappings - Summary history:
    
 DDJ Mapping ChangeLog - By DJ estrela:
 --------------------------------------
+ V6.7.0 - March 2020 - "the SuperKnob / TTFX edition"
+ - Effects:
+   - TurnTable FX: added TTFX sound to play/pause, on both regular and Flux mode situations (regular: trigger mode; flux: hold mode)
+
+ - Filter Knob:
+   - Dual effect: The filter knob now does 2x different HPF FX, one for each side. Use shift todo LPF instead; use memory todo disable this feature (does classic LPF+HPF).  
+   - MacroFX shortcut: Double tap the CFX selection button to quick select macroFX (laserslicer, flighttest, etc)
+   - MFX enabled: It is now possible to turn on MFXs at an wanted values away from the midpoint
+   
+ - Tempo:
+   - Tempo auto-range: moving the tempo fader enlarges and contracts the tempo range as required
+   - Tempo blink: when physical tempo fader doesn't match the real one ("soft takeover"), the value blinks as a warning
+   - Elastic beatgrid Sync: turning the jogwheel disables sync. This is useful for emulated elastic beatgrids. Use shift+memory+sync to toggle this feature
+   
+ - Gestures:
+   - Memory button: Double tap: toggle time-elasped/time-remain; Long press: preview total time
+   - Deck select: Double tap: toggle parallel/classic views; Shift+tap: disable layout changes
+   - Jog Ring: now blinks to warn special situations (jogFX, Reverse, EOT); Flux mode now blinks as well
+   
+ - Various:
+   - Beatjump buttons: Swapped main and shift functions to match DDJ-1000SRT
+   - Faders initialization: The mapping now queries the initial positions at startup ("pc app connect" undocumented feature)
+   - Bugfixes: Several bugfixes on CDJ blink, parallel waveforms
+ 
+ 
+ 
   V6.6.0 - September 2019 - "the CDJ edition"
   - Short summary:
      - CDJ-like features (loop IN/OUT, loop adjust, cue/Play blink, warning blink)
@@ -81,7 +107,6 @@ DDJ Mapping ChangeLog - By DJ estrela:
      - new pads modes: beatjump, manual loop, keyshift modes.
      - configurable sync modes (Traktor/Serato style). Configurable cue monitor styles.
      - Several bugfixes on the jog screens 
-     
   
   - New features (detailed):
      - Loop: Loop section now works like CDJs via IN/OUT button. 4-beat loop and auto-loop is still there.
@@ -150,7 +175,13 @@ DDJ Mapping ChangeLog - By DJ estrela:
 		- DJTT: https://maps.djtechtools.com/mappings/9279
 		- FB:   https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2244380098947850
 		- YT:   https://www.youtube.com/watch?v=EkSJ9Ug9Zuk
-	
+
+- v6.1.7 - March 2020 - Added Preview player to SX2
+  - Load prepare - press = load track in preview player
+  - browser turn = seek preview player
+  - load prepare release = stop preview player
+
+    
 - v6.1.1 - July 2019 - Merged SX2 and SZ TP3 mapping
   - Merged SX2 and SZ TP3 mapping in a single file
   - added DDJ-SR specific mapping (for faster jogs)

@@ -1,0 +1,157 @@
+[AliasWindow]
+Width=308
+WidthSingle=250
+Height=304
+
+[Current]
+VirtualMidiPorts=Y
+ShowLoggerForm=Y
+ShowSplashScreen=N
+DontAskForClose=Y
+PresetInstallVersion=1.8.4.953
+MainWidth=960
+ColumnWidthName=212
+DontShowSaveNoPortsWarning=Y
+DontAskForDeleteTranslator=Y
+ColumnWidthOptions=144
+DoNotShowLoggerWarning=Y
+EventMonitor=Y
+VirtualMidiPortsCount=1
+VirtualMidiShortNames=N
+MainHeight=1040
+MainEditorPanelWidth=388
+MainLeft=0
+DontAskForDeletePreset=Y
+DontShowSaveInfo=Y
+LastProjectDir=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir
+ColumnWidthOut=305
+MainTop=0
+SettingsFilename=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\v6.7.0 - DDJ-1000 - TP3_TP2 BOME\v6.7.0 - v1 settings.bmts
+MainLTabPanelHeight=431
+StartMinimized=Y
+AutoStart=Y
+OneInstance=Y
+CurrentVersion=1.8.4.953
+EditWindowIndex=2
+VirtualMidiDetectUsageDontAsk=N
+ProjectPanelWidth=194
+ColumnWidthIn=385
+ShowEditWindow=Y
+MainMaximized=N
+CurrentProject=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\DDJ-1000 v6.7.0 v01.bmtp
+FirstTime=0
+
+[EditWindow]
+IsDefaultMidiPortsProjectOptions=Y
+IsRulesWizardExpanded=Y
+IsGeneralPresetOptions=N
+IsGeneralOptions=N
+IsDefaultMidiPortsPresetOptions=Y
+TranslatorRow=0
+ScrollPosPresetEditor=0
+IsRulesOptions=Y
+IsGeneralProjectOptions=N
+ScrollPosProjectEditor=0
+ScrollPosTranslatorEditor=0
+PresetRow=0
+SizeTranslatorRulesEditor=407
+SizeProjectRouter=386
+MidiRouterShowOpenOnly=N
+SizeProjectMIDIIN=175
+ExpandAppleScriptProjectOptions=N
+IsOutgoingOptions=Y
+IsMidiRouterProjectOptions=Y
+IsIncomingOptions=N
+
+[ErrorWindow]
+Width=450
+IsDialog=N
+Top=400
+Left=735
+Height=280
+
+[EventWindow]
+Width=558
+MonitorStarted=N
+IsDialog=N
+Top=359
+Left=681
+Height=363
+
+[LogWindow]
+LogMidiOut=N
+Height=363
+LogOut=N
+Left=681
+LogIn=N
+Timestamps=N
+LogRules=N
+Top=359
+LoggerStarted=Y
+LogMidiIn=N
+Width=558
+IsDialog=N
+
+[MIDI.alias]
+Name0=From Traktor
+Device0=1:Bome MIDI Translator 1 Virtual In
+Name1=To Traktor
+Device1=2:Bome MIDI Translator 1 Virtual Out
+Name2=To DDJ
+Device2=2:DDJ-1000
+Name3=From DDJ
+Device3=1:DDJ-1000
+Name4=From TK HC4500
+Device4=1:Bome MIDI Translator 2 Virtual In
+Name5=DDJ-1000
+Device5=2:DDJ-1000
+Name6=DDJ-1000
+Device6=1:DDJ-1000
+Name7=Bome MIDI Translator 1 Virtual In
+Device7=1:Bome MIDI Translator 1 Virtual In
+Name8=Bome MIDI Translator 1 Virtual Out
+Device8=2:Bome MIDI Translator 1 Virtual Out
+
+[MIDI.in]
+Name0=Bome MIDI Translator 1 Virtual In
+Options0=FTTF44494D42T
+Name1=DDJ-1000
+Options1=FTFF4944494DT
+
+[MIDI.out]
+Name0=Bome MIDI Translator 1 Virtual Out
+Options0=TF44494D42T
+Name1=DDJ-1000
+Options1=FF4944494DT
+
+[MIDIAction]
+MIDIOutActionValue2Expanded=Y
+MIDIOutActionValue1Expanded=Y
+MIDIInActionValue2Expanded=Y
+MIDIInActionValue1Expanded=Y
+MIDIInActionChannelExpanded=Y
+MIDIOutActionChannelExpanded=Y
+
+[MRUList]
+MaxEntries=16
+File9=
+File8=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\DDJ-1000 v6.7.0 v01.bmtp
+File7=
+File6=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\DDJ-1000 v6.7.0 v01.bmtp
+File5=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\z_TSI_current_work\DDJ-1000 v6.6.5 v20.bmtp
+File4=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\BOME tests\default devices bug\default devices bug.bmtp
+File3=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\BOME tests\HC4500\HC4500 v2.bmtp
+File2=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\BOME tests\HC4500\HC4500 v1.bmtp
+File13=
+File1=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\BOME tests\HC4500\v1.bmtp
+File12=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\DDJ-1000 v6.6.5 v17 - next.bmtp
+File11=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\DDJ-1000 v6.6.5 v16 - CFX MLM.bmtp
+File0=C:\Users\Pedro\Desktop\Z_DRIVE_Pedro\2 Music - Controllers\0_MAPS_Traktor\DDJ Pioneer\BOME tests\HC4500\DDJ-1000 v6.6.0 - BOME-side Mapping.bmtp
+File10=C:\Users\Pedro\Desktop\U_Root\Sync_Traktor\Traktor Config\4_Configuration_Dir\DDJ-1000 v6.6.5 v15 - CFX fixes.bmtp
+
+[SettingsWindow]
+Width=560
+Top=333
+Left=314
+Height=391
+

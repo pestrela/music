@@ -178,11 +178,7 @@ do_grep=0
 keep_header=0
 #oper="show_globals"
 oper="none"
-<<<<<<< HEAD
 remove_startup=1
-=======
-emove_startup=1
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
     
 merge_grep="or"    
     

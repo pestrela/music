@@ -3,14 +3,11 @@
 
 """
 todo in this software:
-<<<<<<< HEAD
  - warn of acccented characters in filenames
    - these can be mass-renamed using "Bulk rename Utility", "5 accents", "12 sub-folders", CTRL+A, preview )
 
  - copy play count as well
  
-=======
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
  - confirm all collection files are case-sensitive. fix them if not.
  - confirm all collection files start with c:\root\sync_traktor (instead of desktop)
  

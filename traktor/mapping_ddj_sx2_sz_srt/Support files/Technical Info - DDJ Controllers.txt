@@ -1,5 +1,13 @@
 
 
+A friendly request:
+-------------------
+  Please don't be disrespectful for the time that people spend to make complex mappings.
+  Do not press a thumb down without leaving the steps to reproduce any issue you might have. 
+  In the majority of the cases this will actually be an user error. Thank you.
+
+  
+  
 URLs to relevant Mappings:
 --------------------------
 - Dj_Estrela:
@@ -20,9 +28,119 @@ URLs to relevant Mappings:
 	- WWW:  http://traktormappingservice.com/index.html#about]
 	
   
+  
+All Demo Videos, Collected:
+---------------------------    
+  DDJ-1000/800 playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0XHlFyINdT6P42noqvkPISD
+   - DDJ-1000 v6.5.0 - screens update - https://youtu.be/h9tQZEHr8hk
+   - DDJ-1000 v6.3.0 - main video - http://youtu.be/EkSJ9Ug9Zuk
+   - DDJ-1000 v6.3.3 - update - http://youtu.be/2QKGQ_JUNXo
+     
+   - DDJ-1000 Jog screens - quick demo - http://youtu.be/aU5qnXHNij4   (to delete)
+   - DDJ-800 - quick demo - http://youtu.be/OLUQkm-2KX0
 
-DDJ-1000/SZ/SX2 mapping Change Log:
------------------------------------
+
+  DDJ-SX2/SZ/SRT playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0V3SUnYFYq4hpeu0o_XyP2l
+   - DDJ-SX2/SZ/SRT - v6.0 main video - http://youtu.be/H_TE2mtuM6Q
+   - DDJ-SX2/SZ/SRT - v6.1 update - http://youtu.be/sanF35CYeSg
+
+
+  AKAI AMX playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0Vi7aguzxbmOJdVQCW6CohR
+   - AMX v1.0 - main video - http://youtu.be/TzAgENM55DE
+   - AMX v0.3 - old version - http://youtu.be/bZMWppDiqw8
+   
+
+   
+DDJ Mappings - Summary history:
+-------------------------------
+
+  V6.6.0 - DDJ-1000 - BOME - "CDJ-like features"
+  v6.5.0 - DDJ-1000 - BOME - First edition with JogScreens
+  v6.3.3 - DDJ-1000 - TK   - Last edition with traktor-only
+  v6.1.1 - DDJ-SX2  - TK   - Merged SX2 and SZ 
+
+	
+- v6.1.0 - Feb 2019 - First DDJ-SX2 release by DJ_Estrela (for TP3)
+
+- v6.0.0 - Aug 2018 - First DDJ-SZ release by DJ_Estrela (for TP2)
+
+- v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (for TP2)
+
+- v1.3.0 - Nov 2014 - Last DDJ-SX2 release by JAJA for TP2
+
+- v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (for TP2)	
+
+   
+   
+DDJ Mapping ChangeLog - By DJ estrela:
+--------------------------------------
+ V6.7.0 - March 2020 - "the SuperKnob / TTFX edition"
+ - Effects:
+   - TurnTable FX: added TTFX sound to play/pause, on both regular and Flux mode situations (regular: trigger mode; flux: hold mode)
+
+ - Filter Knob:
+   - Dual effect: The filter knob now does 2x different HPF FX, one for each side. Use shift todo LPF instead; use memory todo disable this feature (does classic LPF+HPF).  
+   - MacroFX shortcut: Double tap the CFX selection button to quick select macroFX (laserslicer, flighttest, etc)
+   - MFX enabled: It is now possible to turn on MFXs at an wanted values away from the midpoint
+   
+ - Tempo:
+   - Tempo auto-range: moving the tempo fader enlarges and contracts the tempo range as required
+   - Tempo blink: when physical tempo fader doesn't match the real one ("soft takeover"), the value blinks as a warning
+   - Elastic beatgrid Sync: turning the jogwheel disables sync. This is useful for emulated elastic beatgrids. Use shift+memory+sync to toggle this feature
+   
+ - Gestures:
+   - Memory button: Double tap: toggle time-elasped/time-remain; Long press: preview total time
+   - Deck select: Double tap: toggle parallel/classic views; Shift+tap: disable layout changes
+   - Jog Ring: now blinks to warn special situations (jogFX, Reverse, EOT); Flux mode now blinks as well
+   
+ - Various:
+   - Beatjump buttons: Swapped main and shift functions to match DDJ-1000SRT
+   - Faders initialization: The mapping now queries the initial positions at startup ("pc app connect" undocumented feature)
+   - Bugfixes: Several bugfixes on CDJ blink, parallel waveforms
+ 
+ 
+ 
+  V6.6.0 - September 2019 - "the CDJ edition"
+  - Short summary:
+     - CDJ-like features (loop IN/OUT, loop adjust, cue/Play blink, warning blink)
+     - new manual beatjump shortcut. Includes "move me by one beat". 
+     - new pads modes: beatjump, manual loop, keyshift modes.
+     - configurable sync modes (Traktor/Serato style). Configurable cue monitor styles.
+     - Several bugfixes on the jog screens 
+  
+  - New features (detailed):
+     - Loop: Loop section now works like CDJs via IN/OUT button. 4-beat loop and auto-loop is still there.
+     - Loop: Can now adjust the loop start/end with the jog. This is a major feature for eighties music (no beatgrids).  (shift+loop_in)
+     - Loop: can now activate a saved loops (shift+auto_loop), and manually set loops (memory+auto_loop)
+     - Beatjump: Search buttons are now beatjump/loop move size. Shift+search does beatjump/loop move; use memory+search to "move you by one beat" 
+     - Pad Beatjump: added whole new pad mode for manual beatjumps and autoloops
+     - Keyboard: added a key shift page with 3x sub-modes: CUP mode, CUE mode and Play mode
+     - Blink: Cue and play button now blink like CDJs. The Cue button blinks when you can redefine the temporary cue; the Play button blinks when the track is paused.
+     - End warning: Jog ring now blinks when the track is ending. There is 3x urgency speeds.
+
+  - Bug fixes (detailed):
+     - Screens: Jog needle no longer starts playing by itself
+     - Screens: Jog needle now resets when pressing hotcue
+     - Screens: BPM now works with changing tempo range (shift+master_tempo)
+     - Reverse: Needle now goes backwards (note: no slip feature yet)  
+     - Decks 3&4: added MixerFX, Loops and Beatjump to deck 3&4. More functions will be ported gradually. See also the FAQ on this. Not yet covered: jogFX, padFX, macroFX
+     - Layout: now has classic and parallel waveforms layouts (both 2 and 4 decks) 
+     
+   - New selectable options (detailed):
+     - Sync type: Can now select Traktor/Serato sync (shift+memory+beat_sync)
+     - Cue monitor: Can now select internal/external cue monitor (shift+memory+cue_channel_1)
+     - CrossFader: can now change crossfader curve (memory+crossfader)
+
+- v6.5.0 - September 2019 - Jog Screens using BOME
+  - New features:
+    - MAJOR new version supporting the Jog Screns via BOME. 
+    - Please read the dedicated FAQ and join the technical discussion on the DJTT forum!
+    - Significant improvements to scratching. Split Vinyl ON/OFF modes per deck.
+  - URL:
+    - Download: https://maps.djtechtools.com/mappings/9279
+    - Technical discussion: http://forum.djtechtools.com/showthread.php?t=96024
+  
+
 - v6.3.3 - June 2019 - SpinBacks and Jog Ring
   - Fixes:
     - SpinBacks are now possible
@@ -43,7 +161,7 @@ DDJ-1000/SZ/SX2 mapping Change Log:
 		- Parallel waveforms: removed automatic promotion to advanced size (this would require an improvement on TP3.1 itself) 
 	- Known issues:
     - Provide option to either toggle Sync / Direct sync
-		- Selecting different FX  should call save snapshot to ensure the same parameters are kept
+		- Selecting different FX should call save snapshot to ensure the same parameters are kept
 
 
 - v6.3.0 - Feb 2019 - First DDJ-1000 release by DJ_Estrela (for TP3)
@@ -57,7 +175,13 @@ DDJ-1000/SZ/SX2 mapping Change Log:
 		- DJTT: https://maps.djtechtools.com/mappings/9279
 		- FB:   https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2244380098947850
 		- YT:   https://www.youtube.com/watch?v=EkSJ9Ug9Zuk
-	
+
+- v6.1.7 - March 2020 - Added Preview player to SX2
+  - Load prepare - press = load track in preview player
+  - browser turn = seek preview player
+  - load prepare release = stop preview player
+
+    
 - v6.1.1 - July 2019 - Merged SX2 and SZ TP3 mapping
   - Merged SX2 and SZ TP3 mapping in a single file
   - added DDJ-SR specific mapping (for faster jogs)
@@ -88,6 +212,10 @@ DDJ-1000/SZ/SX2 mapping Change Log:
     - DJTT: https://maps.djtechtools.com/mappings/8671
     - YT:   http://youtu.be/H_TE2mtuM6Q
 
+    
+    
+DDJ Mapping ChangeLog - By JaJA and Viper:
+------------------------------------------
 - v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (for TP2)
   - Features: 
 	  - JogFX, PadFX, Slicer, ...
@@ -105,7 +233,7 @@ DDJ-1000/SZ/SX2 mapping Change Log:
     - FB:   https://www.facebook.com/Artwork.Mapping.TSI
     - YT:   https://www.youtube.com/user/artworkmixs/videos
 
-- v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (for TP2)	
+- v0.9.4 - Sep 2014 - Last DDJ-SX1 by JAJA (for TP2)	
   - Features:
     - JogFX, ComboFX 	
   - URL:
@@ -113,7 +241,13 @@ DDJ-1000/SZ/SX2 mapping Change Log:
     - FB:   https://www.facebook.com/Artwork.Mapping.TSI
     - YT:   https://www.youtube.com/watch?v=L-biJ-nuwWc
 
-		
+- v0.6.2 - December 2012 - Last DDJ-SX1 by Viper (for TP2)
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/851
+    - Blog: https://djtechtools.com/2014/03/19/10-unconventional-midi-mappings-designed-by-djtts-community/
+    - T_Bible: https://www.traktorbible.com/freaks/mappingview.aspx?id=528
+    
+    
 		
 Pioneer Official mappings (All are now outdated):
 -------------------------------------------------		
@@ -156,121 +290,151 @@ History Overview / Future plans:
 	- A spin-off will be translating 1000s of entries for the ddj-1000/ddj-400 midi codes. 
 		This will be a one way process, and I expect to need to maintain the two maps in parallel for years.﻿
  
+ 
+  
+Merged mapping DDJ-1000 and DDJ-SZ:
+-----------------------------------  
+  on CMDR, select interaction: "encoder relative"
+  - scratch (dug)
+    - SX2:
+      - sensitivity:  10
+      - acceleration: 19
+    - SR:
+      - sensitivity:  25
+      - acceleration: 19
+    - 1000:
+      - sensitivity:  5
+      - acceleration: 14
+
+  - JFX2 knobs:
+    - SX2:
+      - knob1:  25/0
+      - knob2+3: 20/0
+    - SR:
+      - (NOT FIXED - SAME AS SX2)
+    - 1000:
+      - knob1:   12/0
+      - knob2+3:  8/0
+      
+      
   
 Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWSER, SX2
 ---------------------
-	m1: (extra shifts - hold style)
+	M1: (EXTRA SHIFTS - HOLD STYLE)
 	 0: nothing pressed
 	 
 	 1-4: deck A-D SELECT  <<<<< MEMORY shift2  
-	    for waveform zoom. because browser has no deck number!
-	 
+	    for waveform zoom. this is because browser has no deck number!
+
+	    note: use M1=1 == deck A, M1=2 == deck B, etc. Assumes dedicated Memory button!
+      
 	 5: vinyl stop in progress (REQUIRES PROGRESSIVE TEMPO BEND = extra settings)
 		  m2 = 5=adjust / 6=slide
 	 6: grid adjust down | slide down (ANY OF THEM)
-	 7: back (for preview player)
+	 7: doing PREVIEW PLAYER
 
-	m2: JOG status / which deck is being used for jog FX?
-	   0: SCRATCH enabled (pressed hot cue)
-		 1: jog FX armed - touching the jog will still make scratch!
-		 2: jog FX is being touched
-	 
-		 5: grid ADJUST pressed  -> this cancels jogfx mode
-		 6: grid SLIDE  pressed  -> this cancels jogfx mode
-		 7: normal shift pressed -> this cancels jogfx mode
+	M2: JOG STATUS / WHICH DECK IS BEING USED FOR JOG FX?
+	   0: SCRATCH enabled (HOT CUE  mode)
+		 1: Jog FX armed - touching the jog will still make scratch!
+		 2: Jog FX is being touched
+     3: Loop adjust in progress  <<<<<  NEW
+     
+     4: Memory/search pressed (for quick search)
+   
+		 5: Grid ADJUST pressed  -> this cancels jogfx mode
+		 6: Grid SLIDE  pressed  -> this cancels jogfx mode
+		 7: (empty)
 		 
-	m3: which of the 7 JOG FX effect was chosen (shared between all decks)
-	 0 - none
-	 1-7: which jog FX
+	M3: JOGFX SELECTION  (SHARED BETWEEN ALL DECKS)
+	  0- none
+	  1-7: which jog FX
 	
-	m4: vinyl/CDJ mode (=ALL DECKS)
-		0:    in vinyl mode
-		1:    in CDJ mode
+	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
+    0: nothing                     (HAD DEPRECATED)
+    1: Doing loop IN+OUT adjust
+    2: Doing loop OUT adjust
+    3: Doing loop IN adjust 
+    
+    4: Doing nothing          + memory
+    5: Doing loop both adjust + memory
+    6: Doing loop out adjust  + memory
+    7: Doing loop in adj      + memory
+    
+  state machine:
+      0->shift+in->1->memory ->5->shift+in->7->~memory->3  (both)
+      3->shift_out->2   ....
+    
 
-	m5: RELEASE FX  __IN PROGRESS__  -> this is for color
+	M5: RELEASE FX  __IN PROGRESS__  -> this is for color
 	 1-4: censor echo_out (toggle)
 		 (from: button or fx1_button or jog_fx)
 	
-	m6: SYNC TOGGLE MODE
-	 0: sync toggle
-	 1: sync direct
-	
-	m7: grid in progress?
+  M6: __free__
+    
+	M7: GRID IN PROGRESS?
+   0: no grid in progress
 	 1-4: which deck A-D active + 2x grid 
 
-	m8: echo out favorite
+	M8: ECHO OUT FAVORITE
 		(sequence is 3,1,2,0 )
-	  shared with play pause FX  <<<<
+	  this is shared with play pause FX  <<<<
 	 
 	FX1|FX2 = PADFX
 	FX3 = JOG FX
 	FX4 = delay release
+  
+      
+      -> DDJ-1000SRT: emulate vinyl off
+        5: VINYL ON
+        6: VINYL OFF
  
 	 
 	 
 Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 ---------------------
-	m1: which specific FX is being triggered (to show red color)
+	M1: WHICH PADFX IS BEING TRIGGERED (TO SHOW RED COLOR)
 	 0 - none
 	 1-7: which pad FX
 	 8: not used
 	 
 	 (this is for the color)
 
-	m2: CONFIG: which pad FX page are we (shared)
-		0: has 3x gater 
-		1: has 2x delay
-		2: has 1x filter pulse
-		3: has fwd roll / non-quantized roll
-		
+	M2: CONFIG: WHICH PAD FX PAGE ARE WE (SHARED)
+		0: one with 3x Gater 
+		1: one with 2x delay
+		2: one with 1x filter pulse
+		3: Rolls page
+    
 		(same as p1/m5) ?
 		
 		
-	m3: keyboard pt1 (0: none; 1=zero;...7)
-	m5: keyboard pt2 (0: none; 1..=8 )
-	
-	m4: current padmode (for padpage shortcut)
+	M4: CURRENT PADMODE (FOR PADPAGE SHORTCUT)
 		0: HC
 		1: ROLL
 		2: SLICER
 		3: SAMPLER
 		4: other (=shift)
 		
+	M3: KEYBOARD Page1 - red button (0: NONE; 1=ZERO;...7)
+	M5: KEYBOARD Page2 - red button (0: NONE; 1..=8 )
 	
-	m6: Tap.1 Tap.2 favorites
-		1,2: left, right -> disable pad FX buttons
-			(customizable for Tap1, Tap2)
-      (is this to share FX units???)
+	M6: KEYBOARD MODE:
+    0: mode: CUP keyboard  (pressing pad triggers CUP - same as rekordbox)
+    1: mode: CUE keyhold   (press pad triggers CUE; release stops music)
+    2: mode: PLAY keyshift  (music never stops - same as rekordbox)
+    
 		 
-		FIXME!!
-		 
-	m7: left remix deck page
+	M7: LEFT REMIX DECK PAGE  (FIXME)
 		1: page 1
 		2: page 2
 		
-	m8: right remix deck page
-		1: page 1
-		2: page 2
+	M8: SHIFT2 (=MEMORY BUTTON)
 	
-  
----------------	
-original JAJA JOGFX:
-	m2: JOG status / which deck is being used for jog FX?
-	 0: nothing = normal scratch enabled
-	 1-4: jog FX enabled, deck A..C   <<<
-
-	m3: which of the 7 JOG FX effect was chosen (shared between all decks)
-	 0 - none
-	 1-7: which jog FX
-	 
-	m4: jog FX __IN PROGRESS__
-		1-4: deck A-D  (touch jog)
-
 	
 	
 Modifiers TSI page 3:  USER-FX, SLICER, LOOPS, MODE SHORTCUTS
 ---------------------
-  m1..m4: slicer enable/disable? 
+  M1..M4: SLICER ENABLE/DISABLE? 
 		0: nothing pressed = scratch
 		1: GOTO pad fx
 		2: GOTO jog FX
@@ -282,91 +446,68 @@ Modifiers TSI page 3:  USER-FX, SLICER, LOOPS, MODE SHORTCUTS
 		  ON: HotCue -> IN: "param" (G#2) -> THEN: M1=2 -> OUT: Slicer Loop (C#8)  (SEM MODIFIERS!)
 	 
 	 
-	m5: CONFIG: which slicer page (which mode)
+	M5: CONFIG: WHICH SLICER MODE WE ARE
 		0..2: slicer mode 
 
-	m6: deck 1..3 -> for layout select on DDJ-1000
-	m7: deck 2..4 -> for layout select
-	m8: shift2 (MEMORY button)
+	M6: DECK 1 or 3 -> FOR LAYOUT SELECT ON DDJ-1000
+	M7: DECK 2 or 4 -> FOR LAYOUT SELECT
+  
+	M8: SHIFT2 (MEMORY BUTTON)
 
 
-	
-	 
+  	 
  todo slicer:
 	 - hold slicer to let the loop move Forward. Release to slice again
 	 -M.LSI.RST = reset slicer
 	 - loop in: not on slicer
 		 -> slicer toggle.
 		 
- TODO:
-	 m1 states = 1..3 -> delete.
-	 hit cue, roll = disable slicer.
-	 
- comments:
-	 LK.HC, R, S = hot cue, roll, sampler
-	 channel 7 = browse
-		
-	SHORTCUTS LK:
-		---------------
-		TSI page3:
-			in hotcue mode: press "parameter 1 >" = 1.G#2 
-				-> this sets M1 = "2" 
-			
-			OUT: m1 = [2,2]	
-					-> out: C#8 = JFX mode
-					-> out: D3 (led >)
-					
-		TSI page 1:
-			--> 1.C#8 
-				-> m3 = 2 (default)
-				-> m2 = 1
-		---------------
-
-					
-		how many shortcuts there are to jogfx?
-		d3,   ">" slicer loop = jfx
-		c#3,  ">" saved loop = pad.fx 
-		a#2,  ">" slicer
-		G#2,  ">" hot cue
-		c3,   ">" cue loop = settings
-		c#8,     MODE change slicer mode
-		a2    ">" roll
-			
-			
+ 			
 
 Modifiers TSI page4:     MACROFX, USERFX, INIT
 --------------------
-	m1: shift2 deck?   (used for User FX)
-
-	m2: which MFX page are we?
+	M1: SHIFT2 MEMORY DECK?   (USED FOR USER FX)
+    0: not active
+    1: active
+    
+	M2: WHICH MFX PAGE ARE WE?
 		0: MFX favorites
 		1: TP3 mixerFX
 		2: Second macroFX
 		
-	m3: which specific FX is ON, on page 1 (MFX)?
+	M3: WHICH SPECIFIC FX IS ON, ON PAGE 1 (Macro FX base + beatFX)?
  		0: inactive / unknown
 		1: MFX1
+    2: MFX2
+    3: MFX3
+    4: MFX4
+    5: MFX5
 		...
 		
-	m4: which specific FX is ON, on page 2 (mixerFX)?
+	M4: WHICH SPECIFIC FX IS ON, ON PAGE 2 (MIXER FX)?
 		0: inactive
     1: mixerFX1
     5: mixerFX5 = Filter
 		
-	m5: which specific FX is ON, on page 3 (MFX extra)?
+	M5: WHICH SPECIFIC FX IS ON, ON PAGE 3 (MacroFX EXTRA)?
  		0: inactive / unknown
 		1: MFX9
 		...
-		
+
+  M6: MONITOR CUE SETTING
+    0: EXTERNAL monitor mode  (default for all 4-deck controllers)
+    1: INTERNAL monitor mode (DDJ-SR, DDJ-SB, etc)
+    	
+    cue 1: C6/G#7  
 	
-	m7: current padmode (for shorcut)
-		0: HC
-		1: ROLL
-		2: SLICER
-		3: SAMPLER
+	M7: CURRENT MAIN PADMODE (THIS IS FOR DOUBLE CLICK PAD MODE)
+		0: MODE1
+		1: MODE2
+		2: MODE3
+		3: MODE4
 		4: other (=main shift is pressed)
 		
-	m8: INIT DECK
+	M8: INIT DECK
 	  - used to init the controller once is pressed.
 	(nao tem se esta' activo -> bom para partilhar!)
 
@@ -397,18 +538,39 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 			
 			
 				
-Modifiers TSI page5:     TRAKTOR 3 support
+Modifiers TSI page5:     (TRAKTOR 3 mixerFX support)
 --------------------
-	(note: this ia a temporay page only until CMDR gets updated to TP3)
-	CLONE OF PAGE4
-	
-	m2: which MFX page are we?
-		0: favorites
-		1: macroFX1
-		2: macroFX2
+   DEPRECATED
+   
 
-	
+BOME support page 6:
+--------------------
 
+  TODO: REMOVE ALL THESE MODIFIERS
+  
+  M1: = SHIFT1 (HOLD STYLE) -> SEE LOOP SIZE
+    press "main shift"
+    
+  M2: = SHIFT2 (HOLD STYLE) -> NO CHANGE
+    press "memory"
+    
+  M3: = TOGGLE ELAPSED / REMAIN
+    press "memory" + "master tempo"
+  
+  M4: = RESET SCREENS
+    press "shift"+"quantize"
+
+  M5: free
+    
+  M6: Configurable sync mode  
+    0: Sync toggle (Traktor and Rekordbox mode - for beatsync)
+    1: Sync phase  (Serato and VirtualDJ mode - for temposync)
+    2: Elastic beatgrid (Same as 1, but disables sync with jogwheel. Use with Beatsync!)
+        
+  M7: free
+  m8: free
+  
+  
 Pioneer DDJ pad colors:
 -----------------------
 	 0: off
@@ -425,7 +587,8 @@ Pioneer DDJ pad colors:
 	 36: orange
 	 38: orange
 	 40: orange-red
-	 42: red
+	 41: red
+   42: red
 	 52: pink
 	 57: pink dark
 	 60: pink-blue
@@ -453,7 +616,7 @@ JOG MIDI codes:  (encoder mode: 41/3F ; channels 1..4)
       
 - rotate (CC):
 		PLATTER (vinyl_on)   34  --> SCRATCH
-		PLATTER (vinyl_off)  35  --> m8 =0  <<<<<<
+		PLATTER (vinyl_off)  35  --> 
 
  		search+PLATTER       41  (nothing)
    	shift +PLATTER       31  --> QUICK SEARCH
@@ -472,21 +635,27 @@ JOG MIDI codes:  (encoder mode: 41/3F ; channels 1..4)
     (also _NO_ spin-forward!!)    
     
   BAD SEQUENCE:     33 (bend) -> 33 (bend) -> 35 (scratch) -> F#3 (touch) -> 34 (scratch)
-     
-		(copy paste = same sequence, even with holes)
+		(copy paste = produces the same sequence, even with holes of Ids)
     
-		
+	search problem: sensitivity 30% / acceleration 0%	
+    
+    
 BROWSER MIDI CODES:  (encoder mode: 01/7F)
 -------------------
-	rotate browser: ch7 CC 64 / CC 100 (shifted)
-	press browser:  ch7   a#4 / c5 / b4/ C#5
-	  +shift SZ:         (c8) / (d8) / c#8 / D#8
-	  +shift 1000:       (a6) / (a#6) / c#8 / D#8
+	rotate browser: ch7 CC 64 / CC 100 (shifted)  (<<<<< NO CHANNEL!)
+	press browser: (all channel ) 
+    regular:           A#4 / C5      B4 / C#5
+    
+	  +shift SZ:          C8 / D8     C#8 / D#8
+	  +shift 1000:        A6 / A#6    C#8 / D#8  <<<< different!
 		
-	load prepare SZ:  g7 / G#7
+    SX2: dedicated load buttons. press = F4/F#4 (shift)
+    
+    
+	LOAD PREPARE (SZ):   g7 / G#7
 
-	back:             f7 / F#7
-	view ddj-1000:    d9 / G#7 (shift) / g7 (long)
+	BACK:                f7 / F#7
+	VIEW (ddj-1000):     d9 / G#7 (shift) / g7 (long)
 	
 	
 	
@@ -498,11 +667,12 @@ GRID MIDI CODES:
 	1000 key sync:  F7 / reset E1
 	1000 key reset: E7 / set   G1
 	
-	slip reverse: A0 / G#3
-	
+	slip:           E4
+  reverse:        G#3
+	slip reverse:   A0
 		
 		
-MIXER-FX midi codes:  ch7 
+MIXER-FX midi codes:  all on ch7 
 -------------------
 	normal:
   	C-1  C#-1 
@@ -512,6 +682,14 @@ MIXER-FX midi codes:  ch7
 	  G#-1  A-1
 	  A#-1  B-1
 
+  long presses:
+    macrofx1 macrofx2   (G#1  A1)  chnanel 8 or 10
+    macrofx3 macrofx4   (a#1 b1)
+    
+  
+  double click:
+    noise       beatdelay    (ch07.G-1 c#2)  channel 8 or 10
+    beatflanger beatreverb   (d2   D#2)
 		
 	knob colorFX:
     ch1 55+23
@@ -548,7 +726,7 @@ PAD midi codes:
 		 C0     C#0    D0     D#0
 
 		 
-	2: ROLL  ==  PAD_FX1
+	2: ROLL  ==  PAD_FX1          -> padFX
 		 E0     F0     F#0    G0
 		 G#0    A0     A#0    B0
 
@@ -556,7 +734,7 @@ PAD midi codes:
 		 E1     F1     F#1    G1
 
 
-	3: SLICER  ==  BEAT_JUMP
+	3: SLICER  ==  BEAT_JUMP      -> macroFX
 		 G#1    A1     A#1    B1
 		 C2     C#2    D2     D#2
 
@@ -564,7 +742,7 @@ PAD midi codes:
 		 G#2    A2     A#2    B2
 
 
-	4: SAMPLER  ==  SAMPLER
+	4: SAMPLER  ==  SAMPLER       -> jogFX
 		 C3     C#3    D3     D#3
 		 E3     F3     F#3    G3
 
@@ -647,12 +825,37 @@ DDJ-SZ MIDI codes:
 	
 	
 	
+DDJ-1000 Loop LEDS:
+-------------------
+  normal: IN+OUT solid
+  4 beat loop: IN+OUT blink; auto loop solid
+  cancel: back to normal
+
+  
+  IN: blinks for 2 seconds
+  OUT: both blinks, auto loop solid
+  shift+IN fast blink IN; OUT off; 4 beat solid
+    in/out: half/double
+    shift+out - now its OUT side
+    4 beat = exit
+  shift+IN: cancel edit mode  
+    
+    
+  DE NOVO LEDS:
+   normal: solid, off
+   in loop: solid, blink
+   loop adjust: blink, blink
+   out adjust: solid, blink, blink
+   
+    
+  
 DDJ-1000 CONFIGURATION MIDI mode:
 ---------------------------------
 	to access configuation: press left shift + left play + turn on device
 	slip reverse on  = forced midi mode
 	slip reverse off = automatic change when rekordbox is running
 
+  
 	
 DDJ-1000 Back-2-back USAGE (2x USB):
 ------------------------------------
@@ -680,8 +883,20 @@ DDJ-1000 with external soundcards:
   this is the same setup as this Serato + DDJ-1000 video:
   https://www.youtube.com/watch?v=UKns5Iltoh4&t=1s
 
+  
+  
+dry wet jogFX:
+--------------
+ #1  0.85   0.79
+ #2  0.80   0.81
+ #3  1.00   0.82
+ #4  0.90   0.85
+ #5  0.95   0.74
+ #6  0.85   0.75
+ #7  0.90   0.76
 
-
+ 
+ 
 DDJ-1000 Pioneer effects support:
 ---------------------------------
   ColorFX:
@@ -705,24 +920,7 @@ DDJ-SZ encoder mode:
 	FX beat:  01/7E
 		
 
-ddj-400 support:
-----------------
-  I've now tried my mapping on a DDJ-400 on a shop. 
-  Most of the features do work - but it is definitively not ideal. 
-  If I had a DDJ-400 myself I could easily make a specific version for it.
 
-
-  Large parts of the DDJ-1000 map are compatible with the DDJ-400. 
-  Caveats:
-  - the DDJ-1000 cue mix / cue volume is done in hardware, so I don't duplicate this in traktor;  
-    - the 400 requires adding these 2x commands (which are trivial to map)
-  - RGB colors are not supported, so pad user feedback is gone. 
-    - in the 1000 you get beautiful RBG colors for each function
-  - "shift2" button does not exist, so my overlayed functions do not work (Beatjump, vinyl stop)
-    - this can easily be mapped to the memory call buttons
-  - the pad modes have a differnt order than the 1000 (Hot cue / beatlop / beatjump / sampler)
-    - the functions are still accessible, but not on the documented positions
-	
   
 DDJ-SR/RR support:
 ------------------
@@ -732,62 +930,43 @@ DDJ-SR/RR support:
   - higher resolution jogwheels require higher sensitivity in all jog commands
     - jog turn
     - jogFX knob
+    
   - shift2 button is missing. This is now mapped to loop capture button  
   - pad modes sequence: minor or no differences at all
    
    
-  on CMDR, select interaction: "encoder relative"
-  - scratch (dug)
-    - SX2:
-      - sensitivity:  10
-      - acceleration: 19
-    - SR:
-      - sensitivity:  25
-      - acceleration: 19
-    - 1000:
-      - sensitivity:  5
-      - acceleration: 14
 
-  - JFX2 knobs:
-    - SX2:
-      - knob1:  25/0
-      - knob2+3: 20/0
-    - SR:
-      - (NOT FIXED - SAME AS SX2)
-    - 1000:
-      - knob1:   12/0
-      - knob2+3:  8/0
-      
 
 	
 deck shift codes:
 -----------------
-  deck 1: ch1 F#8 / g#8
-  deck 2: ch2 F#8 / g#8
-  deck 3: ch3 F#8 / g#8
-  deck 4: ch4 F#8 / g#8
+  shift2:
+    DDJ-SZ deck change:
+      deck 1: ch1 F#8 / g#8
+      deck 2: ch2 F#8 / g#8
+      deck 3: ch3 F#8 / g#8
+      deck 4: ch4 F#8 / g#8
+    
+    DDJ-1000 deck change: 
+      only ch3 F#8, both ON and OFF
+    
+    memory: c#4 / d4
 	
-	DDJ-1000: only ch3 F#8, 0 and invert
-		
-	
-	search left  A#6
-	search right B6
-	
-	memory: c#4 / d4
-	
+  
 	quantize (hot cue long): a#7
-	quantize 1000: F3 / A3
+	quantize (ddj-1000):     F3 / A3
 
 	
-	auto loop: G#0 / G#5
+	auto loop:  G#0 / G#5   (DDJ-1000 + DDJ-SZ)
 	
-	loop in:   E0 / E5
-	loop out:  F0 / F5
+	loop in:    E0 / E5     (DDJ-1000 + DDJ-SZ)
+	loop out:   F0 / F5     (DDJ-1000 + DDJ-SZ)
 	
-	loop 1/2:  F#0 / c#7
-	loop 2x:   G0  / D7
-	
-	
+  loop 1/2:   F#0 / c#7   (DDJ-SZ)
+  loop 2x:    G0  / D7    (DDJ-SZ)
+  search <<:  a#6 (e8=long) / a5    (DDJ-1000)
+  search >>:  b6  (f8=long) / b5    (DDJ-1000)
+    
 	play/pause: b-1 / b4
 	cue:        c0  / c5
 	
@@ -796,36 +975,43 @@ deck shift codes:
 CMDR TP3 missing commands:
 --------------------------
   to create page:
-		slip reverse = ok
-		reverse = change to toggle
-	
-	to create mapping:
-		import TSI
-		delete page
-		add page
-		export TSI
+		- slip reverse = ok
+		- reverse = change to toggle behavior
 
+	to create TP3-specific mapping:
+		- edit in cmdr
+    - change "set to value" on each command one by one  (just click the same value)
+    - test
+		- export just that page
 
+	to create TP3-specific mapping:
+		- import whole TSI
+		- delete TP3 page
+		- add TP3 page
+		- export whole TSI
+
+    
     
 DDJ-1000 screens support:
 -------------------------
-Method 1: 
- - VirtualDJ managed to hack the proprietary Pioneer protocol to display full information. 
- - Documentation: nothing is public
- - Demo: https://www.youtube.com/watch?v=z8yeW9ONtGI
+  Method 1: 
+   - VirtualDJ managed to hack the proprietary Pioneer protocol to display full information. 
+   - Documentation: nothing is public
+   - Demo: https://www.youtube.com/watch?v=z8yeW9ONtGI
 
-Method 2: 
- - DjayPro uses simple MIDI commands to display only basic information. 
- - I've tried to use these midi out, but the traktor controller manager was not expressive enough to generate these exact midi out values 
- - MIDI-out is documented by pioneer on page 8 of their MIDI list. Screenshot: https://github.com/pestrela/music_scripts/blob/master/other/ddj-1000%20screens%20midi%20out.PNG
- - Demo: https://www.youtube.com/watch?v=jCUpDQD7i_M
- - Demo2: https://www.youtube.com/watch?v=aAUo4KMD70k   (Djay + Rekordbox)
- 
+  Method 2: 
+   - DjayPro uses simple MIDI commands to display only basic information. 
+   - I've tried to use these midi out, but the traktor controller manager was not expressive enough to generate these exact midi out values 
+   - MIDI-out is documented by pioneer on page 8 of their MIDI list. Screenshot: https://github.com/pestrela/music_scripts/blob/master/other/ddj-1000%20screens%20midi%20out.PNG
+   - Demo: https://www.youtube.com/watch?v=jCUpDQD7i_M
+   - Demo2: https://www.youtube.com/watch?v=aAUo4KMD70k   (Djay + Rekordbox)
+   
  
  
 TP3 MixerFX:
 ------------
  These can be changed in settings / mixer / mixerFX
+ 
  The default favorites are: 
   #1 flanger 
   #2 time gater 
@@ -848,8 +1034,198 @@ TP3 MixerFX:
   #5 streetch
   #6 streetch
   #7 crush
+
+    
+  
+DDJ-SX2 vs DDJ-SX3 vs DDJ-SZ:
+-----------------------------
+ - Sound Color FX buttons:
+ 
+   - SX2:     NONE             (internal)
+   - SX3:     ch7 note 0..3    (external)
+   - SZ1:     ch7 note 0..3    (external)         (note 4..7 for oscillator buttons)
+
+   - 1000RB:  ch7 note 0..3    (internal)
+   - 1000SRT: ch7 note 0..3    (external)
+
+   - RX:      ch7 note 16..19  (internal)
+   - RZ:      ch7 note 0..3    (configurable)     (note 4..7 for oscillator buttons)
+   - RZX:     ch7 note 0..3+36+37 (configurable)  (note 4..7 for oscillator buttons)
+   
+   - result: 
+     - SX2:     ONLY use pads
+     - SX3:     ONLY use pads 
+     - SZ1:     ALSO use OSC buttons (this is to be done)
+     - 1000RB:  CAN use color buttons  (this is unique)
+     - 1000SRT: ONLY use pads
+     
+  
+ - Grid adjust vs Pitch-n-time buttons:
+   - SX2: C#9, A#-1
+   - SX3: C#9, A#-1
+   
+   - result: these are the same midi codes, just different labelling
+  
+
+DDJ-1000SRT vs DDJ-1000RB:
+--------------------------
+  INTERNAL vs EXTERNAL:
+  - SRT version is fully external mode; RB version is fully internal mode (except for beatFX master). 
+  - For traktor this means we can have all the Pioneer effects (color + beat), and still put mixer/deck FX via the pads
+
+  MIDI codes:
+  - Decks: overall all the SRT physical buttons seem to match the RB midi codes. Example: search == beatjump
+  - Pads: the pad codes match the SX2/SZ style of codes, and not the 1000RB style. This means that my SX2/SZ mapping is the best starting point for the 1000SRT
+
+  JOGS SCREENS:
+  - While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version
+
+  I've now looked at the MIDI codes for the 1000 SRT version released today, and it is quite surprising: 
+  - the SRT pad codes match the SX2/SZ style of codes, and not the 1000RB style 
+  - While the screens look to be MIDI (no waveforms & cover art), there is no public MIDI codes like in the original 1000 RB version 
+
+  this means that my SX2/SZ mapping is the best starting point for the 1000SRT for Traktor:  https://maps.djtechtools.com/mappings/9222
+
+  
+DDJ-400 SUPPORT:
+----------------
+  I've now tried my mapping on a DDJ-400 on a shop. 
+  Most of the features do work - but it is definitively not ideal. 
+  If I had a DDJ-400 myself I could easily make a specific version for it.
+
+
+  Large parts of the DDJ-1000 map are compatible with the DDJ-400. 
+  Caveats:
+  - the DDJ-1000 cue mix / cue volume is done in hardware, so I don't duplicate this in traktor;  
+    - the 400 requires adding these 2x commands (which are trivial to map)
+  - RGB colors are not supported, so pad user feedback is gone. 
+    - in the 1000 you get beautiful RBG colors for each function
+  - "shift2" button does not exist, so my overlayed functions do not work (Beatjump, vinyl stop)
+    - this can easily be mapped to the memory call buttons
+  - the pad modes have a differnt order than the 1000 (Hot cue / beatlop / beatjump / sampler)
+    - the functions are still accessible, but not on the documented positions
+	
+  
+DDJ-800 test in a shop:
+-----------------------
+  what works fine:
+   - all pads, hotcues, preview player, etc: all ok
+   - jogFX: all ok
+   - jogs scratch: same as ddj-1000
+ 
+  problems:
+  - loops: pioneer changes the codes quite a bit. 
+     to start loop: ddj-1000 autoloop button is now ddj-800 loop in long press
+     to exit loop: simplest is to use shift+reloop/exit. 
+  
+  bugs:   
+   - beatFX: the channel selector is dead. the FX selector +depth works fine
+   - colorFX selectors: this is now hold style instead of toggle style. So it needs to be hold
+  
+  -----   
+  
+  there is no auto loop button! instead this was replaced by "reloop"
+     reloop = shift+outloop
+  
+     800:
+      rellop/exit: C5
+      cue call: a5/b5   -> same as search +shift (DDJ-1000)
+      delete: d4   ->same as memory+shift on ddj-1000
+      memory: == shift2, no problems
+      
+     1000: 
+        4-beat/exit = g#0/G#5
+     800:
+        reloop/exit = f5/g#5  
+  
+  beat fx selector:
+    E0/F0/F#0 etc  -> E1/F1 etc
+    
+  color fx selector:
+    0,1,2,3 ->   0,1,2,3 (toggle)
+  
+
+  
+Pioneer DDJ-1000 MIDI firmware bugs:
+------------------------------------
+ I've experienced the following bugs on the DDJ-1000 firmware (v1.0.6).
+ This was confirmed by inpecting the MIDI messages generated / sent by the firmwar in both BOME and MIDI-OX.
+ 
+ Test conditions:
+   - both in "MIDI forced mode" and "Automatic mode". 
+   - The issues were seen in DJay (https://www.algoriddim.com/hardware) 
+   - and Traktor (https://www.youtube.com/watch?v=h9tQZEHr8hk)
  
  
+ a) RELEASING pads generates extra messages on the second page. Example:
+      mode 1, page1, pad 1 (P1-L):
+        97 00 7F
+        97 00 00
+        97 08 00    <<<<<< extra
+
+ b) Deck 1/3 button (D6-L) always sends commands on channel 1. 
+    As such the software cannot know which deck is active
+    
+    (same story for deck 2/4 button)
+
+ c) jog screen sync indicator doesn't react (ch1 note F#6). 
+    The master indicator works fine, however (ch1 note F6)
+        
+ d) Pressing and moving jog very slowing doesn't generate any midi messages.
+    This was not the case for the DDJ-SZ, SX2, etc in MIDI mode. 
+    This is also not the case for DDJ-1000 HID mode.
+    
+    This results in very poor accuracy for very tiny jog movements (beatgrid adjust, small scratch, high zooom levels).
+    
+ e) when channel 1..4 is selected (F9), the beatFX button (F11) still does not respond to ON/OFF messages. It seems it has its own state machine.
+    result: button blinks when software is in off state
  
  
+Pioneer DDJ-800 MIDI firmware bugs:
+------------------------------------
+  On the DDJ-800, firmware v1.0.1, I couldn't make the screens produce any MIDI output.
+  this was both in "MIDI forced mode" and "Automatic mode". 
+  The midi table is exactly the same as the DDJ-1000, but using the same code was a no-go.
+  Sending the note A6 command directly also did not result at all.
+  
  
+About faders positions:
+-----------------------
+  DDJ-SZ family has a 
+
+  
+How to force a certain sequence of events / sequential processing:
+------------------------------------------------------------------
+  Simple tricks:
+    - Invert: using "invert on note ON is the simplest way to separate commands
+    - "save snapshot FX": helps changing effects in instant gratification, as the next time it is already with the last value you put
+
+  Midimasher: 
+    https://forum.djtechtools.com/showthread.php?t=32001&page=36
+    https://djrankings.org/community/forum/thread-42226/
+    - middleware to send sequential commands
+    
+  MLM midi linked modifiers: 
+    https://forum.djtechtools.com/showthread.php?t=79344
+    https://www.youtube.com/watch?v=rkGZRU8Wvdg&feature=emb_logo
+    - Global Modifiers (used here for inter-communication between involved Traktor devices)
+    - Route any command as a Modifier 
+    - put a given set of mapping statements into a conrolled sequence of processing
+    
+  String Theory:
+    https://djtechtools.com/2011/11/08/string-theory-for-djs/
+    midipipe: free OSX application 
+
+  Tests:
+    Sequence: 
+      loop move by loop amount
+      loop size decrease
+    result: 
+      first it moves by 4, then decrease loop to size 2
+      (this was the case when the commands had different IDs, ie, different entering orders on the TSI)
+  
+  
+  
+  
+    
+    

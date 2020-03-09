@@ -1,7 +1,7 @@
 
 # Start here first
 
-TBD
+ TBD
 
 # Table of Contents
 
@@ -152,6 +152,8 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
  
   
 # Traktor software
+
+
 ## Why is Traktor my software of choice
 
 Traktor has unique features - big and small - that I depend on.\
@@ -163,6 +165,8 @@ Blog Posts:
 * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
 * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
 * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
+
+https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
 
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
 
@@ -1194,6 +1198,40 @@ Steps were:
   
 See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments.com/forum/attachments/tsp2_tutorial-01_sidebysideinstalls_ver1-0_web-pdf.46430)
   
+
+
+## How to fix DDJ-1000 loose jogs
+
+(taken form FB post, to clean up and add pictures)
+
+LOOSE JOG WHEEL DISCOVERY 
+READ BELOW....
+
+It seems the part that is responsible for keeping the jog wheel in place is not the rollers at all. 
+
+It’s a bracket that has two stationary barrels attached to it. The one in the back is for right to left movement and the one in the front is for front to back movement. 
+
+If you have a jog wheel that is loose this is the part that has failed or has come defective from manufacturing. 
+
+These barrels sit inside of a channel on the under side of the jog wheel top plate ( where your hand makes contact to scratch )
+
+The way the barrels are held onto the bracket is they are pressed into the bracket and center-punched to mushroom the metal to lock it in place on the bottom. 
+
+* When a jog wheel develops front to back movement the front barrel will be found to be loose and exhibit a wobble on the bracket. 
+
+* When a jog wheel develops side to side movement the rear barrel will be found to be loose and exhibit a wobble on the bracket. 
+
+If you are able to carefully center punch the shaft from the bottom of the bracket it is possible to re-secure the barrel.
+Once the barrel is secured properly to the bracket your movement in your jog wheel will be eliminated. 
+
+I’m trying to get a part number(s) in case anyone is tired of sending in their unit and it coming back not fixed. 
+
+Honestly this is something that pioneer should have done a recall on as I’ve seen so many posts about it here and on forums and have spoke to SAM ASH and Guitar Center with both retailers aware and complaining about the issue. 
+
+Pioneers stance is to keep quiet when all they had to do is replace this bracket that probably cost them 5.00 to have made. 
+
+The labor for the repair is most likely why they are keeping quiet. It’s just unacceptable.
+
   
 ## How to replace the DDJ-1000 filter knobs with Silver knobs.
 

@@ -236,9 +236,9 @@ def generate_cue(file_music, input_tl, input_cue):
 
   #print(opts)
   if opts.gen_tl:
-      tl2 = [ "", "", "%s" % (file_music_base), "." ]
+      tl2 = [ ".", "%s" % (file_music_base), "." ]
       tl2.extend(tl)
-      tl2.extend(["", ""])
+      tl2.extend([".", "."])
       write_file(opts.file_tl, tl2)
       
       if not os.path.exists(opts.file_info):
@@ -309,9 +309,11 @@ def write_file(file, lines):
     if opts.debug:
       print("Would write: %s" % (file))
 
+      
 def remove_empty_lines(input):
   ret = "\n".join([i for i in  input.split("\n") if i ] )
   return ret      
+    
     
 def process_one_set(opts):
      
@@ -509,10 +511,14 @@ parser = argparse.ArgumentParser(description="merge cues and tracklists",
   formatter_class=argparse.RawDescriptionHelpFormatter,
   epilog="""
 
-examples:
----------
- regenerate all tracklists: 
+example:
+--------
+ regenerate all tracklists (this folder): 
+    cue_merge_cues.py . --folder -t  # -f
+
+ regenerate all tracklists (recursive folders): 
     cue_merge_cues.py . --recursive -t  # -f
+
     
  create new set: 
     cue_merge_cues.py "DJ Estrela - MIX 11 CD01 - Vocal Trance - Mar 2005." -c -t -a  
@@ -576,8 +582,15 @@ parser.add_argument('--time_conversions', dest="do_time_calcs", default=False, a
 parser.add_argument('-O', '--offset', dest="cue_offset_minutes", default=0, type=int,
                     help='Apply an offset in minutes to the cue')
                     
-parser.add_argument('-R', '--recursive', dest="recursive_operation", default=False, action='store_true',
-                    help='Recursivelly fix all files in the current di')
+                    
+
+
+parser.add_argument('-g', '--glob_folder', '--folder', dest="glob_folder", default=False, action='store_true',
+                    help='fix all mp3 files in the current folder')
+
+                    
+parser.add_argument('-G', '--recursive', dest="glob_recursive", default=False, action='store_true',
+                    help='Recursivelly fix all files in the current folder (sub-folders)')
 
                     
 opts = parser.parse_args()
@@ -588,19 +601,34 @@ if opts.do_time_calcs:
   convert_time2(opts.base)
       
 
-def process_recursive(opts):
+def process_glob(opts, recursive_folders=False):
   import copy
   
   #args_copy = copy.deepcopy(args)
   
   #saved_opts = opts.copy()
-  for file in glob.glob('*.mp3'):
+  #print("dede")
+  
+  
+  if opts.glob_recursive:
+    iter = Path('.').rglob('*.mp3')
+  else:
+    iter = Path('.').glob('*.mp3')
+  
+  
+  for file in iter:
+    print("Considering glob mp3: %s " % (file))
+    
     opts.base = file
     process_one_set(opts)
-    
+   
+   
+if opts.glob_recursive:
+  opts.glob_folder = True
+   
 
-if opts.recursive_operation:
-  process_recursive(opts)
+if opts.glob_folder:
+  process_glob(opts)
 else:
   process_one_set(opts)
   

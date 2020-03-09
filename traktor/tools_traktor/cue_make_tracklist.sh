@@ -9,11 +9,7 @@ file3="${folder} - set notes.txt"
 tracklist="`ls -1 *.flac *.mp* *.MP* *.FLA*  | sed 's/\.[^.]*$//' `"
 
 do_tl=1
-<<<<<<< HEAD
 do_set=1
-=======
-do_set=0
->>>>>>> 5b137ccf93381f6de39617a7e9ecf996693224a4
 if [ "$1" == "-s" ]; then 
   do_set=1
 fi
