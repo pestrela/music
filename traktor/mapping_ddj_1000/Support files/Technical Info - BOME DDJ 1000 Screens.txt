@@ -148,50 +148,9 @@ BOME variables:
 
   
 
-DDJ-SZ to DDJ-1000 translation:
--------------------------------
-
-  
-DDJ KEYBOARD EMULATION:
------------------------
- DDJ-SZ keyboard:
-  "mo" - channel  (0..3)
-  "mp" - which mode (0..7) 
-  "mq" - which sub-page (0..1)
-  "mr" - shift enabled (0..1)
-  
-  "ms" - which pad pressed (0..7)
-  "mt" - up/down pressed (0..127) 
-
- DDJ-1000 emulation:
-  "mu" - FREE
-  "mv" - which sub page (DDJ-1000 emulation)
-
- COMMUNICATION:
-  "mx" - channel
-  "my" - code
-  "mw" - velocity
-  "mz" - 
-  
-  channel 1..4   114/115   (SAME)
-  
-    shift:   63        (SAME)
-     
-    mode 0 - 27
-    mode 1 - 30
-    mode 2 - 32
-    mode 3 - 34
-    mode 4 - 105
-    mode 5 - 107
-    mode 6 - 109
-    mode 7 - 111
-    
-    left:  36..43   1..8           (SAME)
-    right: 44..51   9 + 122..127+0 (SAME)
   
   
   
-  16  
   
 What blinks in CDJs:
 -------------------- 
@@ -323,7 +282,7 @@ Loops:
   
 Jog Ring (End warning):                         
   IN END warning    CC 82 ->  (GENERATED ON BOME ITSELF)
-  IN deck volume    CC 83 -> "jo"
+  IN volume fader   CC 83 -> "jo" 
   IN jogFX state    CC 84 -> "gx"   (could be a single variable)    (THIS IS IN PAGE #1!)
   IN phase          CC 85 -> "je"
 
@@ -658,7 +617,7 @@ Denon HC4500 info:
 Unused variables:
 -----------------
   global variables:
-  "ga"  shift1  (was mega-state loop)
+  "ga"  shift1  (was mega-state loop - TO FIX)
   "gb"  shift2
   "gc"  free
   "gd"  free
@@ -702,8 +661,8 @@ Unused variables:
   "lx"  
 
   *****  HC-4500 
-  "me"  
-  "mi"  
+  "me"  DDJ-SZ translator (x4)
+  "mi"  DDJ-SZ translator (x4)
   "mo"  
   "ms"  track_number_msb
   "mx"  track_number_lsb 
@@ -733,9 +692,7 @@ DDJ-1000 undocumented notes:
     
   shift+quantize: ch 1..4 note A3 (=57)  IN/OUT  (modifier #4)
     (mapping:)
-  
-  
-  
+
   
 layout deck shift:
 ------------------
@@ -970,10 +927,30 @@ ALL GLOBAL VARIABLES:
     
     
  
-CUSTOM DDJ-1000 bome notes:
----------------------------
-  ch1..ch4:
-  
+Channel 1..4 FREE NOTES:
+------------------------
+  ch1..ch4 NOTES:
+    cat ddj-1000\ notes\ low\ channels.txt  | egrep "^NOTE" | awk '{print $2}' | sed 's|/|\n|g' | sort -un | awk 'BEGIN{a=0} {   while(a<$1){print a; a = a +1;}; a = $1 + 1}'
+
+    10 A#-1  - loop 1/2x
+    13 C#0   - loop 2x
+    14
+    15
+    18
+    19
+    25
+    33
+    35
+    52
+    55
+    58
+    59
+    60
+    65
+    69
+    75
+    78
+    79
    
    96 - master tempo
    
@@ -1006,4 +983,97 @@ CUSTOM DDJ-1000 bome notes:
    126 - STANDARD
    
 
+Preview player dynamics:
+------------------------   
+  TSI page1:  (no midifiers)
+   - note F7 (hold)
+   - CC 64 (seek)
+  
+  BOME:
+   - fader deck 4 - "jr" -> blocks ch7 101
+    
+    
+
+DDJ-SZ to DDJ-1000 translation:
+-------------------------------
+
+  
+DDJ KEYBOARD EMULATION:
+-----------------------
+  KEYBOARD:
+   shift = shift
+   1..4 = channel
+   z..v = mode
+   qwerty = pads
+ 
+
+ DDJ-SZ keyboard:    --->  DO NOT USE!
+  "mo" - which channel  (0..3)
+  "mp" - which mode     (0..7) 
+  "mq" - which sub-page (0..1)
+  "mr" - shift enabled? (0..1)
+  
+  "ms" - which pad pressed (0..7)
+  "mt" - up/down pressed   (0..127) 
+
+  
+ ---------------------------------- 
+ DDJ-SZ to DDJ-1000:
+  "me" - TRANSLATED channel
+  "mf" - TRANSLATED note
+  "mg" - TRANSLATED velocity
+  "mh" - TRANSLATED Shift
+
+  "mk" - 0: DDJ-1000 mode; 1: DDJ-SX2 mode (internal); 2: DDJ-SZ mode (external)
+  
+  "mi" - ORIGINAL channel
+  "mj" - ORIGINAL note
+  "ml" - ORIGINAL velocity
+  "mm" - ALREADY SET BIT  
+    0: Idle, waiting for new value
+    
+    1: received but still "Undecided"    (will default to "Untranslated" if nothing happens)
+    2: Decided: Translated
+    
+    3: Decided: Swallowed
+    4: Decided: Overflow
+    5: Decided: White-list 
+   
+   
+ 
+ Translation table: (deck 1..4)
+ ------------------
+   deck 1..4 -> "memory":     114/115 ->  61/62 
+   grid adjust -> key sync  : 121/100 -> 101/28
+   grid slide > key reset :  10/101 -> 100/31
+ 
+   autoloop ->  autoloop:    SAME
+   
+   loop 1/2 -> shift_in  :  18/97 ->  X/76
+   loop 2x  -> shift_out :  19/98 ->  X/77
+   
+   loop in  -> in :   SAME
+   loop out -> out:   SAME
+   
+   pad left arrow  -> search --: 36..43/1..8         -> 112/81
+   pad right arrow -> search ++: 44..51/9+122..127+0 -> 113/83
+   
+   pad quantize -> deck quantize:  106/NONE -> 53/57
+   
+   OSC param -> sampler volume:  29 -> 3
+   load prepare -> view:       103/104 -> 122/104      (long=103)   (back = 101/102) 
+   
+   panel -> double click deck change:  120/121 -> 
+   
+   
+ Translation table: (channel 7)
+ ------------------
+   noise:  4/12 -> 0/8
+   cymbal: 5/13 -> 1/9
+   siren:  6/14 -> 2/10
+   horn:   7/15 -> 3/11
+   
+   
+ 
+    
     
