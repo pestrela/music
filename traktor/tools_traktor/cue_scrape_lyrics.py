@@ -17,14 +17,22 @@ import os
 import re
 from collections import defaultdict
 from functools import partial
-from pathlib import Path
 import glob
 from enum import Enum 
 
 
 from yapu.imports.internal import *
-from yapu.multiline import grep_1, grep_not, grep
-from yapu.string import RString
+from yapu.files import DPath
+
+from yapu.multiline import *
+from yapu.string import *
+from yapu.html import *
+
+from googleapiclient.discovery import build as google_build_query 
+
+google_api_key = "AIzaSyAriTjwR8OvnEB-wVmLY8R0wyAgk9Vor1c"
+google_cse_id = "012302401370948303102:jbp3hqb2hjb"
+ 
 
 State = Enum('State', ['not_found', 'instrumental', 'found'])
 
@@ -52,7 +60,7 @@ State = Enum('State', ['not_found', 'instrumental', 'found'])
 
 # todo:
 #   add trancehub / lyrichub
-#   add musicmatch
+#   
 
 watermarks=[
   "Report lyrics",
@@ -61,15 +69,23 @@ watermarks=[
 
 exception_table={
 
-"07 min  | DAFT PUNK VS MODJO - One More Lady - DJ Stein Mix" : 
+"DAFT PUNK VS MODJO - One More Lady - DJ Stein Mix" : 
 "MODJO - Lady",
 
-"14 min  | PUSSY DUB FOUNDATION - Make The World Go Round" : 
+"PUSSY DUB FOUNDATION - Make The World Go Round" : 
 "Antoine Clamaran - Get Up lyrics",
 
-"97 min  | SUPALA VS MAW - Work Alert - DJ Estrela Edit":
-" MASTERS AT WORK - Work",
+"SUPALA VS MAW - Work Alert - DJ Estrela Edit":
+"MASTERS AT WORK - Work",
 
+"LOCAL BOY - Thriller - Medley With Owner Of A Lonely Heart":
+"YES - Owner of a lonely heart",
+
+"EUROPE VS MODERN TALKING - Djsakgra Mashup Mix":
+"europe - the final countdown",
+
+"CHRISS - With A Boy Like You":
+"The Troggs - With A Girl Like You",
 
 
 }
@@ -80,13 +96,178 @@ exception_table={
 # >>> Paradiso - Paradise Mi Amor
 # >>>> the voyagers - distant planet
 
-# https://www.discogs.com/group/thread/536249?page=1
+# playlist a ver: https://www.youtube.com/watch?v=SOIcQSz8sPY&list=PLEC53D7269E3E2E68&index=3&t=0s
+# outra playlist a ver (sets) https://www.youtube.com/watch?v=8ROsTZuzoXo&list=PL97UX1SiB5bqLTwCts033N_sXMAEF2bu7&index=1
+# another list: http://www.circuitandanthems.com/80sItaloDiscoCollection.html
+# https://www.youtube.com/playlist?list=FLyghFpzbDaPh7OHd5nO1USw
+# https://www.youtube.com/playlist?list=PLkmIVxFc_lLFJkV0jxuNFwhg4okrvTv8C
 
-# italo disco lyrics: https://www.discogs.com/group/thread/536249
+
+
+
+
+# List of Italo Disco lyrics: https://www.discogs.com/group/thread/536249
 
 custom_table={
 
-"08 min  | DR MARTINI - You Are The One":
+
+
+"BABY'S GANG - My Little Japanese Boy":
+"""
+
+Japanese ,japanese, japanese boy.
+
+I have a special friend. 
+We are walking hand in hand, 
+we go round 
+oh ho.
+
+ I love his magic eye, 
+he's so crazy, 
+he's so fine, 
+the best in town.
+oh ho 
+
+I like to talk with him, 
+he's my special little dream,
+ i think i prison? because he is mine?
+He's come from very far,
+ he's the perle ? visual? star.
+ And when he  is mine,
+ i get so high. 
+
+Ref: You are my friend,
+ my little japanese boy,
+ My liitle man , 
+for you i give up my Toys?  
+
+I  Have a special friend
+ ,we are walking hand in hand 
+we will go round
+goes down town
+
+i.i. i .have .......a special friend....we we we are walking
+
+we and my little friend
+we are walking to the old magic man 
+oh ho
+we go to magic eye
+very .....?  special husband 
+ he is just fit and fine
+
+you pass it in your hands
+there it in your button is
+
+there you can live it in a dream
+
+were you can find the child
+following my superboy
+the time is right 
+we try to see
+
+Ref: You are my friend
+my little japanese boy
+my little man 
+for you i give up my toy
+
+Ref: You are my Friend
+my little Japanese boy
+we come again 
+my special wonderfull guy
+
+hahaha can't find it on internet so treid to listen back and back again ciao Niels from the 
+
+""",
+
+"SWEET CONNECTION - Heart To Heart - Vocal Mix":
+"""
+boy
+the magic in your eyes i know
+I cant believe it
+
+its true
+i feel my burning heart in crisis
+
+oh yeah I need you
+and you will see 
+together we strong
+we will get it trough
+whaever goes wrong
+
+[pre-chorus]
+so cant you feel my heartbeat
+your body next to mine
+
+[chorus]
+were heart to heart
+oh boy i do love you
+soul to soul
+come carry my love
+
+heart to heart
+never know what i should do 
+baby without you
+heart to heart
+
+heart to heart
+soul to soul
+carry my love
+
+in
+i know I'm the only one
+i hope forever
+you
+you kiss me once again I knew
+i'll see togetehr
+
+we are like a ball protecting 
+cause our love will keep us strong
+
+""",
+
+"SHEILA STEWART - It's You":
+"""
+
+Do you know what I want to say?
+Do you say what I want to play?
+Do you know? I am now so in love with you
+without I don't know what to do. 
+
+You're all I want and I am so afraid
+That your turn away someday
+Here is you that's all I wanted of the heart.
+
+Ref: You are all that I'm living for
+I have nothing to ask for.
+You are all that I'm living for
+I never could ask for more.
+
+Can you see what I want to say?
+Can you know what I want to play?
+Can you know? I could never to without you
+Without you I am feeling blue.
+
+You're all I want and I am so afraid
+That you go away someday
+Must I go or must I stay?
+So we can't play
+
+Ref: You are all that I'm living for
+I have nothing to ask for.
+You are all that I'm living for
+I never could ask for more.
+
+Should I stay or should I go?
+I don't know.
+Should I stay or should I go?
+I don't know.
+""",
+
+
+
+
+
+"DR MARTINI - You Are The One":
 """
 How many times I called you?
 How many times?
@@ -148,7 +329,7 @@ I wanna feel your heart tonight
 """,
 
 
-"86 min  | MYSTERIOUS ART - Humunkulus - Men Of Glass":
+"MYSTERIOUS ART - Humunkulus - Men Of Glass":
 """
 ...
 genes 
@@ -194,7 +375,7 @@ I hear a voice who is telling me:
 
 
 
-"48 min  | NORD EST - Overnight - Extended":
+"NORD EST - Overnight - Extended":
 """
 
 I wanna party all night!
@@ -206,7 +387,7 @@ OH OH OH OVERNIGHT!
 """,
 
 
-"41 min  | OFRA HAZA - Im Nin' Alu - Played In Full Mix 2":
+"OFRA HAZA - Im Nin' Alu - Played In Full Mix 2":
 """
 Im nin'alu daltei n'divim
 Daltei marom lo nin'alu
@@ -256,12 +437,12 @@ Miziv k'veido loveshim
 El Chai
 """,
 
-"31 min  | JAN HAMMER - Crockett's Theme - Ben Liebrand Vice Hammer Dmc Mix":
+"JAN HAMMER - Crockett's Theme - Ben Liebrand Vice Hammer Dmc Mix":
 """
   [Instrumental (with Miami Vice Samples)]
 """,
 
-"20 min  | WISH KEY - Last Summer - Remix 87" :
+"WISH KEY - Last Summer - Remix 87" :
 """
 I remember all the sweet sensation
 That last summer gave my heart
@@ -316,7 +497,7 @@ I remember love season
 """,
 
 
-"17 min  | STEVE EDEN & PAUL JAMES - Memories Emotion" :
+"STEVE EDEN & PAUL JAMES - Memories Emotion" :
 """
 
 We both turn on this way
@@ -374,7 +555,7 @@ We feel a new emotion now
 
 """,
 
-"80 min  | LUZON - The Baguio Track - Chus & Ceballos Iberican Remix" :
+"LUZON - The Baguio Track - Chus & Ceballos Iberican Remix" :
 """
 Samaj Aya golden Kahan hai
 Isne sirf ek galti ki thi Sher uda Diya tha
@@ -385,7 +566,7 @@ Jama karwa do
 """,
 
 
-"76 min  | LIL MO' YIN YANG - Reach - Little More Mix ":
+"LIL MO' YIN YANG - Reach - Little More Mix ":
 """
 Oh daddy between ..
 [repeat]
@@ -399,7 +580,7 @@ Reach [repeat]
 """,
 
 
-"102 min | HELDER - Ladies Night - Live":
+"HELDER - Ladies Night - Live":
 
 """
 Vamos subir agora! 
@@ -829,33 +1010,44 @@ requests_hdr1 = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.
            'Accept-Language': 'en-US,en;q=0.8',
            'Connection': 'keep-alive'}
            
-           
+requests_hdr2 = {
+       'User-Agent': 'Mozilla/5.0 (Macintosh; Intel'
+       'Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, '
+       'like Gecko) Chrome/55.0.2883.95 Safari/537.36'
+       }
+       
+requests_hdr2= { 'User-Agent' : 'Mozilla/5.0' }
+ 
+ 
 
 try:
   from urllib.parse import quote_plus
 except ImportError:
   from urllib import quote_plus
 
-    
+  
+#  https://genius.com/modern-talking-brother-louie-lyrics
+#  https://genius.com/modern-talking-brother-louie-98-lyrics
+  
 class Backend(object):
   def __init__(self):
     pass
       
     
   def download(self, url):
-    requests_hdr2 = {
-           'User-Agent': 'Mozilla/5.0 (Macintosh; Intel'
-           'Mac OS X 10_12_1) AppleWebKit/537.36 (KHTML, '
-           'like Gecko) Chrome/55.0.2883.95 Safari/537.36'
-           }
-           
-    requests_hdr2= { 'User-Agent' : 'Mozilla/5.0' }       
-           
-    html = requests.get(url, headers=requests_hdr2).text
-    
-    if "popular" in html:
-        print("warning: triggered SPAM protection in %s" % (self.name))
-    
+    global requests_hdr1, requests_hdr2, opts
+
+    html = requests_get(url, headers=requests_hdr2, timeout=5)
+    if opts.save_html:
+      ml_to_file(html, "site.html")
+
+    if "too popular" in html.lower():
+      print("warning: triggered SPAM protection in %s" % (self.name))
+      print("url: %s" % (url))
+      if not opts.continue_on_spam:
+        print(html)
+        sys.exit(1)
+        
     soup = BeautifulSoup(html, "lxml")
     
     
@@ -873,39 +1065,79 @@ class Backend(object):
     raw_list = [str(a) for a in raw_list ]
     
     raw_lyrics = "\n".join(raw_list)
-    #print(raw_lyrics)
+    #if opts.very_debug:
+    #  print(raw_lyrics)
+    
+    
     lyrics = raw_lyrics
-    lyrics = re.sub(r"<[^<>]*>", '', lyrics)   # Remove HTML tags
+    #print(lyrics)
+    lyrics = re.sub(r"<[^<>]*>", self.replace_span, lyrics)   # Remove HTML tags
     #lyrics = lyrics[1:len(raw_lyrics)-1]   # remove list chars
     
     if sys.version_info < (3, 0):
       lyrics = re.sub(r"\\n", '\n', lyrics)
       
+    #print(lyrics)
     lines = ml_clean_runs_of_empty_lines(lyrics)
-    print("len lines: %d" % (len(lines)))
-    #print("lines:\n", lines)
+    #print(lines)
+    
+    printd(opts, "len lines: %d" % (len(lines)))
+    
     return lines
     
-
-       
-   
     
- # see also www.songlyrics.com 
- 
 class Genius(Backend):
   def __init__(self):
     self.name="genius"
     self.google_st="genius lyrics"
-    self.url_start="https://genius.com"
+    self.url_start="genius.com"
+    self.replace_span=""
+
     self.scrape_what="div"
     self.scrape_attrs={'class': 'lyrics'}
       
+
+class SongLyrics(Backend):
+  def __init__(self):
+    self.name="songlyrics"
+    self.google_st="songLyrics"
+    self.url_start="www.songlyrics.com"
+    self.replace_span=""
+
+    self.scrape_what="p"
+    self.scrape_attrs={'id':'songLyricsDiv'}
+
+    
+class Lyrics24(Backend):
+  def __init__(self):
+    self.name="lyrics24"
+    self.google_st="lyrics-24"
+    self.url_start="www.lyrics-24.com"
+    self.replace_span="\n"
+
+    self.scrape_what="div"
+    self.scrape_attrs={'class':'row text-row'}
+
+        
+    
+class Decoda(Backend):
+  def __init__(self):
+    self.name="decoda"
+    self.google_st="decoda lyrics"
+    self.url_start="decoda.com"
+    self.replace_span="\n"
+
+    self.scrape_what="div"
+    self.scrape_attrs={'id': 'lyrics-output'}
+     
       
 class FlashLyrics(Backend):
   def __init__(self):
     self.name="flashlyrics"
     self.google_st="flashlyrics"
-    self.url_start="https://www.flashlyrics.com"
+    self.url_start="www.flashlyrics.com"
+    self.replace_span=""
+
     self.scrape_what="div"
     self.scrape_attrs={'class': 'main-panel-content'}
     
@@ -915,26 +1147,33 @@ class MusixMatch(Backend):
   def __init__(self):
     self.name="musixmatch"
     self.google_st="musixmatch"
-    self.url_start="https://www.musixmatch.com"
+    self.url_start="www.musixmatch.com"
+    self.replace_span=""
 
-    self.scrape_what="span"
-    self.scrape_attrs={'class':'lyrics__content__ok'}
+    
+    #self.scrape_what="span"
+    #self.scrape_attrs={'class':'lyrics__content__ok'}
+    self.scrape_what="p"
+    self.scrape_attrs={'class':'mxm-lyrics__content'}
+    
 
 class LyricsWorld(Backend):
   def __init__(self):
     self.name="lyricsworld"
     self.google_st="lyricsworld"
-    self.url_start="https://lyricsworld.ru/"
+    self.url_start="lyricsworld.ru"
 
     self.scrape_what="p"
     self.scrape_attrs={'id':'songLyricsDiv', 'class':'songLyricsV14'}
+    self.replace_span=""
 
     
 class LyricsFreak(Backend):
   def __init__(self):
     self.name="LyricsFreak"
     self.google_st="LyricsFreak"
-    self.url_start="https://www.lyricsfreak.com/"
+    self.url_start="www.lyricsfreak.com"
+    self.replace_span=""
 
     self.scrape_what="div"
     self.scrape_attrs={'class':'lyrictxt js-lyrics js-share-text-content'}
@@ -944,9 +1183,16 @@ class MetroLyrics(Backend):
   def __init__(self):
     self.name="metrolyrics"
     self.google_st="metrolyrics"
-    self.url_start="http://www.metrolyrics.com"
+    self.url_start="www.metrolyrics.com"
 
-  def scrape(self, url):
+    self.replace_span=""
+
+    self.scrape_what="div"
+    self.scrape_attrs={'class':'hwx'}
+    
+  def scrape2(self, url):
+    # note: this needs a dedicated scraper because it has extra text inside the lyrics
+    
     soup = self.download(url)
   
     raw_lyrics = (soup.findAll('p', attrs={'class': 'verse'}))
@@ -983,7 +1229,7 @@ class Track(object):
 
     ### Artist: loose
     # remove synergies, singers, etc
-    print(self.artist)
+    #print(self.artist)
     
     self.artist = re.sub(r" vs .*", " ", self.artist)
     self.artist = re.sub(r"vs\..*", " ", self.artist)
@@ -1015,7 +1261,30 @@ class Track(object):
 
     return self
     
-     
+
+   
+def printv(opts, *args, **kwargs):
+    """ 
+    prints a debug message to the debug buffer
+    
+    optionally prints it immediate on the screen as well.
+    """
+
+    # sprintf style string building
+    buf = StringIO()
+    buf.write("debug: ")
+    buf.write(*args, **kwargs)
+    buf.write("\n")
+    st = buf.getvalue()
+    
+    if opts.verbose:
+        print_nonl("%s" % st)
+
+    if not "debug_buf" in opts:
+      opts.debug_buf = StringIO()
+    
+    opts.debug_buf.write(st)
+    
     
 def printd(opts, *args, **kwargs):
     """ 
@@ -1034,6 +1303,10 @@ def printd(opts, *args, **kwargs):
     if opts.debug:
         print_nonl("%s" % st)
 
+    if not "debug_buf" in opts:
+      opts.debug_buf = StringIO()
+    
+        
     opts.debug_buf.write(st)
 
     
@@ -1069,20 +1342,91 @@ def check_link_is_correct(opts, artist, title, link, loose_artists=True):
   
     if link.find(item) == -1:
       printd(opts, "field not found: %s" % (item) )
-      dprint(opts, "field not found in link: %s" % (item) )
+      printd(opts, "field not found in link: %s" % (item) )
       return False
       
   return True
-        
+
+from configparser import ConfigParser
+
+  
+class google_cse():
+  def __init__(self):
+    """
+    python wrapper:   https://github.com/psolin/csepy
+    
+    to use, create this file:
+      $HOME/.google_cse/google_cse.ini
+        [cse]
+        cse_key=<your cse key>
+        api_key=<your api key>
+
+    info:
+      https://towardsdatascience.com/current-google-search-packages-using-python-3-7-a-simple-tutorial-3606e459e0d4
+      https://stackoverflow.com/questions/37083058/programmatically-searching-google-in-python-using-custom-search
+  
+    """
+  
+  
+    """
+    cse:
+      new: https://cse.google.com/cse/create/new
+      help: https://developers.google.com/custom-search/v1/site_restricted_api
+      user url: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb
+      management: https://console.developers.google.com/apis/api/customsearch/overview?project=22254433430 
+    
+    lyrics project:
+      https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=lyrics-searcher
+      
+    keys:
+      cse_key="012302401370948303102:jbp3hqb2hjb"
+      api_key="AIzaSyAriTjwR8OvnEB-wVmLY8R0wyAgk9Vor1c"
+    """
+
+    
+    self.config_file = "home/pestrela/.google_cse/google_cse.ini"
+    self.config = ConfigParser.read(self.config_file)
+    self.cse_key = self.config['cse']['cse_key']
+    self.api_key = self.config['cse']['api_key']
+    
+    self.service = google_build_query(
+      "customsearch", "v1", developerKey=self.api_key)
+    
+  def query(self, st, num=10, **kwargs):
+    global opts
     
     
+    query_results = query_service.cse().list(
+      q=st,    # Query
+      cx=cse_id,  # CSE ID
+      **kwargs    
+      ).execute()
+    items = query_results['items']
+    return items
+    
+    
+my_results_list = []
+my_results = google_query("alan ross valentino mon amour",
+                          google_api_key, 
+                          google_cse_id, 
+                          )
+for result in my_results:
+    my_results_list.append(result['link'])
+    print(result['link'])
+    
+sys.exit(1)
+    
+    
+  
 def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
   global requests_hdr1, requests_hdr2
   
   if backends is None:
     # todo: make this an option as well
     
-    backends = [Genius, MusixMatch, MetroLyrics, LyricsWorld, FlashLyrics, LyricsFreak]
+    backends = [Genius, MusixMatch,  LyricsWorld, FlashLyrics, LyricsFreak, Decoda, SongLyrics, Lyrics24]
+    removed = MetroLyrics
+
     #backends = [LyricsWorld]
     #backends = [FlashLyrics]
     
@@ -1099,6 +1443,12 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     backends = [FlashLyrics]
   elif opts.custom_backends == "lf":
     backends = [LyricsFreak]
+  elif opts.custom_backends == "de":
+    backends = [Decoda]
+  elif opts.custom_backends == "sl":
+    backends = [SongLyrics]
+  elif opts.custom_backends == "24":
+    backends = [Lyrics24]
     
     
     
@@ -1118,71 +1468,115 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
   track = track.set_track(_artist, _title)
 
   printd(opts, "Reduced search: %s - %s" % (track.artist, track.title))
-  #sys.exit(1)
+  
+  
+  
+  ######### search engine
+  # https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters
+  # https://fossbytes.com/google-alternative-best-search-engine/
+  if opts.search_engine == "bing":
+    url = 'http://www.bing.com/search?count=50&q='
+    url = 'http://www.bing.com/search?q='
+    #url = "http://duckduckgo.com/?ia=web&q="
+    #url = "http://search.yahoo.com/search?p="
+    
+  elif opts.search_engine == "startpage":
+    url="https://www.startpage.com/do/search?q="
+    
+  elif opts.search_engine == "google":
+    url = 'http://www.google.com/search?num=50&q='
+    url = 'https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb&num=50&q='
+    
+  
+  else:
+    die("Unknown search provider: %s" % (opts.search_engine))
+
+    
+  to_search = '"lyrics" %s %s ' % (track.artist, track.title)
+
+  printd(opts, "To search in %s: %s" % (opts.search_engine, to_search))
+  to_search = quote_plus(to_search)
+  
+  url = url + to_search
+  printd(opts, "Search engine URL: %s " % (url))
+
+  opts.debug_cache_google = True
+  #opts.debug_cache_google = False
+  if opts.debug_cache_google:
+    printd(opts, "Loading google results from cache")
+    result = file_to_ml("google.html") #, debug=True)
+  else:
+    result = requests_get(url, headers=requests_hdr2, timeout=5)
+    
+    
+  result = RString(result)
+ 
+  if "systems have detected unusual traffic" in result.lower():
+    print("warning: triggered SPAM protection in GOOGLE")
+    print("url: %s" % (url))
+    ml_to_file(result, "google.html")
+    sys.exit(1)
+
+  if opts.save_html:
+    ml_to_file(result, "google.html")
+    
   
   track.found = State.not_found
   for back in backends:
-    time.sleep(0.1)
   
     backend = back()
     printd(opts, "")
     printd(opts, "Doing Backend: %s" % backend.name)
-    
-    # Google for Lyrics
-    search_name = "%s %s %s" % (track.artist, track.title, backend.google_st)
 
-    printd(opts, "To search in Google: %s" % (search_name))
-    name = quote_plus(search_name)
-  
-    url = 'http://www.google.com/search?q=' + name
-    printd(opts, "Google URL: %s " % (url))
+    regexp=r"http[s]*://"+backend.url_start+'/.*?"'
+    links=[]
+    for link in result.re_findall(regexp):
+      link = link.lower()[:-1]           # Remove final "
+      link = re.sub(r"&.*", '', link)    # Remove PHP stuff
+      links.append(link)
+      
+    links = set(links)    # remove duplicates
+    #printd(links)
 
-    result = requests.get(url, headers=requests_hdr1).text
-    link_start = result.find(backend.url_start)
+    #die()
+      
+    for link in links:
+      printd(opts, "Considering this link: %s" % (link))
 
-    
-    
-    if(link_start == -1):
-      printd(opts, "track not found on %s" % (backend.name) )
-      #printd(opts, result)
-      continue
+      link_correct = check_link_is_correct(opts, track.artist, track.title, link)
 
+      if not link_correct :
+         printd(opts, "Link exists, but its for the wrong track: %s" % (link) )
+         continue
+
+      ##### Scrape it   
+      
+      if opts.dry_run:
+        print("Exiting because of dry_run")
+        break
+
+      printd(opts, "Link accepted, going to scrape: %s" % (link) )
         
-    link_end = result.find('"', link_start + 1)
-    link = result[link_start:link_end].lower()
-    link = re.sub(r"&.*", '', link)    # Remove PHP nonesense
+      track.lyrics = backend.scrape(link)
 
-    printd(opts, "Considering this link: %s" % (link))
-
-    link_correct = check_link_is_correct(opts, track.artist, track.title, link)
-
-    if not link_correct :
-       printd(opts, "Link exists, but its for the wrong track: %s" % (link) )
-       continue
-
-    ##### Scrape it   
+      printd(opts, "Backend %s found %s lines" % (back, len(track.lyrics)))
+      
+      #sys.exit(1)  
     
-    if opts.dry_run:
-      print("Exiting because of dry_run")
+      if len(track.lyrics) <= 2:
+        track.found = State.instrumental 
+        # continue searching in this case!
+        continue                               
+        
+      else:
+        track.found = State.found 
+        break
+      
+    if track.found == State.not_found:
+      printd(opts, "link not found: %s" % (regexp))
+      
+    if track.found == State.found:
       break
-
-    printd(opts, "Link accepted, going to scrape: %s" % (link) )
-      
-    track.lyrics = backend.scrape(link)
-
-    printd(opts, "Backend %s found %s lines" % (back, len(track.lyrics)))
-    
-    #sys.exit(1)  
-  
-    if len(track.lyrics) <= 2:
-      track.found = State.instrumental 
-      # continue searching in this case!
-      continue                               
-      
-    else:
-      track.found = State.found 
-      break
-      
 
     
   ###########  
@@ -1190,7 +1584,7 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
 
   write_debug = False
   if track.found == State.found:
-    print("       [FOUND in %s]" % (backend.name) )
+    printv(opts, "       [FOUND in %s]" % (backend.name) )
   
   elif track.found == State.instrumental:
     print("      [INSTRUMENTAL]" )
@@ -1204,6 +1598,8 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     track.lyrics = ["[NA]"]
     write_debug = True
     
+    #print(result)
+    
   else:
     die("Unknown state")
     
@@ -1215,6 +1611,8 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
   for watermark in watermarks:
     track.lyrics = [a for a in track.lyrics if a != watermark ] 
       
+  time.sleep(opts.sleep)
+      
   return track
   
 
@@ -1224,20 +1622,27 @@ def get_lyrics_oneline(opts, raw_line, **kwargs):
 
   line = RString(raw_line)
   if "|" in line: 
-    line = line.split("|")[1]
+    line = line.split("|")[1].strip()
+  
+  if line in exception_table.keys():
+    line = exception_table[line]
+    print("   Warning: found translation. Now considering: '%s'" % (line))
+    
+  else:
+    printd(opts, "Track not found on the exception table: '%s'" % (line))
 
+    
   artist = line.split("-")[0]
   title = line.split("-")[1]
-
-  if raw_line in custom_table.keys():
-    print("Warning: using custom lyrics: %s" % (raw_line))
+  
+  if line in custom_table.keys():
+    print("   Warning: found track in local lyrics database: '%s'" % (raw_line))
   
     track = Track()
     track = track.set_track(artist, title)
     track.found = State.found 
-    track.lyrics = custom_table[line_raw].split('\n')
+    track.lyrics = custom_table[line].split('\n')
     return track
-  
   
   return get_lyrics2(opts, artist, title)
 
@@ -1248,10 +1653,14 @@ def get_lyrics_oneline(opts, raw_line, **kwargs):
     
 
 parser = argparse.ArgumentParser(description='find lyrics from tracklists')
-parser.add_argument('file_in', type=str, nargs='?',
+parser.add_argument('file_in', type=str, nargs="?",
                     help='Specify basename for all files')
 parser.add_argument('-d', dest="debug", default=False, action='store_true',
                     help='Shows all debug messages to screen and error channel')
+                    
+parser.add_argument('-v', dest="verbose", default=False, action='store_true',
+                    help='Shows verbose messages to the screen and error channel')
+                    
 parser.add_argument('-D', dest="debug_if_notavailable", default=False, action='store_true',
                     help='Shows URLs when not found in screen as well (its always printed to "failed" file')
                     
@@ -1261,7 +1670,6 @@ parser.add_argument('-P', dest="do_pause_all", default=False, action='store_true
 parser.add_argument('-p', dest="do_pause_failed", default=False, action='store_true',
                     help='pause between FAILED tracks')
 
-                    
                     
 parser.add_argument('-I', dest="debug_instrumentals", default=True, action='store_false',
                     help='skip debugging instrumentals')
@@ -1284,14 +1692,43 @@ parser.add_argument('-b', '--back', '--backend', dest="custom_backends", type=st
                     help='custom_backends: MM, GE, ML, LW, FL ')
 
                     
+parser.add_argument('-n', '--max', dest="max_tracks", default=0, type=int,
+                    help='maximum number of tracks to process')
+
+                    
+parser.add_argument('--continue_on_spam', '--spam', dest="continue_on_spam", default=False, action="store_true",
+                    help='exit on spam detection')
+
+parser.add_argument('--debug_cache_google', dest="debug_cache_google", default=False, action="store_true",
+                    help='read google results from a file')
+                    
+parser.add_argument('--save_html', dest="save_html", default=False, action="store_true",
+                    help='save intermediate html to files')
+
+
+                    
 opts = parser.parse_args()
 
-n = 0
-max = 332
+opts.search_engine = "google"
+#opts.search_engine = "bing"
+#opts.search_engine = "startpage"
 
+n = 0
+
+
+  
+
+if opts.file_in == None:
+  die("Please input positional argument")
+
+if opts.do_one_track:
+  opts.debug = True
+  
 if opts.debug:
   opts.debug_if_notavailable = True
-
+  opts.save_html = True
+  
+print(opts.save_html)  
   
 if opts.do_one_track:
   opts.debug = True
@@ -1304,18 +1741,21 @@ if opts.do_one_track:
   sys.exit(0)
   
   
-opts.file_out_l = Path(opts.file_in).with_suffix(".lyrics")
-opts.file_out_e = Path(opts.file_in).with_suffix(".lyrics_error")
+opts.file_in = DPath(opts.file_in).with_suffix(".txt")
+opts.file_out_l = DPath(opts.file_in).with_suffix(".lyrics")
+opts.file_out_e = DPath(opts.file_in).with_suffix(".lyrics_error")
 opts.any_failure = False
 #opts.error_channel = StringIO()
 
 
 
+    
+
 with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, open(opts.file_out_e, 'w') as error_channel:
   opts.error_channel = error_channel
   
   for line_raw in file_in.readlines():
-    dprint(opts, "read line_raw: %s" % (line_raw))
+    #printd(opts, "read line_raw: %s" % (line_raw))
     
     
     line_raw = line_raw.strip()
@@ -1324,38 +1764,29 @@ with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, o
     if not line_raw.re_search("min +[|] "):
       continue
     
-    if line_raw in exception_table.keys():
-      line_translated = exception_table[line_raw]
-      print("Warning: replaced exception with: %s" % (line_raw))
-      #sys.exit(1)
-      
-    else:
-      dprint(opts, "Track not found on the exception table")
-      line_translated = line_raw
-
-      
-    #sys.exit(1)
   
     n = n + 1
-    if n > max:
+    if opts.max_tracks and (n > opts.max_tracks):
       break
 
-    print_nonl("%s" % (line_raw))
+    print("%s" % (line_raw))
 
     
-    track = get_lyrics_oneline(opts, line_translated)
+    track = get_lyrics_oneline(opts, line_raw)
 
     # dump final output to file
-    print("\n%s\t.\n" % (line_raw), file=out_channel)
+    print("\n%s\n\t.\n" % (line_raw), file=out_channel)
     for line in track.lyrics:
       if opts.add_dots_empty_lines:
         if line == "":
-          line = "\t."
+          line = "."
     
+      # add final tab per line
       print("\t%s" % (line), file=out_channel)
 
     print("\t.\n", file=out_channel)
     
+    #print(opts.do_pause_all )
     if opts.do_pause_all or (opts.do_pause_failed and track.found == State.not_found):
       pause()
     
@@ -1364,7 +1795,7 @@ with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, o
     
 # remove final error file if no errors
 if not opts.any_failure:
-    Path(opts.file_out_e).unlink()
+    DPath(opts.file_out_e).unlink()
 
     
 print("\n\nAll Done")

@@ -241,6 +241,15 @@ def generate_cue(file_music, input_tl, input_cue):
       tl2.extend([".", "."])
       write_file(opts.file_tl, tl2)
       
+      tl2_simple=tl.copy()
+      tl2_simple = [ a for a in tl2_simple if a != "." ]
+      #tl2_simple = [ a.replace("|", "-") for a in tl2_simple ]
+      #tl2_simple = [ "-".join(a.split("-")[1:]) for a in tl2_simple ]
+      write_file(opts.file_tl_simple, tl2_simple)
+      
+      
+      
+      
       if not os.path.exists(opts.file_info):
         simple_info=[ "Part XX of my XXXX Trance series.",
 "Fully timestamped tracklist on the first comment of this post.", 
@@ -376,6 +385,7 @@ def process_one_set(opts):
     
   opts.file_cue = "%s.cue" % file_base
   opts.file_tl = "%s.txt" % file_base
+  opts.file_tl_simple = "%s.tracklist" % file_base
   opts.file_info = "%s.nfo" % file_base
 
   if opts.cuefile:
