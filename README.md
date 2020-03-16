@@ -46,23 +46,24 @@ You can also download all files and see the lyrics.
   * https://www.mixcloud.com/t-friends
 
 * Live Recordings (Top-40 and 80s)
-  * https://www.mixcloud.com/dj_esttela_dj_camel
+  * https://www.mixcloud.com/dj_estrela_dj_camel
 
 ## Music Downloads:
 * MP3 Downloads:
   * https://hearthis.at/djestrela/
+  
 * Tracklist & Lyrics:
   * https://github.com/pestrela/music/tree/master/tracklists
     
 ## Traktor Mappings    
 * DDJ-1000:
-  * https://github.com/pestrela/music/tree/master/traktor/mapping_ddj_1000
+  * https://maps.djtechtools.com/mappings/9279
   
 * DDJ-SX2/SZ/SRT:
-  * https://github.com/pestrela/music/tree/master/traktor/mapping_ddj_sx2_sz_srt
+  * https://maps.djtechtools.com/mappings/9222
   
 * Akai AMX:
-  * https://github.com/pestrela/music/tree/master/traktor/mapping_akai_amx
+  * https://maps.djtechtools.com/mappings/9323
   
 * Traktor knowledge base
   * https://github.com/pestrela/music/blob/master/traktor/README.md
