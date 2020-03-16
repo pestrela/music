@@ -29,8 +29,8 @@ This repository contains my Blog posts, my Scripts and my DJ Mappings
   
 # DJ Estrela - Mixes and Mappings
 
-My site contain the links to all my mixes, per style.
-You can also download all files and see the lyrics.
+My site https://djestrela.com/ contains direct links to all my mixes and live recordings.\
+You can also download all mp3s, and see the complete lyrics.
 
 ## Music Mixes
 * Trance Mixes:
