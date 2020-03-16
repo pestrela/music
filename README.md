@@ -1,8 +1,10 @@
 
+# DJ Estrela - Github home
+
 This repository contains my Blog posts, my Scripts and my DJ Mappings 
 
 * [Blog posts](traktor/README.md)
-  * My knowledge-base with a lot of technical information useful for DJs
+  * Start here. This is my knowledge-base with a lot of technical information useful for DJs
   
 * [Traktor Tools](traktor)
   * Contains my Mapppings, Scripts, Tools, and Converters for Traktor
@@ -13,14 +15,41 @@ This repository contains my Blog posts, my Scripts and my DJ Mappings
 * [Picture Sets](pic_sets)
   * Picture collections of DJ gear, Dj Cakes, and Digital DJ Tips Guides
   
-* [Yearly Census graphs](census graphs)
+* [Yearly Census graphs](census_graphs)
   * Graphs over time of the DJtechtools and DigitalDJTips yearly census
 
 * [Flac Tester](flac_tester)
-  * Tagging the lossy mp3 cutoff into the file itself (either metadata or filename)
+  * Tagging the lossy mp3 cutoff value into the file itself
 
 * [Downloads Scripts](downloads)
   * Wrappers for useful Download tools. 
   
 * [AutoHotKey scripts](downloads/AutoHotkey.ahk)
   * Script to add useful shortcuts to Windows (eg: search in youtube)
+  
+# DJ Estrela - Mixes
+
+My site contain the links to all my mixes, per style.
+You can also download all files and see the lyrics.
+  
+* Trance Mixes:
+  * https://www.mixcloud.com/dj_estrela/
+
+* House Mixes:
+  * https://www.mixcloud.com/dj_estrela_house
+  
+* 80s Mixes:
+  * https://www.mixcloud.com/dj_estrela_80s
+
+* Live Recordings (Trance):  
+  * https://www.mixcloud.com/t-friends
+  
+* Live Recordings (Commercial and 80s)
+  * https://www.mixcloud.com/dj_esttela_dj_camel
+  
+* Tracklist & Lyrics:
+  * https://github.com/pestrela/music/tree/master/tracklists
+  
+* Mixes Downloads:
+  * https://hearthis.at/djestrela/
+  
