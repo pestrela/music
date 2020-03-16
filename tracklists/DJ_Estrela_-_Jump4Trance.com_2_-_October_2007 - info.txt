@@ -1,0 +1,148 @@
+DJ Estrela LIVE @ JUMP4TRANCE 2 - 27 Outubro 2007 - Pq. Nações, Lisbon
+Mixed by: DJ Estrela (Pedro Estrela)
+Email:    Pedro.Estrela@gmail.com
+Website:  www.djestrela.com
+Date:     27/October/2007
+
+
+NOTES:
+------
+Feedback is always welcome (pedro.estrela@gmail.com)!
+Please rate/feedback this mix after leeching!!!
+
+All my sets are encoded in one large .mp3 file + .cue file. 
+Use the .cue to separate the tracks in winamp, and to record this mix to an audio CD.
+Details: http://www.djestrela.com
+
+Check my previous Sets in this link, or use the E2DK links below  
+http://www.djestrela.com
+
+
+TrackList:
+----------
+
+1st Hour: 
+
+01 - PAUL VAN DYK Feat Rea - Let Go 
+02 - CASSANDRA FOX - Touch Me - MIKE KOGLIN VS JONO GRANT Remix 
+03 - BINARY FINARY - 1999 - Kaycee Remix 
+04 - MARK OTTEN Vs CARRIE SKIPPER - Time Is So Serene - Armin Edit 
+05 - BBE - Seven Days And One Week - Ferry Corsten Remix 
+
+06 - PAUL VAN DYK - For An Angel - E-Werk Club Mix 
+07 - DELIRIUM - Silence - Tiesto ISOS Remix 
+08 - ABOVE AND BEYOND - Good For me - Club mix 
+09 - ABOVE AND BEYOND - Tri State - Robert Nickson Remix 
+10 - FILO AND PERI - Anthem 
+
+11 - SUNLOUNGER - White Sand     
+
+
+2nd Hour: 
+
+12 - RIDGEWALKERS - Find - Andy Moor Remix 
+13 - SYNERGY - Hello Strings 
+14 - BREAKFAST - The Sunlight - Original 
+15 - ARMIN VAN BUUREN - Shivers - Alex Morph Dub 
+16 - RONSKI SPEED - The Space We Are - John O Callaghan Remix 
+
+17 - SEAN TYAS - Drop 
+18 - NITROUS OXIDE - North Pole 
+19 - GALEN BEHR VS HYDROID - Carabella - Galen Behr Vs Orjan Remix 
+20 - JOHN O CALLAGAHN - Big Sky - AGNELLI AND NELSON remix 
+21 - NU NRG - Butterfly - Original
+22 - ID - ID 
+
+Cue File:
+---------
+TITLE "DJ Estrela LIVE @ JUMP4TRANCE 2 - 27 Outubro 2007 - Pq. Nações, Lisbon"
+FILE "DJ_Estrela_-_Jump4Trance.com_2_-_October_2007.mp3" MP3
+  TRACK 01 AUDIO
+    TITLE "Let Go "
+    PERFORMER "PAUL VAN DYK Feat Rea"
+    INDEX 01 00:00:00
+  TRACK 02 AUDIO
+    TITLE "Touch Me - MIKE KOGLIN VS JONO GRANT Remix "
+    PERFORMER "CASSANDRA FOX"
+    INDEX 01 06:24:42
+  TRACK 03 AUDIO
+    TITLE "1999 - Kaycee Remix "
+    PERFORMER "BINARY FINARY "
+    INDEX 01 11:33:16
+  TRACK 04 AUDIO
+    TITLE "Time Is So Serene - Armin Edit "
+    PERFORMER "MARK OTTEN Vs CARRIE SKIPPER "
+    INDEX 01 18:00:61
+  TRACK 05 AUDIO
+    TITLE "Seven Days And One Week - Ferry Corsten Remix "
+    PERFORMER "BBE"
+    INDEX 01 23:37:04
+  TRACK 06 AUDIO
+    TITLE "For An Angel - E-Werk Club Mix "
+    PERFORMER "PAUL VAN DYK"
+    INDEX 01 27:06:40
+  TRACK 07 AUDIO
+    TITLE "Silence - Tiesto ISOS Remix "
+    PERFORMER "DELIRIUM "
+    INDEX 01 32:47:00
+  TRACK 08 AUDIO
+    TITLE "Good For me - Club mix "
+    PERFORMER "ABOVE AND BEYOND "
+    INDEX 01 41:06:50
+  TRACK 09 AUDIO
+    TITLE "Tri State - Robert Nickson Remix "
+    PERFORMER "ABOVE AND BEYOND "
+    INDEX 01 45:57:59
+  TRACK 10 AUDIO
+    TITLE "Anthem "
+    PERFORMER "FILO AND PERI "
+    INDEX 01 50:00:55
+  TRACK 11 AUDIO
+    TITLE "White Sand     "
+    PERFORMER "SUNLOUNGER "
+    INDEX 01 56:04:07
+  TRACK 12 AUDIO
+    TITLE "Find - Andy Moor Remix "
+    PERFORMER "RIDGEWALKERS "
+    INDEX 01 60:60:37
+  TRACK 13 AUDIO
+    TITLE " Hello Strings "
+    PERFORMER "SYNERGY "
+    INDEX 01 66:01:17
+  TRACK 14 AUDIO
+    TITLE "The Sunlight - Original "
+    PERFORMER "BREAKFAST "
+    INDEX 01 69:25:10
+  TRACK 15 AUDIO
+    TITLE "Shivers - Alex Morph Dub "
+    PERFORMER "ARMIN VAN BUUREN "
+    INDEX 01 76:00:20
+  TRACK 16 AUDIO
+    TITLE "The Space We Are - John O Callaghan Remix "
+    PERFORMER "RONSKI SPEED "
+    INDEX 01 81:39:10
+  TRACK 17 AUDIO
+    TITLE " Drop "
+    PERFORMER "SEAN TYAS "
+    INDEX 01 85:11:28
+  TRACK 18 AUDIO
+    TITLE "North Pole "
+    PERFORMER "NITROUS OXIDE "
+    INDEX 01 90:08:34
+  TRACK 19 AUDIO
+    TITLE "Carabella - Galen Behr Vs Orjan Remix "
+    PERFORMER "GALEN BEHR VS HYDROID "
+    INDEX 01 96:00:35
+  TRACK 20 AUDIO
+    TITLE "Big Sky - AGNELLI AND NELSON remix "
+    PERFORMER "JOHN O CALLAGAHN - "
+    INDEX 01 100:09:10
+  TRACK 21 AUDIO
+    TITLE "Butterfly - Original"
+    PERFORMER "NU NRG"
+    INDEX 01 106:27:29
+  TRACK 22 AUDIO
+    TITLE "ID"
+    PERFORMER "ID"
+    INDEX 01 111:30:47
+
