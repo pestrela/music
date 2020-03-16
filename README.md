@@ -32,38 +32,38 @@ This repository contains my Blog posts, my Scripts and my DJ Mappings
 My site contain the links to all my mixes, per style.
 You can also download all files and see the lyrics.
 
-* Music Mixes
-  * Trance Mixes:
-    * https://www.mixcloud.com/dj_estrela/
+## Music Mixes
+* Trance Mixes:
+  * https://www.mixcloud.com/dj_estrela/
 
-  * House Mixes:
-    * https://www.mixcloud.com/dj_estrela_house
+* House Mixes:
+  * https://www.mixcloud.com/dj_estrela_house
+
+* 80s Mixes:
+  * https://www.mixcloud.com/dj_estrela_80s
+
+* Live Recordings (Trance):  
+  * https://www.mixcloud.com/t-friends
+
+* Live Recordings (Top-40 and 80s)
+  * https://www.mixcloud.com/dj_esttela_dj_camel
+
+## Music Downloads:
+* MP3 Downloads:
+  * https://hearthis.at/djestrela/
+* Tracklist & Lyrics:
+  * https://github.com/pestrela/music/tree/master/tracklists
+    
+## Traktor Mappings    
+* DDJ-1000:
+  * https://github.com/pestrela/music/tree/master/traktor/mapping_ddj_1000
   
-  * 80s Mixes:
-    * https://www.mixcloud.com/dj_estrela_80s
-
-  * Live Recordings (Trance):  
-    * https://www.mixcloud.com/t-friends
+* DDJ-SX2/SZ/SRT:
+  * https://github.com/pestrela/music/tree/master/traktor/mapping_ddj_sx2_sz_srt
   
-  * Live Recordings (Commercial and 80s)
-    * https://www.mixcloud.com/dj_esttela_dj_camel
-
-* Music Downloads:
-  * MP3 Downloads:
-    * https://hearthis.at/djestrela/
-  * Tracklist & Lyrics:
-    * https://github.com/pestrela/music/tree/master/tracklists
+* Akai AMX:
+  * https://github.com/pestrela/music/tree/master/traktor/mapping_akai_amx
+  
+* Traktor knowledge base
+  * https://github.com/pestrela/music/blob/master/traktor/README.md
     
-* Traktor Mappings    
-  * DDJ-1000:
-    * https://github.com/pestrela/music/tree/master/traktor/mapping_ddj_1000
-    
-  * DDJ-SX2/SZ/SRT:
-    * https://github.com/pestrela/music/tree/master/traktor/mapping_ddj_sx2_sz_srt
-    
-  * Akai AMX:
-    * https://github.com/pestrela/music/tree/master/traktor/mapping_akai_amx
-    
-  * Traktor knowledge base
-    * https://github.com/pestrela/music/blob/master/traktor/README.md
-      
