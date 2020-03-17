@@ -22,7 +22,7 @@
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
   * [How to emulate elastic beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
   
-* [BOME migration](#BOME-migration)
+* [BOME migration](#BOME-mappings-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
   * [BOME limits](#Some-Limitations-of-BOME-mappings)
@@ -463,7 +463,7 @@ Note: sometimes that site is under maintenance. Please try later in this case.
 *	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
 
 
-## What are the features of your DDJ-SX2 / DDJ-SZ / DDJ-SRT Traktor mapping?
+## What are the features of your DDJ-SX2+DDJ-SZ+DDJ-SRT Traktor mapping?
 
 **Links:**
 *	Download Link: https://maps.djtechtools.com/mappings/9222 
