@@ -51,16 +51,18 @@
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
 
 * [Free DJ Software Tools](#Free-DJ-Software-Tools)
-  * [Custom DJ Tools](#Custom-DJ-Software-Tools)
-  * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-Traktor)
-  * [How to swap Traktor configurations without the preferences window](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
-  * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
-  * [What shortcuts you added for youtube, Google and Discogs?](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+  * [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
+  * [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
+  * [Elastic beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
+  * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
+  * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
+  * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+  * [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
 
   
 * [DJ Software optimization](#DJ-Software-optimization)
-  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
-  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
+  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
+  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
   * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
   * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
   * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
@@ -137,12 +139,12 @@ See also [this blog post for more details on my workflow between DJ softwares ](
 Above I've described [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only). In this post I will describe *how* I manged to **fully automate** my workflow between DJ softwares.
 
 * **#0: File operations:** [As explained above](#why-i-manage-music-using-os-folders-only) I continuously search files, change the filenames and move the files around left and right.
-* **#1: Traktor Repair:** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair). For this I just run a mass-relocate on my whole music root folder, which refinds all moved and renames files in a single go.
+* **#1: Traktor Repair:** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate). For this I just run a mass-relocate on my whole music root folder, which refinds all moved and renames files in a single go.
 * **#2: Update collection:** The second step is just to import the whole music root folder into Traktor. As this skips previous files, in practice it only imports the New files. The last step is to delete the remaining missing files (that are really deleted - otherwise they would been found on step #1) 
 * **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](collections_without_playlists/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
 * **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
 * **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures the Rekordbox collection matches the Traktor collection.
-* **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and search for files in the whole collection. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox [still lacks a search box in OS-folders](#why-is-traktor-my-software-of-choice-b-os-search))
+* **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and search for files in the whole collection. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox [still lacks a search box in OS-folders](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists))
 * **#7: CDJ export:** I only really need playlists for CDJs. There are scripts to mass-convert all folders to DJ playlists. Then I do the usual rekordbox step to prepare USBs pens.
   * Windows version is http://samsoft.org.uk/iTunes/ImportFolderStructure.vbs; 
   * Mac version is https://dougscripts.com/itunes/scripts/ss.php?sp=droptoaddnmake; 
@@ -220,7 +222,7 @@ It features infinite variables, conditions and states; Traktor only has 8 variab
   [pad editor](https://www.youtube.com/watch?v=eT1nZVpUUr8&t=50),
   and [custom button editor](https://www.youtube.com/watch?v=nGbw2RHV_j0&t=180), all with dropdowns and chained together.
 
-See also ["Why I moved to BOME midi mapping"](#Why-I-moved-to-BOME-midi-mapping).
+See also ["Why I moved to BOME midi mapping"](#BOME-mappings-migration).
 
 
 ## Why is Traktor my software of choice: d) Hotcues move the temporary cue as well
@@ -396,7 +398,7 @@ There are the usages sorted by frequency:
 * **#2: Cueing**: / fast preview to the exact spot where the track will start
 * **#3: JogFX chains**: I do effects on the jog - see 6:32 of https://www.youtube.com/watch?v=h9tQZEHr8hk&t=392s
 * **#4: Beagrids**: by far the quickest way to adjust beatgrids on the fly
-* **#5: Scratch**: Very occasional live scratching / tricks  (see also [this post](#But-can-you-still-scratch-using-MIDI))
+* **#5: Scratch**: Very occasional live scratching / tricks  (see also [this post](#but-can-i-still-scratch-using-midi-how-much-is-the-latency-of-your-maps))
 
 What I dont use on jogs:
 * **Moving jogs**: these are cool, but not a deal-breaker for me
@@ -463,7 +465,7 @@ Note: sometimes that site is under maintenance. Please try later in this case.
 *	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
 
 
-## What are the features of your DDJ-SX2+DDJ-SZ+DDJ-SRT Traktor mapping?
+## What are the features of your DDJ-SX2 / DDJ-SZ / DDJ-SRT Traktor mapping?
 
 **Links:**
 *	Download Link: https://maps.djtechtools.com/mappings/9222 
@@ -638,13 +640,13 @@ This is the current situation as far as I tested it myself:
 
 This section groups the DJ software tools written by me, all freely available.
  
-* [DJ software tools overview](#what-software-tools-did-you-built-for-Traktor)
+* [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
+* [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
 * [Elastic beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
 * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
 * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
 * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
-* [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
-* [Programming libraries](#What-programming-libraries-did-you-author)
+* [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
 
 
 ## What software tools did you built for Traktor?
@@ -672,7 +674,7 @@ See also the CMDR editor changes.
  
 ## What features did you add to the CMDR TSI editor?
 
-The CMDR editor did not get new features for 2.5 years. In Jan 2020 I've revived this project
+The CMDR editor did not get new features for 2.5 years. In Jan 2020 I've revived this project.\
 Download: https://github.com/pestrela/cmdr/releases
 
 Highlights:
@@ -706,7 +708,6 @@ Steps:
 ---
  
 ![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
-
 
 
 ## How to swap Traktor configurations without the slow preferences window
@@ -743,8 +744,7 @@ To Activate configuration #2:
 * open traktor
 * confirm the audio card is Internal Soundcard
 * Close taktor
-  
-
+ 
  
 ## How I build perfect tracklists using CUE files
 
@@ -784,14 +784,25 @@ Overview of the Cue tools:
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
 
-## What Programming libraries did you author?
+## What Programming libraries and technical scripts did you author?
 
-* python3
-  * this is a python3 library of utilities
+Please see my open-source github repos in https://github.com/pestrela?tab=repositories
+See also my [windows shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+
+Summary:
+* **Yapu:** Yet another python libary
+  * this is a python3 library for helper wrappers, classes, etc
   * https://github.com/pestrela/yapu
-* bash
-  * TBD
-  
+* **Yabu:** Yet another bash library
+  * this is a collection of hundreds of bash scripts that wrap common 
+  * also includes a full set of bash libraries of functions
+  * https://github.com/pestrela/yabu
+* **cdd_bash:**
+  * aliases to transfer the current directory between terminal windows
+  * https://github.com/pestrela/cdd_bash
+* **smi_counter:**
+  * windows SMI counter. Useful for detect laptop DPC stalls
+  * https://github.com/pestrela/smi_counter
 
   
 ## What shortcuts you added for Youtube, Google and Discogs?
@@ -817,8 +828,8 @@ More scripts in this folder:
 
 This section covers DJ software optimization.
 
-* [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
-* [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
+* [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
+* [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
 * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
 * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
 * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
@@ -1233,7 +1244,7 @@ Pioneers stance is to keep quiet when all they had to do is replace this bracket
 The labor for the repair is most likely why they are keeping quiet. It’s just unacceptable.
 
   
-## How to replace the DDJ-1000 filter knobs with Silver knobs.
+## How to replace the DDJ-1000 filter knobs with Silver knobs
 
 Both 1000 and 1000SRT have extremely [dull filter knobs](../pics/silver_knobs/DDJ-1000RB.jpg). Which is a pity.\
 For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. This is an almost perfect fit.
