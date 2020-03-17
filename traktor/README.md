@@ -66,7 +66,7 @@
   * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
   * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
   * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
-  * [Dell XPS 15 BIOS problems](#dell-xps-15-9560-bios-smi-problems)
+  * [Dell pre-installed services issues](#dell-laptop-pre-installed-services-latency-issues)
   * [SMI hidden interrupts](#How-to-count-SMI-hidden-interrupts-in-Windows)
   * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
   * [Every possible optimization](#List-of-every-possible-performance-audio-optimization)
@@ -834,7 +834,7 @@ This section covers DJ software optimization.
 * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
 * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
 * [SMI hidden interrupts](#How-to-count-SMI-hidden-interrupts-in-Windows)
-* [Dell XPS 15 BIOS problems](#dell-xps-15-9560-bios-smi-problems)
+* [Dell pre-installed services issues](#dell-laptop-pre-installed-services-latency-issues)
 * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
 * [Every possible optimization](#list-of-every-possible-performance-audio-optimization)
 * [Traktor verbose log](#How-to-enable-Traktor-verbose-log)
@@ -937,28 +937,24 @@ DDJ-1000 specific:
 Finally, Cantabile software produced a 97 page pdf guide on audio optimization:
 https://www.cantabilesoftware.com/glitchfree/
   
-## Dell XPS 15 9560 BIOS SMI problems
+## Dell laptop pre-installed services latency issues
 
-I've [measured](https://www.dell.com/community/XPS/Dell-XPS-15-9560-BIOS-0-18-0-causes-SECONDS-of-SMI-latency-not/td-p/7477967) that latest bios lock my dell XPS 15 9560 *for whole seconds*.\
-Downgrading to a very old firmware solved this problem.
-\
-\
-Dell XPS 15 9560 BIOS versions (click "version" [here](https://www.dell.com/support/home/ie/en/iebsdt1/drivers/driversdetails?driverid=1pmdc&oscode=wt64a&productcode=xps-15-9560-laptop]))
-* 1.18.0 - 27 Dec 2019 (Battery Sweeling)
-  * **Affected**
-* 1.16.0 - 07 Aug 2019 (DPC fixes)
-  * **Affected**
-* 1.15.0 - 27 Jun 2019 (RST Manager)
-  * Not tested
-* 1.14.3 - 27 May 2019 (Dock Station WD19)
-  * Not tested
-* 1.12.1 - 23 Oct 2018 (Sleep mode resume password)
-  * **Not affected**
-\
-[Dell Ticket](https://www.dell.com/community/XPS/Dell-XPS-15-9560-BIOS-0-18-0-causes-SECONDS-of-SMI-latency-not/td-p/7477967)
-\
+If you have a Dell laptop, **beware of the services that come preinstalled with the laptop**.
+
+Specifically I've measured that "Dell SupportAssist" causes SECONDS of latency every 30 minutes, due to heavy [SMI interrupts](#How-to-count-SMI-hidden-interrupts-in-Windows)
+
+The solution is simply to disable the Dell services in "services.msc"
+
+**More details:** [smi_counter](https://github.com/pestrela/smi_counter)
+ 
+![dell_support_assist3](https://github.com/pestrela/smi_counter/blob/master/dell_support_assist3.jpg?raw=true "Dell SMI")
+
+
+
+
 ### Results
-These are the results. This issue is caused by SMI interrupts. ([blog post about SMI](#How-to-count-SMI-hidden-interrupts-in-Windows))
+These are the results. This issue is caused by SMI interrupts. 
+
 
 ![dell_smi_heavy_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
 
