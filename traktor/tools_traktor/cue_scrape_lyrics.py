@@ -30,9 +30,6 @@ from yapu.html import *
 
 from googleapiclient.discovery import build as google_build_query 
 
-google_api_key = "AIzaSyAriTjwR8OvnEB-wVmLY8R0wyAgk9Vor1c"
-google_cse_id = "012302401370948303102:jbp3hqb2hjb"
- 
 
 State = Enum('State', ['not_found', 'instrumental', 'found'])
 
@@ -1353,15 +1350,16 @@ from configparser import ConfigParser
 class google_cse():
   def __init__(self):
     """
-    python wrapper:   https://github.com/psolin/csepy
+    Python wrapper:   https://github.com/psolin/csepy
     
-    to use, create this file:
+    To use, create this file:
       $HOME/.google_cse/google_cse.ini
         [cse]
-        cse_key=<your cse key>
-        api_key=<your api key>
+        cse_key=012302401370948303102:jbp3hqb2hjb
+        api_key=<your own PRIVATE api key>
 
-    info:
+
+    Info:
       https://towardsdatascience.com/current-google-search-packages-using-python-3-7-a-simple-tutorial-3606e459e0d4
       https://stackoverflow.com/questions/37083058/programmatically-searching-google-in-python-using-custom-search
   
@@ -1369,23 +1367,22 @@ class google_cse():
   
   
     """
-    cse:
-      new: https://cse.google.com/cse/create/new
+    CSE:
+      current: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb 
+      create new: https://cse.google.com/cse/create/new
       help: https://developers.google.com/custom-search/v1/site_restricted_api
       user url: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb
       management: https://console.developers.google.com/apis/api/customsearch/overview?project=22254433430 
     
-    lyrics project:
+    Lyrics project:
       https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=lyrics-searcher
       
-    keys:
-      cse_key="012302401370948303102:jbp3hqb2hjb"
-      api_key="AIzaSyAriTjwR8OvnEB-wVmLY8R0wyAgk9Vor1c"
     """
 
     
-    self.config_file = "home/pestrela/.google_cse/google_cse.ini"
-    self.config = ConfigParser.read(self.config_file)
+    self.config_file = "/home/pestrela/.google_cse/google_cse.ini"
+    self.config = ConfigParser()
+    self.config.read(self.config_file)
     self.cse_key = self.config['cse']['cse_key']
     self.api_key = self.config['cse']['api_key']
     
@@ -1396,25 +1393,19 @@ class google_cse():
     global opts
     
     
-    query_results = query_service.cse().list(
-      q=st,    # Query
-      cx=cse_id,  # CSE ID
+    query_results = self.service.cse().list(
+      q=st,             # Query
+      cx=self.cse_key,  # CSE ID
       **kwargs    
       ).execute()
     items = query_results['items']
+    
+    items = [result['link'] for result in items]
+    #print(items)
+    
     return items
     
     
-my_results_list = []
-my_results = google_query("alan ross valentino mon amour",
-                          google_api_key, 
-                          google_cse_id, 
-                          )
-for result in my_results:
-    my_results_list.append(result['link'])
-    print(result['link'])
-    
-sys.exit(1)
     
     
   
@@ -1451,11 +1442,9 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     backends = [Lyrics24]
     
     
-    
-    
+  cse = google_cse() 
   #debug = True
 
-  
   opts.debug_buf = StringIO()
   
   printd(opts, "")
@@ -1474,52 +1463,62 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
   ######### search engine
   # https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters
   # https://fossbytes.com/google-alternative-best-search-engine/
-  if opts.search_engine == "bing":
-    url = 'http://www.bing.com/search?count=50&q='
-    url = 'http://www.bing.com/search?q='
-    #url = "http://duckduckgo.com/?ia=web&q="
-    #url = "http://search.yahoo.com/search?p="
+  if False:
+    if opts.search_engine == "bing":
+      url = 'http://www.bing.com/search?count=50&q='
+      url = 'http://www.bing.com/search?q='
+      #url = "http://duckduckgo.com/?ia=web&q="
+      #url = "http://search.yahoo.com/search?p="
+      
+    elif opts.search_engine == "startpage":
+      url="https://www.startpage.com/do/search?q="
+      
+    elif opts.search_engine == "google":
+      url = 'http://www.google.com/search?num=50&q='
+      url = 'https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb&num=50&q='
+      
     
-  elif opts.search_engine == "startpage":
-    url="https://www.startpage.com/do/search?q="
-    
-  elif opts.search_engine == "google":
-    url = 'http://www.google.com/search?num=50&q='
-    url = 'https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb&num=50&q='
-    
+    else:
+      die("Unknown search provider: %s" % (opts.search_engine))
+
+      
+    to_search = '%s %s ' % (track.artist, track.title)
+
+    printd(opts, "To search in %s: %s" % (opts.search_engine, to_search))
   
-  else:
-    die("Unknown search provider: %s" % (opts.search_engine))
-
     
-  to_search = '"lyrics" %s %s ' % (track.artist, track.title)
+    to_search = quote_plus(to_search)
+    
+    url = url + to_search
+    printd(opts, "Search engine URL: %s " % (url))
 
-  printd(opts, "To search in %s: %s" % (opts.search_engine, to_search))
-  to_search = quote_plus(to_search)
+    opts.debug_cache_google = True
+    #opts.debug_cache_google = False
+    if opts.debug_cache_google:
+      printd(opts, "Loading google results from cache")
+      result = file_to_ml("google.html") #, debug=True)
+    else:
+      result = requests_get(url, headers=requests_hdr2, timeout=5)
+      
+      
   
-  url = url + to_search
-  printd(opts, "Search engine URL: %s " % (url))
+    if "systems have detected unusual traffic" in result.lower():
+      print("warning: triggered SPAM protection in GOOGLE")
+      print("url: %s" % (url))
+      ml_to_file(result, "google.html")
+      sys.exit(1)
 
-  opts.debug_cache_google = True
-  #opts.debug_cache_google = False
-  if opts.debug_cache_google:
-    printd(opts, "Loading google results from cache")
-    result = file_to_ml("google.html") #, debug=True)
+    if opts.save_html:
+      ml_to_file(result, "google.html")
   else:
-    result = requests_get(url, headers=requests_hdr2, timeout=5)
-    
-    
+    to_search = '%s %s ' % (track.artist, track.title)
+
+    result_list = cse.query(to_search)
+    result = " ".join(result_list)
+    result = result + " "
+  
+  printd(opts, "returned from search engine: %s" % (result))
   result = RString(result)
- 
-  if "systems have detected unusual traffic" in result.lower():
-    print("warning: triggered SPAM protection in GOOGLE")
-    print("url: %s" % (url))
-    ml_to_file(result, "google.html")
-    sys.exit(1)
-
-  if opts.save_html:
-    ml_to_file(result, "google.html")
-    
   
   track.found = State.not_found
   for back in backends:
@@ -1528,7 +1527,7 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     printd(opts, "")
     printd(opts, "Doing Backend: %s" % backend.name)
 
-    regexp=r"http[s]*://"+backend.url_start+'/.*?"'
+    regexp=r"http[s]*://"+backend.url_start+'/.*? '
     links=[]
     for link in result.re_findall(regexp):
       link = link.lower()[:-1]           # Remove final "
@@ -1536,10 +1535,7 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
       links.append(link)
       
     links = set(links)    # remove duplicates
-    #printd(links)
-
-    #die()
-      
+    
     for link in links:
       printd(opts, "Considering this link: %s" % (link))
 
@@ -1728,7 +1724,6 @@ if opts.debug:
   opts.debug_if_notavailable = True
   opts.save_html = True
   
-print(opts.save_html)  
   
 if opts.do_one_track:
   opts.debug = True

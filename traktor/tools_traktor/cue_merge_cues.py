@@ -236,31 +236,47 @@ def generate_cue(file_music, input_tl, input_cue):
 
   #print(opts)
   if opts.gen_tl:
+      # detailed tracklist for comments
       tl2 = [ ".", "%s" % (file_music_base), "." ]
       tl2.extend(tl)
       tl2.extend([".", "."])
       write_file(opts.file_tl, tl2)
       
+      # simple tracklist for hearthis.at
       tl2_simple=tl.copy()
       tl2_simple = [ a for a in tl2_simple if a != "." ]
       #tl2_simple = [ a.replace("|", "-") for a in tl2_simple ]
       #tl2_simple = [ "-".join(a.split("-")[1:]) for a in tl2_simple ]
       write_file(opts.file_tl_simple, tl2_simple)
+
+      if (not os.path.exists(opts.file_info)) or (opts.regen_nfo):
+        # Todo: read from cue sheet these values
+        # https://wiki.hydrogenaud.io/index.php?title=Cue_sheet
+        
+        mixcloud_base = "dj_estrela_80s"
+        mixcloud_name = "80s-pop-cd3"
       
-      
-      
-      
-      if not os.path.exists(opts.file_info):
-        simple_info=[ "Part XX of my XXXX Trance series.",
-"Fully timestamped tracklist on the first comment of this post.", 
+        url_hearat="https://hearthis.at/djestrela/%s" % (mixcloud_name)
+        url_mixcloud="https://www.mixcloud.com/%s/%s" % (mixcloud_base, mixcloud_name)
+        url_tracklist="https://github.com/pestrela/music/blob/master/tracklists/%s" % (opts.file_tl)
+        url_lyrics="https://github.com/pestrela/music/blob/master/tracklists/%s" % (opts.file_lyrics)
+
+        url_lyrics="https://github.com/pestrela/music/blob/master/tracklists" 
+              
+        simple_info=[ "Part XX of my XXXX mix series.",
+"Tracklist and Lyrics on the first post comment.", 
 ".",
-"This set is ...",
 ".",
+"Download: %s" % (url_hearat),
+"Streaming: %s" % (url_mixcloud), 
+"Lyrics: %s" % ( url_lyrics ),
+"Previous Mixes: http://www.djestrela.com",
 ".",
-"Enjoy!"]
+]
+
 
         write_file(opts.file_info, simple_info)
-        
+      
       
   if opts.gen_cue:
       cue2 = [ "", "" ]
@@ -387,7 +403,8 @@ def process_one_set(opts):
   opts.file_tl = "%s.txt" % file_base
   opts.file_tl_simple = "%s.tracklist" % file_base
   opts.file_info = "%s.nfo" % file_base
-
+  opts.file_lyrics = "%s.lyrics" % file_base
+  
   if opts.cuefile:
     input_cue = read_file(opts.cuefile)
   else:
@@ -565,6 +582,10 @@ parser.add_argument('-n', dest="ignore_tl_num", default=True, action='store_fals
 
 parser.add_argument('-t', dest="gen_tl", default=False, action='store_true',
                     help='Redo Tracklist')
+
+parser.add_argument('-N', dest="regen_nfo", default=False, action='store_true',
+                    help='Regenerate nfo file')
+
                     
 parser.add_argument('-c', dest="gen_cue", default=False, action='store_true', 
                     help='Redo Cue file')

@@ -952,14 +952,6 @@ The solution is simply to disable the Dell services in "services.msc"
 
 
 
-### Results
-These are the results. This issue is caused by SMI interrupts. 
-
-
-![dell_smi_heavy_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_heavy_problems.jpg?raw=true "Dell SMI")
-
-
-
 ## How to count SMI (=hidden interrupts) in Windows
 
 If your whole laptop stops once in a while for several seconds - including the mouse - it can be [SMI issues](https://www.resplendence.com/latencymon_cpustalls).
