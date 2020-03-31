@@ -4,23 +4,24 @@
 This page contains my DJ knowledge base. 
 It is dozens of questions that I've answered over the years in forums and Facebook groups.
 
-These why I'm using [Traktor](#Traktor-software) instead of eg Rekordbox - and 
+These cover [why I'm using Traktor](#Traktor-software) instead of eg Rekordbox - and 
 how I've went-around the [Traktor limitations](#Which-features-I-miss-in-Traktor), 
 eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
-closely related is how I organize my music in [OS-Folders](#OS-Folders) without playlists; 
+closely related is how I [organize my files using OS-Folders only](#OS-Folders) without any playlists; 
 
 I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made [very large mappings](#Free-Mappings) free to use; 
 specific info is on the [installation processs](#How-to-install-my-Traktor-mappings) 
 and [feature demos](#can-i-see-a-demo-video-of-your-mappings). On a technical level please find I've moved to [BOME](#BOME-mappings-migration).
 
-Also described is my [Free DJ Software Tools](#Free-DJ-Software-Tools), 
+Also described is my free [DJ Software Tools](#Free-DJ-Software-Tools), 
 including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
 and many other tools for [CUE files](#how-i-build-perfect-tracklists-using-cue-files), 
 and [DJ collection conversion](#DJ-collection-converters) between softwares perfectly for free.
 
 Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization), 
-general tips for [Windows](#Windows-usage), Youtube and Disocgs [keyboard shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
-plus some [uncategorized topics](#Other-topics)
+general tips for [Windows](#Windows-usage), 
+keyboard shorcuts to [search in Youtube and Disocgs](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
+plus more [uncategorized stuff](#Other-topics)
   
 Below a detailed [table of contents](#Table-of-Contents) of the whole thing, and a [MindMap picture](#MindMap-Summary) to get you started.
 
