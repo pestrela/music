@@ -5,20 +5,26 @@ This page contains my DJ knowledge base.
 It is dozens of questions that I've answered over the years in forums and Facebook groups.
 
 These cover how I use [OS-Folders](#OS-Folders) exclusivelly, instead of making DJ playlists; 
-Why I'm using [Traktor](#Traktor-software) instead of eg Rekordbox - and 
+why I'm using [Traktor](#Traktor-software) instead of eg Rekordbox - and 
 how I've went-around the [Traktor limitations](#Which-features-I-miss-in-Traktor), eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
-My Why 
-Everything about my [Free Mappings](#Free-Mappings), 
-including [installation](#How-to-install-my-Traktor-mappings) and [demos](#can-i-see-a-demo-video-of-your-mappings),
-plus why I've moved to [BOME](#BOME-mappings-migration).
-Other topic is why I use [DDJ controllers](#Hardware-Controllers) from Pioneer.
-Also described is my [Free DJ Software Tools](#Free-DJ-Software-Tools), including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
+
+I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made very large mappings to traktor; 
+these [Mappings](#Free-Mappings) are free, and I have specific info on how its [installation](#How-to-install-my-Traktor-mappings) 
+and [feature demos](#can-i-see-a-demo-video-of-your-mappings). On a technical level please find I've moved to [BOME](#BOME-mappings-migration).
+
+Also described is my [Free DJ Software Tools](#Free-DJ-Software-Tools), 
+including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
 and many other tools for [CUE files](#how-i-build-perfect-tracklists-using-cue-files), 
-and how to [convert DJ collection](#DJ-collection-converters) between softwares perfectly for free.
-Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization), general tips for [Windows](#Windows-usage) and [other topics](#Other-topics)
+and [DJ collection conversion](#DJ-collection-converters) between softwares perfectly for free.
+
+Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization), 
+general tips for [Windows](#Windows-usage), [shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs) for youtube and discogs, 
+plus some [uncategorized topics](#Other-topics)
   
-  
-Below a detailed [table of contents](#Table-of-Contents) and a [MindMap picture](#MindMap-Summary).
+Below a detailed [table of contents](#Table-of-Contents) of the whole thing and a [MindMap picture](#MindMap-Summary) to get you started.
+
+PS: If you are looking for Trance, 80s and Top-40 music please find my online sets in my website: https://djestrela.com/
+
 
 # Table of Contents
 
