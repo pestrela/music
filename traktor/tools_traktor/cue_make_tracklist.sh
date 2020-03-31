@@ -6,7 +6,7 @@ folder="$( basename "$( pwd )" )"
 file1="${folder} - tracklist.txt"
 file3="${folder} - set notes.txt"
 
-tracklist="`ls -1 *.flac *.mp* *.MP* *.FLA*  | sed 's/\.[^.]*$//' `"
+tracklist="`ls -1 *.flac *.mp* *.MP* *.m4* *.M4* *.FLA*  | sed 's/\.[^.]*$//' `"
 
 do_tl=1
 do_set=1

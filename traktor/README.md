@@ -1,7 +1,24 @@
 
 # Start here first
 
- TBD
+This page contains my DJ knowledge base. 
+It is dozens of questions that I've answered over the years in forums and Facebook groups.
+
+These cover how I use [OS-Folders](#OS-Folders) exclusivelly, instead of making DJ playlists; 
+Why I'm using [Traktor](#Traktor-software) instead of eg Rekordbox - and 
+how I've went-around the [Traktor limitations](#Which-features-I-miss-in-Traktor), eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
+My Why 
+Everything about my [Free Mappings](#Free-Mappings), 
+including [installation](#How-to-install-my-Traktor-mappings) and [demos](#can-i-see-a-demo-video-of-your-mappings),
+plus why I've moved to [BOME](#BOME-mappings-migration).
+Other topic is why I use [DDJ controllers](#Hardware-Controllers) from Pioneer.
+Also described is my [Free DJ Software Tools](#Free-DJ-Software-Tools), including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
+and many other tools for [CUE files](#how-i-build-perfect-tracklists-using-cue-files), 
+and how to [convert DJ collection](#DJ-collection-converters) between softwares perfectly for free.
+Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization), general tips for [Windows](#Windows-usage) and [other topics](#Other-topics)
+  
+  
+Below a detailed [table of contents](#Table-of-Contents) and a [MindMap picture](#MindMap-Summary).
 
 # Table of Contents
 
@@ -40,8 +57,9 @@
     * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
     * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
   * [How to download my Traktor mappings](#How-to-download-my-Traktor-mappings)
+  * [How to install my Traktor mappings](#How-to-install-my-Traktor-mappings)
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
-  * [Can I see a video demo of your mappings?](#can-i-see-a-video-demo-of-your-mappings)
+  * [Can I see a demo video of your mappings?](#can-i-see-a-demo-video-of-your-mappings)
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
   * [Is the DDJ-1000SRT also mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
@@ -431,10 +449,21 @@ Some relevant points:
 
 ## How to download my Traktor mappings:
 
-TO DOWNLOAD: you can ONLY download my mappings from the [DJ tech tools site]().\ 
+TO DOWNLOAD: you can ONLY download my mappings from the DJ tech tools site (http://maps.djtechtools.com).\ 
 To do this you MUST register and then verify your email there.\
 
 Note: sometimes that site is under maintenance. Please try later in this case.
+
+## How to install my Traktor mappings:
+
+TO INSTALL: Please see this video where I show how to install the mappings: https://youtu.be/MbGP_ECnWiQ 
+See also this PDF file for step-by-step instructions: [installation guide](https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Installation%20Guide.pdf)
+See also the common questions: [FAQ](https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Frequently%20Asked%20Questions.pdf)
+
+Notes:
+* NOTE 1: My guides covers all DDJ controllers. The only difference is the Aliases (page 10) and Output (page 28). The Annexes have specific pictures for specific DDJs.
+* NOTE 2: This mapping requires the third-party BOME midi translator. It has a free trial for you to test this mapping before buying a license.
+* NOTE 3: Issues? See the FAQ in a pdf, the “gotchas” on page 34, and reconfirm if you missed a step of this guide.
 
 
 ## What are the features of your DDJ-1000 Traktor mapping?
@@ -539,11 +568,11 @@ Plus:
 * Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
 * Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
 
-## Can I see a video demo of your mappings?
+## Can I see a Demo video of your mappings?
 
 Yes, please see the below Youtube videos. I have both long 30m videos where I cover every single function step-by-step, plus short "update" 5m video with the latest stuff only.
 
-All videos are timestamp tagged in Minute:second format, for you to find explanations of all specific. 
+All videos are timestamp-tagged in Minute:second format, for you to find explanations of all specific. 
 
 
 * DDJ-1000/800 playlist: https://www.youtube.com/playlist?list=PLIlvTGzSxI0XHlFyINdT6P42noqvkPISD
@@ -596,6 +625,15 @@ The DDJ-1000SRT is a special case, [which I cover in detail here](#is-the-ddj-10
 
 
 Regarding the Jogs: this is exactly the same story, plus the [all the comments about MIDI jogs](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
+
+## Read this if your Play button doesnt work
+
+Are you using a custom mapping? Does some functions work but not the Play/Pause button?
+
+This is a typical sign of a double installed mapping. Play is always a toggle, so if its applied twice it cancels itself.
+
+Solution: 
+)
 
   
 # DJ collection converters
@@ -709,6 +747,7 @@ Steps:
  
 ![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
 
+[Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
 
 ## How to swap Traktor configurations without the slow preferences window
 
@@ -783,6 +822,9 @@ Overview of the Cue tools:
 * cue_rename_cue.sh: 
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
+  
+  
+  
 
 ## What Programming libraries and technical scripts did you author?
 
@@ -1052,9 +1094,9 @@ I use the command heavily to automate tasks in bash, git updates, and python pro
 
 For years I've used a linux VM inside windows, but now I only use WSL. 
 
-* instalation guide: https://adamtheautomator.com/windows-subsystem-for-linux/
+* Installation guide: https://adamtheautomator.com/windows-subsystem-for-linux/
 * Integration with python: https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd
-* integration with visual studio: https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/
+* Integration with visual studio: https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/
 
  
 

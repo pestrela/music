@@ -800,37 +800,7 @@ with -v:
 ########
 # Pedro Utils
 
-def ml_clean_runs_of_empty_lines(ml):
-  ## NEW NEW NEW
-  """
-  removes runs of empty lines
 
-  input is multi line
-  output is a list of lines 
-
-  # function parameters:
-  #   ml         = multiline string. THIS IS ONLY USED AS INPUT
-  #   line       = single string
-  #   lines      = list of strings
-  #   what       = either STRING  or LINES   (unlistify-style)     
-  """
-  ml = ml.strip()
-  lines = ml.split("\n")
-
-  ret = []
-  include=True
-  for line in lines:
-   if line != "":
-     include = True
-     
-   if include:
-      ret.append(line)
-      
-   if line == "":
-     include = False
-      
-  return ret
-     
      
 
 def pause():
