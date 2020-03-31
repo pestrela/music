@@ -4,12 +4,13 @@
 This page contains my DJ knowledge base. 
 It is dozens of questions that I've answered over the years in forums and Facebook groups.
 
-These cover how I use [OS-Folders](#OS-Folders) exclusivelly, instead of making DJ playlists; 
-why I'm using [Traktor](#Traktor-software) instead of eg Rekordbox - and 
-how I've went-around the [Traktor limitations](#Which-features-I-miss-in-Traktor), eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
+These why I'm using [Traktor](#Traktor-software) instead of eg Rekordbox - and 
+how I've went-around the [Traktor limitations](#Which-features-I-miss-in-Traktor), 
+eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
+closely related is how I organize my music in [OS-Folders](#OS-Folders) without playlists; 
 
-I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made very large mappings to traktor; 
-these [Mappings](#Free-Mappings) are free, and I have specific info on how its [installation](#How-to-install-my-Traktor-mappings) 
+I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made [very large mappings](#Free-Mappings) free to use; 
+specific info is on the [installation processs](#How-to-install-my-Traktor-mappings) 
 and [feature demos](#can-i-see-a-demo-video-of-your-mappings). On a technical level please find I've moved to [BOME](#BOME-mappings-migration).
 
 Also described is my [Free DJ Software Tools](#Free-DJ-Software-Tools), 
@@ -18,12 +19,12 @@ and many other tools for [CUE files](#how-i-build-perfect-tracklists-using-cue-f
 and [DJ collection conversion](#DJ-collection-converters) between softwares perfectly for free.
 
 Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization), 
-general tips for [Windows](#Windows-usage), [shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs) for youtube and discogs, 
+general tips for [Windows](#Windows-usage), Youtube and Disocgs [keyboard shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
 plus some [uncategorized topics](#Other-topics)
   
-Below a detailed [table of contents](#Table-of-Contents) of the whole thing and a [MindMap picture](#MindMap-Summary) to get you started.
+Below a detailed [table of contents](#Table-of-Contents) of the whole thing, and a [MindMap picture](#MindMap-Summary) to get you started.
 
-PS: If you are looking for Trance, 80s and Top-40 music please find my online sets in my website: https://djestrela.com/
+PS: Feel free to check my mixes! Major styles are Trance, 80s and Top-40 live recordings: https://djestrela.com/
 
 
 # Table of Contents
