@@ -5,27 +5,28 @@ This page contains my DJ knowledge base.
 It covers dozens of questions that I've answered over the years in forums and Facebook groups.
 
 These cover [why I'm using Traktor](#Traktor-software) instead of eg Rekordbox, 
-what are [its limitations](#Which-features-I-miss-in-Traktor), and some workarounds like 
+what are [its limitations](#Which-features-I-miss-in-Traktor), and some workarounds to 
 eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
 closely related is how I [organize my files using OS-Folders only](#OS-Folders) without any playlists; 
 
 I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made [very large mappings](#Free-Mappings) free to use; 
 specific info is on the [installation processs](#How-to-install-my-Traktor-mappings) 
-and [feature demos](#can-i-see-a-demo-video-of-your-mappings); 
+and videos showing the [features step-by-step](#can-i-see-a-demo-video-of-your-mappings); 
 on a technical level please find why I've moved to [BOME](#BOME-mappings-migration).
 
 Also described is my free [DJ Software Tools](#Free-DJ-Software-Tools), 
 including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
-and many other tools for [CUE files](#how-i-build-perfect-tracklists-using-cue-files); 
+and many other tools for eg [CUE files](#how-i-build-perfect-tracklists-using-cue-files); 
 there also info on the tricky process to [convert DJ collections](#DJ-collection-converters) 
 between softwares without 26-ms shifts for free.
 
-Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization), 
+Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization) to avoid audio glitches, 
 general tips for [Windows](#Windows-usage), 
-keyboard shorcuts to [search in Youtube and Disocgs](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
-plus more [uncategorized stuff](#Other-topics)
+keyboard shortcuts to [search in Youtube and Discogs](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
+plus more [other stuff](#Other-topics)
 
-Below a detailed [table of contents](#Table-of-Contents) of the whole thing, and a [MindMap picture](#MindMap-Summary) to get you started.
+Below a detailed [table of contents](#Table-of-Contents) of the whole thing, 
+and a [MindMap picture](#MindMap-Summary) to get you started.
 
 PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings): https://djestrela.com/
 
@@ -603,7 +604,8 @@ Yes. All my mappings work fine with the demo versions of both Traktor and BOME. 
 
 If you are considering buying equipment then I recommend that you test the mapping yourself in a shop showroom. I do this all the time before I buy anything (just mention this to the shop personnel).
 
-Finally, all my mappings are a free gift to the community, to enable DJs to use their preferred Software with their preferred. If you want further appreciation, PayPal donations are welcome (pedro.estrela@gmail.com)
+Finally, all my mappings are a free gift to the community, to enable DJs to use their preferred Software with their preferred Hardware.
+If you want further appreciation, PayPal donations are welcome (pedro.estrela@gmail.com)
   
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
