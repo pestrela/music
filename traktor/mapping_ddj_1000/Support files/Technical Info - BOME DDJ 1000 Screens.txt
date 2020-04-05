@@ -605,14 +605,18 @@ Experiments on Midi linked modifiers (MLM):
     
 Denon HC4500 info:
 ------------------
+  
+  midi out idea: https://forum.djtechtools.com/showthread.php?t=28523
   midi codes: https://raw.githubusercontent.com/Sonnenstrahl/traktor-now-playing/master/readme-img/denon_midi_commands.jpg
+  
   run out of global variables:  https://www.bome.com/forums/viewtopic.php?t=5193
     - multiple MT instances
     - bitwise manipulaton: "XOR" to clear, "XOR" to write, "AND" + "DIV" to read
   find all used variables: https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project
   
   clear HC45000 video: https://www.youtube.com/watch?v=jJI-fCfn-6M
-    
+  mapping overview: https://www.bax-shop.nl/downloads/downloads/NI-TRAKTOR_DN-HC4500%20ConfigurationManualpdf.pdf
+  
   
 Unused variables:
 -----------------

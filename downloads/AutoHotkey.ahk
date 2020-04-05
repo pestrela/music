@@ -2096,32 +2096,12 @@ array_limit(array, top := 5)
 
 
 ;;;
-;;;  AutoExec Actions
+;;;  Sub-routines (already part of auto-exec)
 ;;;
 
-#SingleInstance force
-#Persistent
-#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-;#Warn  ; Recommended for catching common errors.
-
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
-SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-CoordMode, Mouse, window
-bash_exe := get_bash_exe()
-debug_XY_coord := "none"
-
-diacritic_current := 1
-diacritic_cycling := 1
-diacritic_enabled := 0
-
-window_move_enabled :=0
-window_move_enabled :=1
-  
-GoSub, tim_WM_DISPLAYCHANGE       ; get monitor dimensions
-   
-init_beep()              ; Signal that we finished autoexec section
 
 
+;; Sub-routine (to change to function)
 wc_sub_MouseHotkey:
    If A_ThisHotkey contains MButton,LButton,RButton,XButton1,XButton2
    {
@@ -2136,9 +2116,7 @@ Return
 
 
 
-
-
-
+;; Sub-routine (to change to function)
 tim_WM_DISPLAYCHANGE:
    ; Anzahl der Monitore und Arbeitsfläche ermitteln
    SysGet, NumOfMonitors, 80
@@ -2244,66 +2222,47 @@ tim_WM_DISPLAYCHANGE:
 Return
 
 
-StatisticsToClipboard:
-   WinGetText, AllStatistics, A
-   ExtendedStatistics := "Statistics:`r`n---------------------------------------------------------------------"
-   Loop, Parse, AllStatistics, `n, `r
-   {
-      If (A_Index = 1 OR A_LoopField = lng_StatisticsToClipboard)
-         continue
-      ;If (func_StrRight(A_LoopField,1) = ":")
-      ;   ExtendedStatistics .= "`r`n" A_LoopField
-      ;Else
-      ;   ExtendedStatistics .= "`t" A_LoopField
-   }
-   ExtendedStatistics .= "`r`n---------------------------------------------------------------------`r`n"
-   ExtendedStatistics .= "`r`nScreenareas:`r`n---------------------------------------------------------------------"
+;;;
+;;;  AutoExec Actions follow
+;;;
 
-   ExtendedStatistics .= "`r`nMonitor:`t" MonitorLeft ", " MonitorTop ", " MonitorRight ", " MonitorBottom " = " MonitorWidth " x " MonitorHeight
-   ExtendedStatistics .= "`r`nMonitorArea:`t" MonitorAreaLeft ", " MonitorAreaTop ", " MonitorAreaRight ", " MonitorAreaBottom " = " MonitorAreaWidth " x " MonitorAreaHeight
-   ExtendedStatistics .= "`r`nWorkArea:`t" WorkAreaLeft ", " WorkAreaTop ", " WorkAreaRight ", " WorkAreaBottom " = " WorkAreaWidth " x " WorkAreaHeight
 
-   Loop, %NumOfMonitors%
-   {
-      ExtendedStatistics .= "`r`n`r`nMonitor" A_Index ":`t" Monitor%A_Index%Left ", " Monitor%A_Index%Top ", " Monitor%A_Index%Right ", " Monitor%A_Index%Bottom " = " Monitor%A_Index%Width " x " Monitor%A_Index%Height
-      ExtendedStatistics .= "`r`nWorkArea" A_Index ":`t" WorkArea%A_Index%Left ", " WorkArea%A_Index%Top ", " WorkArea%A_Index%Right ", " WorkArea%A_Index%Bottom " = " WorkArea%A_Index%Width " x " WorkArea%A_Index%Height
-   }
 
-   ExtendedStatistics .= "`r`n`r`nBorderHeight:`t" BorderHeight
-   ExtendedStatistics .= "`r`nBorderHeightToolWindow:`t" BorderHeightToolWindow
-   ExtendedStatistics .= "`r`nCaptionHeight:`t" CaptionHeight
-   ExtendedStatistics .= "`r`nSmallCaptionHeight:`t" SmallCaptionHeight
-   ExtendedStatistics .= "`r`nMenuBarHeight:`t" MenuBarHeight
-   ExtendedStatistics .= "`r`nScrollBarHWeight:`t" ScrollBarHWeight
-   ExtendedStatistics .= "`r`nScrollBarVWeight:`t" ScrollBarVWeight
+#SingleInstance force
+#Persistent
+#NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
+;#Warn  ; Recommended for catching common errors.
 
-   Loop
-   {
-      actExtension := Extension[%A_Index%]
-      If actExtension =
-         Break
+SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
+CoordMode, Mouse, window
+bash_exe := get_bash_exe()
+debug_XY_coord := "none"
 
-      ExtendedStatistics .= "`r`n---------------------------------------------------------------------`r`n"
-      ExtendedStatistics .= "`r`n" actExtension ":`r`n---------------------------------------------------------------------"
-      ExtendedStatistics .= "`r`nEnable_" actExtension ":`t" Enable_%actExtension%
-      ExtendedStatistics .= "`r`nExtensionVersion:`t" ExtensionVersion[%actExtension%]
-      ExtendedStatistics .= "`r`nExtensionPrefix:`t" ExtensionPrefix[%actExtension%]
-      ExtendedStatistics .= "`r`nExtensionMenuName:`t" ExtensionMenuName[%actExtension%]
-      ExtendedStatistics .= "`r`nExtensionHideSettings:`t" ExtensionHideSettings[%actExtension%]
-      ExtendedStatistics .= "`r`nExtension:`t" Extension[%actExtension%]
-      ExtendedStatistics .= "`r`nExtensionLoadingTime:`t" ExtensionLoadingTime[%actExtension%] " ms"
-      ExtendedStatistics .= "`r`nExtensionGuiTime:`t" ExtensionGuiTime[%actExtension%] " ms"
-      ExtendedStatistics .= "`r`nEnableTray_" actExtension ":`t" EnableTray_%actExtension%
-      ExtendedStatistics .= "`r`n"
+diacritic_current := 1
+diacritic_cycling := 1
+diacritic_enabled := 0
 
-      If (IsLabel( "Statistics_" actExtension ))
-         Gosub, Statistics_%actExtension%
-   }
+window_move_enabled :=0
+window_move_enabled :=1
+  
+GoSub, tim_WM_DISPLAYCHANGE       ; get INITIAL monitor dimensions
+   
+init_beep()              ; Signal that we finished autoexec section
 
-   Clipboard = %ExtendedStatistics%
-   AllStatistics =
-   ; Gosub, StatisticsGuiClose
-Return
+
+
+
+;;; notepad++ shortcuts:
+; list of shortcuts: http://www.keyxl.com/aaacd5a/43/Notepad-Plus-text-editor-software-keyboard-shortcuts.htm
+; config file: %AppData%\Notepad++\shortcuts.xml
+;
+; whole line operations:
+;  ctrl+L = cut line to clipboard
+;  ctrl+V = paste line from clipboard
+;  ctrl+D = duplicate paste line from clipboard
+
+
 
 
 
