@@ -33,8 +33,26 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 
 # Table of Contents
 
-* [MindMap Summary](#MindMap-Summary)
-* [OS-Folders](#OS-Folders)
+* [MindMap](#MindMap-Summary)
+* [OS-Folders as virtual playlists](#OS-Folders)
+* [Traktor software](#Traktor-software)
+* [BOME migration](#BOME-mappings-migration)
+* [Hardware Controllers](#Hardware-Controllers)
+* [Free Mappings](#Free-Mappings)
+* [DJ collection converters](#DJ-collection-converters)
+* [Free DJ Software Tools](#Free-DJ-Software-Tools)
+* [DJ Software optimization](#DJ-Software-optimization)
+* [Windows usage](#Windows-usage)
+* [Other topics](#Other-topics)
+  
+See below for a longer Table of contents.  
+  
+
+# Table of Contents (detailed)
+
+
+* [MindMap](#MindMap-Summary)
+* [OS-Folders as virtual playlists](#OS-Folders)
   * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
