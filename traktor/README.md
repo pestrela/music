@@ -1179,7 +1179,7 @@ Most important tricks are:
 * process the files with "wslpath $file" to convert to WSL format
   * if you are launching windows programs, use the arguments "as-is"  
 
-![qqtabbar_wsl_scripts](pics/qqtabbar_wsl_scripts.jpg?raw=true "QQTabBar WSL scripts")
+![qqtabbar_wsl_scripts](pics/qqtabbar_wsl_scripts_.jpg?raw=true "QQTabBar WSL scripts")
 
 
 # Other topics
