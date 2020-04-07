@@ -140,6 +140,7 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 		 5: Grid ADJUST pressed  -> this cancels jogfx mode   F7
 		 6: Grid SLIDE  pressed  -> this cancels jogfx mode   E7
 		 7: (empty)
+        XDJ-XZ: reverse (why ????)
 		 
 	M3: JOGFX SELECTION  (SHARED BETWEEN ALL DECKS)
 	  0- none
@@ -215,16 +216,16 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 	M5: KEYBOARD Page2 - red button (0: NONE; 1..=8 )
 	
 	M6: KEYBOARD MODE:
-    0: mode: CUP keyboard  (pressing pad triggers CUP - same as rekordbox)
-    1: mode: CUE keyhold   (press pad triggers CUE; release stops music)
-    2: mode: PLAY keyshift  (music never stops - same as rekordbox)
+    0: mode: CUP keyBOARD  (pressing pad triggers CUP - same as rekordbox)
+    1: mode: CUE keyHOLD   (press pad triggers CUE; release stops music)
+    2: mode: PLAY keySHIFT  (music never stops - same as rekordbox)
     
 		 
 	M7: LEFT REMIX DECK PAGE  (FIXME)
 		1: page 1
 		2: page 2
 		
-	M8: SHIFT2 (=MEMORY BUTTON)
+	M8: SHIFT2 (=MEMORY BUTTON ) 
 	
 	
 	
@@ -241,15 +242,19 @@ Modifiers TSI page 3:  USER-FX, SLICER, LOOPS, MODE SHORTCUTS
 		 old info about shortcut:
 		  ON: HotCue -> IN: "param" (G#2) -> THEN: M1=2 -> OUT: Slicer Loop (C#8)  (SEM MODIFIERS!)
 	 
-	 
+	  TODO: simplify this. Cancel slicer with hotcues.
+   
+   
 	M5: CONFIG: WHICH SLICER MODE WE ARE
 		0..2: slicer mode 
 
-	M6: DECK 1 or 3 -> FOR LAYOUT SELECT ON DDJ-1000
-	M7: DECK 2 or 4 -> FOR LAYOUT SELECT
+	M6: FREE (was layout select deck 1/3 )
+	M7: FREE (same as M6)
+     XDJ-XZ: CDJ emulation
   
 	M8: SHIFT2 (MEMORY BUTTON)
-
+     m8=7 FAKE effect list = to delete
+     on XDJ-XZ: mapped to __CUE/LOOP MEMORY__
 
   	 
  todo slicer:
@@ -303,7 +308,7 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 		3: MODE4
 		4: other (=main shift is pressed)
 		
-	M8: INIT DECK
+	M8: INIT DECK  (to migrate to bome)
 	  - used to init the controller once is pressed.
 	(nao tem se esta' activo -> bom para partilhar!)
 
@@ -361,10 +366,13 @@ BOME support page 6:
   M6: Configurable sync mode  
     0: Sync toggle (Traktor and Rekordbox mode - for beatsync)
     1: Sync phase  (Serato and VirtualDJ mode - for temposync)
-    2: Elastic beatgrid (Same as 1, but disables sync with jogwheel. Use with Beatsync!)
+    2: Elastic beatgrid (Same as 1, but disables sync with jogwheel; reenables on cue Use with Beatsync!)
         
   M7: free
-  m8: free
+  m8: only for XDJ-XZ (=CDJ mode)
+    0 = vinyl mode
+    1 = CDJ mode
+    
   
   
 Pioneer DDJ pad colors:

@@ -123,6 +123,7 @@ See below for a longer Table of contents.
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
   * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
   * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
+  * [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
 * [Other topics](#Other-topics)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
@@ -888,6 +889,8 @@ My [autohotkey file](../downloads/AutoHotkey.ahk) has all kinds of useful *glaba
 * CTRL+F11: Search in Youtube (list)
 * CTRL+F12: Search in Youtube (first hit)
 * Win+backspace: toggle any window to be always on top for
+* Win+Arrows: Arrange windows on the corners, 3 possible sizes. Also supports regular half-screen
+* Win+Insert: **Append** a copy to the clipboard. Really useful to collect things around and paste once
 
 More scripts in this folder:
 * a youtube-dl wrapper
@@ -1085,6 +1088,7 @@ Windows-specific tips go here.
 * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
 * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
 * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
+* [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
 
 ## Why I use Windows instead of Mac
@@ -1159,8 +1163,24 @@ Usage:
 Configuring Launchers:
 ![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true "QQTabBar Launchers")
 
+## How to add WSL scripts to QQTabBar
 
-  
+Combining QQTabBar and WSL bash scripts is a powerful way to manipulate files in Explorer.
+
+Example programs from [here](../wsl_tools/):
+* windows_launch_spek.sh: calls the spek frequency analyzer for several files
+* windows_group_files_in_folder.sh: create a sub-folder and move selected files into it 
+* simple WSL shell launch on that folder
+
+Most important tricks are:
+* launch bash as 'wsl.exe --cd %cd% -- <your_script> %f%'
+  * '--cd %cd% --' changes the working folder to that location
+  * without further parameters this opens an interactive shell
+* process the files with "wslpath $file" to convert to WSL format
+  * if you are launching windows programs, use the arguments "as-is"  
+
+![qqtabbar_wsl_scripts](pics/qqtabbar_wsl_scripts.jpg?raw=true "QQTabBar WSL scripts")
+
 
 # Other topics
 

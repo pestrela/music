@@ -659,7 +659,7 @@ Outgoing13=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/>
 Options13=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
 Name14=DEBUG - see calculated Seek
 Incoming14=Tim0TimT000Fsend_timestamp2
-Outgoing14=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 var="g2"/><Value2 var="h2"/></Simple></Outgoing>
+Outgoing14=MID3<Outgoing Action="MIDI"><Simple Type="NoteOn"><Channel num="15"/><Value1 num="0x00"/><Value2 var="h2"/></Simple></Outgoing>
 Options14=Actv01Stop00OutO00StMa00000001if(hw==0)noexecute
 Name15=debug - shifts
 Incoming15=Tim0TimT000Fsend_timestamp2
@@ -732,19 +732,19 @@ PresetSwitchIgnore=0
 Name0=DDJ IN - Toggle Vinyl DOWN
 Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
 Outgoing0=MID3<Outgoing Action="MIDI"><Ports><Port>To DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x17"/><Value2 var="pp"/></Simple></Outgoing>
-Options0=Actv01Stop00OutO00StMa00000006oo=koif(oo==0)ko=127if(oo!=0)ko=0label0006__cmt>label0006__cmt>pp=ko
+Options0=Actv00Stop00OutO00StMa00000006oo=koif(oo==0)ko=127if(oo!=0)ko=0label0006__cmt>label0006__cmt>pp=ko
 Name1=DDJ IN - Toggle Vinyl UP
 Incoming1=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOff"><Channel num="0" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="0" setvar="pp" Type="New Version Required"/></Simple></Incoming>
 Outgoing1=None
-Options1=Actv01Stop00OutO00
+Options1=Actv00Stop00OutO00
 Name2=DDJ IN - JOG TOUCH pt1
 Incoming2=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="0" Type="New Version Required"/><Value1 num="32" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
 Outgoing2=Tim0TimS000Bjog_touch_11:0:1
-Options2=Actv01Stop00OutO00
+Options2=Actv00Stop00OutO00
 Name3=DDJ IN - JOG TOUCH pt2
 Incoming3=Tim0TimT000Bjog_touch_1
 Outgoing3=MID3<Outgoing Action="MIDI"><Ports><Port>To Traktor</Port></Ports><Simple Type="NoteOn"><Channel num="0"/><Value1 num="0x20"/><Value2 num="0x7F"/></Simple></Outgoing>
-Options3=Actv01Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(ko==0)noexecute
+Options3=Actv00Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(ko==0)noexecute
 Name4=DDJ IN - JOG TURN #34
 Incoming4=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="ControlChange"><Channel num="0"/><Value1 num="0x22"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
 Outgoing4=Tim0TimS000Crefresh_jog11:0:1
@@ -1209,19 +1209,19 @@ PresetSwitchIgnore=0
 Name0=DDJ IN - Toggle Vinyl DOWN
 Incoming0=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
 Outgoing0=MID3<Outgoing Action="MIDI"><Ports><Port>To DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x17"/><Value2 var="pp"/></Simple></Outgoing>
-Options0=Actv01Stop00OutO00StMa00000005oo=kpif(oo==0)kp=127if(oo!=0)kp=0label0006__cmt>pp=kp
+Options0=Actv00Stop00OutO00StMa00000005oo=kpif(oo==0)kp=127if(oo!=0)kp=0label0006__cmt>pp=kp
 Name1=DDJ IN - Toggle Vinyl UP
 Incoming1=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOff"><Channel num="1" Type="New Version Required"/><Value1 num="18" setvar="oo" Type="New Version Required"/><Value2 num="0" setvar="pp" Type="New Version Required"/></Simple></Incoming>
 Outgoing1=None
-Options1=Actv01Stop00OutO00
+Options1=Actv00Stop00OutO00
 Name2=DDJ IN - JOG TOUCH pt1
 Incoming2=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="NoteOn"><Channel num="1" Type="New Version Required"/><Value1 num="32" setvar="oo" Type="New Version Required"/><Value2 num="127" setvar="pp" Type="New Version Required"/></Simple></Incoming>
 Outgoing2=Tim0TimS000Bjog_touch_21:0:1
-Options2=Actv01Stop00OutO00
+Options2=Actv00Stop00OutO00
 Name3=DDJ IN - JOG TOUCH pt2
 Incoming3=Tim0TimT000Bjog_touch_2
 Outgoing3=MID3<Outgoing Action="MIDI"><Ports><Port>To Traktor</Port></Ports><Simple Type="NoteOn"><Channel num="1"/><Value1 num="0x20"/><Value2 num="0x7F"/></Simple></Outgoing>
-Options3=Actv01Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(kp==0)noexecute
+Options3=Actv00Stop00OutO00StMa00000005label0006__cmt>label001E__cmt>// swallow is confusing:label0049__cmt>// https://www.bome.com/support/kb/possible-bug-swallow-not-workinglabel0006__cmt>if(kp==0)noexecute
 Name4=DDJ IN - JOG TURN #34
 Incoming4=MID3<Incoming Action="MIDI"><Ports><Port>From DDJ 1</Port></Ports><Simple Type="ControlChange"><Channel num="1"/><Value1 num="0x22"/><Value2 var="pp" Type="SetVar"/></Simple></Incoming>
 Outgoing4=Tim0TimS000Crefresh_jog21:0:1
@@ -1390,5 +1390,5 @@ DefaultInPorts=MIDA0001000CFrom Traktor
 DefaultOutPorts=MIDA00020008To DDJ 20008To DDJ 1
 [Signatures]
 SigName-1=[Midi Translator Pro Internal]
-Signature-1=obdjsiqa/Z/Cd8KbLzzr6v2YtY75iNfrfgiP15KIsCENaKKxmq4HGYb7misUAGh6qY80qizKi/d2bc0o30gBoLSzD3nbb/EbXSWNReUG+7MziUPEkY8KoS1MTxK728SCa8t9f8zqjF1uk6+QEC2R6EG9LjzJTLMqKGXUv1dUzM4=
+Signature-1=YnLZeOAngRWHEXZBuKMWBaPKJi8q6jkeGUyhjkiHH2vG657DTGrWI1MCUlX99mh6CrFEVw6XEXLPcVn8Ear6G7prXTKO7FG66vOqQdbROT/a7pbV7F52G2Oy/Iy57qKvTXsGr7YHzONniXjIWZExGHyUnvzwF2xWTtg0tSZZEts=
 SignedBy-1=Pedro Estrela

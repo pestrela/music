@@ -30,7 +30,7 @@
 ;   CTRL+WIN+ALT+ESC = Emergency stop
 ;   CTRL+WIN+ALT+F11 = Debug mouse XY values (cycle)
 ;   CTRL+WIN+ALT+F12 = Reload/Restart this script
-;
+;        WIN+S : reload this script (shortcut)  
 ;
 ;
 ; Other program  shortcuts:
@@ -676,50 +676,22 @@ move_window(loc){
 }
      
 
+get_translation_table(which_side)
+{
+  ;return get_translation_table_1(which_side)
+  return get_translation_table_2(which_side)
 
-do_enlarge(which_side){  
-  ;beep()
-  
-  GoSub, tim_WM_DISPLAYCHANGE       ; get monitor dimensions
-  Gosub, wc_sub_MouseHotkey
-  
-  WinGet, wc_Style, Style, A
-  If ((!(wc_Style & 0x40000) AND wc_ResizeFixedWindows == 0) AND cr_Resizeable <> 1)
-    Return
-  wc_Monitor := func_GetMonitorNumber("A")
+}
 
-  ; get ID, current dimensions, position and maximize status
-  ;WinGet, wc_WindowID, ID, A                       ; This is used for the return to last known positon. Not used at the moment
+ 
+      
+     
+;;;;;;;;;;;
+get_translation_table_2(which_side)
+{
 
-  ;;;;;;;;;;;;
-  mon := Monitor(WorkArea%wc_Monitor%Left, WorkArea%wc_Monitor%Top, WorkArea%wc_Monitor%Width, WorkArea%wc_Monitor%Height)
-
-  
-  
-  debug := False
-  ;debug := True
-
-  debug_print( debug, wc_X, wc_Y, wc_Width, wc_Height, point_x0, point_x1, point_x2, point_x3, point_x4 )
-  debug_print( debug, point_x0, point_x1, point_x2, point_x3, point_x4 )
-  debug_print( debug, wc_X, wc_Y, wc_Width, wc_Height )
-
-  
-  ;;;;;;;;;; new code below
-  loc := get_location()  
-  cur_case := loc_2_case(loc, mon)
-
-  ;print("current case:", cur_case)
-  
-  debug := False
-  ; debug := True
-  
-  if(debug){
-    print_loc(loc)
-    print_mon(mon)
-  }
-  
-  
   t := Array()
+
   
   if(which_side == "left"){
     ;;; Maximizes
@@ -735,85 +707,72 @@ do_enlarge(which_side){
     
     t["r1"] := "l2" 
     t["r2"] := "l2" 
-    t["r3"] := "l2"
-    
-    t["t"]  := "tl2"
-    t["b"]  := "bl2"
+    t["r3"] := "l2"    
     
     ;;; Corners
-    t["tl1"] := "tl3"
+    t["tl1"] := "tl1"
     t["tl2"] := "tl1"
     t["tl3"] := "tl2"
+
+    t["t"]  := "tl3"
     
-    t["bl1"] := "bl3"
+    t["tr1"] := "t" 
+    t["tr2"] := "tr1" 
+    t["tr3"] := "tr2" 
+
+    t["bl1"] := "bl1"
     t["bl2"] := "bl1"
     t["bl3"] := "bl2"
     
-    t["tr1"] := "l2" 
-    t["tr2"] := "l2" 
-    t["tr3"] := "l2" 
+    t["b"]  := "bl3"
     
-    t["br1"] := "l2"
-    t["br2"] := "l2"
-    t["br3"] := "l2"
+    t["br1"] := "b" 
+    t["br2"] := "br1" 
+    t["br3"] := "br2" 
     
   } 
      
   
   if(which_side == "right"){
-    t["fmax"] := "r"
-    t["max"] := "r"
-    t["min"] := "r"
-    t["rr"] := "r"
-    
-    t["l"] := "r"
-    t["r"] := "r" 
-    t["t"] := "tr"
-    t["b"] := "br"
-    
-    t["tl"] := "tr"
-    t["bl"] := "br"
-    t["tr"] := "r" 
-    t["br"] := "r"
-    
-    
-    ;;; Maximizes
     t["fmax"] := "r2"
-    t["max"]  := "r2"
-    t["min"]  := "r2"
-    t["rr"]   := "r2"
+    t["max"] := "r2"
+    t["min"] := "r2"
+    t["rr"] := "r2"
     
     ;;; Half-screen
-    t["r1"] := "r3"
-    t["r2"] := "r1"
-    t["r3"] := "r2"
-    
-    t["l1"] := "r2" 
-    t["l2"] := "r2" 
+    t["l1"] := "r2"
+    t["l2"] := "r2"
     t["l3"] := "r2"
     
-    t["t"]  := "tr2"
-    t["b"]  := "br2"
+    t["r1"] := "r3" 
+    t["r2"] := "r1" 
+    t["r3"] := "r2"
+    
+    
     
     ;;; Corners
-    t["tr1"] := "tr3"
-    t["tr2"] := "tr1"
-    t["tr3"] := "tr2"
+    t["tl1"] := "tl2"
+    t["tl2"] := "tl3"
+    t["tl3"] := "t"
     
-    t["br1"] := "br3"
-    t["br2"] := "br1"
-    t["br3"] := "br2"
+    t["t"]  := "tr1"
+
+    t["tr1"] := "tr2" 
+    t["tr2"] := "tr3" 
+    t["tr3"] := "tr3" 
+
+    t["bl1"] := "bl2"
+    t["bl2"] := "bl3"
+    t["bl3"] := "b"
     
-    t["tl1"] := "r2" 
-    t["tl2"] := "r2" 
-    t["tl3"] := "r2" 
+    t["b"]  := "br1"
     
-    t["bl1"] := "r2"
-    t["bl2"] := "r2"
-    t["bl3"] := "r2"    
-    
+    t["br1"] := "br2" 
+    t["br2"] := "br3" 
+    t["br3"] := "br3"     
   } 
     
+  ;;;;;;;;;;;;;;;;;  
   
   if(which_side == "up"){    
     ;;; Maximizes
@@ -836,21 +795,23 @@ do_enlarge(which_side){
     
     
     ;;; Corners
-    t["tr1"] := "t"
-    t["tr2"] := "t"
-    t["tr3"] := "t"
-    
     t["tl1"] := "t"
     t["tl2"] := "t"
     t["tl3"] := "t"
+
+    t["tr1"] := "t"
+    t["tr2"] := "t"
+    t["tr3"] := "t"
+
+
+    t["bl1"] := "l1"
+    t["bl2"] := "l2"
+    t["bl3"] := "l3"
+
+    t["br1"] := "r1"
+    t["br2"] := "r3"
+    t["br3"] := "r3"
     
-    t["br1"] := "tr1"
-    t["br2"] := "tr2"
-    t["br3"] := "tr3"
-    
-    t["bl1"] := "tl1"
-    t["bl2"] := "tl2"
-    t["bl3"] := "tl3"        
   }
       
  
@@ -884,15 +845,58 @@ do_enlarge(which_side){
     t["bl2"] := "b"
     t["bl3"] := "b"
     
-    t["tr1"] := "br1"
-    t["tr2"] := "br2"
-    t["tr3"] := "br3"
+    t["tr1"] := "r1"
+    t["tr2"] := "r2"
+    t["tr3"] := "r3"
     
-    t["tl1"] := "bl1"
-    t["tl2"] := "bl2"
-    t["tl3"] := "bl3"      
+    t["tl1"] := "l1"
+    t["tl2"] := "l2"
+    t["tl3"] := "l3"      
   }
   
+  return t
+}  
+     
+
+do_enlarge(which_side){  
+  ;beep()
+  
+  
+  mon := tim_WM_DISPLAYCHANGE()
+  wc_sub_MouseHotkey()
+
+  
+  WinGet, wc_Style, Style, A
+  If ((!(wc_Style & 0x40000) AND wc_ResizeFixedWindows == 0) AND cr_Resizeable <> 1)
+    Return
+ 
+  ;mon := func_GetMonitorNumber("A")
+
+  ; get ID, current dimensions, position and maximize status
+  ;WinGet, wc_WindowID, ID, A                       ; This is used for the return to last known positon. Not used at the moment
+
+  ;;;;;;;;;;;;
+  ;mon := Monitor(WorkArea%wc_Monitor%Left, WorkArea%wc_Monitor%Top, WorkArea%wc_Monitor%Width, WorkArea%wc_Monitor%Height)
+
+  
+  
+  debug := False
+  ;debug := True
+
+  
+  ;;;;;;;;;; new code below
+  loc := get_location()  
+  cur_case := loc_2_case(loc, mon)
+
+  ;print("current case:", cur_case)
+  
+  debug := False
+  ; debug := True
+  
+  if(debug){
+    print_loc(loc)
+    print_mon(mon)
+  }
   
   ; We always leave maximized state
   if(cur_case == "max"){
@@ -900,6 +904,7 @@ do_enlarge(which_side){
 
   }
   
+  t := get_translation_table(which_side)
     
   new_case := t[cur_case]
   if(new_case == ""){
@@ -907,6 +912,8 @@ do_enlarge(which_side){
     new_case = "error"
     return
   }
+  
+  ;print(cur_case, "->", new_case)
 
   new_loc := case_2_loc(mon, new_case)
   
@@ -974,7 +981,7 @@ test_objects(x,y){
 
 func_GetMonitorNumber( Mode="" )
 {
-   global
+   global NumOfMonitors
 
    If Mode = Mouse
    {
@@ -1235,12 +1242,6 @@ gen_youtube_url(query){
   return url
 }
 
-; returns the first youtube result for a string
-all_youtube_results( query ){
-	url := gen_youtube_url(query)
-
-	Run % url
-}
 
 
 ; returns the HTML text for further processing
@@ -1261,14 +1262,25 @@ query_youtube_as_html(query)
 
 
 ; returns the first youtube result for a string
-first_youtube_result( query ){
-  text := query_youtube_as_html(query)
+first_youtube_result( query , what )
+{
+  if(what == "show_entries"){
+    text := query_youtube_as_html(query)
 
-	if RegExMatch( text, "/watch\?v=.{11}", match ){
-		url := "https://www.youtube.com" match
+    if RegExMatch( text, "/watch\?v=.{11}", match ){
+      url := "https://www.youtube.com" match
+    } else {
+      url := ""
+    }  
+    
+  } else if(what == "show_search_page" ){
+    url := gen_youtube_url(query)
+    
   } else {
-    url := ""
+    die("unknown operation", what)
+    return ""
   }  
+
 	return url
 }
 
@@ -1310,7 +1322,7 @@ RxMatches(Haystack, Needle)
 ;     printd(i, m)
 
 
-; query youtube and return an array with all the anwers
+; query youtube and return an array with all the answers
 get_all_youtube_results_as_array( query, limit := 5 )
 {
   debug := false
@@ -1344,7 +1356,7 @@ beep(){
 }
 
 debug_beep(){
-  ; SoundBeep, 7000, 100
+  SoundBeep, 7000, 100
   
 }
 
@@ -1462,17 +1474,6 @@ slow_send(what)
 }
 
 
-get_chrome_url(){
-  Clipboard = ; empty clipboard
-  
-  slow_send("^l")        ;gives focus to the URL
-  slow_send("^c")        
-  ClipWait,0
-  url := Clipboard
-    
-  return url
-}
-
 
 XY_analyse_init(){
   global analyse_XY_coord
@@ -1484,8 +1485,10 @@ XY_analyse_init(){
     SetTimer, XY_analyse_timer, OFF
     ToolTip, 
     return
+    
   } else if(analyse_XY_coord == "screen"){
     analyse_XY_coord := "window"
+    
   } else {
     analyse_XY_coord := "screen"
   }
@@ -1534,6 +1537,8 @@ slsk_activate(){
   return get_active_window_id()
 }
 
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -1541,12 +1546,12 @@ slsk_activate(){
 
 print1( var )
 {
-  st := "|" . var . "|"
+  st := "<" . var . ">"
   
   msgbox, %st%
 }
 
-print2( sep, surround, values )
+print2( sep, surround := False , values* )
 {
   #sep := " "
   st := ""
@@ -1565,17 +1570,35 @@ print2( sep, surround, values )
   msgbox, %st%
 }
 
-print( values* )
-{
-  print2( " ", False, values )
-}
+
 
 printd( values* )
 {
-  print2( "|", True, values )
+  print2( "|", True, values* )
+}
+
+pause( )
+{
+  print("Press enter to continue")
+}
+
+print( values* )
+{
+  print2( " ", False, values* )
+}
+
+error( values* )
+{
+  print("Error:", values*)
+
 }
 
 
+die( values* )
+{
+  error( values* )
+  ; raise exception ?
+}
 
 
 debug_print( debug, var* )
@@ -1585,7 +1608,7 @@ debug_print( debug, var* )
   
   if(global_do_debug){
     if(debug){
-      printd(var)
+      printd(var*)
     }  
   }
 }
@@ -1622,14 +1645,20 @@ print_array(name, array, show_elements := true)
 {
   debug := true
 
-  debug_print(debug, "Array '" . name . "' elements: " . array.count() )
+  count := array.count()
+  if(count == ""){
+    count := 0   ; needed ??
+  
+  }
+  
+  print("Array '" . name . "' has " . count . " elements")
   
   if(!show_elements)
     return
     
   for index, element in array
   {
-      debug_print(debug, "Element " . index . " is |" . element . "|")
+      print("Element " . index . ":  <" . element . ">")
   }
 }
 
@@ -1653,7 +1682,7 @@ mouse_click(win_x, win_y)
 }
 
 
-do_soulseek_one_query(query)
+soulseek_one_query(query)
 {
   set_clipboard(query)
   
@@ -1723,43 +1752,127 @@ do_open_discogs()
 }
 
 
-do_find_explorer(){
-	debug_beep()
-  query := copy_selection_to_clipboard()
-  if(query == "")
-    return
-    
-  find_in_explorer(query)
-}
-  
+;;;;;
 
-do_get_chrome_tab_url()
+is_chrome_runnning()
+{
+  ret := WinExist("ahk_class MozillaWindowClass") 
+    or WinExist("ahk_class Chrome_WidgetWin_0")
+    or WinExist("ahk_class Chrome_WidgetWin_1")
+  
+  return ret
+}
+
+
+
+require_chrome()
+{
+  if(!is_chrome_runnning()){
+     die("Chrome not running")
+     return False
+  }
+
+  return True
+}
+
+chrome_activate(){
+  if(!require_chrome()){
+    return False
+  }  
+   
+  ;print("chrome is runnnig")
+ 
+  ; https://autohotkey.com/board/topic/97911-winactivate-doest-work-fully-with-chrome/
+  settitlematchmode 2
+  winactivate, Google Chrome
+  Sleep, 200
+  
+  return get_active_window_id()
+}
+
+
+
+
+  
+  
+; required: chrome already activated
+get_current_chrome_url()
+{
+  Clipboard = ; empty clipboard
+  
+  slow_send("^l")        ;gives focus to the URL
+  slow_send("^c")        
+  ClipWait,0
+  url := Clipboard
+  
+  ;print("received", url)
+  
+  return url
+}
+
+
+do_chrome_get_current_url()
 {
   debug_beep()
   
-  url := get_chrome_url()
-  if(url == "")
+  if(not chrome_activate())
     return
   
-  ; https://github.com/goreliu/wsl-terminal/blob/master/src/open-wsl.ahk
-  ; debug_print("bash found at: " %bash_exe% )
-  ; Run, "%bash_exe%" -c 'tmux new-window -c "$PWD"', , Hide
-  ; Run, "%bash_exe%" -c 'source ${HOME}/.bashrc.pestrela ; cd ${HOME}/links/youtube-dl; youtube_dl.sh %url% ; pause' 
-  ; ShellRun("C:\vim\vim80\gvim.exe", "+SLoad", "", "", 3)
-  ; run, bash.exe -c 'source ${HOME}/.bashrc.pestrela ; cd ${HOME}/links/youtube-dl; youtube_dl.sh %url% ; pause
-  ;run, C:\windows\system32\bash.exe    ;  -c 'echo ola '
+  ;return
+  
+  url := get_current_chrome_url()
+  
 }  
 
 
-is_chrome_active()
+do_chrome_get_all_urls()
 {
-  ret := WinActive("ahk_class MozillaWindowClass") 
-    or WinActive("ahk_class Chrome_WidgetWin_0")
-    or winactive("ahk_class Chrome_WidgetWin_1")
+  beep()
   
-  return ret
-}  
+  if(not chrome_activate())
+    return
   
+  ClipSave := Clipboard
+  Clipboard = ; empty clipboard
+  url_list := []
+  
+  first_url := ""
+  count := 1
+  url := ""
+  
+  
+  Loop
+  {
+    if(A_Index > 30){
+      break
+    }
+    
+    url := get_current_chrome_url()
+ 
+    if (url == first_url){
+        break
+     }
+     if A_Index = 1
+        first_url := url
+        
+    url_list.push(url)
+    Send, ^{tab}
+
+    ; count := count + 1    
+  }
+  
+  ; Clipboard := ClipSave
+  ; MsgBox % array_to_ml(url_list)
+  Clipboard := array_to_ml_spaced(url_list)
+  
+  beep()  
+}
+
+
+
+
+
+
   
 array_to_ml(Array, sep="`n")
 {
@@ -1799,7 +1912,7 @@ duplicate_string(st, count=2)
 }
 
 
-array_to_ml_spaced(Array, seperator_lines=3)
+array_to_ml_spaced(Array, seperator_lines=2)
 {
   sep := duplicate_string("`n", seperator_lines)
   
@@ -1808,64 +1921,8 @@ array_to_ml_spaced(Array, seperator_lines=3)
 }  
   
   
-do_get_all_chrome_tab_url()
-{
-  beep()
-  
-  if(not is_chrome_active())
-    return
-  
-  ClipSave := Clipboard
-  Clipboard = ; empty clipboard
-  url_list := []
-  
-  first_url := ""
-  count := 1
-  url := ""
-  
-  
-  Loop
-  {
-    if(A_Index > 30){
-      break
-    }
-    
-    url := get_chrome_url()
- 
-    if (url == first_url){
-        break
-     }
-     if A_Index = 1
-        first_url := url
-        
-    url_list.push(url)
-    Send, ^{tab}
-
-    ; count := count + 1    
-  }
-  
-  ; Clipboard := ClipSave
-  ; MsgBox % array_to_ml(url_list)
-  Clipboard := array_to_ml_spaced(url_list)
-  
-  beep()  
-}
 
  
-  
-
-  
-do_search_youtube_list(){
-	debug_beep()
-  
-  query := copy_selection_to_clipboard()
-  if(query == "")
-    return
-
-  all_youtube_results(query)
-}
-  
-   
   
 do_open_several_urls(array)
 {  
@@ -1883,7 +1940,7 @@ do_open_several_urls(array)
 }
 
 
-copy_selection_to_array()
+copy_selection_to_array( debug := False)
 {
   ret := Array()
   
@@ -1906,6 +1963,10 @@ copy_selection_to_array()
     }
   }
   
+  ;debug := True
+  
+  debug_print_array(debug, "Processing query:", ret)
+  
   return ret
 }
 
@@ -1920,7 +1981,27 @@ return_to_previous_state_if_single(array)
 }  
   
   
-do_search_youtube_first_hit()
+ 
+validate_query( query, max := 20 )
+{
+  if(!query.count()){
+    return False
+  }
+  
+  max := 3
+  
+  if(query.count() > max ){
+    die("Too many entries to process (", query.count(), ")") 
+    return False
+  }
+
+  return True
+
+}
+ 
+ 
+ 
+do_search_youtube_first_hit( what := "show_entries" )
 {
 	debug_beep()
   debug := True
@@ -1928,26 +2009,69 @@ do_search_youtube_first_hit()
   
   
   query := copy_selection_to_array()
-  if(!query.count())
+  if(!validate_query(query)){
     return
-    
-  debug_print_array(debug, "query", query)
+  }
+  
+  ;debug_print_array(debug, "query", query)
   remember_previous_state()
+  
   results := Array()
-
   for index, line in query
   {
-      url := first_youtube_result( line )
+      url := first_youtube_result( line, what )
       results.Push(url)
-  }    
-
+  }
+  
   debug_print_array(debug, "results", results)
   return_to_previous_state_if_single(results)
     
   do_open_several_urls(results)  
 }
 
+  
+do_find_explorer( debug := False )
+{
+	debug_beep()
+  ;debug := True
+  
+  query := copy_selection_to_array()
+  if(!validate_query(query)){
+    return
+  }
+  
+  ;debug_print_array(debug, "query", query)
+  remember_previous_state()
+  
+  do_pause := False  
+  for index, line in query
+  {
+    if(do_pause){
+      pause()
+    }
+    find_in_explorer( line )
+  
+    do_pause := True
+  }
+  return_to_previous_state_if_single(query)    
+}
 
+
+
+
+do_find_explorer_old(){
+	debug_beep()
+  query := copy_selection_to_clipboard()
+  if(query == "")
+    return
+    
+    
+    
+  find_in_explorer(query)
+}
+  
+  
+  
 
 do_soulseek()
 {
@@ -1955,19 +2079,18 @@ do_soulseek()
   debug := True
   debug := False
     
-  query := copy_selection_to_array()
-  if(!query.count())
+  query := copy_selection_to_array(debug)
+
+  if(!validate_query(query)){
     return
-    
-  debug_print_array(debug, "query", query)
+  }
+      
   remember_previous_state()
-  
   for index, line in query
   {
-      do_soulseek_one_query(line)
+      soulseek_one_query(line)
   }    
-  
-  return_to_previous_state_if_single(results)
+  return_to_previous_state_if_single(query)
 }
 
 
@@ -2096,13 +2219,14 @@ array_limit(array, top := 5)
 
 
 ;;;
-;;;  Sub-routines (already part of auto-exec)
+;;;  Sub-routines converted to functions (part of old activaid
 ;;;
 
 
 
-;; Sub-routine (to change to function)
-wc_sub_MouseHotkey:
+wc_sub_MouseHotkey()
+{
+
    If A_ThisHotkey contains MButton,LButton,RButton,XButton1,XButton2
    {
       MouseGetPos,,,wc_MouseID
@@ -2112,12 +2236,14 @@ wc_sub_MouseHotkey:
          WinWaitActive, ahk_id %wc_MouseID%
       }
    }
-Return
+}
 
 
+tim_WM_DISPLAYCHANGE()
+{
+   global NumOfMonitors
 
-;; Sub-routine (to change to function)
-tim_WM_DISPLAYCHANGE:
+
    ; Anzahl der Monitore und Arbeitsfläche ermitteln
    SysGet, NumOfMonitors, 80
    SysGet, WorkArea, MonitorWorkArea
@@ -2132,7 +2258,7 @@ tim_WM_DISPLAYCHANGE:
    WorkAreaPrimaryWidth := WorkAreaPrimaryRight - WorkAreaPrimaryLeft
    WorkAreaPrimaryHeight := WorkAreaPrimaryBottom - WorkAreaPrimaryTop
 
-   If NumOfMonitors < 1
+   If(NumOfMonitors < 1)
       NumOfMonitors = 1
 
       
@@ -2183,6 +2309,8 @@ tim_WM_DISPLAYCHANGE:
    SysGet, ScrollBarVWeight, 9
    SysGet, ScrollBarHWeight, 10
 
+   ; this is to check if anything changed.
+   if(False){
    If ((WorkAreaWidth <> LastWorkAreaWidth OR WorkAreaHeight <> LastWorkAreaHeight) AND LastWorkAreaHeight <> "")
    {
       ;printd("STATUS", A_LineNumber, A_LineFile, "Display settings changed ...")
@@ -2195,6 +2323,7 @@ tim_WM_DISPLAYCHANGE:
             ;;  Gosub, DisplayChange_%Function%
       }
    }
+   }
 
    LastWorkAreaWidth = %WorkAreaWidth%
    LastWorkAreaHeight = %WorkAreaHeight%
@@ -2203,23 +2332,33 @@ tim_WM_DISPLAYCHANGE:
 
    ; ac'tivAid automatisch deaktiveren, wenn der Installer sichtbar ist.
    DetectHiddenWindows, On
+   InstallerVisible := False
    If (WinActive("License - ac'tivAid v") OR WinActive("Lizenzbestimmungen - ac'tivAid v") OR WinActive("ac'tivAid v","Installationsfortschritt") OR WinActive("ac'tivAid v","Installation progress") OR WinExist("##### NEXTBUILD.ahk"))
    {
       DetectHiddenWindows, Off
       If A_IsSuspended = 0
       {
          ;;Gosub, sub_MenuSuspend
-         InstallerVisible = 1
+         InstallerVisible := True
       }
    }
-   Else If InstallerVisible = 1
+   Else If ( InstallerVisible )
    {
       DetectHiddenWindows, Off
-      InstallerVisible =
+      InstallerVisible := False
       ;; Gosub, sub_MenuSuspend
    }
    
-Return
+   ; wc_Monitor := func_GetMonitorNumber("A")
+   wc_Monitor := 1
+    
+    
+    
+    mon := Monitor(WorkArea%wc_Monitor%Left, WorkArea%wc_Monitor%Top, WorkArea%wc_Monitor%Width, WorkArea%wc_Monitor%Height)
+
+    return mon
+}
+
 
 
 ;;;
@@ -2227,16 +2366,15 @@ Return
 ;;;
 
 
-
 #SingleInstance force
 #Persistent
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
-;#Warn  ; Recommended for catching common errors.
+#Warn   ; https://www.autohotkey.com/docs/commands/_Warn.htm
 
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 CoordMode, Mouse, window
-bash_exe := get_bash_exe()
+global_bash_exe := get_bash_exe()
 debug_XY_coord := "none"
 
 diacritic_current := 1
@@ -2246,10 +2384,10 @@ diacritic_enabled := 0
 window_move_enabled :=0
 window_move_enabled :=1
   
-GoSub, tim_WM_DISPLAYCHANGE       ; get INITIAL monitor dimensions
+tim_WM_DISPLAYCHANGE()
+wc_sub_MouseHotkey()
    
 init_beep()              ; Signal that we finished autoexec section
-
 
 
 
@@ -2261,8 +2399,6 @@ init_beep()              ; Signal that we finished autoexec section
 ;  ctrl+L = cut line to clipboard
 ;  ctrl+V = paste line from clipboard
 ;  ctrl+D = duplicate paste line from clipboard
-
-
 
 
 
@@ -2316,45 +2452,6 @@ CapsLock & Esc:: ClipSep :=
 CapsLock & BS:: ClipChain =
 
 
-
-;;;
-;;; To change shortcuts: 
-;;;   https://www.autohotkey.com/docs/Hotkeys.htm
-;;;   https://www.autohotkey.com/docs/KeyList.htm
-;;;
-;;; #	Win
-;;; !	Alt
-;;; ^	Control
-;;; +	Shift
-;;;
-
-;;;
-;;; +	Shift
-;;; ^	Control
-
-
-^#!esc:: exitapp
-^#!F11:: XY_analyse_init()
-^#!F12:: reload
-
-;; temporary for testing
-#s:: reload
-
-^F8::   do_open_discogs()
-^!F8::   do_open_google()
-
-^F9::   do_find_explorer()
-^F10::  do_soulseek()  
-;^F11::  do_search_youtube_list()
-^F11:: do_collect_all_youtube_results_to_clipboard()
-^F12::  do_search_youtube_first_hit()
-	  
-^!F11:: do_get_all_chrome_tab_url()
-^!F12:: do_get_chrome_tab_url()
-
-
-;;;;;
-
 ^#!a:: diacritic_toggle()
 
 #if diacritic_enabled
@@ -2386,10 +2483,53 @@ CapsLock & BS:: ClipChain =
 ;#!Right::  do_enlarge("alt_right")
 ;#!Up::  do_enlarge("alt_up")
 ;#!Down::  do_enlarge("alt_down")
-
-
 #if 
 
 
 
+;;;
+;;; To change shortcuts: 
+;;;   https://www.autohotkey.com/docs/Hotkeys.htm
+;;;   https://www.autohotkey.com/docs/KeyList.htm
+;;;
+;;; #	Win
+;;; !	Alt
+;;; ^	Control
+;;; +	Shift
+;;;
 
+
+
+
+;5:00 - MEDUZA ft. GOODBOYS - Piece Of Your Heart (Ghost Rider & Ranji Remix)  [VIRGIN/ASTRALWERKS]   
+;8:00 - Post Malone ft. 21 Savage - Rockstar (Ranji Remix)  [REPUBLIC (UMG)]   
+;12:00 - Coming Soon!!! - Ready To Get High (Vibe Tribe & Somnia Remix)  [SPINTWIST]   
+;18:00 - Coming Soon!!! - African Jungle  [IBOGA]   
+
+
+
+^#!esc:: exitapp
+^#!F11:: XY_analyse_init()
+^#!F12:: reload
+
+;; temporary for testing
+#s:: reload
+
+
+^F8::   do_open_google()
+^+F8::   do_open_discogs()
+
+^F9::   do_find_explorer()
+^F10::  do_soulseek()  
+
+^F11::    do_chrome_get_current_url()
+^+F11::   do_chrome_get_all_urls()
+
+^F12::  do_search_youtube_first_hit("show_entries")       ;; CTRL+F12 opens several videos
+^+F12::  do_search_youtube_first_hit("show_search_page")   ;; Win+F12 open several search page for videos
+^#F12:: do_collect_all_youtube_results_to_clipboard()     ;; CTRL+WIN+F12 gets 5 copies for each video. Everything goes to clipboard
+	  
+
+; <F8: GOOGLE/DISCOGS>  <F9: EXPLORER>    <F10: SOUSLEEK>   <F11: CHROME URLS>  <F12: YOUTUBE>
+
+;;; END

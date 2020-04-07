@@ -234,7 +234,7 @@ JOG NEEDLE:
   
   IN PLAY           CC 77 -> "zo" (playing)
   IN JOG touch      CC 78 -> "zs" 
-  IN HOTCUE ANY     CC 79 -> "immediate" 
+  IN HOTCUE ANY     CC 79 -> "immediate"  (when we press hotcue)
    
   IN JOG turn             -> "y1"   (accumulated every 10ms)
  
