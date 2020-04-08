@@ -85,6 +85,13 @@ See below for a longer Table of contents.
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
     * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
+  * [What are your other mappings?](#What-are-your-other-mappings)
+    * [XDJ-XZ mapping](#What-are-the-features-of-your-XDJ-XZ-Traktor-mapping)
+    * [Numark PartyMix mapping](#What-are-the-features-of-your-Numark-PartyMix-mapping)
+    * [Beatgrid preparation](#What-are-the-features-of-your-Keyboard-mappings)
+    * [Transitions-aligned Beatjumps](#What-are-the-features-of-your-Keyboard-mappings)
+
+
   * [How to download my Traktor mappings](#How-to-download-my-Traktor-mappings)
   * [How to install my Traktor mappings](#How-to-install-my-Traktor-mappings)
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
@@ -477,6 +484,17 @@ Some relevant points:
 * DDJ-SZ / DDJ-SX2 / DDJ-SRT: https://maps.djtechtools.com/mappings/9222
 * AKAI AMX: https://maps.djtechtools.com/mappings/9323
 
+## What are your other mappings?
+
+* XDJ-XZ: https://maps.djtechtools.com/mappings/10305
+* Numark PartyMix: https://maps.djtechtools.com/mappings/9764
+* (Keyboard only) Beatgrid helper: https://maps.djtechtools.com/mappings/9760
+* (Keyboard only) Transitions-Aligned Beatjumps: https://maps.djtechtools.com/mappings/9762
+
+
+
+
+
 ## How to download my Traktor mappings:
 
 TO DOWNLOAD: you can ONLY download my mappings from the DJ tech tools site (http://maps.djtechtools.com).\ 
@@ -648,8 +666,7 @@ Summary:
 
 ## What are the features of your Keyboard mappings?
 
-### Traktor Beatgrid helper
-
+### A) Beatgrid helper
 
 **Links:**
 *	Download Link: https://maps.djtechtools.com/mappings/9760
@@ -660,7 +677,7 @@ Summary:
 *	All keys have a “faster” version using the shift
 
 
-### Traktor Beatgrid helper
+### B) Transitions-Aligned Beatjumps
 
 **Links:**
 *	https://maps.djtechtools.com/mappings/9762
