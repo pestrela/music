@@ -676,6 +676,8 @@ Summary:
 *	Features: quick seek,  quick zoom, next song, shortcut, lock, auto, etc
 *	All keys have a “faster” version using the shift
 
+![](pics/beatgrid_helper_-_slide.jpg?raw=true)
+
 
 ### B) Transitions-Aligned Beatjumps
 
@@ -687,6 +689,8 @@ Summary:
 *	Row “one” of your keyboard beatjumps deck A; row “two” beatjumps deck B; row “three” beatjumps both decks simultaneously. Row “zero” controls the crossfader as well. 
 *	EXAMPLE: please the transition around 52m of this mix.Song “A” is singing when “B” starts entering at 52m07s. For 30s, song “A” is singing normally. When “A” stops singing at 52m41s, “B” starts singing exactly at that time. This mapping helps a lot these fun transitions.
 
+
+![](pics/transitions_aligned_beatJumps_-_slide.jpg?raw=true)
 
 
 ## What documentation comes with your mappings?
