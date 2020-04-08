@@ -552,6 +552,7 @@ Notes:
 *	This a 2019 mapping for the Pioneer DDJ family of controllers. It works on both Traktor 3 and 2. The mapping was **tested extensively** in both the **DDJ-SX2** and **DDJ-SZ**. Other DDJs are supported as well (please see below).
 *	It is also the most complete by far. It supports TP3 MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, Slip reverse, and a Preview Player. Be sure to see the documentation for all the features.
 
+![ddj_sx2_sz](mapping_ddj_sx2_sz_srt/DDJ-SX2_SZ_SRT%20-%20Single%20slide.jpg?raw=true)
 
 ## What are the features of your AKAI AMX Traktor mapping?
 
