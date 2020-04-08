@@ -524,7 +524,7 @@ Notes:
 *	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
 
 
-![26ms_problem](mapping_ddj_1000/.png?raw=true "26ms_problem")
+![ddj_1000]("mapping_ddj_1000/DDJ-1000 - Single slide.jpg"?raw=true "ddj_1000")
 
 
 
