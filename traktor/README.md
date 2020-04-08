@@ -524,7 +524,7 @@ Notes:
 *	It is also the most complete by far. It supports MixerFX, MacroFX, JogFX chains, padFX, Keyboard mode, Rolls, and a Preview Player. Latest features are CDJ-emulation, Loops adjust and Beatjump shortcuts.
 
 
-![ddj_1000](mapping_ddj_1000/DDJ-1000%20-%20Single%20slide.jpg?raw=true "ddj_1000")
+![ddj_1000](mapping_ddj_1000/DDJ-1000%20-%20Single%20slide.jpg?raw=true)
 
 
 
@@ -588,6 +588,9 @@ Notes:
 *	This is a 2019 mapping for the Akai AMX. This is by far the cheapest and smallest way to unlock both DVS and almost all Traktor Pro 3 functions. In a single device you have the equivalent of a Z1+X1+TwisterFighter, at least.
 *	It is also the most complete by far. It supports 10x layers, 4 decks, full transport and tempo control, TP3 MixerFX, MacroFX, Cues, Loops, beatjump,  Rolls, Slip reverse, Sampler, Key adjust, and a Preview Player. 
 
+![mapping_akai_amx](mapping_akai_amx/AMX%20TP3_TP2%20-%20Single%20slide.jpg?raw=true)
+
+
 
 ## What are the features of your XDJ-XZ Traktor mapping?
 
@@ -612,8 +615,9 @@ Notes:
 *	Mapping now works both WITH and WITHOUT bome. Without BOME it will miss jog screens and MacroFX/MixerFX.
 
 
+![mapping_xdj_xz](mapping_xdj_xz/AMX%20TP3_TP2%20-%20Single%20slide.jpg?raw=true)
 
-
+mapping_party_mix
 ## What are the features of your Numark PartyMix mapping?
 
 Links:
@@ -638,9 +642,7 @@ Summary:
 *	This is a 2019 mapping for the numark PartyMix for VirtualDJ 2020. Major feature are 2x shifts layers that adds more functions than the available buttons, and a dedicated Filter knob.
 *	Other features are 10x ColorFX, Cues delete, Loop adjust, 4x Loop roll mode, and 7x FX control. Also available is Zoom, jog search, Tempo range
  	 
-   
-   
-mapping_akai_amx/  mapping_ddj_1000/  mapping_ddj_sx2_sz_srt/  mapping_party_mix/  mapping_xdj_xz/
+![mapping_party_mix](mapping_party_mix/PartyMix%20Mapping%20-%20Single%20slide.jpg?raw=true)
 
 
 
