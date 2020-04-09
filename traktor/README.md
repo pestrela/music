@@ -900,7 +900,7 @@ Highlights:
 * FX list and encoder mode fixes; same sorting as controller manager
 
 
-![cmdr_changes](https://github.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png?raw=true)
+![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true)
 
 
 ## How to emulate Elastic Beatgrids in Traktor (2)
