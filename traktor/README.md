@@ -64,7 +64,6 @@ See below for a longer Table of contents.
     * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
-    
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
   * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
   * [How to emulate Elastic Beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
@@ -148,7 +147,7 @@ See below for a longer Table of contents.
 
 This page has my knowledge sharing about Traktor, Mappings, Hardware, DJing, DJ Set, etc.\
 The picture below summarizes the main ideas and dependencies explained in these blog posts.
-![traktor_mindmap](pics/traktor_mindmap.png?raw=true "Traktor Mindmap")
+![traktor_mindmap](pics/traktor_mindmap.png?raw=true)
 
 # OS-Folders
 
@@ -328,7 +327,7 @@ See also the [most popular DJ softwares census](../census_graphs).
 | RekordBox | yes |  https://youtu.be/aTHFpwSMsZI?t=499 |
 | Serato | yes | https://youtu.be/wLt5fhZJGps&t=420 |
 | VirtualDJ | yes | https://youtu.be/PrKBerB2n3I?t=49 |
-| Traktor | no | [discussion](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+| Traktor | no | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
 
 
 
@@ -355,7 +354,7 @@ Steps:
 
 ---
  
-![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
+![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true)
 
 [Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
 
@@ -835,7 +834,7 @@ Solution:
 * Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
 * Analysis code: https://mybinder.org/v2/gh/pestrela/music_scripts/master
 
-![26ms_problem](pics/26ms_problem.png?raw=true "26ms_problem")
+![26ms_problem](pics/26ms_problem.png?raw=true)
 
 ## Which DJ converters avoid the 26ms shift issue?
 
@@ -871,7 +870,7 @@ This section groups the DJ software tools written by me, all freely available.
 [This folder](tools_traktor) contains my Traktor tools and CUE tools.
 Below is a summary; see [here](traktor_tools/README.md) for more details
 
-See also the CMDR editor changes.
+See also the CMDR editor [changes](#What-features-did-you-add-to-the-CMDR-TSI-editor).
 
 * Traktor_clone_cues
   * Clones cues between physically duplicated files. 
@@ -899,6 +898,10 @@ Highlights:
 * Grid quick filter
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
+
+
+![cmdr_changes](https://github.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png?raw=true)
+
 
 ## How to emulate Elastic Beatgrids in Traktor (2)
 
@@ -1147,7 +1150,7 @@ The solution is simply to disable the Dell services in "services.msc"
 
 **More details:** [smi_counter](https://github.com/pestrela/smi_counter)
  
-![dell_support_assist3](https://github.com/pestrela/smi_counter/blob/master/dell_support_assist3.jpg?raw=true "Dell SMI")
+![dell_support_assist3](https://github.com/pestrela/smi_counter/blob/master/dell_support_assist3.jpg?raw=true)
 
 
 
@@ -1166,7 +1169,7 @@ I've made a small tool to read this special counter in Windows: [count_smi tool]
 
 Below a simple test that shows that changing the brightness in Dell XPS "costs" 4 SMIs:
 
-![dell_smi_light_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_counter.jpg?raw=true "Dell SMI")
+![dell_smi_light_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_counter.jpg?raw=true)
 
 
 
@@ -1283,10 +1286,10 @@ an amazing file explorer add-on. It supports multiple tabs, folder bookmarks and
 I use this every day to open WSL linux terminals in the current folder, and to open audio files programs directly.
 
 Usage:
-![qqtabbar_usage](pics/qqtabbar_usage.jpg?raw=true "QQTabBar Usage")
+![qqtabbar_usage](pics/qqtabbar_usage.jpg?raw=true)
 
 Configuring Launchers:
-![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true "QQTabBar Launchers")
+![qqtabbar_launchers](pics/qqtabbar_launchers.jpg?raw=true)
 
 ## How to add WSL scripts to QQTabBar
 
@@ -1304,7 +1307,7 @@ Most important tricks are:
 * process the files with "wslpath $file" to convert to WSL format
   * if you are launching windows programs, use the arguments "as-is"  
 
-![qqtabbar_wsl_scripts](pics/qqtabbar_wsl_scripts_.jpg?raw=true "QQTabBar WSL scripts")
+![qqtabbar_wsl_scripts](pics/qqtabbar_wsl_scripts_.jpg?raw=true)
 
 
 # Other topics
@@ -1487,9 +1490,9 @@ Every year I update this page with the new data points over time. Source files a
 See also the [most popular DJ softwares census](../census_graphs).\
 See also the graph showing the [most popular DJ softwares over time](../census_graphs).
 
-![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true "dj_software_over_time")!
-![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true "dj_controllers_over_time")!
-![dj platforms over time](../census_graphs/dj_platform_over_time.jpg?raw=true "dj_platforms_over_time")!
+![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true)
+![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true)
+![dj platforms over time](../census_graphs/dj_platform_over_time.jpg?raw=true)
 
   
  
