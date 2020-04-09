@@ -900,7 +900,7 @@ Highlights:
 * FX list and encoder mode fixes; same sorting as controller manager
 
 
-![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true "eedd")!
+![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true "eedd")
 
 
 ## How to emulate Elastic Beatgrids in Traktor (2)
@@ -1170,6 +1170,8 @@ I've made a small tool to read this special counter in Windows: [count_smi tool]
 Below a simple test that shows that changing the brightness in Dell XPS "costs" 4 SMIs:
 
 ![dell_smi_light_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_counter.jpg?raw=true)
+
+![dell_smi_light_problems](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png)
 
 
 
