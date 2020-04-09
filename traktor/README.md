@@ -110,6 +110,7 @@ See below for a longer Table of contents.
   * [Elastic Beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
   * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
   * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
+  * [Github Markdown tools](#Github-Markdown-tools)
   * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
   * [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
 
@@ -862,6 +863,7 @@ This section groups the DJ software tools written by me, all freely available.
 * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
 * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
 * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
+* [Github Markdown tools](#Github-Markdown-tools)
 * [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
 
 
@@ -900,7 +902,7 @@ Highlights:
 * FX list and encoder mode fixes; same sorting as controller manager
 
 
-![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true "eedd")
+![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true "eedd" )
 
 
 ## How to emulate Elastic Beatgrids in Traktor (2)
@@ -1004,6 +1006,13 @@ Summary:
 * **smi_counter:**
   * windows SMI counter. Useful for detect laptop DPC stalls
   * https://github.com/pestrela/smi_counter
+
+## Github Markdown tools
+
+* Better Cheatsheet: https://gist.github.com/jonschlinkert/5854601
+* Tables Generator: https://www.tablesgenerator.com/markdown_tables
+
+A small program to check relative links inside the same MD document: [md_check_relative_links.py](../wsl_tools).
 
   
 ## What shortcuts you added for Youtube, Google and Discogs?
@@ -1169,16 +1178,12 @@ I've made a small tool to read this special counter in Windows: [count_smi tool]
 
 Below a simple test that shows that changing the brightness in Dell XPS "costs" 4 SMIs:
 
-![dell_smi_light_problems](https://github.com/pestrela/smi_counter/blob/master/dell_smi_counter.jpg?raw=true)
-
-![dell_smi_light_problems](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png)
-
-
+![dell_smi_light_problems](https://github.com/pestrela/smi_counter/blob/master/pics/dell_smi_counter.jpg?raw=true )
+                           
 
 ## How to make a deep trace of everything that runs in your laptop
    
-   
-TODO: document windows performance analyser   
+TODO: document the windows performance analyser   
    
    
 ## Read this if you have erratic USB cable problems
@@ -1312,6 +1317,7 @@ Most important tricks are:
 ![qqtabbar_wsl_scripts](pics/qqtabbar_wsl_scripts_.jpg?raw=true)
 
 
+
 # Other topics
 
 
@@ -1382,7 +1388,7 @@ Concrete steps:
   * change project to 4:3 format 
   * ...
  
-
+ 
 ## How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS
 
 I have **all** my Traktor files synchronized between laptops. This includes [100Gb of music](#why-i-manage-music-using-os-folders-only)
