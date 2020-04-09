@@ -904,6 +904,8 @@ Highlights:
 
 ![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true "eedd" )
 
+![cmdr_changes](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png "eedd" )
+
 
 ## How to emulate Elastic Beatgrids in Traktor (2)
 
