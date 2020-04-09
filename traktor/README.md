@@ -66,7 +66,8 @@ See below for a longer Table of contents.
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
     
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
-  * [How to emulate elastic beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
+  * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
+  * [How to emulate Elastic Beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
   
 * [BOME migration](#BOME-mappings-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
@@ -107,7 +108,7 @@ See below for a longer Table of contents.
 * [Free DJ Software Tools](#Free-DJ-Software-Tools)
   * [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
   * [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
-  * [Elastic beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
+  * [Elastic Beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
   * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
   * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
   * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
@@ -319,6 +320,46 @@ But in the end Traktor has [has unique features that I depend on](#why-is-trakto
 
 See also the [most popular DJ softwares census](../census_graphs).
 
+## Which softwares support Elastic Beatgrids
+
+
+| Software | Elastic Beatgrids | Video |
+|-----------|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| RekordBox | yes |  https://youtu.be/aTHFpwSMsZI?t=499 |
+| Serato | yes | https://youtu.be/wLt5fhZJGps&t=420 |
+| VirtualDJ | yes | https://youtu.be/PrKBerB2n3I?t=49 |
+| Traktor | no | [discussion](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+
+
+
+## How to emulate Elastic Beatgrids in Traktor
+
+Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
+
+It is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
+Same story for perfect **BPM-based Effects** like delay.
+
+This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
+
+
+Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats using the accurate dynamic BPM value:
+  
+Steps:
+* Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
+* Analyse ONLY these tracks in dynamic mode in Rekordbox: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
+* Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
+* Manually remove the non-dynamic tracks from the XML
+* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
+* Convert your collection without the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
+* Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor) or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
+
+---
+ 
+![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
+
+[Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
+
+
 
 # BOME mappings migration
 
@@ -490,9 +531,6 @@ Some relevant points:
 * Numark PartyMix: https://maps.djtechtools.com/mappings/9764
 * (Keyboard only) Beatgrid helper: https://maps.djtechtools.com/mappings/9760
 * (Keyboard only) Transitions-Aligned Beatjumps: https://maps.djtechtools.com/mappings/9762
-
-
-
 
 
 ## How to download my Traktor mappings:
@@ -862,43 +900,9 @@ Highlights:
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
 
+## How to emulate Elastic Beatgrids in Traktor (2)
 
-## How to emulate elastic beatgrids in Traktor
-
-Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
-
-It is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
-Same story for perfect **BPM-based Effects** like delay.
-
-This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
-
-
-Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats using the accurate dynamic BPM value:
-  
-Steps:
-* Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
-* Analyse ONLY these tracks in dynamic mode in Rekordbox: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
-* Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
-* Manually remove the non-dynamic tracks from the XML
-* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
-* Convert your collection without the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
-* Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor) or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
-
----
- 
-![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
-
-[Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
-
-## Which softwares support Elastic Beatgrids
-
-
-| Software | Elastic Beatgrids | Video |
-|-----------|-------------------|----------------------------------------------------------------------------------------------------------------------|
-| Serato | yes | https://www.youtube.com/watch?v=wLt5fhZJGps&t=420 |
-| RekordBox | yes |  https://youtu.be/aTHFpwSMsZI?t=499 |
-| VirtualDJ | yes | https://youtu.be/PrKBerB2n3I?t=49 |
-| Traktor | no | [discussion](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+This info was moved [here](#How-to-emulate-Elastic-Beatgrids-in-Traktor).
 
 
 ## How to swap Traktor configurations without the slow preferences window
