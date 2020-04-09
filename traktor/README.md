@@ -868,7 +868,7 @@ Highlights:
 Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
 
 It is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
-Same story for perfect **delay-based Effects**.
+Same story for perfect **BPM-based Effects** like delay.
 
 This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
 
@@ -889,6 +889,17 @@ Steps:
 ![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true "traktor_elastic_beatgrids")
 
 [Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
+
+## Which softwares support Elastic Beatgrids
+
+
+| Software | Elastic Beatgrids | Video |
+|-----------|-------------------|----------------------------------------------------------------------------------------------------------------------|
+| Serato | yes | https://www.youtube.com/watch?v=wLt5fhZJGps&t=420 |
+| RekordBox | yes |  https://youtu.be/aTHFpwSMsZI?t=499 |
+| VirtualDJ | yes | https://youtu.be/PrKBerB2n3I?t=49 |
+| Traktor | no | [discussion](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+
 
 ## How to swap Traktor configurations without the slow preferences window
 
