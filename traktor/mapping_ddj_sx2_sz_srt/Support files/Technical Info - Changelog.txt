@@ -1,9 +1,8 @@
 
-
 A friendly request:
 -------------------
   Please don't be disrespectful for the time that people spend to make complex mappings.
-  Do not press a thumb down without leaving the steps to reproduce any issue you might have. 
+  Do not press a thumb down without leaving the steps to reproduce any issue you might have!
   In the majority of the cases this will actually be an user error. Thank you.
 
  
@@ -32,8 +31,8 @@ CHANGELOG - SUMMARY:
 note:  See also excel file "Technical Info - Version history.xls"
    
    
-CHANGELOG - DETAILS:
---------------------
+UNIFIED MAPPING CHANGELOG - DETAILS:
+------------------------------------
 - v6.8.0 DDJ-1000 - April 2020 - "the SuperKnob / TTFX edition"
  - Short summary:
    Another big update to the DDJ-1000/800 Traktor mapping. 
@@ -152,12 +151,6 @@ CHANGELOG - DETAILS:
 		- YT:   https://www.youtube.com/watch?v=EkSJ9Ug9Zuk
 
     
-- v6.1.8 XDJ-XZ - April 2020 - XDJ emergency release
-  - many bug fixes from the first release: missing loops, search, tempo reset, sync
-  - now provide two versions: for both with BOME and without BOME
-  - moved jog touch back to traktor and away from BOME
-   
-    
 - v6.1.7 DDJ-SX2/SZ - March 2020 - Added Preview player to SX2
   - Load prepare - press = load track in preview player
   - browser turn = seek preview player
@@ -195,6 +188,22 @@ CHANGELOG - DETAILS:
     - YT:   http://youtu.be/H_TE2mtuM6Q
 
     
+    
+XDJ-XZ specific mapping:
+------------------------
+- v6.1.8b XDJ-XZ - April 2020 - Shift2 release
+ - fixed shift+browser to browse the tree
+ - "call memory" is now a second shift, to access loop move and zoom    
+    
+- v6.1.8 XDJ-XZ - April 2020 - XDJ emergency release
+  - many bug fixes from the first release: missing loops, search, tempo reset, sync
+  - now provide two versions: for both with BOME and without BOME
+  - moved jog touch back to traktor and away from BOME
+    
+- v6.1.8 XDJ-XZ - April 2020 - XDJ emergency release
+  - many bug fixes from the first release: missing loops, search, tempo reset, sync
+  - now provide two versions: for both with BOME and without BOME
+  - moved jog touch back to traktor and away from BOME
     
     
 DDJ Mapping ChangeLog - By JaJA and Viper:

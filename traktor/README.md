@@ -363,19 +363,17 @@ Steps:
 
 ## Which tracks benefit from emulated Elastic beatgrids?
 
-**Unsteady tracks:**
-* Applicable: yes
+**Unsteady tracks: YES**
 * Examples: 80s Pop, 70s DiscoSound, Live drummers (any decade)
 * Typical range: +- 1% bpm error
 * Error: Very small; the error is reset every 4th beat will always reset it
 
-**Transition tracks:**
-* Applicable: no
+**Transition tracks: NO**
 * Examples:
   * [Magic Drum Orchestra - Drop it like its Hot](https://youtu.be/W-nrHptw4Ow) 85->115 bpm, Abrupt change
   * [Planet Soul - Set me Free](https://www.youtube.com/watch?v=v5HEfbxk7Mw) 126->98 bpm, Smooth change
 * Typical range: +- 15% bpm  (change from 3/4 to 4/4 signature)
-* Error: Too much; the 3rd beat will have an half beat error
+* Error: Too much; the 3rd beat will have an half beat error (see picture)
   * Note: setting beatmarkers every 1 beat breaks Traktor sync dynamics
   
 

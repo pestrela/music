@@ -382,17 +382,24 @@ BOME support page 6:
     
 XDJ-XZ values:
 --------------
-  4-beat:    67 G4
-  loop in:    6 F#-1
-  loop out:   7 G-1
-  reloop:     8 G#-1  (AKA exit)
-  call prev: 11 B-1
-  call next: 12 C0
-  delete:    13 C#0
-  memory:    10 A#-1
+  buttons:
+    4-beat:    67 G4
+    loop in:    6 F#-1
+    loop out:   7 G-1
+    reloop/exit:     8 G#-1
+    call prev: 11 B-1
+    call next: 12 C0
+    delete:    13 C#0
+    memory:    10 A#-1   ("SHIFT2")
   
+     18 F#0
      
-  
+     
+  mapping:
+    memory = shift2
+    (shift1 not assigned)
+    call prev: loop size selector / loop move (with shift)
+    
   
 Pioneer DDJ pad colors:
 -----------------------
