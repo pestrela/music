@@ -332,6 +332,8 @@ See also the [most popular DJ softwares census](../census_graphs).
 
 
 
+
+
 ## How to emulate Elastic Beatgrids in Traktor
 
 Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
@@ -358,6 +360,30 @@ Steps:
 ![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true)
 
 [Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
+
+## Which tracks benefit from emulated Elastic beatgrids?
+
+**Unsteady tracks:**
+* Applicable: yes
+* Examples: 80s Pop, 70s DiscoSound, Live drummers (any decade)
+* Typical range: +- 1% bpm error
+* Error: Very small; the error is reset every 4th beat will always reset it
+
+**Transition tracks:**
+* Applicable: no
+* Examples:
+  * [Magic Drum Orchestra - Drop it like its Hot](https://youtu.be/W-nrHptw4Ow) 85->115 bpm, Abrupt change
+  * [Planet Soul - Set me Free](https://www.youtube.com/watch?v=v5HEfbxk7Mw) 126->98 bpm, Smooth change
+* Typical range: +- 15% bpm  (change from 3/4 to 4/4 signature)
+* Error: Too much; the 3rd beat will have an half beat error
+  * Note: setting beatmarkers every 1 beat breaks Traktor sync dynamics
+  
+
+![](pics/traktor_elastic_beatgrids_which_tracks.jpg?raw=true)
+
+more lists:
+[list1](https://www.reddit.com/r/DJs/comments/2hmtgc/do_you_know_of_any_house_songs_that_increase_in/)
+[list2](https://www.reddit.com/r/DJs/comments/ybt30/transition_tracks/)
 
 
 
@@ -902,8 +928,6 @@ Highlights:
 * FX list and encoder mode fixes; same sorting as controller manager
 
 
-![cmdr_changes](https://github.com/pestrela/cmdr/tree/master/docs/pics/cmdr_improvements.png?raw=true "eedd" )
-
 ![cmdr_changes](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png "eedd" )
 
 
@@ -1351,6 +1375,8 @@ Regrading the IDs:
   * its much easier to show to knowledgeable DJs in a single go
   * mixcloud is able to identify some tracks for you
  
+ 
+see also this forum post on [reducing the hiss of K7](http://www.oldskoolanthemz.com/forum/showthread.php?t=68960).
  
 ## How I edited my videos showing the Traktor screen 
 

@@ -368,11 +368,30 @@ BOME support page 6:
     1: Sync phase  (Serato and VirtualDJ mode - for temposync)
     2: Elastic beatgrid (Same as 1, but disables sync with jogwheel; reenables on cue Use with Beatsync!)
         
+    TODO, new style in BOME:
+     0: Sync is toggle. No turning on sync on ever.
+     1: elastic beatgrids: sync is phase only; Pitch bend disables sync; Cue enables sync.
+     
+     
+        
   M7: free
   m8: only for XDJ-XZ (=CDJ mode)
     0 = vinyl mode
     1 = CDJ mode
     
+    
+XDJ-XZ values:
+--------------
+  4-beat:    67 G4
+  loop in:    6 F#-1
+  loop out:   7 G-1
+  reloop:     8 G#-1  (AKA exit)
+  call prev: 11 B-1
+  call next: 12 C0
+  delete:    13 C#0
+  memory:    10 A#-1
+  
+     
   
   
 Pioneer DDJ pad colors:
