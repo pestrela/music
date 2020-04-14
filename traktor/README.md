@@ -364,8 +364,8 @@ Simple method:
 This is a revised version of the [basic workflow(#How-to-emulate-Elastic-Beatgrids-in-Traktor). 
 
 Benefits are more accuracy of the end result because it adds additional beatmarkers every 4 beats, 
-it avoidings the [26ms mp3 shift issue](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
-and its a lot faster by patching the cues directly in the collection instead of actually importing the files.
+it avoids the [26ms mp3 shift issue](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
+and its a lot faster by limiting the tracks and by directly patching the cues in the collection (instead of regular importing the files).
 
 
 Differences are:
@@ -375,8 +375,9 @@ Differences are:
   * There is no way to export specific playlists/tracks, you always get the whole collection
   * so by manually removing the tracks the later stages will be a lot faster  
 * Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) 
-  * This will force a beatmarker every 4 beats. These beatmarers are very accurate because it still uses the dynamic BPM **before** conversion. 
-* Use a converer that specifically addresses the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
+  * This will force a beatmarker every 4 beats. 
+  * These beatmarkers are very accurate because it still uses the dynamic BPM **before** conversion. 
+* Use a converter that specifically addresses the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
 * Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor)
 
 ![traktor_elastic_beatgrids3](pics/traktor_elastic_beatgrids3.jpg?raw=true)
