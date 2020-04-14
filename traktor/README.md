@@ -355,7 +355,7 @@ Simple method:
 1. Convert your this file from Rekordbox format to Traktor format: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
 1. Import your files into Traktor: [guide](https://rekord.cloud/wiki/library-export) 
 
-![](pics/traktor_elastic_beatgrids2.jpg?raw=true)
+![traktor_elastic_beatgrids2](pics/traktor_elastic_beatgrids2.jpg?raw=true)
 
 ---
  
@@ -379,7 +379,7 @@ Differences are:
 * Use a converer that specifically addresses the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
 * Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor)
 
-![](pics/traktor_elastic_beatgrids3.jpg?raw=true)
+![traktor_elastic_beatgrids3](pics/traktor_elastic_beatgrids3.jpg?raw=true)
  
 [Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
 
@@ -399,7 +399,7 @@ Differences are:
   * Note: setting beatmarkers every 1 beat breaks Traktor sync dynamics
   
 
-![](pics/traktor_elastic_beatgrids1.jpg?raw=true)
+![traktor_elastic_beatgrids1](pics/traktor_elastic_beatgrids1.jpg?raw=true)
 
 
 more lists:
