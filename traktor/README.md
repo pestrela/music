@@ -344,21 +344,43 @@ Same story for perfect **BPM-based Effects** like delay.
 This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
 
 
-Below a recipe to **approximate** Elastic beatgrids in Traktor using Rekordbox conversion, and putting a beatmarker every 4 beats using the accurate dynamic BPM value:
-  
-Steps:
-* Select the specific tracks that really need elastic beatgrids: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
-* Analyse ONLY these tracks in dynamic mode in Rekordbox: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
-* Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
-* Manually remove the non-dynamic tracks from the XML
-* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) to add a beatmarker every 4 beats. This will be very accurate because it uses the dynamic BPM.
-* Convert your collection without the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
-* Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor) or [import it manually as normal](https://rekord.cloud/wiki/library-export) 
+Below a recipe to **approximate** Elastic beatgrids in Traktor, automatically using Rekordbox conversion.
+The simplest method is presented first, then a more acurate/faster method is presented second.
+
+Simple method:  
+1. Download the free V5 rekordbox: [link](https://rekordbox.com/en/download5/)
+1. Select the tracks with single, but unsteady, BPMs: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
+1. Analyse these tracks in dynamic mode: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
+1. Export your collection.xml: [guide](https://rekord.cloud/wiki/library-import)
+1. Convert your this file from Rekordbox format to Traktor format: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
+1. Import your files into Traktor: [guide](https://rekord.cloud/wiki/library-export) 
+
+![](pics/traktor_elastic_beatgrids2.jpg?raw=true)
 
 ---
  
-![traktor_elastic_beatgrids](pics/traktor_elastic_beatgrids.jpg?raw=true)
+## How to emulate Elastic Beatgrids in Traktor - More complex workflow
 
+This is a revised version of the [basic workflow(#How-to-emulate-Elastic-Beatgrids-in-Traktor). 
+
+Benefits are more accuracy of the end result because it adds additional beatmarkers every 4 beats, 
+it avoidings the [26ms mp3 shift issue](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
+and its a lot faster by patching the cues directly in the collection instead of actually importing the files.
+
+
+Differences are:
+* Download specifically v5.6.0 rekordbox. 
+  * This was the last without an XML import bug: [guide](https://www.youtube.com/watch?v=JV89dj1hDWM)
+* Manually remove the non-dynamic tracks from the XML.
+  * There is no way to export specific playlists/tracks, you always get the whole collection
+  * so by manually removing the tracks the later stages will be a lot faster  
+* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) 
+  * This will force a beatmarker every 4 beats. These beatmarers are very accurate because it still uses the dynamic BPM **before** conversion. 
+* Use a converer that specifically addresses the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
+* Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor)
+
+![](pics/traktor_elastic_beatgrids3.jpg?raw=true)
+ 
 [Traktor forum post](https://www.native-instruments.com/forum/threads/how-to-emulate-elastic-beatgrids-in-traktor-via-rekordbox-conversion.375229/)
 
 ## Which tracks benefit from emulated Elastic beatgrids?
@@ -377,12 +399,16 @@ Steps:
   * Note: setting beatmarkers every 1 beat breaks Traktor sync dynamics
   
 
-![](pics/traktor_elastic_beatgrids_which_tracks.jpg?raw=true)
+![](pics/traktor_elastic_beatgrids1.jpg?raw=true)
+
 
 more lists:
 [list1](https://www.reddit.com/r/DJs/comments/2hmtgc/do_you_know_of_any_house_songs_that_increase_in/)
 [list2](https://www.reddit.com/r/DJs/comments/ybt30/transition_tracks/)
 
+Note: manually beatgriding tracks in rekordbox is tricky because its a strictly left-to-right operaton.\
+In other words: there is no way to put beatmarkers in front of the track without deleting them at the middle/end as well.\
+[more info](https://forums.pioneerdj.com/hc/en-us/community/posts/115010528306)
 
 
 # BOME mappings migration
