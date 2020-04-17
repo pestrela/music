@@ -134,6 +134,9 @@ See below for a longer Table of contents.
   * [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
 * [Other topics](#Other-topics)
+  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major]
+  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor]
+  * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
@@ -724,7 +727,6 @@ Notes:
 
 ![mapping_xdj_xz](mapping_xdj_xz/AMX%20TP3_TP2%20-%20Single%20slide.jpg?raw=true)
 
-mapping_party_mix
 ## What are the features of your Numark PartyMix mapping?
 
 Links:
@@ -828,16 +830,17 @@ If you want further appreciation, PayPal donations are welcome (pedro.estrela@gm
 
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
-Yes. I've updated [my SZ/SX2 mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
+**Yes.** I've updated [my SZ/SX2 mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
 to work on the SRT. 
 Please see the demo video here: https://www.youtube.com/watch?v=aU3QnOez56A&t=2s
 
 Specific comments:
-* *Jogs screens:* Jog Screens are NOT supported in MIDI. This is a business decision of the Serato company. If this affects you, please voice your opinion on this feature request thread: 
+* **Jogs screens:** Jog Screens are NOT supported in MIDI. This is a business decision of the Serato company. 
+  * If this affects you, please voice your opinion on this feature request thread: 
   * https://serato.com/forum/discussion/1736390
-* *Pioneer Effects*: Mixer runs in external mode. This means that you have all pioneer effects for Traktor music. 
+* **Pioneer Effects**: Mixer runs in external mode. This means that you have all pioneer effects for Traktor music. 
   * This is very different from the regular DDJ-1000, which runs in internal mode and only has Pionner beatFX in the master channel for Traktor sources.
-* *Scratching:* Please put your jog weight to “heavy”.  This will significantly improve scratching and jogFX. Also please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode;
+* **Scratching:** Please put your jog weight to “heavy”.  This will significantly improve scratching and jogFX. Also please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode;
 
   
 ## Does (random DDJ controller) works with your mapping? Are the jogs good?
@@ -1371,12 +1374,63 @@ Most important tricks are:
 
 # Other topics
 
-
+* [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major]
+* [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor]
+* [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
 * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
 * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
 * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
 * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
 * [DJ Census over time results](#DJ-Census-over-time-results)
+
+
+## Issues of the V6 Rekordbox migration - Major
+
+1) **Vendor Lock-in:**
+* V6 encrypts the database and removed the XML export option.
+  * Disucusion: https://www.reddit.com/r/DJs/comments/g11s3l
+  * Workaround: https://www.reddit.com/r/DJs/comments/g2c9l9
+* This vendor lock-in doesn't look good on latest European regulations:
+  * "To eliminate vendor lock-in practices, the Regulation provides for and encourages 
+  the development of codes of conduct for service providers. With these codes of conduct, 
+  consumers should be able to switch to other service providers more easily."
+  * source: https://www.gtlaw-amsterdamlawblog.com/2018/11/another-privacy-regulation-but-this-time-on-non-personal-data/
+
+2) **Perpetual bought licenses** do not transfer to subscription model:
+* I've bought a rekordbox performnce, rekordbox video and RMX pack to use in my SX2
+  * V5 licenses: https://web.archive.org/web/20200217154645/https://rekordbox.com/en/plan/pluspacks/
+* This V5 license doesn't carry over to the new subscription model
+  * Note: This is orthogonal to the hardware unlock option (https://rekordbox.com/en/support/link/)  
+  
+
+## Issues of the V6 Rekordbox migration - Minor
+  
+The XML vendor lock is a **deal breaker** for me.\
+The dead V5 license is just annoying (there will be no V5 improvements and probably no support now).
+
+There is additional smaller issues: no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;
+ Still cant physically delete files from RB. Still hotcues do not move the floating cue.
+
+On the plus side, it now automatically auto-relocate renamed and moved tracks. 
+It also has shared audio and video playlists. And a Day skin ([guide](#How-to-enable-day-skin-in-any-software) )
+
+The other functions I either do not use (streaming, ableton link) or have my own solution (cloud).
+  
+  
+## How to enable day skin in any software
+
+If you are playing on the bright outside you will not see a thing.
+Some softwares provide a specific skin for this situation.
+
+But this feature is native to the OS: 
+
+Windows 10:
+* Press Win + Plus / settings / Invert Colors / Turn on magnifier
+* [guide](https://windowsreport.com/inverted-colors-windows-10/)
+
+MacOS:
+* “System Preferences” > “Keyboard” > “Shortcuts” > “Accessibility” >  “Invert Colors
+* [guide](https://devicebar.com/invert-display-colors-on-apple-mac-os-x/2642/)
 
   
   
