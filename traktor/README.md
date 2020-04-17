@@ -134,8 +134,8 @@ See below for a longer Table of contents.
   * [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
 * [Other topics](#Other-topics)
-  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major]
-  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor]
+  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major)
+  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor)
   * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
@@ -1374,8 +1374,8 @@ Most important tricks are:
 
 # Other topics
 
-* [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major]
-* [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor]
+* [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major)
+* [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor)
 * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
 * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
 * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
@@ -1388,7 +1388,7 @@ Most important tricks are:
 
 1) **Vendor Lock-in:**
 * V6 encrypts the database and removed the XML export option.
-  * Disucusion: https://www.reddit.com/r/DJs/comments/g11s3l
+  * Discussion: https://www.reddit.com/r/DJs/comments/g11s3l
   * Workaround: https://www.reddit.com/r/DJs/comments/g2c9l9
 * This vendor lock-in doesn't look good on latest European regulations:
   * "To eliminate vendor lock-in practices, the Regulation provides for and encourages 
