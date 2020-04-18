@@ -433,14 +433,14 @@ However every year Controllers get more complex, so doing mappings today ranges 
 Some other anedotic evidence on this are the [preferences freeze](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879), the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
 and the HC-4500 mapping to get track details.
 
-As such all the latest versions of my mappings require [BOME](https://www.bome.com/products/miditranslator).
-(The older versions are Traktor-only and simpler to install).
-
 Specific Blog posts:
 * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
 * [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
 * [c) BOME limits](#Some-Limitations-of-BOME-mappings)
 * [d) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
+
+Because of this all my latest mappings require [BOME](https://www.bome.com/products/miditranslator).\
+(The older versions do not require BOME and are simpler to install).
 
 
 ![bome_versions](pics/bome_versions.jpg?raw=true)
@@ -1674,44 +1674,44 @@ The ones I worked the most were Rui Remix, Bruno Espadinha, Joao Vaz, Jaylion, M
 20 years later the Internet changed this locality a lot.\
 You can now learn anything from youtube tutorials, reading articles and have insightful conversations with people that you may never meet.
 
-Below some of the people that I've learned the most. Apologies if I forget anyone.\ 
+Below some of the people that I've learned the most. Apologies if I forget anyone.\
 All of them made significant contributions either in articles, software or video tutorials. 
 In the vast majority this is applicable to any DJ software.
 
 Most of them I've either meet them in person and/or had numerous conversations over chat.
 
-* Ean Golden:
+* **Ean Golden:**
   * Inventor of Controlerism, Founder of DJtechtools, Hundreds of articles, Workshops
   * https://djtechtools.com/author/Admin/
-* Phill Morse: 
+* **Phill Morse:**
   * Founder of DigitalDJTips (biggest online DJ school), Hundreds of articles
   * https://www.digitaldjtips.com/category/news/
-* Stevan Djumic
+* **Stevan Djumic:**
   * Dozens of very high quality Traktor mappings. Reverse engineering his mappings was a major turning point for me.
   * https://my.djtechtools.com/users/3776
-* Jeroen Groenendijk:
+* **Jeroen Groenendijk:**
   * Multiple workshops and generic techtalks
   * https://www.facebook.com/pg/DJResource/videos/
-* Peter van Ruiten:
+* **Peter van Ruiten:**
   * Author of the DJCU converter. Dozens of videos about conversion and DJ collection management
   * https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/videos
-* Christiaan Maaks:  
+* **Christiaan Maaks:**
   * Author of the rekordcloud online converter. Lots of generic info applicable to all converters  
   * https://rekord.cloud/wiki/
-* Alex Coyle:
+* **Alex Coyle:**
   * Author of the open-source DJ converter. I worked with him over months to research the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * https://github.com/digital-dj-tools/dj-data-converter/issues/3
-* DJ TLM:
+* **DJ TLM:**
   * Dozens of tutorials on Scratching
   * https://www.youtube.com/user/djTLMtv/videos?view=0&sort=dd&flow=grid
-* Teo Tormo
+* **Teo Tormo:**
   * Dozens of articles on advanced midi mapping and DJ hacking.
   * https://djtechtools.com/author/teotormo/
   
   
 **Honorable mentions:**\
-These individuals also made contributions that benefit a lot of users. 
-Difference with the group above is that I had much less interactions with them.\
+These individuals also made contributions that benefit a lot of users.\
+Biggest difference to the group above is that I had much less interactions with them.\
 [Damien Sirkis](https://forums.next.audio/c/rekord-buddy/faq), 
 [Florian Bomers](https://www.bome.com/contributor/florian), [Steven Caldwell](https://www.bome.com/contributor/steve1),
 [Michael Rahier](https://github.com/TakTraum/cmdr),
