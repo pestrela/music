@@ -443,7 +443,7 @@ Specific Blog posts:
 * [d) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
 
 
-![bome_versios](pics/bome_versions.jpg?raw=true)
+![bome_versions](pics/bome_versions.jpg?raw=true)
 
   
 ## Why I moved to BOME midi mapping: Impossible features
