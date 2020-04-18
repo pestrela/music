@@ -98,12 +98,14 @@ See below for a longer Table of contents.
   * [Can I see a demo video of your mappings?](#can-i-see-a-demo-video-of-your-mappings)
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
   * [Is the DDJ-1000SRT also mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
+  * [Is the DDJ-XP2 mappable to Traktor?](#is-the-ddj-1000xp2-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
  
 * [DJ collection converters](#DJ-collection-converters)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
 
+  
 * [Free DJ Software Tools](#Free-DJ-Software-Tools)
   * [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
   * [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
@@ -133,15 +135,22 @@ See below for a longer Table of contents.
   * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
   * [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
+
+* [Rekordbox topics](#Rekordbox-topics)
+  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
+  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
+  * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
+  
 * [Other topics](#Other-topics)
-  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major)
-  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor)
+  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
+  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
   * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
   * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
   * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
   * [DJ Census over time results](#DJ-Census-over-time-results)
+  * [People that I learned a lot from the Global DJ community](#Some-people-from-which-I-ve-learned-a-lot-from-the-Global-DJ-community)
 
   
   
@@ -419,16 +428,22 @@ In other words: there is no way to put beatmarkers in front of the track without
 
 Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.
 
-However every year Controllers get more complex, so mapping ranges today between hard to impossible ([link](https://bit.ly/2NrlVzy)).
+However every year Controllers get more complex, so doing mappings today ranges between hard to impossible ([link](https://bit.ly/2NrlVzy)).
 
 Some other anedotic evidence on this are the [preferences freeze](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879), the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
 and the HC-4500 mapping to get track details.
 
-Blog posts:
+As such all the latest versions of my mappings require [BOME](https://www.bome.com/products/miditranslator).
+(The older versions are Traktor-only and simpler to install).
+
+Specific Blog posts:
 * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
 * [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
 * [c) BOME limits](#Some-Limitations-of-BOME-mappings)
 * [d) Future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
+
+
+![bome_versios](pics/bome_versions.jpg?raw=true)
 
   
 ## Why I moved to BOME midi mapping: Impossible features
@@ -842,6 +857,18 @@ Specific comments:
   * This is very different from the regular DDJ-1000, which runs in internal mode and only has Pionner beatFX in the master channel for Traktor sources.
 * **Scratching:** Please put your jog weight to “heavy”.  This will significantly improve scratching and jogFX. Also please avoid VINYL OFF mode. The TSI disables jog touch in this case, but the jog loses resolution compared to VINYL ON mode;
 
+## Is the DDJ-XP2 mappable to Traktor?
+
+The XP2 is now really popular because its the cheapest way 
+to unlock [Rekordbox V6 performance](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options).
+ 
+My [DDJ-1000 mapping](https://maps.djtechtools.com/mappings/9279) is compatible with the XP1/XP2.\
+So it will work. But it was not made specific to it, so some features might be missing.
+
+Strong recommendation is to use v6.3.3 of my DDJ-1000 mapping.\
+This is because later versions require [BOME](https://www.bome.com/products/miditranslator), 
+are more complex [to install](mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Installation%20Guide.pdf), 
+and focus on non-XP2-relevant features like the jog screens.
   
 ## Does (random DDJ controller) works with your mapping? Are the jogs good?
 
@@ -1372,17 +1399,11 @@ Most important tricks are:
 
 
 
-# Other topics
+# Rekordbox topics
 
-* [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration-major)
-* [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration-minor)
-* [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
-* [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
-* [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
-* [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
-* [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
-* [DJ Census over time results](#DJ-Census-over-time-results)
-
+* [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
+* [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
+* [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
 
 ## Issues of the V6 Rekordbox migration - Major
 
@@ -1397,16 +1418,17 @@ Most important tricks are:
   * source: https://www.gtlaw-amsterdamlawblog.com/2018/11/another-privacy-regulation-but-this-time-on-non-personal-data/
 
 2) **Perpetual bought licenses** do not transfer to subscription model:
-* I've bought a rekordbox performnce, rekordbox video and RMX pack to use in my SX2
+* I've bought a rekordbox performance (149 USD), rekordbox video (99USD)and RMX pack (9.9USD) to use in my SX2. Total cost: 260USD w/o Tax.
   * V5 licenses: https://web.archive.org/web/20200217154645/https://rekordbox.com/en/plan/pluspacks/
 * This V5 license doesn't carry over to the new subscription model
-  * Note: This is orthogonal to the hardware unlock option (https://rekordbox.com/en/support/link/)  
+  * Note: This is orthogonal to the hardware unlock option (see https://rekordbox.com/en/support/link )
+  
   
 
 ## Issues of the V6 Rekordbox migration - Minor
   
 The XML vendor lock is a **deal breaker** for me.\
-The dead V5 license is just annoying (there will be no V5 improvements and probably no support now).
+The dead V5 license is just annoying (there will be no V5 improvements and I don't expect any support moving forward).
 
 There is additional smaller issues: no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;
  Still cant physically delete files from RB. Still hotcues do not move the floating cue.
@@ -1415,6 +1437,36 @@ On the plus side, it now automatically auto-relocate renamed and moved tracks.
 It also has shared audio and video playlists. And a Day skin ([guide](#How-to-enable-day-skin-in-any-software) )
 
 The other functions I either do not use (streaming, ableton link) or have my own solution (cloud).
+
+  
+
+  
+## What is NOT unlocked in the Rekordbox V6 hardware options
+
+With V6 there are combinations of equipemnt that unlock *some* functionality.
+* Plans: https://rekordbox.com/en/plan/
+* Hardware: https://rekordbox.com/en/support/link
+
+Combining both lists, this is what is NOT unlocked:
+* Cloud Sync
+* Video (except RXZ)
+* Lyrics
+* DVS (except DJM-750Mk2, 450, 250MK2, interface2, DDJ-RZ, XP1, XP2)
+* Sampler sequence saving
+* RMX effects
+
+All these need either the 10eur/mo or the 15eur/mo subscription (August 2020 new prices)
+
+
+# Other topics
+* [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
+* [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
+* [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
+* [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
+* [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
+* [DJ Census over time results](#DJ-Census-over-time-results)
+* [People that I learned a lot from the Global DJ community](#Some-people-from-which-I-ve-learned-a-lot-from-the-Global-DJ-community)
+
   
   
 ## How to enable day skin in any software
@@ -1611,3 +1663,67 @@ See also the graph showing the [most popular DJ softwares over time](../census_g
 
   
  
+## Some people from which I've learned a lot from the Global DJ community
+
+"AKA my DJ hall of fame".
+![Hall Of Fame](pics/hall_of_fame.jpg)
+
+When I started DJing in 2000 I've learned a lot from local DJs in Lisbon that I've meet regularly.\
+The ones I worked the most were Rui Remix, Bruno Espadinha, Joao Vaz, Jaylion, Miguel Assumpcao and DJ Ice.
+
+20 years later the Internet changed this locality a lot.\
+You can now learn anything from youtube tutorials, reading articles and have insightful conversations with people that you may never meet.
+
+Below some of the people that I've learned the most. Apologies if I forget anyone.\ 
+All of them made significant contributions either in articles, software or video tutorials. 
+In the vast majority this is applicable to any DJ software.
+
+Most of them I've either meet them in person and/or had numerous conversations over chat.
+
+* Ean Golden:
+  * Inventor of Controlerism, Founder of DJtechtools, Hundreds of articles, Workshops
+  * https://djtechtools.com/author/Admin/
+* Phill Morse: 
+  * Founder of DigitalDJTips (biggest online DJ school), Hundreds of articles
+  * https://www.digitaldjtips.com/category/news/
+* Stevan Djumic
+  * Dozens of very high quality Traktor mappings. Reverse engineering his mappings was a major turning point for me.
+  * https://my.djtechtools.com/users/3776
+* Jeroen Groenendijk:
+  * Multiple workshops and generic techtalks
+  * https://www.facebook.com/pg/DJResource/videos/
+* Peter van Ruiten:
+  * Author of the DJCU converter. Dozens of videos about conversion and DJ collection management
+  * https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/videos
+* Christiaan Maaks:  
+  * Author of the rekordcloud online converter. Lots of generic info applicable to all converters  
+  * https://rekord.cloud/wiki/
+* Alex Coyle:
+  * Author of the open-source DJ converter. I worked with him over months to research the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
+  * https://github.com/digital-dj-tools/dj-data-converter/issues/3
+* DJ TLM:
+  * Dozens of tutorials on Scratching
+  * https://www.youtube.com/user/djTLMtv/videos?view=0&sort=dd&flow=grid
+* Teo Tormo
+  * Dozens of articles on advanced midi mapping and DJ hacking.
+  * https://djtechtools.com/author/teotormo/
+  
+  
+**Honorable mentions:**\
+These individuals also made contributions that benefit a lot of users. 
+Difference with the group above is that I had much less interactions with them.\
+[Damien Sirkis](https://forums.next.audio/c/rekord-buddy/faq), 
+[Florian Bomers](https://www.bome.com/contributor/florian), [Steven Caldwell](https://www.bome.com/contributor/steve1),
+[Michael Rahier](https://github.com/TakTraum/cmdr),
+[Klaus Mogensen](https://www.youtube.com/channel/UCEphlcllAEbUwiuLqHMux9g/videos?view=0&sort=dd&flow=grid),
+[DJ Rachel](https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid),
+[Carlo Atendido](https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid),
+[Pulse](https://www.youtube.com/user/DeejayPulse/videos?view=0&sort=dd&flow=grid),
+[DJ Keo](https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid),
+[Mojaxx](https://www.youtube.com/user/MojaxxVDJ/videos),
+[Gábor Szántó](https://app.slack.com/client/T0ECEN4CW/C0ECETDEK),
+
+
+
+
+  
