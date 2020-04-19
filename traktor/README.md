@@ -1423,18 +1423,19 @@ Most important tricks are:
 * This V5 license doesn't carry over to the new subscription model
   * Note: This is orthogonal to the hardware unlock option (see https://rekordbox.com/en/support/link )
   
+The XML vendor lock is a **deal breaker** for me.\
+The dead V5 license is just annoying (there will be no V5 improvements and I don't expect any support moving forward).
   
 
 ## Issues of the V6 Rekordbox migration - Minor
   
-The XML vendor lock is a **deal breaker** for me.\
-The dead V5 license is just annoying (there will be no V5 improvements and I don't expect any support moving forward).
+Besides the XML export and the bought licenses problem there is additional smaller issues:\
+no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;\
+Cannot physically delete files inside RB. Still hotcues do not move the floating cue.
 
-There is additional smaller issues: no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;
- Still cant physically delete files from RB. Still hotcues do not move the floating cue.
-
-On the plus side, it now automatically auto-relocate renamed and moved tracks. 
-It also has shared audio and video playlists. And a Day skin ([guide](#How-to-enable-day-skin-in-any-software) )
+On the plus side, it now automatically auto-relocate renamed and moved tracks.\
+It also has shared audio and video playlists.\
+And a Day skin ([guide](#How-to-enable-day-skin-in-any-software) )
 
 The other functions I either do not use (streaming, ableton link) or have my own solution (cloud).
 
@@ -1456,6 +1457,9 @@ Combining both lists, this is what is NOT unlocked:
 * RMX effects
 
 All these need either the 10eur/mo or the 15eur/mo subscription (August 2020 new prices)
+
+For example, this is how video looks like with my DDJ-1000 connected:
+![v6_video_watermark](pics/v6_video_watermark.jpg?raw=true)
 
 
 # Other topics
