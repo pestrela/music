@@ -1459,8 +1459,11 @@ Combining both lists, this is what is NOT unlocked:
 All these need either the 10eur/mo or the 15eur/mo subscription (August 2020 new prices)
 
 For example, this is how video looks like with my DDJ-1000 connected:
+"You cannot use this function in your current plan."
 ![v6_video_watermark](pics/v6_video_watermark.jpg?raw=true)
 
+Same story for DVS:
+![v6_dvs_with_ddj_1000](pics/v6_dvs_with_ddj_1000.jpg?raw=true)
 
 # Other topics
 * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
