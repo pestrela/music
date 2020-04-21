@@ -43,6 +43,7 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [Free DJ Software Tools](#Free-DJ-Software-Tools)
 * [DJ Software optimization](#DJ-Software-optimization)
 * [Windows usage](#Windows-usage)
+* [Rekordbox V6 topics](#Rekordbox-v6-topics)
 * [Other topics](#Other-topics)
   
 See below for a longer Table of contents.  
@@ -136,7 +137,7 @@ See below for a longer Table of contents.
   * [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
 
-* [Rekordbox topics](#Rekordbox-topics)
+* [Rekordbox v6 topics](#Rekordbox-v6-topics)
   * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
   * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
   * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
@@ -1399,7 +1400,7 @@ Most important tricks are:
 
 
 
-# Rekordbox topics
+# Rekordbox v6 topics
 
 * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
 * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
