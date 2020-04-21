@@ -912,6 +912,15 @@ Solution:
   * Rekordbox accepts the tag as a control frame
 * Please see [this blog post](#which-dj-converters-avoid-the-26ms-shift-issue) to know who implemented this work
 
+
+| Case | Signature  | TK->RB Correction  |
+| ------ | ----- | ---- |
+| case A | no headers | 0 ms |
+| case B | Only Xing  | 26 ms |
+| case C | invalid lame crc | 26ms |
+| case D | valid lame crc| 0 ms |
+
+
 ## 26ms shift issue links
 * 26ms research work: https://github.com/digital-dj-tools/dj-data-converter/issues/3
 * Examples of corner cases: https://github.com/pestrela/music_scripts/tree/master/traktor/26ms_offsets/examples_tagged
@@ -919,7 +928,7 @@ Solution:
 
 ![26ms_problem](pics/26ms_problem.png?raw=true)
 
-## 26ms shift current algorithm
+## 26ms shift algorithm
 
 ```
 if mp3 does NOT have a Xing/INFO tag:
