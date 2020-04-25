@@ -129,6 +129,7 @@ See below for a longer Table of contents.
   * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
   * [Every possible optimization](#List-of-every-possible-performance-audio-optimization)
   * [Traktor verbose log](#How-to-enable-Traktor-verbose-log)
+  * [Buying a laptop for Audio](#Buying-a-laptop-for-Audio)
   
 * [Windows usage](#Windows-usage)
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
@@ -295,6 +296,8 @@ See also ["Why I moved to BOME midi mapping"](#BOME-mappings-migration).
 
 
 ## Why is Traktor my software of choice: d) Hotcues move the temporary cue as well
+
+**Update:** I've now made a video to show this  request: https://www.youtube.com/watch?v=tINljMwc4Co
 
 I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well.\
 This is very useful for  previewing an old song that you dont remember anymore. When you are done, you just move it to the last point using the big round button.
@@ -915,10 +918,10 @@ Solution:
 
 | Case | Signature  | TK->RB Correction  |
 | ------ | ----- | ---- |
-| case A | no headers | 0 ms |
-| case B | Only Xing  | 26 ms |
-| case C | invalid lame crc | 26ms |
-| case D | valid lame crc| 0 ms |
+| case A | No headers | 0 ms |
+| case B | Only xing  | 26 ms |
+| case C | Invalid lame crc | 26ms |
+| case D | Valid lame crc| 0 ms |
 
 
 ## 26ms shift issue links
@@ -1164,6 +1167,7 @@ This section covers DJ software optimization.
 * [Deep trace analysis](#How-to-make-a-deep-trace-of-everything-that-runs-in-your-laptop)
 * [Every possible optimization](#list-of-every-possible-performance-audio-optimization)
 * [Traktor verbose log](#How-to-enable-Traktor-verbose-log)
+* [Buying a laptop for Audio](#Buying-a-laptop-for-Audio)
 
 ## How to optimize a laptop for DJ Software - Summary
   
@@ -1328,6 +1332,18 @@ MacOS:
 *  add key Log.Verbosity with value 5
 *  default value: 2
       
+## Buying a laptop for Audio
+
+Are you going to buy a laptop? Be sure you can return it to the shop if you have any problems.
+
+My advice if you are buying a Windows laptop is the following:
+* Check latest guides to choose a laptop
+  * Ensure that it has USB-A ports. No exceptions.
+* Buy such model in a real shop where you can return it in 30 days **without any questions asked**
+  * Enquire this question specifically!
+* Measure DPC problems continuously - including overnight - for Latencymon, SMI_counter
+* If you have any problems return the laptop, or follow my guides to fix the issues.
+ 
 
 
 # Windows usage
