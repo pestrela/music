@@ -68,7 +68,8 @@ See below for a longer Table of contents.
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
   * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
   * [How to emulate Elastic Beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
-  
+  * [How to create unique effects by chaining base effects](#How-to-create-unique-effects-by-chaining-base-effects)
+
 * [BOME migration](#BOME-mappings-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
@@ -81,6 +82,7 @@ See below for a longer Table of contents.
   * [Why i like BIG jogwheels](#why-i-like-big-jogwheels)
   * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
 
+ 
 * [Free Mappings](#Free-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
@@ -91,7 +93,6 @@ See below for a longer Table of contents.
     * [Numark PartyMix mapping](#What-are-the-features-of-your-Numark-PartyMix-mapping)
     * [Beatgrid preparation](#What-are-the-features-of-your-Keyboard-mappings)
     * [Transitions-aligned Beatjumps](#What-are-the-features-of-your-Keyboard-mappings)
-
 
   * [How to download my Traktor mappings](#How-to-download-my-Traktor-mappings)
   * [How to install my Traktor mappings](#How-to-install-my-Traktor-mappings)
@@ -118,7 +119,7 @@ See below for a longer Table of contents.
   * [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
 
   
-* [DJ Software optimization](#DJ-Software-optimization)
+* [Laptop optimization](#Laptop-optimization)
   * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
   * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
   * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
@@ -347,9 +348,6 @@ See also the [most popular DJ softwares census](../census_graphs).
 | Traktor | no | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
 
 
-
-
-
 ## How to emulate Elastic Beatgrids in Traktor
 
 Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
@@ -427,6 +425,29 @@ Note: manually beatgriding tracks in rekordbox is tricky because its a strictly 
 In other words: there is no way to put beatmarkers in front of the track without deleting them at the middle/end as well.\
 [more info](https://forums.pioneerdj.com/hc/en-us/community/posts/115010528306)
 
+
+## How to create unique effects by chaining base effects 
+
+You can easily create unique effects by chaining existing effects in specific ways.
+
+This is called the "Fader FX theory" as invented by Ean Golden in 2008
+* Article: https://djtechtools.com/2008/12/15/fader-fx-theory/
+* Demo video: https://www.youtube.com/watch?v=pjjA0xPkXMs
+  
+This uses 3x effects in a chain:
+* Slot 1: Repeating effect 
+  * eg: Beatmasher, Gater, Delays
+* Slot 2: Shaping effect 
+  * eg: Filter, Lo-fi, Peak filter
+* Slot 3: Dimensional effect 
+  * eg: Reverb, delay
+  
+I collect FX chains in this list:
+https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Support%20files/TP3%20-%20List%20of%20Combo%20FXs.txt
+
+MixerFX / MacroFX / SoundColorFX are essentially very useful FX chains with specific defaults and behavuour.\
+This thread describes the basic elements of MixerFX: [thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
+  
 
 # BOME mappings migration
 
@@ -1475,6 +1496,30 @@ Most important tricks are:
 The XML vendor lock is a **deal breaker** for me.\
 The dead V5 license is just annoying (there will be no V5 improvements and I don't expect any support moving forward).
   
+## How did the industry commenters reacted to the v6 XML export issue?
+(Post to be updated periodically. Please send updates to pedro.estrela@gmail.com)
+
+
+* Digital DJ Tips: https://www.digitaldjtips.com/2020/04/rekordcloud-mixo-apps-offer-new-dj-library-conversion-tools/
+  * "What about this Rekordbox 6 issue? none of the conversion apps out there old or new except Rekordcloud works with Rekordbox 6 exporting, because your data is locked down inside Rekordbox 6 in a way it wasn’t in previous versions."
+* DJ Tech Tools: https://djtechtools.com/2020/04/14/rekordbox-6-now-with-cloud-library-syncing/
+  * (issue not specifically covered)
+* DJ Worx: https://djworx.com/rekordbox-6-puts-your-library-in-the-cloud/
+  * (issue not specifically covered)
+* DJCU: https://www.reddit.com/r/DJs/comments/g11s3l/xml_implicationslimitations_of_the_new_rekordbox/
+  * "Call to arms: I ask all DJs regardless if they use my tools or not, ask Pioneer DJ to bring the export to XML function back, and while at it, ask them to fix the XML import. Don't go mad at Pulse"
+* Rekordcloud: https://rekord.cloud/blog/technical-inspection-of-rekordbox-6-and-its-new-internals 
+  * "It could be different: In case Pioneer reads this: do the right thing and open up Rekordbox."
+* Rekordbuddy: https://forums.next.audio/t/rekord-buddy-and-rekordbox-6-do-not-upgrade-for-now/2257/15
+  * "I’ve always done things by the book with Rekord Buddy and so my first reaction is to make we stay within the law here."
+* Mixo: https://support.mixo.dj/guide/rekordbox-6?search=9676776fd018f4b4ec565dcf1c1db0f6
+  * "We would recommend that users who wish to move their Rekordbox collections to other DJ Software avoid updating to Rekordbox 6"
+
+My own comment is the following:
+* Pedro Estrela:  https://djworx.com/traktor-s4-mk3-screen-hack-hits-version-2-0/
+  * "MIXXX is fully open. After the RB6 database encryption story last week, and all this years of Traktor workarounds, it looks the best way forward."
+  
+ 
 
 ## Issues of the V6 Rekordbox migration - Minor
   
