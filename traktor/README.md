@@ -1691,6 +1691,9 @@ See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments
 
 (taken form FB post, to clean up and add pictures)
 
+video: https://www.youtube.com/watch?v=LnvZR3Kiuxs
+
+
 LOOSE JOG WHEEL DISCOVERY 
 READ BELOW....
 
