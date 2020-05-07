@@ -44,6 +44,7 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [DJ Software optimization](#DJ-Software-optimization)
 * [Windows usage](#Windows-usage)
 * [Rekordbox V6 topics](#Rekordbox-v6-topics)
+* [Music Styles](#Music-Styles)
 * [Other topics](#Other-topics)
   
 See below for a longer Table of contents.  
@@ -143,6 +144,9 @@ See below for a longer Table of contents.
   * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
   * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
   * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
+  
+* [Music Styles](#Music-Styles)
+  
   
 * [Other topics](#Other-topics)
   * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
@@ -1533,9 +1537,7 @@ And a Day skin ([guide](#How-to-enable-day-skin-in-any-software) )
 
 The other functions I either do not use (streaming, ableton link) or have my own solution (cloud).
 
-  
-
-  
+ 
 ## What is NOT unlocked in the Rekordbox V6 hardware options
 
 With V6 there are combinations of equipemnt that unlock *some* functionality.
@@ -1558,6 +1560,45 @@ For example, this is how video looks like with my DDJ-1000 connected:
 
 Same story for DVS:
 ![v6_dvs_with_ddj_1000](pics/v6_dvs_with_ddj_1000.jpg?raw=true)
+
+
+# Music Styles
+
+## What are Retro and Metal remixes
+
+I'm a big fan of Retro remixes ([wikipedia page](https://en.wikipedia.org/wiki/80%27s_remix)). 
+These are remixes of modern tracks with typical 80s sounds, but with the original vocal.
+
+Similar is Metal remixes. In that style, people transform modern tracks in to Hard Rock/Metal style.
+ There it ranges from playing the guitars/drums on top of the track, all the way to remaking the whole track.
+
+The fundamental aspect in both Retro remixes and Metal versions is that the original vocal are used. A
+As such, it typically departs from [regular covers](https://en.wikipedia.org/wiki/Cover_version) sung by other artists.
+
+
+Below some examples of both styles, compared to the original versions:
+
+--------------------------
+Lady Gaga, Bradley Cooper - Shallow 
+* shallow original: https://www.youtube.com/watch?v=bo_efYhYU2A
+* shallow versao 80s: https://www.youtube.com/watch?v=KRJIIubEZ-c
+* shallow metal: https://www.youtube.com/watch?v=Ftg06g_d6JY
+
+Lady Gaga - Born This Way:
+* born way - original:https://www.youtube.com/watch?v=3Vzrr64ZrVU
+* born way - 80s: https://www.youtube.com/watch?v=sGOGRDufIe8
+* born way - metal: https://www.youtube.com/watch?v=XLipQ7AgcsE
+
+Alan Walker - Diamond Heart 
+* diamond heart - original: https://www.youtube.com/watch?v=sJXZ9Dok7u8
+* diamond heart - 80s: https://www.youtube.com/watch?v=mQbj-g_xZzU
+
+The Weeknd - Blinding Lights:
+* lights - original: https://www.youtube.com/watch?v=fHI8X4OXluQ
+* lights - versao 80s: https://www.youtube.com/watch?v=tjSr_Itd0VM
+
+
+
 
 # Other topics
 * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)

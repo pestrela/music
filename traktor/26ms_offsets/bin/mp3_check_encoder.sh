@@ -205,7 +205,7 @@ function echo_var()
   done
 }
 
-function warn_command_nost_exists ()
+function warn_command_not_exists ()
 {
 	local FILE="$1"
 	local RET=0
@@ -274,7 +274,7 @@ function warn_if_tools_not_installed ()
 	local FILE=""
 
 	for FILE in "$@" ; do
-		warn_command_nost_exists "$FILE"
+		warn_command_not_exists "$FILE"
 	done
 }
 

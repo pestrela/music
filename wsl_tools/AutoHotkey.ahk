@@ -15,8 +15,20 @@
 ;   CTRL+ALT+F11: send chrome url to clipboard  (all tabs)
 ;   CTRL+ALT+F12: send chrome url to clipboard  (current tab)
 ;
+;
+;  ClipBoard Append:
+;   CTRL+INS : standard copy
+;   CTRL+DEL : standard cut
+;   SHIFT+INS : standard paste
+;
+;   WIN+INS : append copy
+;   WIN+DEL : append cut
+;   WIN+INS : paste appendded data and delete buffer
+;
+;
+;
 
-; Diacritic characters support:
+; Diacritic characters support:  (if enabled)
 ;   CTRL+WIN+ALT+A: Toggle diacritic vowels support
 ;
 ;   CTRL+A: cycle diacritic "a"
@@ -37,6 +49,7 @@
 ;   Win+BackSpace: windows always on top
 ;   Shift+MouseWheel: folder history
 ;   CTRL+R: show extensions
+;
 ;   ` - solo track audition
 ;   CTRL+` - mute track audition
 ;
@@ -865,6 +878,11 @@ do_enlarge(which_side){
   mon := tim_WM_DISPLAYCHANGE()
   wc_sub_MouseHotkey()
 
+  
+  ; unknonw variables
+  wc_ResizeFixedWindows := 0
+  cr_Resizeable := 0
+  
   
   WinGet, wc_Style, Style, A
   If ((!(wc_Style & 0x40000) AND wc_ResizeFixedWindows == 0) AND cr_Resizeable <> 1)
@@ -1988,7 +2006,7 @@ validate_query( query, max := 20 )
     return False
   }
   
-  max := 3
+  ;max := 3
   
   if(query.count() > max ){
     die("Too many entries to process (", query.count(), ")") 
@@ -2500,20 +2518,18 @@ CapsLock & BS:: ClipChain =
 
 
 
-
-;5:00 - MEDUZA ft. GOODBOYS - Piece Of Your Heart (Ghost Rider & Ranji Remix)  [VIRGIN/ASTRALWERKS]   
-;8:00 - Post Malone ft. 21 Savage - Rockstar (Ranji Remix)  [REPUBLIC (UMG)]   
-;12:00 - Coming Soon!!! - Ready To Get High (Vibe Tribe & Somnia Remix)  [SPINTWIST]   
-;18:00 - Coming Soon!!! - African Jungle  [IBOGA]   
-
-
-
 ^#!esc:: exitapp
 ^#!F11:: XY_analyse_init()
 ^#!F12:: reload
 
 ;; temporary for testing
 #s:: reload
+
+;; personal pedro
+^!BS:: send, _00
+
+;;
+;;^#{left}:: 
 
 
 ^F8::   do_open_google()

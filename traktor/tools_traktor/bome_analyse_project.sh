@@ -94,6 +94,36 @@ function shift_argv()
 
 ############
 
+
+function show_incoming_inner()
+{
+  cat "$file_in" | awk '
+/] Translator /{t=$0} 
+/Incoming:/{
+  if( $2!= "(none)"){ 
+    print t, "___" $0
+  }
+}  '  
+}
+
+function show_rules_inner()
+{
+  cat "$file_in" | awk '
+/] Translator /{t=$0} 
+
+/Incoming:/{ next; }
+/Outgoing:/{ next; }
+
+{
+  if(NF==0){
+    next;
+  }
+  
+  
+  print t, "___" $0
+}  '  
+}
+
 function show_outgoing_inner()
 {
   cat "$file_in" | awk '
@@ -105,10 +135,29 @@ function show_outgoing_inner()
 }  '  
 }
 
+####
+function show_incoming()
+{
+  output="`show_incoming_inner `"
+  add_colon_to_grep=1
+}
+
+
+function show_rules()
+{
+  extra_params="-A2 -B2"
+  
+  output="`show_rules_inner `" 
+  add_colon_to_grep=1
+}
+
+
 function show_outgoing()
 {
-  output="`show_outgoing_innner `"
+  output="`show_outgoing_inner `"
+  add_colon_to_grep=1
 }
+
 
 function sort_output()
 {
@@ -131,10 +180,17 @@ function show_globals()
   sort_output
 }
 
-function show_raw()
+function show_raw_awk()
 {
   output="`cat "$file_in" | awk -f "$awk_program" `"
 }
+
+
+function show_raw_file()
+{
+  output="`cat "$file_in" | awk -f "$awk_program" `"
+}
+
 
 function add_space_before_translator()
 {
@@ -142,11 +198,14 @@ function add_space_before_translator()
 
 }
 
-function show_rules()
+
+function show_assignments()
 {
   extra_params="-A2 -B2"
   
-  output="`cat "$file_in" `" 
+  #  output="`cat "$file_in" | awk '/Translator/{tl=$0; next;} {print tl, $0;}' | egrep -v -- "==|<=|>=|!="   | grep "=" `"
+  output="`cat "$file_in" | awk '/Translator/{tl=$0; next;} {print tl, $0;}'  | grep "=" `"
+
 }
 
 function display_help()
@@ -158,9 +217,15 @@ function display_help()
   All operations supports an grep string for trimming down the output 
 
 operations:  
-  -v: show used variables + rules
-  -o: show outgoing + translator
-  -r: show rules
+  -v: show which translators use which variables
+  -a: show assignments
+  
+  -i: show translator + incomings
+  -o: show translator + outgoings
+  -r: show translator + rules
+  
+  -R1: show RAW output of awk program
+  -R2: show RAW file itself
   
   
 options:  
@@ -181,6 +246,8 @@ oper="none"
 remove_startup=1
     
 merge_grep="or"    
+add_colon_to_grep=0
+    
     
 while [ "$#" -ge 1 ]; do
   case "$1" in
@@ -202,20 +269,29 @@ while [ "$#" -ge 1 ]; do
     oper="show_globals"
     ;;
 
-  -o)
-    oper="show_outgoing"
-    ;;
     
   -i)
     oper="show_incoming"
     ;;
-    
-  -R)
-    oper="show_raw"
-    ;;
-    
+
   -r)
     oper="show_rules"
+    ;;
+
+  -o)
+    oper="show_outgoing"
+    ;;
+    
+  -R1)
+    oper="show_raw_awk"
+    ;;
+    
+  -R2)
+    oper="show_raw_file"
+    ;;
+    
+  -a)
+    oper="show_assignments"
     ;;
     
   -s)
@@ -237,6 +313,14 @@ while [ "$#" -ge 1 ]; do
     merge_grep="and"
     ;;
 
+  -:)
+    add_colon_to_grep=1
+    ;;
+
+    
+  -*)
+    die "unknown option: $1"
+    ;;
     
   *)
     add_argv "$1"
@@ -257,26 +341,35 @@ fi
 awk_program="$HOME/bin/bome_show_globals.2020-01-29.awk"
 file_in="${argv[1]}" 
 file_out="`remove_extension "$file_in"`.vars"
+do_case_insensitive=""
  
 shift_argv 1
 
 
-if [ $argc -ge 1 ]; then
-  do_grep=1
-  #to_grep="${argv[2]}"
-fi
 
  
 case "$oper" in
   show_outgoing)
     show_outgoing
+    ;; 
+    
+  show_incoming)
+    show_incoming
     ;;
   show_globals)
     show_globals
     ;;
     
-  show_raw)
-    show_raw
+  show_raw_awk)
+    show_raw_awk
+    ;;
+    
+  show_raw_file)
+    show_raw_file
+    ;;
+    
+  show_assignments)
+    show_assignments
     ;;
     
   show_rules)
@@ -289,10 +382,31 @@ case "$oper" in
     
 esac    
 
+add_colon_to_grep=0
+
+if [ $argc -ge 1 ]; then
+  do_grep=1
+  #to_grep="${argv[2]}"
+  
+  i=1
+  while [ $i -le $argc ]; do
+    if [ $add_colon_to_grep -ge 1 ]; then
+      argv[$i]=":${argv[i]}"
+    fi
+  
+    i=$(( i + 1 ))
+  done
+  
+fi
+
+
+
+
 if [ $do_grep -eq 1 ]; then
 
   if [ $merge_grep == "or" ]; then
     collected="${argv[1]}"
+
     shift_argv
     
     while [ $argc -ge 1 ]; do
@@ -308,7 +422,7 @@ if [ $do_grep -eq 1 ]; then
     to_grep="${argv[1]}"
     shift_argv
     
-    output2="`echo "$output" | egrep -i "$to_grep" `"
+    output2="`echo "$output" | egrep ${do_case_insensitive} "$to_grep" `"
     
     echo ""
     echo "$output2" 
@@ -321,4 +435,4 @@ else
 fi
 
 
-exit 0
+#exit 0

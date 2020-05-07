@@ -48,11 +48,21 @@ set -e
 set -u
 
 do_final_read=0
+do_read_target=1
 fail_on_existing_target=1
 
 target="0_group"
 
 echo "arguments:" "$@"
+
+if [ $do_read_target -ge 1 ]; then
+  # todo: suggets common name; enter accepts it
+ 
+  echo "Please input folder name"
+  read target 
+  
+  
+fi  
 #read
 
 
