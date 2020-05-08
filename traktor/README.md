@@ -480,11 +480,11 @@ My mappings are have more functions, but only take ~5 seconds to load because I 
 On my next version I managed to go to 3 pages, for a ~3 second delay.
 
 
-|            | Version     | Pages | Delay (s) | Entries (K) | Size (Mb) | Optimized (Mb) |
-|------------|-------------|-------|----------------|---------|-----------|----------------------|
-| Pionner    | v1.0.0      | 14    | 18.4           | 9.3    | 10.9     | 2.7                 |
-| DJ Estrela | v6.7.0      | 5     | 5.2            | 9.7    | 5.7      | 2.8                 |
-| DJ Estrela | v6.8.0 beta | 3     | 3.2            | 10.0   | 4.4      | 2.7                 |
+|            | Version     | Pages | Delay (s) | | Entries (K) | Size (Mb) | Optimized (Mb) |
+|------------|-------------|-------|-----------|-----|---------|-----------|----------------------|
+| Pionner    | v1.0.0      | 14    | 18.4         |  | 9.3    | 10.9     | 2.7                 |
+| DJ Estrela | v6.7.0      | 5     | 5.2          |  | 9.7    | 5.7      | 2.8                 |
+| DJ Estrela | v6.8.0 beta | 3     | 3.2          |  | 10.0   | 4.4      | 2.7                 |
 
 [Table Source](pics/traktor_slow_preferences_-_measurements.xlsx)
 
