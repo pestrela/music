@@ -463,7 +463,9 @@ Worse, these entries are replicated in every single "empty page".
 In practice this [slows down the preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) A LOT.
 A second sign is that it makes the TSI file much larger.
 
-Recent [CMDR versions](https://github.com/pestrela/cmdr/blob/master/README.md) removes such overhead, but Traktor still recreates and duplicates the entries **per page** anyway.
+The [CMDR editor](https://github.com/pestrela/cmdr/blob/master/README.md) removes this overhead 
+(see [line 337 of this file](https://github.com/pestrela/cmdr/blob/master/cmdr/cmdr.TsiLib/Device.cs#L337)).\
+However Traktor still recreates these entries **per page** anyway.
 
 
 ## How slow does the preferences window get?
