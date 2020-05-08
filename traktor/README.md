@@ -242,7 +242,7 @@ Blog Posts:
 * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
 * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
 * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
-
+.
 https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
 
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
@@ -453,6 +453,86 @@ MixerFX / MacroFX / SoundColorFX are essentially very useful FX chains with spec
 This thread describes the basic elements of MixerFX: [thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
   
 
+## Why MIDI mappings makes the preferences window slow
+
+Traktor has thousands of useless ["MidiDefinition structures"](https://github.com/ivanz/TraktorMappingFileFormat/blob/df5f544d10e3293b72b829841e654da0db71c4b0/Tools/TSI%20Mapping%20Template.bt#L130) 
+for every possible midi combination that **COULD** be used. This is much much larger than the entries that are **actually used**.
+
+Worse, these entries are replicated in every single "empty page".
+
+In practice this [slows down the preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) A LOT.
+A second sign is that it makes the TSI file much larger.
+
+Recent [CMDR versions](https://github.com/pestrela/cmdr/blob/master/README.md) removes such overhead, but Traktor still recreates and duplicates the entries **per page** anyway.
+
+
+## How slow does the preferences window get?
+
+Having many midi pages makes the [preferences window slow](#Why-MIDI-mappings-makes-the-preferences-window-slow).
+
+The biggest offender is the Pioneer mappings for the SX2 and SZ controllers. 
+They have 14 pages, so it takes >18 seconds for it to load in my laptop.
+
+My mappings are have more functions, but only take ~5 seconds to load because I only use 5 pages.
+
+On my next version I managed to go to 3 pages, for a ~3 second delay.
+
+
+|            | Version     | Pages | Mean Delay (s) | Entries (K) | size (Mb) | size, optimized (Mb) |
+|------------|-------------|-------|----------------|---------|-----------|----------------------|
+| Pionner    | v1.0.0      | 14    | 18.4           | 9.3    | 10.9     | 2.7                 |
+| DJ Estrela | v6.7.0      | 5     | 5.2            | 9.7    | 5.7      | 2.8                 |
+| DJ Estrela | v6.8.0 beta | 3     | 3.2            | 10.0   | 4.4      | 2.7                 |
+
+Source: [measurements](pics/traktor_slow_preferences_-_measurements.xlsx)
+
+
+## Could we just move all entries to a single page?
+
+No. Any complex behavior needs state variables, and each page only has 8 variables per page.
+
+When you run out of variables the simplest action is to add a new page. 
+
+My mappings are [much faster than the Pioneer ones](#How-slow-does-the-preferences-window-get) 
+because I specifically shared variables, and I [moved functionality to BOME](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits).
+
+## How to swap Traktor configurations without the slow preferences window
+
+[This script](tools_traktor/traktor_swap_configuration.sh) lets you swap between two traktor configurations easily. 
+
+This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. 
+This saves you to having to open the preferences window to change the audio device, 
+which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879).
+
+Script installation:
+* save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
+* make the script executable with 'chmod +x traktor_swap_configuration.sh '
+* redefine the 'traktor_root_folder' variable to your documents traktor root
+* *run it once* to copy the first config
+
+First time setup:
+* Open Traktor
+* change the config to DDJ-1000
+* close traktor
+* *run script*
+* open traktor
+* change config to internal soundcard
+* close traktor
+
+To Activate configuration #1:
+* *run the script*
+* open traktor
+* confirm the audio card is ddj-1000
+* Close taktor
+
+To Activate configuration #2:
+* *run the script*
+* open traktor
+* confirm the audio card is Internal Soundcard
+* Close taktor
+
+  
+  
 # BOME mappings migration
 
 Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.
@@ -1052,40 +1132,7 @@ Highlights:
 This info was moved [here](#How-to-emulate-Elastic-Beatgrids-in-Traktor).
 
 
-## How to swap Traktor configurations without the slow preferences window
 
-[This script](tools_traktor/traktor_swap_configuration.sh) lets you swap between two traktor configurations easily. 
-
-This is useful when you sometimes use a controller as your audio device, but other times use your internal sound card. 
-This saves you to having to open the preferences window to change the audio device, 
-which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879).
-
-Script installation:
-* save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
-* make the script executable with 'chmod +x traktor_swap_configuration.sh '
-* redefine the 'traktor_root_folder' variable to your documents traktor root
-* *run it once* to copy the first config
-
-First time setup:
-* Open Traktor
-* change the config to DDJ-1000
-* close traktor
-* *run script*
-* open traktor
-* change config to internal soundcard
-* close traktor
-
-To Activate configuration #1:
-* *run the script*
-* open traktor
-* confirm the audio card is ddj-1000
-* Close taktor
-
-To Activate configuration #2:
-* *run the script*
-* open traktor
-* confirm the audio card is Internal Soundcard
-* Close taktor
  
  
 ## How I build perfect tracklists using CUE files
@@ -1154,7 +1201,7 @@ Summary:
 * Better Cheatsheet: https://gist.github.com/jonschlinkert/5854601
 * Tables Generator: https://www.tablesgenerator.com/markdown_tables
 
-A small program to check relative links inside the same MD document: [md_check_relative_links.py](../wsl_tools).
+This is a small program to check relative links inside the same MD document: [md_check_relative_links.py](../wsl_tools).
 
   
 ## What shortcuts you added for Youtube, Google and Discogs?
@@ -1598,6 +1645,25 @@ The Weeknd - Blinding Lights:
 * lights - versao 80s: https://www.youtube.com/watch?v=tjSr_Itd0VM
 
 
+## How to learn good transition points by reconstructing sets
+
+One great way to learn good mixing points is to recreate existing mixes made by others, for learning purposes.
+
+In 1995 I've heard my favorite mixed CD ever: "Kaos Totally Mix 1, mixed live by Dj Vibe at Kremlin, Lisbon, Portugal."
+In the last 25 years, I listened to this CD at least 75 times, probably a lot more.
+
+But only by recreating the mix first in Adobe Audition and then in Traktor I found (all?) the technical tricks of the amazing work by Dj Vibe. Amazing work!!
+
+Versions:
+* This is the original mix in youtube, uploaded by Kaos Records Portugal
+  * https://www.youtube.com/watch?v=uuun-IcRuTw
+* This is a pack with all the individual tracks with their traktor cues. 
+  * Please match as follows: 1<->5 / 2<->6 / 3<->7 / 4<->8; 
+  * some cues are gradual IN/OUT fades, some are already open faders.
+  * https://www.dropbox.com/sh/bg4ey3z8uieis0e/AABlZeCqyskOgKWyjlXdsphVa?dl=0
+
+**IMPORTANT:** ALL TRACKS ARE COPYRIGHT 1995 [KAOS RECORDS](http://bit.ly/KaosRecords).
+Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use disclaimer](https://www.termsfeed.com/blog/fair-use-disclaimer/)).
 
 
 # Other topics
@@ -1823,7 +1889,7 @@ Below some of the people that I've learned the most. Apologies if I forget anyon
 All of them made significant contributions either in articles, software or video tutorials. 
 In the vast majority this is applicable to any DJ software.
 
-Most of them I've either meet them in person and/or had numerous conversations over chat.
+Most of them I've either meet them in person, or I had numerous conversations with them over chat.
 
 * **Ean Golden:**
   * Inventor of Controlerism, Founder of DJtechtools, Hundreds of articles, Workshops
