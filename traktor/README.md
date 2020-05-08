@@ -740,7 +740,8 @@ Notes:
 *	Video demo: https://youtu.be/h9tQZEHr8hk
 
 **Feature list:**
-*	Only mapping with Jog Screens
+*	Only mapping in the world with Jog Screens
+* Much faster to load ([3 seconds instead of 18](#How-slow-does-the-preferences-window-get))
 *	7x Jogwheel FX chains
 *	5x MixerFX
 *	11x MacroFX
@@ -772,6 +773,7 @@ Notes:
 *	Video demo: http://youtu.be/H_TE2mtuM6Q 
 
 **Feature list:**
+* Much faster to load ([3 seconds instead of 18](#How-slow-does-the-preferences-window-get))
 *	7x Jogwheel FX chains
 *	5x TP3 MixerFX
 *	11x MacroFX
@@ -836,7 +838,8 @@ Notes:
 *	Video demo: https://youtu.be/7EPfY9bGGlw 
 
 **Feature List:**
-* Jog Screens (Needle and Cue marker)
+* Much faster to load ([3 seconds instead of 18](#How-slow-does-the-preferences-window-get))
+* Jog Screens (firmware only supports Needle and Cue marker)
 * 7x Jogwheel FX chains
 * 5x TP3 MixerFX
 *	11x MacroFX
