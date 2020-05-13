@@ -144,9 +144,12 @@ See below for a longer Table of contents.
   * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
   * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
   * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
-  
+  * [How to ignore Rekordbox upgrades](#How-to-ignore-Rekordbox-upgrades-completely)
+
 * [Music Styles](#Music-Styles)
-  
+  * [Retro and Metal remixes](#What-are-Retro-and-Metal-remixes)
+  * [Sets Reconstructing for learning purposes](#How-to-learn-good-transition-points-by-reconstructing-sets)
+
   
 * [Other topics](#Other-topics)
   * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
@@ -1530,6 +1533,8 @@ Most important tricks are:
 * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
 * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
 * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
+* [How to ignore Rekordbox upgrades](#How-to-ignore-Rekordbox-upgrades-completely)
+
 
 ## Issues of the V6 Rekordbox migration - Major
 
@@ -1606,15 +1611,34 @@ Combining both lists, this is what is NOT unlocked:
 
 All these need either the 10eur/mo or the 15eur/mo subscription (August 2020 new prices)
 
-For example, this is how video looks like with my DDJ-1000 connected:
-"You cannot use this function in your current plan."
+For example, this is how video looks like with my DDJ-1000 connected:\
+"You cannot use this function in your current plan."\
 ![v6_video_watermark](pics/v6_video_watermark.jpg?raw=true)
 
-Same story for DVS:
+Same story for DVS:\
 ![v6_dvs_with_ddj_1000](pics/v6_dvs_with_ddj_1000.jpg?raw=true)
 
 
+## How to ignore Rekordbox upgrades completely
+
+The last usable Rekordbox is version v5.6.0.\
+Later versions either have a bug on [XML import](https://www.youtube.com/watch?v=JV89dj1hDWM), 
+or they [lack XML export](#issues-of-the-V6-Rekordbox-migration---major) at all.
+
+However, you will be nagged with an upgrade window everytime you start RB.
+
+to remove this, simply rename this file to something else:
+
+C:\Program Files\Pioneer\rekordbox 5.6.0\Upmgr rekordbox.exe
+    
+
 # Music Styles
+
+
+* [What are Retro and Metal remixes](#What-are-Retro-and-Metal-remixes)
+* [How to learn good transition points by reconstructing sets](#How-to-learn-good-transition-points-by-reconstructing-sets)
+
+
 
 ## What are Retro and Metal remixes
 
@@ -1647,7 +1671,7 @@ Alan Walker - Diamond Heart
 
 The Weeknd - Blinding Lights:
 * lights - original: https://www.youtube.com/watch?v=fHI8X4OXluQ
-* lights - versao 80s: https://www.youtube.com/watch?v=tjSr_Itd0VM
+* lights - 80s: https://www.youtube.com/watch?v=tjSr_Itd0VM
 
 
 ## How to learn good transition points by reconstructing sets
@@ -1667,8 +1691,13 @@ Versions:
   * some cues are gradual IN/OUT fades, some are already open faders.
   * https://www.dropbox.com/sh/bg4ey3z8uieis0e/AABlZeCqyskOgKWyjlXdsphVa?dl=0
 
-**IMPORTANT:** ALL TRACKS ARE COPYRIGHT 1995 [KAOS RECORDS](http://bit.ly/KaosRecords).
+**IMPORTANT:** ALL TRACKS ARE COPYRIGHT 1995 [KAOS RECORDS](http://bit.ly/KaosRecords).\
 Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use disclaimer](https://www.termsfeed.com/blog/fair-use-disclaimer/)).
+
+
+![kaos CD cover](pics/kaos_totally_mix_reconstruction_cd_cover.jpg?raw=true)
+![kaos audition](pics/kaos_totally_mix_reconstruction_audition.jpg?raw=true)
+
 
 
 # Other topics
