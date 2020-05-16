@@ -36,6 +36,7 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [MindMap](#MindMap-Summary)
 * [OS-Folders as virtual playlists](#OS-Folders)
 * [Traktor software](#Traktor-software)
+* [Traktor slow preferences window](#Traktor-Slow-preferences-Window)
 * [BOME migration](#BOME-mappings-migration)
 * [Hardware Controllers](#Hardware-Controllers)
 * [Free Mappings](#Free-Mappings)
@@ -71,6 +72,13 @@ See below for a longer Table of contents.
   * [How to emulate Elastic Beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
   * [How to create unique effects by chaining base effects](#How-to-create-unique-effects-by-chaining-base-effects)
 
+
+* [Traktor Slow preferences](#Traktor-Slow-preferences-Window)
+  * [Issue explanation](#Why-MIDI-mappings-makes-the-preferences-window-slow)
+  * [Measurements](#How-slow-does-the-preferences-window-get)
+  * [Naive solution](#Could-we-just-move-all-entries-to-a-single-page)
+  * [Swapping configurations](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
+  
 * [BOME migration](#BOME-mappings-migration)
   * [Why I moved to BOME midi mapping: Impossible features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
@@ -82,7 +90,6 @@ See below for a longer Table of contents.
   * [DDJ-1000 comparison to DDJ-SZ and AKAI AMX](#DDJ-1000-comparison-to-DDJ-SZ-and-AKAI-AMX)
   * [Why i like BIG jogwheels](#why-i-like-big-jogwheels)
   * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
-
  
 * [Free Mappings - Downloads](#Free-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
@@ -125,7 +132,6 @@ See below for a longer Table of contents.
   * [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
   * [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
   * [Elastic Beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
-  * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
   * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
   * [Github Markdown tools](#Github-Markdown-tools)
   * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
@@ -468,6 +474,17 @@ MixerFX / MacroFX / SoundColorFX are essentially very useful FX chains with spec
 This thread describes the basic elements of MixerFX: [thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
   
 
+# Traktor Slow preferences Window
+  
+This section is all about the slow preferences window.\
+I've been able to reduce this from 18 seconds to only 3 seconds.
+ 
+* [Slow preferences - Issue explanation](#Why-MIDI-mappings-makes-the-preferences-window-slow)
+* [Slow preferences - measurements](#How-slow-does-the-preferences-window-get)
+* [Slow preferences - Naive solution](#Could-we-just-move-all-entries-to-a-single-page)
+* [Slow preferences - Swapping configurations](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
+
+  
 ## Why MIDI mappings makes the preferences window slow
 
 Traktor has thousands of useless ["MidiDefinition structures"](https://github.com/ivanz/TraktorMappingFileFormat/blob/df5f544d10e3293b72b829841e654da0db71c4b0/Tools/TSI%20Mapping%20Template.bt#L130) 
@@ -550,6 +567,8 @@ To Activate configuration #2:
 * confirm the audio card is Internal Soundcard
 * Close taktor
 
+  
+  
   
   
 # BOME mappings migration
