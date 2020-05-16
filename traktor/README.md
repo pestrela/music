@@ -104,6 +104,12 @@ See below for a longer Table of contents.
   * [Is the DDJ-XP2 mappable to Traktor?](#is-the-ddj-1000xp2-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
  
+* [DJ Tutorials](#DJ-tutorials)
+  * [List of Online DJ Courses](#List-of-Online-DJ-Courses)
+  * [List of Technical Webinars](#List-of-Technical-Webinars)
+  * [Midi mapping tutorials](#Midi-mapping-tutorials)
+  * [List of advanced MIDI mappings](#List-of-advanced-MIDI-mappings)
+ 
 * [DJ collection converters](#DJ-collection-converters)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
@@ -459,11 +465,13 @@ This thread describes the basic elements of MixerFX: [thread](https://www.native
 ## Why MIDI mappings makes the preferences window slow
 
 Traktor has thousands of useless ["MidiDefinition structures"](https://github.com/ivanz/TraktorMappingFileFormat/blob/df5f544d10e3293b72b829841e654da0db71c4b0/Tools/TSI%20Mapping%20Template.bt#L130) 
-for every possible midi combination that **COULD** be used. This is much much larger than the entries that are **actually used**.
+for every possible midi combination that **COULD** be used.\ 
+This set is much much larger than the entries that are **actually used**.
 
 Worse, these entries are replicated in every single "empty page".
 
-In practice this [slows down the preferences window](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/) A LOT.
+In practice this makes [the preferences window very slow](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/). 
+For example [Pioneer DDJ-SZ mapping take 18 seconds to load](#How-slow-does-the-preferences-window-get).
 A second sign is that it makes the TSI file much larger.
 
 The [CMDR editor](https://github.com/pestrela/cmdr/blob/master/README.md) removes this overhead 
@@ -1007,11 +1015,100 @@ Regarding the Jogs: this is exactly the same story, plus the [all the comments a
 
 Are you using a custom mapping? Does some functions work but not the Play/Pause button?
 
-This is a typical sign of a double installed mapping. Play is always a toggle, so if its applied twice it cancels itself.
+This is a typical sign of a double installed mapping. Play works as a "toggle", so if its applied twice it cancels itself.
 
-Solution: 
-)
+Solution:
+* Delete all mapping pages in the controller manager
+* install the desired mapping only once
 
+
+# DJ Tutorials
+
+This section has links to DJ tutorials and technical information.
+
+* [List of Online DJ Courses](#List-of-Online-DJ-Courses)
+* [List of Technical Webinars](#List-of-Technical-Webinars)
+* [Midi mapping tutorials](#Midi-mapping-tutorials)
+* [List of advanced MIDI mappings](#List-of-advanced-MIDI-mappings)
+
+## List of Online DJ Courses
+  
+Below a list of DJ courses, all from well-known Tutors.\
+This is appropriate and recommended when you want a structured syllabus that covers all bases.\
+In particular DJTechtools is offering [interactive-only advanced sessions](https://us02web.zoom.us/webinar/register/WN_XyLog-v7QXm4LoBMxLfdCg).\
+
+Other than paid courses, these fine people contributed A LOT of FREE tutorials in youtube, their websites and forums.\
+If you are dedicated enough, experimenting and trying these materials for yourself can get you as far as you want.
+
+* Phil Morse and team:
+  * https://www.digitaldjtips.com/dj-courses/
+* Ean Golden and team:
+  * Advanced Interactive: https://us02web.zoom.us/webinar/register/WN_XyLog-v7QXm4LoBMxLfdCg
+  * Videos: https://store.djtechtools.com/collections/sound-packs-tutorials
+* Carlo Atendido: 
+  * https://sellfy.com/djcarloatendido/
+* DJ TLM:
+  * https://djcoursesonline.com/dj-programs/
+* DJ Endo / DJ SHiftee:
+  * https://online.berklee.edu/courses/learn-to-dj-with-traktor
+  * http://www.dubspot.com/programs/dj-extensive-program/?from=105#courses
+* Jamie Hartley:
+  * https://wearecrossfader.co.uk/online-dj-courses/
+* DJ DAVE:
+  * https://www.adsrsounds.com/product/courses/traktor-pro-3-masterclass/
+* Udemy:
+  * https://www.udemy.com/topic/dj/
+
+## List of Technical Webinars
+
+* Jeroen Groenendijk 
+  * Files & Management: https://www.youtube.com/watch?v=B8n9ma-egX4
+  * Add Files, Tagging & Preferences: https://www.youtube.com/watch?v=BkpkGZNoNf8
+* Mix Master g:
+  * Lots of useful technical videos here: https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/playlists
+
+TODO: add more high-quality webinars.
+  
+## Midi mapping tutorials
+
+* Beginner:
+  * Traktor very first keyboard map: https://djtechtools.com/2015/02/26/intro-to-basic-midi-mapping-with-traktor/
+  * Traktor basic modifiers: https://djtechtools.com/2014/05/11/midi-mapping-101-the-traktor-modifier-re-explained/
+* Intermediate:
+  * Traktor SuperCombos: https://blog.native-instruments.com/how-to-map-instant-effects-in-traktor/
+  * Traktor Step sequencer: https://djtechtools.com/2018/01/29/traktors-step-sequencer-map-midi-controller/ 
+  * Traktor Patten recorder: https://djtechtools.com/2019/01/16/how-to-use-traktors-pattern-recorder-with-any-midi-controller/
+* Advanced
+  * Traktor Global MIDI controls: https://djtechtools.com/2015/09/08/traktor-global-midi-control-control-multiple-midi-devices-one-controller/
+  * Rekordbox BOME emulation of jogwheels: https://djtechtools.com/2017/05/08/hack-rekordbox-use-controllers-jogwheels/
+  * Rekordbox RXM-1000: https://djtechtools.com/2019/06/24/hacking-rekordbox-fx-and-adding-rmx-1000-control/
+  * Serato modifers and jogs: https://djtechtools.com/2018/04/11/hacking-serato-djs-midi-mapping-jogwheels-touchstrips-and-modifiers/
+ 
+  
+## List of advanced MIDI mappings
+
+
+Besides [my own mappings](#Free-Mappings), these are other advanced mappings that I've used before and recommend.
+Studying these mappings is a great way to learn advanced MIDI mapping.  
+
+* Stewe:
+  * Kontrol S4 MK3 Ninja https://maps.djtechtools.com/mappings/9325
+* Tekken:  
+  * S4 ultimate mapping: https://maps.djtechtools.com/mappings/9277
+  * F1 ultimate mapping: https://maps.djtechtools.com/mappings/652
+* DJ Tech Tools:
+  * Twisted Gratification: https://maps.djtechtools.com/mappings/5437
+  * DJTT Kontrol S4 MK2: https://maps.djtechtools.com/mappings/2211
+
+Another good indicator is the list of most downloaded mappings (click "Downloads" to sort:\
+* https://maps.djtechtools.com/mappings?search%5Bsoftware_id%5D=29 )
+
+Other lists of advanced mappings:
+* https://blog.native-instruments.com/the-best-s4-hacks-of-all-time/
+* https://blog.native-instruments.com/custom-mappings-to-extend-your-traktor-control/
+
+  
+  
   
 # DJ collection converters
 
@@ -1204,6 +1301,28 @@ Summary:
   * windows SMI counter. Useful for detect laptop DPC stalls
   * https://github.com/pestrela/smi_counter
 
+  
+## Python packaging
+  
+These blog posts explain the steps to make your package appear in pip.
+
+TBD
+  
+## Open-Source useful information
+
+Below some links useful to build open source projects
+
+* Choose a license:
+  * This sites compares licenses from more to less requirements.
+  * https://choosealicense.com/licenses/  ([table](https://choosealicense.com/appendix/))
+* Semantic version:
+  * Explains how to versions work, namely backwards-compatible changes
+  * https://semver.org/
+* Keep Changelog
+  * Explains what to put on the git log message
+  * https://keepachangelog.com/en/1.0.0/
+  
+  
 ## Github Markdown tools
 
 * Better Cheatsheet: https://gist.github.com/jonschlinkert/5854601
@@ -1893,7 +2012,8 @@ Folder with pictures of the knobs: [here](../pics/silver_knobs)
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
   
-
+  
+  
 ## DJ Census over time results
 
 Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular software and controllers. 
