@@ -36,7 +36,7 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [MindMap](#MindMap-Summary)
 * [OS-Folders as virtual playlists](#OS-Folders)
 * [Traktor software](#Traktor-software)
-* [Traktor Elastic Beatgrids](T#raktor-Elastic-Beatgrids]
+* [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids]
 * [Traktor slow preferences window](#Traktor-Slow-preferences-Window)
 * [BOME migration](#BOME-mappings-migration)
 * [Hardware Controllers](#Hardware-Controllers)
@@ -71,7 +71,7 @@ See below for a longer Table of contents.
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
   * [How to create unique effects by chaining base effects](#How-to-create-unique-effects-by-chaining-base-effects)
 
-* [Traktor Elastic Beatgrids](T#raktor-Elastic-Beatgrids]
+* [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids]
   * [Which tracks have multiple BPMs](#Which-tracks-have-multiple-BPMs)
   * [What are Elastic Beatgrids](#What-are-Elastic-Beatgrids)
   * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
@@ -1157,7 +1157,7 @@ If you are dedicated enough, experimenting and trying these materials for yourse
   * https://sellfy.com/djcarloatendido/
 * **DJ TLM:**
   * https://djcoursesonline.com/dj-programs/
-* **DJ Endo / DJ SHiftee:**
+* **DJ Endo / DJ Shiftee:**
   * https://online.berklee.edu/courses/learn-to-dj-with-traktor
   * http://www.dubspot.com/programs/dj-extensive-program/?from=105#courses
 * **Jamie Hartley:**
@@ -1400,23 +1400,19 @@ Summary:
   * https://github.com/pestrela/smi_counter
 
   
-## Python packaging
-  
-These blog posts explain the steps to make your package appear in pip.
 
-TBD
   
 ## Open-Source useful information
 
 Below some links useful to build open source projects
 
-* Choose a license:
+* **Choose a license:**
   * This sites compares licenses from more to less requirements.
   * https://choosealicense.com/licenses/  ([table](https://choosealicense.com/appendix/))
-* Semantic version:
+* **Semantic version:**
   * Explains how to versions work, namely backwards-compatible changes
   * https://semver.org/
-* Keep Changelog
+* **Keep Changelog:**
   * Explains what to put on the git log message
   * https://keepachangelog.com/en/1.0.0/
   
@@ -1447,8 +1443,6 @@ More scripts in this folder:
 * a youtube-dl wrapper
 * a tool to search 1001tracklists, ticketswap and DJ TechTools maps.
 
-  
-  
   
 # DJ Software optimization
 
@@ -2175,16 +2169,24 @@ Most of them I've either meet them in person, or I had numerous conversations wi
 **Honorable mentions:**\
 These individuals also made contributions that benefit a lot of users.\
 Biggest difference to the group above is that I had much less interactions with them.\
-[Damien Sirkis](https://forums.next.audio/c/rekord-buddy/faq), 
-[Florian Bomers](https://www.bome.com/contributor/florian), [Steven Caldwell](https://www.bome.com/contributor/steve1),
-[Michael Rahier](https://github.com/TakTraum/cmdr),
-[Klaus Mogensen](https://www.youtube.com/channel/UCEphlcllAEbUwiuLqHMux9g/videos?view=0&sort=dd&flow=grid),
-[DJ Rachel](https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid),
-[Carlo Atendido](https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid),
-[Pulse](https://www.youtube.com/user/DeejayPulse/videos?view=0&sort=dd&flow=grid),
-[DJ Keo](https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid),
-[Mojaxx](https://www.youtube.com/user/MojaxxVDJ/videos),
-[Gábor Szántó](https://app.slack.com/client/T0ECEN4CW/C0ECETDEK),
+[Damien Sirkis](https://forums.next.audio/c/rekord-buddy/faq)(RekordBuddy), 
+[Florian Bomers](https://www.bome.com/contributor/florian)(BOME), 
+[Steven Caldwell](https://www.bome.com/contributor/steve1)(BOME),
+[Michael Rahier](https://github.com/TakTraum/cmdr)(CMDR),
+[Klaus Mogensen](https://www.youtube.com/channel/UCEphlcllAEbUwiuLqHMux9g/videos?view=0&sort=dd&flow=grid)(VirtualDJ),
+[DJ Rachel](https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid)(VirtualDJ),
+[Carlo Atendido](https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid)(Tutorials),
+[Pulse](https://www.youtube.com/user/DeejayPulse/videos?view=0&sort=dd&flow=grid)(Rekordbox),
+[DJ Keo](https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid)(Commentary),
+[Mojaxx](https://www.youtube.com/user/MojaxxVDJ/videos)(Serato),
+[Gábor Szántó](https://app.slack.com/client/T0ECEN4CW/C0ECETDEK)(DJ Player Pro),
+[Friedemann Becker](https://github.com/pestrela/music/blob/master/pic_sets/traktor_interview/Interview%20with%20the%20lead%20Traktor%20programmer.pdf)(Traktor),
+[Mike Henderson](https://online.berklee.edu/courses/learn-to-dj-with-traktor)(DJ Endo),
+[Stephane Clavel](https://www.digitaldjtips.com/2018/08/interview-stephane-clavel-virtual-dj-founder-talks-innovation-the-future-of-djing/)(VirtualDJ),
+[Jamie Hartley](https://wearecrossfader.co.uk/online-dj-courses/)(WeAreCrossfader),
+[madZach](https://djtechtools.com/author/madzach/),
+
+
 
 
 
