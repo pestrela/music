@@ -84,7 +84,7 @@ See below for a longer Table of contents.
   * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
 
  
-* [Free Mappings](#Free-Mappings)
+* [Free Mappings - Downloads](#Free-Mappings)
   * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
@@ -92,9 +92,15 @@ See below for a longer Table of contents.
   * [What are your other mappings?](#What-are-your-other-mappings)
     * [XDJ-XZ mapping](#What-are-the-features-of-your-XDJ-XZ-Traktor-mapping)
     * [Numark PartyMix mapping](#What-are-the-features-of-your-Numark-PartyMix-mapping)
-    * [Beatgrid preparation](#What-are-the-features-of-your-Keyboard-mappings)
-    * [Transitions-aligned Beatjumps](#What-are-the-features-of-your-Keyboard-mappings)
-
+    * [CDJ2000NX2](https://maps.djtechtools.com/mappings/9763)
+  * [What are your keyboard mappings](#What-are-the-features-of-your-Keyboard-mappings)
+     * [Beatgrid preparation](#What-are-the-features-of-your-Keyboard-mappings)
+     * [Transitions-aligned Beatjumps](#What-are-the-features-of-your-Keyboard-mappings)
+  * [What are demos of advanced mapping tricks](#What-are-demos-of-advanced-mapping-tricks)
+    * [Backwards loop and Reloop](#What-are-demos-of-advanced-mapping-tricks)
+    * [BOME access all 9x mixerFX](#What-are-demos-of-advanced-mapping-tricks)
+    
+* [Free Mappings - Info](#Free-Mappings)
   * [How to download my Traktor mappings](#How-to-download-my-Traktor-mappings)
   * [How to install my Traktor mappings](#How-to-install-my-Traktor-mappings)
   * [What documentation comes with your mappings?](#what-documentation-comes-with-your-mappings)
@@ -710,28 +716,38 @@ Some relevant points:
 
 # Free Mappings
 
-## What are your main Traktor mappings?
 
-* DDJ-1000 with jog screens: https://maps.djtechtools.com/mappings/9279
-* DDJ-SZ / DDJ-SX2 / DDJ-SRT: https://maps.djtechtools.com/mappings/9222
-* AKAI AMX: https://maps.djtechtools.com/mappings/9323
-
-## What are your other mappings?
-
-* XDJ-XZ: https://maps.djtechtools.com/mappings/10305
-* Numark PartyMix: https://maps.djtechtools.com/mappings/9764
-* (Keyboard only) Beatgrid helper: https://maps.djtechtools.com/mappings/9760
-* (Keyboard only) Transitions-Aligned Beatjumps: https://maps.djtechtools.com/mappings/9762
+This section covers my free mappings on the DJTT site.\
+Below the direct links, and after this the description of each mapping.
 
 
-## How to download my Traktor mappings:
+* Main Traktor mappings
+  * DDJ-1000 with jog screens: https://maps.djtechtools.com/mappings/9279
+  * DDJ-SZ / DDJ-SX2 / DDJ-SRT: https://maps.djtechtools.com/mappings/9222
+  * AKAI AMX: https://maps.djtechtools.com/mappings/9323
+
+* Other mappings
+  * XDJ-XZ: https://maps.djtechtools.com/mappings/10305
+  * Numark PartyMix: https://maps.djtechtools.com/mappings/9764
+  * CDJ2000NX2: https://maps.djtechtools.com/mappings/9763
+  
+* Keyboard mappings  
+  * Beatgrid helper: https://maps.djtechtools.com/mappings/9760
+  * Transitions-Aligned Beatjumps: https://maps.djtechtools.com/mappings/9762
+
+* Advanced tricks demos
+  * Backwards loop and Reloop: https://maps.djtechtools.com/mappings/10252
+  * BOME access all 9x mixerFX: https://maps.djtechtools.com/mappings/10575
+  
+
+## How to DOWNLOAD my Traktor mappings:
 
 TO DOWNLOAD: you can ONLY download my mappings from the DJ tech tools site (http://maps.djtechtools.com).\ 
 To do this you MUST register and then verify your email there.\
 
 Note: sometimes that site is under maintenance. Please try later in this case.
 
-## How to install my Traktor mappings:
+## How to INSTALL my Traktor mappings:
 
 TO INSTALL: Please see this video where I show how to install the mappings: https://youtu.be/MbGP_ECnWiQ 
 See also this PDF file for step-by-step instructions: [installation guide](https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Installation%20Guide.pdf)
@@ -773,7 +789,6 @@ Notes:
 
 
 ![ddj_1000](mapping_ddj_1000/DDJ-1000%20-%20Single%20slide.jpg?raw=true)
-
 
 
 ## What are the features of your DDJ-SX2 / DDJ-SZ / DDJ-SRT Traktor mapping?
@@ -838,7 +853,6 @@ Notes:
 *	It is also the most complete by far. It supports 10x layers, 4 decks, full transport and tempo control, TP3 MixerFX, MacroFX, Cues, Loops, beatjump,  Rolls, Slip reverse, Sampler, Key adjust, and a Preview Player. 
 
 ![mapping_akai_amx](mapping_akai_amx/AMX%20TP3_TP2%20-%20Single%20slide.jpg?raw=true)
-
 
 
 ## What are the features of your XDJ-XZ Traktor mapping?
@@ -923,6 +937,33 @@ Summary:
 
 ![](pics/transitions_aligned_beatJumps_-_slide.jpg?raw=true)
 
+
+## What are demos of advanced mapping tricks
+
+### A) Backwards loop and Reloop: 
+
+**Links:**
+* Download Link: https://maps.djtechtools.com/mappings/10252
+
+** Summary:**
+* Use this mapping to adjust the LoopIn point (regular loops adjust the LoopOUT point
+* Use cases:
+  * extend a track that literally just ended;
+  * extend a beat just before a breakdown
+  * repeat a build-up several times
+* Reloop: use this feature to return to a previous loop (just like CDJs)
+  
+### B) BOME access all 9x mixerFX: 
+
+**Links:**
+* Download Link:
+https://maps.djtechtools.com/mappings/10575
+
+** Summary:**
+* Use this mapping to acecess all 9x mixerFX by sending mouse clicks directly to the preferences window
+* the normal midi mode you can only use 4x mixerFX
+
+  
 
 ## What documentation comes with your mappings?
 
