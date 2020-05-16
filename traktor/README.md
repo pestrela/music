@@ -204,12 +204,12 @@ The picture below summarizes the main ideas and dependencies explained in these 
 I have a large collection with thousands of files. It is also quite broad, featuring hundreds of playlists, and dozens of genres / sub-genres / decades combinations.
 
 My numbers are:
-* 7000x individual tracks
-* 300x individual playlists
-* 50x sub-genres
-* 10x major-genres
-* 5x decades
-* 2x separate DJs
+* **Tracks**: 7000
+* **Playlists**: 300
+* **Sub-genres:** 50 
+* **Major-genres:** 10
+* **Decades:** 5
+* **DJs**: 2
 
 To manage this complexity I've build my own set of personal tags that I fully trust.
 As such, the first action on new files is to tag them into my structure. This ignores any previous tags made by someone else.
@@ -289,12 +289,12 @@ Traktor is the only software that achives that because it fingerprints everythin
 
 When the mass-relocate process ends, everything is magically found again. Crucially all metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
 Together with the OS-search feature described below, this enables me to use folders as "virtual playlists".
-* Comparison to Rekordbox: Renamed files need to be relocated FILE by FILE.\
+* **Comparison to Rekordbox:** Renamed files need to be relocated FILE by FILE.\
 Moved files can be done FOLDER by FOLDER.\
 If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
 [An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case. [Example of Pioneer forum request](https://forums.pioneerdj.com/hc/en-us/community/posts/115018095303-Reasons-to-think-i-leave-from-rekordbox-?page=1#community_comment_360000392646)
-* Comparison to VDJ: Everything need to be relocated FILE by FILE.
-* Comparison to Serato: To test.
+* **Comparison to VDJ:** Everything need to be relocated FILE by FILE.
+* **Comparison to Serato:** To test.
 
 
 ## Why is Traktor my software of choice: b) OS-search (no playlists)
@@ -303,9 +303,9 @@ Traktor allows searching inside any OS folders. I don't have DJ playlists inside
 I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
 When I'm playing a specific genre I can search only that decade (=OS folder). If I want something else I can always search the whole collection at any time.\
 ([See this blog post for more detail on these methods](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc))
-* Comparison to Rekordbox: Rekordbox displays OS folders, but you can't search inside them. [Example of Pioneer forum request](https://forums.pioneerdj.com/hc/en-us/community/posts/115018095303-Reasons-to-think-i-leave-from-rekordbox-?page=1#community_comment_360000392646)
-* Comparison to Serato: Serato has a nicer way to display OS folders, but you can't search inside them
-* Comparison to VDJ: VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
+* **Comparison to Rekordbox:** Rekordbox displays OS folders, but you can't search inside them. [Example of Pioneer forum request](https://forums.pioneerdj.com/hc/en-us/community/posts/115018095303-Reasons-to-think-i-leave-from-rekordbox-?page=1#community_comment_360000392646)
+* **Comparison to Serato:** Serato has a nicer way to display OS folders, but you can't search inside them
+* **Comparison to VDJ:** VDJ has really good OS-searches, better than traktor, by having a "recurse" option to see all sub-folder files in a flat view
 
 
 
@@ -317,9 +317,9 @@ My [DDJ-1000 mapping has FX chains of the Jogwheel](https://github.com/pestrela/
 My [AKAI AMX mapping has 10 layers built using shifts and states](https://github.com/pestrela/music_scripts/blob/master/traktor/akai_amx_traktor_mapping/AMX%20v1.0.1%20TP3_TP2%20-%20Quick%20overview.pdf) to cram A LOT more functionality than the existing buttons.\
 This is only possible if midi mapping has variables and multiple actions per physical input.
 \
-* Comparison to Rekordbox: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
-* Comparison to Serato: No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
-* Comparison to VDJ: VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). 
+* **Comparison to Rekordbox:** No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+* **Comparison to Serato:** No variables at all, no multiple actions. They only allow you to assign a single command to a single button. 
+* **Comparison to VDJ:** VDJ is even better than traktor, has it has a full scripting language built-in ([VDJscript](https://www.virtualdj.com/wiki/VDJscript.html)). 
 It features infinite variables, conditions and states; Traktor only has 8 variables, 2 conditions and 8 states.\
   VDJ also features extremely nice [mapping editor](https://www.youtube.com/watch?v=4SU2OyDB9PQ&t=200),
   [pad editor](https://www.youtube.com/watch?v=eT1nZVpUUr8&t=50),
@@ -334,18 +334,18 @@ See also ["Why I moved to BOME midi mapping"](#BOME-mappings-migration).
 
 I use the hotcues as internal "bookmarks". In Traktor, pressing a hotcue moves the temporary cue as well.\
 This is very useful for  previewing an old song that you dont remember anymore. When you are done, you just move it to the last point using the big round button.
-* Comparison to Rekordbox: No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping. [This was requested in their forum](https://forums.pioneerdj.com/hc/en-us/community/posts/360021313752-Is-there-any-way-at-all-to-reassign-the-cue-button-to-cue-to-the-most-recently-selected-hot-cue-rather-than-only-being-used-to-make-cue-points-)
-* Comparison to Serato: untested
-* Comparison to VDJ: untested, but not a problem for sure (trivial to change using advanced MIDI mapping)
+* **Comparison to Rekordbox:** No option to move the temporary cue when pressing a hotcue. This causes massive confusion to me every single time. This would be trivial to fix using advanced MIDI mapping. [This was requested in their forum](https://forums.pioneerdj.com/hc/en-us/community/posts/360021313752-Is-there-any-way-at-all-to-reassign-the-cue-button-to-cue-to-the-most-recently-selected-hot-cue-rather-than-only-being-used-to-make-cue-points-)
+* **Comparison to Serato:** untested
+* **Comparison to VDJ:** untested, but not a problem for sure (trivial to change using advanced MIDI mapping)
 
 ## Why is Traktor my software of choice: e) Stronger Sync than others
 
 Traktor features a very strong master clock that was built for the remix decks. As such its sync is in general stronger than the other softwares I tested. 
 Using Beatsync the phrasing is always kept for any action I might do to the track: Beatjump, Hot cues, Temporary Cue, Pitch bend, Tempo change, Scratch, etc.
 
-* Comparison to Serato: see [this comparison video](https://www.youtube.com/watch?v=pyAj4IyFNCs). Even there I still found myself having the "gold" sync instead of the desired "blue" sync
-* Comparison to Rekordbox: It has the best sync outside Traktor 
-* Comparison to VDJ: untested
+* **Comparison to Serato:** see [this comparison video](https://www.youtube.com/watch?v=pyAj4IyFNCs). Even there I still found myself having the "gold" sync instead of the desired "blue" sync
+* **Comparison to Rekordbox:** It has the best sync outside Traktor 
+* **Comparison to VDJ:** untested
 
     
 ## Which features I miss in Traktor
@@ -361,9 +361,9 @@ Specific features:
 * **#8: Smart playlists** and related tracks
 
 In general I fully agree with [this Digital DJ Tips article](https://www.digitaldjtips.com/2019/10/what-next-for-traktor/). Generic comments:
-* #1: “Please embrace hardware partners again…”
-* #2: “Please speed up software development!”
-* #3: “Please, no more reinventing the wheel :)”
+* **#1:** “Please embrace hardware partners again…”
+* **#2:** “Please speed up software development!”
+* **#3:** “Please, no more reinventing the wheel :)”
 
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
 
@@ -374,15 +374,15 @@ See also the [most popular DJ softwares census](../census_graphs).
 You can easily create unique effects by chaining existing effects in specific ways.
 
 This is called the "Fader FX theory" as invented by Ean Golden in 2008
-* Article: https://djtechtools.com/2008/12/15/fader-fx-theory/
-* Demo video: https://www.youtube.com/watch?v=pjjA0xPkXMs
+* **Article:** https://djtechtools.com/2008/12/15/fader-fx-theory/
+* **Demo video:** https://www.youtube.com/watch?v=pjjA0xPkXMs
   
 This uses 3x effects in a chain:
-* Slot 1: Repeating effect 
+* **Slot 1:** Repeating effect 
   * eg: Beatmasher, Gater, Delays
-* Slot 2: Shaping effect 
+* **Slot 2:** Shaping effect 
   * eg: Filter, Lo-fi, Peak filter
-* Slot 3: Dimensional effect 
+* **Slot 3:** Dimensional effect 
   * eg: Reverb, delay
   
 I collect FX chains in this list:
@@ -427,14 +427,14 @@ more lists:
 "Elastic beatgrids" is a feature that explicitly allows **multiple BPMs** in each track.
 
 Without elastic beatgrids, the following becomes impossible to perform without the audience noticing:
-* Beatjumps 
+* **Beatjumps:** 
   * Impossible to fix in advance because the jump happens instantaneously
-* FX BPM-synced effects like delay 
+* **FX BPM-synced effects:** (eg delay)
   * Impossible to fix in any situation, because FX fully depend on the beatgrid
-* AutoLoops
+* **AutoLoops:**
   * IN point: with quantize off, you have to enable the loop at precisely the right time
   * OUT point: In this case you have to immediately enter "loop out adjust mode" to fix the out point as fast as you can    
-* Sync beatmatch
+* **Sync beatmatch:**
   * In this case you HAVE to compensate continuously using the jogwheels on the whole eg. 60s transition (manual beatmatch)
 
 
@@ -444,17 +444,17 @@ Traktor misses elastic beatgrids. This was the #1 request from the [Digital DJ T
 
 | Software | Elastic Beatgrids | Multiple Beatmarkers | Video |
 |-----------|-------------------|------------------------------|----------------------------------------------------------------------------------------|
-| RekordBox | yes | yes (note1) | https://youtu.be/aTHFpwSMsZI?t=499 |
-| Serato | yes | yes | https://youtu.be/wLt5fhZJGps&t=420 |
-| VirtualDJ | yes | yes | https://youtu.be/PrKBerB2n3I?t=49 |
-| Traktor | no | yes | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
-| Denon Prime | no | no (note2) | https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598 |
+| **RekordBox** | yes | yes (note1) | https://youtu.be/aTHFpwSMsZI?t=499 |
+| **Serato** | yes | yes | https://youtu.be/wLt5fhZJGps&t=420 |
+| **VirtualDJ** | yes | yes | https://youtu.be/PrKBerB2n3I?t=49 |
+| **Traktor** | no | yes | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+| **Denon Prime** | no | no (note2) | https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598 |
 
 
-Note1: manually beatgriding tracks in rekordbox is tricky because its a strictly left-to-right operation.\
-In other words: there is no way to put beatmarkers in front of the track without deleting them at the middle/end as well.\
-[more info](https://forums.pioneerdj.com/hc/en-us/community/posts/115010528306)
-Note2: Denon Prime [wraps tracks](https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598) and has problems with ID3tag [whole BPM numbers](https://www.reddit.com/r/DenonPrime/comments/cfxqr2/prime_4s_trusted_bpm_aka_why_using_the_bpm_tag_is/). 
+**Note1:** Manually beatgriding tracks in rekordbox is tricky because its a strictly left-to-right operation.\
+In other words: there is no way to put beatmarkers in front of the track without deleting them at the middle/end as well. 
+[more info](https://forums.pioneerdj.com/hc/en-us/community/posts/115010528306)\
+**Note2:** Denon Prime [wraps tracks](https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598) and has problems with ID3tag [whole BPM numbers](https://www.reddit.com/r/DenonPrime/comments/cfxqr2/prime_4s_trusted_bpm_aka_why_using_the_bpm_tag_is/). 
 
 
 
@@ -464,10 +464,10 @@ Note2: Denon Prime [wraps tracks](https://www.youtube.com/watch?v=bqhDRX6ghfM&t=
 Below a recipe to **approximate** Elastic beatgrids in Traktor, automatically using Rekordbox conversion.\
 The simplest method is presented first, then a more accurate/faster method is presented second.
 
-Important: this is only applicable for unsteady tracks 
+**Important:** this is only applicable for unsteady tracks 
 ([more info](#Which-tracks-benefit-from-emulated-Elastic-beatgrids)). 
 
-Simple method:  
+**Simple method:** 
 1. Download the free V5 rekordbox: [link](https://rekordbox.com/en/download5/)
 1. Select the tracks with single, but unsteady, BPMs: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox) 
 1. Analyse these tracks in dynamic mode: [guide](https://rekord.cloud/blog/should-you-analyze-your-tracks-with-dynamic-bpm-in-rekordbox)
@@ -487,17 +487,17 @@ it avoids the [26ms mp3 shift issue](#what-is-the-26ms-shift-issue-when-converti
 and its a lot faster by limiting the tracks and by directly patching the cues in the collection (instead of regular importing the files).
 
 
-Concrete differences:
-* Download specifically v5.6.0 rekordbox. 
+**Concrete differences:**
+1. Download specifically v5.6.0 rekordbox. 
   * This was the last without an XML import bug: [guide](https://www.youtube.com/watch?v=JV89dj1hDWM)
-* Manually remove the non-dynamic tracks from the XML.
+1. Manually remove the non-dynamic tracks from the XML.
   * There is no way to export specific playlists/tracks, you always get the whole collection
   * so by manually removing the tracks the later stages will be a lot faster  
-* Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) 
+1. Use [rekordbox_add_beatmarkers.py](tools_traktor/rekordbox_add_beatmarkers.py) 
   * This will force a beatmarker every 4 beats. 
   * These beatmarkers are very accurate because it still uses the dynamic BPM **before** conversion. 
-* Use a converter that specifically addresses the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
-* Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor)
+1. Use a converter that specifically addresses the 26-ms shift issue: [guide](#which-dj-converters-avoid-the-26ms-shift-issue)
+1. Patch your files into Traktor using [Traktor_clone_cues.py](#what-software-tools-did-you-built-for-Traktor)
 
 ![traktor_elastic_beatgrids3](pics/traktor_elastic_beatgrids3.jpg?raw=true)
  
@@ -506,16 +506,16 @@ Concrete differences:
 ## Which tracks benefit from emulated Elastic beatgrids?
 
 **Unsteady tracks: YES**
-* Examples: 80s Pop, 70s DiscoSound, Live drummers (any decade)
-* Typical range: +- 1% bpm error
-* Error: Very small; the error is reset every 4th beat will always reset it
+* **Examples:** 80s Pop, 70s DiscoSound, Live drummers (any decade)
+* **Typical range:** +- 1% bpm error
+* **Error:** Very small; the error is reset every 4th beat will always reset it
 
 **Transition tracks: NO**
-* Examples:
+* **Examples:**
   * [Magic Drum Orchestra - Drop it like its Hot](https://youtu.be/W-nrHptw4Ow) 85->115 bpm, Abrupt change
   * [Planet Soul - Set me Free](https://www.youtube.com/watch?v=v5HEfbxk7Mw) 126->98 bpm, Smooth change
-* Typical range: +- 15% bpm  (change from 3/4 to 4/4 signature)
-* Error: Too much; the 3rd beat will have an half beat error (see picture)
+* **Typical range:** +- 15% bpm  (change from 3/4 to 4/4 signature)
+* **Error:** Too much; the 3rd beat will have an half beat error (see picture)
   * Note: setting beatmarkers every 1 beat breaks Traktor sync dynamics
   
 ![traktor_elastic_beatgrids1](pics/traktor_elastic_beatgrids1.jpg?raw=true)
@@ -527,16 +527,16 @@ Concrete differences:
 This section is all about the slow preferences window.\
 I've been able to reduce this from 18 seconds to only 3 seconds.
  
-* [Slow preferences - Issue explanation](#Why-MIDI-mappings-makes-the-preferences-window-slow)
-* [Slow preferences - measurements](#How-slow-does-the-preferences-window-get)
-* [Slow preferences - Naive solution](#Could-we-just-move-all-entries-to-a-single-page)
-* [Slow preferences - Swapping configurations](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
+* [Issue explanation](#Why-MIDI-mappings-makes-the-preferences-window-slow)
+* [Measurements](#How-slow-does-the-preferences-window-get)
+* [Naive solution](#Could-we-just-move-all-entries-to-a-single-page)
+* [Swapping configurations](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
 
   
 ## Why MIDI mappings makes the preferences window slow
 
 Traktor has thousands of useless ["MidiDefinition structures"](https://github.com/ivanz/TraktorMappingFileFormat/blob/df5f544d10e3293b72b829841e654da0db71c4b0/Tools/TSI%20Mapping%20Template.bt#L130) 
-for every possible midi combination that **COULD** be used.\ 
+for every possible midi combination that **COULD** be used.\
 This set is much much larger than the entries that are **actually used**.
 
 Worse, these entries are replicated in every single "empty page".
@@ -588,13 +588,13 @@ This is useful when you sometimes use a controller as your audio device, but oth
 This saves you to having to open the preferences window to change the audio device, 
 which is [very slow when you have large mappings](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879).
 
-Script installation:
+**Script installation:**
 * save [this script](https://raw.githubusercontent.com/pestrela/music_scripts/master/traktor/tools_traktor/traktor_swap_configuration.sh) in your desktop with "right-click"/"save-as"
 * make the script executable with 'chmod +x traktor_swap_configuration.sh '
 * redefine the 'traktor_root_folder' variable to your documents traktor root
 * *run it once* to copy the first config
 
-First time setup:
+**First time setup:**
 * Open Traktor
 * change the config to DDJ-1000
 * close traktor
@@ -603,13 +603,13 @@ First time setup:
 * change config to internal soundcard
 * close traktor
 
-To Activate configuration #1:
+**To Activate configuration #1:**
 * *run the script*
 * open traktor
 * confirm the audio card is ddj-1000
 * Close taktor
 
-To Activate configuration #2:
+**To Activate configuration #2:**
 * *run the script*
 * open traktor
 * confirm the audio card is Internal Soundcard
@@ -628,7 +628,7 @@ However every year Controllers get more complex, so doing mappings today ranges 
 Some other anedotic evidence on this are the [preferences freeze](https://www.native-instruments.com/forum/threads/preferences-window-freeze.328315/page-2#post-1870879), the turntable play/pause looper, the DDJ-1000SRT missing jog screens, 
 and the HC-4500 mapping to get track details.
 
-Specific Blog posts:
+**Specific Blog posts:**
 * [a) Impossible mapping features](#Why-I-moved-to-BOME-midi-mapping-Impossible-features)
 * [b) Possible, but with major limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
 * [c) BOME limits](#Some-Limitations-of-BOME-mappings)
@@ -723,20 +723,20 @@ But in the end its really the big jogwheels that is the crucial deal breaker; Th
 
 Besides [my DDJ-1000](#why-is-ddj-1000-my-hardware-of-choice), I have several other controllers fully [mapped to Traktor](#What-are-your-main-Traktor-mappings). 
 
-Main differences are:\
+Main differences are:
 
-DDJ-1000:
+**DDJ-1000:**
 * **Jogs:** CDJ big Jogwheels 
 * **Screens:** Jog screens
 * **Size**: More portable than SZ, but more cramped as well
 * **BeatFX:** BeatFX in the lower right corner to the mixer
 
-DDJ-SZ:
+**DDJ-SZ:**
 * **Size:** Very spacious. A joy to use!
 * **Jogs:** Extra-smooth big Jogwheels
 * **Filter:** Pioneer soundcolor FXs in hardware, including the Pioneer filter with a lot of Resonance
 
-AKAI AMX:
+**AKAI AMX:**
 * **Ultra portable:** The AMX replaces 4x devices: Z1 Mixer + X1 controller + Twister Fighter + Audio2. 
 Its so small I carry it everywhere I go. 
 * **DVS:** The AMX is the cheapest and smallest way to unlock DVS 
@@ -788,42 +788,42 @@ This section covers my free mappings on the DJTT site.\
 Below the direct links, and after this the description of each mapping.
 
 
-* Main Traktor mappings
-  * DDJ-1000 with jog screens: https://maps.djtechtools.com/mappings/9279
-  * DDJ-SZ / DDJ-SX2 / DDJ-SRT: https://maps.djtechtools.com/mappings/9222
-  * AKAI AMX: https://maps.djtechtools.com/mappings/9323
-
-* Other mappings
-  * XDJ-XZ: https://maps.djtechtools.com/mappings/10305
-  * Numark PartyMix: https://maps.djtechtools.com/mappings/9764
-  * CDJ2000NX2: https://maps.djtechtools.com/mappings/9763
-  
-* Keyboard mappings  
-  * Beatgrid helper: https://maps.djtechtools.com/mappings/9760
-  * Transitions-Aligned Beatjumps: https://maps.djtechtools.com/mappings/9762
-
-* Advanced tricks demos
-  * Backwards loop and Reloop: https://maps.djtechtools.com/mappings/10252
-  * BOME access all 9x mixerFX: https://maps.djtechtools.com/mappings/10575
+* **Main Traktor mappings**
+  * **DDJ-1000 with jog screens:** https://maps.djtechtools.com/mappings/9279
+  * **DDJ-SZ / DDJ-SX2 / DDJ-SRT:** https://maps.djtechtools.com/mappings/9222
+  * **AKAI AMX:** https://maps.djtechtools.com/mappings/9323
+    
+* **Other mappings**
+  * **XDJ-XZ:** https://maps.djtechtools.com/mappings/10305
+  * **Numark PartyMix:** https://maps.djtechtools.com/mappings/9764
+  * **CDJ2000NX2:** https://maps.djtechtools.com/mappings/9763
+    
+* **Keyboard mappings**
+  * **Beatgrid helper:** https://maps.djtechtools.com/mappings/9760
+  * **Transitions-Aligned Beatjumps:** https://maps.djtechtools.com/mappings/9762
+    
+* **Advanced tricks demos**
+  * **Backwards loop and Reloop:** https://maps.djtechtools.com/mappings/10252
+  * **BOME access all 9x mixerFX:** https://maps.djtechtools.com/mappings/10575
   
 
 ## How to DOWNLOAD my Traktor mappings:
 
-TO DOWNLOAD: you can ONLY download my mappings from the DJ tech tools site (http://maps.djtechtools.com).\ 
-To do this you MUST register and then verify your email there.\
+TO DOWNLOAD: you can ONLY download my mappings from the DJ tech tools site (http://maps.djtechtools.com).\
+To do this you MUST register and then verify your email there.
 
 Note: sometimes that site is under maintenance. Please try later in this case.
 
 ## How to INSTALL my Traktor mappings:
 
-TO INSTALL: Please see this video where I show how to install the mappings: https://youtu.be/MbGP_ECnWiQ 
-See also this PDF file for step-by-step instructions: [installation guide](https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Installation%20Guide.pdf)
+TO INSTALL: Please see this video where I show how to install the mappings: https://youtu.be/MbGP_ECnWiQ\
+See also this PDF file for step-by-step instructions: [installation guide](https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Installation%20Guide.pdf)\
 See also the common questions: [FAQ](https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Frequently%20Asked%20Questions.pdf)
 
-Notes:
-* NOTE 1: My guides covers all DDJ controllers. The only difference is the Aliases (page 10) and Output (page 28). The Annexes have specific pictures for specific DDJs.
-* NOTE 2: This mapping requires the third-party BOME midi translator. It has a free trial for you to test this mapping before buying a license.
-* NOTE 3: Issues? See the FAQ in a pdf, the “gotchas” on page 34, and reconfirm if you missed a step of this guide.
+Some notes:
+* **#1:** My guides covers all DDJ controllers. The only difference is the Aliases (page 10) and Output (page 28). The Annexes have specific pictures for specific DDJs.
+* **#2:** This mapping requires the third-party BOME midi translator. It has a free trial for you to test this mapping before buying a license.
+* **#3:** Issues? See the FAQ in a pdf, the “gotchas” on page 34, and reconfirm if you missed a step of this guide.
 
 
 ## What are the features of your DDJ-1000 Traktor mapping?
@@ -1148,49 +1148,49 @@ In particular DJTechtools is offering [interactive-only advanced sessions](https
 Other than paid courses, these fine people contributed A LOT of FREE tutorials in youtube, their websites and forums.\
 If you are dedicated enough, experimenting and trying these materials for yourself can get you as far as you want.
 
-* Phil Morse and team:
+* **Phil Morse and team:**
   * https://www.digitaldjtips.com/dj-courses/
-* Ean Golden and team:
+* **Ean Golden and team:**
   * Advanced Interactive: https://us02web.zoom.us/webinar/register/WN_XyLog-v7QXm4LoBMxLfdCg
   * Videos: https://store.djtechtools.com/collections/sound-packs-tutorials
-* Carlo Atendido: 
+* **Carlo Atendido:**
   * https://sellfy.com/djcarloatendido/
-* DJ TLM:
+* **DJ TLM:**
   * https://djcoursesonline.com/dj-programs/
-* DJ Endo / DJ SHiftee:
+* **DJ Endo / DJ SHiftee:**
   * https://online.berklee.edu/courses/learn-to-dj-with-traktor
   * http://www.dubspot.com/programs/dj-extensive-program/?from=105#courses
-* Jamie Hartley:
+* **Jamie Hartley:**
   * https://wearecrossfader.co.uk/online-dj-courses/
-* DJ DAVE:
+* **DJ DAVE:**
   * https://www.adsrsounds.com/product/courses/traktor-pro-3-masterclass/
-* Udemy:
+* **Udemy:**
   * https://www.udemy.com/topic/dj/
 
 ## List of Technical Webinars
 
-* Jeroen Groenendijk 
-  * Files & Management: https://www.youtube.com/watch?v=B8n9ma-egX4
-  * Add Files, Tagging & Preferences: https://www.youtube.com/watch?v=BkpkGZNoNf8
-* Mix Master g:
-  * Lots of useful technical videos here: https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/playlists
+* **Jeroen Groenendijk**
+  * **Files & Management:** https://www.youtube.com/watch?v=B8n9ma-egX4
+  * **Add Files, Tagging & Preferences:** https://www.youtube.com/watch?v=BkpkGZNoNf8
+* **Mix Master G:**
+  * **Lots of useful technical videos here:** https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/playlists
 
 TODO: add more high-quality webinars.
   
 ## Midi mapping tutorials
 
-* Beginner:
-  * Traktor very first keyboard map: https://djtechtools.com/2015/02/26/intro-to-basic-midi-mapping-with-traktor/
-  * Traktor basic modifiers: https://djtechtools.com/2014/05/11/midi-mapping-101-the-traktor-modifier-re-explained/
-* Intermediate:
-  * Traktor SuperCombos: https://blog.native-instruments.com/how-to-map-instant-effects-in-traktor/
-  * Traktor Step sequencer: https://djtechtools.com/2018/01/29/traktors-step-sequencer-map-midi-controller/ 
-  * Traktor Patten recorder: https://djtechtools.com/2019/01/16/how-to-use-traktors-pattern-recorder-with-any-midi-controller/
-* Advanced
-  * Traktor Global MIDI controls: https://djtechtools.com/2015/09/08/traktor-global-midi-control-control-multiple-midi-devices-one-controller/
-  * Rekordbox BOME emulation of jogwheels: https://djtechtools.com/2017/05/08/hack-rekordbox-use-controllers-jogwheels/
-  * Rekordbox RXM-1000: https://djtechtools.com/2019/06/24/hacking-rekordbox-fx-and-adding-rmx-1000-control/
-  * Serato modifers and jogs: https://djtechtools.com/2018/04/11/hacking-serato-djs-midi-mapping-jogwheels-touchstrips-and-modifiers/
+* **Beginner:**
+  * **Traktor very first keyboard map:** https://djtechtools.com/2015/02/26/intro-to-basic-midi-mapping-with-traktor/
+  * **Traktor basic modifiers:** https://djtechtools.com/2014/05/11/midi-mapping-101-the-traktor-modifier-re-explained/
+* **Intermediate:**
+  * **Traktor SuperCombos:** https://blog.native-instruments.com/how-to-map-instant-effects-in-traktor/
+  * **Traktor Step sequencer:** https://djtechtools.com/2018/01/29/traktors-step-sequencer-map-midi-controller/ 
+  * **Traktor Patten recorder:** https://djtechtools.com/2019/01/16/how-to-use-traktors-pattern-recorder-with-any-midi-controller/
+* **Advanced**
+  * **Traktor Global MIDI controls:** https://djtechtools.com/2015/09/08/traktor-global-midi-control-control-multiple-midi-devices-one-controller/
+  * **Rekordbox BOME emulation of jogwheels:** https://djtechtools.com/2017/05/08/hack-rekordbox-use-controllers-jogwheels/
+  * **Rekordbox RXM-1000:** https://djtechtools.com/2019/06/24/hacking-rekordbox-fx-and-adding-rmx-1000-control/
+  * **Serato modifers and jogs:** https://djtechtools.com/2018/04/11/hacking-serato-djs-midi-mapping-jogwheels-touchstrips-and-modifiers/
  
   
 ## List of advanced MIDI mappings
@@ -1199,14 +1199,14 @@ TODO: add more high-quality webinars.
 Besides [my own mappings](#Free-Mappings), these are other advanced mappings that I've used before and recommend.
 Studying these mappings is a great way to learn advanced MIDI mapping.  
 
-* Stewe:
-  * Kontrol S4 MK3 Ninja https://maps.djtechtools.com/mappings/9325
-* Tekken:  
-  * S4 ultimate mapping: https://maps.djtechtools.com/mappings/9277
-  * F1 ultimate mapping: https://maps.djtechtools.com/mappings/652
-* DJ Tech Tools:
-  * Twisted Gratification: https://maps.djtechtools.com/mappings/5437
-  * DJTT Kontrol S4 MK2: https://maps.djtechtools.com/mappings/2211
+* **Stewe:**
+  * **Kontrol S4 MK3 Ninja:** https://maps.djtechtools.com/mappings/9325
+* **Tekken:**
+  * **S4 ultimate mapping:** https://maps.djtechtools.com/mappings/9277
+  * **F1 ultimate mapping:** https://maps.djtechtools.com/mappings/652
+* **DJ Tech Tools:**
+  * **Twisted Gratification:** https://maps.djtechtools.com/mappings/5437
+  * **DJTT Kontrol S4 MK2:** https://maps.djtechtools.com/mappings/2211
 
 Another good indicator is the list of most downloaded mappings (click "Downloads" to sort:\
 * https://maps.djtechtools.com/mappings?search%5Bsoftware_id%5D=29 )
@@ -1286,8 +1286,6 @@ This is the current situation as far as I tested it myself:
 * **[Choones](https://support.choones.app/guides)**: To be tested. Choones is an upcoming web application that does cloud-based conversion among many other features. At time of writing this is not publicly available. I've contated the team by email, and they told me they are aware of the 26ms shift issue.
 
 
-
-
 # Free DJ Software Tools
 
 This section groups the DJ software tools written by me, all freely available.
@@ -1309,44 +1307,39 @@ Below is a summary; see [here](traktor_tools/README.md) for more details
 
 See also the CMDR editor [changes](#What-features-did-you-add-to-the-CMDR-TSI-editor).
 
-* Traktor_clone_cues
+* **Traktor_clone_cues**
   * Clones cues between physically duplicated files. 
   * Is also able to merge traktor NML files.
-* rekordbox_add_beatmarkers  
+* **rekordbox_add_beatmarkers**
   * adds a beatmarker every 4 beats. Part of the [elastic beatgrid emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
-* CUE_tools
+* **CUE_tools**
   * Tools to generate CUE files and timestamped tracklists
   * Tools to search a whole set in youtube tabs and to scrape lyrics
   * My mp3tag actions scripts
   * Adaptor scripts to run DJCU and Rekordbuddy in Windows
-* 26ms offsets
+* **26ms offsets**
   * Research about the 26ms mp3 cue shifts in DJ conversion apps. [More info](https://github.com/digital-dj-tools/dj-data-converter/issues/3)
-* BOME tools:
-  * Easy wrapper around the [BOME analyser that documents variables](https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project), and a new script to find unused variables
- 
+* **BOME tools:**
+  * Easy wrapper around the [BOME analyser that documents 
+  variables](https://www.bome.com/support/kb/cross-reference-list-of-all-variables-in-a-mt-pro-project), and a new script to find unused variables: 
+  [download](https://github.com/pestrela/music/blob/master/traktor/tools_traktor/bome_analyse_project.sh)
+  * Deck duplicator with [emulated arrays](https://www.bome.com/support/kb/array-emulation-using-4-sequential-variables-and-automatic-generation-of-rules): 
+  [download]:(https://github.com/pestrela/music/blob/master/traktor/tools_traktor/bome_duplicate_deck.py) 
  
 ## What features did you add to the CMDR TSI editor?
 
 The CMDR editor did not get new features for 2.5 years. In Jan 2020 I've revived this project.\
 Download: https://github.com/pestrela/cmdr/releases
 
-Highlights:
+**Highlights:**
 * TP3 and S4-MK3 support
 * Grid quick filter
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
 
-
 ![cmdr_changes](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png "eedd" )
 
 
-## How to emulate Elastic Beatgrids in Traktor (2)
-
-This info was moved [here](#How-to-emulate-Elastic-Beatgrids-in-Traktor).
-
-
-
- 
  
 ## How I build perfect tracklists using CUE files
 
@@ -1373,22 +1366,19 @@ Steps AFTER the set (both live sets and prepared sets):
   
 Overview of the Cue tools:
 
-* cue_renumber_files.py:
+* **cue_renumber_files.py:**
   * renumbers mp3 files, in sequence. This is useful to make a sequenced playlist in your operating system folders, outside Traktor.
-* cue_make_tracklist.sh:
+* **cue_make_tracklist.sh:**
   * from a folder, generates basic tracklist text files
-* cue_convert_timestamps.sh:
+* **cue_convert_timestamps.sh:**
   * convert MMM:SS to HH:MM:SS format. Winamp uses the first format, Adobe audition uses the second 
-* cue_merge_cues.py: 
+* **cue_merge_cues.py:**
   * this is the main tool. It merge back and forth any CUE file with any tracklist text file. 
     It can read either case from separate or single files. It also cleans the artist - title fields, and generates timestamped tracklists 
-* cue_rename_cue.sh: 
+* **cue_rename_cue.sh:**
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
   
-  
-  
-
 ## What Programming libraries and technical scripts did you author?
 
 Please see my open-source github repos in https://github.com/pestrela?tab=repositories
