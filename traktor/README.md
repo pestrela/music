@@ -36,7 +36,7 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [MindMap](#MindMap-Summary)
 * [OS-Folders as virtual playlists](#OS-Folders)
 * [Traktor software](#Traktor-software)
-* [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids]
+* [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids)
 * [Traktor slow preferences window](#Traktor-Slow-preferences-Window)
 * [BOME migration](#BOME-mappings-migration)
 * [Hardware Controllers](#Hardware-Controllers)
@@ -71,7 +71,7 @@ See below for a longer Table of contents.
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
   * [How to create unique effects by chaining base effects](#How-to-create-unique-effects-by-chaining-base-effects)
 
-* [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids]
+* [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids)
   * [Which tracks have multiple BPMs](#Which-tracks-have-multiple-BPMs)
   * [What are Elastic Beatgrids](#What-are-Elastic-Beatgrids)
   * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
