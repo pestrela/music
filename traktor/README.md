@@ -444,11 +444,11 @@ Traktor misses elastic beatgrids. This was the #1 request from the [Digital DJ T
 
 | Software | Elastic Beatgrids | Multiple Beatmarkers | Video |
 |-----------|-------------------|------------------------------|----------------------------------------------------------------------------------------|
-| **RekordBox** | yes | yes (note1) | https://youtu.be/aTHFpwSMsZI?t=499 |
+| **RekordBox** | yes | yes (see note1) | https://youtu.be/aTHFpwSMsZI?t=499 |
 | **Serato** | yes | yes | https://youtu.be/wLt5fhZJGps&t=420 |
 | **VirtualDJ** | yes | yes | https://youtu.be/PrKBerB2n3I?t=49 |
 | **Traktor** | no | yes | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
-| **Denon Prime** | no | no (note2) | https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598 |
+| **Denon Prime** | no | no (see note2) | https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598 |
 
 
 **Note1:** Manually beatgriding tracks in rekordbox is tricky because its a strictly left-to-right operation.\
