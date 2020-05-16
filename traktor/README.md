@@ -36,6 +36,7 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [MindMap](#MindMap-Summary)
 * [OS-Folders as virtual playlists](#OS-Folders)
 * [Traktor software](#Traktor-software)
+* [Traktor Elastic Beatgrids](Traktor Elastic Beatgrids]
 * [Traktor slow preferences window](#Traktor-Slow-preferences-Window)
 * [BOME migration](#BOME-mappings-migration)
 * [Hardware Controllers](#Hardware-Controllers)
@@ -68,9 +69,15 @@ See below for a longer Table of contents.
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
-  * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
-  * [How to emulate Elastic Beatgrids in Traktor](#How-to-emulate-elastic-beatgrids-in-Traktor)
   * [How to create unique effects by chaining base effects](#How-to-create-unique-effects-by-chaining-base-effects)
+
+* [Traktor Elastic Beatgrids](Traktor Elastic Beatgrids]
+  * [Which tracks have multiple BPMs](#Which-tracks-have-multiple-BPMs)
+  * [What are Elastic Beatgrids](#What-are-Elastic-Beatgrids)
+  * [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
+  * [Traktor emulated Elastic Beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor)
+  * [Traktor emulated Elastic Beatgrids (more accurate)](#How-to-emulate-Elastic-Beatgrids-in-Traktor---More-complex-workflow)
+  * [Which tracks benefit from emulated Elastic beatgrids](#Which-tracks-benefit-from-emulated-Elastic-beatgrids)
 
 
 * [Traktor Slow preferences](#Traktor-Slow-preferences-Window)
@@ -344,8 +351,8 @@ Using Beatsync the phrasing is always kept for any action I might do to the trac
 ## Which features I miss in Traktor
 
 Specific features:
-* **#1: Include subcrates** just like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
-* **#2: Elastic beatgrids**: This is crucial as I play very old music and many music styles. [tool](#how-to-emulate-elastic-beatgrids-in-traktor)
+* **#1: Elastic beatgrids**: This is crucial as I play very old music and many music styles. [tool](#how-to-emulate-elastic-beatgrids-in-traktor)
+* **#2: Include subcrates** just like [serato](https://support.serato.com/hc/en-us/articles/227626268-Subcrates)
 * **#3: Pioneer DDJ**: Plug-and-Play to Pioneer gear / DDJ controllers, because this is the [most popular equipment today](../census_graphs)
 * **#4: Pad modes**: I have multiple pad modes in my mappings, but would love to see them on screen, and have an associated pad editor just like Rekordbox and VirtualDJ
 * **#5: Turntable FX**: Turntable start&stop on the [play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE)
@@ -362,29 +369,103 @@ But in the end Traktor has [has unique features that I depend on](#why-is-trakto
 
 See also the [most popular DJ softwares census](../census_graphs).
 
+## How to create unique effects by chaining base effects 
+
+You can easily create unique effects by chaining existing effects in specific ways.
+
+This is called the "Fader FX theory" as invented by Ean Golden in 2008
+* Article: https://djtechtools.com/2008/12/15/fader-fx-theory/
+* Demo video: https://www.youtube.com/watch?v=pjjA0xPkXMs
+  
+This uses 3x effects in a chain:
+* Slot 1: Repeating effect 
+  * eg: Beatmasher, Gater, Delays
+* Slot 2: Shaping effect 
+  * eg: Filter, Lo-fi, Peak filter
+* Slot 3: Dimensional effect 
+  * eg: Reverb, delay
+  
+I collect FX chains in this list:
+https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Support%20files/TP3%20-%20List%20of%20Combo%20FXs.txt
+
+MixerFX / MacroFX / SoundColorFX are essentially very useful FX chains with specific defaults and behavuour.\
+This thread describes the basic elements of MixerFX: [thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
+  
+# Traktor Elastic Beatgrids  
+
+
+This section covers Elastic beatgrids in Traktor
+* [Which tracks have multiple BPMs](#Which-tracks-have-multiple-BPMs)
+* [What are Elastic Beatgrids](#What-are-Elastic-Beatgrids)
+* [Softwares with Elastic Beatgrids](#Which-softwares-support-Elastic-Beatgrids)
+* [Traktor emulated Elastic Beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor)
+* [Traktor emulated Elastic Beatgrids (more accurate)](#How-to-emulate-Elastic-Beatgrids-in-Traktor---More-complex-workflow)
+* [Which tracks benefit from emulated Elastic beatgrids](#Which-tracks-benefit-from-emulated-Elastic-beatgrids)
+
+
+
+
+## Which tracks have multiple BPMs
+
+Two types of tracks have multiple BPMs:
+* **Unsteady BPMs:** 
+  * Definition: these tracks floats around a single BPM (+-1% range). Examples:
+  * Live drummers: [Guns N' Roses - Sweet Child O' Mine](https://www.youtube.com/watch?v=1w7OgIMMRc4)
+  * Old disco / 80s Pop tracks: [Matia Bazar - Ti Sento](https://www.youtube.com/watch?v=uk7bR54G2BA)
+* **Transition Tracks:**
+  * Definition: these tracks have clear BPM changes (+-10% range). Examples:
+  * Abrupt 85->115 bpm: [Magic Drum Orchestra - Drop it like its Hot](https://youtu.be/W-nrHptw4Ow) 
+  * Smooth 126->98 bpm: [Planet Soul - Set me Free](https://www.youtube.com/watch?v=v5HEfbxk7Mw)
+
+more lists:
+[list1](https://www.reddit.com/r/DJs/comments/2hmtgc/do_you_know_of_any_house_songs_that_increase_in/)
+[list2](https://www.reddit.com/r/DJs/comments/ybt30/transition_tracks/)
+
+
+## What are Elastic Beatgrids
+
+"Elastic beatgrids" is a feature that explicitly allows **multiple BPMs** in each track.
+
+Without elastic beatgrids, the following becomes impossible to perform without the audience noticing:
+* Beatjumps 
+  * Impossible to fix in advance because the jump happens instantaneously
+* FX BPM-synced effects like delay 
+  * Impossible to fix in any situation, because FX fully depend on the beatgrid
+* AutoLoops
+  * IN point: with quantize off, you have to enable the loop at precisely the right time
+  * OUT point: In this case you have to immediately enter "loop out adjust mode" to fix the out point as fast as you can    
+* Sync beatmatch
+  * In this case you HAVE to compensate continuously using the jogwheels on the whole eg. 60s transition (manual beatmatch)
+
+
 ## Which softwares support Elastic Beatgrids
 
+Traktor misses elastic beatgrids. This was the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199) as well.
 
-| Software | Elastic Beatgrids | Video |
-|-----------|-------------------|----------------------------------------------------------------------------------------------------------------------|
-| RekordBox | yes |  https://youtu.be/aTHFpwSMsZI?t=499 |
-| Serato | yes | https://youtu.be/wLt5fhZJGps&t=420 |
-| VirtualDJ | yes | https://youtu.be/PrKBerB2n3I?t=49 |
-| Traktor | no | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+| Software | Elastic Beatgrids | Multiple Beatmarkers | Video |
+|-----------|-------------------|------------------------------|----------------------------------------------------------------------------------------|
+| RekordBox | yes | yes (note1) | https://youtu.be/aTHFpwSMsZI?t=499 |
+| Serato | yes | yes | https://youtu.be/wLt5fhZJGps&t=420 |
+| VirtualDJ | yes | yes | https://youtu.be/PrKBerB2n3I?t=49 |
+| Traktor | no | yes | [main discussion thread](https://www.native-instruments.com/forum/threads/how-to-fix-tracks-with-unsteady-bpms-using-just-traktor-pro.114480/) |
+| Denon Prime | no | no (note2) | https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598 |
+
+
+Note1: manually beatgriding tracks in rekordbox is tricky because its a strictly left-to-right operation.\
+In other words: there is no way to put beatmarkers in front of the track without deleting them at the middle/end as well.\
+[more info](https://forums.pioneerdj.com/hc/en-us/community/posts/115010528306)
+Note2: Denon Prime [wraps tracks](https://www.youtube.com/watch?v=bqhDRX6ghfM&t=598) and has problems with ID3tag [whole BPM numbers](https://www.reddit.com/r/DenonPrime/comments/cfxqr2/prime_4s_trusted_bpm_aka_why_using_the_bpm_tag_is/). 
+
 
 
 ## How to emulate Elastic Beatgrids in Traktor
 
-Traktor misses elastic beatgrids. This is crucial for live drummers and old electronic music.
 
-It is impossible to do perfect **beatjumps** because you cannot compensate with jogs.\
-Same story for perfect **BPM-based Effects** like delay.
+Below a recipe to **approximate** Elastic beatgrids in Traktor, automatically using Rekordbox conversion.\
+The simplest method is presented first, then a more accurate/faster method is presented second.
 
-This was also the #1 request from the [Digital DJ Tips interview](https://www.youtube.com/watch?v=iFcnImYgsII&feature=youtu.be&t=199)
-
-
-Below a recipe to **approximate** Elastic beatgrids in Traktor, automatically using Rekordbox conversion.
-The simplest method is presented first, then a more acurate/faster method is presented second.
+Important: this is only applicable for unsteady tracks 
+([more info](#Which-tracks-benefit-from-emulated-Elastic-beatgrids)). 
 
 Simple method:  
 1. Download the free V5 rekordbox: [link](https://rekordbox.com/en/download5/)
@@ -396,7 +477,6 @@ Simple method:
 
 ![traktor_elastic_beatgrids2](pics/traktor_elastic_beatgrids2.jpg?raw=true)
 
----
  
 ## How to emulate Elastic Beatgrids in Traktor - More complex workflow
 
@@ -407,7 +487,7 @@ it avoids the [26ms mp3 shift issue](#what-is-the-26ms-shift-issue-when-converti
 and its a lot faster by limiting the tracks and by directly patching the cues in the collection (instead of regular importing the files).
 
 
-Differences are:
+Concrete differences:
 * Download specifically v5.6.0 rekordbox. 
   * This was the last without an XML import bug: [guide](https://www.youtube.com/watch?v=JV89dj1hDWM)
 * Manually remove the non-dynamic tracks from the XML.
@@ -438,41 +518,9 @@ Differences are:
 * Error: Too much; the 3rd beat will have an half beat error (see picture)
   * Note: setting beatmarkers every 1 beat breaks Traktor sync dynamics
   
-
 ![traktor_elastic_beatgrids1](pics/traktor_elastic_beatgrids1.jpg?raw=true)
 
 
-more lists:
-[list1](https://www.reddit.com/r/DJs/comments/2hmtgc/do_you_know_of_any_house_songs_that_increase_in/)
-[list2](https://www.reddit.com/r/DJs/comments/ybt30/transition_tracks/)
-
-Note: manually beatgriding tracks in rekordbox is tricky because its a strictly left-to-right operaton.\
-In other words: there is no way to put beatmarkers in front of the track without deleting them at the middle/end as well.\
-[more info](https://forums.pioneerdj.com/hc/en-us/community/posts/115010528306)
-
-
-## How to create unique effects by chaining base effects 
-
-You can easily create unique effects by chaining existing effects in specific ways.
-
-This is called the "Fader FX theory" as invented by Ean Golden in 2008
-* Article: https://djtechtools.com/2008/12/15/fader-fx-theory/
-* Demo video: https://www.youtube.com/watch?v=pjjA0xPkXMs
-  
-This uses 3x effects in a chain:
-* Slot 1: Repeating effect 
-  * eg: Beatmasher, Gater, Delays
-* Slot 2: Shaping effect 
-  * eg: Filter, Lo-fi, Peak filter
-* Slot 3: Dimensional effect 
-  * eg: Reverb, delay
-  
-I collect FX chains in this list:
-https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Support%20files/TP3%20-%20List%20of%20Combo%20FXs.txt
-
-MixerFX / MacroFX / SoundColorFX are essentially very useful FX chains with specific defaults and behavuour.\
-This thread describes the basic elements of MixerFX: [thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
-  
 
 # Traktor Slow preferences Window
   
