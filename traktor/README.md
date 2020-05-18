@@ -36,16 +36,19 @@ PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings)
 * [MindMap](#MindMap-Summary)
 * [OS-Folders as virtual playlists](#OS-Folders)
 * [Traktor software](#Traktor-software)
+* [Effects](Effects)
 * [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids)
 * [Traktor slow preferences window](#Traktor-Slow-preferences-Window)
 * [BOME migration](#BOME-mappings-migration)
 * [Hardware Controllers](#Hardware-Controllers)
 * [Free Mappings](#Free-Mappings)
+* [DJ Tutorials](#DJ-tutorials)
 * [DJ collection converters](#DJ-collection-converters)
 * [Free DJ Software Tools](#Free-DJ-Software-Tools)
 * [DJ Software optimization](#DJ-Software-optimization)
 * [Windows usage](#Windows-usage)
 * [Rekordbox V6 topics](#Rekordbox-v6-topics)
+* [MIXXX topics](#mixxx-topics)
 * [Music Styles](#Music-Styles)
 * [Other topics](#Other-topics)
   
@@ -69,8 +72,15 @@ See below for a longer Table of contents.
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
-  * [How to create unique effects by chaining base effects](#How-to-create-unique-effects-by-chaining-base-effects)
 
+* [Effects](#Effects)
+  * [Description of the basic effects](#description-of-the-basic-effects)
+  * [How to create unique effects by chaining base effects](#how-to-create-unique-effects-by-chaining-base-effects)
+  * [List of FX Chains](#list-of-fx-chains)
+  * [Which basic effects constitute Traktor mixerFX and macroFX?](#which-basic-effects-constitute-traktor-mixerfx-and-macrofx)
+  * [Which basic effects constitute Pioneer SoundColorFX](#describing-the-basic-effects-that-constitute-pioneer-soundcolorfx)
+  * [Which basic effects constitute VirtualDJ SoundColorFX](#describing-the-basic-effects-that-constitute-virtualdj-soundcolorfx)
+  
 * [Traktor Elastic Beatgrids](#Traktor-Elastic-Beatgrids)
   * [Which tracks have multiple BPMs](#Which-tracks-have-multiple-BPMs)
   * [What are Elastic Beatgrids](#What-are-Elastic-Beatgrids)
@@ -78,7 +88,6 @@ See below for a longer Table of contents.
   * [Traktor emulated Elastic Beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor)
   * [Traktor emulated Elastic Beatgrids (more accurate)](#How-to-emulate-Elastic-Beatgrids-in-Traktor---More-complex-workflow)
   * [Which tracks benefit from emulated Elastic beatgrids](#Which-tracks-benefit-from-emulated-Elastic-beatgrids)
-
 
 * [Traktor Slow preferences](#Traktor-Slow-preferences-Window)
   * [Issue explanation](#Why-MIDI-mappings-makes-the-preferences-window-slow)
@@ -123,7 +132,7 @@ See below for a longer Table of contents.
   * [Is the DDJ-1000SRT also mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
   * [Is the DDJ-XP2 mappable to Traktor?](#is-the-ddj-1000xp2-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
- 
+  
 * [DJ Tutorials](#DJ-tutorials)
   * [List of Online DJ Courses](#List-of-Online-DJ-Courses)
   * [List of Technical Webinars](#List-of-Technical-Webinars)
@@ -171,8 +180,16 @@ See below for a longer Table of contents.
   * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
   * [How to ignore Rekordbox upgrades](#How-to-ignore-Rekordbox-upgrades-completely)
 
+
+* [MIXXX topics](#mixxx-topics)
+  * [What makes MIXXX unique](#what-makes-mixxx-unique)
+  * [How complete is MIXXX?](#how-complete-is-mixxx)
+  * [DDJ support in MIXXX](#ddj-support-in-mixxx)
+  
+  
 * [Music Styles](#Music-Styles)
   * [Retro and Metal remixes](#What-are-Retro-and-Metal-remixes)
+  * [Examples of Retro, Metal and Reggae remixes](#Examples-of-Retro-Metal-and-Reggae-remixes)
   * [Sets Reconstructing for learning purposes](#How-to-learn-good-transition-points-by-reconstructing-sets)
 
   
@@ -369,9 +386,42 @@ But in the end Traktor has [has unique features that I depend on](#why-is-trakto
 
 See also the [most popular DJ softwares census](../census_graphs).
 
+
+# Effects 
+
+This section covers advanced usage of effects.
+
+Posts:
+* [Description of the basic effects](#description-of-the-basic-effects)
+* [How to create unique effects by chaining base effects](#how-to-create-unique-effects-by-chaining-base-effects)
+* [List of FX Chains](#list-of-fx-chains)
+* [Which basic effects constitute Traktor mixerFX and macroFX?](#which-basic-effects-constitute-traktor-mixerfx-and-macrofx)
+* [Which basic effects constitute Pioneer SoundColorFX](#describing-the-basic-effects-that-constitute-pioneer-soundcolorfx)
+* [Which basic effects constitute VirtualDJ SoundColorFX](#describing-the-basic-effects-that-constitute-virtualdj-soundcolorfx)
+      
+
+
+## Description of the basic effects 
+
+These are definitions from the basic effects. This will be useful later to describe the FX chains (combos).
+
+* Basic FX:
+  * https://en.wikipedia.org/wiki/Audio_signal_processing#Audio_effects
+  * Delay = repeat sound once after X beats (can be fractional)
+  * Echo = repeat sound multiple times, with decreasing intensity
+  * Reverb = repeat sound multiple times heavily very soon
+  * Flanger = a single delay with very short duration (short phase)
+  * Filter = lower/cut or raise specific frequencies
+  * Overdrive = clipping to increase loudness
+  * Pitch = changing tone with same tempo
+  * Resonators = emphasize harmonic frequency content on specified frequencies.
+  * Modulation = change frequency in relation to a signal
+  * Compression = reduction of dynamic range
+  * Gate = ON/OFF synced to BPM
+  
 ## How to create unique effects by chaining base effects 
 
-You can easily create unique effects by chaining existing effects in specific ways.
+You can easily create unique effects by chaining existing effects in very specific ways.
 
 This is called the "Fader FX theory" as invented by Ean Golden in 2008
 * **Article:** https://djtechtools.com/2008/12/15/fader-fx-theory/
@@ -385,14 +435,238 @@ This uses 3x effects in a chain:
 * **Slot 3:** Dimensional effect 
   * eg: Reverb, delay
   
-I collect FX chains in this list:
-https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Support%20files/TP3%20-%20List%20of%20Combo%20FXs.txt
+Below, blog posts on a) lists of FX chains and b) descriptions of MixerFX / MacroFX / SoundColorFX.
 
-MixerFX / MacroFX / SoundColorFX are essentially very useful FX chains with specific defaults and behavuour.\
-This thread describes the basic elements of MixerFX: [thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
+
+## List of FX Chains 
+
+This is the original article where Ean Golden applied these FX chains to the jogwheels (JogFX):
+
+* **Article:** https://djtechtools.com/2008/06/20/re-use-your-jog-wheel-4-fx/
+* **Demo video:** (see at 7:31) https://www.youtube.com/watch?v=H_TE2mtuM6Q&t=451  
+  
+* DJ Estrela / JaJa DDJ jogFX:
+	* JogFX1: Beatmasher2 / Digital filter / Gater
+	* JogFX2: Beatmasher2 / Filter / Reverb
+	* JogFX3: Eventhorizon / Filter / Gater
+	* JogFX4: Gater / Beatmasher / Reverb
+	* JogFX5: Flanger / Filter / Gater
+	* JogFX6: Beatmasher2 / Peak filter / Gater
+	* JogFX7: FormatFilter / Peak filter / Flightest
+	
+* Ean Goldmen VCI-100:
+  * VCI-100 3_4 SE: https://www.youtube.com/watch?v=Du9UAARJe8I
+	* demo: https://www.youtube.com/watch?v=HUBEN-0b2cY
+	*	#1: BeatMasher2 / Filter / FlangerPulse
+	*	#2: Beatmasher / Delay / ReversGrain
+	*	#3: Beatmasher / Lofi  / TurntableFX
+	*	#4: Gater / FormantFilter / Reverb
+	
+* DJTT VCI-400 (same as S2/S4)
+	* demo: 13:00 https://www.youtube.com/watch?v=2AeX3qZqj7M
+	* #1 Echo:  delay (single)
+	* #4 Detox: Beatmasher2 / Lofi / PeakFilter
+	* #3 Build: Gater / Beatmasher2 / PeakFilter 
+	* #2 Swirl: FlangerFlux / Filter92:LFO / Reverb 
+
+		
+* DJTT S2/S4 JogFx:
+	* S4: https://www.youtube.com/watch?v=YJyYeTagTWg
+	* S2: https://www.youtube.com/watch?time_continue=55&v=KJcbaN87IBQ
+	* #1 Detox: BeatMasher2 / Lofi / PeakFilter
+		* set: 0.6 / 0.1 / 0.2
+		* rot: 68%/25% / 88%/19% / 48%/35% 
+	* #2 Build: Gater / BeatMasher2 / PeakFilter
+		* set: 0.5 / 0.1 / 0.2
+		* rot: 68%/25% / 88%/19% / 50%/35% 
+	* #2 Swirl: FlangerFlux / PeakFilter / Reverb
+		* set: 0.5 / 0.4 / 0.0
+		* rot: 68%/25% / 60%/37% / 50%/35% 
+    
+* jwill 4TRAK platter FX:
+	* demo: 2:12 https://www.youtube.com/watch?v=wVQxa8rbjeA
+	* #1: BeatMasher / Lofi / delay
+	* #2: Flangerflux / gater / reverbT3
+	* #3: Gater / peakfilter / delayT3 
+	* #4: Gater / t3delay / peakfilter
+	* #5: FlangerFlux / FilterPulse / delayT3
+	* #6: Iceverb / peakFilter / Reverb
+	* #7: Filter / reverb / iceverb / key  <<<<<
+	* #8: Beatmasher / transpose_Strech / mullhoand_drive
+	
+* Koolis FX combos: 
+	* http://blog.dubspot.com/8-free-traktor-fx-combos-koolis	
+	* #1	BeatSlicer / Filter:92 LFO / Delay
+	* #2	Beatmasher2 / Transpose Stretch / Reverb
+	* #3	PolarWind / Gater / Digital Lofi
+	* #4	Reverb T3 / Delay T3 / Digital Lofi
+	* #5	Reverb T3 / Delay T3 / Filter
+	* #6	Beatmasher2 / Gater / Flanger
+	* #7	Beatmasher2 / Phaser / Digital Lofi
+	* #8	Delay / Phaser Flux / Reverb T3 
+
+* Viper:
+	* #1 Beatmasher / Reverb / DelayT3
+	* #2 Sweep Drama: iceverb / PeakFilter / Delay 
+	* #3 Delay like Ean Golden: Delay
+  * #4 Gater / Beatmasher / ReverbT3
+  * #5 DelayT3 / PeakFilter / Flanger 
+	* #6 Detox (E.G): Beatmasher2 / Lofi /Reverb
+  * #7 Build (E.G): Gater / Beatmasher2 / PeakFilter
+  * #8 Swirl (E.G): FlangerFlux / Filter92:LFO / Reverb 
+		
+* Scamo S4:
+	* Mode 1 - Ean's Beat Masher:  beatmasher + peakFilter + T3 reverb / muloun drive + pftr + reverb
+  * Mode 2 - Transbeater: beatmasher / transposeStretch / TTFX 
+	* Mode 3 - Delayorama: T3Delay
+	* Mode 4 - The Belofo: beatmasher / Lofi / FilterLFO. 
+	* Mode 5 - Flangeritis: FlangerFlux / Reverb
+	* Mode 6 - The Riffer:  gator / beatmasher / ReverbT3   (filter?)
+	* Mode 7 - Reverbogator: 	reverb / gator
+	* Mode 8 - Army of Me's (Priscilla's) Sweep Drama Effect
+	* Mode 9 - LOFI Sweep
+	* Mode 10 - Flanger Sweep
+	* Mode 11 - Pulse Sweep
+	* Mode 12 - Beat Slicer
+	* Mode 13 - LOFI Masher
+			
+* elephant jogFX:
+	* 2-M: Beatslicer / Gater / LaserSlicer 
+	* 2-L: Gater / Beatlicer / ZZurrp 
+	* 2-R: Reverb / Gater / Wormhole 
+	* 3-M: Gater / Beatmasher2 / Beatslicer 
+	* 3-L: Gater / Beatmasher2 / Delay 
+	* 3-R: Gater / Beatmasher2 / Srrrettch Slow 
+	* 4-M: Gater / RampDelay / Iceverb 
+	* 4-L: Gater / TapeDelay / Reverb 
+	* 4-R: Beatmasher2 / RampDelay / PolarWind 
+
+  
+## Which basic effects constitute Traktor mixerFX and macroFX?
+  
+MixerFX / MacroFX are essentially FX chains with specific defaults and behavior.\
+This post describes the basic elements of MixerFX using simpler base effects (delay, echo, filter, reverb, flanger, beatmasher, bitcrush, white noise).
+
+
+* TP3.0 MIXERFX:
+  * https://djtechtools.com/2018/10/18/traktor-pro-3-out-now-heres-whats-new/
+  * Reverb: resonant reverb + heavy filter
+  * Dual Delay: 1/2 delay + filter
+  * Dotted Delay: heavy delay (staccato)
+  * Noise: white noise + filter
+  * Time Gater: ON/OFF BPM-sync + filter
+  * Flanger: 4-beat flanger + filter
+  * Barber Pole: soft Shepard Tone
+  * Crush: bit crush (no pitch increase) + filter
+  * Filter: Filter + Light resonance
+
+* TP2.6 MACROFX:
+  * https://techtools.zendesk.com/hc/en-us/articles/202165534-NEW-MACRO-FX
+  * https://crossfadr.com/2012/11/21/overhauling-the-traktor-native-instruments-new-traktor-pro-2-6-release/
+  * Wormhole = heavy filter + heavy flanger + delay (Buildup//breakdown)
+  * PolarWind = heavy flanger (coloring) + light filter + reverb (Mixing/punch in)
+  * FlightTest = heavy echo + resonant filter (Punch In)
+  * LaserSlicer = heavy beatmasher + flanger (Punch in/buildup/breakdown)
+  * DarkMatter = heavy crush + delay + compression (for Mixing)
+  * Zzzurp = related to Ringmodulator (masher + flanger + crush + reverb) (Punch in/breakdown)
+  * EventHorizon = heavy filter + echo (Breakdown/punch in)
+  * Bass-o-Matic = heavy triplets slicer (Punch in/breakdown)
+  * Strrretch (Slow) = loop sampler (Buildup/breakdown)
+  * Strrretch (Fast) = loop sampler (Buildup/breakdown)
+  * GranuPhase = delay to 2nd and 4th beat (Punch in/buildup/breakdown)
+
+* Normal effects:
+  * https://www.digitaldjtips.com/reviews/native-instruments-traktor-kontrol-z2/
+  * Transpose Stretch = Dubstep-style
+  * Ringmodulator = Josh Wink “tweak”
+  * Tape Delay = “chillwave”
+
+To test these effects, loop a simple beat and characterize what you hear based on basic FX concepts.
+To test delay/echo/reverb presence, stop the track to hear the FX tail.
+  
+[original thread](https://www.native-instruments.com/forum/threads/describing-the-basic-effects-that-constitute-mixerfx-and-macrofx.375351/ )
+
+## Describing the basic effects that constitute Pioneer SoundColorFX
+
+SoundColorFX are similar FX chains with specific defaults and behavior.
+This post describes their basic elements as well.
+ 
+
+* DJM-900NX2 ColourFX:
+  * https://docs.pioneerdj.com/Manuals/DJM_900NXS2_DRI1300A_manual/#/
+  * Space = reverb
+  * dub echo = echo
+  * sweep = gate (left) / filter (right)
+  * noise = white noise + filter
+  * crush = reduce bit resolution + filter
+  * filter = filter + resonance
+  * jet = flanger
+  * pitch = tone change
+  * gate comp = gate (left) / compressor (right)
+
+* DJM-900NX2 Beat FX:
+  * https://docs.pioneerdj.com/Manuals/DJM_900NXS2_DRI1300A_manual/#/
+  * Delay = delay
+  * multi tap delay = delay
+  * Echo = echo
+  * low cut echo = echo
+  * Ping Pong = delay
+  * Reverb = reverb
+  * Spiral = reverb + pitch
+  * Trans(form) = Gate
+  * Filter = Filter
+  * Flanger = Flanger
+  * Phaser = Flanger
+  * Pitch = Pitch
+  * Roll = loop sampler (once)
+  * Slip Roll = Loop Sampler (can be restarted)
+  * Rev Rol = Loop sampler reversed
+  * Helix = Loop Sampler
+  * melodic = Sampler
+  * Vinyl Brake = Constant tempo down
+  * robot = vocoder (?)
+  * enigma jet = Shepard Tone + flanger
+  * Mobius saw = Shepard Tone
+  * Mobius triangle = Shepard Tone
+
+* RMX-1000:
+  * https://djtechtools.com/2016/08/02/rekordbox-4-2-1-rmx-effects-vinyl-recording/
+  * https://djtechtools.com/2012/05/06/pioneer-rmx-1000-effects-unit-review/
+  * BPF Echo – Adds the sound that has passed through the band pass filter to the original sound and adds echo.
+  * Noise – Adds white noise generated internally to the sound.
+  * Spiral Up – Raises pitch of the sound while changing echo reverberation time.
+  * Reverb Up – Adds a reverberation effect to the sound and raises the pitch of the echo as time passes.
+
+* RMX-1000 - Effects for inserting breaks into tracks:
+  * HPF Echo – Passes the sound through the high pass filter and adds echo.
+  * LPF Echo – Passes the sound through the low pass filter and adds echo.
+  * Crush Echo – Creates a sound as if the sound were crushed and adds echo.
+  * Spiral Down – Lowers the pitch of the sound while changing echo reverberation time.
+  * Reverb Down – Adds a reverberation effect to the sound and lowers the pitch of the echo as time passes.”
+
+  
+## Describing the basic effects that constitute VirtualDJ SoundColorFX
+  
+  
+VirtualDJ has similar FX chains, with specific defaults and behavior.
+This post describes their basic elements as well.
+ 
+* VirtualDJ SoundColorFX:
+  * https://www.virtualdj.com/manuals/virtualdj/interface/mixer/audio/index.html
+  * https://www.virtualdj.com/manuals/virtualdj/appendix/nativeeffects.html
+  * Cut
+  * Distortion
+  * Echo
+  * Flanger
+  * Filter (default)
+  * Noise
+  * Loop Roll
+  * Pitch
+  * Reverb
+  * Spiral
+
   
 # Traktor Elastic Beatgrids  
-
 
 This section covers Elastic beatgrids in Traktor
 * [Which tracks have multiple BPMs](#Which-tracks-have-multiple-BPMs)
@@ -401,7 +675,6 @@ This section covers Elastic beatgrids in Traktor
 * [Traktor emulated Elastic Beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor)
 * [Traktor emulated Elastic Beatgrids (more accurate)](#How-to-emulate-Elastic-Beatgrids-in-Traktor---More-complex-workflow)
 * [Which tracks benefit from emulated Elastic beatgrids](#Which-tracks-benefit-from-emulated-Elastic-beatgrids)
-
 
 
 
@@ -672,7 +945,7 @@ In importance order:
 
 ## How I see the future of Traktor mappings
 
-A major Traktor strength is the MIDI mappings system. Very flexible and powerful.\
+A major Traktor strength is the MIDI mappings system. They are over and over praised to be very flexible and powerful.\
 Traktor maps are by far the most popular in https://maps.djtechtools.com \
 Large mappings are really complex to build - but once this is done other users immediately benefit by just installing them.
 
@@ -682,8 +955,10 @@ It now is also impossible to use it alone [to map the latest controllers](#Why-I
 For example in my DDJ-1000 mapping I had to use BOME midi translator as a middle man:\
 https://maps.djtechtools.com/mappings/9279
 
-In my view the mappings are a unique sucess story of Traktor. This could continue to give great results with just some quality-of-life improvements.
+A second issue is that the most popular Traktor-ready controllers from NI did not got MIDI mapping capabilities at launch, and took quite a while to do so. 
+In the case of the S5, this is still not possible (time of writing: May 2020)
 
+In my view the mappings are a unique success story of Traktor. If improved, they could continue to give great results with just some minor quality-of-life changes.
 
 
 # Hardware Controllers
@@ -1143,7 +1418,7 @@ This section has links to DJ tutorials and technical information.
   
 Below a list of DJ courses, all from well-known Tutors.\
 This is appropriate and recommended when you want a structured syllabus that covers all bases.\
-In particular DJTechtools is offering [interactive-only advanced sessions](https://us02web.zoom.us/webinar/register/WN_XyLog-v7QXm4LoBMxLfdCg).\
+In particular DJTechtools is offering [interactive-only advanced sessions](https://us02web.zoom.us/webinar/register/WN_XyLog-v7QXm4LoBMxLfdCg).
 
 Other than paid courses, these fine people contributed A LOT of FREE tutorials in youtube, their websites and forums.\
 If you are dedicated enough, experimenting and trying these materials for yourself can get you as far as you want.
@@ -1167,6 +1442,11 @@ If you are dedicated enough, experimenting and trying these materials for yourse
 * **Udemy:**
   * https://www.udemy.com/topic/dj/
 
+## List of Introductory DJ Tutorials / Exercises
+
+For now, see: https://www.mixxx.org/wiki/doku.php/beginner_dj_links
+ 
+  
 ## List of Technical Webinars
 
 * **Jeroen Groenendijk**
@@ -1193,7 +1473,7 @@ TODO: add more high-quality webinars.
   * **Serato modifers and jogs:** https://djtechtools.com/2018/04/11/hacking-serato-djs-midi-mapping-jogwheels-touchstrips-and-modifiers/
  
   
-## List of advanced MIDI mappings
+## List of examples of advanced MIDI mappings
 
 
 Besides [my own mappings](#Free-Mappings), these are other advanced mappings that I've used before and recommend.
@@ -1337,7 +1617,7 @@ Download: https://github.com/pestrela/cmdr/releases
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
 
-![cmdr_changes](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements.png "eedd" )
+![cmdr_changes](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements1.png "eedd" )
 
 
  
@@ -1836,39 +2116,115 @@ The last usable Rekordbox is version v5.6.0.\
 Later versions either have a bug on [XML import](https://www.youtube.com/watch?v=JV89dj1hDWM), 
 or they [lack XML export](#issues-of-the-V6-Rekordbox-migration---major) at all.
 
-However, you will be nagged with an upgrade window everytime you start RB.
+However, you will be nagged with an upgrade window every time you start RB.
 
 to remove this, simply rename this file to something else:
 
 C:\Program Files\Pioneer\rekordbox 5.6.0\Upmgr rekordbox.exe
     
+    
+# MIXXX topics
 
+This section covers MIXXX, the open-source professional DJ software.
+* [What makes MIXXX unique](#what-makes-mixxx-unique)
+* [How complete is MIXXX?](#how-complete-is-mixxx)
+* [DDJ support in MIXXX](#ddj-support-in-mixxx)
+
+
+
+## What makes MIXXX unique 
+
+[MIXXX](https://mixxx.org/) is a professional-level DJ software that is fully open-source software.
+
+This means that ANYONE has the complete freedom to improve MIXXX by fixing bugs, extending features or adding entirely new functionality.
+
+Such is unique among any solution, and is severely lacking in all other DJ software that have bugs unfixed for years ([example](#Traktor-Slow-preferences-Window)), possibly forever.
+
+Also interesting, MIXXX is provided at no cost to the users. Anyone can just download, and have a go at it.
+
+
+## How complete is MIXXX?
+
+Out of the box, MIXXX has a very impressive number of advanced DJ features:
+* DVS control to any soundcard
+* BPM, Key detection and Sync 
+* A very complete list of effects
+* DJ controller support, both built-in and contributed, and a mapping wizard for new controllers.
+
+It has [dozens more DJ standard features](https://mixxx.org/features) as well like Loops, Sampler, HotCues, Quantize, Censor, EQ, etc.
+
+I've made a review of MIXXX 2.3 from the point of view of a heavy Traktor user:
+https://www.mixxx.org/forums/viewtopic.php?f=1&t=13355
+    
+Another Traktor vs MIXXX comparison: https://www.mixxx.org/forums/viewtopic.php?f=1&t=13267    
+
+    
+## DDJ support in MIXXX
+    
+MIXXX has good support for the simplest DDJ controllers like 400, RB and SB2 ([full list](https://www.mixxx.org/wiki/doku.php/pioneer_ddj_controllers)).
+On the 4 Deck controllers it supports the SX, which is compatible to the other S-based controllers like the SX2 and SZ.
+
+For the [DDJ-1000](https://www.mixxx.org/wiki/doku.php/ddj-1000) there is a first mapping with the [jog screens](https://www.mixxx.org/forums/viewtopic.php?f=7&t=13346).
+
+I intend to contribute to MIXXX my own DDJ-1000/SX2/SZ mappings soon, based on my [Traktor mappings experiences](#Free-Mappings).
+
+    
 # Music Styles
-
 
 * [What are Retro and Metal remixes](#What-are-Retro-and-Metal-remixes)
 * [How to learn good transition points by reconstructing sets](#How-to-learn-good-transition-points-by-reconstructing-sets)
+* [Examples of Retro, Metal and Reggae remixes](#Examples-of-Retro-Metal-and-Reggae-remixes)
 
 
 
-## What are Retro and Metal remixes
+## What are Retro, Metal and Reggae remixes
 
 I'm a big fan of Retro remixes ([wikipedia page](https://en.wikipedia.org/wiki/80%27s_remix)). 
 These are remixes of modern tracks with typical 80s sounds, but with the original vocal.
+Good authors to check are 
+[Exile](https://www.youtube.com/user/dima839/videos?view=0&sort=dd&flow=grid),
+[Initial Talk]( https://www.youtube.com/channel/UC-zc27zh_-_x0UI7wiqAg7w/videos?view=0&sort=dd&flow=grid),
+[Tronicbox](https://www.youtube.com/channel/UCB3W9gT-mFMN1j12pydSNOw/videos?view=0&sort=dd&flow=grid )
+and [SX Ade Synthwave](http://youtube.com/channel/UCcG7Yj2yVP_11oy9D7nLbkQ/videos?view=0&sort=dd&flow=grid ).
+
+[Loki](https://www.youtube.com/user/patryk1997100/videos?view=0&sort=dd&flow=grid)
+and [Sagkra]( https://www.youtube.com/user/sakgramixesII/videos?view=0&sort=dd&flow=grid) have 
+only a few retro remixes, but there they are **rely really good**.
+
+
+
 
 Similar is Metal remixes. In that style, people transform modern tracks in to Hard Rock/Metal style.
  There it ranges from playing the guitars/drums on top of the track, all the way to remaking the whole track.
+Good authors to check are by far [Sindre Myskja](https://www.youtube.com/user/sindremyskja/videos?view=0&sort=dd&flow=grid),
+[Danny Killian](https://www.youtube.com/user/danyTWIG/videos)) (note: a lot of videos were deleted), 
+[Bliix]( https://www.youtube.com/user/bliix/videos?view=0&sort=dd&flow=grid)
+[Jotun studio]( https://www.youtube.com/user/Jotun6662/videos?view=0&sort=dd&flow=grid),
+[Nanock](https://www.youtube.com/channel/UCxSoglV-neBcp_6aVTPFSlg/videos).
 
-The fundamental aspect in both Retro remixes and Metal versions is that the original vocal are used. A
+
+Yet similar is reggae remixes.
+Again, modern tracks are remixed with the typical reggae sounds, but with the original vocal.
+Good authors to check are 
+ 
+[Theemotion]( https://www.youtube.com/channel/UCXxbs26yQ9BUwVLIUpOVf3w/videos?view=0&sort=dd&flow=grid ),
+[Jr Blender]( https://www.youtube.com/user/thatshitissowild/videos?view=0&sort=dd&flow=grid),
+[Chala](  https://www.youtube.com/channel/UCpXSNWccH_2ONpP3zTig2_g/videos?view=0&sort=dd&flow=grid),
+[Ganja music](https://www.youtube.com/channel/UCdsLQbyCDWjYluA3N0khGIQ)
+ and [BillyBoy](https://soundcloud.com/billyboyfiji679)
+   
+  
+## Examples of Retro, Metal and Reggae remixes
+ 
+The fundamental aspect in all these styles - Retro remixes, Metal versions and Reggae remixes - is that the original vocal are used.
 As such, it typically departs from [regular covers](https://en.wikipedia.org/wiki/Cover_version) sung by other artists.
 
 
 Below some examples of both styles, compared to the original versions:
 
---------------------------
 Lady Gaga, Bradley Cooper - Shallow 
 * shallow original: https://www.youtube.com/watch?v=bo_efYhYU2A
-* shallow versao 80s: https://www.youtube.com/watch?v=KRJIIubEZ-c
+* shallow 80s version: https://www.youtube.com/watch?v=KRJIIubEZ-c
 * shallow metal: https://www.youtube.com/watch?v=Ftg06g_d6JY
 
 Lady Gaga - Born This Way:
@@ -1883,6 +2239,9 @@ Alan Walker - Diamond Heart
 The Weeknd - Blinding Lights:
 * lights - original: https://www.youtube.com/watch?v=fHI8X4OXluQ
 * lights - 80s: https://www.youtube.com/watch?v=tjSr_Itd0VM
+
+
+Examples Reggae remixes - TBD.
 
 
 ## How to learn good transition points by reconstructing sets
@@ -1908,6 +2267,7 @@ Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use di
 
 ![kaos CD cover](pics/kaos_totally_mix_reconstruction_cd_cover.jpg?raw=true)
 ![kaos audition](pics/kaos_totally_mix_reconstruction_audition.jpg?raw=true)
+
 
 
 
@@ -2188,7 +2548,3 @@ Biggest difference to the group above is that I had much less interactions with 
 
 
 
-
-
-
-  
