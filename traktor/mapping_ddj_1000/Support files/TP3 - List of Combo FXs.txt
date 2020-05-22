@@ -4,6 +4,29 @@ Original Ean Golden article about jogFX:
 ----------------------------------------
   https://djtechtools.com/2008/06/20/re-use-your-jog-wheel-4-fx/
   
+	
+Description of Traktor Macro FX:
+--------------------------------
+	https://www.digitaldjtips.com/reviews/native-instruments-traktor-kontrol-z2	
+	Wormhole:			A musical delay/reverb style effect
+	Laserslicer:	A modulated slice effect
+	GranuPhrase:	Primarily, adds a short delay to the second and fourth beats of the bar
+	Bass-o-matic:	A pretty unsubtle triplet-style effect that quickly obliterates the track beneath it as you turn the knob
+	PolarWind:		A subtle colouring effect, a little like a fast-cycle phaser
+	EventHorizon:	Close to 12 o’clock it’s like a one-knob filter, developing into a modulated / timestretched delay the further away from 12 o’clock you get
+	Zzzurp:				A musical modulated effect, related to the standard Ringmodulator effect
+	FlightTest:		Kind of a repeater effect, operating on the whole beat if the knob is turned anticlockwise, the quarter beat if turned clockwise
+	Strrretch (Slow):	A completely overwhelming timestretch effect that soon destroys anything recognisable of the track underneath!
+	Strrretch (Fast):	Can produce some really mad sweeping sounds with a strange human voice quality to them
+	DarkMatter:		A noise effect, with compression adding a rhythmic quality to the distortion it introduces
+	
+	
+Description of Standard Traktor FX (incomplete):
+------------------------------------------------	
+	Transpose:      Stretch	Instant Dubstep-style effect; 
+	Ringmodulator:	Classic Josh Wink “tweak” sound from Higher State of Consciousness; 
+	Tape Delay:    	For adding an instant “chillwave” quality to just about any track. 
+	
 	 
 JaJa combos:
 ------------

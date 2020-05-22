@@ -33,7 +33,26 @@ note:  See also excel file "Technical Info - Version history.xls"
    
 UNIFIED MAPPING CHANGELOG - DETAILS:
 ------------------------------------
-- v6.8.0 DDJ-1000 - April 2020 - "the SuperKnob / TTFX edition"
+- v6.8.1 DDJ-1000 - May 2020 - TBD
+ v6.8.0 was unreleased. 
+ I'm currently recoding large parts of the mapping to enable more features and improve performance a lot.
+
+Done:
+  - beatFX layer redone
+  - whole blink layer redone
+  - removed page 2 hotcues delete
+  - moved from 6 pages to 3 pages
+  
+  
+TBD:
+  - simplified slicer
+  - backwards loop
+  - loop adjust on pressing
+  - superknob configurable + deck3/4 for macroFX
+  - HC4500 elapsed time
+
+
+- v6.8.0 DDJ-1000 - April 2020 - "the SuperKnob / TTFX edition"  (unreleased)
  - Short summary:
    Another big update to the DDJ-1000/800 Traktor mapping. 
    Biggest features is turntableFX on play/pause; Filter Superknobs to select FXs on each side; 

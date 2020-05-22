@@ -87,6 +87,26 @@ History Overview / Future plans:
 		This will be a one way process, and I expect to need to maintain the two maps in parallel for years.﻿
  
  
+FX unit usage overview:
+-----------------------
+FX Unit1 - Group mode - All to DeckA
+  - slot1: turntableFX 
+  - slot2: delay releaseFX    (TODO)
+  - slot3: macroFX
+
+FX Unit2:
+  - Same as unit1, but for deck B
+  
+FX Unit3:
+  - jogFX for any deck
+  
+FX Unit4:
+  - slot1: BeatFX per channel
+  - slot2: 
+  - slot1: 
+  
+  
+ 
   
 Merged mapping DDJ-1000 and DDJ-SZ:
 -----------------------------------  
@@ -146,7 +166,18 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	  0- none
 	  1-7: which jog FX
 	
-	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
+  
+  
+	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)  <<<< this is to simplify a lot
+    TO DEPRECATE!
+    
+    0: nothing
+    1: IN+OUT
+    2: OUT
+    
+    
+    
+    
     0: nothing                     (HAD BEEN DEPRECATED)
     1: Doing loop IN+OUT adjust
     2: Doing loop OUT adjust
@@ -157,16 +188,22 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
     6: Doing loop out adjust  + memory
     7: Doing loop in adj      + memory
     
+    
+    
+    
   state machine:
       0->shift+in->1->memory ->5->shift+in->7->~memory->3  (both)
       3->shift_out->2   ....
     
 
-	M5: RELEASE FX  __IN PROGRESS__  -> this is for color
+	M5: RELEASE FX  __IN PROGRESS__  -> this is for the color
 	 1-4: censor echo_out (toggle)
 		 (from: button or fx1_button or jog_fx)
 	
-  M6: __free__
+  M6: SLICER MODE
+    0: mode1:    8 slices, 1/1
+    1: mode2:   16 slices, first 1/2      <<<<< default for rekordbox
+    2: mode2:   16 slices, second 1/2 
     
 	M7: GRID IN PROGRESS?
    0: no grid in progress
@@ -174,29 +211,30 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 
 	M8: ECHO OUT FAVORITE
 		(sequence is 3,1,2,0 )
-	  this is shared with play pause FX  <<<<
+	  this is shared with play pause FX  <<<< why?
 	 
-	FX1|FX2 = PADFX
-	FX3 = JOG FX
-	FX4 = delay release
-  
+   
+	FX1|FX2 = PADFX, macroFX, TTFX
+	FX3 = JOG FX + echo release
+	FX4 = beatFX
       
       -> DDJ-1000SRT: emulate vinyl off
         5: VINYL ON
         6: VINYL OFF
  
-	 
+
+
+   
+   
 	 
 Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 ---------------------
-	M1: WHICH PADFX IS BEING TRIGGERED (TO SHOW RED COLOR)
+	M1: PADFX color: which one is being triggered (TO SHOW RED COLOR)
 	 0 - none
 	 1-7: which pad FX
 	 8: not used
-	 
-	 (this is for the color)
 
-	M2: CONFIG: WHICH PAD FX PAGE ARE WE (SHARED)
+	M2: PADFX subpage:
 		0: one with 3x Gater 
 		1: one with 2x delay
 		2: one with 1x filter pulse
@@ -215,7 +253,7 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 	M3: KEYBOARD Page1 - red button (0: NONE; 1=ZERO;...7)
 	M5: KEYBOARD Page2 - red button (0: NONE; 1..=8 )
 	
-	M6: KEYBOARD MODE:
+	M6: KEY KEYBOARD MODE:
     0: mode: CUP keyBOARD  (pressing pad triggers CUP - same as rekordbox)
     1: mode: CUE keyHOLD   (press pad triggers CUE; release stops music)
     2: mode: PLAY keySHIFT  (music never stops - same as rekordbox)
@@ -228,43 +266,6 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 	M8: SHIFT2 (=MEMORY BUTTON ) 
 	
 	
-	
-Modifiers TSI page 3:  USER-FX, SLICER, LOOPS, MODE SHORTCUTS
----------------------
-  M1..M4: SLICER ENABLE/DISABLE? 
-		0: nothing pressed = scratch
-		1: GOTO pad fx
-		2: GOTO jog FX
-		3: OLD: selecting hotcue type (both shift+cue, OR long press!!)
-			 NEW:  macro FX (NEW) 
-		4: slicer mode  (used to enable out with loop out mode)
-		 
-		 old info about shortcut:
-		  ON: HotCue -> IN: "param" (G#2) -> THEN: M1=2 -> OUT: Slicer Loop (C#8)  (SEM MODIFIERS!)
-	 
-	  TODO: simplify this. Cancel slicer with hotcues.
-   
-   
-	M5: CONFIG: WHICH SLICER MODE WE ARE
-		0..2: slicer mode 
-
-	M6: FREE (was layout select deck 1/3 )
-	M7: FREE (same as M6)
-     XDJ-XZ: CDJ emulation
-  
-	M8: SHIFT2 (MEMORY BUTTON)
-     m8=7 FAKE effect list = to delete
-     on XDJ-XZ: mapped to __CUE/LOOP MEMORY__
-
-  	 
- todo slicer:
-	 - hold slicer to let the loop move Forward. Release to slice again
-	 -M.LSI.RST = reset slicer
-	 - loop in: not on slicer
-		 -> slicer toggle.
-		 
- 			
-
 Modifiers TSI page4:     MACROFX, USERFX, INIT
 --------------------
 	M1: SHIFT2 MEMORY DECK?   (USED FOR USER FX)
@@ -295,7 +296,7 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 		1: MFX9
 		...
 
-  M6: MONITOR CUE SETTING
+  M6: MONITOR CUE SETTING  <<<<
     0: EXTERNAL monitor mode  (default for all 4-deck controllers)
     1: INTERNAL monitor mode (DDJ-SR, DDJ-SB, etc)
     	
@@ -313,6 +314,7 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 	(nao tem se esta' activo -> bom para partilhar!)
 
 		
+    
 		----------
 		para criar uma nova pagina MFX:
 		 - mudar comments
@@ -338,46 +340,52 @@ Modifiers TSI page4:     MACROFX, USERFX, INIT
 			mixerfFX: hold. first press = 1; other press = 0; repeated press = 0
 			
 			
-				
-Modifiers TSI page5:     (TRAKTOR 3 mixerFX support)
---------------------
-   DEPRECATED
+      
+Slicer info:
+------------           
+ slicer jaja:
+  mode1:    8 slices, 1/1
+  mode2:   16 slices, first 1/2      <<<<< default for rekordbox
+  mode2:   16 slices, second 1/2 
+  
+  8 beats, 16 slices, first 1/2
+  conclusion: simplest is mode1, and reduce the loop size by hand
+  
+ most useful case:
+  8 beats, first 1/2 
+  techniques: mojaxx:   https://www.youtube.com/watch?v=ONXn11qfY5M  
+   loop rolling in the future:
+   quantize finger drumming
+   transition house->hiphop
+        
+        
    
+delay out effect:
+-----------------
+  DW 60%, filter 60^, feedback 50%, rate 50%, freeze button  <<<<<<<<<
+   
+      
+      
+ 
+RekordBox padFX:
+----------------
+ 
+  padfx 1-1:
+   roll 1/2, sweep 80, flanger 16/1, release: vinyl brake 3/4
+   echo 1/4, echo 1/2, reverb 50%, release: echo out 1/2
+      
+  padfx 1-2:
+   trans 1/2, crush 80, filter lfo 4/1, release: backspin 4/1
+   mt delay 1/8, dub echo 30%, space 30%, release: echo out 1/1
 
-BOME support page 6:
---------------------
-
-  TODO: REMOVE ALL THESE MODIFIERS
-  
-  M1: = SHIFT1 (HOLD STYLE) -> SEE LOOP SIZE
-    press "main shift"
+  padFx 2-1:
+    slip loop 1/16, 1/8, 1/4/, 1/2   
+    rev roll 1/16, 1/8, 1/4/, 1/2
     
-  M2: = SHIFT2 (HOLD STYLE) -> NO CHANGE
-    press "memory"
-    
-  M3: = TOGGLE ELAPSED / REMAIN
-    press "memory" + "master tempo"
-  
-  M4: = RESET SCREENS
-    press "shift"+"quantize"
-
-  M5: free
-    
-  M6: Configurable sync mode  
-    0: Sync toggle (Traktor and Rekordbox mode - for beatsync)
-    1: Sync phase  (Serato and VirtualDJ mode - for temposync)
-    2: Elastic beatgrid (Same as 1, but disables sync with jogwheel; reenables on cue Use with Beatsync!)
-        
-    TODO, new style in BOME:
-     0: Sync is toggle. No turning on sync on ever.
-     1: elastic beatgrids: sync is phase only; Pitch bend disables sync; Cue enables sync.
+  padFx 2-2:
+    trans 1/16, trans 1/8, 1/4/, 1/2   
+    mt delay 1/16, 1/8, 1/4/, 1/2
      
-     
-        
-  M7: free
-  m8: only for XDJ-XZ (=CDJ mode)
-    0 = vinyl mode
-    1 = CDJ mode
     
     
 XDJ-XZ values:
@@ -400,6 +408,16 @@ XDJ-XZ values:
     (shift1 not assigned)
     call prev: loop size selector / loop move (with shift)
     
+  
+  
+XDJ-XZ-specific modifiers:
+--------------------------
+  page 3 (this was the slicer page):
+  	M8: 
+      m8=7 FAKE effect list = to delete
+      on XDJ-XZ: mapped to __CUE/LOOP MEMORY__
+
+
   
 Pioneer DDJ pad colors:
 -----------------------
@@ -529,10 +547,10 @@ MIXER-FX midi codes:  all on ch7
 
 		
 		
-user-FX MIDI codes:
--------------------
-	beat <:     ch5 d5   (was tap)
-	beat >:     ch5 d#5   (new)
+DDJ-1000 beatFX MIDI codes:
+---------------------------
+	beat <:     ch5 d5/F#7   (was tap)
+	beat >:     ch5 d#5/B7  (new)
 	FX select:  ch5 G#1 ..a2  
 	FX routing: ch5 E0/F0/f#0/g0
 	              g#0 (master) / a0 (mic) / a#0 (sampler) 
@@ -801,24 +819,6 @@ deck shift codes:
 	cue:        c0  / c5
 	
 	
-	
-CMDR TP3 missing commands:
---------------------------
-  to create page:
-		- slip reverse = ok
-		- reverse = change to toggle behavior
-
-	to create TP3-specific mapping:
-		- edit in cmdr
-    - change "set to value" on each command one by one  (just click the same value)
-    - test
-		- export just that page
-
-	to create TP3-specific mapping:
-		- import whole TSI
-		- delete TP3 page
-		- add TP3 page
-		- export whole TSI
 
     
     
@@ -1021,7 +1021,11 @@ Pioneer DDJ-800 MIDI firmware bugs:
  
 About faders positions:
 -----------------------
-  DDJ-SZ family has a 
+  use undocumented PC APP Connect to get faders positions:  
+   ch 16 note A-1  (=9)    
+   (mapping: page 1, linked to master volume)
+ 
+
 
   
 How to force a certain sequence of events / sequential processing:

@@ -5,8 +5,8 @@ This page contains my DJ knowledge base.
 It covers dozens of questions that I've answered over the years in forums and Facebook groups.
 
 These cover [why I'm using Traktor](#Traktor-software) instead of eg Rekordbox, 
-what are [its limitations](#Which-features-I-miss-in-Traktor), and some workarounds to 
-eg [elastic beatgrids](#How-to-emulate-elastic-beatgrids-in-Traktor);
+what are [its limitations](#Which-features-I-miss-in-Traktor), info about [Effects](#Effects), workarounds to 
+[elastic beatgrids](#Traktor-Elastic-Beatgrids) and the [Slow preferences window](#Traktor-Slow-preferences-Window);
 closely related is how I [organize my files using OS-Folders only](#OS-Folders) without any playlists; 
 
 I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made [very large mappings](#Free-Mappings) free to use; 
@@ -29,6 +29,19 @@ Below a detailed [table of contents](#Table-of-Contents) of the whole thing,
 and a [MindMap picture](#MindMap-Summary) to get you started.
 
 PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings): https://djestrela.com/
+
+
+* [Hardware Controllers](#Hardware-Controllers)
+* [Free Mappings](#Free-Mappings)
+* [DJ Tutorials](#DJ-tutorials)
+* [DJ collection converters](#DJ-collection-converters)
+* [Free DJ Software Tools](#Free-DJ-Software-Tools)
+* [DJ Software optimization](#DJ-Software-optimization)
+* [Windows usage](#Windows-usage)
+* [Rekordbox V6 topics](#Rekordbox-v6-topics)
+* [MIXXX topics](#mixxx-topics)
+* [Music Styles](#Music-Styles)
+* [Other topics](#Other-topics)
 
 
 # Table of Contents
@@ -247,7 +260,7 @@ Main reasons are:
 * **#2: Tree Tagging:** More crucially, all windows have the whole tree visible. This is essential to quickly tag my files by just moving them to the correct correct folder. Similarly, the structure grows just by creating new sub-folders as needed.
 * **#3: Simpler Folders**: OS-Folders contain either files, sub-folders, or both. [This 2-step organization](https://en.wikipedia.org/wiki/Path_(computing)#History) is simpler is than the iTunes 3-step model of "folders -> playlists -> files" (later copied by almost all DJ softwares).
 * **#4: Local Searches:** By far my most common task is to check if I already have a particular track, and where is it tagged. File explorer allows local searches on a folder and its sub-folders only. This enables me to quickly find things by just typing a few letters of the filename. AFAIK only Serato has this feature (called ["include subcrates"](https://support.serato.com/hc/en-us/articles/227626268-Subcrates))
-* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formatting, using [my own scripts](collections_without_playlists/Mp3tagSettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
+* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formatting, using [my own scripts](tools_traktor/mp3tagsettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
 * **#6: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to [sync between laptops](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas) and make perfect backups [to my NAS](https://www.synology.com/en-global/products/DS718+). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
 
@@ -261,7 +274,7 @@ Above I've described [Why I manage music using OS-folders only](#why-i-manage-mu
 * **#0: File operations:** [As explained above](#why-i-manage-music-using-os-folders-only) I continuously search files, change the filenames and move the files around left and right.
 * **#1: Traktor Repair:** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate). For this I just run a mass-relocate on my whole music root folder, which refinds all moved and renames files in a single go.
 * **#2: Update collection:** The second step is just to import the whole music root folder into Traktor. As this skips previous files, in practice it only imports the New files. The last step is to delete the remaining missing files (that are really deleted - otherwise they would been found on step #1) 
-* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](collections_without_playlists/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
+* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](tools_trakor/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
 * **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
 * **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures the Rekordbox collection matches the Traktor collection.
 * **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and search for files in the whole collection. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox [still lacks a search box in OS-folders](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists))
@@ -287,8 +300,9 @@ Blog Posts:
 * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
 * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
 * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
-.
-https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
+
+
+more info: https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
 
 See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
 
@@ -1078,6 +1092,7 @@ Below the direct links, and after this the description of each mapping.
   * **Transitions-Aligned Beatjumps:** https://maps.djtechtools.com/mappings/9762
     
 * **Advanced tricks demos**
+  * **Preview Player:** https://maps.djtechtools.com/mappings/10915
   * **Backwards loop and Reloop:** https://maps.djtechtools.com/mappings/10252
   * **BOME access all 9x mixerFX:** https://maps.djtechtools.com/mappings/10575
   
@@ -1251,7 +1266,7 @@ Summary:
 
 
 
-## What are the features of your Keyboard mappings?
+## Which helper mappings you made for the Keyboard?
 
 ### A) Beatgrid helper
 
@@ -1282,7 +1297,25 @@ Summary:
 
 ## What are demos of advanced mapping tricks
 
-### A) Backwards loop and Reloop: 
+In order of complexity:
+
+### A) Preview Player: 
+
+**Links:**
+* Download Link: https://maps.djtechtools.com/mappings/10915
+
+** Summary:**
+* Hold a button to start listening the preview player
+* Without moving your hand, turn the encoder to seek inside the preview player
+* Release button to stop listening
+* Without moving your hand, turn the encoder to seek to select another track
+  
+  
+![](pics/mappings/preview_player_demo.jpg?raw=true)
+
+  
+
+### B) Backwards loop and Reloop: 
 
 **Links:**
 * Download Link: https://maps.djtechtools.com/mappings/10252
@@ -1295,7 +1328,10 @@ Summary:
   * repeat a build-up several times
 * Reloop: use this feature to return to a previous loop (just like CDJs)
   
-### B) BOME access all 9x mixerFX: 
+![](pics/mappings/loops_adjust_backwards_reloop.jpg?raw=true)
+  
+  
+### C) BOME access all 9x mixerFX: 
 
 **Links:**
 * Download Link:
@@ -1305,7 +1341,8 @@ https://maps.djtechtools.com/mappings/10575
 * Use this mapping to acecess all 9x mixerFX by sending mouse clicks directly to the preferences window
 * the normal midi mode you can only use 4x mixerFX
 
-  
+![](pics/mappings/bome_change_traktor_mixerfx.jpg?raw=true)
+ 
 
 ## What documentation comes with your mappings?
 
@@ -2221,39 +2258,40 @@ I intend to contribute to MIXXX my own DDJ-1000/SX2/SZ mappings soon, based on m
 ## What are Retro, Metal and Reggae remixes
 
 I'm a big fan of Retro remixes ([wikipedia page](https://en.wikipedia.org/wiki/80%27s_remix)). 
-These are remixes of modern tracks with typical 80s sounds, but with the original vocal.
-Good authors to check are 
+These are remixes of modern tracks with typical 80s sounds, but with the original vocal.\
+Good artists  to check are 
 [Exile](https://www.youtube.com/user/dima839/videos?view=0&sort=dd&flow=grid),
 [Initial Talk]( https://www.youtube.com/channel/UC-zc27zh_-_x0UI7wiqAg7w/videos?view=0&sort=dd&flow=grid),
 [Tronicbox](https://www.youtube.com/channel/UCB3W9gT-mFMN1j12pydSNOw/videos?view=0&sort=dd&flow=grid )
-and [SX Ade Synthwave](http://youtube.com/channel/UCcG7Yj2yVP_11oy9D7nLbkQ/videos?view=0&sort=dd&flow=grid ).
-
+and [SX Ade Synthwave](http://youtube.com/channel/UCcG7Yj2yVP_11oy9D7nLbkQ/videos?view=0&sort=dd&flow=grid ).\
 [Loki](https://www.youtube.com/user/patryk1997100/videos?view=0&sort=dd&flow=grid)
 and [Sagkra]( https://www.youtube.com/user/sakgramixesII/videos?view=0&sort=dd&flow=grid) have 
 only a few retro remixes, but there they are **rely really good**.
-
+Full playlists: 
+[Playlist 1](https://www.youtube.com/playlist?list=PLR6iLyPrwbYO0xGzpVUDTJrD4lTs3r7lU ), 
+[Playlist 2](https://www.youtube.com/playlist?list=PLccRgYlrdQ0imAehsQXmtKgJ3Zstt26Et ),
+[Playlist 3](https://www.youtube.com/playlist?list=PLsqzrF7W4SoxB9uWJdHbVoPR2hU5n1tcO ),
 
 
 
 Similar is Metal remixes. In that style, people transform modern tracks in to Hard Rock/Metal style.
- There it ranges from playing the guitars/drums on top of the track, all the way to remaking the whole track.
-Good authors to check are by far [Sindre Myskja](https://www.youtube.com/user/sindremyskja/videos?view=0&sort=dd&flow=grid),
+There it ranges from playing the guitars/drums on top of the track, all the way to remaking the whole track.\
+Good authors to check are [Sindre Myskja](https://www.youtube.com/user/sindremyskja/videos?view=0&sort=dd&flow=grid) (this is the best one by far),
 [Danny Killian](https://www.youtube.com/user/danyTWIG/videos)) (note: a lot of videos were deleted), 
 [Bliix]( https://www.youtube.com/user/bliix/videos?view=0&sort=dd&flow=grid)
 [Jotun studio]( https://www.youtube.com/user/Jotun6662/videos?view=0&sort=dd&flow=grid),
-[Nanock](https://www.youtube.com/channel/UCxSoglV-neBcp_6aVTPFSlg/videos).
+[Nanock](https://www.youtube.com/channel/UCxSoglV-neBcp_6aVTPFSlg/videos).\
+Full Playlists: [Playlist 1](https://www.youtube.com/watch?v=XLipQ7AgcsE&list=RDXLipQ7AgcsE )
 
-
-Yet similar is reggae remixes.
-Again, modern tracks are remixed with the typical reggae sounds, but with the original vocal.
-Good authors to check are 
- 
-[Theemotion]( https://www.youtube.com/channel/UCXxbs26yQ9BUwVLIUpOVf3w/videos?view=0&sort=dd&flow=grid ),
+Same idea is reggae remixes.
+Again, modern tracks are remixed with the typical reggae sounds, but with the original vocal.\
+Good authors to check are [Theemotion]( https://www.youtube.com/channel/UCXxbs26yQ9BUwVLIUpOVf3w/videos?view=0&sort=dd&flow=grid ),
 [Jr Blender]( https://www.youtube.com/user/thatshitissowild/videos?view=0&sort=dd&flow=grid),
 [Chala](  https://www.youtube.com/channel/UCpXSNWccH_2ONpP3zTig2_g/videos?view=0&sort=dd&flow=grid),
 [Ganja music](https://www.youtube.com/channel/UCdsLQbyCDWjYluA3N0khGIQ)
  and [BillyBoy](https://soundcloud.com/billyboyfiji679)
-   
+Full Playlist: [Playlist 1](https://www.youtube.com/watch?v=A_j7AhQRzKg ), 
+
   
 ## Examples of Retro, Metal and Reggae remixes
  
