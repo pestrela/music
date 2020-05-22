@@ -121,7 +121,7 @@ See below for a longer Table of contents.
   * [But can I still scratch using MIDI? How much is the latency of your maps?](#But-can-i-still-scratch-using-MIDI-How-much-is-the-latency-of-your-maps)
  
 * [Free Mappings - Downloads](#Free-Mappings)
-  * [What are your main Traktor mappings?](#What-are-your-main-Traktor-mappings)
+  * [What are your main Traktor mappings?](#Free-mappings)
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
     * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
@@ -168,8 +168,8 @@ See below for a longer Table of contents.
 
   
 * [Laptop optimization](#Laptop-optimization)
-  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
-  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
+  * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
+  * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
   * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
   * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
   * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
@@ -1072,10 +1072,8 @@ Some relevant points:
 
 # Free Mappings
 
-
 This section covers my free mappings on the DJTT site.\
 Below the direct links, and after this the description of each mapping.
-
 
 * **Main Traktor mappings**
   * **DDJ-1000 with jog screens:** https://maps.djtechtools.com/mappings/9279
@@ -1758,7 +1756,6 @@ Summary:
   * https://github.com/pestrela/smi_counter
 
   
-
   
 ## Open-Source useful information
 
