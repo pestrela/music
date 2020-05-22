@@ -1120,7 +1120,7 @@ Some notes:
 
 **Links:**
 * Download Link: https://maps.djtechtools.com/mappings/9279
-* Documentation: https://github.com/pestrela/music/blob/master/traktor/ddj_1000_traktor_mapping/
+* Documentation: https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/
 *	Video demo: https://youtu.be/h9tQZEHr8hk
 
 **Feature list:**
@@ -1236,7 +1236,7 @@ Some notes:
 *	Mapping now works both WITH and WITHOUT bome. Without BOME it will miss jog screens and MacroFX/MixerFX.
 
 
-![mapping_xdj_xz](mapping_xdj_xz/AMX%20TP3_TP2%20-%20Single%20slide.jpg?raw=true)
+![mapping_xdj_xz](mapping_xdj_xz/XDJ-XZ%20mapping%20-%20Single%20slide.jpg?raw=true)
 
 ## What are the features of your Numark PartyMix mapping?
 
@@ -1350,14 +1350,14 @@ My zip files have **a lot** of documentation besides the TSI file.\
 IMO it has no comparison to the typical mappings available on https://maps.djtechtools.com/ or https://www.traktorbible.com/freaks 
 
 Included is:
-* Quick reference (pictures only): [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Quick%20overview.pdf)
-* User manual: [example](ddj_1000_traktor_mapping/DDJ-1000%20v6.5.1%20TP3%20-%20Full%20manual.pdf)
-* Installation manual: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Installation%20and%20Verification%20of%20the%20two%20required%20mappings.pdf)
-* FAQ: [example](ddj_1000_traktor_mapping/Installation%20Help/DDJ-1000%20-%20Frequently%20Asked%20Questions.pdf)
+* Quick reference (pictures only): [example](mapping_ddj_1000/DDJ-1000%20-%20Quick%20overview.pdf)
+* User manual: [example](mapping_ddj_1000/DDJ-1000%20-%20Detailed%20manual.pdf)
+* Installation manual: [example](mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Installation%20Guide.pdf)
+* FAQ: [example](mapping_ddj_1000/Installation%20Help/DDJ%20Mappings%20-%20Frequently%20Asked%20Questions.pdf)
 
 Plus:
-* Technical info (to extend the mapping): [example](ddj_1000_traktor_mapping/Support%20files/Technical%20Info%20-%20BOME%20DDJ%201000%20Screens.txt)
-* Every single function: [example](ddj_1000_traktor_mapping/Support%20files/Source%20files/DDJ-1000%20-%20Detailed%20reference.xlsx)
+* Technical info (to extend the mapping): [traktor_side](mapping_ddj_1000/Support%20files/Technical%20Info%20-%20Traktor%20side.txt) [bome_side](mapping_ddj_1000/Support%20files/Technical%20Info%20-%20BOME%20side.txt)
+* Every single function: [example](mapping_ddj_1000/Support%20files/Source%20files/DDJ%20-%20Detailed%20reference.xlsx)
 
 ## Can I see a Demo video of your mappings?
 
@@ -2257,6 +2257,7 @@ I intend to contribute to MIXXX my own DDJ-1000/SX2/SZ mappings soon, based on m
 
 ## What are Retro, Metal and Reggae remixes
 
+### Retro Remixes
 I'm a big fan of Retro remixes ([wikipedia page](https://en.wikipedia.org/wiki/80%27s_remix)). 
 These are remixes of modern tracks with typical 80s sounds, but with the original vocal.\
 Good artists  to check are 
@@ -2266,12 +2267,13 @@ Good artists  to check are
 and [SX Ade Synthwave](http://youtube.com/channel/UCcG7Yj2yVP_11oy9D7nLbkQ/videos?view=0&sort=dd&flow=grid ).\
 [Loki](https://www.youtube.com/user/patryk1997100/videos?view=0&sort=dd&flow=grid)
 and [Sagkra]( https://www.youtube.com/user/sakgramixesII/videos?view=0&sort=dd&flow=grid) have 
-only a few retro remixes, but there they are **rely really good**.
+only a few retro remixes, but there they are **rely really good**.\
 Full playlists: 
 [Playlist 1](https://www.youtube.com/playlist?list=PLR6iLyPrwbYO0xGzpVUDTJrD4lTs3r7lU ), 
 [Playlist 2](https://www.youtube.com/playlist?list=PLccRgYlrdQ0imAehsQXmtKgJ3Zstt26Et ),
 [Playlist 3](https://www.youtube.com/playlist?list=PLsqzrF7W4SoxB9uWJdHbVoPR2hU5n1tcO ),
 
+### Metal Remixes
 
 
 Similar is Metal remixes. In that style, people transform modern tracks in to Hard Rock/Metal style.
@@ -2283,13 +2285,15 @@ Good authors to check are [Sindre Myskja](https://www.youtube.com/user/sindremys
 [Nanock](https://www.youtube.com/channel/UCxSoglV-neBcp_6aVTPFSlg/videos).\
 Full Playlists: [Playlist 1](https://www.youtube.com/watch?v=XLipQ7AgcsE&list=RDXLipQ7AgcsE )
 
+### Reggae Remixes
+
 Same idea is reggae remixes.
 Again, modern tracks are remixed with the typical reggae sounds, but with the original vocal.\
 Good authors to check are [Theemotion]( https://www.youtube.com/channel/UCXxbs26yQ9BUwVLIUpOVf3w/videos?view=0&sort=dd&flow=grid ),
 [Jr Blender]( https://www.youtube.com/user/thatshitissowild/videos?view=0&sort=dd&flow=grid),
 [Chala](  https://www.youtube.com/channel/UCpXSNWccH_2ONpP3zTig2_g/videos?view=0&sort=dd&flow=grid),
 [Ganja music](https://www.youtube.com/channel/UCdsLQbyCDWjYluA3N0khGIQ)
- and [BillyBoy](https://soundcloud.com/billyboyfiji679)
+ and [BillyBoy](https://soundcloud.com/billyboyfiji679 ) \
 Full Playlist: [Playlist 1](https://www.youtube.com/watch?v=A_j7AhQRzKg ), 
 
   
