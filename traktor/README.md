@@ -125,14 +125,15 @@ See below for a longer Table of contents.
     * [DDJ-1000 mapping](#What-are-the-features-of-your-DDJ-1000-Traktor-mapping)
     * [DDJ-SX2 / DDJ-SZ / 1000SRT mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)
     * [AKAI AMX Traktor mapping](#what-are-the-features-of-your-akai-amx-traktor-mapping)
-  * [What are your other mappings?](#What-are-your-other-mappings)
+  * [What are your other mappings?](#What-are-the-features-of-your-XDJ-XZ-Traktor-mapping)
     * [XDJ-XZ mapping](#What-are-the-features-of-your-XDJ-XZ-Traktor-mapping)
     * [Numark PartyMix mapping](#What-are-the-features-of-your-Numark-PartyMix-mapping)
     * [CDJ2000NX2](https://maps.djtechtools.com/mappings/9763)
-  * [What are your keyboard mappings](#What-are-the-features-of-your-Keyboard-mappings)
-     * [Beatgrid preparation](#What-are-the-features-of-your-Keyboard-mappings)
-     * [Transitions-aligned Beatjumps](#What-are-the-features-of-your-Keyboard-mappings)
+  * [What are your keyboard mappings](#Which-are-your-Keyboard-mappings)
+    * [Beatgrid preparation](#Which-are-your-Keyboard-mappings)
+    * [Transitions-aligned Beatjumps](#Which-are-your-Keyboard-mappings)
   * [What are demos of advanced mapping tricks](#What-are-demos-of-advanced-mapping-tricks)
+    * [Preview Player](#What-are-demos-of-advanced-mapping-tricks)
     * [Backwards loop and Reloop](#What-are-demos-of-advanced-mapping-tricks)
     * [BOME access all 9x mixerFX](#What-are-demos-of-advanced-mapping-tricks)
     
@@ -143,7 +144,7 @@ See below for a longer Table of contents.
   * [Can I see a demo video of your mappings?](#can-i-see-a-demo-video-of-your-mappings)
   * [Can I test your mappings for free?](#can-i-test-your-mappings-for-free)
   * [Is the DDJ-1000SRT also mappable to Traktor?](#is-the-ddj-1000srt-also-mappable-to-traktor)
-  * [Is the DDJ-XP2 mappable to Traktor?](#is-the-ddj-1000xp2-mappable-to-traktor)
+  * [Is the DDJ-XP2 mappable to Traktor?](#is-the-ddj-xp2-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
   
 * [DJ Tutorials](#DJ-tutorials)
@@ -167,7 +168,7 @@ See below for a longer Table of contents.
   * [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
 
   
-* [Laptop optimization](#Laptop-optimization)
+* [DJ Software optimization](#DJ-Software-optimization)
   * [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
   * [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
   * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
@@ -201,7 +202,7 @@ See below for a longer Table of contents.
   
   
 * [Music Styles](#Music-Styles)
-  * [Retro and Metal remixes](#What-are-Retro-and-Metal-remixes)
+  * [Retro, Metal and Reggae remixes](#What-are-Retro-Metal-and-Reggae-remixes)
   * [Examples of Retro, Metal and Reggae remixes](#Examples-of-Retro-Metal-and-Reggae-remixes)
   * [Sets Reconstructing for learning purposes](#How-to-learn-good-transition-points-by-reconstructing-sets)
 
@@ -215,7 +216,7 @@ See below for a longer Table of contents.
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
   * [DJ Census over time results](#DJ-Census-over-time-results)
-  * [People that I learned a lot from the Global DJ community](#Some-people-from-which-I-ve-learned-a-lot-from-the-Global-DJ-community)
+  * [People that I learned a lot from the Global DJ community](#Some-people-from-which-Ive-learned-a-lot-from-the-Global-DJ-community)
 
   
   
@@ -1010,7 +1011,7 @@ But in the end its really the big jogwheels that is the crucial deal breaker; Th
 
 ## DDJ-1000 comparison to DDJ-SZ and AKAI AMX
 
-Besides [my DDJ-1000](#why-is-ddj-1000-my-hardware-of-choice), I have several other controllers fully [mapped to Traktor](#What-are-your-main-Traktor-mappings). 
+Besides [my DDJ-1000](#why-is-ddj-1000-my-hardware-of-choice), I have several other controllers fully [mapped to Traktor](#Free-mappings). 
 
 Main differences are:
 
@@ -1264,7 +1265,7 @@ Summary:
 
 
 
-## Which helper mappings you made for the Keyboard?
+## Which are your Keyboard mappings?
 
 ### A) Beatgrid helper
 
@@ -1508,7 +1509,7 @@ TODO: add more high-quality webinars.
   * **Serato modifers and jogs:** https://djtechtools.com/2018/04/11/hacking-serato-djs-midi-mapping-jogwheels-touchstrips-and-modifiers/
  
   
-## List of examples of advanced MIDI mappings
+## List of advanced MIDI mappings
 
 
 Besides [my own mappings](#Free-Mappings), these are other advanced mappings that I've used before and recommend.
@@ -1803,8 +1804,8 @@ More scripts in this folder:
 
 This section covers DJ software optimization.
 
-* [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software-Summary)
-* [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software-Complex-case)
+* [Optimization Quick fixes](#How-to-optimize-a-laptop-for-DJ-Software---Summary)
+* [Optimization Complex case](#How-to-optimize-a-laptop-for-DJ-Software---Complex-case)
 * [Audio Performance guides](#List-of-performance-guides-specific-to-audio)
 * [DDJ-1000 and turbo boost](#how-to-avoid-crackle--glitches--noise-on-windows-by-disabling-intel-turbo-boost)
 * [USB thin cables](#Read-this-if-you-have-erratic-USB-cable-problems)
@@ -2246,7 +2247,7 @@ I intend to contribute to MIXXX my own DDJ-1000/SX2/SZ mappings soon, based on m
     
 # Music Styles
 
-* [What are Retro and Metal remixes](#What-are-Retro-and-Metal-remixes)
+* [What are Retro, Metal and Reggae remixes](#What-are-Retro-Metal-and-Reggae-remixes)
 * [How to learn good transition points by reconstructing sets](#How-to-learn-good-transition-points-by-reconstructing-sets)
 * [Examples of Retro, Metal and Reggae remixes](#Examples-of-Retro-Metal-and-Reggae-remixes)
 
@@ -2358,7 +2359,7 @@ Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use di
 * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
 * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
 * [DJ Census over time results](#DJ-Census-over-time-results)
-* [People that I learned a lot from the Global DJ community](#Some-people-from-which-I-ve-learned-a-lot-from-the-Global-DJ-community)
+* [People that I learned a lot from the Global DJ community](#Some-people-from-which-Ive-learned-a-lot-from-the-Global-DJ-community)
 
   
   
@@ -2608,23 +2609,24 @@ Most of them I've either meet them in person, or I had numerous conversations wi
   
 **Honorable mentions:**\
 These individuals also made contributions that benefit a lot of users.\
-Biggest difference to the group above is that I had much less interactions with them.\
-[Damien Sirkis](https://forums.next.audio/c/rekord-buddy/faq)(RekordBuddy), 
-[Florian Bomers](https://www.bome.com/contributor/florian)(BOME), 
-[Steven Caldwell](https://www.bome.com/contributor/steve1)(BOME),
-[Michael Rahier](https://github.com/TakTraum/cmdr)(CMDR),
-[Klaus Mogensen](https://www.youtube.com/channel/UCEphlcllAEbUwiuLqHMux9g/videos?view=0&sort=dd&flow=grid)(VirtualDJ),
-[DJ Rachel](https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid)(VirtualDJ),
-[Carlo Atendido](https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid)(Tutorials),
+Biggest difference to the group above is that I had much less interactions with them.
+
+[Damien Sirkis](https://forums.next.audio/c/rekord-buddy/faq) (RekordBuddy), 
+[Florian Bomers](https://www.bome.com/contributor/florian) (BOME), 
+[Steven Caldwell](https://www.bome.com/contributor/steve1) (BOME),
+[Michael Rahier](https://github.com/TakTraum/cmdr) (CMDR),
+[Klaus Mogensen](https://www.youtube.com/channel/UCEphlcllAEbUwiuLqHMux9g/videos?view=0&sort=dd&flow=grid) (VirtualDJ),
+[DJ Rachel] (https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid)(VirtualDJ),
+[Carlo Atendido] (https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid)(Tutorials),
 [Pulse](https://www.youtube.com/user/DeejayPulse/videos?view=0&sort=dd&flow=grid)(Rekordbox),
-[DJ Keo](https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid)(Commentary),
-[Mojaxx](https://www.youtube.com/user/MojaxxVDJ/videos)(Serato),
-[Gábor Szántó](https://app.slack.com/client/T0ECEN4CW/C0ECETDEK)(DJ Player Pro),
-[Friedemann Becker](https://github.com/pestrela/music/blob/master/pic_sets/traktor_interview/Interview%20with%20the%20lead%20Traktor%20programmer.pdf)(Traktor),
+[DJ Keo] (https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid)(Commentary),
+[Mojaxx] (https://www.youtube.com/user/MojaxxVDJ/videos)(Serato),
+[Gábor Szántó] (https://app.slack.com/client/T0ECEN4CW/C0ECETDEK)(DJ Player Pro),
+[Friedemann Becker] (https://github.com/pestrela/music/blob/master/pic_sets/traktor_interview/Interview%20with%20the%20lead%20Traktor%20programmer.pdf)(Traktor),
 [Mike Henderson](https://online.berklee.edu/courses/learn-to-dj-with-traktor)(DJ Endo),
-[Stephane Clavel](https://www.digitaldjtips.com/2018/08/interview-stephane-clavel-virtual-dj-founder-talks-innovation-the-future-of-djing/)(VirtualDJ),
-[Jamie Hartley](https://wearecrossfader.co.uk/online-dj-courses/)(WeAreCrossfader),
-[madZach](https://djtechtools.com/author/madzach/),
+[Stephane Clavel] (https://www.digitaldjtips.com/2018/08/interview-stephane-clavel-virtual-dj-founder-talks-innovation-the-future-of-djing/)(VirtualDJ),
+[Jamie Hartley] (https://wearecrossfader.co.uk/online-dj-courses/)(WeAreCrossfader),
+[madZach] (https://djtechtools.com/author/madzach/),
 
 
 
