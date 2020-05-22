@@ -260,7 +260,7 @@ Main reasons are:
 * **#2: Tree Tagging:** More crucially, all windows have the whole tree visible. This is essential to quickly tag my files by just moving them to the correct correct folder. Similarly, the structure grows just by creating new sub-folders as needed.
 * **#3: Simpler Folders**: OS-Folders contain either files, sub-folders, or both. [This 2-step organization](https://en.wikipedia.org/wiki/Path_(computing)#History) is simpler is than the iTunes 3-step model of "folders -> playlists -> files" (later copied by almost all DJ softwares).
 * **#4: Local Searches:** By far my most common task is to check if I already have a particular track, and where is it tagged. File explorer allows local searches on a folder and its sub-folders only. This enables me to quickly find things by just typing a few letters of the filename. AFAIK only Serato has this feature (called ["include subcrates"](https://support.serato.com/hc/en-us/articles/227626268-Subcrates))
-* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formatting, using [my own scripts](tools_traktor/mp3tagsettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
+* **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formatting, using [my own scripts](tools_traktor/Mp3tagSettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
 * **#6: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to [sync between laptops](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas) and make perfect backups [to my NAS](https://www.synology.com/en-global/products/DS718+). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
 
@@ -274,7 +274,7 @@ Above I've described [Why I manage music using OS-folders only](#why-i-manage-mu
 * **#0: File operations:** [As explained above](#why-i-manage-music-using-os-folders-only) I continuously search files, change the filenames and move the files around left and right.
 * **#1: Traktor Repair:** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate). For this I just run a mass-relocate on my whole music root folder, which refinds all moved and renames files in a single go.
 * **#2: Update collection:** The second step is just to import the whole music root folder into Traktor. As this skips previous files, in practice it only imports the New files. The last step is to delete the remaining missing files (that are really deleted - otherwise they would been found on step #1) 
-* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](tools_trakor/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
+* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](tools_traktor/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
 * **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
 * **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures the Rekordbox collection matches the Traktor collection.
 * **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and search for files in the whole collection. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox [still lacks a search box in OS-folders](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists))
@@ -1620,7 +1620,7 @@ This section groups the DJ software tools written by me, all freely available.
 ## What software tools did you built for Traktor?
 
 [This folder](tools_traktor) contains my Traktor tools and CUE tools.
-Below is a summary; see [here](traktor_tools/README.md) for more details
+Below is a summary; see [here](tools_traktor/README.md) for more details
 
 See also the CMDR editor [changes](#What-features-did-you-add-to-the-CMDR-TSI-editor).
 
