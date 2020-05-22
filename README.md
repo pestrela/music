@@ -21,10 +21,10 @@ This repository contains my Blog posts, my Scripts and my DJ Mappings
 * [Flac Tester](flac_tester)
   * Tagging the lossy mp3 cutoff value into the file itself
 
-* [Downloads Scripts](downloads)
+* [WSL downloads tools](wsl_tools)
   * Wrappers for useful Download tools. 
   
-* [AutoHotKey scripts](downloads/AutoHotkey.ahk)
+* [AutoHotKey scripts](wsl_tools/AutoHotkey.ahk)
   * Script to add useful shortcuts to Windows (eg: search in youtube)
   
 # DJ Estrela - Mixes and Mappings
