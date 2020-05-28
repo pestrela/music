@@ -20,27 +20,23 @@ and many other tools for eg [CUE files](#how-i-build-perfect-tracklists-using-cu
 there also info on the tricky process to [convert DJ collections](#DJ-collection-converters) 
 between softwares without 26-ms shifts for free.
 
+Recently I've written about the [Rekordbox v6](#Rekordbox-v6-topics) migration, 
+and my first experience with [MIXXX](#mixxx-topics), which is fully open source.
+I also found and listed multiple [DJ tutorials](#DJ-tutorials), in including [midi tutorials](#midi-mapping-tutorials).
+Also read about unique [Music Styles](#Music-Styles) and how to find new music.
+
 Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization) to avoid audio glitches, 
 general tips for [Windows](#Windows-usage), 
 keyboard shortcuts to [search in Youtube and Discogs](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
-plus more [other stuff](#Other-topics)
+plus more [other stuff](#Other-topics).
+
 
 Below a detailed [table of contents](#Table-of-Contents) of the whole thing, 
 and a [MindMap picture](#MindMap-Summary) to get you started.
 
-PS: Feel free to check my DJ mixes (Trance, Eighties and Top-40 live recordings): https://djestrela.com/
+PS: Feel free to check my DJ mixes (Trance, 80s and Top-40 live recordings): https://djestrela.com/
 
 
-* [Hardware Controllers](#Hardware-Controllers)
-* [Free Mappings](#Free-Mappings)
-* [DJ Tutorials](#DJ-tutorials)
-* [DJ collection converters](#DJ-collection-converters)
-* [Free DJ Software Tools](#Free-DJ-Software-Tools)
-* [DJ Software optimization](#DJ-Software-optimization)
-* [Windows usage](#Windows-usage)
-* [Rekordbox V6 topics](#Rekordbox-v6-topics)
-* [MIXXX topics](#mixxx-topics)
-* [Music Styles](#Music-Styles)
 * [Other topics](#Other-topics)
 
 
@@ -216,6 +212,7 @@ See below for a longer Table of contents.
   * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
   * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
   * [DJ Census over time results](#DJ-Census-over-time-results)
+  * [Some metrics of my free contributions](#Some-metrics-of-my-free-contributions)
   * [People that I learned a lot from the Global DJ community](#Some-people-from-which-Ive-learned-a-lot-from-the-Global-DJ-community)
 
   
@@ -833,8 +830,8 @@ In practice this makes [the preferences window very slow](https://www.native-ins
 For example [Pioneer DDJ-SZ mapping take 18 seconds to load](#How-slow-does-the-preferences-window-get).
 A second sign is that it makes the TSI file much larger.
 
-The [CMDR editor](https://github.com/pestrela/cmdr/blob/master/README.md) removes this overhead 
-(see [line 337 of this file](https://github.com/pestrela/cmdr/blob/master/cmdr/cmdr.TsiLib/Device.cs#L337)).\
+The [CMDR editor](https://github.com/cmdr-editor/cmdr#2020-improvements) removes this overhead 
+(see [line 337 of this file](https://github.com/cmdr-editor/cmdr/blob/master/cmdr/cmdr.TsiLib/Device.cs#L337)).\
 However Traktor still recreates these entries **per page** anyway.
 
 
@@ -1122,10 +1119,16 @@ Some notes:
 * Documentation: https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/
 *	Video demo: https://youtu.be/h9tQZEHr8hk
 
-**Feature list:**
+**Feature list: Unique features**
 *	Only mapping in the world with Jog Screens
-* Much faster to load ([3 seconds instead of 18](#How-slow-does-the-preferences-window-get))
 *	7x Jogwheel FX chains
+* Loop backward adjust
+* All Leds blink as warnings
+* Can be used with 2x laptops
+* Much lighter ([3 seconds instead of 18 to load](#How-slow-does-the-preferences-window-get))
+
+**Feature list: other features**
+* Echo out (release FX)
 *	5x MixerFX
 *	11x MacroFX
 *	21x padFX (“instant gratification”)
@@ -1135,7 +1138,7 @@ Some notes:
 *	Dedicated preview player
 *	Loops manual adjust (via jogs)
 *	Beatjump and Loops pages
-*	End of track warning blinks and other CDJ emulation
+* Elastic beatgrid sync helpers
 *	All functions reachable without shifts
 
 
@@ -1608,6 +1611,9 @@ This section groups the DJ software tools written by me, all freely available.
  
 * [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
 * [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
+* [CMDR on macOS](#How-can-I-run-CMDR-in-my-macOS)
+
+
 * [Elastic beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
 * [Swapping Traktor settings](#How-to-swap-Traktor-configurations-without-the-slow-preferences-window)
 * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
@@ -1645,7 +1651,8 @@ See also the CMDR editor [changes](#What-features-did-you-add-to-the-CMDR-TSI-ed
 ## What features did you add to the CMDR TSI editor?
 
 The CMDR editor did not get new features for 2.5 years. In Jan 2020 I've revived this project.\
-Download: https://github.com/pestrela/cmdr/releases
+Download: https://github.com/cmdr-editor/cmdr/releases/latest/download/cmdr_tsi_editor_latest.zip
+Documentation: https://github.com/cmdr-editor/cmdr#2020-improvements
 
 **Highlights:**
 * TP3 and S4-MK3 support
@@ -1653,15 +1660,15 @@ Download: https://github.com/pestrela/cmdr/releases
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
 
-![cmdr_changes](https://raw.githubusercontent.com/pestrela/cmdr/master/docs/pics/cmdr_improvements1.png "eedd" )
+![CMDR ChageLog](https://raw.githubusercontent.com/pestrela/cmdr-editor/master/docs/pics/cmdr_improvements1.png "eedd" )
 
 ## How can I run CMDR in my macOS?
 
 
 There is three ways to edit your mappings in macOS.
 
-
 ### Simplest: Xtrememapping
+
 
 The simplest answer is: buy a copy of [XtremmeMapping](https://www.xtrememapping.com/) for macOS.
 
@@ -1697,7 +1704,11 @@ Step by step instructions are on:
 Then:
   * Install CMDR as explained here: [CMDR installation instructions](https://github.com/pestrela/cmdr#download-and-installation)
   * Copy your TSI into the virtual machine (simplest is to use eg google drive on the browser)
- 
+
+  
+[original blog post](https://github.com/cmdr-editor/cmdr/blob/master/docs/running_on_macos.md)
+  
+  
 ## How I build perfect tracklists using CUE files
 
 I use a set of tools to generate a CUE file with the timings of my sets.
@@ -2359,6 +2370,8 @@ Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use di
 * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
 * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
 * [DJ Census over time results](#DJ-Census-over-time-results)
+* [Some metrics of my free contributions](#Some-metrics-of-my-free-contributions)
+
 * [People that I learned a lot from the Global DJ community](#Some-people-from-which-Ive-learned-a-lot-from-the-Global-DJ-community)
 
   
@@ -2560,6 +2573,20 @@ See also the graph showing the [most popular DJ softwares over time](../census_g
 ![dj platforms over time](../census_graphs/dj_platform_over_time.jpg?raw=true)
 
   
+## Some metrics of my free contributions
+
+These are my biggest crontibutions.\
+What did you enjoyed the most? please tell me to pedro.estrela@gmail.com
+
+* Knowledge Base: 16K words 
+  * https://github.com/pestrela/music/blob/master/traktor/README.md
+* DDJ-1000 mapping: 4K downloads  
+  * https://maps.djtechtools.com/mappings/9279
+* DDJ-SX2/SZ/SRT mapping: 3K downloads 
+  * https://maps.djtechtools.com/mappings/9222
+* CMDR Changelog: 80 lines
+  * https://github.com/pestrela/cmdr#2020-improvements 
+  
  
 ## Some people from which I've learned a lot from the Global DJ community
 
@@ -2616,17 +2643,19 @@ Biggest difference to the group above is that I had much less interactions with 
 [Steven Caldwell](https://www.bome.com/contributor/steve1) (BOME),
 [Michael Rahier](https://github.com/TakTraum/cmdr) (CMDR),
 [Klaus Mogensen](https://www.youtube.com/channel/UCEphlcllAEbUwiuLqHMux9g/videos?view=0&sort=dd&flow=grid) (VirtualDJ),
-[DJ Rachel] (https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid)(VirtualDJ),
-[Carlo Atendido] (https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid)(Tutorials),
-[Pulse](https://www.youtube.com/user/DeejayPulse/videos?view=0&sort=dd&flow=grid)(Rekordbox),
-[DJ Keo] (https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid)(Commentary),
-[Mojaxx] (https://www.youtube.com/user/MojaxxVDJ/videos)(Serato),
-[Gábor Szántó] (https://app.slack.com/client/T0ECEN4CW/C0ECETDEK)(DJ Player Pro),
-[Friedemann Becker] (https://github.com/pestrela/music/blob/master/pic_sets/traktor_interview/Interview%20with%20the%20lead%20Traktor%20programmer.pdf)(Traktor),
-[Mike Henderson](https://online.berklee.edu/courses/learn-to-dj-with-traktor)(DJ Endo),
-[Stephane Clavel] (https://www.digitaldjtips.com/2018/08/interview-stephane-clavel-virtual-dj-founder-talks-innovation-the-future-of-djing/)(VirtualDJ),
-[Jamie Hartley] (https://wearecrossfader.co.uk/online-dj-courses/)(WeAreCrossfader),
-[madZach] (https://djtechtools.com/author/madzach/),
+[DJ Rachel](https://www.youtube.com/user/Serwrenity123/videos?view=0&sort=dd&flow=grid) (VirtualDJ),
+[Carlo Atendido](https://www.youtube.com/user/djcarloatendido/videos?view=0&sort=dd&flow=grid) (Tutorials),
+[Pulse](https://www.youtube.com/user/DeejayPulse/videos?view=0&sort=dd&flow=grid) (Rekordbox),
+[DJ Keo](https://www.youtube.com/channel/UCtj1Z5UtHJtKX1c7zGWd18A/videos?view=0&sort=dd&flow=grid) (Industry Commentary),
+[Mojaxx](https://www.youtube.com/user/MojaxxVDJ/videos) (Serato),
+[Gábor Szántó](https://app.slack.com/client/T0ECEN4CW/C0ECETDEK) (DJ Player Pro),
+[Friedemann Becker](https://github.com/pestrela/music/blob/master/pic_sets/traktor_interview/Interview%20with%20the%20lead%20Traktor%20programmer.pdf) (Traktor),
+[Mike Henderson](https://online.berklee.edu/courses/learn-to-dj-with-traktor) (DJ Endo),
+[Stephane Clavel](https://www.digitaldjtips.com/2018/08/interview-stephane-clavel-virtual-dj-founder-talks-innovation-the-future-of-djing/) (VirtualDJ),
+[Jamie Hartley](https://wearecrossfader.co.uk/online-dj-courses/) (WeAreCrossfader),
+[madZach](https://djtechtools.com/author/madzach/) (Production and DJing),
+[DAVE](https://www.youtube.com/channel/UCe2doOsbbp-B2dN3jbJ4Uzg/playlists) (Tutorials),
+
 
 
 
