@@ -1407,7 +1407,8 @@ Besides the obvious difference of no waveforms, the MIDI mode has several bugs t
 https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets
   
  
-^ Ticket number ^ Controller ^ Description ^
+| Ticket number | Controller |  Description |
+| --- | -- | -- |
 | 147606 | DDJ-1000 | Jog screen sync led gets stuck | 
 | 147606 | DDJ-1000 | BeatFX does't respond to messages, and doesn't tell the current state | 
 | 147606 | DDJ-1000 | Jog Ring brightness not customizable | 
@@ -1416,7 +1417,8 @@ https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets
 | 205732 | DDJ-1000 | Impossible to know beatFX parameter value  |
 
 
-^ Ticket number ^ Controller ^ Description ^
+| Ticket number | Controller |  Description |
+| --- | -- | -- |
 | 147606 | DDJ-1000SRT | Jog Screens not mappable because of a bussiness decision of the Serato company |
 | 147606 | DDJ-800 | Jog Screens dead, eventough they are described in the MIDI table and are the same as DDJ-1000 |
 | 159944 | XDJ-XZ | Shift doesn't send alternative messages |
