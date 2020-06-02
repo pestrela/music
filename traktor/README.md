@@ -1,4 +1,11 @@
 
+# TL;DR version
+
+My biggest **Pioneer** reason is big jogwheels.
+My biggest **Laptop** reason is not having to maintain USB sticks.
+My biggest **Traktor** reason is not having to build playlists, and use OS folders instead.
+
+
 # Start here first
 
 This page contains my DJ knowledge base. 
@@ -35,9 +42,6 @@ Below a detailed [table of contents](#Table-of-Contents) of the whole thing,
 and a [MindMap picture](#MindMap-Summary) to get you started.
 
 PS: Feel free to check my DJ mixes (Trance, 80s and Top-40 live recordings): https://djestrela.com/
-
-
-* [Other topics](#Other-topics)
 
 
 # Table of Contents
@@ -553,6 +557,10 @@ This is the original article where Ean Golden applied these FX chains to the jog
 	* 4-L: Gater / TapeDelay / Reverb 
 	* 4-R: Beatmasher2 / RampDelay / PolarWind 
 
+  
+* DA VE:
+  * Beatmasher 2 / Reverb / Transpose stretch  
+  
   
 ## Which basic effects constitute Traktor mixerFX and macroFX?
   
@@ -1390,6 +1398,33 @@ Finally, all my mappings are a free gift to the community, to enable DJs to use 
 If you want further appreciation, PayPal donations are welcome (pedro.estrela@gmail.com)
   
 
+## What are the differences between MIDI mode and HID mode?
+
+I've contributed a list of differences between MIDI mode and HID mode:
+https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode
+
+Besides the obvious difference of no waveforms, the MIDI mode has several bugs that I've reported to Pioneer: 
+https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets
+  
+ 
+^ Ticket number ^ Controller ^ Description ^
+| 147606 | DDJ-1000 | Jog screen sync led gets stuck | 
+| 147606 | DDJ-1000 | BeatFX does't respond to messages, and doesn't tell the current state | 
+| 147606 | DDJ-1000 | Jog Ring brightness not customizable | 
+| 147606 | DDJ-1000 | Impossible to know which deck you are (deck1 vs 3) |
+| 203047 | DDJ-1000 | Faders ignore USB-selector | 
+| 205732 | DDJ-1000 | Impossible to know beatFX parameter value  |
+
+
+^ Ticket number ^ Controller ^ Description ^
+| 147606 | DDJ-1000SRT | Jog Screens not mappable because of a bussiness decision of the Serato company |
+| 147606 | DDJ-800 | Jog Screens dead, eventough they are described in the MIDI table and are the same as DDJ-1000 |
+| 159944 | XDJ-XZ | Shift doesn't send alternative messages |
+| 159944 | XDJ-XZ | Jog screens only have needle and cue marker  |
+| 159944 | XDJ-XZ | Jog turn/touch same mssage for vinyl=off |
+
+ 
+  
 ## Is the DDJ-1000SRT also mappable to Traktor?
 
 **Yes.** I've updated [my SZ/SX2 mapping](#what-are-the-features-of-your-ddj-sx2--ddj-sz--ddj-srt-traktor-mapping)

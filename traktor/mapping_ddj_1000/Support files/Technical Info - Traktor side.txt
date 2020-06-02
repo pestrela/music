@@ -132,6 +132,11 @@ Merged mapping DDJ-1000 and DDJ-SZ:
       - knob1:   12/0
       - knob2+3:  8/0
       
+FX units usage:
+---------------   
+	FX1|FX2 = PADFX, macroFX, TTFX
+	FX3 = JOG FX + echo release
+	FX4 = beatFX
       
   
 Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWSER, SX2
@@ -168,7 +173,7 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	
   
   
-	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)  <<<< this is to simplify a lot
+	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)  <<<< THIS IS TO SIMPLIFY A LOT
     TO DEPRECATE!
     
     0: nothing
@@ -176,26 +181,6 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
     2: OUT
     
     
-    
-    
-    0: nothing                     (HAD BEEN DEPRECATED)
-    1: Doing loop IN+OUT adjust
-    2: Doing loop OUT adjust
-    3: Doing loop IN adjust 
-    
-    4: Doing nothing          + memory
-    5: Doing loop both adjust + memory
-    6: Doing loop out adjust  + memory
-    7: Doing loop in adj      + memory
-    
-    
-    
-    
-  state machine:
-      0->shift+in->1->memory ->5->shift+in->7->~memory->3  (both)
-      3->shift_out->2   ....
-    
-
 	M5: RELEASE FX  __IN PROGRESS__  -> this is for the color
 	 1-4: censor echo_out (toggle)
 		 (from: button or fx1_button or jog_fx)
@@ -214,21 +199,12 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
 	  this is shared with play pause FX  <<<< why?
 	 
    
-	FX1|FX2 = PADFX, macroFX, TTFX
-	FX3 = JOG FX + echo release
-	FX4 = beatFX
-      
-      -> DDJ-1000SRT: emulate vinyl off
-        5: VINYL ON
-        6: VINYL OFF
- 
-
-
-   
    
 	 
 Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 ---------------------
+	new stuff:     TTFX, BeatFX, 
+
 	M1: PADFX color: which one is being triggered (TO SHOW RED COLOR)
 	 0 - none
 	 1-7: which pad FX
@@ -241,8 +217,7 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 		3: Rolls page
     
 		(same as p1/m5) ?
-		
-		
+				
 	M4: CURRENT PADMODE (FOR PADPAGE SHORTCUT)
 		0: HC
 		1: ROLL
@@ -257,89 +232,15 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
     0: mode: CUP keyBOARD  (pressing pad triggers CUP - same as rekordbox)
     1: mode: CUE keyHOLD   (press pad triggers CUE; release stops music)
     2: mode: PLAY keySHIFT  (music never stops - same as rekordbox)
-    
-		 
+    		 
 	M7: LEFT REMIX DECK PAGE  (FIXME)
 		1: page 1
 		2: page 2
 		
 	M8: SHIFT2 (=MEMORY BUTTON ) 
 	
+  
 	
-Modifiers TSI page4:     MACROFX, USERFX, INIT
---------------------
-	M1: SHIFT2 MEMORY DECK?   (USED FOR USER FX)
-    0: not active
-    1: active
-    
-	M2: WHICH MFX PAGE ARE WE?
-		0: MFX favorites
-		1: TP3 mixerFX
-		2: Second macroFX
-		
-	M3: WHICH SPECIFIC FX IS ON, ON PAGE 1 (Macro FX base + beatFX)?
- 		0: inactive / unknown
-		1: MFX1
-    2: MFX2
-    3: MFX3
-    4: MFX4
-    5: MFX5
-		...
-		
-	M4: WHICH SPECIFIC FX IS ON, ON PAGE 2 (MIXER FX)?
-		0: inactive
-    1: mixerFX1
-    5: mixerFX5 = Filter
-		
-	M5: WHICH SPECIFIC FX IS ON, ON PAGE 3 (MacroFX EXTRA)?
- 		0: inactive / unknown
-		1: MFX9
-		...
-
-  M6: MONITOR CUE SETTING  <<<<
-    0: EXTERNAL monitor mode  (default for all 4-deck controllers)
-    1: INTERNAL monitor mode (DDJ-SR, DDJ-SB, etc)
-    	
-    cue 1: C6/G#7  
-	
-	M7: CURRENT MAIN PADMODE (THIS IS FOR DOUBLE CLICK PAD MODE)
-		0: MODE1
-		1: MODE2
-		2: MODE3
-		3: MODE4
-		4: other (=main shift is pressed)
-		
-	M8: INIT DECK  (to migrate to bome)
-	  - used to init the controller once is pressed.
-	(nao tem se esta' activo -> bom para partilhar!)
-
-		
-    
-		----------
-		para criar uma nova pagina MFX:
-		 - mudar comments
-		 - clonar m2
-		 - mudar "button3 on" (se necessario)
-		 - mudar cor
-				
-		para clonar para lado B->A:
-		 - partilhar variaveis	!
-		 - channel B -> A
-		 - mudar comment para tudo igual
-			mudar FX unit
-			mudar canal 7: OSC, filter, led 
-			MIXER FX: tem que ser 'a mao :( !
-			
-			duplicar tudo FX1<->FX  (para sync!)
-			(nao duplicar FILTER)
-			(nao duplicar release)
-
-			
- 	  ddj-1000: mixerFX state machine:
-	 	  pads: toggle type. on repeated "ON", reset (==toggle?)
-			mixerfFX: hold. first press = 1; other press = 0; repeated press = 0
-			
-			
       
 Slicer info:
 ------------           

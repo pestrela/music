@@ -1,4 +1,4 @@
-
+ 
   
 
     
@@ -9,20 +9,29 @@ DONE:
  - sync simplified
  - added many blinks
  - beatFX fixes
+ - total + remain time fixes. Before track start and after track end fixes.
+ - loop blink fixes (sign, auto raneg enlarge)
+ 
 
-TODO:
- - add HR fallback to seek (or at least ignore)
-   
+ 
+TODO: 
+ - block mixer messages from being sent in other soundcards
+ 
  - confirm beatgrid modifier
  - superknobs feature on/off
  - resonant filter
- 
+
  - dual deck support (like SX2)
+ - deck play support (like SX2)
+ 
  
   
 CMDR:
-
-  
+ - combos need to be LSB/MSB order
+ - setting to confirm combo is "+32"
+ - warning when filtering fails
+ - bpm led out - -1..+1 -> 100bpm..130bpm  
+ 
   
 virtual DJ notes:
   padFX:
@@ -39,6 +48,12 @@ virtual DJ notes:
 BOME variables:
 ---------------
   Abecedario: https://i.pinimg.com/originals/d0/ff/a6/d0ffa62f47ddae6abc349b9941ba14f9.png
+  
+  INPUT:
+    "QQ" / "OO" / "PP"
+    
+  OUTPUT:
+    "XX" / "UU" / "PP" 
   
   BOME Local:
     "oo"
@@ -66,7 +81,9 @@ BOME variables:
     "za"-"z9"
 
   Fake array variables (per channel):
-    ABCD EFGH IJKLM  N  OPQR STUV WXYZ  0  1234 5678  9 
+    ABCD EFGH IJKL (M)N  OPQR STUV XYWZ  0  1234 5678  9 
+  
+     note: XYWZ is not on right sequence!!!
   
     1234
     5678
@@ -126,6 +143,33 @@ STANDARD FOR TEMP VARIABLES:
    
    
 
+USB-A/USB-B/Line blocking:
+--------------------------
+what the firmwre blocks:
+  browser
+  decks
+  mixer VU meters
+    
+  
+not blocked:
+  all mixer, cross fader
+  
+  deck select
+  beatFX
+  sampler volume
+   
+   
+channel 1..4: 
+  85 = usbA   
+  86 = line   
+  87 = usbB
+
+variables:  
+  "ge"/4  USB/line selector
+  "gi"/4  USB/line real USB
+  "gs"/4  USB remember fader level
+
+  
    
 Preview player dynamics:
 ------------------------   
@@ -474,7 +518,17 @@ PHASE FEATURE:
   100 -> +10
   
   
+DECK LOADED TRIGGER:
+--------------------
+  "nx"/4  HC4500 total length lock <<<<< (0: init ; 1: loaded)
+  IN LOADED: note  A#4 / C5      B4 / C#5   (these are the load codes)
+                          ->  "ks"
 
+                          
+  BPM is only sent if it changes!!
+  
+  
+  
 CCs messages sent FROM traktor TO BOME:
 ---------------------------------------
 JOG NEEDLE:
@@ -499,16 +553,21 @@ JOG NEEDLE:
       (0: stopped; 1: playing; 2: cueing; 3: paused; 
        6: stop+jog;            4: play+jog; 5: pause+jog)
      
- 
-BPM & SEEK:
+SEEK:
   IN seek position: CC "90".."99"   -> "na"/"no"/"ja"       RANGE
+ 
+BPM implementation:
+  
+  
+  
   IN tempo adjust:  CC "101".."108" -> "g1"
   IN BPM value:     CC "110".."120" -> "h1"
 
   IN tempo range:   CC "66" -> "i1"  (real?)   "i5" (60/100/160/etc) 
-     
-  CALC tempo perc:         -> "k1" (ext)
-  CALC new bpm:            -> "k5" (ext)
+                    (NOTE: THIS IS NOT "i1" - TO DEPRECATE)
+                                     
+  CALC tempo perc:         -> "k1" (for external)
+  CALC current BPM:        -> "k5" (for external)
 
   Tempo Range enlarger:   "io"    
      0 = nothing
@@ -535,7 +594,6 @@ Jog Ring (End warning):
   IN phase          CC "85" -> "je"
 
   
-  
 
 ______ todo: why /4 bpm ????  <<<<<<<<<<<<<<<<<<
   
@@ -550,11 +608,15 @@ CLOCK IMPLEMENTARION:
     
  SEEK POSITION: CC 90..99 (HR); CC 100 (LR)
    HR LOCK:                 "no"   (values: 0 = none; 1 = LR ; 2 = HR) 
-   NEW POS:                 "na"   (range: 0..1000)
+   NEW POS:                 "na"   (range: 0..10000)
    
    30ms timer (for BPM):    "hs"  (lock)
    30ms timer (seek):       "he"  (lock)  (to merge?)
 
+ HC45000: 
+   HC4500 minutes           "ne"  
+   HC4500 seconds           "ni"  
+   HC4500 frames            "ns"  
    
  CALCULATIONS:
    PREVIOUS POS:            "ja"   (range: 0..1000)
@@ -567,24 +629,34 @@ CLOCK IMPLEMENTARION:
     elapsed timestamp:      "ma"  (unit: seconds) 
     remain timestamp:       (inferred) 
     
-    total timestamp:        "lx"  (unit: seconds)
-    total (lock):           "nx"  (0: init ; 1: loaded)
-  
+    FINAL total time:       "lx"  (unit: seconds)
+    FINAL total (lock):     "nx"  (0: init ; 1: wait 1 seconds; 2: wait 1 minute; 3: wait middle)
+
+    accumulated total time: "m1"   (to deprecate!)
     
-total track lenght calculation:
+    
+    
+    
+total track length calculation:
 -------------------------------
 
-  ma/lx  = var/1000
-  var = ma * 1000 / lx
-  var = var/100  (frames adjust)
-  
 
+  proportion:
+    ma_cents/var  = na/10000
+    ma_cents/na = var/10000
+    var = ma_cents * 10000 /na
+    var = ma_cents * 100 /na   (adjust)
+    
 
+   
+   
   
      
 NEW CCs - High resolution (OUT):
 --------------------------------
-  SEEK POSITION: CC 90..99 (HR); CC 100 (LR)
+ SEEK POSITION:
+      CC 89  (HHR 0.0 -> 0.01)
+      CC 90..99 (HR); CC 100 (LR)
      (see above for variables)
     
     
@@ -605,8 +677,8 @@ NEW CCs - High resolution (OUT):
     CC 109 -1..+1   (fallback for corner cases)
     
     
- BPM VALUE: CC 110..120 -> h1/h5 (=100)
-    - NEW VALUE:    "h1 (numerator) / h5 (denominator)"   <<< h5 -  to deprecate!
+ BPM VALUE: CC 110..120 -> h1
+    - NEW VALUE:    "h1"
     - LOCK:         "ho"   (0 = none; 1 = LR ; 2 = HR)
                            (algorithm: accept any LR if not HR; accept any HR if not 0 or 100) 
     
@@ -932,6 +1004,8 @@ EXPERIMENTS ON MIDI LINKED MODIFIERS (MLM):
     
 DENON HC4500 INFO:
 ------------------  
+  traktor key harmonic:  https://github.com/bertfrees/traktor-harmonik
+
   midi out idea: https://forum.djtechtools.com/showthread.php?t=28523
   midi codes: https://raw.githubusercontent.com/Sonnenstrahl/traktor-now-playing/master/readme-img/denon_midi_commands.jpg
   
@@ -1023,26 +1097,26 @@ UNUSED VARIABLES (both "/1" and "/4"):
     "gc"    shift3
     "gd"    COMBINED Shift
     
-  "ge"/4  FREE
-  "gi"/4  FREE   
-  "gs"/4  FREE
+  "ge"/4  USB/line selector
+  "gi"/4  USB/line real USB
+  "gs"/4  USB remember fader level
+  
   "gx"/4  jogFX state   (set of 4 variables)
   
   *****
-  "h0"/1 - beatFX - real ON/OFF button state
-  "h9"/1 - beatFX - which deck selected:
+  "h0"/1  beatFX - real ON/OFF button state
+  "h9"/1  beatFX - which deck selected:
   
-  "h5" - to deprecate
-
+  "h5"/4  FREE
   
   "hi"/44  SPECIAL GESTURES support 
   "hx"/44  SPECIAL GROUP: Timers / INIT
 
   *****   
-  "i0"/1 - channel for echo out
-  "i9"/1 - free
+  "i0"/1 - Channel for echo out
+  "i9"/1 - external monitor cue 
 
-  "ie"/4 (double click per deck -> 4 separate variables)
+  "ie"/4  (double click per deck -> 4 separate variables)
   "ii"/4  SPECIAL: active deck firmware bugfixes -> 4 separate variables
   
   "io"/4 tempo range automatic enlarger
@@ -1050,11 +1124,11 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "ix"/4 pad MLM - previous pad pressed
 
   *****
-  "j0"/1 - free
-  "j9"/1 - free
+  "J0"/1 - FREE
+  "J9"/1 - FREE
   
-  "j1"/4 - free  
-  "j5"/4 - free 
+  "J1"/4 - MFX  
+  "J5"/4 - MFX 
 
   "je"/4  deck Phase
   "ji"/4  WANTED tempo value (soft takeover)
@@ -1063,7 +1137,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
     1 - different tempos
   (see also "ls")            
               
-  "jx"/4  CFX double click   (????)
+  "jx"/4  to deprecated!
 
   *****
   "k0"/1 - free
@@ -1071,11 +1145,11 @@ UNUSED VARIABLES (both "/1" and "/4"):
   
   "ke"/4  flux (AKA slip)
   "ki"/4  Reverse 
-  "kx"/4  previewing after changing loop values
+  "kx"/4  Previewing after changing loop values
   
   *****
   
-  "l0"/1  global: mode elastic beatgrid
+  "l0"/1  Global: mode elastic beatgrid
   "l9"/1  superknob configuration ON/OFF
   
   "l5"/4  filter polarity  
@@ -1083,59 +1157,61 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "le"/4  is in active loop (WAS MOVED)
 
   "li"/4  "master" on/off      
-  "lo"/4  free ?
-  "ls"/4  just changed tempo (maybe its blinking)
-     0: none
-     1: timer running
-     
+  "lo"/4  FREE
+  "ls"/4  just changed tempo (maybe its blinking)   (0: none; 1: timer running)
   "lx"/4  total track length
 
   *****  HC-4500 
   "m0"/1 - free
   "m9"/1 - free
   
-  "m1"/4 - free  
-  "m5"/4 - free 
-  
+  "m1"/4 - FREE
+  "m5"/4 - FREE 
     
-  "ma"/4 timestamp elapsed 
+  "ma"/4  timestamp elapsed (number of seconds)
   "me"/4  DDJ-SZ translator (x4)
   "mi"/4  DDJ-SZ translator (x4)
-  "mo"/4  unk  
-  "ms"/4  track_number_msb
-  "mx"/4  track_number_lsb 
+  "mo"/4  FREE (DDJ-SZ keyboard)
+  "ms"/4  FREE (DDJ-SZ keyboard)
+  "mx"/4  FREE (DDJ-SZ keyboard)
 
   ***** HC-4500
-  "n0"/1 - free
-  "n9"/1 - free
+  "n0"/1  free
+  "n9"/1  free
 
-  "na"/4 -   NEW POSITION (range: 0..1000)
-
+  
+  //  ABCD EFGH IJKL (M)N  OPQR STUV XYWZ  0  1234 5678  9 
+  
+    "ma"/4  timestamp elapsed (number of seconds)
+        
+  "na"/4  NEW POSITION (range: 0..1000)
   "ne"/4  HC4500 minutes
   "ni"/4  HC4500 seconds 
+  "no"/4  SEEK lock
   "ns"/4  HC4500 frames
   "nx"/4  HC4500 total length lock <<<<< (0: init ; 1: loaded)
 
-  "m1"/4  accmulated total time
+  "m1"/4  accumulated total time (to make mega-average)   TEST
   
   *****
   "y0"/1 - free
   "y9"/1 - free
   
-  "y1"/4  HC4500 pitch_polarity  (-1/0/1)
-  "y5"/4   needle?
-  "ye"/4  HC4500 pitch_msb
-  "yi"/4  HC4500 pitch_lsb
-  "yx"/4  FREE  (this includes yy, whic is not local) 
+  "y1"/4  FREE
+  "y5"/4  JOG NEEDLE
+  "ye"/4  FREE
+  "yi"/4  FREE
+  "yx"/4  FREE  (note: this includes yy, which is not local) 
 
  
   *****
-  "z0"/1 - free
+  "z0"/1 - OS CONFIG: 0: Windows; 1: MacOS
   "z9"/1 - free
  
-  "ze"/4  track_positon_normal 
-  "zi"/4  track_positon_normal 
-  "zx"/4  blink sub-clocks 
+  "za"/4  time mode elapsed/remain 
+  "ze"/4  FREE
+  "zi"/4  FREE 
+  "zx"/4  blink sub-clocks divider
     
     
 HC4500 CCs:
@@ -1174,7 +1250,7 @@ layout deck shift:
 ------------------
   "ii"/1 - active left deck  (1/3)
   "ij"/2 - active right deck (2/4)
-  "il"/3 - 0 - Parallel / 1 - Classic / 2 - Disabled mode (0/1)
+  "il"/3 - current layout: 0: Parallel; 1: Classic; 2: Disabled mode
   "im"/4 - PC APP CONNECT TIMER (disables forced side because of auto-detect)
   
   
@@ -1290,7 +1366,7 @@ Gestures on CFX ColorFX selectors:
       - return b2_single
       
   case1:     
-   - b1 bliking
+   - b1 blinking
    - press b2
      - reset b1
         (ignored)
@@ -1304,13 +1380,9 @@ Gestures on CFX ColorFX selectors:
       - set b2
       - return b2_double
   
-    
-    
   rules state machine:
     send 00 - gets returned
     send 7f - NO RETURN
-    
- 
     
     
   loopback feedback:
@@ -1325,13 +1397,10 @@ Gestures on CFX ColorFX selectors:
       <nothing>
       
       
-   VARIABLES:
-    "jx" - state: 0: waiting, 1: in progress; 2: waiting final echo
-    "jy" - which CFX button
-    "jw" - press count  
-    "jz" - super knob enabled 
-      
-      
+  old variables:
+     jw: old polarity?
+     l5:
+
 Pad MLM and macroFX knob:
 -------------------------  
   "is" macroFX Knob value (14 bit)
@@ -1341,14 +1410,13 @@ Pad MLM and macroFX knob:
     change knob -> "is"
     press pad: remember pad ("ix") -> timer 30ms -> send knob -> send pad again
 
-    
-    
+      
+     
+     
 Filter Dual Polarity (superknobs):
 ----------------------------------
-
-  "l5"  filter polarity 
-     1 - positive;  2 - positive, needs refresh
-    -1 - negative; -2 - negative, needs refresh
+    
+   
     
   "l8" active filter for all decks 
   "l9" superknobs configuration enabled / disabled
@@ -1359,8 +1427,149 @@ Filter Dual Polarity (superknobs):
     left/right: select new one
     shift+knob: dosn't change, operate on the whole range
   
-  
+
+  // to deprecate:  
   VER i5!!!! tempo range ???
+    
+  "jx"/4 - to deprecate!!!
+     
+    "jx" - state: 0: waiting, 1: in progress; 2: waiting final echo
+    "jw" - press count  
+    
+    "jy" - which CFX button
+    "jz" - super knob enabled 
+  
+    
+      
+DE NOVO:
+-------- 
+  Input (from DDJ):
+    button: ch7     notes 0/1/2/3  
+    filter: ch7     CC    23+55/24+56/25+57/26+58  (14-bit)
+    pads:   ch8/10  note 60/61/62/63
+    
+    
+  Output (to Traktor):
+    ch1..4  CC   (ALL NEW CCs)
+
+  shift:
+    no shift: all special operations  
+    shift1: FULLRANGE of that effect 
+    shift2: BYPASSES deck 3/4 mixerFX
+    
+  Variables:    
+    "l9"/0 - CONFIGURATION: are superknobs disabled?  (0: enabled; 1: disabled) 
+
+    "j1"/4  CFX which SET we selected (per channel)  (0: set #1; 1: set #2; ...)
+    "j5"/4  CFX enabled/disabled      (per channel)  (0: disabled; 1: enabled)
+    
+
+    //////////
+    "is"/4  CFX knob REAL  value (14 bit, centered in zero)
+       is - CFX1
+         it - CFX2
+       iu - CFX3
+         iv - CFX4
+
+         
+    "l5"/4  CURRENT Polarity 
+               1: positive;  2: positive (we need refresh)
+              -1: negative; -2: negative (we need refresh)
+        l5 - CFX1
+          l6 - CFX2
+        l7 - CFX3
+          l8 - CFX4
+        
+              
+    "jx"/4  PRESHIFTED Polarity   
+               0: no shift pressed; 1: positive (right); -1: negative  (left)
+    
+        jx - CFX1
+          jy - CFX2
+        jw - CFX3
+          jx - CFX4
+  
+  
+  
+      
+Use cases: macOS version:
+-------------------------      
+  macOS version - superknob off:
+    no translation done
+    pressing color button = changes single mixerFX for all chanels
+    
+    turning knob - no translation
+    
+  superknob on:
+    color buttons select both mixerFX and macroFX
+    filter#1 is kept to mixerFX
+    filter#3 translated to macroFX (new code)
+    
+    pad buttons do the same, BUT FOR THAT DECK ONLY
+
+    
+  SETS:
+    0: DubEcho:  wormhole 81 / polarwind 86   reverb/dotted delay
+    1: Pitch:    flighttest 89/laserslicer 83 timegater/flanger
+    2: Noise:    Eventhorizon 88/zzzurp 82    barberpole/noise
+    3: Filter:   resonant filter 78           dual_delay/crush
+   
+    4: darkmatter 87/ bass-matic 85
+    5: granuphase 84 / streetch fast 90/91
+    
+    
+  descriptions:
+    Wormhole = heavy filter + heavy flanger + delay (Buildup//breakdown)
+    PolarWind = heavy flanger (coloring) + light filter + reverb (Mixing/punch in)
+    FlightTest = heavy echo + resonant filter (Punch In)
+    LaserSlicer = heavy beatmasher + flanger (Punch in/buildup/breakdown)
+    
+    EventHorizon = heavy filter + echo (Breakdown/punch in)
+    Zzzurp = related to Ringmodulator (masher + flanger + crush + reverb) (Punch in/breakdown)
+    
+    DarkMatter = heavy crush + delay + compression (for Mixing)
+    Bass-o-Matic = heavy triplets slicer (Punch in/breakdown)
+    
+    GranuPhase = delay to 2nd and 4th beat (Punch in/buildup/breakdown)
+    Strrretch (Slow) = loop sampler (Buildup/breakdown)
+    Strrretch (Fast) = loop sampler (Buildup/breakdown)
+
+    -----
+    Reverb: resonant reverb + heavy filter
+    Dotted Delay: heavy delay (staccato)
+
+    Time Gater: ON/OFF BPM-sync + filter
+    Flanger: 4-beat flanger + filter
+
+    Barber Pole: soft Shepard Tone
+    Noise: white noise + filter
+    
+    Dual Delay: 1/2 delay + filter
+    Crush: bit crush (no pitch increase) + filter
+
+
+
+monitor cue config:
+-------------------
+  note: ch1.c6  - normal monitor cue
+  
+  note: ch1.g#7 - external configuration ON/OFF
+    "i9"/1 - external monitor cue 
+
+  CC:   ch7 44+12   cue mix
+  CC:   ch7 45+13   cue volume
+  
+  
+  NEW CC: ch7.Note 60 C4    (NEW TAKEN BY HAND)
+    
+    
+     
+  M6: MONITOR CUE SETTING 
+    0: EXTERNAL monitor mode  (default for all 4-deck controllers)
+    1: INTERNAL monitor mode (DDJ-SR, DDJ-SB, etc)   
+  
+
+    
   
   
     
@@ -1407,6 +1616,62 @@ traktor remote control by BOME:
     
     
     
+Channel 7 free Notes:
+---------------------
+  TBD
+  
+    
+    
+    
+Channel 1..4 FREE CCs (IN):
+---------------------------
+   41 - jogwheel
+   51 - volume
+   
+   ------ NEW CCs here
+     
+   
+   71: Goto mixerFX1
+   72: Goto mixerFX2
+   73: Goto mixerFX3
+   74: Goto mixerFX4
+   75: Goto mixerFX5
+     (windows version will do this at the BOME level ONLY)
+   
+   76: FX Unit1 - CHANGE GROUP
+       Press:
+         - set group mode
+         - dry = 0%
+         - FX1: TTFX; FX2: = None; FX3: (CC 81..88)
+         - set routing
+         
+       Release:
+         - dry = 100%
+         - TTFX button1 = OFF
+       
+   78: FX Unit1 - CHANGE SINGLE
+      
+   77: TURN ON/OFF     (HOLD style) 
+      (note: this is sent twice. One immediate, another after the delay)
+
+   
+   79: FREE   
+   80: FREE
+   
+   81: goto macroFX1
+   82: goto macroFX2
+   83: goto macroFX3
+   84: ...
+   85:
+   86:
+   87:
+   88:
+   89: 
+   90: streetch slow
+   91: streetch fast
+   ...
+   
+   
     
 
 Channel 1..4 FREE NOTES (IN):
@@ -1471,22 +1736,22 @@ Channel 1..4 FREE NOTES (IN):
     
 Channel 1..4 CCs (OUT):
 -----------------------  
-    CC "69"  - echo FX in progress
-    CC "72"  - is in active loop 
-    CC "73"  - FREE 
-    CC "74"  - FREE
-    CC "75"  - FREE 
-    CC "80"  - free
-    
-    CC "84"  - jogFX state
-    CC "86" - free
-    CC "87" - free
-    CC "88" - free
-    CC "89" - free
-    
-    CC "90" --->> HR values, assume all taken
-    
+  CC "69"  - echo FX in progress
+  CC "72"  - is in active loop 
+  CC "73"  - FREE 
+  CC "74"  - FREE
+  CC "75"  - FREE 
+  CC "80"  - free
   
+  CC "84"  - jogFX state
+  CC "86" - free
+  CC "87" - free
+  CC "88" - free
+  CC "89" - free
+  
+  CC "90" --->> HR values, assume all is taken
+  CC "100"
+  CC "110"
     
 Channel 5 Free notes (IN):
 -------------------------
@@ -1566,26 +1831,38 @@ Channel 5 Free notes (IN):
   106
   (and above)
 
+  
+  
 Channel 5 Free CC (In):
 ------------------
+  TODO MUCH LATER:
+    - support SX2 features "as-is"
+    - move all DDJ-1000 beatFX buttons to dedicated buttons
+    -     
   
   # cat ddj-1000\ ch5\ notes.txt | grep CC  | awk '{print $2}' | sed 's|/|\n|g' | sort -un | awk 'BEGIN{a=0} { while(a<$1){print a; a = a +1;}; a = $1 + 1} END{print "And above"}'
   
+  0 
   1
-  2 beatFX original / (same as DDJ-SZ FX1 drywet)
+  2  beatFX original / (same as DDJ-SZ FX1 drywet)
   3
+  4  
   5
   7
   8
   9
-  10  beatFX dry/wet  (ddj_1000 case, no shift)
-  11  beatFX parameter  (dry/wet+shift1)
-  12  beatFX parameter2 (dry/wet+shift2)
-  13  beatFX paraeter3  (dry/wet+shift3)
-  14
-  15
+  10  BOME_NEW   beatFX dry/wet     (ddj_1000 case, no shift)
+  11  BOME_NEW   beatFX parameter1  (dry/wet+shift1)
+  12  BOME_NEW   beatFX parameter2  (dry/wet+shift2)
+  13  BOME_NEW   beatFX parameter3  (dry/wet+shift3)
+  
+  14  BOME_NEW   MFX FX1 knob3    <<<<< macroFX
+  15  BOME_NEW   MFX FX2 knob3    <<<<< macroFX
+  16  sx2?
   17
+  18  sx2?
   19
+  20  sx2?
   21
   23
   24
@@ -1603,12 +1880,12 @@ Channel 5 Free CC (In):
   39
   40
   41
-  42 beatFX dry/wet
-  43 beatFX parameter
-  44
-  45
-  46
-  47
+  42 BOME_NEW   beatFX dry/wet
+  43 BOME_NEW   beatFX parameter1
+  44 BOME_NEW   beatFX parameter2 
+  45 BOME_NEW   beatFX parameter3
+  46 BOME_NEW   MFX FX1 knob3  (macroFX)
+  47 BOME_NEW   MFX FX2 knob3  (macroFX)
   48
   49
   51
