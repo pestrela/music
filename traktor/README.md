@@ -1400,13 +1400,15 @@ If you want further appreciation, PayPal donations are welcome (pedro.estrela@gm
 
 ## What are the differences between MIDI mode and HID mode?
 
-I've contributed a list of differences between MIDI mode and HID mode:
-https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode
+There I've contributed a list of differences between MIDI mode and HID mode:
 
-Besides the obvious difference of no waveforms, the MIDI mode has several bugs that I've reported to Pioneer: 
-https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets
-  
- 
+The DDJ-1000 can run in two different modes: MIDI or HID. 
+The most obvious difference is the only HID has waveforms on teh jog screens.
+
+However there are many other smaller differences, summarized [here](https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode).
+
+Also, the MIDI mode has several bugs/limitations that I've reported to Pioneer support: 
+
 | Ticket number | Controller |  Description |
 | --- | -- | -- |
 | 147606 | DDJ-1000 | Jog screen sync led gets stuck | 
@@ -1416,6 +1418,7 @@ https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets
 | 203047 | DDJ-1000 | Faders ignore USB-selector | 
 | 205732 | DDJ-1000 | Impossible to know beatFX parameter value  |
 
+Very similar case for the DDJ-800 and XDJ-XZ:
 
 | Ticket number | Controller |  Description |
 | --- | -- | -- |
@@ -1425,6 +1428,8 @@ https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets
 | 159944 | XDJ-XZ | Jog screens only have needle and cue marker  |
 | 159944 | XDJ-XZ | Jog turn/touch same mssage for vinyl=off |
 
+ 
+[original list](https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets)
  
   
 ## Is the DDJ-1000SRT also mappable to Traktor?
