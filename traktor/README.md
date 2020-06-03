@@ -1309,6 +1309,14 @@ Summary:
 
 In order of complexity:
 
+
+### 0) Browse List or Tree (like rekordbox or Serato)
+
+todo: make a simple demo of moving trough the browser list/tree like stewe:
+https://forum.djtechtools.com/showthread.php?t=88950&p=731238#post731238
+https://forum.djtechtools.com/attachment.php?attachmentid=25832&d=1440801074
+
+
 ### A) Preview Player: 
 
 **Links:**
@@ -1495,6 +1503,7 @@ This section has links to DJ tutorials and technical information.
 * [Midi mapping tutorials](#Midi-mapping-tutorials)
 * [List of advanced MIDI mappings](#List-of-advanced-MIDI-mappings)
 
+
 ## List of Online DJ Courses
   
 Below a list of DJ courses, all from well-known Tutors.\
@@ -1527,6 +1536,12 @@ If you are dedicated enough, experimenting and trying these materials for yourse
 
 For now, see: https://www.mixxx.org/wiki/doku.php/beginner_dj_links
  
+  ## List of beginner tips
+
+https://www.digitaldjtips.com/2012/09/10-hidden-traktor-gems-for-better-djing/
+
+(more to add)
+
   
 ## List of Technical Webinars
 
@@ -1543,6 +1558,7 @@ TODO: add more high-quality webinars.
 * **Beginner:**
   * **Traktor very first keyboard map:** https://djtechtools.com/2015/02/26/intro-to-basic-midi-mapping-with-traktor/
   * **Traktor basic modifiers:** https://djtechtools.com/2014/05/11/midi-mapping-101-the-traktor-modifier-re-explained/
+  * **Load and Sync**: https://ask.audio/articles/how-to-create-two-advanced-mappings-in-traktor-pro
 * **Intermediate:**
   * **Traktor SuperCombos:** https://blog.native-instruments.com/how-to-map-instant-effects-in-traktor/
   * **Traktor Step sequencer:** https://djtechtools.com/2018/01/29/traktors-step-sequencer-map-midi-controller/ 
@@ -1553,6 +1569,8 @@ TODO: add more high-quality webinars.
   * **Rekordbox RXM-1000:** https://djtechtools.com/2019/06/24/hacking-rekordbox-fx-and-adding-rmx-1000-control/
   * **Serato modifers and jogs:** https://djtechtools.com/2018/04/11/hacking-serato-djs-midi-mapping-jogwheels-touchstrips-and-modifiers/
  
+ 
+TBD: https://ask.audio/articles/how-to-create-two-advanced-mappings-in-traktor-pro
   
 ## List of advanced MIDI mappings
 
@@ -1702,7 +1720,7 @@ Documentation: https://github.com/cmdr-editor/cmdr#2020-improvements
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
 
-![CMDR ChageLog](https://raw.githubusercontent.com/pestrela/cmdr-editor/master/docs/pics/cmdr_improvements1.png "eedd" )
+![CMDR ChangeLog](https://raw.githubusercontent.com/cmdr-editor/cmdr/master/docs/pics/cmdr_improvements1.png "eedd" )
 
 ## How can I run CMDR in my macOS?
 
@@ -2573,30 +2591,30 @@ The labor for the repair is most likely why they are keeping quiet. It’s just 
   
 ## How to replace the DDJ-1000 filter knobs with Silver knobs
 
-Both 1000 and 1000SRT have extremely [dull filter knobs](../pics/silver_knobs/DDJ-1000RB.jpg). Which is a pity.\
+Both 1000 and 1000SRT have extremely [dull filter knobs](../pic_sets/silver_knobs/DDJ-1000RB.jpg). Which is a pity.\
 For now the best fit is [DAA1309](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer) from the DDJ-SZ or DJM-900. This is an almost perfect fit.
 
-Folder with pictures of the knobs: [here](../pics/silver_knobs)
+Folder with pictures of the knobs: [here](../pic_sets/silver_knobs)
 
-* [DAA1309](../pics/silver_knobs/DAA1309.png):
+* [DAA1309](../pic_sets/silver_knobs/DAA1309.png):
   * This has the best fit overall. The knob is slightly higher than desired.
   * [Part list](https://www.pacparts.com/part.cfm?part_no=DAA1309&mfg=Pioneer): \
     DJM-900NX2/2000NX1/750\
     DDJ-SZ/ DDJ-RZ/ DDJ-RZX
   
-* [DAA1320/DAA1350](../pics/silver_knobs/DAA1320.jpg):
+* [DAA1320/DAA1350](../pic_sets/silver_knobs/DAA1320.jpg):
   * this was confirmed NOT to work
   * [parts list]((https://www.pacparts.com/part.cfm?part_no=DAA1320&mfg=Pioneer)): DJM-S9 / DJM-900SRT / XDJ-RX / XDJ-RX2
 
-* [100-SX3-3009](../pics/silver_knobs/100-SX3-3009.jpg):
+* [100-SX3-3009](../pic_sets/silver_knobs/100-SX3-3009.jpg):
   * not tested
   * [part list](https://www.pacparts.com/part.cfm?part_no=100-SX3-3009&mfg=Pioneer): DDJ-RX
   
-* [DAA1373](../pics/silver_knobs/DAA1373.jpg):
+* [DAA1373](../pic_sets/silver_knobs/DAA1373.jpg):
   * not tested
   * [parts list](https://www.pacparts.com/part.cfm?part_no=DAA1373&mfg=Pioneer): DJM750 MK2 / 250MK2 / 450 / S3
   
-* [Rane 2015](../pics/silver_knobs/rane%202015%20filters.jpg):
+* [Rane 2015](../pic_sets/silver_knobs/rane%202015%20filters.jpg):
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
   
