@@ -79,12 +79,13 @@ See below for a longer Table of contents.
   
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
-    * [a) Automatic database repair (mass relocate)](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
+    * [a) Automatic finds moved files](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
     * [b) OS Search (no playlists)](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists)
     * [c) Advanced MIDI mapping and Lots of FX](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
+  * [STEMS automatic creation](#How-to-create-your-own-karaoke-files-automatically-using-Stems-and-AI)
 
 * [Effects](#Effects)
   * [Description of the basic effects](#description-of-the-basic-effects)
@@ -294,21 +295,21 @@ See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGo
 ## Why is Traktor my software of choice
 
 Traktor has unique features - big and small - that I depend on.\
-Other softwares have nice unique features too, but miss these ones that I depend on.
+Other softwares have nice unique features too, but I built my workflows on these specific ones.
 
-Blog Posts:
+Posts:
 * [a) Automatic database repair (mass relocate)](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
 * [b) OS Search (no playlists)](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists)
 * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
 * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
 * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
 
-
 more info: https://github.com/pestrela/music_scripts/tree/master/traktor#why-is-traktor-my-software-of-choice
 
-See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor).
+See also [which features I miss in Traktor](#Which-features-I-miss-in-Traktor), and [STEMS info](#How-to-create-your-own-karaoke-files-automatically-using-Stems-and-AI).
 
-## Why is Traktor my software of choice: a) Database repair (mass relocate)
+
+## Why is Traktor my software of choice: a) Automatic finds Moved / Renamed files (mass relocate)
 
 Traktor is above to find RENAMED files fully automatically without losing CUE points, beat grid or re-analysis.
 
@@ -322,7 +323,8 @@ Traktor is the only software that achives that because it fingerprints everythin
 
 When the mass-relocate process ends, everything is magically found again. Crucially all metadata is kept: CUE points, beat grid, analysed BPM, stripe, etc.\
 Together with the OS-search feature described below, this enables me to use folders as "virtual playlists".
-* **Comparison to Rekordbox:** Renamed files need to be relocated FILE by FILE.\
+* **Comparison to Rekordbox v6:** V6 fixed this problem, well done! However it is not a solution because of the [missing XML export issue](#issues-of-the-V6-Rekordbox-migration---major)
+* **Comparison to Rekordbox v5:** Renamed files need to be relocated FILE by FILE.\
 Moved files can be done FOLDER by FOLDER.\
 If this manual process is skipped, the files are seen as brand new, losing all meta-data.\
 [An external tool](https://github.com/edkennard/rekordbox-repair) helps the moved files case. [Example of Pioneer forum request](https://forums.pioneerdj.com/hc/en-us/community/posts/115018095303-Reasons-to-think-i-leave-from-rekordbox-?page=1#community_comment_360000392646)
@@ -330,7 +332,7 @@ If this manual process is skipped, the files are seen as brand new, losing all m
 * **Comparison to Serato:** To test.
 
 
-## Why is Traktor my software of choice: b) OS-search (no playlists)
+## Why is Traktor my software of choice: b) OS-search to use (no playlists)
 
 Traktor allows searching inside any OS folders. I don't have DJ playlists inside Traktor; instead, my OS-folders are my "virtual playlists".\
 I have a very large collection with dozens of genres, sub-genres and decades. For that I've created a structure where each decade is a separate folder, inside a parent genre/sub-genre folders.\
@@ -401,6 +403,26 @@ In general I fully agree with [this Digital DJ Tips article](https://www.digital
 But in the end Traktor has [has unique features that I depend on](#why-is-traktor-my-software-of-choice).
 
 See also the [most popular DJ softwares census](../census_graphs).
+
+
+## How to create your own karaoke files automatically using Stems and AI
+
+
+[Stems](https://www.youtube.com/watch?v=grgjIhs-OC8) is a new file format that contains 4 sub-tracks you can mix on your own. 
+This is read and manipulted nativelly by Traktor.
+ 
+[Spleeter](https://www.theverge.com/2019/11/5/20949338/vocal-isolation-ai-machine-learning-deezer-spleeter-automated-open-source-tensorflow)
+ is a open-source AI tool that quickly isolates the vocals in any song, producing four seprate audio files. 
+ ([Another link](https://deezer.io/releasing-spleeter-deezer-r-d-source-separation-engine-2b88985e797e)).
+ 
+
+[Stemgen](https://github.com/axeldelafosse/stemgen) is a script that groups several programs to generate a stem file automaticalyy
+
+Want to hve a quick go with  stems? [This pack](https://www.native-instruments.com/en/specials/stems-for-all/free-stems-tracks/) has example tracks.\
+Of which I recommend these files:
+* LM_StockholmSyndrome.stem.mp4
+* NR_FeverLine.stem.mp4
+* PR_OhNo.stem.mp4
 
 
 # Effects 
@@ -560,6 +582,18 @@ This is the original article where Ean Golden applied these FX chains to the jog
   
 * DA VE:
   * Beatmasher 2 / Reverb / Transpose stretch  
+  
+* L.G.MUZIK - TP3 F1 sidekick 
+  * 1-1) Iceverb / Peak Filter / Reverb    <<<<<
+  * 1-2) Reverb T3 / Delay T3 / Filter 92 
+  * 1-3) Delay / Flanger Flux / Reverb 
+  * 1-4) Stretch slow / Transpose Stretch / Wormhole 
+  * 2-1) Iceverb / Mullholland Drive / Peak Filter 
+  * 2-2) Reverb / Delay T3 / Digital Lofi  
+  * 2-3) Reverb T3 / Flanger / Gater 
+  * 2-4) Ringmodulator / Reverb T3 / Flanger Pluse 
+
+
   
   
 ## Which basic effects constitute Traktor mixerFX and macroFX?
@@ -2187,13 +2221,14 @@ Most important tricks are:
   * source: https://www.gtlaw-amsterdamlawblog.com/2018/11/another-privacy-regulation-but-this-time-on-non-personal-data/
 
 2) **Perpetual bought licenses** do not transfer to subscription model:
-* I've bought a rekordbox performance (149 USD), rekordbox video (99USD)and RMX pack (9.9USD) to use in my SX2. Total cost: 260USD w/o Tax.
+* I've bought a rekordbox performance (149 USD), rekordbox video (99USD)and RMX pack (9.9USD) to use in my DDJ-1000.\
+  * Total cost: 260USD w/o Tax.
   * V5 licenses: https://web.archive.org/web/20200217154645/https://rekordbox.com/en/plan/pluspacks/
 * This V5 license doesn't carry over to the new subscription model
-  * Note: This is orthogonal to the hardware unlock option (see https://rekordbox.com/en/support/link )
+  * Note: "check" in this table means that it is suported. It doesn't mean it is free! (https://rekordbox.com/en/support/link )
   
 The XML vendor lock is a **deal breaker** for me.\
-The dead V5 license is just annoying (there will be no V5 improvements and I don't expect any support moving forward).
+The dead V5 license is quite annoying (there will be no V5 improvements and I don't expect any support moving forward).
   
 ## How did the industry commenters reacted to the v6 XML export issue?
 (Post to be updated periodically. Please send updates to pedro.estrela@gmail.com)
@@ -2226,26 +2261,25 @@ Besides the XML export and the bought licenses problem there is additional small
 no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;\
 Cannot physically delete files inside RB. Still hotcues do not move the floating cue.
 
-On the plus side, it now automatically auto-relocate renamed and moved tracks.\
+On the plus side, it now automatically auto-relocate renamed and moved tracks. This is a [major improvement]([a) Automatic finds moved files](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)).\
 It also has shared audio and video playlists.\
-And a Day skin ([guide](#How-to-enable-day-skin-in-any-software) )
+It also has a Day skin, which is something [all OS already support](#How-to-enable-day-skin-in-any-software)
 
-The other functions I either do not use (streaming, ableton link) or have my own solution (cloud).
-
+The other functions I either do not use (streaming, ableton link) or have my own solution ([automatic sync using a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)).
  
 ## What is NOT unlocked in the Rekordbox V6 hardware options
 
-With V6 there are combinations of equipemnt that unlock *some* functionality.
+With v6 there are combinations of equipement that unlock *some* functionality.
 * Plans: https://rekordbox.com/en/plan/
 * Hardware: https://rekordbox.com/en/support/link
 
-Combining both lists, this is what is NOT unlocked:
-* Cloud Sync
-* Video (except RXZ)
-* Lyrics
+Combining both lists, this is what is **NOT unlocked**:
 * DVS (except DJM-750Mk2, 450, 250MK2, interface2, DDJ-RZ, XP1, XP2)
+* Video (except RXZ)
 * Sampler sequence saving
 * RMX effects
+* Lyrics
+* Cloud Sync
 
 All these need either the 10eur/mo or the 15eur/mo subscription (August 2020 new prices)
 
@@ -2268,6 +2302,22 @@ However, you will be nagged with an upgrade window every time you start RB.
 to remove this, simply rename this file to something else:
 
 C:\Program Files\Pioneer\rekordbox 5.6.0\Upmgr rekordbox.exe
+    
+   
+## How to enable day skin in any software
+
+If you are playing on the bright outside you will not see a thing.
+Some softwares provide a specific skin for this situation.
+
+But this feature is native to the OS: 
+
+Windows 10:
+* Press Win + Plus / settings / Invert Colors / Turn on magnifier
+* [guide](https://windowsreport.com/inverted-colors-windows-10/)
+
+MacOS:
+* “System Preferences” > “Keyboard” > “Shortcuts” > “Accessibility” >  “Invert Colors
+* [guide](https://devicebar.com/invert-display-colors-on-apple-mac-os-x/2642/)
     
     
 # MIXXX topics
@@ -2434,24 +2484,6 @@ Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use di
 
 * [People that I learned a lot from the Global DJ community](#Some-people-from-which-Ive-learned-a-lot-from-the-Global-DJ-community)
 
-  
-  
-## How to enable day skin in any software
-
-If you are playing on the bright outside you will not see a thing.
-Some softwares provide a specific skin for this situation.
-
-But this feature is native to the OS: 
-
-Windows 10:
-* Press Win + Plus / settings / Invert Colors / Turn on magnifier
-* [guide](https://windowsreport.com/inverted-colors-windows-10/)
-
-MacOS:
-* “System Preferences” > “Keyboard” > “Shortcuts” > “Accessibility” >  “Invert Colors
-* [guide](https://devicebar.com/invert-display-colors-on-apple-mac-os-x/2642/)
-
-  
   
 ## How I recorded my old radio show recordings and found the IDs
 
@@ -2715,6 +2747,7 @@ Biggest difference to the group above is that I had much less interactions with 
 [Jamie Hartley](https://wearecrossfader.co.uk/online-dj-courses/) (WeAreCrossfader),
 [madZach](https://djtechtools.com/author/madzach/) (Production and DJing),
 [DAVE](https://www.youtube.com/channel/UCe2doOsbbp-B2dN3jbJ4Uzg/playlists) (Tutorials),
+
 
 
 
