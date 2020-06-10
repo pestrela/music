@@ -593,8 +593,32 @@ This is the original article where Ean Golden applied these FX chains to the jog
   * 2-3) Reverb T3 / Flanger / Gater 
   * 2-4) Ringmodulator / Reverb T3 / Flanger Pluse 
 
-
   
+* Raycotek 2x2RD:
+  * 0:24 https://www.youtube.com/watch?v=--U3Ngp5RyI&feature=emb_logo
+  * #1 Iceverb / Peak Filter / Reverb   <<<
+  * #2 Iceverb / Digital LoFi / Peak Filter 
+  * #3 Reverse Grain / Peak Filter / Iceverb Smart FX 
+  * #4 Mulholland-Drive / Transpose Stretch/ Peak Filter   ...
+  * #5 Tape Delay / Gater / Filter:92 LFO 
+  * #8 Delay / Beatmasher 2 
+  * #12 Delay T3 / Filter:92 / Beatmasher 2 
+  * #16 Transpose Stretch / Delay / Reverb 
+  
+* Raycotek 4FD
+  * 1:22 https://www.youtube.com/watch?v=DhHzcGEa3yg&feature=emb_logo
+  * jogFX :
+  * #1 / Flanger Pulse	/ Delay	 / Peak Filter	
+  * #2 Delay	 / Flanger Pulse/ Wormhole
+  * #3 Laser Slicer	/ Delay T3/ Filter	
+  * #4 Beatmasher 	/ Laser Slicer	/ Peak Filter	
+  * 
+  * smart cue:
+  * #1 Beatmasher 2/ Transpose Stretch/ Delay
+  * #2 Beatmasher 2/ Tape Delay/ Filter
+  * #3 Laser Slicer/ Filter:92 Pulse/ Reverb
+  * #4 Delay/ Mulholland-Drive/ Peak Filter
+
   
 ## Which basic effects constitute Traktor mixerFX and macroFX?
   
