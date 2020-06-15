@@ -50,7 +50,8 @@ https://github.com/pestrela/music/blob/master/traktor/README.md#table-of-content
 
 b) I've built the most popular traktor mapping for the DDJ-1000. It also works in all other SX2, SRT, SZ, etc\
 https://maps.djtechtools.com/mappings/9279 
-  
+
+
 c) I'm the maintainier of the CMDR TSI mapping editor for Traktor\
 https://github.com/cmdr-editor/cmdr/blob/master/README.md  
 
