@@ -1,12 +1,12 @@
 
 # TL;DR version
 
-My biggest **Pioneer** reason is big jogwheels.
-My biggest **Laptop** reason is not having to maintain USB sticks.
-My biggest **Traktor** reason is not having to build playlists, and use OS folders instead.
+My biggest **Laptop** reasons are not having to manage USB sticks, and it has much more features than standalone.\
+My biggest **DDJ-1000** reason is big jogwheels.\
+My biggest **Traktor** reason is using my OS folders as "playlists", its effects and its advanced mapping possibilities.
 
 
-# Start here first
+# About this Knowledge Base
 
 This page contains my DJ knowledge base. 
 It covers dozens of questions that I've answered over the years in forums and Facebook groups.
@@ -41,7 +41,21 @@ plus more [other stuff](#Other-topics).
 Below a detailed [table of contents](#Table-of-Contents) of the whole thing, 
 and a [MindMap picture](#MindMap-Summary) to get you started.
 
-PS: Feel free to check my DJ mixes (Trance, 80s and Top-40 live recordings): https://djestrela.com/
+# About DJ Estrela
+
+I'm a DJ since year 2000. Some free contributions for you to enjoy:
+
+a) A quite broad knowledge base that covers Traktor, Mappings, Laptop optimization, Controllers, etc...\
+https://github.com/pestrela/music/blob/master/traktor/README.md#table-of-contents 
+
+b) I've built the most popular traktor mapping for the DDJ-1000. It also works in all other SX2, SRT, SZ, etc\
+https://maps.djtechtools.com/mappings/9279 
+  
+c) I'm the maintainier of the CMDR TSI mapping editor for Traktor\
+https://github.com/cmdr-editor/cmdr/blob/master/README.md  
+
+d) My specific music styles are Trance and 80s (Italo Disco). I also play commercial Top-40.\
+https://djestrela.com/  
 
 
 # Table of Contents
@@ -1096,6 +1110,7 @@ Its so small I carry it everywhere I go.
 * **Mapping:** My mapping unlocks all TP3 functions
 
 See also [this DDJ-SZ comparison](https://www.reddit.com/r/Beatmatch/comments/c6vquf/help_me_ddj_sz_vs_ddj_1000/)
+See also this general [comparison to CDJs](https://djtechtools.com/2017/07/23/ddj-cdjs-practicing-cdjs-pioneer-dj-controller/)
 
 
 
@@ -1594,9 +1609,11 @@ If you are dedicated enough, experimenting and trying these materials for yourse
 
 For now, see: https://www.mixxx.org/wiki/doku.php/beginner_dj_links
  
-  ## List of beginner tips
+## List of beginner tips
 
 https://www.digitaldjtips.com/2012/09/10-hidden-traktor-gems-for-better-djing/
+
+* general [comparison of controllers to CDJs](https://djtechtools.com/2017/07/23/ddj-cdjs-practicing-cdjs-pioneer-dj-controller/)
 
 (more to add)
 
@@ -2547,16 +2564,21 @@ Concrete steps:
 
 * Recording  
   * Put the smartphone as high as possible, and with the most illumination possible. 
-  Ideally, grab the microphone stand on **ANOTHER** desk, so that your scratching will not vibrate the smartphone.
+  Ideally, grab the microphone stand on **ANOTHER desk**, so that your scratching will not vibrate the smartphone.
   * Record the controller image in 16:9 format
   * Record the laptop screen using [this free tool](https://www.freescreenrecording.com/)
   * If its a spoken video, record the audio from the smartphone. If its pure DJing use from the mixer output, or internal Traktor.
 
 * Editing part 1: merge everything to a single video
-  * Download [openshot](https://www.openshot.org). Read this [tutorial for basics](https://www.howtoforge.com/tutorial/an-introduction-to-video-editing-in-openshot-2-0/). [this is another tutorial](https://gist.github.com/peanutbutterandcrackers/f0f666243133e0ed25abbc12a4ba23d7)
+  * Download the latest version of [openshot](https://www.openshot.org/download/). 
+  Read this [tutorial for basics](https://www.howtoforge.com/tutorial/an-introduction-to-video-editing-in-openshot-2-0/). 
+  [this is another tutorial](https://gist.github.com/peanutbutterandcrackers/f0f666243133e0ed25abbc12a4ba23d7)
   * Change profile to a 4:3 format, 30fps (preferences / profile). This is crucial to fit both the controller and the top traktor screen
-  * Add the Controller video on Track 1. Click in the very first frame. Use effects / crop to crop the controller to size. Use right click / transform to center and scale it to the bottom of the screen
-  * Move the video to the middle of the timeline. Lock track 1 so that it no longer moves
+  * Add the Controller video on Track 1. Zoom out (ctrl+Scroll). Click in the very first frame. 
+  Use properties / Rotate to fix any rotation issues.
+  Use effects / crop to crop the controller to size. 
+  Use right click / transform to center and scale it to the bottom of the screen
+  * Move the video to the middle of the timeline. Lock track 1 so that it no longer moves (track 1 / RMB / lock)
   * Add the Screen video to Track 2. Do the same steps as before to crop and scale / center the video on the top part of the screen
   * Sync the two videos by finding something unique (eg press play). Zoom in a lot. Disable snap for precise alignment. Confirm alignment in the end of the video
   * Render the video to a 4:3 format (1024x728, 30fps, MP4). Create a profile in your documents / .openshot / profiles folder, based on 
