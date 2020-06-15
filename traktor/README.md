@@ -48,7 +48,7 @@ I'm a DJ since year 2000. Some free contributions for you to enjoy:
 a) A quite broad knowledge base that covers Traktor, Mappings, Laptop optimization, Controllers, etc...\
 https://github.com/pestrela/music/blob/master/traktor/README.md#table-of-contents 
 
-b) The most popular traktor mapping for the DDJ-1000, which also works in all other 4 deck controllers (SX2, SRT, SZ, etc)\
+b) The most popular traktor mapping for the DDJ-1000. This also works for other 4 deck controllers (SX2, SRT, SZ, XZ, etc)\
 https://maps.djtechtools.com/mappings/9279 
 
 c) CMDR, the free  TSI mapping editor for Traktor\
