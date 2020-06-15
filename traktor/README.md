@@ -48,11 +48,10 @@ I'm a DJ since year 2000. Some free contributions for you to enjoy:
 a) A quite broad knowledge base that covers Traktor, Mappings, Laptop optimization, Controllers, etc...\
 https://github.com/pestrela/music/blob/master/traktor/README.md#table-of-contents 
 
-b) I've built the most popular traktor mapping for the DDJ-1000. It also works in all other SX2, SRT, SZ, etc\
+b) The most popular traktor mapping for the DDJ-1000, which also works in all other 4 deck controllers (SX2, SRT, SZ, etc)\
 https://maps.djtechtools.com/mappings/9279 
 
-
-c) I'm the maintainier of the CMDR TSI mapping editor for Traktor\
+c) CMDR, the free  TSI mapping editor for Traktor\
 https://github.com/cmdr-editor/cmdr/blob/master/README.md  
 
 d) My specific music styles are Trance and 80s (Italo Disco). I also play commercial Top-40.\
