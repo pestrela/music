@@ -421,6 +421,7 @@ See also the [most popular DJ softwares census](../census_graphs).
 
 ## How to create your own karaoke files automatically using Stems and AI
 
+**Update:** this is now [realtime in DJay](https://www.digitaldjtips.com/2020/06/djay-pro-ai-talkthrough-review/). Well done!!!  
 
 [Stems](https://www.youtube.com/watch?v=grgjIhs-OC8) is a new file format that contains 4 sub-tracks you can mix on your own. 
 This is read and manipulted nativelly by Traktor.
@@ -432,11 +433,12 @@ This is read and manipulted nativelly by Traktor.
 
 [Stemgen](https://github.com/axeldelafosse/stemgen) is a script that groups several programs to generate a stem file automaticalyy
 
-Want to hve a quick go with  stems? [This pack](https://www.native-instruments.com/en/specials/stems-for-all/free-stems-tracks/) has example tracks.\
+Want to just have a quick go with stems? [This pack](https://www.native-instruments.com/en/specials/stems-for-all/free-stems-tracks/) has example tracks.\
 Of which I recommend these files:
 * LM_StockholmSyndrome.stem.mp4
 * NR_FeverLine.stem.mp4
 * PR_OhNo.stem.mp4
+
 
 
 # Effects 
@@ -1481,14 +1483,26 @@ If you want further appreciation, PayPal donations are welcome (pedro.estrela@gm
 
 ## What are the differences between MIDI mode and HID mode?
 
-There I've contributed a list of differences between MIDI mode and HID mode:
-
 The DDJ-1000 can run in two different modes: MIDI or HID. 
-The most obvious difference is the only HID has waveforms on teh jog screens.
+The most obvious difference is the only HID has waveforms on the jog screens.
 
 However there are many other smaller differences, summarized [here](https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode).
 
-Also, the MIDI mode has several bugs/limitations that I've reported to Pioneer support: 
+[original source](https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode)
+
+## List of DDJ-1000 firmware bugs open tickets
+
+This is a list of open support tickets with Pioneer about the firmware MIDI bugs. All these have been open for many months.
+
+To raise the priority, please create a ticket yourself in the Pioneer forum. Just mention the issue name and the previous ticket number, ie, copy-paste this table.
+
+New Ticket link: https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145
+
+To create an account on the Pioneer website, be sure to:
+* Do not use add-block plus (or similar)
+* Clear your cookies
+* Prefer Edge browser instead of Chrome
+
 
 | Ticket number | Controller |  Description |
 | --- | -- | -- |
@@ -1910,7 +1924,8 @@ Below some links useful to build open source projects
 
 * **Choose a license:**
   * This sites compares licenses from more to less requirements.
-  * https://choosealicense.com/licenses/  ([table](https://choosealicense.com/appendix/))
+  * https://choosealicense.com/licenses/  
+  * [detailed table](https://choosealicense.com/appendix/))
 * **Semantic version:**
   * Explains how to versions work, namely backwards-compatible changes
   * https://semver.org/
@@ -1918,6 +1933,21 @@ Below some links useful to build open source projects
   * Explains what to put on the git log message
   * https://keepachangelog.com/en/1.0.0/
   
+
+Regarding DJ software, it useful for companies to jumpstart their innovation with open source technology.
+For new stuff [like STEMS realtime generation](#How-to-create-your-own-karaoke-files-automatically-using-Stems-and-AI) 
+it is far quicker to use this, than to developing your own technology.
+
+The MIT license choose by Spleeter its very permissive and has very few conditions:
+https://choosealicense.com/licenses/
+
+This is a general example where you just need to attribute things:\
+"Third Party Software Acknowledgements"
+https://www.denondj.com/product-legal-sc5000-prime
+
+Compare this to the GPL, where you need to make your own code that extends it GPL as well:
+https://www.pioneerdj.com/en/support/open-source-code-distribution/gpl-lgpl-source-code/
+
   
 ## Github Markdown tools
 
@@ -2553,6 +2583,8 @@ see also this forum post on [reducing the hiss of K7](http://www.oldskoolanthemz
 
 On my latest demo videos I show both the controller and the traktor screen simultaneously. It looks pretty cool.
 To get the basic idea, see this DJ tech tools article: https://djtechtools.com/2012/06/24/how-to-make-a-great-dj-video/
+This is another one: https://www.digitaldjtips.com/2019/02/how-to-film-your-dj-mixes-using-your-phone/
+This specifically covers [smartphone placement](https://www.digitaldjtips.com/2020/05/overhead-camera-for-djs/)
 
 Concrete steps:
 
@@ -2563,34 +2595,51 @@ Concrete steps:
   * Buy a smartphone flexible tripod:  [example](https://www.amazon.com/Universal-Octopus-Adjustable-Cellphone-Smartphone/dp/B06XRFC75Y/)
 
 * Recording  
-  * Put the smartphone as high as possible, and with the most illumination possible. 
-  Ideally, grab the microphone stand on **ANOTHER desk**, so that your scratching will not vibrate the smartphone.
+  * Put the smartphone as high as possible, and with the most illumination possible
+  * Grab the stand to a Tall chair, or to another fixed desk
+     * The crucial idea is that your scratching will not vibrate the smartphone
   * Record the controller image in 16:9 format
   * Record the laptop screen using [this free tool](https://www.freescreenrecording.com/)
-  * If its a spoken video, record the audio from the smartphone. If its pure DJing use from the mixer output, or internal Traktor.
-
+  * If its a tutorial spoken video, record the audio from the smartphone. If its pure DJing record the audio in a third channel from the Traktor or the mixer output
+    * Important: record all inputs **with sound**, even if only the Traktor recording will be the final. 
+    * This will grealty simplify the tricky syncronization step
+    
 * Editing part 1: merge everything to a single video
   * Download the latest version of [openshot](https://www.openshot.org/download/). 
   Read this [tutorial for basics](https://www.howtoforge.com/tutorial/an-introduction-to-video-editing-in-openshot-2-0/). 
-  [this is another tutorial](https://gist.github.com/peanutbutterandcrackers/f0f666243133e0ed25abbc12a4ba23d7)
-  * Change profile to a 4:3 format, 30fps (preferences / profile). This is crucial to fit both the controller and the top traktor screen
+  [this is another tutorial](https://gist.github.com/peanutbutterandcrackers/f0f666243133e0ed25abbc12a4ba23d7) 
+  * Use only 4:3 profiles so that you can fit the controller, the GUI, and a black banner at the very for your logo + Captions.
+  * To significantly speedup processing, use lower resolution profiles:
+    * Quickest editing: "QVGA 29.7 fps 320x240"
+    * Quick editing: "768x568 4:3 PAL"
+    * Export quality: "1024x768, 4:3 30fps"  
+      * Create a new profile in your documents / .openshot / profiles folder, based on another 16:9 HQ profile)
   * Add the Controller video on Track 1. Zoom out (ctrl+Scroll). Click in the very first frame. 
   Use properties / Rotate to fix any rotation issues.
-  Use effects / crop to crop the controller to size. 
-  Use right click / transform to center and scale it to the bottom of the screen
+  On properties, set "crop X", "crop Y", "crop Height" and "Crop Width" to crop the controller to size.
+  Use right click / transform to center and scale it to the half bottom of the screen.
+  Use effects/Brightness to raise the light a bit. You can never get enough lighting.
+  * If the controller moves around when playing, you did NOT clicked in the very first frame
+    * another sign is that there is very small green dots in the timeline. These are called "keyframes" 
+    * to fix this, RMB the changed properties, "remove keyframe", potentilly several times
+    * then edit the properties ONLY on the first frame
   * Move the video to the middle of the timeline. Lock track 1 so that it no longer moves (track 1 / RMB / lock)
   * Add the Screen video to Track 2. Do the same steps as before to crop and scale / center the video on the top part of the screen
-  * Sync the two videos by finding something unique (eg press play). Zoom in a lot. Disable snap for precise alignment. Confirm alignment in the end of the video
-  * Render the video to a 4:3 format (1024x728, 30fps, MP4). Create a profile in your documents / .openshot / profiles folder, based on 
-  
-
-* Editing part 2: cuts, effects, transitions, etc
-  * get windows essentials 2012 [archive link](https://www.tenforums.com/software-apps/104887-can-i-get-movie-maker-win10-again.html#post1304260); install only windows movie maker 2012.
+  * In VLC, sync the two videos by finding something unique (eg pressing play). Zoom in a lot. Get the HH:MM:SS values, and calculate the offset in seconds
+  * In Openshot, manually align the videos using this info. Disable snap for precise alignment. Turn on volume in all tracks for this operation only. Confirm that the alignment is good in the end of the video as well
+  * In the black bar above the GUI, add your logo and the title
+    * add this to another track (shift+t)
+  * In Powerpoint: Create some very big arrows in all 4 directions, set transparent color, generate individual PNGs from it
+  * Move the arrows around to identify particular things in the GUI and the controller (other than your mouse)
+  * Render the final video in high quality MP4
+ 
+* Editing part 2: captions, cuts, effects, transitions, etc
+  * Get windows essentials 2012 [archive link](https://www.tenforums.com/software-apps/104887-can-i-get-movie-maker-win10-again.html#post1304260); install only windows movie maker 2012.
   * To create separators: home / add / title; Then animations / wipe right / normal
-  * To create captions: home / add / caption; then set legtth
-  * to add arrows: add a caption with windings 3 font
+  * To create captions: home / add / caption; then set length
+  * to add additional arrows: add a caption with windings 3 font
   * change project to 4:3 format 
-  * ...
+  * export again in high quality
  
  
 ## How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS
