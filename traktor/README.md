@@ -2783,7 +2783,8 @@ What did you enjoyed the most? please tell me to pedro.estrela@gmail.com
 When I started DJing in 2000 I've learned a lot from local DJs in Lisbon that I've meet regularly.\
 The ones I worked the most were Rui Remix, Bruno Espadinha, Joao Vaz, Jaylion, Miguel Assumpcao and DJ Ice.
 
-20 years later the Internet changed this locality a lot.\
+20 years later the Internet changed this locality a lot.
+
 You can now learn anything from youtube tutorials, reading articles and have insightful conversations with people that you may never meet.
 
 Below some of the people that I've learned the most. Apologies if I forget anyone.\
@@ -2842,6 +2843,7 @@ Biggest difference to the group above is that I had much less interactions with 
 [Jamie Hartley](https://wearecrossfader.co.uk/online-dj-courses/) (WeAreCrossfader),
 [madZach](https://djtechtools.com/author/madzach/) (Production and DJing),
 [DAVE](https://www.youtube.com/channel/UCe2doOsbbp-B2dN3jbJ4Uzg/playlists) (Tutorials),
+[Sara Simms](https://ask.audio/author/sara-simms) (Reviews, Tutorials),
 
 
 
