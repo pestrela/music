@@ -2844,8 +2844,11 @@ Biggest difference to the group above is that I had much less interactions with 
 [madZach](https://djtechtools.com/author/madzach/) (Production and DJing),
 [DAVE](https://www.youtube.com/channel/UCe2doOsbbp-B2dN3jbJ4Uzg/playlists) (Tutorials),
 [Sara Simms](https://ask.audio/author/sara-simms) (Reviews, Tutorials),
+[Joe Easton](https://www.facebook.com/pages/category/Entrepreneur/Traktor-S4MK3-Screen-Mods-by-Joe-Easton-440250006776588/) (S4 MK3 Screen),
+[Aleix Jiménez](https://www.native-instruments.com/forum/threads/supreme-edition-mod-traktor-s5-s8-d2-screen-mapping-mod.348539/) (S5/S8/D2 Screen + Mapping mod),
 
 
-
+      
+      
 
 
