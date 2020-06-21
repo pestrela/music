@@ -2642,6 +2642,19 @@ Concrete steps:
   * export again in high quality
  
  
+ 
+Customized openshot shortcuts:
+* ctrl+m: marker
+* crtrl+up: center playhead
+* J,L = fast forward
+* -/= = zoom in/out
+* ctrl+left/right: marker
+* left/right = frame by frame
+* shift+rleft/right: nudge
+* space, up, down: pause
+
+  
+ 
 ## How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS
 
 I have **all** my Traktor files synchronized between laptops. This includes [100Gb of music](#why-i-manage-music-using-os-folders-only)

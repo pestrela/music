@@ -89,22 +89,22 @@ History Overview / Future plans:
  
 FX unit usage overview:
 -----------------------
-FX Unit1 - Group mode - All to DeckA
-  - slot1: turntableFX 
-  - slot2: delay releaseFX    (TODO)
-  - slot3: macroFX
+  FX Unit1 - Group mode - All to DeckA
+    - slot1: turntableFX 
+    - slot2: delay releaseFX    (TODO)
+    - slot3: macroFX
 
-FX Unit2:
-  - Same as unit1, but for deck B
-  
-FX Unit3:
-  - jogFX for any deck
-  
-FX Unit4:
-  - slot1: BeatFX per channel
-  - slot2: 
-  - slot1: 
-  
+  FX Unit2:
+    - Same as unit1, but for deck B
+    
+  FX Unit3:
+    - jogFX for any deck
+    
+  FX Unit4:
+    - slot1: BeatFX per channel
+    - slot2: 
+    - slot1: 
+    
   
  
   
@@ -142,6 +142,8 @@ FX units usage:
 Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWSER, SX2
 ---------------------
 	M1: (EXTRA SHIFTS - HOLD STYLE)
+    __BROWSER MODIFIERS__
+  
 	 0: nothing pressed
 	 
 	 1-4: deck A-D SELECT  <<<<< MEMORY shift2  
@@ -151,6 +153,9 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
       
 	 5: vinyl stop in progress (REQUIRES PROGRESSIVE TEMPO BEND = extra settings)
 		  m2 = 5=adjust / 6=slide
+      
+      __NOW FREE__  <<<
+      
 	 6: grid adjust down | slide down (ANY OF THEM)
 	 7: doing PREVIEW PLAYER
 
@@ -162,50 +167,47 @@ Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWS
      
      4: Memory/search pressed (for quick search)
    
-		 5: Grid ADJUST pressed  -> this cancels jogfx mode   F7
-		 6: Grid SLIDE  pressed  -> this cancels jogfx mode   E7
+		 5: Grid ADJUST pressed  -> this cancels jogfx mode   ch1..4 note F7
+		 6: Grid SLIDE  pressed  -> this cancels jogfx mode   ch1..4 note E7
 		 7: (empty)
         XDJ-XZ: reverse (why ????)
 		 
 	M3: JOGFX SELECTION  (SHARED BETWEEN ALL DECKS)
 	  0- none
 	  1-7: which jog FX
-	
   
   
 	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)  <<<< THIS IS TO SIMPLIFY A LOT
-    TO DEPRECATE!
+    (still useful)
     
     0: nothing
     1: IN+OUT
     2: OUT
     
     
-	M5: RELEASE FX  __IN PROGRESS__  -> this is for the color
-	 1-4: censor echo_out (toggle)
-		 (from: button or fx1_button or jog_fx)
+	M5: __FREE__
 	
   M6: SLICER MODE
     0: mode1:    8 slices, 1/1
     1: mode2:   16 slices, first 1/2      <<<<< default for rekordbox
     2: mode2:   16 slices, second 1/2 
     
-	M7: GRID IN PROGRESS?
+	M7: GRID IN PROGRESS?       <<<< can this be simplified?
    0: no grid in progress
 	 1-4: which deck A-D active + 2x grid 
 
 	M8: ECHO OUT FAVORITE
 		(sequence is 3,1,2,0 )
-	  this is shared with play pause FX  <<<< why?
+    selected by 
+	  this is shared with play pause FX  <<<<<<< why?
 	 
-   
+    note: 
    
 	 
-Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
+Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, TTFX, BeatFX,
 ---------------------
-	new stuff:     TTFX, BeatFX, 
 
-	M1: PADFX color: which one is being triggered (TO SHOW RED COLOR)
+	M1: PADFX selected: which pad is being pressed (TO SHOW RED COLOR)
 	 0 - none
 	 1-7: which pad FX
 	 8: not used
@@ -215,10 +217,8 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 		1: one with 2x delay
 		2: one with 1x filter pulse
 		3: Rolls page
-    
-		(same as p1/m5) ?
-				
-	M4: CURRENT PADMODE (FOR PADPAGE SHORTCUT)
+    				
+	M4: CURRENT PADMODE (FOR PADPAGE SHORTCUT)   <<<< deprecate?
 		0: HC
 		1: ROLL
 		2: SLICER
@@ -238,9 +238,129 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, INIT
 		2: page 2
 		
 	M8: SHIFT2 (=MEMORY BUTTON ) 
-	
+	 0: off
+   1: memory pressed
   
-	
+  
+  
+  
+remix decks info:
+-----------------
+  jaja:
+    sampler mode:
+      press: 
+        cell 1..8
+        (there is no stop cell!)
+        
+      shift:
+        first row:   mute on/off
+        second row  loop/one shot        
+      parameter: select page
+      
+    sampler2 mode:
+      (same, but for row 3..4)
+      
+  pioneer:
+    sampler1:
+      press:
+         cell start
+      shift+press:
+         cell stop    
+    
+    
+pattern recorder:
+-----------------
+  - german tutorial: https://www.bonedo.de/artikel/einzelansicht/workshop-traktor-pro-pattern-sequencer-fuer-dj-midi-controller-programmieren.html
+  - TP3.2.0 Sidekick: https://maps.djtechtools.com/mappings/10079
+    new notes:
+      pads: -> hot cues
+      
+      main: -> search left/right (+shift)
+           -> loop in/out /4 beat
+      
+      
+      encoder: none
+
+  Encoder - 14 Pattern Selector 
+  shift = enter recorder
+
+  "Reverse" Button: Deck C Main Gain Adjust (Hold) 
+    Encoder knob (Deck C gain Adjust) 
+    Knob Button (Reset gain to centre) 
+    
+  "Type" Button: 
+    Selected Slot Sample Selector (Hold) 
+    Encoder knob (Sample selector) 
+
+  "Size" Button: set pattern lenght
+    
+
+  row 2: FX Buttons 
+    Pad 1 - Play / Sequencer on / Sync on
+    
+    Pad 2 - Delete selected slot steps.
+    
+    Pad 3 Hold - use lower 4 buttons to toggle slot monitors. 
+    Pad 3 Hold - Selected Slot Volume Adjust with encoder.
+    
+    Pad 4 Hold - use lower 4 buttons to toggle Slot Fx on.
+    Pad 4 Hold - Selected Slot Filter amount with encoder.
+    
+    
+  row 3 (monitor): lenght selector
+    Pad 1 - 4 steps
+    Pad 2 - 8 steps
+    Pad 3 - 12 steps
+    Pad 4 - 16 steps
+
+  row 3 - monitor: Slot selector / Step Indicator
+    Pad 1 - slot 1
+    Pad 2 - slot 2
+    Pad 3 - slot 3 
+    Pad 4 - slot 4
+    
+    when a slot is selected all the pads will change to the colour of that slot,
+    also there will be a scrolling step indicator 
+      
+
+  row 4: Punch Buttons
+
+      
+  (row 5) STOP Buttons:
+    Buttons 1-4 (Slot Mute)
+
+  
+          
+  -------------
+  <<  E8
+  >>  F8  
+      
+    1: HOTCUE  ==  HOTCUE
+       C-1    C#-1   D-1    D#-1
+       E-1    F-1    F#-1   G-1
+
+    2: ROLL  ==  PAD_FX1          -> padFX
+       E0     F0     F#0    G0
+       G#0    A0     A#0    B0
+   
+       
+     
+remix decks pioneer info:
+-------------------------
+   m1:
+    0 -> 4
+    1 - > 5   (choose page (full)) 
+    
+   m2:  subpage (left/right)
+    0:
+    1:  
+
+    
+   pionneer:
+      press: trigger
+      +shift: stop
+      
+  
       
 Slicer info:
 ------------           
@@ -351,44 +471,45 @@ Pioneer DDJ pad colors:
 	 
 JOG MIDI codes:  (encoder mode: 41/3F ; channels 1..4)
 ---------------
-- SHIFT button:
-      NOTE d#4
+  - SHIFT button:
+        NOTE d#4
 
-- Toggle vinyl on/off:      
-			___NOTE B0___	          button is TOGGLE style. State machine is PER DECK (no feedback on internal state
-                              (eg, decks will send 34 or 35 independently)
-- Touch:
-		TOUCH                F#3   -> jog touch (hold)      
-                               On the DDJ-1000: this is ALWAYS generated  -> Needs variable
-                               On the DDJ-SX2:  this was ONLY generated if "vinyl=on" <<<<
-		TOUCH+shift          G7
+  - Toggle vinyl on/off:      
+        ___NOTE B0___	          button is TOGGLE style. State machine is PER DECK (no feedback on internal state
+                                (eg, decks will send 34 or 35 independently)
+  - Touch:
+      TOUCH                F#3   -> jog touch (hold)      
+                                 On the DDJ-1000: this is ALWAYS generated  -> Needs variable
+                                 On the DDJ-SX2:  this was ONLY generated if "vinyl=on" <<<<
+      TOUCH+shift          G7
+        
+  - rotate (CC):
+      PLATTER (vinyl_on)   34  --> SCRATCH
+      PLATTER (vinyl_off)  35  --> 
+
+      search+PLATTER       41  (nothing)
+      shift +PLATTER       31  --> QUICK SEARCH
+
+      SIDE                 33  --> pitch bend
+      shift+SIDE           38	 --> ?????? used when mechanical jog is no longer pressed!  <<<< ?????
+          
+    Page1 M4: 0 = vinyl mode; 1 = CDJ mode
+    Page1 M1: 6=grid adjusts
+    Page1 M2: 0=scratch mode  1/2=jogFX
+    
+
+    
+    GOOD SEQUENCE:          34 (scratch) -> 35 (scratch)   -> F#3 (touch) -> 33  (bend)
+    ERIKSON:                34 (scratch)                   ->  33 (bend)  -> F#3 (touch)
+      (also _NO_ spin-forward!!)    
       
-- rotate (CC):
-		PLATTER (vinyl_on)   34  --> SCRATCH
-		PLATTER (vinyl_off)  35  --> 
-
- 		search+PLATTER       41  (nothing)
-   	shift +PLATTER       31  --> QUICK SEARCH
-
-		SIDE                 33  --> pitch bend
-		shift+SIDE           38	 --> ?????? used when mechanical jog is no longer pressed!  <<<< ?????
-				
-	Page1 M4: 0 = vinyl mode; 1 = CDJ mode
-  Page1 M1: 6=grid adjusts
-  Page1 M2: 0=scratch mode  1/2=jogFX
-  
-
-  
-  GOOD SEQUENCE:          34 (scratch) -> 35 (scratch)   -> F#3 (touch) -> 33  (bend)
-  ERIKSON:                34 (scratch)                   ->  33 (bend)  -> F#3 (touch)
-    (also _NO_ spin-forward!!)    
-    
-  BAD SEQUENCE:     33 (bend) -> 33 (bend) -> 35 (scratch) -> F#3 (touch) -> 34 (scratch)
-		(copy paste = produces the same sequence, even with holes of Ids)
-    
-	search problem: sensitivity 30% / acceleration 0%	
-    
-    
+    BAD SEQUENCE:     33 (bend) -> 33 (bend) -> 35 (scratch) -> F#3 (touch) -> 34 (scratch)
+      (copy paste = produces the same sequence, even with holes of Ids)
+      
+    search problem: sensitivity 30% / acceleration 0%	
+      
+     
+   
 BROWSER MIDI CODES:  (encoder mode: 01/7F)
 -------------------
 	rotate browser: ch7 CC 64 / CC 100 (shifted)  (<<<<< NO CHANNEL!)
@@ -405,8 +526,9 @@ BROWSER MIDI CODES:  (encoder mode: 01/7F)
 
 	BACK:                f7 / F#7
 	VIEW (ddj-1000):     d9 / G#7 (shift) / g7 (long)
-	
-	
+
+
+
 	
 GRID MIDI CODES:
 ----------------
@@ -420,6 +542,8 @@ GRID MIDI CODES:
   reverse:        G#3
 	slip reverse:   A0
 		
+
+
 		
 MIXER-FX midi codes:  all on ch7 
 -------------------
@@ -683,9 +807,7 @@ DDJ-SR/RR support:
   - shift2 button is missing. This is now mapped to loop capture button  
   - pad modes sequence: minor or no differences at all
    
-   
-
-
+  
 	
 deck shift codes:
 -----------------
@@ -720,9 +842,6 @@ deck shift codes:
 	cue:        c0  / c5
 	
 	
-
-    
-    
 DDJ-1000 screens support:
 -------------------------
   Method 1: 
@@ -879,39 +998,39 @@ DDJ-800 test in a shop:
   
 Pioneer DDJ-1000 MIDI firmware bugs:
 ------------------------------------
- I've experienced the following bugs on the DDJ-1000 firmware (v1.0.6).
- This was confirmed by inpecting the MIDI messages generated / sent by the firmwar in both BOME and MIDI-OX.
- 
- Test conditions:
-   - both in "MIDI forced mode" and "Automatic mode". 
-   - The issues were seen in DJay (https://www.algoriddim.com/hardware) 
-   - and Traktor (https://www.youtube.com/watch?v=h9tQZEHr8hk)
- 
- 
- a) RELEASING pads generates extra messages on the second page. Example:
-      mode 1, page1, pad 1 (P1-L):
-        97 00 7F
-        97 00 00
-        97 08 00    <<<<<< extra
+   I've experienced the following bugs on the DDJ-1000 firmware (v1.0.6).
+   This was confirmed by inpecting the MIDI messages generated / sent by the firmwar in both BOME and MIDI-OX.
+   
+   Test conditions:
+     - both in "MIDI forced mode" and "Automatic mode". 
+     - The issues were seen in DJay (https://www.algoriddim.com/hardware) 
+     - and Traktor (https://www.youtube.com/watch?v=h9tQZEHr8hk)
+   
+   
+   a) RELEASING pads generates extra messages on the second page. Example:
+        mode 1, page1, pad 1 (P1-L):
+          97 00 7F
+          97 00 00
+          97 08 00    <<<<<< extra
 
- b) Deck 1/3 button (D6-L) always sends commands on channel 1. 
-    As such the software cannot know which deck is active
-    
-    (same story for deck 2/4 button)
+   b) Deck 1/3 button (D6-L) always sends commands on channel 1. 
+      As such the software cannot know which deck is active
+      
+      (same story for deck 2/4 button)
 
- c) jog screen sync indicator doesn't react (ch1 note F#6). 
-    The master indicator works fine, however (ch1 note F6)
-        
- d) Pressing and moving jog very slowing doesn't generate any midi messages.
-    This was not the case for the DDJ-SZ, SX2, etc in MIDI mode. 
-    This is also not the case for DDJ-1000 HID mode.
-    
-    This results in very poor accuracy for very tiny jog movements (beatgrid adjust, small scratch, high zooom levels).
-    
- e) when channel 1..4 is selected (F9), the beatFX button (F11) still does not respond to ON/OFF messages. It seems it has its own state machine.
-    result: button blinks when software is in off state
- 
- 
+   c) jog screen sync indicator doesn't react (ch1 note F#6). 
+      The master indicator works fine, however (ch1 note F6)
+          
+   d) Pressing and moving jog very slowing doesn't generate any midi messages.
+      This was not the case for the DDJ-SZ, SX2, etc in MIDI mode. 
+      This is also not the case for DDJ-1000 HID mode.
+      
+      This results in very poor accuracy for very tiny jog movements (beatgrid adjust, small scratch, high zooom levels).
+      
+   e) when channel 1..4 is selected (F9), the beatFX button (F11) still does not respond to ON/OFF messages. It seems it has its own state machine.
+      result: button blinks when software is in off state
+   
+   
 Pioneer DDJ-800 MIDI firmware bugs:
 ------------------------------------
   On the DDJ-800, firmware v1.0.1, I couldn't make the screens produce any MIDI output.

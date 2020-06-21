@@ -1,83 +1,79 @@
 
-A friendly request:
--------------------
-  Please don't be disrespectful for the time that people spend to make complex mappings.
-  Do not press a thumb down without leaving the steps to reproduce any issue you might have!
-  In the majority of the cases this will actually be an user error. Thank you.
-
- 
+  
 CHANGELOG - SUMMARY:
 --------------------
 
-- v6.8.0 - DDJ-1000 - Superknobs, TTFX, Tempo range 
-- v6.7.0 - DDJ-SZ/SX2/SRT - Migrated SZ to a single BOME 
-- V6.6.0 - DDJ-1000 - "CDJ-like features"
-- v6.5.0 - DDJ-1000 - First BOME edition with JogScreens
+  - v7.0.0 - DDJ-1000 - Mapping remade from scratch. 16x SuperKnobs, STEMS, Remix recorder, TTFX, Tempo range 
 
-   -----
-  
-- v6.3.3 - DDJ-1000 - Last edition without BOME
-- v6.1.1 - DDJ-SX2  - Last edition without BOME 	
-- v6.0.0 - DDJ-SZ - First release by DJ_Estrela (TP2)
+    ---
+    
+  - v6.8.0 - DDJ-1000 - Sepcific files for mac and windows
+  - v6.7.0 - DDJ-SZ/SX2/SRT - Migrated SZ to a single BOME 
+  - V6.6.0 - DDJ-1000 - "CDJ-like features"
+  - v6.5.0 - DDJ-1000 - First BOME edition with JogScreens
+  - v6.3.3 - DDJ-1000 - Last edition without BOME
+  - v6.1.1 - DDJ-SX2  - Last edition without BOME 	
+  - v6.0.0 - DDJ-SZ - First release by DJ_Estrela (TP2)
 
     -----
-    
-- v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (TP2)
-- v1.3.0 - Nov 2014 - Last DDJ-SX2 release by JAJA (TP2)
-- v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
-- v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
+      
+  - v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (TP2)
+  - v1.3.0 - Nov 2014 - Last DDJ-SX2 release by JAJA (TP2)
+  - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
+  - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
 
-    
-note:  See also excel file "Technical Info - Version history.xls"
-   
+      
+  note:  See also excel file "Technical Info - Version history.xls"
+     
    
 UNIFIED MAPPING CHANGELOG - DETAILS:
 ------------------------------------
-- v6.8.1 DDJ-1000 - May 2020 - TBD
- v6.8.0 was unreleased. 
- I'm currently recoding large parts of the mapping to enable more features and improve performance a lot.
+- v7.0.0 DDJ-1000 - June 2020 - "the redone from scratch edition".
 
-Done:
-  - beatFX layer redone
-  - whole blink layer redone
-  - removed page 2 hotcues delete
-  - moved from 6 pages to 3 pages
-  
-  
-TBD:
-  - simplified slicer
-  - backwards loop
-  - loop adjust on pressing
-  - superknob configurable + deck3/4 for macroFX
-  - HC4500 elapsed time
-
-
-- v6.8.0 DDJ-1000 - April 2020 - "the SuperKnob / TTFX edition"  (unreleased)
  - Short summary:
-   Another big update to the DDJ-1000/800 Traktor mapping. 
-   Biggest features is turntableFX on play/pause; Filter Superknobs to select FXs on each side; 
-   New double click gestures; many improvements to Tempo; and Initialization/Reset fixes.
+   This mapping was now remade from scratch.
+   Major new features are 16x SuperKnobs, access all 9x MixerFX, Resonant Filter, STEMS, Remix decks recorder, Tempo enlarger, Loop backwards adjust, Turntable FX
+   The mapping is now much faster to load, timestamps are 100% accurate and has dozens of bugfixes to the previous features
    
- - New features:
+ - New v7 features:
+   - 16x Filter SuperKnobs: The filter knob now does 2x different HPF FX, one for each side. Use shift todo LPF instead; use memory todo disable this feature (does classic LPF+HPF).  
+   - MacroFX shortcuts for deck 1&2: deck 1&2 now have two filter knobs instead of one
+   - Access all 9x MixerFX in MIDI: in Windows you can now access all 9x mixerFX by sending mouse clicks to the preferences window
+   - Resonant Filter: Filter now runs in single mode, with a resonant parameter fully turned up (similar to Pioneer filter)
    - TurnTable FX: added TTFX sound to play/pause, on both regular and Flux mode situations (regular: trigger mode; flux: hold mode)
-   - Filter SuperKnob: The filter knob now does 2x different HPF FX, one for each side. Use shift todo LPF instead; use memory todo disable this feature (does classic LPF+HPF).  
-   - MacroFX shortcut: Double tap the CFX selection button to quick select macroFX (laserslicer, flighttest, etc)
-   - MFX enabled: It is now possible to turn on MFXs at an wanted values away from the midpoint
+   - Remix decks recorder: You can now record 16 steps of 1-shots in remix decks, just like the S4 MK3
+   - STEMS: You can change all slot parameters including sample, volume, Filter, FX send, etc
+   - Loop IN Backwards adjust: you can now adjust the IN loop point instead of the OUT point. Very useful when the track just ended.
+   - 4x Echo out: Release FX now is a single button, and has 4x favorite types 
+   - Classic / Parallel layouts: this is now optional and configurable between parallel/classic.
+   - Optimization: mapping is now much faster to load than the previous versions. This is because it uses 2x pages instead of 6x.
    
- - Tempo:
+ - Tempo-specific improvements:
    - Tempo range enlarger: moving the tempo fader enlarges and contracts the tempo range as required
    - Tempo blink: when physical tempo fader doesn't match the real one ("soft takeover"), the value blinks as a warning
    - Elastic beatgrid Sync: turning the jogwheel disables sync. This is useful for emulated elastic beatgrids. Use shift+memory+sync to toggle this feature
    
- - Gestures:
+ - New gestures:
    - Memory button: Double tap: toggle time-elasped/time-remain; Long press: preview total time
    - Deck select: Double tap: toggle parallel/classic views; Shift+tap: disable layout changes
    - Jog Ring: now blinks to warn special situations (jogFX, Reverse, EOT); Flux mode now blinks as well
+   - Next Track / Prev Track: use beatjump buttons to quickly move in a playlist
+   - Loop IN: now zooms and stops the loop to adjust the loop like Rekordbox
    
  - Various:
+   - Jog Timestamps: the timestamps are now 100% accurate by using the HC-4500 mapping.
+   - MFX enabled: It is now possible to turn on MFXs at an wanted values away from the midpoint
    - Beatjump buttons: Swapped main and shift functions to match DDJ-1000SRT
    - Faders initialization: The mapping now queries the initial positions at startup ("pc app connect" undocumented feature)
-   - Bugfixes: Several bugfixes on CDJ blink, parallel waveforms
+   - BeatFX: per channel FX state is now maintained when changing the FX and the channel (including MST)
+   - Blink: warning blinks are now corrected for all leds
+   - Phase: Zoomed phase meter added to key screen value
+   - Hotcues: removed confusing page 2 "delete page"
+ 
+  
+  
+- v6.8.0 DDJ-1000 - April 2020 - "the macOS edition" 
+  - This was small update with macOS-specific files
  
  
 - v6.7.0 DDJ-SZ/SX2 - March 2020 - "BOME migration edition"
