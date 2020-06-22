@@ -983,9 +983,6 @@ which is [very slow when you have large mappings](https://www.native-instruments
 * Close taktor
 
   
-  
-  
-  
 # BOME mappings migration
 
 Traktor has advanced MIDI mapping ([link](https://bit.ly/2NrlVzy)), which is important to extend its longevitity.
@@ -1014,6 +1011,9 @@ Because of this all my latest mappings require [BOME](https://www.bome.com/produ
 * **#2: Sequence of Events**: For PadFX, I *first* need to change the FX, and *then* need to turn it on. This is not something Traktor support; both actions are tried simultaneously resulting in something else. More info: page 88 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
 * **#3: Timers**: Something simple as end-of-track blinking require timers to schedule actions for later. Same story for [vinyl break on the play/pause button](https://www.youtube.com/watch?v=EPnmyDiaJTE), as implemented by [Traktor Mapping Service](http://traktormappingservice.com/)
 * **#4: Any event as a Conditional**: Some events can be inputs to conditionals, like "is in active loop". However many events are missing, for example "which deck is master." To implement this, please see page 87 of the [Rudi Elephant mapping](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf).
+
+Some of these features are possible in QML
+, which i used on the S4Mk3/S8/XDJ-1000mk2, but [is not MIDI](https://www.native-instruments.com/forum/threads/qml-to-midi-out.378533/).
 
 
 ## Why I moved to BOME midi mapping: Traktor Limits
