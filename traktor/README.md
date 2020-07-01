@@ -2501,9 +2501,18 @@ Lady Gaga, Bradley Cooper - Shallow
 * shallow metal: https://www.youtube.com/watch?v=Ftg06g_d6JY
 
 Lady Gaga - Born This Way:
-* born way - original:https://www.youtube.com/watch?v=3Vzrr64ZrVU
+* born way - original: https://www.youtube.com/watch?v=3Vzrr64ZrVU
 * born way - 80s: https://www.youtube.com/watch?v=sGOGRDufIe8
 * born way - metal: https://www.youtube.com/watch?v=XLipQ7AgcsE
+
+Baby Alice - Pina Colada Boy:
+* pina colada - original: https://www.youtube.com/watch?v=u_6xTnJDn2s
+* pina colada - metal: https://www.youtube.com/watch?v=A79ODfdm-Fg
+
+Baby Alice - Pina Colada Boy:
+* pina colada - metal: https://www.youtube.com/watch?v=A79ODfdm-Fg
+* pina colada - original: https://www.youtube.com/watch?v=u_6xTnJDn2s
+
 
 Alan Walker - Diamond Heart 
 * diamond heart - original: https://www.youtube.com/watch?v=sJXZ9Dok7u8
@@ -2695,7 +2704,7 @@ See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments
 
 ## How to fix DDJ-1000 loose jogs
 
-(taken form FB post, to clean up and add pictures)
+this reserach was done by Jason Louis in the DDJ-1000 Users Facebook group.
 
 video: https://www.youtube.com/watch?v=LnvZR3Kiuxs
 
@@ -2727,6 +2736,35 @@ Honestly this is something that pioneer should have done a recall on as I’ve s
 Pioneers stance is to keep quiet when all they had to do is replace this bracket that probably cost them 5.00 to have made. 
 
 The labor for the repair is most likely why they are keeping quiet. It’s just unacceptable.
+
+---------
+
+This is the part that is causing all the problems.
+I think it’s expensive for what it is but at least we have all the information we need.
+Please share this entire post if this can help someone.
+
+https://www.instrumentalparts.com/stay-assy-jog/
+
+-------
+
+Once you remove the back cover you will see many ribbon cables going to a main PCB. Once you remove all of those cables you will start to unscrew the Main PCB and lift out. After that you will need to take out the track load PCB the pad assy pcb and the loop pcb. once you remove those you can access the jog wheel screws. Note you will have to remove the track select knob , the tension adjust knob and the pitch slider cap to remove above boards before getting to the jog assy. unscrew 5 or 6 screw and remove jog assy and then you will see 2 tabs that can be pulled back gently and the jog wheel lifts up and off the unit. that's the easy part. keeping all the screws in order and where they go is something you should draw out somewhere or take pictures for the first time. ALSO make sure all the plastic buttons are seated properly when you put all the PCBs back so you don't have to reopen the device after you fully assemble it. Hope that helps
+
+Understand how to remove the different ribbons cables, also there's a few wires that need to be placed back a certain way, if you keep good notes and have opened and worked around electronics before you can probably do it, but as I stated before... Unless you know what your doing and have some experience in working on electronics or computers I would have someone else do it.
+
+
+----
+
+it’s not easy and I would only recommend you attempt if your good with working on electronics.
+You have to disassemble a lot of the controller just to get the jog wheel out.
+Lots of ribbon cables and removing main and Aux PCB boards
+
+
+![loose 1](../pic_sets/ddj_1000_loose_jogs/ddj-1000_loose_1.jpg?raw=true)!
+![loose 1](../pic_sets/ddj_1000_loose_jogs/ddj-1000_loose_2.jpg?raw=true)!
+![loose 1](../pic_sets/ddj_1000_loose_jogs/ddj-1000_loose_3.jpg?raw=true)!
+![loose 1](../pic_sets/ddj_1000_loose_jogs/ddj-1000_loose_4.jpg?raw=true)!
+![loose 1](../pic_sets/ddj_1000_loose_jogs/ddj-1000_loose_5.jpg?raw=true)!
+
 
   
 ## How to replace the DDJ-1000 filter knobs with Silver knobs
