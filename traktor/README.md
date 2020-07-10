@@ -1380,10 +1380,10 @@ Summary:
 ![](pics/transitions_aligned_beatJumps_-_slide.jpg?raw=true)
 
 
+
 ## What are demos of advanced mapping tricks
 
 In order of complexity:
-
 
 ### 0) Browse List or Tree (like rekordbox or Serato)
 
@@ -1661,22 +1661,57 @@ TODO: add more high-quality webinars.
  
 TBD: https://ask.audio/articles/how-to-create-two-advanced-mappings-in-traktor-pro
   
-## List of advanced MIDI mappings
+## List of single feature MIDI mappings
+
+Below is a list of mappings that showcase a single isolated feature.
+These are excellent to learn mapping without getting an avalanche of thousands of unrelated entries.
+
+If you are experienced, these are useful "standarized building blocks" to add to your own mappings.
+  
+* **DJ Estrela:**
+  * **Preview Player:** https://maps.djtechtools.com/mappings/10915
+  * **Backwards loop and Reloop:** https://maps.djtechtools.com/mappings/10252
+  * **BOME access all 9x mixerFX:** https://maps.djtechtools.com/mappings/10575
+* **Stewe (beginner):**  
+  * **Scroll Playlists:** https://forum.djtechtools.com/showthread.php?t=88950&p=731238#post731238
+  * **One-button beatmasher:** https://maps.djtechtools.com/mappings/7851
+  * **One button MixerFX:** https://maps.djtechtools.com/mappings/8915
+  * **One button Ramp delay:** https://maps.djtechtools.com/mappings/7853
+* **Stewe (advanced):**
+  * **Four-button beatmasher:** https://maps.djtechtools.com/mappings/7862
+  * **4 deck routing FX concept:** https://maps.djtechtools.com/mappings/2376
+  * **S4 Mk3 mixerFX-style on Mk2:** https://maps.djtechtools.com/mappings/9753
+  * **Double deck focus:** https://maps.djtechtools.com/mappings/1536
+  * **Twister Insta MixerFX:** Midi Fighter Twister Insta Mixer FX (TPro3)
 
 
-Besides [my own mappings](#Free-Mappings), these are other advanced mappings that I've used before and recommend.
-Studying these mappings is a great way to learn advanced MIDI mapping.  
+## List of Advanced MIDI mappings
 
-* **Stewe:**
-  * **Kontrol S4 MK3 Ninja:** https://maps.djtechtools.com/mappings/9325
+These are the most complete mappings I've seen, which extend **significantly** Traktor with a lot of useful features.
+
 * **Tekken:**
   * **S4 ultimate mapping:** https://maps.djtechtools.com/mappings/9277
   * **F1 ultimate mapping:** https://maps.djtechtools.com/mappings/652
-* **DJ Tech Tools:**
-  * **Twisted Gratification:** https://maps.djtechtools.com/mappings/5437
+* **DJ TechTools official:**
+  * **Twisted Gratification:** https://maps.djtechtools.com/mappings/5437  ([newer version](https://maps.djtechtools.com/mappings/10645)) 
   * **DJTT Kontrol S4 MK2:** https://maps.djtechtools.com/mappings/2211
+  * **One button contest:** https://maps.djtechtools.com/mappings/3619
+* **Joe Easton S4 Hack**:
+  * **Official Thread:** https://www.native-instruments.com/forum/threads/348471/
+  * **Review:** https://djworx.com/traktor-s4-mk3-screen-hack-hits-version-2-0/
+* **Aleix Jiménez Supreme Edition **:
+  * **Official thread:** https://www.native-instruments.com/forum/threads/348539  
+* **Stewe:**
+  * **Kontrol S4 MK3 Ninja:** https://maps.djtechtools.com/mappings/9325
+  * **Midi Fighter Ninja:** https://maps.djtechtools.com/mappings/1536
+  * **4 deck stem control:** https://maps.djtechtools.com/mappings/7332
+  * **Isolator FX cut/add:**  https://forum.djtechtools.com/showthread.php?t=72493
+  * **Midifighter 64 sequencer:** https://maps.djtechtools.com/mappings/7645
+  * **Livid CNTRL:R Ultimate:** https://forum.djtechtools.com/showthread.php?t=68678
 
-Another good indicator is the list of most downloaded mappings (click "Downloads" to sort:\
+  
+  
+Another good indicator is the list of most downloaded mappings (click "Downloads" to sort):
 * https://maps.djtechtools.com/mappings?search%5Bsoftware_id%5D=29 )
 
 Other lists of advanced mappings:
@@ -2422,7 +2457,8 @@ Out of the box, MIXXX has a very impressive number of advanced DJ features:
 It has [dozens more DJ standard features](https://mixxx.org/features) as well like Loops, Sampler, HotCues, Quantize, Censor, EQ, etc.
 
 I've made a review of MIXXX 2.3 from the point of view of a heavy Traktor user:
-https://www.mixxx.org/forums/viewtopic.php?f=1&t=13355
+* old link: https://www.mixxx.org/forums/viewtopic.php?f=1&t=13355
+* new link: https://mixxx.discourse.group/t/my-first-mixxx-experience-coming-from-traktor/18419
     
 Another Traktor vs MIXXX comparison: https://www.mixxx.org/forums/viewtopic.php?f=1&t=13267    
 
@@ -2796,8 +2832,6 @@ Folder with pictures of the knobs: [here](../pic_sets/silver_knobs)
   * this was confirmed to work [by another user](https://www.facebook.com/photo.php?fbid=3050933838255437&set=gm.672781936578130&type=3&theater&ifg=1)
 
   
-  
-  
 ## DJ Census over time results
 
 Digital DJ Tips and DJ Tech Tools collect yearly data on the most popular software and controllers. 
@@ -2818,9 +2852,9 @@ What did you enjoyed the most? please tell me to pedro.estrela@gmail.com
 
 * Knowledge Base: 16K words 
   * https://github.com/pestrela/music/blob/master/traktor/README.md
-* DDJ-1000 mapping: 4K downloads  
+* DDJ-1000 mapping: 4.6K downloads  
   * https://maps.djtechtools.com/mappings/9279
-* DDJ-SX2/SZ/SRT mapping: 3K downloads 
+* DDJ-SX2/SZ/SRT mapping: 3.5K downloads 
   * https://maps.djtechtools.com/mappings/9222
 * CMDR Changelog: 80 lines
   * https://github.com/pestrela/cmdr#2020-improvements 
@@ -2897,6 +2931,7 @@ Biggest difference to the group above is that I had much less interactions with 
 [Sara Simms](https://ask.audio/author/sara-simms) (Reviews, Tutorials),
 [Joe Easton](https://www.facebook.com/pages/category/Entrepreneur/Traktor-S4MK3-Screen-Mods-by-Joe-Easton-440250006776588/) (S4 MK3 Screen),
 [Aleix Jiménez](https://www.native-instruments.com/forum/threads/supreme-edition-mod-traktor-s5-s8-d2-screen-mapping-mod.348539/) (S5/S8/D2 Screen + Mapping mod),
+[Erik Minekus](https://github.com/ErikMinekus/traktor-kontrol-screens) (S5/S8/D2 Screen modifications),
 
 
       
