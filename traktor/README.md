@@ -312,7 +312,7 @@ Traktor has unique features - big and small - that I depend on.\
 Other softwares have nice unique features too, but I built my workflows on these specific ones.
 
 Posts:
-* [a) Automatic database repair (mass relocate)](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
+* [a) Automatic database repair (mass relocate)](#why-is-traktor-my-software-of-choice-a-automatic-finds-moved--renamed-files-mass-relocate)
 * [b) OS Search (no playlists)](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists)
 * [c) Advanced MIDI mapping](#why-is-traktor-my-software-of-choice-c-advanced-midi-mapping)
 * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
@@ -439,6 +439,14 @@ Of which I recommend these files:
 * NR_FeverLine.stem.mp4
 * PR_OhNo.stem.mp4
 
+# Sound Quality
+
+## Choice of limiter and EQ
+
+DAVE shares his config here on limiter and EQ
+https://www.youtube.com/watch?v=xQ35ZDC3HIg
+
+TODO: settings that Ean Golden and others use.
 
 
 # Effects 
@@ -852,6 +860,7 @@ This is a revised version of the [basic workflow(#How-to-emulate-Elastic-Beatgri
 Benefits are more accuracy of the end result because it adds additional beatmarkers every 4 beats, 
 it avoids the [26ms mp3 shift issue](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
 and its a lot faster by limiting the tracks and by directly patching the cues in the collection (instead of regular importing the files).
+
 
 
 **Concrete differences:**
@@ -1621,6 +1630,7 @@ If you are dedicated enough, experimenting and trying these materials for yourse
 
 ## List of Introductory DJ Tutorials / Exercises
 
+TBD.  
 For now, see: https://www.mixxx.org/wiki/doku.php/beginner_dj_links
  
 ## List of beginner tips
@@ -1631,7 +1641,28 @@ https://www.digitaldjtips.com/2012/09/10-hidden-traktor-gems-for-better-djing/
 
 (more to add)
 
-  
+
+## Recommendation to DJTT DJ course
+
+<https://store.djtechtools.com/products/dj-techtools-live-master-classes>
+
+I've been very lucky to be in the first 2x interactive DJ course by Ean Golden. The level ranges from Intermediate to  Advanced, with an emphasis in advanced, which I really enjoyed.
+
+An absolute bargain for the price, you get 6x completely interactive sessions where Ean explains extremly useful and real-world proven DJ techniques, covering the entire DJing spectrum.  
+There you see Ean's real collection, tracks, cues and loops, where he shows over and over the techniques that he wrote in DJTT blog posts since 2007.  
+<https://djtechtools.com/2015/05/17/the-history-of-dj-techtools/>
+
+Even better, you can ask any question at any time. But crucially, the questions are moderated by RandomFPV (Chris Benoit), to ask them in the best order and at the best possible time. This SIGNIFICANTLY improves this process to be a lot more efficient and clear.
+
+The cherry on top of the cake is an after-party zoom call where you discuss and interact these and other
+ topics with your peers - the other students - from all over the world.
+
+AFAIK this course and format is unique. It specifically targets intermediate and advanced levels. While very high-quality as well, AFAIK other courses are only prerecorded and are typically start at beginners and up.  
+Nothing wrong with that, but I personally prefer this model and target audience a lot more.
+
+Looking forward more follow-up courses, namely by other high-quality Tutors, in the same efficient format.
+
+
 ## List of Technical Webinars
 
 * **Jeroen Groenendijk**
@@ -1709,8 +1740,7 @@ These are the most complete mappings I've seen, which extend **significantly** T
   * **Midifighter 64 sequencer:** https://maps.djtechtools.com/mappings/7645
   * **Livid CNTRL:R Ultimate:** https://forum.djtechtools.com/showthread.php?t=68678
 
-  
-  
+
 Another good indicator is the list of most downloaded mappings (click "Downloads" to sort):
 * https://maps.djtechtools.com/mappings?search%5Bsoftware_id%5D=29 )
 
@@ -1786,7 +1816,7 @@ This is the current situation as far as I tested it myself:
 * **[DJCU](https://www.facebook.com/DJConversionUtility/posts/568896026977298)**: This is a macOS-only application. Recently it got the hability to convert windows files, but still from macOS only. They have a manual tool to correct the shifts after conversion (REKU). More recently they correct shifts automatically using the encoder strings. This is something that I researched before and replaced with LAME/LAVC/LAVF tags instead.
 * **[Rekordbuddy](https://next.audio/)**: This is also a macOS-only application. A Windows version is on the works for many years. This app corrects some shift cases correctly automaticlaly, but it misses others as well (when I tested it on a macOS VM).
 * **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
-* **[Choones](https://support.choones.app/guides)**: To be tested. Choones is an upcoming web application that does cloud-based conversion among many other features. At time of writing this is not publicly available. I've contated the team by email, and they told me they are aware of the 26ms shift issue.
+* **[Mixo](https://support.mixo.dj/guides)**: To be tested. Mixo is an upcoming web application that does cloud-based conversion among many other features. At time of writing this is not publicly available. I've contated the team by email, and they told me they are aware of the 26ms shift issue.
 
 
 # Free DJ Software Tools
@@ -1844,10 +1874,9 @@ Documentation: https://github.com/cmdr-editor/cmdr#2020-improvements
 * many new Shortcuts (channel change, modifier rotation
 * FX list and encoder mode fixes; same sorting as controller manager
 
-![CMDR ChangeLog](https://raw.githubusercontent.com/cmdr-editor/cmdr/master/docs/pics/cmdr_improvements1.png "eedd" )
+![CMDR ChangeLog](https://raw.githubusercontent.com/cmdr-editor/cmdr/master/docs/pics/cmdr_improvements1.png)
 
 ## How can I run CMDR in my macOS?
-
 
 There is three ways to edit your mappings in macOS.
 
@@ -1914,6 +1943,7 @@ Steps AFTER the set (both live sets and prepared sets):
 * convert the tags inside the WAV into a CUE file, using this software: http://www.stefanbion.de/cuelisttool/index_e.htm
 * merge the CUE file with the Tracklist file using cue_merge_cues.py
 * upload the mix to http://mixcloud.com/dj_estrela
+* transfer the mix automatically to https://hearthis.at/djestrela/#sets
   
   
 Overview of the Cue tools:
@@ -1930,7 +1960,50 @@ Overview of the Cue tools:
 * **cue_rename_cue.sh:**
   *  matches the CUE file contents with the FILE tag. This is useful when you rename the files externally.
 
+## How much time do you take to make each mix
   
+A LOT of time. Much much more than simply the running time of each mix.  
+I'm always easily preparing/recording/finishing say 8 mixes at a time, 
+so the whole process for any given mix can easily take months.
+
+Why so much time? Is is worth it?  
+You tell me :). Check for yourself in <https://djestrela.com/>. List of styles are in the bottom of this post.
+
+In short all my mixes are carefully planned [to tell a story](https://djtechtools.com/2013/10/13/the-stage-principle-playing-a-show-with-your-music/),
+by focusing on a specific [overall theme](#Retro-Remixes) or [sub-sub-style](https://hearthis.at/djestrela/set/djestrelatrancevocal/).
+All my mixes are post-mastered with a single loundness, and feature a [clean tracklist](https://github.com/pestrela/music/blob/master/tracklists/DJ%20Estrela%20-%20Karas%20Club%20Remember%20-%20Mar%202020.txt) and [whole lyrics](https://github.com/pestrela/music/blob/master/tracklists/DJ%20Estrela%20-%20Karas%20Club%20Remember%20-%20Mar%202020.lyrics).
+
+I've built some [software tools]() to speedup some parts of this process.
+
+Major styles in <https://djestrela.com/>:
+* Trance 
+  * Vocal Trance
+  * Uplifitng Trance
+  * Tech Trance
+* 80s:
+  * Italo Disco
+  * Rock FM
+  * "regular" 80s Pop and Rock
+* Top-40
+  * Commercial House, per decade
+  * Latin / Reggaeton
+  
+See below for a much more detailed version of this post.
+
+## How much time do you take to make each mix - Worst case
+
+In the worst case I take months to do a single 90 minute set. This post describe all steps of such mix.
+
+Preparation:
+* find music:
+  * 
+* collect 
+* group the files in folders, per style (Vocal Trance, Uplifting trance, etc)
+* select the tracks and their order using winamp; Once this is OK, run "cue_renumber_files.py" and "cue_make_tracklist.sh".
+ 
+TODO: finish this post, add picture
+
+
 ## What Programming libraries and technical scripts did you author?
 
 Please see my open-source github repos in https://github.com/pestrela?tab=repositories
@@ -2170,9 +2243,17 @@ Confirm your cable does NOT have these labels:
 * 28AWGX2C
 * AWG 28X2C
  
-In general you want the "2C" label to have "24" and not "28".\
-full info: https://support.native-instruments.com/hc/en-us/articles/210293725-Choosing-the-Correct-USB-Cable-for-Your-NI-Hardware-Device
-more info2: https://goughlui.com/2014/10/01/usb-cable-resistance-why-your-phonetablet-might-be-charging-slow/
+In general you want the "2C" label to have "24" and not "28".
+
+Even in the case your device is externally powered, a bad cable may still have data issues.
+
+In this case use this info as an heuristic: a cheap cable that is poor for delivering power is also probably cheap on the data side.
+
+
+
+More info: 
+* https://support.native-instruments.com/hc/en-us/articles/210293725-Choosing-the-Correct-USB-Cable-for-Your-NI-Hardware-Device
+* https://goughlui.com/2014/10/01/usb-cable-resistance-why-your-phonetablet-might-be-charging-slow/
 
 
 ## How to enable Traktor verbose log
@@ -2255,8 +2336,7 @@ For years I've used a linux VM inside windows, but now I only use WSL.
 * Integration with python: https://towardsdatascience.com/setting-up-a-data-science-environment-using-windows-subsystem-for-linux-wsl-c4b390803dd
 * Integration with visual studio: https://devblogs.microsoft.com/commandline/an-in-depth-tutorial-on-linux-development-on-windows-with-wsl-and-visual-studio-code/
 
- 
-
+See also [mixxx compilation topics on windows]().
 
 ## Generic Windows tweaks and programs I use 
 
@@ -2337,39 +2417,44 @@ The XML vendor lock is a **deal breaker** for me.\
 The dead V5 license is quite annoying (there will be no V5 improvements and I don't expect any support moving forward).
   
 ## How did the industry commenters reacted to the v6 XML export issue?
+
 (Post to be updated periodically. Please send updates to pedro.estrela@gmail.com)
 
-
-* Digital DJ Tips: https://www.digitaldjtips.com/2020/04/rekordcloud-mixo-apps-offer-new-dj-library-conversion-tools/
+* DJ Worx: <https://djworx.com/atgrs-6tox-scales-the-rekordbox-6-walled-garden/>
+  * "as each manufacturer continues to build higher walls around their ecosystems to keep you trapped inside. "
+  * "will only last as long as Pioneer DJ doesn’t change the encryption key, which could be tomorrow or could be never."
+  * "This alone tells me that this is a totally pointless method on Pioneer DJ’s part and that they need to change, or ideally ditch encryption completely."
+* Digital DJ Tips: <https://www.digitaldjtips.com/2020/04/rekordcloud-mixo-apps-offer-new-dj-library-conversion-tools/>
   * "What about this Rekordbox 6 issue? none of the conversion apps out there old or new except Rekordcloud works with Rekordbox 6 exporting, because your data is locked down inside Rekordbox 6 in a way it wasn’t in previous versions."
-* DJ Tech Tools: https://djtechtools.com/2020/04/14/rekordbox-6-now-with-cloud-library-syncing/
-  * (issue not specifically covered)
-* DJ Worx: https://djworx.com/rekordbox-6-puts-your-library-in-the-cloud/
-  * (issue not specifically covered)
-* DJCU: https://www.reddit.com/r/DJs/comments/g11s3l/xml_implicationslimitations_of_the_new_rekordbox/
+* DJ Tech Tools: <https://djtechtools.com/2020/04/14/rekordbox-6-now-with-cloud-library-syncing/>
+  * (issue was not specifically covered AFAIK)
+* DJCU: <https://www.reddit.com/r/DJs/comments/g11s3l/xml_implicationslimitations_of_the_new_rekordbox/>
   * "Call to arms: I ask all DJs regardless if they use my tools or not, ask Pioneer DJ to bring the export to XML function back, and while at it, ask them to fix the XML import. Don't go mad at Pulse"
-* Rekordcloud: https://rekord.cloud/blog/technical-inspection-of-rekordbox-6-and-its-new-internals 
+* Rekordcloud: <https://rekord.cloud/blog/technical-inspection-of-rekordbox-6-and-its-new-internals>
   * "It could be different: In case Pioneer reads this: do the right thing and open up Rekordbox."
-* Rekordbuddy: https://forums.next.audio/t/rekord-buddy-and-rekordbox-6-do-not-upgrade-for-now/2257/15
+* Rekordbuddy: <https://forums.next.audio/t/rekord-buddy-and-rekordbox-6-do-not-upgrade-for-now/2257/15>
   * "I’ve always done things by the book with Rekord Buddy and so my first reaction is to make we stay within the law here."
-* Mixo: https://support.mixo.dj/guide/rekordbox-6?search=9676776fd018f4b4ec565dcf1c1db0f6
+* Mixo: <https://support.mixo.dj/guide/rekordbox-6?search=9676776fd018f4b4ec565dcf1c1db0f6>
   * "We would recommend that users who wish to move their Rekordbox collections to other DJ Software avoid updating to Rekordbox 6"
 
 My own comment is the following:
 * Pedro Estrela:  https://djworx.com/traktor-s4-mk3-screen-hack-hits-version-2-0/
   * "MIXXX is fully open. After the RB6 database encryption story last week, and all this years of Traktor workarounds, it looks the best way forward."
   
- 
 
 ## Issues of the V6 Rekordbox migration - Minor
   
-Besides the XML export and the bought licenses problem there is additional smaller issues:\
-no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;\
+Besides the XML export and the v5 licenses problems, there are additional smaller issues:  
+no search box on the explorer node; no midi mapping with modifiers, multiple actions and CFX selector;  
 Cannot physically delete files inside RB. Still hotcues do not move the floating cue.
 
-On the plus side, it now automatically auto-relocate renamed and moved tracks. This is a [major improvement]([a) Automatic finds moved files](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)).\
-It also has shared audio and video playlists.\
-It also has a Day skin, which is something [all OS already support](#How-to-enable-day-skin-in-any-software)
+Also there is a bug since 5.6.1 when [importing XML](https://www.youtube.com/watch?v=JV89dj1hDWM).  
+(note: do not confuse the v5.6.1 XML **import** bug with the v6 missing XML **export** issue.) 
+
+On the **plus side**, it now automatically auto-relocate renamed and moved tracks. 
+This is a [major improvement](#why-is-traktor-my-software-of-choice-a-automatic-finds-moved--renamed-files-mass-relocate).  
+It also has shared audio and video playlists.  
+It also has a Day skin, which is something [all OS already support](#How-to-enable-day-skin-in-any-software)  
 
 The other functions I either do not use (streaming, ableton link) or have my own solution ([automatic sync using a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)).
  
@@ -2471,6 +2556,20 @@ On the 4 Deck controllers it supports the SX, which is compatible to the other S
 For the [DDJ-1000](https://www.mixxx.org/wiki/doku.php/ddj-1000) there is a first mapping with the [jog screens](https://www.mixxx.org/forums/viewtopic.php?f=7&t=13346).
 
 I intend to contribute to MIXXX my own DDJ-1000/SX2/SZ mappings soon, based on my [Traktor mappings experiences](#Free-Mappings).
+
+## MIXXX compilation on windows
+
+These links explain how to compile mixxx in windows:
+* https://github.com/mixxxdj/mixxx/wiki/compiling_on_windows
+* https://github.com/mixxxdj/mixxx/wiki/Build%20Windows%20installer
+* https://github.com/mixxxdj/mixxx/wiki/visual_studio_community
+
+Potentially, compiling in the WSL could have simpler dependencies:
+* https://mixxx.zulipchat.com/#narrow/stream/109695-_support/topic/Compiling.20mixxx.20on.20windows
+* https://mixxx.zulipchat.com/#narrow/stream/109171-development/topic/VScode.20CMake.20setup
+
+This is teh latest work on the elastic beatgrids
+* https://github.com/mixxxdj/mixxx/pull/2877
 
     
 # Music Styles
@@ -2880,31 +2979,32 @@ Most of them I've either meet them in person, or I had numerous conversations wi
 
 * **Ean Golden:**
   * Inventor of Controlerism, Founder of DJtechtools, Hundreds of articles, Workshops
-  * https://djtechtools.com/author/Admin/
+  * <https://djtechtools.com/author/Admin/>
+  * <https://djtechtools.com/2015/05/17/the-history-of-dj-techtools/>
 * **Phill Morse:**
   * Founder of DigitalDJTips (biggest online DJ school), Hundreds of articles
-  * https://www.digitaldjtips.com/category/news/
+  * <https://www.digitaldjtips.com/category/news/>
 * **Stevan Djumic:**
   * Dozens of very high quality Traktor mappings. Reverse engineering his mappings was a major turning point for me.
-  * https://my.djtechtools.com/users/3776
+  * <https://my.djtechtools.com/users/3776>
 * **Jeroen Groenendijk:**
   * Multiple workshops and generic techtalks
-  * https://www.facebook.com/pg/DJResource/videos/
+  * <https://www.facebook.com/pg/DJResource/videos/>
 * **Peter van Ruiten:**
   * Author of the DJCU converter. Dozens of videos about conversion and DJ collection management
-  * https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/videos
+  * <https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/videos>
 * **Christiaan Maaks:**
   * Author of the rekordcloud online converter. Lots of generic info applicable to all converters  
-  * https://rekord.cloud/wiki/
+  * <https://rekord.cloud/wiki/>
 * **Alex Coyle:**
   * Author of the open-source DJ converter. I worked with him over months to research the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
-  * https://github.com/digital-dj-tools/dj-data-converter/issues/3
+  * <https://github.com/digital-dj-tools/dj-data-converter/issues/3
 * **DJ TLM:**
-  * Dozens of tutorials on Scratching
-  * https://www.youtube.com/user/djTLMtv/videos?view=0&sort=dd&flow=grid
+  * Dozens of tutorials on Scratching>
+  * <https://www.youtube.com/user/djTLMtv/videos?view=0&sort=dd&flow=grid
 * **Teo Tormo:**
   * Dozens of articles on advanced midi mapping and DJ hacking.
-  * https://djtechtools.com/author/teotormo/
+  * <https://djtechtools.com/author/teotormo/>
   
   
 **Honorable mentions:**\
@@ -2935,6 +3035,4 @@ Biggest difference to the group above is that I had much less interactions with 
 
 
       
-      
-
-
+    
