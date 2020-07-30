@@ -2990,7 +2990,7 @@ Most of them I've either meet them in person, or I had numerous conversations wi
 * **Jeroen Groenendijk:**
   * Multiple workshops and generic techtalks
   * <https://www.facebook.com/pg/DJResource/videos/>
-* **Peter van Ruiten:**
+* **Mix Master G:**
   * Author of the DJCU converter. Dozens of videos about conversion and DJ collection management
   * <https://www.youtube.com/channel/UCMXHg5Oi8vlfKyEvsgrMRuQ/videos>
 * **Christiaan Maaks:**
