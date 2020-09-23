@@ -90,7 +90,9 @@ See below for a longer Table of contents.
   * [How large is your collection? How complex is your collection?](  #How-large-is-your-collection-How-broad-is-your-collection)
   * [Why I manage music using OS-folders only](#why-i-manage-music-using-os-folders-only)
   * [How to manage your collection using operating systems folders and without DJ playlists](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc)
-  
+  * [Do you use mp3 file metadata?](#do-you-use-mp3-file-metadata)
+  * [How do you achieve independence from DJ software](#how-do-you-achieve-independence-from-dj-software)
+
 * [Traktor software](#Traktor-software)
   * [Why is Traktor my software of choice](#why-is-traktor-my-software-of-choice)
     * [a) Automatic finds moved files](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate)
@@ -99,8 +101,12 @@ See below for a longer Table of contents.
     * [d) Hotcues move the temporary cue as well](#why-is-traktor-my-software-of-choice-d-hotcues-move-the-temporary-cue-as-well)
     * [e) Stronger Sync than others](#Why-is-Traktor-my-software-of-choice-e-Stronger-Sync-than-others)
   * [Which features I miss in Traktor](#Which-features-I-miss-in-Traktor)
+  * [Include subcrates like serato](#include-subcrates-like-serato)
   * [STEMS automatic creation](#How-to-create-your-own-karaoke-files-automatically-using-Stems-and-AI)
 
+* [Sound Quality](#sound-quality)
+  * [Choice of limiter and EQ](#choice-of-limiter-and-eq)
+  
 * [Effects](#Effects)
   * [Description of the basic effects](#description-of-the-basic-effects)
   * [How to create unique effects by chaining base effects](#how-to-create-unique-effects-by-chaining-base-effects)
@@ -128,7 +134,7 @@ See below for a longer Table of contents.
   * [Why I moved to BOME midi mapping: Traktor Limits](#Why-I-moved-to-BOME-midi-mapping-Traktor-limits)
   * [BOME limits](#Some-Limitations-of-BOME-mappings)
   * [How I see the future of Traktor mappings](#How-I-see-the-future-of-Traktor-mappings)
-
+  
 * [Hardware Controllers](#Hardware-Controllers)
   * [Why is DDJ-1000 my hardware of choice](#why-is-ddj-1000-my-hardware-of-choice)
   * [DDJ-1000 comparison to DDJ-SZ and AKAI AMX](#DDJ-1000-comparison-to-DDJ-SZ-and-AKAI-AMX)
@@ -162,25 +168,35 @@ See below for a longer Table of contents.
   * [Is the DDJ-XP2 mappable to Traktor?](#is-the-ddj-xp2-mappable-to-traktor)
   * [Does (random DDJ controller) works with your mapping? Are the jogs good?](#Does-random-DDJ-controller-works-with-your-mapping-Are-the-jogs-good)
   
-* [DJ Tutorials](#DJ-tutorials)
-  * [List of Online DJ Courses](#List-of-Online-DJ-Courses)
-  * [List of Technical Webinars](#List-of-Technical-Webinars)
-  * [Midi mapping tutorials](#Midi-mapping-tutorials)
-  * [List of advanced MIDI mappings](#List-of-advanced-MIDI-mappings)
- 
-* [DJ collection converters](#DJ-collection-converters)
+* [DJ Tutorials](#dj-tutorials)
+  * [List of Online DJ Courses](#list-of-online-dj-courses)
+  * [List of Introductory DJ Tutorials / Exercises](#list-of-introductory-dj-tutorials--exercises)
+  * [List of beginner tips](#list-of-beginner-tips)
+  * [Recommendation to DJTT DJ course](#recommendation-to-djtt-dj-course)
+  * [List of Technical Webinars](#list-of-technical-webinars)
+  * [Midi mapping tutorials](#midi-mapping-tutorials)
+  * [List of single feature MIDI mappings](#list-of-single-feature-midi-mappings)
+  * [List of Advanced MIDI mappings](#list-of-advanced-midi-mappings)
+      
+* [DJ collection converters](#dj-collection-converters)
   * [What is the 26ms shift issue when converting cues/loops between softwares?](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares)
+  * [26ms shift issue links](#26ms-shift-issue-links)
+  * [26ms shift algorithm](#26ms-shift-algorithm)
   * [Which DJ converters avoid the 26ms shift issue?](#which-dj-converters-avoid-the-26ms-shift-issue)
+  * [What is the source code that implements the 26ms algorithm?](#what-is-the-source-code-that-implements-the-26ms-algorithm)
 
   
-* [Free DJ Software Tools](#Free-DJ-Software-Tools)
-  * [Traktor tools overview](#what-software-tools-did-you-built-for-Traktor)
-  * [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
-  * [Elastic Beatgrids emulation](#How-to-emulate-elastic-beatgrids-in-Traktor)
-  * [Tracklist and CUE tools](#how-i-build-perfect-tracklists-using-cue-files)
-  * [Github Markdown tools](#Github-Markdown-tools)
-  * [Youtube, Google an Discogs shortcuts](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs)
-  * [Programming libraries](#what-programming-libraries-and-technical-scripts-did-you-author)
+* [Free DJ Software Tools](#free-dj-software-tools)
+  * [What software tools did you built for Traktor?](#what-software-tools-did-you-built-for-traktor)
+  * [What features did you add to the CMDR TSI editor?](#what-features-did-you-add-to-the-cmdr-tsi-editor)
+  * [How can I run CMDR in my macOS?](#how-can-i-run-cmdr-in-my-macos)
+  * [How I build perfect tracklists using CUE files](#how-i-build-perfect-tracklists-using-cue-files)
+  * [How much time do you take to make each mix](#how-much-time-do-you-take-to-make-each-mix)
+  * [How much time do you take to make each mix - Worst case](#how-much-time-do-you-take-to-make-each-mix---worst-case)
+  * [What Programming libraries and technical scripts did you author?](#what-programming-libraries-and-technical-scripts-did-you-author)
+  * [Open-Source useful information](#open-source-useful-information)
+  * [Github Markdown tools](#github-markdown-tools)
+  * [What shortcuts you added for Youtube, Google and Discogs?](#what-shortcuts-you-added-for-youtube-google-and-discogs)
 
   
 * [DJ Software optimization](#DJ-Software-optimization)
@@ -198,41 +214,39 @@ See below for a longer Table of contents.
   
 * [Windows usage](#Windows-usage)
   * [Why I use Windows instead of Mac](#Why-I-use-Windows-instead-of-Mac)
+  * [WSL Linux shell on Windows](#wsl-linux-shell-on-windows)
   * [Generic Windows tweaks and programs I use](#Generic-Windows-tweaks-and-programs-I-use)
   * [How to use QQTabBar with multiple tabs, folder bookmarks and program launchers](#How-to-use-QQTabBar-with-multiple-tabs-folder-bookmarks-and-program-launchers)
   * [How to add WSL scripts to QQTabBar](#How-to-add-WSL-scripts-to-QQTabBar)
 
-
-* [Rekordbox v6 topics](#Rekordbox-v6-topics)
-  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
-  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
-  * [What is NOT unlocked in the Rekordbox V6 hardware options](#What-is-NOT-unlocked-in-the-Rekordbox-V6-hardware-options)
-  * [How to ignore Rekordbox upgrades](#How-to-ignore-Rekordbox-upgrades-completely)
-
+* [Rekordbox v6 topics](#rekordbox-v6-topics)
+  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-v6-rekordbox-migration---major)
+  * [How did the industry commenters reacted to the v6 XML export issue?](#how-did-the-industry-commenters-reacted-to-the-v6-xml-export-issue)
+  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-v6-rekordbox-migration---minor)
+  * [What is NOT unlocked in the Rekordbox V6 hardware options](#what-is-not-unlocked-in-the-rekordbox-v6-hardware-options)
+  * [How to ignore Rekordbox upgrades completely](#how-to-ignore-rekordbox-upgrades-completely)
+  * [How to enable day skin in any software](#how-to-enable-day-skin-in-any-software)
 
 * [MIXXX topics](#mixxx-topics)
   * [What makes MIXXX unique](#what-makes-mixxx-unique)
   * [How complete is MIXXX?](#how-complete-is-mixxx)
   * [DDJ support in MIXXX](#ddj-support-in-mixxx)
-  
-  
+  * [MIXXX compilation on windows](#mixxx-compilation-on-windows)
+   
 * [Music Styles](#Music-Styles)
   * [Retro, Metal and Reggae remixes](#What-are-Retro-Metal-and-Reggae-remixes)
   * [Examples of Retro, Metal and Reggae remixes](#Examples-of-Retro-Metal-and-Reggae-remixes)
   * [Sets Reconstructing for learning purposes](#How-to-learn-good-transition-points-by-reconstructing-sets)
-
   
-* [Other topics](#Other-topics)
-  * [Issues of the V6 Rekordbox migration - Major](#issues-of-the-V6-Rekordbox-migration---major)
-  * [Issues of the V6 Rekordbox migration - Minor](#issues-of-the-V6-Rekordbox-migration---minor)
-  * [How to enable day skin in any software](#How-to-enable-day-skin-in-any-software)
-  * [How I recorded my old radio show recordings and found the IDs](#How-I-recorded-my-old-radio-show-recordings-and-found-the-IDs)
-  * [How I edited my videos showing the Traktor screen](#How-I-edited-my-videos-showing-the-Traktor-screen)
-  * [How I synchronize and backup my whole Traktor structure across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
-  * [How to replace the DDJ-1000 filter knobs with Silver knobs](#How-to-replace-the-DDJ-1000-filter-knobs-with-Silver-knobs)
-  * [DJ Census over time results](#DJ-Census-over-time-results)
-  * [Some metrics of my free contributions](#Some-metrics-of-my-free-contributions)
-  * [People that I learned a lot from the Global DJ community](#Some-people-from-which-Ive-learned-a-lot-from-the-Global-DJ-community)
+* [Other topics](#other-topics)
+  * [How I recorded my old radio show recordings and found the IDs](#how-i-recorded-my-old-radio-show-recordings-and-found-the-ids)
+  * [How I edited my videos showing the Traktor screen](#how-i-edited-my-videos-showing-the-traktor-screen)
+  * [How I synchronize and backup my whole Traktor music and configuration across laptops and a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)
+  * [How to fix DDJ-1000 loose jogs](#how-to-fix-ddj-1000-loose-jogs)
+  * [How to replace the DDJ-1000 filter knobs with Silver knobs](#how-to-replace-the-ddj-1000-filter-knobs-with-silver-knobs)
+  * [DJ Census over time results](#dj-census-over-time-results)
+  * [Some metrics of my free contributions](#some-metrics-of-my-free-contributions)
+  * [Some people from which I've learned a lot from the Global DJ community](#some-people-from-which-ive-learned-a-lot-from-the-global-dj-community)
 
   
   
@@ -251,7 +265,7 @@ The picture below summarizes the main ideas and dependencies explained in these 
 I have a large collection with thousands of files. It is also quite broad, featuring hundreds of playlists, and dozens of genres / sub-genres / decades combinations.
 
 My numbers are:
-* **Tracks**: 7000
+* **Tracks**: 8000
 * **Playlists**: 300
 * **Sub-genres:** 50 
 * **Major-genres:** 10
@@ -280,7 +294,6 @@ Main reasons are:
 * **#5: Tags Cleanup:** Before tagging the file, I rename the filenames to correct its artist / title. [MP3tag](https://www.mp3tag.de/en/) helps a lot to clean up the formatting, using [my own scripts](tools_traktor/Mp3tagSettings.zip) to automatically capitalize the names as “ARTIST1 ft. ARTIST2 - Capitalized Title - Remix”, and to update the internal mp3 tags. 
 * **#6: Software Independence:** Using OS-folders you are independent of any possible DJ software and itunes. It also trivial to [sync between laptops](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas) and make perfect backups [to my NAS](https://www.synology.com/en-global/products/DS718+). It is also trivial to load a whole genres to USB sticks to listen in cars.
 
-
 See also [this blog post for more details on my workflow between DJ softwares ](#how-to-manage-your-collection-using-operating-systems-folders-and-without-dj-playlists-ie-using-only-finder-windows-explorer-etc).
   
 
@@ -291,7 +304,7 @@ Above I've described [Why I manage music using OS-folders only](#why-i-manage-mu
 * **#0: File operations:** [As explained above](#why-i-manage-music-using-os-folders-only) I continuously search files, change the filenames and move the files around left and right.
 * **#1: Traktor Repair:** When I first open Traktor, it automatically [repairs its own database](#why-is-traktor-my-software-of-choice-a-database-repair-mass-relocate). For this I just run a mass-relocate on my whole music root folder, which refinds all moved and renames files in a single go.
 * **#2: Update collection:** The second step is just to import the whole music root folder into Traktor. As this skips previous files, in practice it only imports the New files. The last step is to delete the remaining missing files (that are really deleted - otherwise they would been found on step #1) 
-* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders.  Then I run a [python script](tools_traktor/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
+* **#3: Duplicate Cues**: For the rare cases that a file is in multiple sub-genres, I just copy them physically in different folders. I have 10% of duplicated files. Then I run a [python script](tools_traktor/traktor_clone_cues.py) to automatically duplicate the CUEs for these files. This tool is similar to [the traktor Librarian](http://www.flowrl.com/librarian).
 * **#4: Dj Converter:** I use the [DJ Data Converter](#which-dj-converters-avoid-the-26ms-shift-issue) to generate the rekordbox.xml file without the [26ms shift problem](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares).
 * **#5: Rekordbox Import:** On rekordox first I delete all missing files, then import the whole collection "as-is", and then update the collection with the XML file that came from the (repaired) Traktor collection. These steps are fully automatic and it ensures the Rekordbox collection matches the Traktor collection.
 * **#6: Rekordbox Search:** I only use rekordbox for video gigs. There I use the explorer node to see my files, and search for files in the whole collection. For the rare case I need to search inside a "playlist", I use a real File Explorer window in parallel when needed (because rekordbox [still lacks a search box in OS-folders](#why-is-traktor-my-software-of-choice-b-os-search-no-playlists))
@@ -302,7 +315,28 @@ Above I've described [Why I manage music using OS-folders only](#why-i-manage-mu
   
 See also the [DJCU workflow from ATGR](https://www.youtube.com/watch?v=d4QO6xxGovQ).
  
-  
+## Do you use mp3 file metadata?
+
+I do not use metadata, not even the "genre" field. This is because my collection is [too broad](#How-large-is-your-collection-How-broad-is-your-collection) for me to depend on it.
+
+Instead, I generate the fields automatically from the filename + folder. That is my granularity - which is also independent of any DJ software. In this process I ensure that all filenames are normalized to a clean format (ARTIST - TITLE - REMIX), and store them in [hierarchical folders](#why-i-manage-music-using-os-folders-only)
+
+Then I run two automated tools:
+* [mp3tag scripts](tools_traktor/Mp3tagSettings.zip) that clean-up the filename and generate metadata
+* [python script](tools_traktor/traktor_clone_cues.py) that duplicate the cues of the duplicated files 
+
+## How do you achieve independence from DJ software
+
+Independence from DJ software is something that I value. This is in stark contrast with, say, the RB6 encrypted database.
+
+I achieve this as follows:
+* DJ Playlists: my OS folders are my playlists. This is trivial to backup and its the most durable method I ever seen.
+* CUEs/LOOPs: I have my cues stored in traktor, which writes this info to the files themselves. This is very durable and really convinient. 
+The database is also very open and very simple to process - its an XML text file.
+* Star rating: I do not use this feature
+
+See the above blog posts for more details on these organization methods.
+
 # Traktor software
 
 
@@ -418,10 +452,40 @@ But in the end Traktor has [has unique features that I depend on](#why-is-trakto
 
 See also the [most popular DJ softwares census](../census_graphs).
 
+## Include subcrates like serato
+
+Serato has an option to enables very easy **local searches** on a folder and its sub-folders only. 
+
+From the [serato manual](https://support.serato.com/hc/en-us/articles/360001013076-Intro-Setup):  
+"Crates Include Subcrates: When enabled, Crates in your Library will also show the contents of any included Subcrates. "
+
+Something similar could be done with smartlists, but this feature works automatically for any folder and for any tree structure.
+
+For example, given this structure:
+
+```
+Music collection
+  Dance
+  Rock
+  HipHop
+    Old school
+      file1
+      file2
+    New hiphop
+      file3
+      file4
+```
+
+in Traktor, clicking on "hiphop" will show nothing. This is because the files are inside the specific playlists.
+in Serato, same story if "include subcrates" is OFF; however, if "include subcrates" is ON, then clicking hiphop will show 4 files, taken from both oldschool and new school.
+
+This concept is similar how the whole collection contains all files from all playlists, but generalized to specific localized folders with ONLY its sub-folders contents. So no mixing of hip-hop with dance, and all of this automatic for any tree structure.
+
 
 ## How to create your own karaoke files automatically using Stems and AI
 
-**Update:** this is now [realtime in DJay](https://www.digitaldjtips.com/2020/06/djay-pro-ai-talkthrough-review/). Well done!!!  
+**Update:** this is now [realtime in DJay](https://www.digitaldjtips.com/2020/06/djay-pro-ai-talkthrough-review/) and [VirtualDJ](https://www.digitaldjtips.com/2020/06/virtual-dj-2021-real-time-stems/). 
+Well done!!!  
 
 [Stems](https://www.youtube.com/watch?v=grgjIhs-OC8) is a new file format that contains 4 sub-tracks you can mix on your own. 
 This is read and manipulted nativelly by Traktor.
@@ -430,10 +494,11 @@ This is read and manipulted nativelly by Traktor.
  is a open-source AI tool that quickly isolates the vocals in any song, producing four seprate audio files. 
  ([Another link](https://deezer.io/releasing-spleeter-deezer-r-d-source-separation-engine-2b88985e797e)).
  
-
 [Stemgen](https://github.com/axeldelafosse/stemgen) is a script that groups several programs to generate a stem file automaticalyy
 
-Want to just have a quick go with stems? [This pack](https://www.native-instruments.com/en/specials/stems-for-all/free-stems-tracks/) has example tracks.\
+[NUO stems](https://github.com/dj-nuo/nuo-stems) is the same idea, but fully packaged, supported, and with helper functions to [clone the existing cues](tools_traktor/traktor_clone_cues.py) to the new files.
+
+Want to just have a quick go with stems? [This pack](https://www.native-instruments.com/en/specials/stems-for-all/free-stems-tracks/) has example tracks.  
 Of which I recommend these files:
 * LM_StockholmSyndrome.stem.mp4
 * NR_FeverLine.stem.mp4
@@ -1179,10 +1244,7 @@ Below the direct links, and after this the description of each mapping.
   * **Beatgrid helper:** https://maps.djtechtools.com/mappings/9760
   * **Transitions-Aligned Beatjumps:** https://maps.djtechtools.com/mappings/9762
     
-* **Advanced tricks demos**
-  * **Preview Player:** https://maps.djtechtools.com/mappings/10915
-  * **Backwards loop and Reloop:** https://maps.djtechtools.com/mappings/10252
-  * **BOME access all 9x mixerFX:** https://maps.djtechtools.com/mappings/10575
+    
   
 
 ## How to DOWNLOAD my Traktor mappings:
@@ -1389,62 +1451,6 @@ Summary:
 ![](pics/transitions_aligned_beatJumps_-_slide.jpg?raw=true)
 
 
-
-## What are demos of advanced mapping tricks
-
-In order of complexity:
-
-### 0) Browse List or Tree (like rekordbox or Serato)
-
-todo: make a simple demo of moving trough the browser list/tree like stewe:
-https://forum.djtechtools.com/showthread.php?t=88950&p=731238#post731238
-https://forum.djtechtools.com/attachment.php?attachmentid=25832&d=1440801074
-
-
-### A) Preview Player: 
-
-**Links:**
-* Download Link: https://maps.djtechtools.com/mappings/10915
-
-** Summary:**
-* Hold a button to start listening the preview player
-* Without moving your hand, turn the encoder to seek inside the preview player
-* Release button to stop listening
-* Without moving your hand, turn the encoder to seek to select another track
-  
-  
-![](pics/mappings/preview_player_demo.jpg?raw=true)
-
-  
-
-### B) Backwards loop and Reloop: 
-
-**Links:**
-* Download Link: https://maps.djtechtools.com/mappings/10252
-
-** Summary:**
-* Use this mapping to adjust the LoopIn point (regular loops adjust the LoopOUT point
-* Use cases:
-  * extend a track that literally just ended;
-  * extend a beat just before a breakdown
-  * repeat a build-up several times
-* Reloop: use this feature to return to a previous loop (just like CDJs)
-  
-![](pics/mappings/loops_adjust_backwards_reloop.jpg?raw=true)
-  
-  
-### C) BOME access all 9x mixerFX: 
-
-**Links:**
-* Download Link:
-https://maps.djtechtools.com/mappings/10575
-
-** Summary:**
-* Use this mapping to acecess all 9x mixerFX by sending mouse clicks directly to the preferences window
-* the normal midi mode you can only use 4x mixerFX
-
-![](pics/mappings/bome_change_traktor_mixerfx.jpg?raw=true)
- 
 
 ## What documentation comes with your mappings?
 
@@ -1748,8 +1754,140 @@ Other lists of advanced mappings:
 * https://blog.native-instruments.com/the-best-s4-hacks-of-all-time/
 * https://blog.native-instruments.com/custom-mappings-to-extend-your-traktor-control/
 
+# Mappings Tricks
+
+This section covers advanced mapping tricks. Most of these refer to the limitations of  modifiers. 
+
+
+The second part of this section is are self-contained demos of **Advanced tricks**:
+* **Preview Player:** https://maps.djtechtools.com/mappings/10915
+* **Backwards loop and Reloop:** https://maps.djtechtools.com/mappings/10252
+* **BOME access all 9x mixerFX:** https://maps.djtechtools.com/mappings/10575
+
+## Modifier basics
+
+Each page has 8 local modifiers. Each modifier stores 8 different states. 
+
+If you run out of modifiers you could get 8 more by just creating another page.
+
+However, this has the following implications:
+* modifiers remain local per page - there are no global modifiers
+* extra MIDI pages make your [preferences window slow](#Traktor-Slow-preferences-Window).
+
+The remaining of this section explains how to go around these limitations.
+
+  
+## How to share modifiers by holding multiple states of different buttons
+
+Typically you use one modifier per event you want tracked, with interaction "hold". This leds to the simplest usage by far.
+
+For example:
+* M1=“shift pressed”  (0=not pressed ; 1=pressed)
+* M2=“jog pressed” (0=not pressed ; 1=pressed)
+
+In this example you would effectively waste 12 states.
+
+If the events are **independent,** you could share the modifier trivially by holding different values as follows:
+* M1=0 -> nothing pressed
+* M1=1 -> shift pressed
+* M1=2 -> jog pressed
+
+The issue is that this doesn't work for dependent events. Only the last state is remembered.
+
+Example: If you press shift and then press the jog, you would forget that the shift is pressed. Worse, of you then release the shift while still pressing the jog, you now forget that the jog is still being pressed!
+
+The way to fix this is to map all combinations that might happen:
+M1=0 -> nothing pressed
+M1=1 -> shift pressed, jog NOT pressed
+M1=2 -> shift NOT pressed, jog pressed
+M1=3 -> shift AND jog pressed
+
+This no longer works with "hold" commands. In this case you have to map the whole state machine explicitly, by separating presses (AKA direct) and releases (AKA invert). Plus you also need to add conditionals to all events.
+
+Example:
+* IF M=0; IF press shift, THEN M=1
+* IF M=1; IF press shift INVERT, THEN M=0
+etc
+
+Second, this trick leads to massive duplication on regular entries, because now actions that depend on the jog being pressed means "2" or "3"... and there is no “OR” operation in traktor. So the only way 
+
+## How to add more than 8 states
+
+Another trick: what to do if you need >8 states?
+In this case, use 2 modifiers with a reserved state that means “locked”.
+Ie, that the second modifier is being used to extend the states.
+This leads to 7 usable states per modifier.
+Example, imagine that “7” is the locked state.
+The first 14 fully independent states would be:
+
+M1=0, M2=7 (locked)
+M1=1, M2=7 (locked)
+...
+M1=6, M2=7 (locked)
+(notice the transition here)
+M1=7 (locked), M2=0
+M1=7 (locked), M2=1
+...
+M1=7 (locked), M2=6
+
+
+
+## What are demos of advanced mapping tricks
+
+In order of complexity:
+
+### 0) Browse List or Tree (like rekordbox or Serato)
+
+todo: make a simple demo of moving trough the browser list/tree like stewe:
+https://forum.djtechtools.com/showthread.php?t=88950&p=731238#post731238
+https://forum.djtechtools.com/attachment.php?attachmentid=25832&d=1440801074
+
+
+### A) Preview Player: 
+
+**Links:**
+* Download Link: https://maps.djtechtools.com/mappings/10915
+
+** Summary:**
+* Hold a button to start listening the preview player
+* Without moving your hand, turn the encoder to seek inside the preview player
+* Release button to stop listening
+* Without moving your hand, turn the encoder to seek to select another track
   
   
+![](pics/mappings/preview_player_demo.jpg?raw=true)
+
+  
+
+### B) Backwards loop and Reloop: 
+
+**Links:**
+* Download Link: https://maps.djtechtools.com/mappings/10252
+
+** Summary:**
+* Use this mapping to adjust the LoopIn point (regular loops adjust the LoopOUT point
+* Use cases:
+  * extend a track that literally just ended;
+  * extend a beat just before a breakdown
+  * repeat a build-up several times
+* Reloop: use this feature to return to a previous loop (just like CDJs)
+  
+![](pics/mappings/loops_adjust_backwards_reloop.jpg?raw=true)
+  
+  
+### C) BOME access all 9x mixerFX: 
+
+**Links:**
+* Download Link:
+https://maps.djtechtools.com/mappings/10575
+
+** Summary:**
+* Use this mapping to acecess all 9x mixerFX by sending mouse clicks directly to the preferences window
+* the normal midi mode you can only use 4x mixerFX
+
+![](pics/mappings/bome_change_traktor_mixerfx.jpg?raw=true)
+ 
+ 
   
 # DJ collection converters
 
@@ -1770,7 +1908,7 @@ Other lists of advanced mappings:
 | Case | Signature  | TK->RB Correction  |
 | ------ | ----- | ---- |
 | case A | No headers | 0 ms |
-| case B | Only xing  | 26 ms |
+| case B | Only xing OR lavc | 26 ms |
 | case C | Invalid lame crc | 26ms |
 | case D | Valid lame crc| 0 ms |
 
@@ -1789,13 +1927,11 @@ if mp3 does NOT have a Xing/INFO tag:
      case = 'A'
      correction = 0ms
  
- elif mp3 has Xing/INFO, but does NOT have a LAME tag:
-     # typical case: has LAVC header instead
+ elif mp3 has Xing/INFO, but does NOT have a LAME tag OR has a lavc tag:
      case = 'B'
      correction = 26ms
  
- elif LAME tag has invalid CRC:
-     # typical case: CRC= zero
+ elif LAME tag has zero CRC or an invalid CRC:
      case = 'C'
      correction = 26ms
      
@@ -1818,7 +1954,30 @@ This is the current situation as far as I tested it myself:
 * **[MIXXX](https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875)**: A new upcoming feature is reading Rekordbox-prepared USB sticks nativelly. This is of course affected by the 26ms problem. Like rekordcloud, the developers have [read the research](#what-is-the-26ms-shift-issue-when-converting-cuesloops-between-softwares) and implemented it for their case (which depends on the several mp3 libraries they use).
 * **[Mixo](https://support.mixo.dj/guides)**: To be tested. Mixo is an upcoming web application that does cloud-based conversion among many other features. At time of writing this is not publicly available. I've contated the team by email, and they told me they are aware of the 26ms shift issue.
 
+## What is the source code that implements the 26ms algorithm?
 
+I've aware of 4x different implementations of [the 26ms shift algorithm](#26ms-shift-algorithm)
+
+* DJ Estrela
+  * This is coded in bash, and parses the output of the eyeD3 and mp3guessenc tools to generate a CSV
+  * <https://github.com/pestrela/music/blob/master/traktor/26ms_offsets/bin/mp3_check_encoder.sh#L813>
+  * eyeD3 calculates the crc of the first 190 bytes, and then confirm if it matches the contents at byte 190:192
+  * <https://github.com/nicfit/eyeD3/blob/master/eyed3/mp3/headers.py#L576>
+* Mixxx
+  * This is coded in C, and slightly modified from the mp3guessenc source
+  * It was also extended to the offsets produced by 3 different decoders
+  * <https://github.com/mixxxdj/mixxx/blob/fc9810508d92f702ead7ef9e63bb76f4afd6b245/lib/mp3guessenc-0.27.4/tags.c#L515>
+  * <https://github.com/mixxxdj/mixxx/pull/2119#issuecomment-533952875>
+* DJ Data converter:
+  * This is coded entirely in Clojure
+  * <https://github.com/digital-dj-tools/dj-data-converter/blob/master/src/converter/offset.cljc#L14>
+  * <https://github.com/digital-dj-tools/mp3-parser/blob/master/src/mp3_parser/lame.cljc#L36>
+* Rekordcloud:
+  * Unknown language, because it is closed source. 
+  * This was extended to virtualDJ as well, with the same concept of "cases"
+
+
+     
 # Free DJ Software Tools
 
 This section groups the DJ software tools written by me, all freely available.
