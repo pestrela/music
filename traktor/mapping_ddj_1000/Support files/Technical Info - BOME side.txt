@@ -1,4 +1,56 @@
+Latest Changelog:
+-----------------
+- v7.0.2 DDJ-1000 - October 2020 - "reliability and performance improvements".
 
+user-facing:
+  * shift+memory+browser: lower/raise clock frequency. This is used to run the mapping faster. 
+  The current value is displayed in the BPM value for 4 seconds.
+  * shift+memory+play: enable/disable turntable FX on pause 
+  * move beatFX to "SP": disables all traktor effects that might be running.
+
+internals:
+  * fixed: needle no longer turns after unloading/reloading a deck
+  * added configuration and performance improvements to the BOME file
+  * tempo: pressing shift now shows the current bpm. Enabled tempo override for shft2 as well
+  * fixed: pressing play when the the jog is being pressed no longer starts TTFX
+
+
+  
+  
+Steps to release a new version:
+-------------------------------
+- Bome side:
+  - disable debug
+  - clock = 60
+  - confirm seperate config for macOS and Windows
+  
+- Documents:
+  - regenerate all pdfs
+  
+  
+  
+DEBUG: keyboard shortcuts:
+--------------------------
+  ctrl+shift+A - Re-init ALL BOME variabes
+  
+  ctrl+shift+Z - stop clock
+  ctrl+shift+X - start clock - very fast
+  ctrl+shift+C - start clock - slow
+  ctrl+shift+V - start clock - very slow
+  
+  ctrl+shift+F4 - Bome debug
+
+  
+DEBUG: DDJ buttons:
+-------------------
+  (for deck a only):
+  
+  "memory": stop all clocks
+  
+  "<<" : start blink  clock (only)
+  ">>" : start master clock (only)
+    
+      
     
 BOME variables:
 ---------------
@@ -105,9 +157,56 @@ STANDARD FOR TEMP VARIABLES:
     QQ = channel
     OO = note
     PP = vel
-   
-   
 
+
+
+BOME Project structure:
+-----------------------
+[MIDI.routes]
+  In0=From DDJ
+  Out0=To Traktor
+  In1=From Traktor
+  Out1=To DDJ
+  
+[Preset.0]
+  Name=Blend Demo
+  Active=1
+  
+  Name0=See MIDI mesages
+  Incoming0=MID2MIDA0001000C From Traktor qq oo pp
+  Outgoing0=None
+  Options0=Actv01Stop00OutO01StMa00000001 oo=oo
+
+[Project]
+  DefaultInPorts=MIDA00020008From DDJ000CFrom Traktor
+  DefaultOutPorts=MIDA0002000ATo Traktor0006To DDJ
+
+ 
+   
+BOME Settings structure:
+------------------------
+[Current]
+  VirtualMidiPorts=Y
+  VirtualMidiPortsCount=2
+  VirtualMidiShortNames=N
+  AutoStart=N
+
+    
+[MIDI.alias]
+  Name0=From Traktor
+  Device0=1:Bome MIDI Translator 1 Virtual In
+  Name1=To DDJ
+  Device1=2:DDJ-1000
+  ...
+
+[MIDI.in]
+  Name0=Bome MIDI Translator 1 Virtual In
+  Options0=FTTF44494D42T
+  Name1=DDJ-1000
+  Options1=FTFF4944494DT
+
+  
+  
 USB-A/USB-B/Line blocking:
 --------------------------
   what the firmwre blocks:
@@ -464,45 +563,7 @@ MIDI routing:
   In other words, the swallow flag is only evaluated when the Outgoing Action is executed (even if it\'s the \"None\" action).
 
   
-  
-BOME debug keyboard shortcuts:
-------------------------------
-  ctrl+shift+A - Re-init ALL BOME variabes
-  
-  ctrl+shift+Z - stop clock
-  ctrl+shift+X - start clock - very fast
-  ctrl+shift+C - start clock - slow
-  ctrl+shift+V - start clock - very slow
-  
-  ctrl+shift+F4 - Bome debug
 
-  
-  
-DDJ debug buttons:
-------------------
-  "memory": stop all clocks
-  
-  "<<" : start blink clock (only)
-  ">>" : start master clock (only)
-    
-  
-  
-Traktor keyboard shortcuts (now disabled):
-------------------------------------------
-  ctrl+shift+A/S: Tempo adjust
-  ctrl+shift+D/F: Tempo range
-  
-  ctrl+shift+`    - "show values"  FX4
-  ctrl+shift+F1   - "shift1"       FX1
-  ctrl+shift+F2   - "shift2"       FX2
-  ctrl+shift+F3   - cycle mode     FX3
-  ctrl+shift+F4   - toggle debug
-  
-  ctrl+shift+P    - send monitor state
-  shift+quantize  - send monitor state  
-
-  
-  
     
 SYNC modes Elastic Beatgrid:
 ----------------------------
@@ -570,7 +631,7 @@ NEW SHIFTS METHODS:
 -------------------
   deck select: f#8 
 
-  SHIFT1:   IN: "D#4"  -> "ga"    (button shift)
+  SHIFT1:   IN: "D#4"  -> "ga"    (button shift)       //TODO: to deprecate, no need for this
   SHIFT2:   IN: "C#4"  -> "gb"    (button memory)
   SHIFT3:   IN: "D4"   -> "gc"    (button shift+memory) 
   COMBINED:            -> "gd"   0 = none; 1 = shift1; 2 = shift2; 3 = shift3
@@ -626,6 +687,8 @@ PHASE FEATURE:
   
 DECK LOADED TRIGGER:
 --------------------
+  // TODO: MERGE THESE VARIABLES
+
   "nx"/4  HC4500 total length lock <<<<< (0: init ; 1: loaded)
   
   TK IN LOADED: channel 7
@@ -649,9 +712,11 @@ JOG NEEDLE:
 
   IN CUE:           CC "68" -> "z1" (cue being pressed)  
   IN beat phase     CC "67" ->   (NOT USED)
-  
-  IN PLAY           CC "77" -> "zo" (playing)
-  IN JOG touch      CC "78" -> "zs" 
+ 
+   
+  IN  
+  IN PLAY           CC "77" -> "zo" (deck kplaying)
+  IN JOG touch      CC "78" -> "zs" (deck jog)
   IN HOTCUE ANY     CC "79" -> "immediate"  (when we press hotcue)
    
   IN JOG turn             -> "y1"   (accumulated every 10ms)
@@ -687,8 +752,8 @@ BPM implementation:
 
   
 Loops:
-  IN loop active:   CC "76" -> "le"
-       pressed IN           -> "lo"
+  IN is active loop:   CC "76" -> "le"
+       pressed IN button    -> "lo"
   
   IN loop size:     CC "70" -> "l1" 
   IN move size:     CC "71" -> "n1" 
@@ -715,7 +780,9 @@ CLOCK IMPLEMENTARION:
 ---------------------
  CLOCK:
    Need reset when device is up "hx"   (global)   (0=init; 1= done reset)
-   10ms ticks per second:   "hy"   (global)
+   clock period (milliseconds):   "hy"   (global)
+      reconfigure clock timeout:  "k9"     
+   
    master debug             "hw"   (global)
    current clock value:     "hz"   (global)
     
@@ -1256,12 +1323,14 @@ UNUSED VARIABLES (both "/1" and "/4"):
   "jx"/4  to deprecated!
 
   *****
-  "k0"/1 - free
-  "k9"/1 - free
+  "k0"/1 - TTFX enabled
+  "k9"/1 - Clock Timer config
+  
   
   "ke"/4  flux (AKA slip)
   "ki"/4  Reverse 
-  "kx"/4  Previewing after changing loop values  (0: none; 1: loop/move; 2: tempo range) 
+  "kx"/4  Previewing after changing loop values  (0: none; 1: loop/move; 2: tempo range)
+     NOTE: to deprecate!  
     
   
   *****
@@ -1324,7 +1393,7 @@ UNUSED VARIABLES (both "/1" and "/4"):
  
   *****
   "z0"/1 - OPERATING SYSTEM CONFIG: 0: Windows; 1: MacOS
-  "z9"/1 - jogFX state   (global for all decks)
+  "z9"/1 - jogFX state   (this is global for all decks)
  
   "za"/4  time mode elapsed/remain 
   "ze"/4  FREE
@@ -1366,8 +1435,8 @@ DDJ-1000 undocumented notes:
   
 layout deck shift:
 ------------------
-  "ii"/1 - real active left deck  (1/3)
-  "ij"/1 - real active right deck (2/4)
+  "ii"/1 - deck select: real active left deck  (1/3)
+  "ij"/1 - deck select: real active right deck (2/4)
   "il"/1 - current layout: 0: Parallel; 1: Classic; 2: Disabled mode
   "im"/1 - PC APP CONNECT TIMER (disables forced side because of auto-detect)
 
@@ -1406,34 +1475,46 @@ Generic long press support:
 
 
   
-Turntable FX:
--------------  
-  deck is paused: 
-    pass B-1 normally
+Turntable FX - TTFX:
+--------------------
+  IN PLAY           CC "77" -> "zo" (deck playing)
+  IN JOG touch      CC "78" -> "zs" (deck jog)
+ 
   
-  deck is playing, flux OFF:
-    received from DDJ:
+
+a) deck is paused: 
+   pass B-1 normally
+
+b) deck is playing, but flux ON:
+   does C#7 action
+   does C#7 INV action when the user releases the button
+    
+c) deck is playing, but flux OFF:
+   received from DDJ:
       B-1: filter out if its playing
       B-1 invert: filter out always
     
-    stepA: sends C#7:
+    step_1: sends C#7 (normal)
       activates FX 
       dry wet 100%
+
+      wait 400
       
-    stepB: sends B-1:   (these actions can be swapped)
+    step_2: sends B-1 (normal)   (these actions can be swapped)
       pauses track
-      beatjump
       dry wet 0%
       
-    stepC: sends C#7 invert:
+      wait 150
+      
+    step_3: sends C#7 INVERT
+      beatjump
       turns off FX
   
-    stepD: sends B-1 INVERT:
+      wait 150
+      
+    step_4: sends B-1 INVERT
       dry wet 100%
        
-  with flux ON:
-    does C#7 action
-    does C#7 INV action when the user releases the button
     
     
     
@@ -1498,7 +1579,7 @@ Filter Dual Polarity (superknobs):
     shift2: BYPASSES deck 3/4 mixerFX
     
   Variables:    
-    "l9"/0 - CONFIGURATION: are superknobs disabled?  (0: enabled; 1: disabled) 
+    "l9"/0 - CONFIGURATION: are superknobs disabled?  (0: ENABLED; 1: disabled) 
 
     "j1"/4  CFX which SET we selected (per channel)  (0: set #1; 1: set #2; ...)
     "j5"/4  CFX enabled/disabled      (per channel)  (0: disabled; 1: enabled)
@@ -1865,23 +1946,46 @@ Channel 1..4 FREE NOTES (TK IN):
     
     
 Channel 1..4 CCs (TK OUT):
--------------------------  
-  CC "69"  - echo FX in progress
-  CC "72"  - is in active loop 
+--------------------------
+  CC "02"  - deck PFL volume (REGULAR)
+
+  CC "66"  - tempo adjust
+  CC "67"  - free
+  CC "68"  - cue (state)
+  CC "69"  - FREE
+  
+  CC "70"  - loop size
+  CC "71"  - move size
+  
+  CC "72"  - FREE 
   CC "73"  - FREE 
   CC "74"  - FREE
-  CC "75"  - FREE 
-  CC "80"  - free
   
-  CC "84"  - jogFX state
+  CC "75"  - any loop active -> (none)
+  CC "76"  - is in active loop -> "le" 
+
+  CC "77"  - play/pause
+  CC "78"  - jog touch
+  CC "79"  - pressed any hotcue 
+   
+  CC "80"  - free
+  CC "81"  - key adjust
+  CC "82"  - track end warning 
+  CC "83"  - deck volume 
+  
+  
+  CC "84" - free
+  CC "85" - deck phase
   CC "86" - free
   CC "87" - free
   CC "88" - free
-  CC "89" - free
-  
+
+     ----------  
+  CC "89" - deck position LR
   CC "90" --->> HR values, assume all is taken
   CC "100"
   CC "110"
+    
     
     
     
@@ -1965,11 +2069,12 @@ Channel 5 Free notes (TK IN):
 
   
   
-channel 5 free CC (OUT)):
+channel 5 free CC (TK OUT)):
 -------------------------
-  (none previously used)
-  CC 126 - jogFX global status -> "z9"   
-  CC 125 - echo out in progress -> "i0"
+  (none were previously used)
+  
+  CC 125 - echoFX in progress -> "i0"
+  CC 126 - jogFX global status  -> "z9"   
   
   23, 39, 55
   

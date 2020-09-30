@@ -1004,10 +1004,10 @@ On my next version I managed to go to 3 pages, for a ~3 second delay.
 
 
 |            | Version     | Pages | Delay (s) | | Entries (K) | Size (Mb) | Optimized (Mb) |
-|------------|-------------|-------|-----------|-----|---------|-----------|----------------------|
-| Pionner    | v1.0.0      | 14    | 18.4         |  | 9.3    | 10.9     | 2.7                 |
-| DJ Estrela | v6.7.0      | 5     | 5.2          |  | 9.7    | 5.7      | 2.8                 |
-| DJ Estrela | v7.1.0      | 2     | 2.5          |  | 10.0   | 4.4      | 2.7                 |
+|------------|-------------|-------|-----------|-|---------|-----------|----------------------|
+| Pionner    | v1.0.0      | 14    | 18.4      | | 9.3     | 10.9      | 2.7                 |
+| DJ Estrela | v6.7.0      | 5     | 5.2       | | 9.7     | 5.7       | 2.8                 |
+| DJ Estrela | v7.1.0      | 2     | 2.5       | | 10.0    | 4.4       | 2.7                 |
 
 [Table Source](pics/traktor_slow_preferences_-_measurements.xlsx)
 
@@ -3109,6 +3109,47 @@ See also the graph showing the [most popular DJ softwares over time](../census_g
 ![dj software over time](../census_graphs/dj_software_over_time.jpg?raw=true)
 ![dj controllers over time](../census_graphs/dj_controllers_over_time.jpg?raw=true)
 ![dj platforms over time](../census_graphs/dj_platform_over_time.jpg?raw=true)
+
+
+## 21st century software issues
+
+The 21th century has very clear trends where software cost go down every year.
+The main factor of this is simplification and lower quality / minimum viable product, many times at the user burden. Some examples follow.
+
+**Required Updates:**
+
+To reduce cost, both [backwards and forward compatibility](https://www.rainforestqa.com/blog/2017-05-11-common-pitfalls-of-continuous-delivery-deployment-raciness) 
+are dropped. Its far far simpler to the developer to just force the user to upgrade **all** components if just **one** them gets upgraded. 
+Instead of checking what actually changed, and if the old, unchanged functions, would work just fine with the previous version
+Typically the server gets updated first, then the client App needs to follow.
+
+Some years ago changes and all protocols had compatibility in mind, so that the user could continue 
+using the previous version as long as possible (except urgent security updates).
+
+
+**Poor Documentation:**
+
+Today apps are far far simpler to use for the **simple tasks**. That is great.
+
+However, the **complex tasks** are being dumbed down by force, and worse, they are no longer documented structurally anymore.
+The existing documentation all moved online and is searchable. That is reasonable, but there is no longer structured manuals that would explain the features of your new mobile phone, 
+and every single configuration option.
+
+Other examples are the dumbing down of laptops to approach tablets by force (Windows 8 comes to mind). A Tablet is great for content consuming, but a laptop is irreplaceable for content producing.
+Specific examples are Function and insert keys being secondary, the loss of physical buttons like ESC in mac, short keyboards without insert/delete section like it was present on the [standard 102 keyboard](https://en.wikipedia.org/wiki/Model_M_keyboard)
+
+
+**Subscriptions / Ownership:**
+
+Every year there is fewer laptop users. The "buy once, use forever" model is no longer profitable to small and medium businesses that make unique software. 
+The only solution was to ask money for [newer major versions](https://djtechtools.com/2018/10/18/traktor-pro-3-out-now-heres-whats-new/) of the software. Every year this gets more and more difficult.
+
+The alternative is subscriptions that stop working if you stop paying.
+Another worrying trend is companies lawyers that removed the notion of ownership, giving you an 
+[authorization instead](https://www.wired.com/2015/04/dmca-ownership-john-deere/). 
+Another worrying trend is hardware features that are [unlocked by software](https://electrek.co/2016/11/08/tesla-in-car-purchase-software-locked-features/). 
+Back in the days, the price segmentation was clearly made because of hardware limitations: it was physically impossible to send more data / driver faster / etc.
+Today, the hardware has gained massive leaps in specifications, but then they are lobotomized by default, and sold as a software upgrade.
 
   
 ## Some metrics of my free contributions

@@ -91,7 +91,7 @@ FX unit usage overview:
 -----------------------
   FX Unit1 - Group mode - All to DeckA
     - slot1: turntableFX 
-    - slot2: delay releaseFX    (TODO)
+    - slot2: delay T3/reverb (with dry-wet)
     - slot3: macroFX
 
   FX Unit2:
@@ -99,11 +99,12 @@ FX unit usage overview:
     
   FX Unit3:
     - jogFX for any deck
+	- echoOut for any deck
     
   FX Unit4:
     - slot1: BeatFX per channel
     - slot2: 
-    - slot1: 
+    - slot3: 
     
   
  
@@ -132,76 +133,67 @@ Merged mapping DDJ-1000 and DDJ-SZ:
       - knob1:   12/0
       - knob2+3:  8/0
       
-FX units usage:
----------------   
-	FX1|FX2 = PADFX, macroFX, TTFX
-	FX3 = JOG FX + echo release
-	FX4 = beatFX
+
       
-  
+ 
 Modifiers TSI page 1:  VINYL BREAK, JOG FX, CENSOR OUT, ROLL, GRID ADJUST, BROWSER, SX2
 ---------------------
-	M1: (EXTRA SHIFTS - HOLD STYLE)
-    __BROWSER MODIFIERS__
+	M1: BROWSER CONTROL: (all decks)
   
 	 0: nothing pressed
 	 
-	 1-4: deck A-D SELECT  <<<<< MEMORY shift2  
-	    for waveform zoom. this is because browser has no deck number!
+	 1-4: deck A-D SELECTED  <<<<< MEMORY shift2  
+	    this is used for waveform zoom. this is because browser has no deck number!
 
 	    note: use M1=1 == deck A, M1=2 == deck B, etc. Assumes dedicated Memory button!
       
 	 5: vinyl stop in progress (REQUIRES PROGRESSIVE TEMPO BEND = extra settings)
-		  m2 = 5=adjust / 6=slide
-      
-      __NOW FREE__  <<<
-      
+      (unclear if it is still used)
+	  
 	 6: grid adjust down | slide down (ANY OF THEM)
+		  (this is specified on M2 = 5=adjust / 6=slide)
+	   
 	 7: doing PREVIEW PLAYER
 
-	M2: JOG STATUS / WHICH DECK IS BEING USED FOR JOG FX?
-	   0: SCRATCH enabled (HOT CUE  mode)
-		 1: Jog FX armed - touching the jog will still make scratch!
-		 2: Jog FX is being touched
-     3: Loop adjust in progress  <<<<<  NEW
+	M2: JOG CONTROL: (all decks):
+	  0: SCRATCH enabled (HOT CUE  mode)
+      1: Jog FX armed - touching the jog will still make scratch!
+      2: Jog FX is being touched
+
+      3: Loop adjust in progress  <<<<<  NEW
      
-     4: Memory/search pressed (for quick search)
+      4: Memory/search pressed (for quick search)
    
-		 5: Grid ADJUST pressed  -> this cancels jogfx mode   ch1..4 note F7
-		 6: Grid SLIDE  pressed  -> this cancels jogfx mode   ch1..4 note E7
-		 7: (empty)
-        XDJ-XZ: reverse (why ????)
+      5: Grid ADJUST pressed  -> this cancels jogfx mode   ch1..4 note F7
+	  6: Grid SLIDE  pressed  -> this cancels jogfx mode   ch1..4 note E7
+      7: __FREE__
+         XDJ-XZ case: this is used by reverse (to confirm?)
 		 
 	M3: JOGFX SELECTION  (SHARED BETWEEN ALL DECKS)
 	  0- none
 	  1-7: which jog FX
   
-  
-	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)  <<<< THIS IS TO SIMPLIFY A LOT
-    (still useful)
-    
-    0: nothing
-    1: IN+OUT
-    2: OUT
-    
+	M4:  AJUST LOOP __IN PROGRESS__   (ALL DECKS)
+      0: nothing
+      1: Doing loop IN+OUT adjust 
+      2: Doing loop OUT adjust
     
 	M5: __FREE__
 	
-  M6: SLICER MODE
-    0: mode1:    8 slices, 1/1
-    1: mode2:   16 slices, first 1/2      <<<<< default for rekordbox
-    2: mode2:   16 slices, second 1/2 
+    M6: SLICER MODE
+      0: mode1:    8 slices, 1/1
+      1: mode2:   16 slices, first 1/2      <<<<< default for rekordbox
+      2: mode2:   16 slices, second 1/2 
     
-	M7: GRID IN PROGRESS?       <<<< can this be simplified?
-   0: no grid in progress
-	 1-4: which deck A-D active + 2x grid 
+	M7: GRID IN PROGRESS?       <<<< can this be simplified. Because the jog commands have channel
+      0: no grid in progress
+	  1-4: which deck A-D active + 2x grid 
 
 	M8: ECHO OUT FAVORITE
 		(sequence is 3,1,2,0 )
     selected by 
 	  this is shared with play pause FX  <<<<<<< why?
 	 
-    note: 
    
 	 
 Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, TTFX, BeatFX,
@@ -229,19 +221,29 @@ Modifiers TSI page 2:  KEYBOARD, PAD FX, REMIX DECKS, MANUAL FX, TTFX, BeatFX,
 	M5: KEYBOARD Page2 - red button (0: NONE; 1..=8 )
 	
 	M6: KEY KEYBOARD MODE:
-    0: mode: CUP keyBOARD  (pressing pad triggers CUP - same as rekordbox)
-    1: mode: CUE keyHOLD   (press pad triggers CUE; release stops music)
-    2: mode: PLAY keySHIFT  (music never stops - same as rekordbox)
+      0: mode: CUP keyBOARD  (pressing pad triggers CUP - same as rekordbox)
+      1: mode: CUE keyHOLD   (press pad triggers CUE; release stops music)
+      2: mode: PLAY keySHIFT  (music never stops - same as rekordbox)
     		 
 	M7: LEFT REMIX DECK PAGE  (FIXME)
-		1: page 1
-		2: page 2
+	  1: page 1
+	  2: page 2
 		
 	M8: SHIFT2 (=MEMORY BUTTON ) 
-	 0: off
-   1: memory pressed
+       0: off
+       1: memory pressed
   
-  
+shift2 info:
+------------
+    ddj-1000: "memory": c#4 / d4   // both -> shift2
+      (this is not used by the DDJ-SZ)
+    deck select:     f#8 / g8      // normal -> shift2 ; g8 -> nothing
+      (this is the same for all DDJs)
+    
+    open questions:
+     - why is shift3 enables shift2 as well?
+     - how does this work on the DDJ-1000? (no hold 1..4 for deck select)
+   
   
   
 remix decks info:
@@ -274,10 +276,8 @@ pattern recorder:
   - TP3.2.0 Sidekick: https://maps.djtechtools.com/mappings/10079
     new notes:
       pads: -> hot cues
-      
       main: -> search left/right (+shift)
            -> loop in/out /4 beat
-      
       
       encoder: none
 
@@ -321,29 +321,12 @@ pattern recorder:
     
     when a slot is selected all the pads will change to the colour of that slot,
     also there will be a scrolling step indicator 
-      
 
   row 4: Punch Buttons
-
       
   (row 5) STOP Buttons:
     Buttons 1-4 (Slot Mute)
 
-  
-          
-  -------------
-  <<  E8
-  >>  F8  
-      
-    1: HOTCUE  ==  HOTCUE
-       C-1    C#-1   D-1    D#-1
-       E-1    F-1    F#-1   G-1
-
-    2: ROLL  ==  PAD_FX1          -> padFX
-       E0     F0     F#0    G0
-       G#0    A0     A#0    B0
-   
-       
      
 remix decks pioneer info:
 -------------------------
@@ -354,31 +337,28 @@ remix decks pioneer info:
    m2:  subpage (left/right)
     0:
     1:  
-
     
    pionneer:
       press: trigger
       +shift: stop
-      
-  
+
       
 Slicer info:
 ------------           
  slicer jaja:
-  mode1:    8 slices, 1/1
-  mode2:   16 slices, first 1/2      <<<<< default for rekordbox
-  mode2:   16 slices, second 1/2 
+   mode1:    8 slices, 1/1
+   mode2:   16 slices, first 1/2      <<<<< default for rekordbox
+   mode2:   16 slices, second 1/2 
   
-  8 beats, 16 slices, first 1/2
-  conclusion: simplest is mode1, and reduce the loop size by hand
+   8 beats, 16 slices, first 1/2
+   conclusion: simplest is mode1, and reduce the loop size by hand
   
  most useful case:
-  8 beats, first 1/2 
-  techniques: mojaxx:   https://www.youtube.com/watch?v=ONXn11qfY5M  
-   loop rolling in the future:
-   quantize finger drumming
-   transition house->hiphop
-        
+   8 beats, first 1/2 
+   techniques: mojaxx:   https://www.youtube.com/watch?v=ONXn11qfY5M  
+     loop rolling in the future:
+     quantize finger drumming
+     transition house->hiphop
         
    
 delay out effect:
@@ -437,7 +417,6 @@ XDJ-XZ-specific modifiers:
   	M8: 
       m8=7 FAKE effect list = to delete
       on XDJ-XZ: mapped to __CUE/LOOP MEMORY__
-
 
   
 Pioneer DDJ pad colors:

@@ -1,0 +1,5 @@
+
+Specific differences to v6.8:
+- bome settings now have 2x bome virtual devices instead of 1x
+- MacOS specific file disables mixerFX superknobs (would require applescript)
+

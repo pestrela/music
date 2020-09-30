@@ -1,0 +1,278 @@
+
+  
+CHANGELOG - SUMMARY:
+--------------------
+
+  - v7.0.0 - DDJ-1000 - Mapping remade from scratch. 16x SuperKnobs, STEMS, Remix recorder, TTFX, Tempo range 
+    ---
+  - v6.8.0 - DDJ-1000 - Sepcific files for mac and windows
+  - v6.7.0 - DDJ-SZ/SX2/SRT - Migrated SZ to a single BOME 
+  - V6.6.0 - DDJ-1000 - "CDJ-like features"
+  - v6.5.0 - DDJ-1000 - First BOME edition with JogScreens
+  - v6.3.3 - DDJ-1000 - Last edition without BOME
+  - v6.1.1 - DDJ-SX2  - Last edition without BOME 	
+  - v6.0.0 - DDJ-SZ - First release by DJ_Estrela (TP2)
+    -----
+  - v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (TP2)
+  - v1.3.0 - Nov 2014 - Last DDJ-SX2 release by JAJA (TP2)
+  - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
+  - v0.9.4 - Sep 2014- Last DDJ-SX1 by JAJA (TP2)
+
+  note:  See also excel file "Technical Info - Version history.xls"
+     
+   
+UNIFIED MAPPING CHANGELOG - DETAILS:
+------------------------------------
+- v7.0.0 DDJ-1000 - June 2020 - "the redone from scratch edition".
+
+ - Short summary:
+   This mapping was now remade from scratch.
+   Major new features are 16x SuperKnobs, access all 9x MixerFX, Resonant Filter, STEMS, Remix decks recorder, Tempo enlarger, Loop backwards adjust, Turntable FX
+   The mapping is now much faster to load, timestamps are 100% accurate and has dozens of bugfixes to the previous features
+   
+   The detailed changelog has over 40 lines, please see file "Changelog.txt"
+   https://github.com/pestrela/music/blob/master/traktor/mapping_ddj_1000/Support%20files/Technical%20Info%20-%20Changelog.txt
+   
+ - New v7 features:
+   - 16x Filter SuperKnobs: The filter knob now does 2x different HPF FX, one for each side. Use shift todo LPF instead; use memory todo disable this feature (does classic LPF+HPF).  
+   - MacroFX shortcuts for deck 1&2: deck 1&2 now have two filter knobs instead of one
+   - Access all 9x MixerFX in MIDI: in Windows you can now access all 9x mixerFX by sending mouse clicks to the preferences window
+   - Resonant Filter: Filter now runs in single mode, with a resonant parameter fully turned up (similar to Pioneer filter)
+   - TurnTable FX: added TTFX sound to play/pause, on both regular and Flux mode situations (regular: trigger mode; flux: hold mode)
+   - Remix decks recorder: You can now record 16 steps of 1-shots in remix decks, just like the S4 MK3
+   - STEMS: You can change all slot parameters including sample, volume, Filter, FX send, etc
+   - Loop IN Backwards adjust: you can now adjust the IN loop point instead of the OUT point. Very useful when the track just ended.
+   - 4x Echo out: Release FX now is a single button, and has 4x favorite types 
+   - Classic / Parallel layouts: this is now optional and configurable between parallel/classic.
+   - Optimization: mapping is now much faster to load than the previous versions. This is because it uses 2x pages instead of 6x.
+   
+ - Tempo-specific improvements:
+   - Tempo range enlarger: moving the tempo fader enlarges and contracts the tempo range as required
+   - Tempo blink: when physical tempo fader doesn't match the real one ("soft takeover"), the value blinks as a warning
+   - Elastic beatgrid Sync: turning the jogwheel disables sync. This is useful for emulated elastic beatgrids. Use shift+memory+sync to toggle this feature
+   
+ - New gestures:
+   - Memory button: Double tap: toggle time-elasped/time-remain; Long press: preview total time
+   - Deck select: Double tap: toggle parallel/classic views; Shift+tap: disable layout changes
+   - Jog Ring: now blinks to warn special situations (jogFX, Reverse, EOT); Flux mode now blinks as well
+   - Next Track / Prev Track: use beatjump buttons to quickly move in a playlist
+   - Loop IN: now zooms and stops the loop to adjust the loop like Rekordbox
+   
+ - Various:
+   - Jog Timestamps: the timestamps are now 100% accurate by using the HC-4500 mapping.
+   - MFX enabled: It is now possible to turn on MFXs at an wanted values away from the midpoint
+   - Beatjump buttons: Swapped main and shift functions to match DDJ-1000SRT
+   - Faders initialization: The mapping now queries the initial positions at startup ("pc app connect" undocumented feature)
+   - BeatFX: per channel FX state is now maintained when changing the FX and the channel (including MST)
+   - Blink: warning blinks are now corrected for all leds
+   - Phase: Zoomed phase meter added to key screen value
+   - Hotcues: removed confusing page 2 "delete page"
+ 
+  
+  
+- v6.8.0 DDJ-1000 - April 2020 - "the macOS edition" 
+  - This was small update with macOS-specific files
+ 
+ 
+- v6.7.0 DDJ-SZ/SX2 - March 2020 - "BOME migration edition"
+  - Short summary:
+    A major jump for the SX2/SZ/SRT mapping, I've now managed to merge the DDJ-1000 mapping to the SX2/SZ/SRT family of controllers.
+    This is the first release with BOME; many more features are already coded and will be released soon.
+
+    Biggest features are all pad modes in the front, dedicated beatjump buttons, preview player and loop adjust with the jog, 
+  
+  - New features:
+    - Pad modes: All most-used pad modes have been moved to the front 
+    - Beatjump: New dedicated beatjump buttons
+    - Layouts: panel = Classic/parallel change
+    - Loops: can now ajust loops with the jogwheels
+    - Preview player: (routed to deck 4 on external mode, with safety)
+  
+ 
+- v6.6.0 DDJ-1000 - September 2019 - "the CDJ edition"
+  - Short summary:
+     - CDJ-like features (loop IN/OUT, loop adjust, cue/Play blink, warning blink)
+     - new manual beatjump shortcut. Includes "move me by one beat". 
+     - new pads modes: beatjump, manual loop, keyshift modes.
+     - configurable sync modes (Traktor/Serato style). Configurable cue monitor styles.
+     - Several bugfixes on the jog screens 
+  
+  - New features (detailed):
+     - Loop: Loop section now works like CDJs via IN/OUT button. 4-beat loop and auto-loop is still there.
+     - Loop: Can now adjust the loop start/end with the jog. This is a major feature for eighties music (no beatgrids).  (shift+loop_in)
+     - Loop: can now activate a saved loops (shift+auto_loop), and manually set loops (memory+auto_loop)
+     - Beatjump: Search buttons are now beatjump/loop move size. Shift+search does beatjump/loop move; use memory+search to "move you by one beat" 
+     - Pad Beatjump: added whole new pad mode for manual beatjumps and autoloops
+     - Keyboard: added a key shift page with 3x sub-modes: CUP mode, CUE mode and Play mode
+     - Blink: Cue and play button now blink like CDJs. The Cue button blinks when you can redefine the temporary cue; the Play button blinks when the track is paused.
+     - End warning: Jog ring now blinks when the track is ending. There is 3x urgency speeds.
+
+  - Bug fixes (detailed):
+     - Screens: Jog needle no longer starts playing by itself
+     - Screens: Jog needle now resets when pressing hotcue
+     - Screens: BPM now works with changing tempo range (shift+master_tempo)
+     - Reverse: Needle now goes backwards (note: no slip feature yet)  
+     - Decks 3&4: added MixerFX, Loops and Beatjump to deck 3&4. More functions will be ported gradually. See also the FAQ on this. Not yet covered: jogFX, padFX, macroFX
+     - Layout: now has classic and parallel waveforms layouts (both 2 and 4 decks) 
+     
+   - New selectable options (detailed):
+     - Sync type: Can now select Traktor/Serato sync (shift+memory+beat_sync)
+     - Cue monitor: Can now select internal/external cue monitor (shift+memory+cue_channel_1)
+     - CrossFader: can now change crossfader curve (memory+crossfader)
+
+- v6.5.0 DDJ-1000 - September 2019 - Jog Screens using BOME
+  - New features:
+    - MAJOR new version supporting the Jog Screns via BOME. 
+    - Please read the dedicated FAQ and join the technical discussion on the DJTT forum!
+    - Significant improvements to scratching. Split Vinyl ON/OFF modes per deck.
+  - URL:
+    - Download: https://maps.djtechtools.com/mappings/9279
+    - Technical discussion: http://forum.djtechtools.com/showthread.php?t=96024
+  
+
+- v6.3.3 DDJ-1000 - June 2019 - SpinBacks and Jog Ring
+  - Fixes:
+    - SpinBacks are now possible
+    - Jog ring now displays the jog mode: Constant = volume up; blinking = jogFX enabled
+    - added master info to screens
+    - added final official installation instructions for INTERNAL/EXTERNAL controllers
+
+  - Fixes:
+    - Play/Pause is now immediate "on press", instead of "on release"
+    - Sync is now toggle instead of phase sync
+      - Please note that "Set Master" still uses shift2
+    - added list of limitations, plus the old official Pioneer installation instructions
+  
+  - Fixes:
+	  - Cue monitor volume / Cue mix fixes
+		- Parallel waveforms: removed automatic promotion to advanced size (this would require an improvement on TP3.1 itself) 
+	- Known issues:
+    - Provide option to either toggle Sync / Direct sync
+		- Selecting different FX should call save snapshot to ensure the same parameters are kept
+
+
+- v6.3.0 DDJ-1000 - Feb 2019 - First DDJ-1000 release by DJ_Estrela (for TP3)
+  - New features:
+	  - Full port of previous mapping to the DDJ-1000 midi codes
+		- All modes moved to main pages; quick cycle pages
+		- Preview Player, Vinyl Break FX
+    - Keyboard mode, updated Roll modes
+		
+  - URL:
+		- DJTT: https://maps.djtechtools.com/mappings/9279
+		- FB:   https://www.facebook.com/pedro.vale.estrela/media_set?set=a.2244380098947850
+		- YT:   https://www.youtube.com/watch?v=EkSJ9Ug9Zuk
+
+    
+- v6.1.7 DDJ-SX2/SZ - March 2020 - Added Preview player to SX2
+  - Load prepare - press = load track in preview player
+  - browser turn = seek preview player
+  - load prepare release = stop preview player
+
+    
+- v6.1.1 DDJ-SX2/SZ - July 2019 - Merged SX2 and SZ TP3 mapping
+  - Merged SX2 and SZ TP3 mapping in a single file
+  - added DDJ-SR specific mapping (for faster jogs)
+  - added official Pioneer installation instructions
+
+	
+- v6.1.0 DDJ-SX2 - Feb 2019 - First DDJ-SX2 release by DJ_Estrela (for TP3)
+  - New features:
+    - TP3 MixerFX, TP3 Reverse Slip
+    - Param "<" cycles between most used pages (MacroFX + mixerFX)
+		
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/9222
+    - YT:   https://www.youtube.com/watch?v=sanF35CYeSg
+
+
+- v6.0.0 DDJ-SZ - Aug 2018 - First DDJ-SZ release by DJ_Estrela (for TP2)
+  - Major new features:
+    - MacroFX
+    - BeatFX
+
+  - Minor new features:
+    - Tempo Cycle 6%, 10%, 16%, 100%
+    - Loop/Beatjump merged with shift2
+    - Pressing hot cue cancels out special modes
+
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/8671
+    - YT:   http://youtu.be/H_TE2mtuM6Q
+
+    
+    
+XDJ-XZ specific mapping:
+------------------------
+- v6.1.8b XDJ-XZ - April 2020 - Shift2 release
+ - fixed shift+browser to browse the tree
+ - "call memory" is now a second shift, to access loop move and zoom    
+    
+- v6.1.8 XDJ-XZ - April 2020 - XDJ emergency release
+  - many bug fixes from the first release: missing loops, search, tempo reset, sync
+  - now provide two versions: for both with BOME and without BOME
+  - moved jog touch back to traktor and away from BOME
+    
+- v6.1.8 XDJ-XZ - April 2020 - XDJ emergency release
+  - many bug fixes from the first release: missing loops, search, tempo reset, sync
+  - now provide two versions: for both with BOME and without BOME
+  - moved jog touch back to traktor and away from BOME
+    
+    
+DDJ Mapping ChangeLog - By JaJA and Viper:
+------------------------------------------
+- v5.2.0 - March 2015 - Last DDJ-SZ release by JAJA (for TP2)
+  - Features: 
+	  - JogFX, PadFX, Slicer, ...
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/2629
+    - FB:   https://www.facebook.com/Artwork.Mapping.DDJSZ
+    - YT:   https://www.youtube.com/watch?v=bNofl07WDkQ
+
+- v1.3.0 - Nov 2014 - Last DDJ-SX2 release by JAJA for TP2
+  - Features: 
+	  - JogFX, PadFX
+		
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/3695
+    - FB:   https://www.facebook.com/Artwork.Mapping.TSI
+    - YT:   https://www.youtube.com/user/artworkmixs/videos
+
+- v0.9.4 - Sep 2014 - Last DDJ-SX1 by JAJA (for TP2)	
+  - Features:
+    - JogFX, ComboFX 	
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/1336
+    - FB:   https://www.facebook.com/Artwork.Mapping.TSI
+    - YT:   https://www.youtube.com/watch?v=L-biJ-nuwWc
+
+- v0.6.2 - December 2012 - Last DDJ-SX1 by Viper (for TP2)
+  - URL:
+    - DJTT: https://maps.djtechtools.com/mappings/851
+    - Blog: https://djtechtools.com/2014/03/19/10-unconventional-midi-mappings-designed-by-djtts-community/
+    - T_Bible: https://www.traktorbible.com/freaks/mappingview.aspx?id=528
+    
+ 
+ 
+Pioneer Official mappings (All these are outdated):
+---------------------------------------------------		
+Note: All these mappings are outdated, but their installation guides / MIDI codes / Firmwares 
+are the same as the new mappings.
+
+- DDJ-SZ1 - Jul 2015:
+  - Traktor: TP2 2.6.8
+  - URL: https://www.pioneerdj.com/en/support/software-information/archive/ddj-sz/#traktor
+  
+- DDJ-SX2 - Oct 2014:  
+  - Traktor: TP2 2.6.8
+  - URL: https://www.pioneerdj.com/en/support/software/archive/ddj-sx2/#midi-mapping-files
+  
+- DDJ-SX1 - Oct 2014:
+  - Traktor: TP2 2.6.8
+  - URL: https://www.pioneerdj.com/en/support/software/archive/ddj-sx/#midi-mapping-files
+ 	
+ 
+  
+  
+    
+    
