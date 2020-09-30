@@ -1007,7 +1007,7 @@ On my next version I managed to go to 3 pages, for a ~3 second delay.
 |------------|-------------|-------|-----------|-----|---------|-----------|----------------------|
 | Pionner    | v1.0.0      | 14    | 18.4         |  | 9.3    | 10.9     | 2.7                 |
 | DJ Estrela | v6.7.0      | 5     | 5.2          |  | 9.7    | 5.7      | 2.8                 |
-| DJ Estrela | v6.8.0 beta | 3     | 3.2          |  | 10.0   | 4.4      | 2.7                 |
+| DJ Estrela | v7.1.0      | 2     | 2.5          |  | 10.0   | 4.4      | 2.7                 |
 
 [Table Source](pics/traktor_slow_preferences_-_measurements.xlsx)
 
@@ -1753,6 +1753,14 @@ Another good indicator is the list of most downloaded mappings (click "Downloads
 Other lists of advanced mappings:
 * https://blog.native-instruments.com/the-best-s4-hacks-of-all-time/
 * https://blog.native-instruments.com/custom-mappings-to-extend-your-traktor-control/
+
+## Tutorial on Traktor preferences
+
+I highly recommend you dominate every preference of your DJ software.
+
+For traktor, see This article by Dj Endo:
+<http://blog.dubspot.com/traktor-pro-preferences-guide-troubleshooting-setup-tips-by-dubspots-dj-endo/>
+
 
 # Mappings Tricks
 
