@@ -1661,7 +1661,8 @@ b) everything that happens while the fader is **UP** is extremely relevant to th
 
 The exception to a) is that large amount of time spent on selecting, cueing and beatmatching will make 
 the DJ to appear (and actually is!) extremely busy.\  
-For some audiences this is very relevant, to others it is not relevant.
+For some audiences like all live-streaming, specialized non-comercial music styles, vinyl-only nights this is very relevant.\  
+To other audiences this is not relevant.
 
 Taking this rule into account, I believe the following:
 * Beatmatching by hand tracks that beatgrids easily is just a waste of time
