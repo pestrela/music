@@ -1659,26 +1659,29 @@ About the "dj sync debate", I believe the following:
 a) all preparation that happens while the fader is **DOWN** is not relevant to the audience (see exception below)
 b) everything that happens while the fader is **UP** is extremely relevant to the audience
 
-The exception to a) is that large amount of time spent on selecting, cueing and beatmatching will make 
-the DJ to appear (and actually is!) extremely busy.\  
-For some audiences like all live-streaming, specialized non-comercial music styles, vinyl-only nights this is very relevant.\  
-To other audiences this is not relevant.
+The exception mentioned above is tha the large amount of time spent on beatmatching on top of track selection and cueing 
+makes the DJ to even more busy.\  
+For some audiences like live-streaming, specialized non-commercial music styles, vinyl-only nights having the DJ very busy is very relevant.\  
+To other audiences, this is not relevant.
 
 Taking this rule into account, I believe the following:
 * Beatmatching by hand tracks that beatgrids easily is just a waste of time
 * Using sync on tracks that does not beatgrid well is very damaging
   * this is why elastic beatgrids are so important - If the detection algorithm is correct 
-  * Beatmatching is a useful tool to have for unanalyzed music, older equipment, vinyl, non-elastic beatgrids, acapellas, etc.
 * Some tricks tipically associated with vinyl are enjoyed by the audience, like TurnTable stop and TT break
 
 ### DJ point of view view
 
 From the DJ point of view, things are different.
 
-Beatmatching can range from being very enjoyable to being a burden. It definitely was a huge barrier to beginners back in the days. 
-DJs like to be busy, so beatmatching is one way to satisfy that need (also happens a lot with other topics like excessive use of Effects, Scratching, sampling, etc.)
+Beatmatching can range from being very enjoyable to being a burden. It definitely was a huge barrier to beginners back in the days.\  
+DJs tend to enjoy being busy, so beatmatching is one way to satisfy that need.\  
+This also happens a lot with other topics like excessive use of Effects, Scratching, sampling, etc.)
 
-More info and comments: 
+In the end I recommend you learning Beatmatching as a useful tool for the cases of 80s, live drummers, unanalysed tracks, older equipment, vinyl, acapellas, etc.
+
+
+More info, and more comments: 
 * [article1](https://www.digitaldjtips.com/2010/09/beatmatching-by-ear)
 * [article2](https://www.digitaldjtips.com/2012/09/4-uses-for-the-pitch-fader-in-a-sync-button-age)
 * [article3](https://www.digitaldjtips.com/2015/06/your-questions-why-is-sync-a-dirty-word)
