@@ -430,6 +430,7 @@ Using Beatsync the phrasing is always kept for any action I might do to the trac
 * **Comparison to Rekordbox:** It has the best sync outside Traktor 
 * **Comparison to VDJ:** untested
 
+See also: <https://djtechtools.com/2011/10/23/looking-into-sync-power-functions-in-traktor-2/>
     
 ## Which features I miss in Traktor
 
@@ -503,6 +504,17 @@ Of which I recommend these files:
 * LM_StockholmSyndrome.stem.mp4
 * NR_FeverLine.stem.mp4
 * PR_OhNo.stem.mp4
+
+
+## Traktor Readme and Changelog
+
+These documents are useful to understand the history of Traktor, and the latest version notes:
+* <tools_traktor/Traktor_Pro_Changelog.pdf>
+* <tools_traktor/Traktor_Pro_Readme.pdf>
+
+See also the interview with the [lead Traktor Programmer](https://github.com/pestrela/music/blob/master/pic_sets/traktor_interview/Interview%20with%20the%20lead%20Traktor%20programmer.pdf).
+
+TBD: add original reviews of every major traktor version to show the evolution
 
 # Sound Quality
 
@@ -2496,6 +2508,11 @@ MacOS:
       
 ## Buying a laptop for Audio
 
+**Update Oct 2020:** I highly recommend you buy the XMG windows laptop 
+[specially tuned and guaranteed by Ray Arkaei](https://djworx.com/the-xmg-dj-15-one-laptop-to-rule-them-all/).
+
+---
+
 Are you going to buy a laptop? Be sure you can return it to the shop if you have any problems.
 
 My advice if you are buying a Windows laptop is the following:
@@ -2718,12 +2735,12 @@ to remove this, simply rename this file to something else:
 C:\Program Files\Pioneer\rekordbox 5.6.0\Upmgr rekordbox.exe
     
    
-## How to enable day skin in any software
+## How to enable day skin in any software and any OS
 
 If you are playing on the bright outside you will not see a thing.
-Some softwares provide a specific skin for this situation.
+Some softwares provide a really convenient skin for this situation.
 
-But this feature is native to the OS: 
+But this feature is already native to the OS: 
 
 Windows 10:
 * Press Win + Plus / settings / Invert Colors / Turn on magnifier
@@ -2733,6 +2750,9 @@ MacOS:
 * “System Preferences” > “Keyboard” > “Shortcuts” > “Accessibility” >  “Invert Colors
 * [guide](https://devicebar.com/invert-display-colors-on-apple-mac-os-x/2642/)
     
+Second, there are freeware programs that are better, by only inverting the brightness and keepng the hues as they are 
+(ie, green, yellow, red colors are unchanged). See [NegativeScreen for Windows](https://zerowidthjoiner.net/negativescreen)
+
     
 # MIXXX topics
 
@@ -3299,6 +3319,7 @@ Biggest difference to the group above is that I had much less interactions with 
 [Aleix Jiménez](https://www.native-instruments.com/forum/threads/supreme-edition-mod-traktor-s5-s8-d2-screen-mapping-mod.348539/) (S5/S8/D2 Screen + Mapping mod),
 [Erik Minekus](https://github.com/ErikMinekus/traktor-kontrol-screens) (S5/S8/D2 Screen modifications),
 [Kokernutz](https://github.com/kokernutz/traktor-kontrol-screens/) (S5/S8/D2 and S4 Mk3 Screen modifications), 
+[Mark Settle](https://djworx.com/author/thatguy/) (DJ Worx founder),
+[Ray Arkaei](https://djworx.com/the-xmg-dj-15-one-laptop-to-rule-them-all/) (XMG tuned DJ laptop),
 
-      
     
