@@ -1668,7 +1668,7 @@ Taking this rule into account, I believe the following:
 * Using sync on tracks that does not beatgrid well is very damaging
   * this is why elastic beatgrids are so important - If the detection algorithm is correct 
   * Beatmatching is a useful tool to have for unanalyzed music, older equipment, vinyl, non-elastic beatgrids, acapellas, etc.
- 
+* Some tricks tipically associated with vinyl are enjoyed by the audience, like TurnTable stop and TT break
 
 ### DJ point of view view
 
