@@ -1111,6 +1111,10 @@ In importance order:
 * **C) More variables**: this is a lot more than Traktor, but still not enough as I'm emulating arrays
 
 
+See also this list of **advanced** posts and tools:
+<https://www.bome.com/support/kb/index-of-advanced-posts-and-tools>
+
+
 ## How I see the future of Traktor mappings
 
 A major Traktor strength is the MIDI mappings system. They are over and over praised to be very flexible and powerful.\
@@ -1652,36 +1656,37 @@ This guide explains simple A to B mixing using sync.
 
 ## The great Sync debate 
 
-### audience point of view view
-
+### Audience point of view
 
 About the "dj sync debate", I believe the following: 
 a) all preparation that happens while the fader is **DOWN** is not relevant to the audience (see exception below)
 b) everything that happens while the fader is **UP** is extremely relevant to the audience
 
-The exception mentioned above is tha the large amount of time spent on beatmatching on top of track selection and cueing 
-makes the DJ to even more busy.\  
-For some audiences like live-streaming, specialized non-commercial music styles, vinyl-only nights having the DJ very busy is very relevant.\  
-To other audiences, this is not relevant.
+The biggest exception to the above is that beatmatching takes a lot of time of the DJ. It is hard work. 
+This time comes on top of track-searching and cueing tasks.
 
-Taking this rule into account, I believe the following:
-* Beatmatching by hand tracks that beatgrids easily is just a waste of time
-* Using sync on tracks that does not beatgrid well is very damaging
-  * this is why elastic beatgrids are so important - If the detection algorithm is correct 
-* Some tricks tipically associated with vinyl are enjoyed by the audience, like TurnTable stop and TT break
+For some audiences like live-streaming, specialized non-commercial music styles, vinyl-only nights, etc they definitely appreciate the DJ to **look** and to **actually be** very busy.\  
+To other audiences, this is not relevant at all.
 
-### DJ point of view view
-
-From the DJ point of view, things are different.
-
-Beatmatching can range from being very enjoyable to being a burden. It definitely was a huge barrier to beginners back in the days.\  
-DJs tend to enjoy being busy, so beatmatching is one way to satisfy that need.\  
-This also happens a lot with other topics like excessive use of Effects, Scratching, sampling, etc.)
-
-In the end I recommend you learning Beatmatching as a useful tool for the cases of 80s, live drummers, unanalysed tracks, older equipment, vinyl, acapellas, etc.
+Taking the above rule into account, I then believe the following:
+* Beatmatching tracks that beatgrid well is just a waste of time
+* Using sync on tracks that **do not** beatgrid well is very damaging
+  * this is why elastic beatgrids are so important
+* Some tricks typically associated with vinyl/beatmatching are definitely enjoyed by the audience, eg TT break / TT stop
+* Beatmatching forces you to hear and known the tracks much better. It is a significant help in respecting and leveraging the phrasing structure of the tracks.
 
 
-More info, and more comments: 
+### DJ point of view
+
+Typically the DJ has a different point of view than that of the audience. 
+
+Beatmatching can range from being very enjoyable to being a burden. It definitely is a huge barrier to beginners that pursue this path.\  
+DJs themselves tend to enjoy being busy, so beatmatching is one way to satisfy that need.\  
+This also happens a lot with other topics like excessive use of EQ tuning, Effects, Scratching, sampling, etc.
+
+In the end I recommend that you learn Beatmatching as a useful backup tool for the cases of 80s, live drummers, unanalysed tracks, older equipment, vinyl, acapellas, etc.
+
+More info, and more comments:
 * [article1](https://www.digitaldjtips.com/2010/09/beatmatching-by-ear)
 * [article2](https://www.digitaldjtips.com/2012/09/4-uses-for-the-pitch-fader-in-a-sync-button-age)
 * [article3](https://www.digitaldjtips.com/2015/06/your-questions-why-is-sync-a-dirty-word)
@@ -1773,11 +1778,6 @@ These are the most complete mappings I've seen, which extend **significantly** T
   * **Twisted Gratification:** https://maps.djtechtools.com/mappings/5437  ([newer version](https://maps.djtechtools.com/mappings/10645)) 
   * **DJTT Kontrol S4 MK2:** https://maps.djtechtools.com/mappings/2211
   * **One button contest:** https://maps.djtechtools.com/mappings/3619
-* **Joe Easton S4 Hack**:
-  * **Official Thread:** https://www.native-instruments.com/forum/threads/348471/
-  * **Review:** https://djworx.com/traktor-s4-mk3-screen-hack-hits-version-2-0/
-* **Aleix Jiménez Supreme Edition **:
-  * **Official thread:** https://www.native-instruments.com/forum/threads/348539  
 * **Stewe:**
   * **Kontrol S4 MK3 Ninja:** https://maps.djtechtools.com/mappings/9325
   * **Midi Fighter Ninja:** https://maps.djtechtools.com/mappings/1536
@@ -1785,7 +1785,20 @@ These are the most complete mappings I've seen, which extend **significantly** T
   * **Isolator FX cut/add:**  https://forum.djtechtools.com/showthread.php?t=72493
   * **Midifighter 64 sequencer:** https://maps.djtechtools.com/mappings/7645
   * **Livid CNTRL:R Ultimate:** https://forum.djtechtools.com/showthread.php?t=68678
+* **Various:**
+  * **Rudi-J's Elephant mapping:** https://www.youtube.com/watch?v=rkGZRU8Wvdg / [pdf](pics/RUDI-Js%20ELEPHANT%20TSI%20for%20VCI-400SE%20%2B%20Maschine%20(MK1)%20%2B%20BCR%202000%20v2.0.pdf)
 
+ 
+Also very relevant are Mods that change the controller screens and gives more features:
+* **Joe Easton S4 Hack**:
+  * **Official Thread:** https://www.native-instruments.com/forum/threads/348471/
+  * **Review:** https://djworx.com/traktor-s4-mk3-screen-hack-hits-version-2-0/
+* **Aleix Jiménez Supreme Edition **:
+  * **Official thread:** https://www.native-instruments.com/forum/threads/348539  
+* **ErikMinekus Kontrol screens**:
+  * **Github**: https://github.com/ErikMinekus/traktor-kontrol-screens
+* **Kokernutz Kontrol screens**:
+  * **Github**: https://github.com/kokernutz/traktor-kontrol-screens 
 
 Another good indicator is the list of most downloaded mappings (click "Downloads" to sort):
 * https://maps.djtechtools.com/mappings?search%5Bsoftware_id%5D=29 )
@@ -3163,7 +3176,7 @@ The main factor of this is simplification and lower quality / minimum viable pro
 
 To reduce cost, both [backwards and forward compatibility](https://www.rainforestqa.com/blog/2017-05-11-common-pitfalls-of-continuous-delivery-deployment-raciness) 
 are dropped. Its far far simpler to the developer to just force the user to upgrade **all** components if just **one** them gets upgraded. 
-Instead of checking what actually changed, and if the old, unchanged functions, would work just fine with the previous version
+Instead of checking what actually changed, and if the old/unchanged functions would just work fine with the previous version.\  
 Typically the server gets updated first, then the client App needs to follow.
 
 Some years ago changes and all protocols had compatibility in mind, so that the user could continue 
@@ -3175,10 +3188,11 @@ using the previous version as long as possible (except urgent security updates).
 Today apps are far far simpler to use for the **simple tasks**. That is great.
 
 However, the **complex tasks** are being dumbed down by force, and worse, they are no longer documented structurally anymore.
-The existing documentation all moved online and is searchable. That is reasonable, but there is no longer structured manuals that would explain the features of your new mobile phone, 
+
+The existing documentation all moved online and is searchable. That is reasonable, but typically there is no longer structured manuals that would explain the features of eg your new mobile phone, 
 and every single configuration option.
 
-Other examples are the dumbing down of laptops to approach tablets by force (Windows 8 comes to mind). A Tablet is great for content consuming, but a laptop is irreplaceable for content producing.
+Other examples are the dumbing down of laptops to approach tablets by force (Windows 8 comes to mind). A Tablet is great for content **consuming**, but a laptop is irreplaceable for content **producing**.\  
 Specific examples are Function and insert keys being secondary, the loss of physical buttons like ESC in mac, short keyboards without insert/delete section like it was present on the [standard 102 keyboard](https://en.wikipedia.org/wiki/Model_M_keyboard)
 
 
@@ -3190,9 +3204,10 @@ The only solution was to ask money for [newer major versions](https://djtechtool
 The alternative is subscriptions that stop working if you stop paying.
 Another worrying trend is companies lawyers that removed the notion of ownership, giving you an 
 [authorization instead](https://www.wired.com/2015/04/dmca-ownership-john-deere/). 
-Another worrying trend is hardware features that are [unlocked by software](https://electrek.co/2016/11/08/tesla-in-car-purchase-software-locked-features/). 
+
+Yet another worrying trend is hardware features that are [unlocked by software](https://electrek.co/2016/11/08/tesla-in-car-purchase-software-locked-features/). 
 Back in the days, the price segmentation was clearly made because of hardware limitations: it was physically impossible to send more data / driver faster / etc.
-Today, the hardware has gained massive leaps in specifications, but then they are lobotomized by default, and sold as a software upgrade.
+Today, the hardware has gained massive leaps in specifications, but then they come lobotomized by default, and sold as a software upgrade.
 
   
 ## Some metrics of my free contributions
@@ -3283,7 +3298,7 @@ Biggest difference to the group above is that I had much less interactions with 
 [Joe Easton](https://www.facebook.com/pages/category/Entrepreneur/Traktor-S4MK3-Screen-Mods-by-Joe-Easton-440250006776588/) (S4 MK3 Screen),
 [Aleix Jiménez](https://www.native-instruments.com/forum/threads/supreme-edition-mod-traktor-s5-s8-d2-screen-mapping-mod.348539/) (S5/S8/D2 Screen + Mapping mod),
 [Erik Minekus](https://github.com/ErikMinekus/traktor-kontrol-screens) (S5/S8/D2 Screen modifications),
-
+[Kokernutz](https://github.com/kokernutz/traktor-kontrol-screens/) (S5/S8/D2 and S4 Mk3 Screen modifications), 
 
       
     
