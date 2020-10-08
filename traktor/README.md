@@ -1521,23 +1521,27 @@ However there are many other smaller differences, summarized [here](https://www.
 
 [original source](https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode)
 
-## Biggest DDJ firmware bugs open tickets
+## Missing jog screens on DDJ-800 and DDJ-1000SRT
 
-I have a lot of open support tickets concerning firmware MIDI bugs.
+Both the DDJ-800 and the DDJ-1000SRT do not have jog screens in MIDI mode. 
 
-The biggest issue is the DDJ-800 missing screens. The documentation describes them, but they are just broken.\  
-To report broken DDJ-800 screens yourself, click here: <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
+The reasons are:
 
-Second, the 1000SRT also has missing screens, but that is not a bug. Instead, this was a business decision of the Serato company.\  
-To report broken DDJ-1000SRT screens yourself, click here: <https://serato.com/forum/discussion/1736390>
+* DDJ-800: 
+  * this is due to a bug. The documentation describes the screens, but they are just broken.
+  * to report this **yourself**, click here and mention ticket "#147606": <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
+* DDJ-1000SRT:
+  * this is **not** a bug. It is a business decision of the Serato company.
+  * to request this **yourself**, click here: <https://serato.com/forum/discussion/1736390>
 
 See also the next post for more details.
 
 ## List of DDJ-1000 firmware bugs open tickets
 
-Below is a list of open support tickets of firmware bugs. These issues are already open for years and will not get fixed unless more people report them.
+Below is a list of open support tickets of firmware bugs.\  
+These issues were already reported years ago and will not get fixed unless more people report them.
 
-To do this, create a ticket **yourself** in the Pioneer site, and mention "ticket 147606".
+To do this, create a ticket **yourself** and mention "ticket 147606".
 * <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
 * <https://serato.com/forum/discussion/1736390>
 
