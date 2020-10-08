@@ -1521,20 +1521,32 @@ However there are many other smaller differences, summarized [here](https://www.
 
 [original source](https://www.mixxx.org/wiki/doku.php/ddj-1000#differences_between_midi_mode_and_hid_mode)
 
+## Biggest DDJ firmware bugs open tickets
+
+I have a lot of open support tickets concerning firmware MIDI bugs.
+
+The biggest issue is the DDJ-800 missing screens. The documentation describes them, but they are just broken.\  
+To report broken DDJ-800 screens yourself, click here: <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
+
+Second, the 1000SRT also has missing screens, but that is not a bug. Instead, this was a business decision of the Serato company.\  
+To report broken DDJ-1000SRT screens yourself, click here: <https://serato.com/forum/discussion/1736390>
+
+See also the next post for more details.
+
 ## List of DDJ-1000 firmware bugs open tickets
 
-This is a list of open support tickets with Pioneer about the firmware MIDI bugs. All these have been open for many months.
+Below is a list of open support tickets of firmware bugs. These issues are already open for years and will not get fixed unless more people report them.
 
-To raise the priority, please create a ticket yourself in the Pioneer forum. Just mention the issue name and the previous ticket number, ie, copy-paste this table.
+To do this, create a ticket **yourself** in the Pioneer site, and mention "ticket 147606".
+* <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
+* <https://serato.com/forum/discussion/1736390>
 
-New Ticket link: https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145
-
-To create an account on the Pioneer website, be sure to:
-* Do not use add-block plus (or similar)
+To create an account on the Pioneer site, be sure to:
+* Do not use ad-block plus (or similar)
 * Clear your cookies
 * Prefer Edge browser instead of Chrome
 
-
+DDJ-1000 issues:
 | Ticket number | Controller |  Description |
 | --- | -- | -- |
 | 147606 | DDJ-1000 | Jog screen sync led gets stuck | 
@@ -1544,7 +1556,7 @@ To create an account on the Pioneer website, be sure to:
 | 203047 | DDJ-1000 | Faders ignore USB-selector | 
 | 205732 | DDJ-1000 | Impossible to know beatFX parameter value  |
 
-Very similar case for the DDJ-800 and XDJ-XZ:
+DDJ-800 and XDJ-XZ issues:
 
 | Ticket number | Controller |  Description |
 | --- | -- | -- |
