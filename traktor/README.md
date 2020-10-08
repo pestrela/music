@@ -1529,10 +1529,10 @@ The reasons are:
 
 * DDJ-800: 
   * this is due to a bug. The documentation describes the screens, but they are just broken.
-  * to report this **yourself**, click here and mention ticket "#147606": <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
+  * to report this **yourself**, click [here](https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145/) and mention ticket "#147606"
 * DDJ-1000SRT:
   * this is **not** a bug. It is a business decision of the Serato company.
-  * to request this **yourself**, click here: <https://serato.com/forum/discussion/1736390>
+  * to request this **yourself**, click [here](https://serato.com/forum/discussion/1736390/)
 
 See also the next post for more details.
 
