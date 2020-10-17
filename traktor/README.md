@@ -1545,10 +1545,11 @@ To do this, create a ticket **yourself** and mention "ticket 147606".
 * <https://forums.pioneerdj.com/hc/en-us/requests/new?ticket_form_id=72145>
 * <https://serato.com/forum/discussion/1736390>
 
-To create an account on the Pioneer site, be sure to:
+To be able to post on the Pioneer site, be sure to:
 * Do not use ad-block plus (or similar)
 * Clear your cookies
 * Prefer Edge browser instead of Chrome
+* [more tips](https://forums.pioneerdj.com/hc/en-us/community/posts/900001473763-Forum-issues-trying-to-create-a-new-post/)
 
 DDJ-1000 issues:
 | Ticket number | Controller |  Description |
@@ -1564,14 +1565,15 @@ DDJ-800 and XDJ-XZ issues:
 
 | Ticket number | Controller |  Description |
 | --- | -- | -- |
-| 147606 | DDJ-1000SRT | Jog Screens not mappable because of a bussiness decision of the Serato company |
+| 147606 | DDJ-1000SRT | (Pioneer ticket) Jog Screens not mappable because of a bussiness decision of the Serato company |
+| 645061 | DDJ-1000SRT | (Serato ticket)  Jog Screens not mappable because of a bussiness decision of the Serato company |
 | 147606 | DDJ-800 | Jog Screens dead, eventough they are described in the MIDI table and are the same as DDJ-1000 |
 | 159944 | XDJ-XZ | Shift doesn't send alternative messages |
 | 159944 | XDJ-XZ | Jog screens only have needle and cue marker  |
 | 159944 | XDJ-XZ | Jog turn/touch same mssage for vinyl=off |
 
  
-[original list](https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets)
+This is the [original list](https://www.mixxx.org/wiki/doku.php/ddj-1000#list_of_firmware_bugs_open_tickets) in the MIXXX wiki.
  
   
 ## Is the DDJ-1000SRT also mappable to Traktor?
@@ -2068,6 +2070,23 @@ I've aware of 4x different implementations of [the 26ms shift algorithm](#26ms-s
   * Unknown language, because it is closed source. 
   * This was extended to virtualDJ as well, with the same concept of "cases"
 
+## Rekorbuddy goes open-source
+
+Rekordbuddy is going to be open source. See the DJworx article [here](https://djworx.com/teaser-free-world-exclusive-rekord-buddy-goes-open-source/)
+
+Full support to this decision. Open-source enables Freedom to improve the code, which in turn drives distributed innovation. 
+
+I already worked with other open-source projects dj-data-converter and MIXXX on the [26ms shift issue](#dj-collection-converters)
+, and will do the same with rekordbuddy.
+
+The request from Damien is clear: 
+
+"I need help with support on the forums. I need help with the manual. 
+I need help testing the app and I need help coding it to add new features. 
+If you can help with any of these things, DM me here on the forums."
+
+So please join this effort - 3 out of 4 of the above require no coding skills! 
+
 
      
 # Free DJ Software Tools
@@ -2320,15 +2339,22 @@ This is a small program to check relative links inside the same MD document: [md
 
 [This folder](../downloads) contains Windows tweaks and other generic tools.
 
-My [autohotkey file](../downloads/AutoHotkey.ahk) has all kinds of useful *glabal* shortcuts that *work for any text of any program*
-* CTRL+F08: Search in Discogs
-* CTRL+F09: Search in Explorer
-* CTRL+F10: Current url to clipboard
-* CTRL+F11: Search in Youtube (list)
+My [autohotkey file (AHK)](../downloads/AutoHotkey.ahk) has all kinds of 
+useful *global* shortcuts that *work for any text of any program*.\  
+All these shortcuts operate in a single line, or a list of lines:
+* CTRL+F08: Search in Google
+* CTRL+F09: Search in File Explorer
+* CTRL+F10: Search in Soulseek
+* CTRL+F11: Get current URL
 * CTRL+F12: Search in Youtube (first hit)
-* Win+backspace: toggle any window to be always on top for
+* Win+backspace: toggle any window to be "always on top"
 * Win+Arrows: Arrange windows on the corners, 3 possible sizes. Also supports regular half-screen
 * Win+Insert: **Append** a copy to the clipboard. Really useful to collect things around and paste once
+
+Using Shift you get varitions of the above:
+* CTRL+SHIFT+F08: Search in Discogs
+* CTRL+SHIFT+F11: Get all tabs url
+* CTRL+SHIFT+F12: Search in Youtube (list)
 
 More scripts in this folder:
 * a youtube-dl wrapper
@@ -2539,6 +2565,30 @@ My advice if you are buying a Windows laptop is the following:
 * Measure DPC problems continuously - including overnight - for Latencymon, SMI_counter
 * If you have any problems return the laptop, or follow my guides to fix the issues.
  
+## reseting your low-level settings and controller of your MAC 
+
+The system management controller (SMC) handles the following tasks of your mac:
+* Responding to presses of the power button
+* Responding to the display lid opening and closing on Mac notebooks
+* Battery management
+* Thermal management
+* SMS (Sudden Motion Sensor)
+* Ambient light sensing
+* Keyboard backlighting
+* Status indicator light (SIL) management
+* Battery status indicator lights
+* Selecting an external (instead of internal) video source for some iMac displays
+
+if you have issues related to power, batteries, fans, etc, resting this can fix it.
+* SMC reset: https://support.apple.com/en-gb/HT201295
+* guide2: https://www.howtogeek.com/312086/how-and-when-to-reset-the-smc-on-your-mac/
+
+NVRAM (nonvolatile random-access memory) and PRAM (Parameter RAM) are a small amount of 
+memory that your Mac uses to store settings like sound volume, display resolution, 
+startup-disk selection, time zone, and recent kernel panic information. 
+
+If you need to reset these settings, follow this guide:
+* PRAM reset: <https://support.apple.com/en-us/HT204063>
 
 
 # Windows usage
@@ -2580,6 +2630,10 @@ See also [my Windows tweaks](#Generic-Windows-tweaks-and-programs-I-use)
 
 See also these comments on [switching from OSX to Windows](https://www.meldaproduction.com/text-tutorials/switching-from-osx-to-windows)
 from a Music company.
+
+Update: more articles on mac to windows, and latest windows 10 features:
+* mac to windows rant: https://www.wired.com/story/rant-switching-from-mac-to-windows/)
+* windows 10 20H2 review: [link](https://www.pcmag.com/reviews/microsoft-windows-10)
 
 
 ## WSL Linux shell on Windows
@@ -2713,6 +2767,7 @@ It also has shared audio and video playlists.
 It also has a Day skin, which is something [all OS already support](#How-to-enable-day-skin-in-any-software)  
 
 The other functions I either do not use (streaming, ableton link) or have my own solution ([automatic sync using a NAS](#how-i-synchronize-and-backup-my-whole-traktor-music-and-configuration-across-laptops-and-a-nas)).
+ 
  
 ## What is NOT unlocked in the Rekordbox V6 hardware options
 
