@@ -5,42 +5,6 @@ My biggest **Laptop** reasons are not having to manage USB sticks, and it has mu
 My biggest **DDJ-1000** reason is big jogwheels.\
 My biggest **Traktor** reason is using my OS folders as "playlists", its effects and its advanced mapping possibilities.
 
-
-# About this Knowledge Base
-
-This page contains my DJ knowledge base. 
-It covers dozens of questions that I've answered over the years in forums and Facebook groups.
-
-These cover [why I'm using Traktor](#Traktor-software) instead of eg Rekordbox, 
-what are [its limitations](#Which-features-I-miss-in-Traktor), info about [Effects](#Effects), workarounds to 
-[elastic beatgrids](#Traktor-Elastic-Beatgrids) and the [Slow preferences window](#Traktor-Slow-preferences-Window);
-closely related is how I [organize my files using OS-Folders only](#OS-Folders) without any playlists; 
-
-I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made [very large mappings](#Free-Mappings) free to use; 
-specific info is on the [installation processs](#How-to-install-my-Traktor-mappings) 
-and videos showing the [features step-by-step](#can-i-see-a-demo-video-of-your-mappings); 
-on a technical level please find why I've moved to [BOME](#BOME-mappings-migration).
-
-Also described is my free [DJ Software Tools](#Free-DJ-Software-Tools), 
-including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
-and many other tools for eg [CUE files](#how-i-build-perfect-tracklists-using-cue-files); 
-there also info on the tricky process to [convert DJ collections](#DJ-collection-converters) 
-between softwares without 26-ms shifts for free.
-
-Recently I've written about the [Rekordbox v6](#Rekordbox-v6-topics) migration, 
-and my first experience with [MIXXX](#mixxx-topics), which is fully open source.
-I also found and listed multiple [DJ tutorials](#DJ-tutorials), in including [midi tutorials](#midi-mapping-tutorials).
-Also read about unique [Music Styles](#Music-Styles) and how to find new music.
-
-Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization) to avoid audio glitches, 
-general tips for [Windows](#Windows-usage), 
-keyboard shortcuts to [search in Youtube and Discogs](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
-plus more [other stuff](#Other-topics).
-
-
-Below a detailed [table of contents](#Table-of-Contents) of the whole thing, 
-and a [MindMap picture](#MindMap-Summary) to get you started.
-
 # About DJ Estrela
 
 I'm a DJ since year 2000. Some free contributions for you to enjoy:
@@ -249,7 +213,40 @@ See below for a longer Table of contents.
   * [Some people from which I've learned a lot from the Global DJ community](#some-people-from-which-ive-learned-a-lot-from-the-global-dj-community)
 
   
-  
+# About this Knowledge Base
+
+This page contains my DJ knowledge base. 
+It covers dozens of questions that I've answered over the years in forums and Facebook groups.
+
+These cover [why I'm using Traktor](#Traktor-software) instead of eg Rekordbox, 
+what are [its limitations](#Which-features-I-miss-in-Traktor), info about [Effects](#Effects), workarounds to 
+[elastic beatgrids](#Traktor-Elastic-Beatgrids) and the [Slow preferences window](#Traktor-Slow-preferences-Window);
+closely related is how I [organize my files using OS-Folders only](#OS-Folders) without any playlists; 
+
+I'm using [DDJ controllers](#Hardware-Controllers) from Pioneer and made [very large mappings](#Free-Mappings) free to use; 
+specific info is on the [installation processs](#How-to-install-my-Traktor-mappings) 
+and videos showing the [features step-by-step](#can-i-see-a-demo-video-of-your-mappings); 
+on a technical level please find why I've moved to [BOME](#BOME-mappings-migration).
+
+Also described is my free [DJ Software Tools](#Free-DJ-Software-Tools), 
+including the latest [CMDR TSI editor](#What-features-did-you-add-to-the-CMDR-TSI-editor)
+and many other tools for eg [CUE files](#how-i-build-perfect-tracklists-using-cue-files); 
+there also info on the tricky process to [convert DJ collections](#DJ-collection-converters) 
+between softwares without 26-ms shifts for free.
+
+Recently I've written about the [Rekordbox v6](#Rekordbox-v6-topics) migration, 
+and my first experience with [MIXXX](#mixxx-topics), which is fully open source.
+I also found and listed multiple [DJ tutorials](#DJ-tutorials), in including [midi tutorials](#midi-mapping-tutorials).
+Also read about unique [Music Styles](#Music-Styles) and how to find new music.
+
+Finally, there is a lot of info on [how to optimize your laptop](#DJ-Software-optimization) to avoid audio glitches, 
+general tips for [Windows](#Windows-usage), 
+keyboard shortcuts to [search in Youtube and Discogs](#What-shortcuts-you-added-for-Youtube-Google-and-Discogs), 
+plus more [other stuff](#Other-topics).
+
+
+Below a detailed [table of contents](#Table-of-Contents) of the whole thing, 
+and a [MindMap picture](#MindMap-Summary) to get you started.
      
 
 # MindMap Summary
@@ -1639,6 +1636,209 @@ This section has links to DJ tutorials and technical information.
 * [Midi mapping tutorials](#Midi-mapping-tutorials)
 * [List of advanced MIDI mappings](#List-of-advanced-MIDI-mappings)
 
+## Mistakes when Switching DJs
+
+This article covers all the issues that happen on an extremly common situation: switching between DJs. It is pure gold.
+
+Covered:
+* Not following DJ etiquette
+* Forgetting your headphones or adapter
+* Plugging in your own equipment incorrectly 
+* Only bringing one USB Pen
+* Ejecting the wrong USB
+* Loading on the wrong deck
+* Stopping the wrong deck
+* Forgetting to put Quantise on
+* Trying to mix the unmixable
+* Running out of time
+
+Well, we are only half-way. Covered next is:
+* Cutting short the other DJs track
+* Not beat-matching the transition
+* Failing to notice the FX are on
+* Failing to notice the crossfader is on
+* Adjusting the volume
+* Using low quality music
+* Starting with a bad track
+* Not reading the crowd
+* Getting nervous
+* Not looking up
+
+Article: <https://www.londonsoundacademy.com/blog/the-biggest-mistakes-to-avoid-when-switching-between-djs>
+
+
+## How to choose a headphone
+
+Another great article from the LSA:
+
+* Headphone Components
+  * Headband
+  * Driver & Enclosure
+  * Ear Pads
+  * The Cable
+* Buying Criteria:
+  * 1. Audio Quality
+  * 2. Comfort
+  * 3. Durability
+  * 4. Budget
+* Other Headphone Options To Consider
+  * Closed or Open-back?
+  * Impedance or Ohm Rating
+ 
+* Recommendations for DJ Headphones
+  * Sennheiser HD-25 - RRP £129 ‍
+  * Aiaiai TMA-2 DJ RRP £180
+  * Pioneer HDJ-S7 RRP £159
+* Headphone Recommendations for Producers 
+  * Beyerdynamic DT-770 Pro RRP £105
+  * Beyerdynamic DT-990 RRP £109
+  * Sennheiser HD650 RRP £399
+  * AKG K Professional Headphones Range £39+ .. £1499
+  * Audio Technica ATH-M50x RRP £119
+  * Audeze LCD-2 RRP£989
+* What to Avoid:
+  * Fast-fashion Headphones
+  * Gimmick Headphones
+  * Headphones Brands That Do Not Offer Spare Parts
+  * Bluetooth or Wireless H
+
+
+<https://www.londonsoundacademy.com/blog/the-best-headphones-for-djs>
+
+## How to select the right speaker for your event
+
+See this video to learn how to buy/rent large speakers. 
+<https://www.youtube.com/watch?v=VMQurf2Za1g>
+
+Battery Speakers
+-JBL Eon One Compact https://amzn.to/3epiwME
+-Bose S1 Pro https://amzn.to/3fvWWaF
+-LD Systems Maui 5 Go https://amzn.to/2CrKERD
+
+Column Arrays
+Video https://youtu.be/fc2_bls2R_g
+-EV Evolve 50 https://amzn.to/2CkUPYm
+-EV Evolve 30m https://amzn.to/2AOvZQj
+
+Beginner Speakers 
+Video https://youtu.be/1pLiTkG8nYc
+-JBL Eon 615 https://amzn.to/36WRPM5
+- QSC CP12 https://amzn.to/2Tu3VJ0
+- Mackie Thump 15 https://amzn.to/30nUM69
+- Avante A15 https://amzn.to/2QY9627
+- EV ZLX 15bt https://amzn.to/3aes8sq
+
+Beginner Subs Video https://youtu.be/wohIvfcgwAw
+Top Powered Speaker Video https://youtu.be/BUhxUIntPkk
+
+Intermediate Speakers
+-EV EKX15p http://amzn.to/2uzjgLd
+-EV EKX12p http://amzn.to/2eP4Sck
+-JBL PRX815 http://amzn.to/2tLFN8X
+-JBL PRX812 http://amzn.to/2uE0LUk
+-RCF Art 712 https://amzn.to/2AOcQ0J
+-RCF Art 715 https://amzn.to/3einWc7
+-QSC KW 122 http://amzn.to/2ePkA7b
+-QSC KW 152 http://amzn.to/2ePkSLj
+-QSC K12.2 http://amzn.to/2eORa9k
+
+Intermediate Subwoofers
+-EV EKX15 Sub http://amzn.to/2uZF8An
+-EV EKX 18 Sub http://amzn.to/2vL4gsg
+-JBL PRX 815 XLF http://amzn.to/2ePkaO9
+-JBL PRX 818 XLF http://amzn.to/2h4QPju
+-QSC KW 181 http://amzn.to/2uE1iFO
+-RCF 708 https://amzn.to/3gOj4gt
+-RCF 705 https://amzn.to/3fkWyeH
+
+Intermediate 3-way tops
+-JBL PRX 835 http://amzn.to/2vKTnH6
+-QSC KW 153 http://amzn.to/2h4RAsQ
+
+PRO Level Speakers
+-EV ETX 15p http://amzn.to/2uz9Krv
+-EV ETX 12p http://amzn.to/2uySdj6
+-JBL SRX 815p http://amzn.to/2uE2jxN
+-JBL SRX 812p http://amzn.to/2uzeLR4
+-RCF Art 745 MK4 https://amzn.to/2BYSmD5
+-RCF HDM45 https://amzn.to/3iQfcgF
+
+PRO Level Subwoofers
+-ETX 15 Sub http://amzn.to/2h4AKKV
+-ETX 18 Sub http://amzn.to/2uEgu60
+-JBL SRX 818sp http://amzn.to/2uyZOy5
+-JBL VRX918sp https://amzn.to/2ZZGlW4
+-JBL SRX 828sp http://amzn.to/2h47tzQ
+-RCF 8003 https://amzn.to/38LpEkZ
+
+Touring level Tops / arrays
+-JBL VRX932lap https://amzn.to/2BPL44I
+-RCF HDL6A https://amzn.to/3iReWy9
+-Martin Audio CDD live 15 https://martin-audio.com/products/lou...
+
+Touring level Subwoofers
+-RCF 8004 https://amzn.to/2Ziddu7
+-RCF 8006 https://amzn.to/2W80TKQ
+-Martin Audio CSX Live218 https://martin-audio.com/products/arc...
+
+
+
+
+## Top 5 Easiest Instruments To Learn
+
+1. DJ Controller
+2. Piano
+3. Drums
+4. Ukulele
+5. Harmonica
+
+<https://www.londonsoundacademy.com/blog/top-5-easiest-instruments-to-learn>
+
+
+## Where to Download House Music Online
+
+
+* Free
+  * Soundcloud 
+  * Record Label Promos & Mailing Lists 
+  * Music PR Company Promos
+  * Direct Contacts 
+  * Download Gates (eg, Hypeddit)
+* To Buy
+‍  * LSA Records
+  * Beatport.com 
+  * iTunes / Apple Music
+  * Amazon
+  * Juno Records
+  * Traxsource
+  * Boomkat
+  * Bandcamp
+  * Subscription Streaming Service For DJs (eg, Beatport Link)
+  * DJ Pools
+
+<https://www.londonsoundacademy.com/blog/where-to-download-house-music-online>
+
+## How to make a mixtape, from easy to hard
+
+
+* Super Easy
+  * Pacemaker AI DJ App
+* Easy
+  * MixMeister
+  * Garage Band  
+* Easy-Medium  
+  * Audacity 
+* medium
+  * Rekordbox 
+  * Serato 
+  * Traktor 
+  * Virtual DJ 
+* Difficult  
+‍  * ‍Ableton 
+  * Logic Pro
+  
+  
+Article: <https://www.londonsoundacademy.com/blog/10-ways-to-make-a-mixtape>
 
 ## List of Online DJ Courses
   
@@ -2590,6 +2790,49 @@ startup-disk selection, time zone, and recent kernel panic information.
 If you need to reset these settings, follow this guide:
 * PRAM reset: <https://support.apple.com/en-us/HT204063>
 
+## Windows - 100% interrupt usage
+
+
+Be sure to Disable Audio Enhancements, as explained in this article:
+<https://blog.pcrisk.com/windows/12795-system-interrupts-causing-high-cpu-usage>
+
+Same for Disable Wake on Magic Packet
+
+## Windows settings vs Control panel
+
+<https://www.techrepublic.com/article/control-panel-and-settings-uis-why-are-both-still-options-in-windows-10/>
+
+Windows 10 Settings is used to customize windows behaviour.
+Control panel is used to change deeper Hardware and configurations.
+See also the registry tweakers apps.
+
+
+Settings menu:
+* System: Display, notifications, apps, and power options
+* Devices: Bluetooth, printers, and mouse/keyboard
+* Network & Internet: Manage Wi-Fi, Airplane Mode, and VPN
+* Personalization: Change background images and colors
+* Accounts: Settings for user accounts on this PC
+* Time & language: Region, speech, and time options
+* Ease of Access: Tools for the vision or hearing impaired
+* Privacy: Control what your computer knows about you
+* Update & Security: Backup, restore, or update Windows
+
+
+Control panel
+* System and Security: Manage firewall, encryption, storage, and more
+* User Accounts: Change system access permissions for users
+* Network and Internet: Modify local network, internet, or sharing options
+* Appearance and Personalization: Tweak screen resolution and fonts
+* Hardware and Sound: Device Manager and system sounds menu
+* Clock, Language, & Region: Add a second language or input method
+* Programs: Manage desktop programs and default file handlers
+* Ease of Access: Adjust visibility, audio options, and tooltips
+
+Splitting these configs in two different places is confusing, however:
+* <https://www.howtogeek.com/293858/windows-10s-settings-are-a-mess-and-microsoft-doesnt-seem-to-care/>
+* <https://www.techrepublic.com/article/control-panel-and-settings-uis-why-are-both-still-options-in-windows-10/>
+
 
 # Windows usage
 
@@ -2999,6 +3242,13 @@ Tracks were recorded from vinyl for **EDUCATIONAL PURPOSES ONLY.** ([Fair use di
 ![kaos CD cover](pics/kaos_totally_mix_reconstruction_cd_cover.jpg?raw=true)
 ![kaos audition](pics/kaos_totally_mix_reconstruction_audition.jpg?raw=true)
 
+## Identify generational gaps in music
+
+Some tracks are very well knon, some disapeear completely.
+This is a fun test for you to try and learn.
+
+<https://pudding.cool/2020/04/music-challenge/>
+
 
 
 
@@ -3149,6 +3399,16 @@ Steps were:
   
 See also the [DJ Freshfluke’s Traktor tutorial](https://www.native-instruments.com/forum/attachments/tsp2_tutorial-01_sidebysideinstalls_ver1-0_web-pdf.46430)
   
+## How to choose fast USB pens for CDJ use
+
+Article:
+<https://www.facebook.com/groups/822722507863937/permalink/1472101869592661/>
+
+![ ](https://www.facebook.com/photo/?fbid=2209394642416610&set=pcb.1472101869592661)
+![ ](https://www.facebook.com/photo/?fbid=2209394639083277&set=pcb.1472101869592661)
+![ ](https://www.facebook.com/photo/?fbid=2209394652416609&set=pcb.1472101869592661)
+![ ](https://www.facebook.com/photo/?fbid=2209394719083269&set=pcb.1472101869592661)
+
 
 
 ## How to fix DDJ-1000 loose jogs
