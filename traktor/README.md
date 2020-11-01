@@ -1,5 +1,8 @@
 
 # MOVED PERMANENTLY
 
-This was moved permnently to <https://github.com/pestrela/dj_kb>
+This info was moved permnently to another URL.
+* Knowledge base: <https://github.com/pestrela/dj_kb>
+* Mappings documentation: <https://github.com/pestrela/dj_maps>
+* DDJ MIDI codes: <https://github.com/pestrela/ddj>
 
