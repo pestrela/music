@@ -228,6 +228,9 @@ def file_append_suffix(filename, suffix):
 
 
 def percentage(a,b):
+  if b == 0:
+    return 0
+    
   ret =  (a * 100) / b
   ret = int(ret)
   return ret
@@ -264,6 +267,10 @@ def parse_nml(opts, file, phase, db):
   print("")
   print("-------------\nDoing phase '%d' for '%s'\n" % (phase, file) )
   
+  if opts.reduce_collection is not None:
+    print("Going to reduce collection to %s" % (opts.reduce_collection) )
+
+  
   max_process=opts.max_process
       
   stats = Stats()    
@@ -282,13 +289,17 @@ def parse_nml(opts, file, phase, db):
   
   root = ET.parse(file).getroot()
   collection=root.find('COLLECTION')
-  for entry in collection:
+  for entry in collection: #.findall("."):
+    very_debug=False
     stats.n_entries += 1
+    
+    #if stats.n_entries > 9:
+      #collection.remove(entry)
+    #continue
   
     debug = opts.debug
     verbose = opts.verbose
     quiet = opts.quiet
-    very_debug=False
     if debug:
         verbose = True
 
@@ -303,6 +314,18 @@ def parse_nml(opts, file, phase, db):
 
     
     ###
+    
+    """
+    how to reduce the ET:
+      https://stackoverflow.com/questions/22817530/elementtree-element-remove-jumping-iteration
+    
+    if opts.reduce_collection is not None:
+      if not (opts.reduce_collection in folder):
+        collection.remove(entry)
+        continue
+      else:
+        print("Accepted: %s %s" % (opts.reduce_collection , folder))
+    """
     
     if opts.match_by_filename:
       audio_id = full_path      # this is an hack
@@ -477,8 +500,10 @@ def parse_nml(opts, file, phase, db):
     if percentage(stats.no_audio_id, stats.n_entries) > 30:
       print("Warning: %s non-analysed files. Did you forgot -M ?" % (stats.no_audio_id))
     
-  print("Done  phase '%d' for '%s'. Processed %d entries. Matched %d entries." % (
-    phase, file, stats.n_processed, stats.n_matches) )
+  print("Done  phase '%d' for '%s'. Processed %d entries. Matched %d entries. (%.1f)%% " % (
+    phase, file, stats.n_processed, stats.n_matches,
+      percentage(stats.n_matches, stats.n_processed),
+    ) )
     
   if opts.verbose:
     stats.print()
@@ -535,6 +560,9 @@ parser.add_argument('-v', dest="verbose", default=False, action="store_true",
                     
 parser.add_argument('--single', "--single_pass_only", dest="single_pass", default=False, action="store_true",
                     help='single pass only')
+
+parser.add_argument('--reduce', dest="reduce_collection", type=str, default=None, 
+                    help='reduces the collection by grepping the path')
 
                     
 parser.add_argument('-g', dest="grep", type=str, default="", 

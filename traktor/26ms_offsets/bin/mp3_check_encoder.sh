@@ -88,7 +88,7 @@ output files:
 key-value pairs:  
   (default)             append CSV to file, no key/vlue
   -c                    skip CSV output (to stdout or file)
-  -1        c            dump key-values (only cases)
+  -1                    dump key-values (only cases)
   -2                    dump key-values (cases and tags)
   
   -9                    dump all values
@@ -117,20 +117,25 @@ To open CSV in excel:
   
   
   
-CURRENT AGORITHM:
- if mp3guessenc does NOT see a Xing/INFO tag:
+CURRENT ALGORITHM:
+  source: https://github.com/pestrela/music/blob/master/traktor/README.md#26ms-shift-algorithm
+  
+
+if mp3 does NOT have a Xing/INFO tag:
      case = 'A'
      correction = 0ms
  
- elif eyeD3 does NOT see a LAME tag at all:
+ elif mp3 has Xing/INFO, but does NOT have a LAME tag:
+     # typical case: has LAVC header instead
      case = 'B'
      correction = 26ms
  
- elif eyeD3 sees an INVALID LAME tag:
+ elif LAME tag has invalid CRC:
+     # typical case: CRC= zero
      case = 'C'
      correction = 26ms
      
- elif eyeD3 sees a VALID LAME tag:
+ elif LAME tag has valid CRC:
      case = 'D'
      correction = 0ms
    
@@ -864,7 +869,7 @@ function do_check_headers_fast_only_tools()
 
   mp3parser_case="`the_26ms_classication_algorimn  "$mp3parser_xing_present" "$mp3parser_lame_present"  "$mp3parser_lame_valid" `"
   
- 
+  #exit 0
  
   ####################
   ### eyeD3
@@ -974,10 +979,10 @@ function do_check_headers_fast()
     fi
   fi
     
-  if [ $dump_key_values -ge 1 ]; then
+  if [ $dump_key_values -ge 2 ]; then
       echo ""
       echo "**********************"
-      echo_var file dump_key_values
+      echo_var file  #dump_key_values
       echo ""
       
       
@@ -991,7 +996,19 @@ function do_check_headers_fast()
       #echo_var  mp3guessenc_case
       ;;
 
-    2|*)      
+    2)      
+      echo_var  eyed3_case       eyed3_xing_present      eyed3_lame_present       eyed3_lame_valid 
+      echo ""
+      #echo_var  mp3parser_case   mp3parser_xing_present  mp3parser_lame_present   mp3parser_lame_valid
+      #echo ""
+      #echo_var  mp3guessenc_case       mp3guessenc_xing_present      mp3guessenc_lame_present       mp3guessenc_lame_valid 
+      #echo ""
+      echo_var  raw_dd_anything  
+      echo_var  mp3guessenc_tag_offset  eyed3_mpeg_frame_len
+      echo_var  raw_dd_lame_positions
+      ;;
+
+    3|*)      
       echo_var  eyed3_case       eyed3_xing_present      eyed3_lame_present       eyed3_lame_valid 
       echo ""
       echo_var  mp3parser_case   mp3parser_xing_present  mp3parser_lame_present   mp3parser_lame_valid
@@ -1309,6 +1326,11 @@ while [ "$#" -ge 1 ]; do
     
     
   # this is suitable for manual debugging
+  -v)
+    dump_key_values="2"
+    ;;
+  
+  
   -0)
     dump_key_values=1
     dump_raw_tools=1

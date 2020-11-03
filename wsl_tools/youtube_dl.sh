@@ -5,6 +5,13 @@
 # How To See All Youtube Videos: 	   goto the user's Youtube home page / "uploads" / "Play all"  
 #
 
+# more scripts: https://github.com/TheFrenchGhosty/TheFrenchGhostys-YouTube-DL-Archivist-Scripts
+# youtube-dl alternatives:
+#  https://source.netsyms.com/Mirrors/youtube-dl
+#  https://github.com/l1ving/youtube-dl/
+#  https://github.com/Athlon1600/youtube-downloader
+#  https://github.com/jweslley/youtube-dl-mp3/blob/master/youtube-dl-mp3
+
 set -u
 #set -e
 
@@ -32,6 +39,8 @@ Options:
  -q      ONLY query formats, and exit
  -B      rename backup extensions to windows style (version before the extension)
  
+ -r HH:MM  get a range on postprocess. Specify hhours:minutes start point
+ 
 General options: 
  -h      help
  -d      debug trace
@@ -43,6 +52,11 @@ General options:
 }
 
 
+# downgrading:
+#   https://github.com/ytdl-org/youtube-dl/releases
+# curl: 
+#    https://ytdl-org.github.io/youtube-dl/download.html
+#
 
 argc=0
 declare -a argv
@@ -146,11 +160,11 @@ function die_if_failure()
 function do_sleep()
 {
   local time="$1"
-  #echo "slepping $time seconds"
+  echo "(slepping for $time seconds)"
   sleep "$time"
 }
 
-require_tools "ffmpeg"  "youtube-dl"
+require_tools "ffmpeg"  "youtube-dlc"
 
 
 dry_run=0
@@ -160,9 +174,9 @@ only_query_format=0
     
 dump_format=0
 need_format=0
-tool="youtube-dl"
+tool="youtube-dlc"
 
-tool_disabled_options="--verbose --restrict-filenames --add-metadata --merge-output-format mp4"
+tool_disabled_options="--verbose  --embed-thumbnail --restrict-filenames --add-metadata --merge-output-format mp4"
 
 filename_options_default="-o %(title)s-%(id)s.%(ext)s"
 filename_options=" -o %(title)s.%(ext)s "
@@ -171,6 +185,13 @@ tool_global_options=" --ignore-errors   --ignore-config --no-playlist --quiet "
 tool_local_options=""
 keep=0
 keep_opt=""
+
+do_range=0
+range_start="00:00"
+#range_duration="01:00"
+range_duration="15:00"
+
+post_processor_args=""
 
 #set -x
 
@@ -197,6 +218,7 @@ function rename_backup_extension()
 
 }
 
+
 while [ "$#" -ge 1 ]; do
   case "$1" in
   -d|--debug)
@@ -204,6 +226,20 @@ while [ "$#" -ge 1 ]; do
     set -x
     ;;
  
+  -r|--range|--start|-s)
+    do_range=1
+    range_start="$2"
+    shift 1
+    ;;
+    
+  -S)
+    do_range=1
+    range_start="$2"
+    shift 1
+    range_duration="01:00"
+    ;;
+
+    
   -q|--also_query)
      force_query_format=1
      ;;
@@ -211,6 +247,16 @@ while [ "$#" -ge 1 ]; do
   -i|-Q|--only_query_format)
      only_query_format=1
      force_query_format=1
+     ;;
+     
+     
+  --qqtabbar)
+     ## this will download videos on windows explorer
+     set -x
+     download_folder="/mnt/c/Root/2 Downloads/youtube-dl"
+     cd "$download_folder"
+     
+     # will read stdin
      ;;
     
   -k)
@@ -227,6 +273,16 @@ while [ "$#" -ge 1 ]; do
   -h)
     display_help
     ;;
+    
+  # this is to input list as stdin
+  -)  
+    add_argv "$1"
+    ;;
+    
+  -*)
+    die "unknown parameter $1"
+    ;;
+  
     
   *)
     add_argv "$1"
@@ -262,6 +318,10 @@ case $argc in
 	exit 1
 	;;
 esac
+
+
+
+
 
 if [ $force_query_format -ge 1 ]; then
 	need_format=0
@@ -342,6 +402,18 @@ http*)
   ;;
 esac
 
+
+
+####
+if [ $do_range -ge 1 ]; then
+  set -x
+  #https://unix.stackexchange.com/questions/230481/how-to-download-portion-of-video-with-youtube-dl-command
+ 
+  post_processor_args="-ss ${range_start}:00.00 -t $range_duration"
+  format="raw_audio"
+fi
+
+
 if [ "$format" == "q" ]; then
 	need_format=1
 fi
@@ -357,7 +429,7 @@ if [ $need_format -ge 1 ]; then
 	read format
 fi
 
-post_processor_args=""
+
 case $format in
 both|b)
   ret=0
@@ -412,22 +484,24 @@ mp4|4|v)
 	
 mp3|3|a)
 	format="251/bestaudio"
-	tool_local_options="--extract-audio --audio-format mp3 --audio-quality 0   --embed-thumbnail --add-metadata "
+	tool_local_options="--extract-audio --audio-format mp3 --audio-quality 0  --add-metadata "
 	
 	# generate vbr instead of cbr 
 	# see also: https://appuals.com/why-converting-youtube-to-320kbps-mp3-is-a-waste-of-time/
+	;;
+  
+wav|w|full|251|opus)
+	format="251/bestaudio"
+	tool_local_options="--extract-audio  --audio-format wav"
 	;;
 
-wav*|w)
+raw_audio|raw)
 	format="251/bestaudio"
-	tool_local_options="--extract-audio --audio-format wav "
-	
-	# generate vbr instead of cbr 
-	# see also: https://appuals.com/why-converting-youtube-to-320kbps-mp3-is-a-waste-of-time/
+	tool_local_options=" --extract-audio "
 	;;
   
   
-default|raw)
+default|raw_all)
 	format=""
 	tool_local_options=""
 	;;
@@ -435,6 +509,9 @@ default|raw)
 *)
 	;;
 esac
+
+
+
 
 if [ $dump_format -ge 1 ]; then
 	display_formats "$url"
@@ -468,6 +545,9 @@ mv  --backup=numbered  --target-directory="$old_pwd" /tmp/youtube_dl/*
 
 cd "$old_pwd"
 rename_backup_extension
+
+#read
+
 
 exit 0
 

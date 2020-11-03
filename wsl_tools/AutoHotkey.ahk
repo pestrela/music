@@ -2,56 +2,8 @@
 ; AutoHotKey file for DJs
 ; Created by DJ Estrela, 2019
 ;
-;
-; User Commmands:
-;   CTRL+F08: Search in Discogs
-;   CTRL+ALT+F08: Search in Google
-;
-;   CTRL+F09: search text in File Explorer
-;   CTRL+F10: search text in soulseek
-;   CTRL+F11: search text in Youtube (first 5 hits to clipboard)
-;   CTRL+F12: search text in Youtube (first hit)
-;   
-;   CTRL+ALT+F11: send chrome url to clipboard  (all tabs)
-;   CTRL+ALT+F12: send chrome url to clipboard  (current tab)
-;
-;
-;  ClipBoard Append:
-;   CTRL+INS : standard copy
-;   CTRL+DEL : standard cut
-;   SHIFT+INS : standard paste
-;
-;   WIN+INS : append copy
-;   WIN+DEL : append cut
-;   WIN+INS : paste appendded data and delete buffer
-;
-;
-;
+; Please see the complete list of shortcuts at the very bottom of this file
 
-; Diacritic characters support:  (if enabled)
-;   CTRL+WIN+ALT+A: Toggle diacritic vowels support
-;
-;   CTRL+A: cycle diacritic "a"
-;   CTRL+E:  (same)
-;   CTRL+I:  (same)
-;   CTRL+O:  (same)
-;   CTRL+U:  (same)
-;
-;
-; Maintenance:  
-;   CTRL+WIN+ALT+ESC = Emergency stop
-;   CTRL+WIN+ALT+F11 = Debug mouse XY values (cycle)
-;   CTRL+WIN+ALT+F12 = Reload/Restart this script
-;        WIN+S : reload this script (shortcut)  
-;
-;
-; Other program  shortcuts:
-;   Win+BackSpace: windows always on top
-;   Shift+MouseWheel: folder history
-;   CTRL+R: show extensions
-;
-;   ` - solo track audition
-;   CTRL+` - mute track audition
 ;
 ;
 ;
@@ -79,12 +31,11 @@
 ;   https://www.autohotkey.com/docs/Variables.htm
 ;
 ;
-; Quoting Guide:
+; AHK Quoting Guide:
 ;   commands:
 ;     variables need "%"
 ;     strings NOT quoted
 ;     = (assignment)
-;
 ;
 ;   expressions:
 ;     variables unquoted      
@@ -95,40 +46,185 @@
 ;     (on commands, with the "%" operator)
 ;          
 ;
-;
 ; Ideas:
-;   https://superuser.com/questions/1203029/wsl-trailing-whitespaces-being-added-to-bash-code-pasted-into-cmd-wsl-tty-per
+;     https://superuser.com/questions/1203029/wsl-trailing-whitespaces-being-added-to-bash-code-pasted-into-cmd-wsl-tty-per
+;    
+;     "cant live" little programs:  https://www.neogaf.com/threads/some-of-my-cant-live-without-progams-what-are-yours.1482889/
+;     Clipboard History Lite - 10 clipboard with caps lock
+;     Everything for windows file search
+;     Link Clump - Chrome Extension - Open Multiple Links with "Z" key
+;    
+;     Puretext - Strips formatting when pasting.
+;     ShareX - Screenshot tool (very comprehensive )
+;     Directory Opus - File Manager
+;     Directory Report - find wasted space, duplicates, etc
 ;
-; "cant live" little programs:  https://www.neogaf.com/threads/some-of-my-cant-live-without-progams-what-are-yours.1482889/
-;  Clipboard History Lite - 10 clipbaord with caps lock
-;  Everything for windows file search
-;  Link Clump - Chrome Extension - Open Multiple Links with "Z" key
-;
-;  Puretext - Strips formatting when pasting.
-;  ShareX - Screenshot tool (very comprehensive 
-;  Directory Opus - File Manager
-;  Directory Report - find wasted space, duplicates, etc
-;
-
-; Use SetControlDelay -1;    parameter NA 6th
-
-; Examples:
-;  +!^j::
-;  MsgBox, There are
-; Run, notepad.exe
-; WinActivate, Untitled - Notepad
-; WinWaitActive, Untitled - Notepad
-; Send, 7 lines{!}{Enter}
-; SendInput, inside the CTRL{+}J hotkey.
-; return
 
 
-;+!^b::  ; CTRL+B hotkey
-;Send, {Ctrl down}c{Ctrl up}  ; Copies the selected text. ^c could be used as well, but this method is more secure.
-;SendInput, [b]{Ctrl down}v{Ctrl up}[/b] ; Wraps the selected text in BBCode tags to make it bold in a forum.
-;return  ; This ends the hotkey. The code below this point will not get triggered.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;  Print functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-; Send, This text has been typed{!}   ; Notice the ! between the curly brackets? That's because if it wasn't, AHK would press the ALT key.
+print( values* )
+{
+  print2( " ", False, values* )
+}
+
+error( values* )
+{
+  print("Error:", values*)
+
+}
+
+warning( values* )
+{
+  print("Warning:", values*)
+  
+
+}
+
+die( values* )
+{
+  error( values* )
+  ; raise exception ?
+}
+
+
+
+printd( values* )
+{
+  print2( "|", True, values* )
+}
+
+pause( )
+{
+  print("Press enter to continue")
+}
+
+
+
+print1( var )
+{
+  st := "<" . var . ">"
+  
+  msgbox, %st%
+}
+
+print2( sep, surround := False , values* )
+{
+  #sep := " "
+  st := ""
+  
+  for index, value in values {
+    if(len(value) == 0 ){
+      value := "<EMPTY>"
+    }
+    st .= sep . value . sep
+  }
+    
+  if(surround){
+    st := sep . st . sep  
+  }
+  
+  msgbox, %st%
+}
+
+
+
+debug_print( debug, var* )
+{
+  global_do_debug := True
+  ; global_do_debug := False
+  
+  if(global_do_debug){
+    if(debug){
+      printd(var*)
+    }  
+  }
+}
+ 
+ 
+ 
+debug_print_kv(debug, key, value){
+  if(len(value) == 0 ){
+    value := "<empty>"
+  }
+ 
+  global_do_debug := True
+  ; global_do_debug := False
+  
+  if(global_do_debug){
+    if(debug){
+      msgbox, %key% = |%value%|
+      msgbox, %key% = |%value%|
+    }
+  }
+}
+
+
+debug_print_array(debug, name, array, show_elements := false)
+{
+  if(debug){
+    print_array(name, array, show_elements)
+  
+  }
+}
+
+
+print_array(name, array, show_elements := true)
+{
+  debug := true
+
+  count := array.count()
+  if(count == ""){
+    count := 0   ; needed ??
+  
+  }
+  
+  print("Array '" . name . "' has " . count . " elements")
+  
+  if(!show_elements)
+    return
+    
+  for index, element in array
+  {
+      print("Element " . index . ":  <" . element . ">")
+  }
+}
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+ahk_reload()
+{
+  ; warning("Going to reload AHK script")
+  reload
+  
+}
+
+mouse_move(win_x, win_y)
+{
+  ;velocity := 10
+  velocity := 0
+  
+  MouseMove, %win_x%, %win_y%, %velocity%
+  sleep 50
+}
+
+
+mouse_click(win_x, win_y)
+{
+  mouse_move(win_x, win_y)
+  click
+  sleep 200
+}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 
 ;;;
@@ -250,8 +346,17 @@
 
 
 
-Monitor(x,y, w, h){
+Monitor(x,y, w, h)
+{
   mon := Object()
+  
+ ; more info: https://github.com/pacobyte/AutoHotkey-Lib-WinGetPosEx/blob/master/WinGetPosEx.ahk
+  margin := 8
+  
+  ;x := x - margin
+  ;y := y - margin
+  ;w := w - margin * 1
+  ;h := h - margin * 1
   
   mon.x0 := x
   mon.x1 := x + floor(w/3)
@@ -269,27 +374,30 @@ Monitor(x,y, w, h){
 }
 
 
-mon_2_st(mon){
+mon_2_st(mon)
+{
   st := ""
 
   st .= " Monitor(" . mon.x0 
-  st .= " " . mon.x2 
+  ;st .= " " . mon.x2 
   st .= " " . mon.x4
   
   st .= ", " . mon.y0  
-  st .= " " . mon.y2 
+  ;st .= " " . mon.y2 
   st .= " " . mon.y4  . ") "
   
   return st
 }
      
      
-print_mon(mon){
+print_mon(mon)
+{
 
   print( mon_2_st(mon))
 }
 
-get_monitor(){
+get_monitor()
+{
   return "TBD"
 }
 
@@ -300,8 +408,11 @@ get_monitor(){
 
 
 
-Location(x, y, w, h, max){
+Location(x, y, w, h, max)
+{
   loc := {}
+  
+  x := x 
   
   loc.x := x
   loc.y := y
@@ -314,8 +425,9 @@ Location(x, y, w, h, max){
 }
 
 
-loc_2_st(loc){
-  set := ""
+loc_2_st(loc)
+{
+  st := ""
   
   st .= "Location(" . loc.x
   st .= ", " . loc.y
@@ -338,25 +450,30 @@ loc_2_st(loc){
 }
 
 
-print_loc(loc){
+print_loc(loc)
+{
 
   print( loc_2_st(loc))
 }
 
 
 
-get_location(){
-  WinGetPos, wc_X, wc_Y, wc_Width, wc_Height, A    
+get_location()
+{
+  WinGetPos, x, y, w, h, A    
   WinGet, wc_Max, MinMax, A                        ; are we maximized?   https://www.autohotkey.com/docs/commands/WinGet.htm#MinMax
  
   ;print1(wc_X)
   
-  loc := Location(wc_X, wc_Y, wc_Width, wc_Height, wc_Max)
+  x := x + 7
+  
+  loc := Location(x, y, w, h, wc_Max)
   return loc
 }
 
 
-loc_is_equal(l1, l2){
+loc_is_equal(l1, l2)
+{
   return l1.x == l2.x and l1.y == l2.y and l1.w == l2.w and l1.h == l2.h 
 
 }
@@ -367,7 +484,8 @@ loc_is_equal(l1, l2){
 ;;;;;;;;;;
 
  
-case_2_loc(mon, case){
+case_2_loc(mon, case)
+{
  
   ;; shorthands
   x0 := mon.x0
@@ -555,14 +673,16 @@ case_2_loc(mon, case){
 
 
 
-loc_equal_case(loc, mon, case){
+loc_equal_case(loc, mon, case)
+{
   new_loc := case_2_loc(mon, case)
   
   return loc_is_equal(loc, new_loc)
 }
 
 
-loc_2_case(loc, mon){
+loc_2_case(loc, mon)
+{
   ;print("Doing get_case:", loc_2_st(loc), mon_2_st(mon))
 
   
@@ -662,10 +782,128 @@ loc_2_case(loc, mon){
 
 
 ;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;
  
-move_window(loc){
+ 
+WinGetPosEx(hWindow,ByRef X="",ByRef Y="",ByRef Width="",ByRef Height=""
+			,ByRef Offset_Left="",ByRef Offset_Top=""
+			,ByRef Offset_Right="",ByRef Offset_Bottom="")
+{
+  ; Source:  https://github.com/pacobyte/AutoHotkey-Lib-WinGetPosEx/blob/master/WinGetPosEx.ahk
+  ; Original author: jballi (https://autohotkey.com/boards/viewtopic.php?t=3392)
+  ; Update author: RiseUp
+
+    Static Dummy5693
+          ,RECTPlus
+          ,S_OK:=0x0
+          ,DWMWA_EXTENDED_FRAME_BOUNDS:=9
+
+    ;-- Workaround for AutoHotkey Basic
+    PtrType:=(A_PtrSize=8) ? "Ptr":"UInt"
+
+    ;-- Get the window's dimensions
+    ;   Note: Only the first 16 bytes of the RECTPlus structure are used by the
+    ;   DwmGetWindowAttribute and GetWindowRect functions.
+    VarSetCapacity(RECTPlus,32,0)
+    DWMRC:=DllCall("dwmapi\DwmGetWindowAttribute"
+        ,PtrType,hWindow                                ;-- hwnd
+        ,"UInt",DWMWA_EXTENDED_FRAME_BOUNDS             ;-- dwAttribute
+        ,PtrType,&RECTPlus                              ;-- pvAttribute
+        ,"UInt",16)                                     ;-- cbAttribute
+
+    if (DWMRC<>S_OK)
+        {
+        if ErrorLevel in -3,-4  ;-- Dll or function not found (older than Vista)
+            {
+            ;-- Do nothing else (for now)
+            }
+         else
+            outputdebug,
+               (ltrim join`s
+                Function: %A_ThisFunc% -
+                Unknown error calling "dwmapi\DwmGetWindowAttribute".
+                RC=%DWMRC%,
+                ErrorLevel=%ErrorLevel%,
+                A_LastError=%A_LastError%.
+                "GetWindowRect" used instead.
+               )
+
+        ;-- Collect the position and size from "GetWindowRect"
+        DllCall("GetWindowRect",PtrType,hWindow,PtrType,&RECTPlus)
+        }
+
+    ;-- Populate the output variables
+    X:=Left       := NumGet(RECTPlus,0,"Int")
+    Y:=Top        := NumGet(RECTPlus,4,"Int")
+    Right         := NumGet(RECTPlus,8,"Int")
+    Bottom        := NumGet(RECTPlus,12,"Int")
+    Width         := Right-Left
+    Height        := Bottom-Top
+    Offset_Left   := 0
+    Offset_Top    := 0
+    Offset_Right  := 0
+    Offset_Bottom := 0
+
+    ;-- If DWM is not used (older than Vista or DWM not enabled), we're done
+    if (DWMRC<>S_OK)
+        Return &RECTPlus
+
+    ;-- Collect dimensions via GetWindowRect
+    VarSetCapacity(RECT,16,0)
+    DllCall("GetWindowRect",PtrType,hWindow,PtrType,&RECT)
+	GWR_Left   := NumGet(RECT,0,"Int")
+	GWR_Top    := NumGet(RECT,4,"Int")
+	GWR_Right  := NumGet(RECT,8,"Int")
+	GWR_Bottom := NumGet(RECT,12,"Int")
+	
+	;-- Calculate offsets and update output variables
+	NumPut(Offset_Left   := Left       - GWR_Left,RECTPlus,16,"Int")
+	NumPut(Offset_Top    := Top        - GWR_Top ,RECTPlus,20,"Int")
+	NumPut(Offset_Right  := GWR_Right  - Right   ,RECTPlus,24,"Int")
+	NumPut(Offset_Bottom := GWR_Bottom - Bottom  ,RECTPlus,28,"Int")
+	
+    Return &RECTPlus
+}
+    
+ 
+ 
+ResizeWin_dwm(Left = 0, Top = 0, Width = 0, Height = 0)
+{
+    ; Source: https://www.damirscorner.com/blog/posts/20200522-PositioningWithAutoHotkey.html
+
+    ; restore the  window first because maximized window can't be moved
+    WinRestore,A
+
+    ; get the active window handle for the WinGetPosEx call
+    WinGet,Handle,ID,A
+
+    ; get the offsets
+    WinGetPosEx(Handle,X,Y,W,H,Offset_Left,Offset_Top,Offset_Right,Offset_Bottom)
+
+    If %Width% = 0
+        Width := W
+
+    If %Height% = 0
+        Height := H
+
+    ; adjust the position using the offsets
+    Left -= Offset_Left
+    Top -= Offset_Top
+    Width += Offset_Left + Offset_Right
+    Height += Offset_Top + Offset_Bottom
+
+    ; finally position the window
+    WinMove,A,,%Left%,%Top%,%Width%,%Height%
+} 
+ 
+ 
+move_window(loc)
+{
 
   debug := False
+  ; debug := True
+  
   if(debug){
     prev_loc := get_location()
     print_loc(loc)
@@ -675,8 +913,12 @@ move_window(loc){
   y := loc.y
   w := loc.w
   h := loc.h
+  
+  x := x - 7 ;- 4
  
+  ; pestrela: trying DWM-fixed version
   WinMove, A,, %x%,  %y%, %w%, %h%
+  ; ResizeWin_dwm(x,y,w,h)
   
   debug_moved_window := False
   
@@ -871,7 +1113,8 @@ get_translation_table_2(which_side)
 }  
      
 
-do_enlarge(which_side){  
+do_windows_enlarge(which_side)
+{
   ;beep()
   
   
@@ -909,9 +1152,12 @@ do_enlarge(which_side){
   ;print("current case:", cur_case)
   
   debug := False
-  ; debug := True
+  ;debug := True
   
-  if(debug){
+  debug_tmp := true
+  debug_tmp := false
+  
+  if(debug or debug_tmp){
     print_loc(loc)
     print_mon(mon)
   }
@@ -945,9 +1191,23 @@ do_enlarge(which_side){
 }
 
 
+;
+; resolution: 
+;  1920, 1080
+;
+; location:   (maximized)
+;   -8,-8, 1936, 1056 
+;
+; location: moved to the right
+;   1913
+;
+; monitor:  
+;   0, 0, 1920, 1040
+;
 
 
-test_arrays(){
+test_arrays()
+{
 
   t := Object()
   
@@ -973,7 +1233,8 @@ test_arrays(){
 }
 
 
-test_objects(x,y){
+test_objects(x,y)
+{
   ret := Object()
   
   ret["k1"] := x
@@ -1057,7 +1318,8 @@ diacritic_teste(shift)
 }
   
   
-diacritic_get_char(letter, shift, count){
+diacritic_get_char(letter, shift, count)
+{
   ; https://www.autohotkey.com/docs/misc/Arrays.htm
   ; https://github.com/nuj123/AutoHotKey/blob/master/misc/Typing%20Accents%20-%20Emulating%20Macs
   ; https://autohotkey.com/board/topic/16920-how-to-enter-basic-spanish-accented-characters/
@@ -1208,7 +1470,8 @@ len(String){
 
 
 ; removes all special characters, makes lowercase, keeps "\n" for breaking lines later
-normalize_query( query , remove_digits := true ){
+normalize_query( query , remove_digits := true )
+{
   StringLower, query, query
   StringReplace, query, query, `r`n, `n, All   ; support both windows and unix text
   
@@ -1222,7 +1485,8 @@ normalize_query( query , remove_digits := true ){
 }
 
 ; cleans 
-url_prepare_query( query ){
+url_prepare_query( query )
+{
   ; query := "Layo & Bushwa2cka*	Lo4ve 4"
   
   query := normalize_query(query)
@@ -1382,12 +1646,14 @@ debug_beep(){
 
 
 
-get_active_window_id(){
+get_active_window_id()
+{
   WinGet, current_ID, ID, A
   return current_ID
 }
 
-set_active_window_id(new_id){
+set_active_window_id(new_id)
+{
   WinActivate, ahk_id %new_id%
 }
 
@@ -1408,8 +1674,8 @@ remember_previous_state()
 
 
 ; activate the previous window
-return_to_previous_state(){
-
+return_to_previous_state()
+{
 
   global previous_state_window_ID
   global previous_state_mouse_x
@@ -1424,7 +1690,8 @@ return_to_previous_state(){
 }
   
 
-find_in_explorer( query ){
+find_in_explorer( query )
+{
 	remember_previous_state()
   
   if WinExist("ahk_class ExploreWClass") or WinExist("ahk_class CabinetWClass")
@@ -1456,27 +1723,94 @@ find_in_explorer( query ){
 }
 
 
-set_clipboard(text){
-  clipboard = %text%
-  ClipWait      ; Wait for the clipboard to contain text.
-  return 
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+clipboard_get()
+{
+  ClipWait, 0.2, 1       ; Wait for the clipboard to contain text. Also exits with timeout
+  if ErrorLevel 
+  {
+    clip := ""
+    return clip
+  }
+  
+  clip := "empty"
+  clip = %clipboard%
+  return clip
 }
 
-copy_selection_to_clipboard(normalize := True){
-  ; see also: https://www.autohotkey.com/boards/viewtopic.php?f=76&t=63356&start=20#p271551
+clipboard_set(text)
+{
+  clipboard = %text%
+  return clipboard_get()
+}
 
-  clipboard =   ; Start off empty to allow ClipWait to detect when the text has arrived.
+clipboard_reset()
+{
+  clipboard_set("")
+
+}
+
+ 
+
+clipboard_copy()
+{
+  ; reference:  
+  ;   https://www.autohotkey.com/boards/viewtopic.php?f=76&t=63356&start=20#p271551
+  ;   https://www.autohotkey.com/docs/misc/Clipboard.htm
+
+  clipboard := ""   ; Start off empty to allow ClipWait to detect when the text has arrived.
   Send ^c
-  ClipWait, 0      ; Wait for the clipboard to contain text.
-  
-  ;if ErrorLevel
-  ;{
-  ;    MsgBox, The attempt to copy text onto the clipboard failed.
-  ;    ;  in this case always test query == ""
-  ;    return
-  ;}
+  return clipboard_get()
+}
+ 
 
-  ; MsgBox, "CTRL-C copied this to the clipboard:`n`n" %clipboard% 
+clipboard_cut()
+{
+  clip := clipboard_copy()
+  if(clip != ""){
+     Send Backspace
+  }
+  
+  return clip
+}
+
+clipboard_paste(text)
+{
+  clipboard_set(text)
+  Send ^v
+}
+
+;a
+;b
+;c
+
+;clipboard_get()
+;clipboard_set(text)
+;selection_copy_normalize(normalize := True)
+;clipboard_cut(normalize := True)
+;clipboard_paste(text){
+    
+  
+
+slow_send(what)
+{
+  send % what
+  sleep, 25
+}
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; Multi line Query support
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+
+selection_copy_normalize(normalize := True)
+{
+  clipboard_copy()
 
   if(normalize){
     clipboard := normalize_query(clipboard)
@@ -1485,11 +1819,41 @@ copy_selection_to_clipboard(normalize := True){
   return clipboard
 }
 
-slow_send(what)
+
+selection_copy_normalize_to_array( debug := False)
 {
-  send % what
-  sleep, 25
+  ret := Array()
+  
+  query := selection_copy_normalize()
+  if(query == "")
+    return ret
+    
+    
+  query := normalize_query( query )
+  
+  Loop, Parse, query, `n, `r
+  {
+		index := A_Index
+    line := A_LoopField
+    
+    line := strip(line)
+    
+    if(len(line)){
+      ret.Push(line)
+    }
+  }
+  
+  ;debug := True
+  
+  debug_print_array(debug, "Processing query:", ret)
+  
+  return ret
 }
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 
 
 
@@ -1543,172 +1907,41 @@ exe_activate(exe){
 
 
 slsk_activate(){
-  if not WinExist("ahk_exe SoulseekQt.exe"){
-   MsgBox, Soulseek window not present
-   return
-  } 
   
-  WinExist("ahk_exe SoulseekQt.exe")
-  WinActivate
-  Sleep, 200
-  
-  return get_active_window_id()
-}
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-print1( var )
-{
-  st := "<" . var . ">"
-  
-  msgbox, %st%
-}
-
-print2( sep, surround := False , values* )
-{
-  #sep := " "
-  st := ""
-  
-  for index, value in values {
-    if(len(value) == 0 ){
-      value := "<EMPTY>"
-    }
-    st .= sep . value . sep
-  }
+  if(!(WinExist("ahk_exe SoulseekQt.exe"))){
+    MsgBox, Soulseek window not present
+    return 0
+  } else {
+    WinActivate
+    Sleep, 200
     
-  if(surround){
-    st := sep . st . sep  
-  }
+    return get_active_window_id()
   
-  msgbox, %st%
-}
-
-
-
-printd( values* )
-{
-  print2( "|", True, values* )
-}
-
-pause( )
-{
-  print("Press enter to continue")
-}
-
-print( values* )
-{
-  print2( " ", False, values* )
-}
-
-error( values* )
-{
-  print("Error:", values*)
-
-}
-
-
-die( values* )
-{
-  error( values* )
-  ; raise exception ?
-}
-
-
-debug_print( debug, var* )
-{
-  global_do_debug := True
-  ; global_do_debug := False
-  
-  if(global_do_debug){
-    if(debug){
-      printd(var*)
-    }  
-  }
-}
- 
- 
- 
-debug_print_kv(debug, key, value){
-  if(len(value) == 0 ){
-    value := "<empty>"
-  }
- 
-  global_do_debug := True
-  ; global_do_debug := False
-  
-  if(global_do_debug){
-    if(debug){
-      msgbox, %key% = |%value%|
-      msgbox, %key% = |%value%|
-    }
+    WinMove, 40, 40 
+    MsgBox, Moved
+    return 0
   }
 }
 
 
-debug_print_array(debug, name, array, show_elements := false)
-{
-  if(debug){
-    print_array(name, array, show_elements)
-  
-  }
-}
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-
-print_array(name, array, show_elements := true)
-{
-  debug := true
-
-  count := array.count()
-  if(count == ""){
-    count := 0   ; needed ??
-  
-  }
-  
-  print("Array '" . name . "' has " . count . " elements")
-  
-  if(!show_elements)
-    return
-    
-  for index, element in array
-  {
-      print("Element " . index . ":  <" . element . ">")
-  }
-}
-
-
-
-mouse_move(win_x, win_y)
-{
-  ;velocity := 10
-  velocity := 0
-  
-  MouseMove, %win_x%, %win_y%, %velocity%
-  sleep 50
-}
-
-
-mouse_click(win_x, win_y)
-{
-  mouse_move(win_x, win_y)
-  click
-  sleep 200
-}
 
 
 soulseek_one_query(query)
 {
-  set_clipboard(query)
+  clipboard_set(query)
   
   CoordMode, Mouse, window
   if(!slsk_activate()){
+    
     return
   }
   
+  ;MsgBox, Soulseek window  present
+
   ;return
   
   WinGetPos, , , slsk_width, slsk_height
@@ -1748,7 +1981,7 @@ get_bash_exe()
 do_open_search_engine(what := "google")
 {
 	debug_beep()
-  query := copy_selection_to_clipboard()
+  query := selection_copy_normalize()
   if(query == "")
     return
   
@@ -1820,7 +2053,7 @@ get_current_chrome_url()
   
   slow_send("^l")        ;gives focus to the URL
   slow_send("^c")        
-  ClipWait,0
+  ClipWait, 0
   url := Clipboard
   
   ;print("received", url)
@@ -1958,35 +2191,7 @@ do_open_several_urls(array)
 }
 
 
-copy_selection_to_array( debug := False)
-{
-  ret := Array()
-  
-  query := copy_selection_to_clipboard()
-  if(query == "")
-    return ret
-    
-    
-  query := normalize_query( query )
-  
-  Loop, Parse, query, `n, `r
-  {
-		index := A_Index
-    line := A_LoopField
-    
-    line := strip(line)
-    
-    if(len(line)){
-      ret.Push(line)
-    }
-  }
-  
-  ;debug := True
-  
-  debug_print_array(debug, "Processing query:", ret)
-  
-  return ret
-}
+
 
 
 return_to_previous_state_if_single(array)
@@ -2026,7 +2231,7 @@ do_search_youtube_first_hit( what := "show_entries" )
   debug := False
   
   
-  query := copy_selection_to_array()
+  query := selection_copy_normalize_to_array()
   if(!validate_query(query)){
     return
   }
@@ -2053,7 +2258,7 @@ do_find_explorer( debug := False )
 	debug_beep()
   ;debug := True
   
-  query := copy_selection_to_array()
+  query := selection_copy_normalize_to_array()
   if(!validate_query(query)){
     return
   }
@@ -2079,7 +2284,7 @@ do_find_explorer( debug := False )
 
 do_find_explorer_old(){
 	debug_beep()
-  query := copy_selection_to_clipboard()
+  query := selection_copy_normalize()
   if(query == "")
     return
     
@@ -2097,7 +2302,7 @@ do_soulseek()
   debug := True
   debug := False
     
-  query := copy_selection_to_array(debug)
+  query := selection_copy_normalize_to_array(debug)
 
   if(!validate_query(query)){
     return
@@ -2118,7 +2323,7 @@ do_collect_all_youtube_results_to_clipboard()
   debug := True
   debug := False
   
-  query := copy_selection_to_array()
+  query := selection_copy_normalize_to_array()
   if(!query.count())
     return
     
@@ -2198,7 +2403,7 @@ array_concat(array1, array2)
 array_to_clipboard(array)
 {
   st := array_to_ml(array)
-  set_clipboard(st)
+  clipboard_set(st)
 }
 
 
@@ -2379,8 +2584,143 @@ tim_WM_DISPLAYCHANGE()
 
 
 
+move_windows_virtual_desktop(where)
+{
+  ;; "Yet another AHK Script"
+  ;; https://superuser.com/questions/950452/how-to-quickly-move-current-window-to-another-task-view-desktop-in-windows-10
+
+
+  WinGetTitle, Title, A
+  WinSet, ExStyle, ^0x80, %Title%
+  
+  if(where == "left"){
+    Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
+  } else {
+    Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
+  }
+  
+  sleep, 50
+  WinSet, ExStyle, ^0x80, %Title%
+  WinActivate, %Title%
+  
+  return
+  
+  ;; optional: return to where we were
+  
+  if(where == "left"){
+    Send {LWin down}{Ctrl down}{Right}{Ctrl up}{LWin up}
+  } else {
+    Send {LWin down}{Ctrl down}{Left}{Ctrl up}{LWin up}
+  }
+  
+}
+
+
+
 ;;;
-;;;  AutoExec Actions follow
+;;; Clipchain
+;;;    Clipboard utility for copying multiple strings into one long "chain"
+;;;    https://github.com/DustinLuck/ClipChain/blob/master/ClipChain.ahk
+;;;    http://lifehacker.com/5306452/clipchain-copies-multiple-text-strings-for-easy-pasting
+;;;
+;;; Standard clipboard shortcuts:
+;;;    https://www.digitalcitizen.life/5-ways-cut-copy-and-paste-windows
+;;;    https://answers.microsoft.com/en-us/windows/forum/windows_7-networking/remote-desktop-shiftinsert-for-paste/2add1c3a-deb9-4583-a6f4-f141db4bc325
+;;;
+
+
+clipchain_set_clipboard()
+{
+  global clipchain_sep, clipchain_value
+  clipboard_set(clipchain_value)
+}  
+
+
+clipchain_copy()
+{
+  global clipchain_sep, clipchain_value
+  beep()
+
+  ;print("clipchain_value:", clipchain_value)
+  
+  clip := clipboard_copy()
+  
+  ;print("just received:", clip)
+  
+  new_line := "`r`n"
+  empty_line := 
+   
+  if(clip == ""){
+    ;print("Empty selection", clip)
+    
+    clipchain_set_clipboard()
+
+    return
+  }
+  
+  last_char1 := SubStr(clip, 0, 1)
+  last_char2 := SubStr(clip, -1, 1)
+
+  ;print("seen:", last_char1, last_char2)
+
+  if( last_char1 == "`r" || last_char1 == "`n"){
+    seperator := empty_line
+    ;print("clip had newline")
+
+  } else {
+    seperator := new_line
+  }
+  
+  
+  clipchain_value = %clipchain_value%%clip%%seperator%
+
+  ;print1(clipchain_value)
+  
+  clipchain_set_clipboard()
+}
+
+ 
+ 
+clipchain_test()
+{
+  ; 12
+  ; 2
+  ; 3
+  ; 4
+  ; 5
+}
+
+
+
+clipchain_reset()
+{
+  global clipchain_sep, clipchain_value
+  beep()
+
+  clipchain_value := ""
+  clipchain_set_clipboard()
+}
+
+clipchain_cut()
+{
+  clipchain_copy()
+  clipboard_cut()
+  clipchain_set_clipboard()  
+}
+
+
+clipchain_paste()
+{
+  global clipchain_sep, clipchain_value
+  beep()
+
+  clipboard_paste(clipchain_value)
+}
+
+
+
+;;;
+;;;  AutoExec Actions follow. DO NOT PUT FUNCTIONS AFTER THIS!
 ;;;
 
 
@@ -2389,7 +2729,7 @@ tim_WM_DISPLAYCHANGE()
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 #Warn   ; https://www.autohotkey.com/docs/commands/_Warn.htm
 
-SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
+SendMode Input               ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 CoordMode, Mouse, window
 global_bash_exe := get_bash_exe()
@@ -2401,74 +2741,35 @@ diacritic_enabled := 0
 
 window_move_enabled :=0
 window_move_enabled :=1
-  
+
+clipchain_enabled := 1
+clipchain_sep := "`r`n"
+clipchain_value := ""
+    
 tim_WM_DISPLAYCHANGE()
 wc_sub_MouseHotkey()
    
+     
 init_beep()              ; Signal that we finished autoexec section
 
 
-
-;;; notepad++ shortcuts:
-; list of shortcuts: http://www.keyxl.com/aaacd5a/43/Notepad-Plus-text-editor-software-keyboard-shortcuts.htm
-; config file: %AppData%\Notepad++\shortcuts.xml
-;
-; whole line operations:
-;  ctrl+L = cut line to clipboard
-;  ctrl+V = paste line from clipboard
-;  ctrl+D = duplicate paste line from clipboard
-
-
-
-;;;
-;;; Clipchain
-;;;   Clipboard utility for copying multiple strings into one long "chain"
-;;;   https://github.com/DustinLuck/ClipChain/blob/master/ClipChain.ahk
-;;;   http://lifehacker.com/5306452/clipchain-copies-multiple-text-strings-for-easy-pasting
+;;; #	Win
+;;; !	Alt
+;;; ^	Control
+;;; +	Shift
 ;;;
 
-;DEFINE COPY HOTKEY
-CapsLock & c::
-;clear the clipboard and send copy command
-Clipboard =
-Send ^c
-;wait for clipboard data
-ClipWait 1
-if ErrorLevel
-    return
-;append the newly copied data to the ClipChain
-;add the separator only if ClipChain has something in it
-if (ClipChain <> "") {
-    ClipChain = %ClipChain%%ClipSep%%Clipboard%
-} else {
-    ClipChain = %Clipboard%
-}
-return
+#if clipchain_enabled
 
-;DEFINE PASTE HOTKEY
-CapsLock & v::
-;replace the clipboard contents with the stored ClipChain and send paste command
-Clipboard := ClipChain
-Send ^v
-;clear ClipChain
-ClipChain =
-return
+#Insert::   clipchain_copy()
+#Delete::   clipchain_reset()
 
-;DEFINE SEPARATOR HOTKEYS
-CapsLock & -::
-CapsLock & NumpadSub:: ClipSep := "-"
-CapsLock & ,:: ClipSep := ","
-CapsLock & |:: ClipSep := "|"
-CapsLock & /:: ClipSep := "/"
-CapsLock & Space:: ClipSep := A_Space
-CapsLock & Tab:: ClipSep := A_Tab
-CapsLock & Enter:: ClipSep := "`r`n"
-;no separator
-CapsLock & Esc:: ClipSep :=
+#if
 
-;DEFINE CLEAR CONTENTS HOTKEY
-CapsLock & BS:: ClipChain =
 
+
+
+;;;;;
 
 ^#!a:: diacritic_toggle()
 
@@ -2492,50 +2793,41 @@ CapsLock & BS:: ClipChain =
 
 #if window_move_enabled
 ; Activaid shortcuts
-#Left::   do_enlarge("left")
-#Right::  do_enlarge("right")
-#Up::  do_enlarge("up")
-#Down::  do_enlarge("down")
+#Left::   do_windows_enlarge("left")
+#Right::  do_windows_enlarge("right")
+#Up::     do_windows_enlarge("up")
+#Down::   do_windows_enlarge("down")
 
-;#!Left::   do_enlarge("alt_left")
-;#!Right::  do_enlarge("alt_right")
-;#!Up::  do_enlarge("alt_up")
-;#!Down::  do_enlarge("alt_down")
+;#!Left::  do_windows_enlarge("alt_left")
+;#!Right:: do_windows_enlarge("alt_right")
+;#!Up::    do_windows_enlarge("alt_up")
+;#!Down::  do_windows_enlarge("alt_down")
 #if 
 
-
-
-;;;
-;;; To change shortcuts: 
-;;;   https://www.autohotkey.com/docs/Hotkeys.htm
-;;;   https://www.autohotkey.com/docs/KeyList.htm
-;;;
-;;; #	Win
-;;; !	Alt
-;;; ^	Control
-;;; +	Shift
-;;;
 
 
 
 ^#!esc:: exitapp
 ^#!F11:: XY_analyse_init()
-^#!F12:: reload
+^#!F12:: ahk_reload()
 
-;; temporary for testing
-#s:: reload
+;; temporary for testing: Win+S
+#s:: ahk_reload()
 
-;; personal pedro
+;; personal for pedro
 ^!BS:: send, _00
 
-;;
-;;^#{left}:: 
+;; virtual desktops: move windows between them
+^!Left::  move_windows_virtual_desktop("left")
+^!Right::  move_windows_virtual_desktop("right")
+
 
 
 ^F8::   do_open_google()
 ^+F8::   do_open_discogs()
 
 ^F9::   do_find_explorer()
+
 ^F10::  do_soulseek()  
 
 ^F11::    do_chrome_get_current_url()
@@ -2546,6 +2838,98 @@ CapsLock & BS:: ClipChain =
 ^#F12:: do_collect_all_youtube_results_to_clipboard()     ;; CTRL+WIN+F12 gets 5 copies for each video. Everything goes to clipboard
 	  
 
+;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;
+;
+;;;
+;;; To change shortcuts: 
+;;;   https://www.autohotkey.com/docs/Hotkeys.htm   (modifier keys)
+;;;   https://www.autohotkey.com/docs/KeyList.htm   (full reference of everything)
+;;;
+;;; #	Win
+;;; !	Alt
+;;; ^	Control
+;;; +	Shift
+;;;
+;
+;
+;
 ; <F8: GOOGLE/DISCOGS>  <F9: EXPLORER>    <F10: SOUSLEEK>   <F11: CHROME URLS>  <F12: YOUTUBE>
-
+;
+;
+; Global shortcuts:
+;    CTRL+F08:    Search in Google
+;    CTRL+SH+F08: Search in Discogs
+;   
+;    CTRL+F09:    search text in File Explorer
+;    CTRL+F10:    search text in soulseek
+;   
+;    CTRL+F11:    GET chrome URL
+;    CTRL+SH+F11: GET ALL chrome URLs
+;   
+;    CTRL+F12:    OPEN youtube hit
+;    CTRL+SH+F12: OPEN youtube results 
+;    CTRL+WN+F12: GET top-5 youtube urls
+;
+;
+; Virtual desktops:
+;    CTRL+ALT+LEFT  = move the window to left desktop
+;    CTRL+ALT+RIGHT = move the window to right desktop
+;    CTRL+WIN+LEFT  = move to left desktop
+;    CTRL+WIN+RIGHT = move to right desktop
+;
+;
+; ClipBoard:
+;    CTRL+INS : standard copy
+;    CTRL+DEL : standard cut
+;    SHIFT+INS : standard paste
+;    Win+V: Win10 clipboard history  
+;   
+; ClipChain:
+;    WIN+DEL : Reset chain
+;    WIN+INS : Append to chain. 
+;              also puts the chain to the clipboard, even if none is selected.
+;   
+;
+; Diacritic characters support:  (if enabled)
+;    CTRL+WIN+ALT+A: Toggle diacritic vowels support
+;   
+;    CTRL+A: cycle diacritic "a"
+;    CTRL+E:  (same)
+;    CTRL+I:  (same)
+;    CTRL+O:  (same)
+;    CTRL+U:  (same)
+;
+;
+; Maintenance:  
+;    CTRL+WIN+ALT+ESC = Emergency stop
+;    CTRL+WIN+ALT+F11 = Debug mouse XY values (cycle)
+;    CTRL+WIN+ALT+F12 = Reload/Restart this script
+;               WIN+S = reload this script (shortcut)  
+;
+;
+;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;
+;
+;
+; NOTEPAD++ shortcuts:
+;    list of shortcuts: http://www.keyxl.com/aaacd5a/43/Notepad-Plus-text-editor-software-keyboard-shortcuts.htm
+;    config file: %AppData%\Notepad++\shortcuts.xml
+;   
+;    ctrl+L = cut line to clipboard
+;    ctrl+V = paste line from clipboard
+;    ctrl+D = duplicate paste line from clipboard
+;
+;
+; Other global shortcuts:
+;    Win+BackSpace: windows always on top
+;    Shift+MouseWheel: folder history
+;    CTRL+MouseWheel: Zoom
+;    CTRL+R: show extensions
+;   
+;    ` - solo track adobe audition
+;    CTRL+` - mute track adobe audition
+;
+;
 ;;; END
