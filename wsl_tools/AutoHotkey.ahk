@@ -2837,7 +2837,20 @@ init_beep()              ; Signal that we finished autoexec section
 ^+F12::  do_search_youtube_first_hit("show_search_page")   ;; Win+F12 open several search page for videos
 ^#F12:: do_collect_all_youtube_results_to_clipboard()     ;; CTRL+WIN+F12 gets 5 copies for each video. Everything goes to clipboard
 	  
+    
+    
+; https://autohotkey.com/board/topic/11647-a-double-click-hotkey/
+; https://www.autohotkey.com/boards/viewtopic.php?t=45932
+; https://www.autohotkey.com/docs/misc/Remap.htm#actually 
+; https://www.autohotkey.com/boards/viewtopic.php?t=10067 
+ 
+;Ctrl::
+;	If (A_PriorHotKey = A_ThisHotKey and A_TimeSincePriorHotkey < 500)
+;		MsgBox You double-pressed Ctrl!
+;Return
 
+ 
+ 
 ;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;

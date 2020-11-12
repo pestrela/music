@@ -73,9 +73,9 @@ sacar:
 
   
 
-comprar specialdef NL:
-----------------------
-  hunter  speak no evil
+comprar "specialdef" NL:
+------------------------
+  hunter speak no evil
   valerie dore lancelot
   Los Bravos - Black Is Black (7", Single)
   Dolly Dots - Love Me Just A Little Bit More (Totally Hooked On You) (7", Single)
@@ -134,45 +134,29 @@ already in discogs to find:
 
  
 
+megamixes?
+----------
+	extras
+  ... October 88 Mixes 2 elvis
+  nao agora: Commercial Collection 11/92
 
 
-------------------
+  90's eurodance megamixes: https://www.youtube.com/playlist?list=PLtjToWJH17tOTako4KaVN0utm83-NH8TD
 
-DMC megamixes ouvir: 
-  - https://www.youtube.com/user/m0bileinfantry/videos
-  - https://www.youtube.com/channel/UC3NBoe6J_dCkmtC1S_pf4zg/videos
-
-https://www.youtube.com/user/m0bileinfantry/videos
-
-
-
-pet shop boys cidade: https://www.facebook.com/SaudadeCidade/videos/398407116873040/ 
-sacar: tina tuner megamix
+  bass bumpers DMC  Megamix
+  Nrgetic Dance 87
+  https://www.youtube.com/watch?v=6znL90c_jNU
+  https://www.youtube.com/watch?v=NYLiOAxkIFk
+  https://www.youtube.com/watch?v=QtL5n9ABjq8
 
 
-	
-----
-extras
-... October 88 Mixes 2 elvis
-nao agora: Commercial Collection 11/92
+  https://www.youtube.com/watch?v=acO17JL9b14
+  https://www.youtube.com/watch?v=BVe8mOOoDe8
+  https://www.youtube.com/watch?v=mbhx748CylY
+  >>> status quo  megamix: https://www.youtube.com/watch?v=1hxQ83ekGFE
+  >>>> Status Quo ‎– Dreamin'!!! megamix
 
-
-90's eurodance megamixes: https://www.youtube.com/playlist?list=PLtjToWJH17tOTako4KaVN0utm83-NH8TD
-
-bass bumpers DMC  Megamix
-Nrgetic Dance 87
-https://www.youtube.com/watch?v=6znL90c_jNU
-https://www.youtube.com/watch?v=NYLiOAxkIFk
-https://www.youtube.com/watch?v=QtL5n9ABjq8
-
-
-https://www.youtube.com/watch?v=acO17JL9b14
-https://www.youtube.com/watch?v=BVe8mOOoDe8
-https://www.youtube.com/watch?v=mbhx748CylY
->>> status quo  megamix: https://www.youtube.com/watch?v=1hxQ83ekGFE
->>>> Status Quo ‎– Dreamin'!!! megamix
-
->>>>>>>>>>>>>>>>>>>>>>>> NL cheap, trance:  https://www.discogs.com/seller/430AM_Studio/mywants?ev=hxiiw
+  >>>>>>>>>>>>>>>>>>>>>>>> NL cheap, trance:  https://www.discogs.com/seller/430AM_Studio/mywants?ev=hxiiw
 
 
 
@@ -223,6 +207,11 @@ escolhidos AGORA:
 	
 labels:
 -------
+  stay up forever (acid)
+  
+    ordenar por "#", suf 39 'e o proximo
+    
+
   prg progressive 95: https://www.discogs.com/label/6868-PRG-Progressive-Motion-Records
 
   container records (espanhola)
@@ -465,36 +454,34 @@ procurar por estilos:
   Alternative Rock
 			
 
+      
+      
+DMC megamixes playlists: 
+------------------------
+  - https://www.youtube.com/user/m0bileinfantry/videos
+  - https://www.youtube.com/channel/UC3NBoe6J_dCkmtC1S_pf4zg/videos
+
+  https://www.youtube.com/playlist?list=PL-ZvbAUBbDB2QKfncYhnpfMX9lw5IpVed
+  https://www.youtube.com/playlist?list=PLp89LuhBb3-AgFxHx7v_9JqZzsUsvyfBc
+
+  
+  pet shop boys cidade: https://www.facebook.com/SaudadeCidade/videos/398407116873040/ 
+  sacar: tina tuner megamix
+
 			
 -----
 A VER: DMC: mixes pop 87 / dance 87 (december 87 mixes 1), mixes may 86 (sixties mixties), dec 85 previews (rock mix 85, euro hist 85), mixes dec 86 (pop mix daykene, rock mix 86 sanny x), july 85 (rock around the mix sanny x), april 87 (billy idol - dont need a gun sanny X), 
 
-
-DMC megamixes:  (http://www.dmcdownload.com)
---------------
+sacar e comparar:
+-----------------
   tudo: https://www.youtube.com/watch?v=G9iCWlw1X-Q
 	part 1: https://www.youtube.com/watch?v=PxOiZ5gL1Zg  <<< OK
 	part 2: https://www.youtube.com/watch?v=AAYgbVRGv9c
   part 3: https://www.youtube.com/watch?v=kf62iOV8LG4
-	
-	
-	(DMC megamix February 90 - Mixes)
-	-Paradise City ............................. 00:58
-	-My Michelle ................................. 02:32
-	-Welcome To The Jungle ........... 03:24
-	-Sweet Child O' Mine .................. 04:34
-
-	-Patience ..................................... 07:02
-	-One In A Million .......................... 09:35
-	-You Could Be Mine ................... 11:49
-	-Live And Let Die ....................... 13:34
-	
-	-Dont Cry ..................................... 15:05
-	-Knockin' On Heaven's Door ..... 16:03
-	-Yesterdays.................................. 18:26
-	-November Rain .......................... 20:36
 
 
+DMC megamixes:  (http://www.dmcdownload.com)
+--------------
 
 	sanny x dmc megamixes:
 		zz top: DMC March 85 - The Mixes
@@ -520,7 +507,7 @@ DMC megamixes:  (http://www.dmcdownload.com)
 	brian butler:
 		EMF: September 91 - Three
 
-	steve moore:0
+	steve moore:
 		inxs:  http://www.discogs.com/Various-The-Mixes-147/release/567876    http://www.youtube.com/watch?v=CLrkVgJRMd0
 		outro inxs: http://www.youtube.com/watch?v=Zd9whKAdc-s
 		bon jovi: DMC 151    http://www.youtube.com/watch?v=yPrsKXknqhM
@@ -565,7 +552,7 @@ DMC megamixes:  (http://www.dmcdownload.com)
 	Level 42: megamix (daykene - DMC june 87), children say com megamix, 
 	Lionel ritchie:  all night long original + DMC remix,  
 	Miami sound machine and gloria estefan: megamix (bizzie bee - DMC feb 89),
-	PSB Pet shop boys: mike gray DMC megamix (march 88), hit mix actually, introspective album (2x collectors), disco album, domino dancing (orig e hot tracks remix), West end girls shep petibone master mix, West end girls dance mix, suburbia, love comes quickly, always on my mind (orig e phil harding remix), its a sin disco mix, its a sin ian levine remix + you know where you went wrong rough mix, heart 12'', rent, what have i done to deserve this (extended+disco mix), Left to my own devices (disco mix BOM), being boring + we all feel better in the dark 12'', so hard, long title, i dont know what you want but i cant give you any more, opportunities, where the streets have no name (extended), its alright, I Wouldn't Normally Do This Kind Of Thing (nude mix + grandballroom + sasha dub), 
+	PSB Pet shop boys: mike gray DMC megamix (march 88), hit mix actually, 
 	Tears for fears: daykene dmc megamix (july 86 - advice for the young at heart, pale shelter, mad world, ...)
 	Technotronic: megamix (brian butler - DMC nov 90), 
 	Whitney houston: DMC alan kooltard megamix (july 87 mixes), 
@@ -1236,7 +1223,7 @@ faithless: insomnia (de donatis + monster + armand van helden	`), salva mea (BOM
 papaya: bubblebeat BOM, 
 filur: i want you (BOM + kaner club + glodtrix + original club), 
 hardfloor: acperience, 
-bassheads: is there anybody out there (x2, orig + hardfloor remix), 
+bassheads, bass heads: is there anybody out there (x2, orig + hardfloor remix), 
 blaze: do you remember house (BOM+azzido da bass + laid remix + bob sinclair dub), 
 infernal: slave to the rythm, sound of africa, 
 clubheroes: nofretete berlin, 
