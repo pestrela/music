@@ -96,11 +96,11 @@ match($0,/(.*)([g-n|y-z][a-z0-9])(\s*[=<>])/, a)	{var=a[2]; var2[var,tr]++ }
 # 10-Jan-2020 - New
 
 match($0,/([g-n|y-z][a-z0-9])(\s*==\s*)(.*)/, a)	{var=a[1]; var2[var,tr]++}
-#match($0,/([g-n|y-z][a-z0-9])(\s*==\s*)(.*)/, a)	{printf("match xx=anything a=%s\n",a[1])}
+match($0,/([g-n|y-z][a-z0-9])(\s*==\s*)(.*)/, a)	{printf("match xx=anything a=%s\n",a[1])}
 
 
 match($0,/(.*)(\s*==\s*)([g-n|y-z][a-z0-9])/,a)	{ var=a[3]; var2[var,tr]++}
-#match($0,/(.*)(\s*==\s*)([g-n|y-z][a-z0-9])/,a)	{printf("match anything=xx a=%s\n",a[3])}
+match($0,/(.*)(\s*==\s*)([g-n|y-z][a-z0-9])/,a)	{printf("match anything=xx a=%s\n",a[3])}
  
  
  
@@ -111,11 +111,11 @@ match($0,/(.*)(\s*==\s*)([g-n|y-z][a-z0-9])/,a)	{ var=a[3]; var2[var,tr]++}
 # 10-Jan-2020 - New
 
 match($0,/([g-n|y-z][a-z0-9])(\s*!=\s*)(.*)/, a)	{var=a[1]; var2[var,tr]++}
-#match($0,/([g-n|y-z][a-z0-9])(\s*!=\s*)(.*)/, a)	{printf("match xx=anything a=%s\n",a[1])}
+match($0,/([g-n|y-z][a-z0-9])(\s*!=\s*)(.*)/, a)	{printf("match xx=anything a=%s\n",a[1])}
 
 
 match($0,/(.*)(\s*!=\s*)([g-n|y-z][a-z0-9])/,a)	{ var=a[3]; var2[var,tr]++}
-#match($0,/(.*)(\s*!=\s*)([g-n|y-z][a-z0-9])/,a)	{printf("match anything=xx a=%s\n",a[3])}
+match($0,/(.*)(\s*!=\s*)([g-n|y-z][a-z0-9])/,a)	{printf("match anything=xx a=%s\n",a[3])}
  
 #assignment equal after condition
 match($0,/(.*then.*)([g-n|y-z][a-z0-9])(\s*=)/, a)	{var=a[2]; var2[var,tr]++ }

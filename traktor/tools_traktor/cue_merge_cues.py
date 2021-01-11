@@ -8,6 +8,7 @@ import argparse
 import os
 import re
 from collections import defaultdict
+from collections import Counter
 from functools import partial
 from pathlib import Path
 import glob
@@ -20,7 +21,8 @@ import textwrap
 from yapu.imports.internal import *
 from yapu.multiline import grep_1, grep_not, grep
 
- 
+from yapu.multiline import grep_1, grep_not, grep
+from yapu.versioned_file import VersionedOutputFile
 
       
 	
@@ -74,7 +76,8 @@ def generate_cue(file_music, input_tl, input_cue):
   cue_ok = True
   ignored_header=False
   
-  tl = []
+  tl_human = []
+  tl_machine = []
   cue = []
 
   ## collect track positions
@@ -119,6 +122,8 @@ def generate_cue(file_music, input_tl, input_cue):
 
   if opts.debug:
     print("")
+  
+  mixcloud_counter = Counter()
   
   count = 0
   for st in input_tl.splitlines():
@@ -165,57 +170,96 @@ def generate_cue(file_music, input_tl, input_cue):
     st = st.replace("|", "-")
 
     if opts.debug:
-      print(st)
+      print("ST is:", st)
       
     if opts.ignore_tl_num:
       st = " - ".join(st.split(" - ",1)[1:])
 
-    l = st.split("-", 1)
-    if(len(l)<= 1):
+    line = st.split("-", 1)
+    if(len(line)<= 1):
       print("\nline read: %s" % (st))
       die("Too few fields. Please use -n to disable track numbers")
     
     if opts.debug:
-      print(l)
+      print(line)
       
     num = "%02d" % (count)
-    artist = l[0].strip().upper()
-    #title = l[1].strip().title()
+    artist = line[0].strip().upper()
+    title_and_remix = string.capwords(line[1].strip())
     
-    title = string.capwords(l[1].strip())
+    #print(line[1])
+    #print(title_and_remix)
+    #sys.exit(1)
     
-
-    #print(artist)
+    if '-' in title_and_remix:
+      title = title_and_remix.split("-", 1)[0].strip()
+      remix = title_and_remix.split("-", 1)[1].strip()
+    else:
+      title = title_and_remix
+      remix = None
+    
+    
 
     try:
-      time_entry = indexes[count -1]
+      time_entry = indexes[count - 1]
       minute_entry = minutes[count - 1]
     except:
       time_entry = ""
       minute_entry = "UNK"
-    
-    
+      
+    #
+    # these are templates for other formats
+    #
     #st = " - ".join([minute_entry, artist, title])
-    #st = "[%s] %s - %s" % (minute_entry, artist, title)
-    st = "%s | %s - %s" % (minute_entry, artist, title)
+    #st = "[%s] %s - %s" % (minute_entry, artist, whole_title)
+    #75 min  | KATY PERRY - ['Hot N Cold - Dr Duke And Matt Square Rock Mix'] (['Hot N Cold ', ' Dr Duke And Matt Square Rock Mix'])
+    #78 min  | AVICII FT. FLO RIDA - ['Levels Good Feeling - Danny Killian Rock Remix'] (['Levels Good Feeling ', ' Danny Killian Rock Remix'])
+
+    new_entry_normal = "%s | %s - %s" % (minute_entry, artist, title_and_remix)
+    if remix:
+      new_entry_parentheses = "%s | %s - %s (%s)" % (minute_entry, artist, title, remix)
+    else:
+      new_entry_parentheses = "%s | %s - %s" % (minute_entry, artist, title)
+     
+    mc_artist = artist 
+    while mixcloud_counter[mc_artist] >= 4:
+      mc_artist = mc_artist + "_"
+      
+    mixcloud_counter[mc_artist] += 1
+
+    if opts.debug:
+      print("")
+      print("")
+      print("Artist: [%s]" % (artist))
+      print("MC Artist: [%s]" % (mc_artist))
+      
+      print("title_and_remix: [%s]" % (title_and_remix))
+      print("title: [%s]" % (title))
+      print("remix: [%s]" % (remix))
+      print("New_entry_normal: [%s]" % (new_entry_normal))
+      print("New_entry_parentheses: [%s]" % (new_entry_parentheses))
+      print("")
     
+     
     if opts.debug_short_cue and count >= 3:
       break
       
     
-    # New Tracklist
-    tl.append(st)
-    if((count )%5 == 0):
-      tl.append(".")
+    # Append to tracklist lists
+    tl_human.append(new_entry_normal)
+    if((count ) % 5 == 0):
+      tl_human.append(".")
+      
+    tl_machine.append(new_entry_parentheses)
 
+      
     # new Cue
     cue.append('TRACK %s AUDIO' % num)
-    cue.append('\tPERFORMER "%s"' % artist)
-    cue.append('\tTITLE "%s"' % title)
+    cue.append('\tPERFORMER "%s"' % mc_artist)
+    cue.append('\tTITLE "%s"' % title_and_remix)
     cue.append('\t%s' % time_entry)
     
   cue.extend(['', '', ''])
-
 
   print("MERGE: Read %d CUE indexes" % (len(indexes)))
   print("MERGE: read %d TL tracks" % (count))
@@ -229,25 +273,20 @@ def generate_cue(file_music, input_tl, input_cue):
     else:
       print("Cue has different size than Tracklist")
     
-    
   if not cue_ok:
-      print("BAD CUE")
+      print("Warning: BAD CUE")
       print()
 
   #print(opts)
   if opts.gen_tl:
       # detailed tracklist for comments
-      tl2 = [ ".", "%s" % (file_music_base), "." ]
-      tl2.extend(tl)
-      tl2.extend([".", "."])
-      write_file(opts.file_tl, tl2)
+      tl_human2 = [ ".", "%s" % (file_music_base), "." ]
+      tl_human2.extend(tl_human)
+      tl_human2.extend([".", "."])
+      write_file(opts.file_tl, tl_human2)
       
       # simple tracklist for hearthis.at
-      tl2_simple=tl.copy()
-      tl2_simple = [ a for a in tl2_simple if a != "." ]
-      #tl2_simple = [ a.replace("|", "-") for a in tl2_simple ]
-      #tl2_simple = [ "-".join(a.split("-")[1:]) for a in tl2_simple ]
-      write_file(opts.file_tl_simple, tl2_simple)
+      write_file(opts.file_tl_simple, tl_machine)
 
       if (not os.path.exists(opts.file_info)) or (opts.regen_nfo):
         # Todo: read from cue sheet these values
@@ -353,7 +392,7 @@ def process_one_set(opts):
 
   if opts.debug_short_cue:
     pass
-    #opts.debug = True
+    opts.debug = True
 
   if opts.do_write_no_backup:
     opts.do_write = True
@@ -540,14 +579,17 @@ parser = argparse.ArgumentParser(description="merge cues and tracklists",
 
 example:
 --------
- regenerate all tracklists (this folder): 
+ to regenerate all tracklists (THIS FOLDER): 
     cue_merge_cues.py . --folder -t  # -f
 
- regenerate all tracklists (recursive folders): 
+ same, RECURSIVELLY:
     cue_merge_cues.py . --recursive -t  # -f
 
     
- create new set: 
+ debug the first 3 tracks:    
+    cue_merge_cues.py "DJ Estrela - MIX 11 CD01" -D
+    
+ to create new set for the first time: 
     cue_merge_cues.py "DJ Estrela - MIX 11 CD01 - Vocal Trance - Mar 2005." -c -t -a  
      
 """

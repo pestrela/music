@@ -1,6 +1,18 @@
 #!/usr/bin/env python3
 
-# 
+
+# 2020-09-08:
+#  CSE -> 100 queries
+#  simple google -> SPAM
+#
+#
+
+# more sources: 
+#   https://l-hit.com/en/
+#   https://www.followlyrics.com/
+#   https://lyricsodus.com/
+
+
 
 # coding=utf-8
 from bs4 import BeautifulSoup
@@ -66,6 +78,19 @@ watermarks=[
 
 exception_table={
 
+"U96 FEAT DJ T.H. & NADI SUNRISE - Das Boot 2018 - Eric Ssl & Dj Falk Remix":
+"U96 - Das Boot",
+
+"FATBOY SLIM VS LENNY KRAVITZ - Fatboy Flys Away - Kaze's Original Monster Mix":
+"LENNY KRAVITZ - Fly Away",
+
+"AVICII FT. FLO RIDA - Levels Good Feeling - Danny Killian Rock Remix":
+"FLORIDA - Good Feeling", 
+
+
+"WALK THE MOON VS THE OUTFIELD - Dance With Me - Warezio 80s - Dj Estrela Edit":
+"WALK THE MOON - Shut Up And Dance With Me",
+
 "DAFT PUNK VS MODJO - One More Lady - DJ Stein Mix" : 
 "MODJO - Lady",
 
@@ -83,6 +108,12 @@ exception_table={
 
 "CHRISS - With A Boy Like You":
 "The Troggs - With A Girl Like You",
+
+"ADELE VS MODERN TALKING - Set Fire To Louie - Mixmachine Mashup - Dj Estrela Edit":
+"ADELE - Set Fire To the rain",
+
+"CLAUDIA PASCOAL E ISAURA - O Jardim - Esc Deep House Remix - Dj Estrela Edit":
+"CLAUDIA PASCOAL E ISAURA - O Jardim",
 
 
 }
@@ -106,6 +137,257 @@ exception_table={
 # List of Italo Disco lyrics: https://www.discogs.com/group/thread/536249
 
 custom_table={
+
+"RODG & DOM FRICOT - Cinnamon - Extended Mix":
+"""
+You are cinnamon
+on my toast
+
+Pretty heart
+put a little yo
+
+Gather me
+an grease
+
+Real deal 
+Disaster yo
+
+(Your so)
+""",
+
+"HEAVEN'S CRY VS JULIE THOMPSON - Parachute - Extended Mix":
+"""
+Don't look now
+It's a long way down 
+
+I'm tense or resigned
+And without a parachute
+
+Caught by surprise
+And now I'm free falling
+
+Like a strom through the sky 
+Yet i free falling
+""",
+
+
+"FULL TILT & BRYAN KEARNEY FEAT. DEIRDRE MCLAUGHLIN - Unlimited Dreams - Original Mix":
+"""
+Higher
+Higher and higher
+
+Ohhh
+Coming all 
+To the music
+
+Let the music 
+Let the music take control
+
+""",
+
+
+"U96 - Das Boot":
+"""
+Techno
+Emergency
+
+Maximum velocity
+Und tanzen
+
+One, two, three, techno
+
+Das Boot
+Das Boot
+Das Boot
+Das Boot
+
+Attention waterpumps
+Und tanzen
+
+Get on board, join the troop
+Get on board, join the troop
+
+Double-engine, each for you
+
+System activated
+Das Boot
+Und tanzen
+
+One, two, three, tech
+One, two, three, tech
+
+Techno
+Techno
+
+""",
+
+
+
+"JODY WISTERNOFF FT JINADU - Something Real - Shadow Child Apollo Extended Mix":
+"""
+Ooh, yeah
+I think I'm falling (Falling)
+
+Falling down into nothing
+Falling down forgetting myself
+Falling down reaching something
+Falling down, nothing is real
+
+I think I'm falling (Falling)
+Ooh, yeah
+
+Falling down into nothing
+Falling down forgetting myself
+Falling down reaching something
+Falling down, I think I'm falling (Falling)
+
+Just give me something real
+Just give me something more (Ooh, yeah)
+Just give me something real
+Ohh
+
+I think I'm falling (Falling)
+
+Just give me something real
+Just give me something more
+Just give me something real
+Ohh
+Falling down
+Ooh, yeah
+
+Falling down reaching something
+Falling down
+I think I'm falling (Falling)
+Falling down into nothing
+Falling down forgetting myself
+Falling down reaching something
+Falling down, nothing is real
+
+Ohh
+
+Ohh
+
+Just give me something real
+Just give me something more (Ooh, yeah)
+Just give me something real (Ohh)
+I think I'm falling (Falling) 
+""",
+
+"CLAUDIA PASCOAL E ISAURA - O Jardim":
+"""
+Eu nunca te quis
+Menos do que tudo
+Sempre, meu amor
+
+Se no céu também és feliz
+Leva-me, eu cuido
+Sempre, ao teu redor
+
+São as flores o meu lugar
+Agora que não estás
+Rego eu o teu jardim
+
+São as flores o meu lugar
+Agora que não estás
+Rego eu o teu jardim
+
+Eu já prometi
+Que um dia mudo
+Ou tento, ser maior
+
+Se do céu também és feliz
+Leva-me, eu juro
+Sempre, pelo teu valor
+
+São as flores o meu lugar
+Agora que não estás
+Rego eu o teu jardim
+
+São as flores o meu lugar
+Agora que não estás
+Rego eu o teu jardim
+
+Agora que não estás, rego eu o teu jardim
+Agora que não estás, rego eu o teu jardim
+Agora que não estás
+Agora que não estás, rego eu o teu jardim
+""",
+
+"LENA D'AGUA - 1986 Electrificados":
+"""
+Estamos aqui
+Neste fim do mundo
+Dizem que é na Europa unida
+
+Estamos aqui
+Presos por um fio
+
+Mas ninguém nos desliga da ficha
+Mas ninguém nos desliga da ficha
+
+Uo o o o o o o - Eletrificados
+Uo o o o o o o - modernos e iluminados
+
+Estamos aqui
+Com o mar p'la frente
+A rebobinar futuros
+
+Estamos aqui
+A remar contra o presente
+
+Mas não há quem nos corte a corrente
+Mas não há quem nos corte a corrente
+
+Uo o o o o o o - Eletrificados
+Uo o o o o o o - modernos e iluminados
+
+Uo o o o o o o - Eletrificados
+Uo ooo ooo - unidos e separados
+""",
+   
+
+   
+"LAELIA - Flatline - Radio Edit":
+"""
+There's a line
+That we crossed a long time ago
+There's a need
+I'm in need of your control
+There's a woman
+Somebody you can't deny
+We belong
+We belong with our hands up tied
+
+Leave
+As I decide to rescue you out of there
+You don't have to worry babe
+We'll work things out
+
+I cant explain
+This uneasiness on my chest
+Waving thoughts in my head
+Will u come back to me
+You'll come back
+It all began
+With that look flat on your face
+I can't handle it all
+It's suffocating us
+Suffocating
+
+You and I
+Are from a different space and time
+In this universe you keep me upside down And down
+
+Leave
+As I decide to rescue you out of there
+You don't have to worry babe
+We'll work things out
+
+I cant explain
+This uneasiness on my chest
+Waving thoughts in my head
+Will...
+""",
 
 
 
@@ -995,22 +1277,46 @@ except ImportError:
   
 #  https://genius.com/modern-talking-brother-louie-lyrics
 #  https://genius.com/modern-talking-brother-louie-98-lyrics
+
+"""
+ list of spam protection per lyrics site:
+
+ genius:
+  SCRRRR!!
+  Looks like the site is more popular than we thought!
+  We're going to send you on your way in just a sec.
+  Checking your browser before accessing genius.com
+
+  cloudflare cookie:
+    https://support.mozilla.org/bm/questions/1269260
+    
+
+"""
+
   
 class Backend(object):
   def __init__(self):
     pass
       
+  def __str__(self):
+    return self.name
+    
+  def __repr__(self):
+    return self.name
+    
     
   def download(self, url):
     global requests_hdr1, requests_hdr2, opts
 
-    html = requests_get(url, headers=requests_hdr2, timeout=5)
+    html = requests_get(url, timeout=5)
     if opts.save_html:
+      print("Saving html from lyrics site: %s" % ("site.html"))
       ml_to_file(html, "site.html")
 
     if "too popular" in html.lower():
-      print("warning: triggered SPAM protection in %s" % (self.name))
-      print("url: %s" % (url))
+      print("")
+      print("URL: %s" % (url))
+      print("ERROR: triggered SPAM protection in %s" % (self.name))
       if not opts.continue_on_spam:
         print(html)
         sys.exit(1)
@@ -1202,8 +1508,10 @@ class Track(object):
     self.artist = re.sub(r"vs\..*", " ", self.artist)
     self.artist = re.sub(r"ft\..*", " ", self.artist)
     self.artist = re.sub(r"feat\..*", " ", self.artist)
+    self.artist = re.sub(r"feat.*", " ", self.artist)
     self.artist = re.sub(r"pres\..*", " ", self.artist)
     self.artist = re.sub(r" the ", " ", self.artist)
+    self.artist = re.sub(r" and ", " ", self.artist)
 
     #print(self.artist)
     
@@ -1294,7 +1602,11 @@ def check_link_is_correct(opts, artist, title, link, loose_artists=True):
 
   #print(artist, title, link)
 
-
+      
+  if ('traducciones' or 'translations' or 'traducao') in link:
+    printd(opts, "Translation found: %s" % (link) )
+    return False
+  
   songinfo = "%s %s" % (artist, title)
   songinfo = songinfo.lower()
   songinfo = re.sub(r"ö", "o", songinfo)
@@ -1328,25 +1640,54 @@ class google_cse():
         cse_key=012302401370948303102:jbp3hqb2hjb
         api_key=<your own PRIVATE api key>
 
+    IMPORTANT:
+       you also need to call ".site restrict()" as well!
 
+       
     Info:
       https://towardsdatascience.com/current-google-search-packages-using-python-3-7-a-simple-tutorial-3606e459e0d4
       https://stackoverflow.com/questions/37083058/programmatically-searching-google-in-python-using-custom-search
-  
+      https://github.com/googleapis/google-api-python-client/issues/635#issuecomment-603208004  (siterestrict info)
+       
     """
   
   
     """
+    NOT FREE:   <<<<<<
+       https://support.google.com/programmable-search/thread/50557218?hl=en
+       
+    
+    
     CSE:
-      current: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb 
-      create new: https://cse.google.com/cse/create/new
-      help: https://developers.google.com/custom-search/v1/site_restricted_api
-      user url: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb
-      management: https://console.developers.google.com/apis/api/customsearch/overview?project=22254433430 
+      searh page with CSE: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb 
+      to create a new CSE: https://cse.google.com/cse/create/new
+      
+      HELP: https://developers.google.com/custom-search/v1/site_restricted_api
+      userside url: https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb
+      
+      list of sites management: https://programmablesearchengine.google.com/cse/setup/basic?cx=012302401370948303102%3Ajbp3hqb2hjb
+      bill management: https://console.developers.google.com/apis/api/customsearch/overview?project=22254433430 
     
     Lyrics project:
       https://console.developers.google.com/apis/credentials?showWizardSurvey=true&project=lyrics-searcher
       
+      
+      
+    CSSR = only 10 sites, no rate limit (but no longer free)
+      https://developers.google.com/custom-search/v1/site_restricted_api  
+      - confirm that you see 10 or fewer sites to search in the “Sites to Search” section of your Programmable Search Engine control panel, 
+      - there are no global top level domain patterns, 
+      - and that “Search the entire web” is set to OFF.      
+      
+    alternative: use general query with site:
+      https://stackoverflow.com/questions/58665540/google-custom-search-site-restricted-json-api-more-than-10-sites
+      "q=site:stackoverflow.com|quora.com search engine"
+      
+      
+    SEO guide: https://ahrefs.com/blog/google-advanced-search-operators/  
+    
+    # https://blog.expertrec.com/google-custom-search-site-restricted-json-api/
+    
     """
 
     
@@ -1358,16 +1699,29 @@ class google_cse():
     
     self.service = google_build_query(
       "customsearch", "v1", developerKey=self.api_key)
+      
+    #bp()
+ 
+    # http://googleapis.github.io/google-api-python-client/docs/epy/index.html   
+      
     
   def query(self, st, num=10, **kwargs):
     global opts
     
-    
-    query_results = self.service.cse().list(
+    # 2020-09-05: added site restrict. This is crucial!
+    #  source: https://github.com/googleapis/google-api-python-client/issues/635#issuecomment-603208004
+    #   
+    query_results = self.service.cse().siterestrict().list(
       q=st,             # Query
       cx=self.cse_key,  # CSE ID
       **kwargs    
       ).execute()
+    
+    if int(query_results['searchInformation']['totalResults']) == 0:
+      return [ ]
+    
+    #bp()
+    
     items = query_results['items']
     
     items = [result['link'] for result in items]
@@ -1379,13 +1733,13 @@ class google_cse():
     
     
   
-def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
+def get_lyrics2(opts, _artist, _title, tee, *, debug=False, backends=None):
   global requests_hdr1, requests_hdr2
   
   if backends is None:
     # todo: make this an option as well
     
-    backends = [Genius, MusixMatch,  LyricsWorld, FlashLyrics, LyricsFreak, Decoda, SongLyrics, Lyrics24]
+    backends = [MusixMatch,  LyricsWorld, FlashLyrics, LyricsFreak, Decoda, SongLyrics, Lyrics24, Genius, ]
     removed = MetroLyrics
 
     #backends = [LyricsWorld]
@@ -1412,9 +1766,8 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     backends = [Lyrics24]
     
     
-  cse = google_cse() 
   #debug = True
-
+  
   opts.debug_buf = StringIO()
   
   printd(opts, "")
@@ -1433,7 +1786,11 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
   ######### search engine
   # https://moz.com/blog/the-ultimate-guide-to-the-google-search-parameters
   # https://fossbytes.com/google-alternative-best-search-engine/
-  if False:
+  
+  #opts.use_cse = False
+  #opts.use_cse = True
+  
+  if not opts.use_cse:
     if opts.search_engine == "bing":
       url = 'http://www.bing.com/search?count=50&q='
       url = 'http://www.bing.com/search?q='
@@ -1444,10 +1801,22 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
       url="https://www.startpage.com/do/search?q="
       
     elif opts.search_engine == "google":
-      url = 'http://www.google.com/search?num=50&q='
-      url = 'https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb&num=50&q='
+      #url = 'https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb&num=50&q='
+      #      http://www.google.com/search?num=50&q=site:genius.com+verve+symphony
+      #url = 'http://www.google.com/search?num=50&q=site:genius.com|musixmatch.com+'
       
-    
+      
+      # site:(genius.com OR musixmatch.com OR songlyrics.com OR lyrics-24.com OR lyrics-24.com OR flashlyrics.com)  
+      google_host="www.google.ie"
+      #google_host="www.google.fr"
+      
+      url = 'http://%s/search?num=50&q=site:(genius.com+OR+musixmatch.com+OR+songlyrics.com+OR+lyrics-24.com+OR+lyrics-24.com+OR+flashlyrics.com+OR+lyricsworld.ru+OR+lyricsfreak.com+OR+metrolyrics.com)+' % (google_host)
+      url = 'http://%s/search?num=50&q=site:(musixmatch.com+OR+songlyrics.com+OR+lyrics-24.com+OR+lyrics-24.com+OR+flashlyrics.com+OR+lyricsworld.ru+OR+lyricsfreak.com+OR+metrolyrics.com)+' % (google_host)
+
+      # url= 'https://cse.google.com/cse?cx=012302401370948303102:jbp3hqb2hjb&q='
+      
+      
+    #http://www.google.com/search?num=50&q=site:genius.com+verve+symphony
     else:
       die("Unknown search provider: %s" % (opts.search_engine))
 
@@ -1462,32 +1831,34 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     url = url + to_search
     printd(opts, "Search engine URL: %s " % (url))
 
-    opts.debug_cache_google = True
+    #opts.debug_cache_google = True
     #opts.debug_cache_google = False
     if opts.debug_cache_google:
       printd(opts, "Loading google results from cache")
       result = file_to_ml("google.html") #, debug=True)
     else:
-      result = requests_get(url, headers=requests_hdr2, timeout=5)
-      
-      
+      result = requests_get(url, timeout=5)
   
     if "systems have detected unusual traffic" in result.lower():
-      print("warning: triggered SPAM protection in GOOGLE")
-      print("url: %s" % (url))
+      tee.print("")
+      tee.print("URL: %s" % (url))
+      tee.print("ERROR: triggered SPAM protection in GOOGLE. Check file 'google.html'")
       ml_to_file(result, "google.html")
       sys.exit(1)
 
     if opts.save_html:
       ml_to_file(result, "google.html")
+      
   else:
+    cse = google_cse() 
+
     to_search = '%s %s ' % (track.artist, track.title)
 
     result_list = cse.query(to_search)
     result = " ".join(result_list)
     result = result + " "
   
-  printd(opts, "returned from search engine: %s" % (result))
+  #printd(opts, "returned from search engine: %s" % (result))
   result = RString(result)
   
   track.found = State.not_found
@@ -1504,7 +1875,7 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
       link = re.sub(r"&.*", '', link)    # Remove PHP stuff
       links.append(link)
       
-    links = set(links)    # remove duplicates
+    links = list_remove_duplicates(links)
     
     for link in links:
       printd(opts, "Considering this link: %s" % (link))
@@ -1527,7 +1898,6 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
 
       printd(opts, "Backend %s found %s lines" % (back, len(track.lyrics)))
       
-      #sys.exit(1)  
     
       if len(track.lyrics) <= 2:
         track.found = State.instrumental 
@@ -1553,18 +1923,17 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
     printv(opts, "       [FOUND in %s]" % (backend.name) )
   
   elif track.found == State.instrumental:
-    print("      [INSTRUMENTAL]" )
+    tee.print("      [INSTRUMENTAL]" )
     track.lyrics = ["[INSTRUMENTAL]"]
     
     if opts.debug_instrumentals:
       write_debug = True
       
   elif track.found == State.not_found:
-    print("     [NOT FOUND]")
+    tee.print("     [NOT FOUND]")
     track.lyrics = ["[NA]"]
     write_debug = True
     
-    #print(result)
     
   else:
     die("Unknown state")
@@ -1583,7 +1952,7 @@ def get_lyrics2(opts, _artist, _title, debug=False, backends=None):
   
 
 
-def get_lyrics_oneline(opts, raw_line, **kwargs):
+def get_lyrics_oneline(opts, raw_line, tee, **kwargs):
 
 
   line = RString(raw_line)
@@ -1592,7 +1961,7 @@ def get_lyrics_oneline(opts, raw_line, **kwargs):
   
   if line in exception_table.keys():
     line = exception_table[line]
-    print("   Warning: found translation. Now considering: '%s'" % (line))
+    tee.print("   Warning: found translation. Now considering: '%s'" % (line))
     
   else:
     printd(opts, "Track not found on the exception table: '%s'" % (line))
@@ -1602,7 +1971,7 @@ def get_lyrics_oneline(opts, raw_line, **kwargs):
   title = line.split("-")[1]
   
   if line in custom_table.keys():
-    print("   Warning: found track in local lyrics database: '%s'" % (raw_line))
+    tee.print("   Warning: found track in local lyrics database: '%s'" % (raw_line))
   
     track = Track()
     track = track.set_track(artist, title)
@@ -1610,7 +1979,7 @@ def get_lyrics_oneline(opts, raw_line, **kwargs):
     track.lyrics = custom_table[line].split('\n')
     return track
   
-  return get_lyrics2(opts, artist, title)
+  return get_lyrics2(opts, artist, title, tee)
 
   
   
@@ -1618,7 +1987,32 @@ def get_lyrics_oneline(opts, raw_line, **kwargs):
 ###############    
     
 
-parser = argparse.ArgumentParser(description='find lyrics from tracklists')
+parser = argparse.ArgumentParser(description='find lyrics from tracklists',
+  formatter_class=argparse.RawDescriptionHelpFormatter,
+  epilog="""
+
+example:
+--------
+ to regenerate all tracklists (THIS FOLDER): 
+    cue_merge_cues.py . --folder -t  # -f
+
+ same, RECURSIVELLY:
+    cue_merge_cues.py . --recursive -t  # -f
+
+    
+ debug initial entries:    
+    cue_merge_cues.py "DJ Estrela - MIX 11 CD01" -D
+    
+ to create new set: 
+    cue_merge_cues.py "DJ Estrela - MIX 11 CD01 - Vocal Trance - Mar 2005." -c -t -a  
+ 
+ to get started:
+    cue_scrape_lyrics.py DJ\ Estrela\ -\ 10s\ Pop\ CD03
+ 
+"""
+)
+
+
 parser.add_argument('file_in', type=str, nargs="?",
                     help='Specify basename for all files')
 parser.add_argument('-d', dest="debug", default=False, action='store_true',
@@ -1646,7 +2040,17 @@ parser.add_argument('-s', '--sleep', dest="sleep", default=1.0, type=float,
 
 parser.add_argument('--one', dest="do_one_track", default=None, type=str,
                     help='do a single track')
+                    
+  
+  
+parser.add_argument('--cse', '-c', dest="force_cse", default=False, action='store_true',
+                    help='Use CSE query')
+                    
+parser.add_argument('--google', '-g', dest="force_google", default=False, action='store_true',
+                    help='Use regular google querying')
 
+                    
+                    
 parser.add_argument('--dry_run', '--dry-run', '--dry', dest="dry_run", default=False, action='store_true',
                     help='dry run - do not call google')
 
@@ -1681,11 +2085,14 @@ opts.search_engine = "google"
 
 n = 0
 
+#opts.use_cse = False
+opts.use_cse = True
 
-  
+if opts.force_cse:
+  opts.use_cse = True
+if opts.force_google:
+  opts.use_cse = False
 
-if opts.file_in == None:
-  die("Please input positional argument")
 
 if opts.do_one_track:
   opts.debug = True
@@ -1699,16 +2106,31 @@ if opts.do_one_track:
   opts.debug = True
   opts.error_channel = StringIO()
   
-  track = get_lyrics_oneline(opts, opts.do_one_track)
-
-  for line in track.lyrics:
-    print("\t%s" % (line))
-  sys.exit(0)
+  tee = Tee(None)
   
+  track = get_lyrics_oneline(opts, opts.do_one_track, tee)
+
+  out_channel = sys.stdout
+  for line in track.lyrics:
+    if opts.add_dots_empty_lines:
+      if line == "":
+        line = "."
+  
+    # add final tab per line
+    print("\t%s" % (line), file=out_channel)
+    
+          
+  sys.exit(0)
+
+  
+if opts.file_in == None:
+  die("Please input positional argument")
+
   
 opts.file_in = DPath(opts.file_in).with_suffix(".txt")
 opts.file_out_l = DPath(opts.file_in).with_suffix(".lyrics")
-opts.file_out_e = DPath(opts.file_in).with_suffix(".lyrics_error")
+opts.file_out_e1 = DPath(opts.file_in).with_suffix(".lyrics_error1")
+opts.file_out_e2 = DPath(opts.file_in).with_suffix(".lyrics_error2")
 opts.any_failure = False
 #opts.error_channel = StringIO()
 
@@ -1716,8 +2138,11 @@ opts.any_failure = False
 
     
 
-with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, open(opts.file_out_e, 'w') as error_channel:
+with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, open(opts.file_out_e2, 'w') as error_channel:
   opts.error_channel = error_channel
+  
+  tee = Tee(opts.file_out_e1)
+    
   
   for line_raw in file_in.readlines():
     #printd(opts, "read line_raw: %s" % (line_raw))
@@ -1728,16 +2153,15 @@ with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, o
 
     if not line_raw.re_search("min +[|] "):
       continue
-    
   
     n = n + 1
     if opts.max_tracks and (n > opts.max_tracks):
       break
 
-    print("%s" % (line_raw))
+    tee.print("%s" % (line_raw))
 
     
-    track = get_lyrics_oneline(opts, line_raw)
+    track = get_lyrics_oneline(opts, line_raw, tee)
 
     # dump final output to file
     print("\n%s\n\t.\n" % (line_raw), file=out_channel)
@@ -1760,7 +2184,8 @@ with open(opts.file_in) as file_in, open(opts.file_out_l, 'w') as out_channel, o
     
 # remove final error file if no errors
 if not opts.any_failure:
-    DPath(opts.file_out_e).unlink()
+    DPath(opts.file_out_e1).unlink()
+    DPath(opts.file_out_e2).unlink()
 
     
 print("\n\nAll Done")
