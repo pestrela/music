@@ -175,6 +175,7 @@ only_query_format=0
 dump_format=0
 need_format=0
 tool="youtube-dlc"
+tool="youtube-dl"
 
 tool_disabled_options="--verbose  --embed-thumbnail --restrict-filenames --add-metadata --merge-output-format mp4"
 
