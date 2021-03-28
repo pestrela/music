@@ -201,3 +201,67 @@ ax.set_xlim(0,10000)
 ax.figure.set_size_inches(9, 6)
 ax.figure
     
+    
+    
+'''
+
+This generates a scratch graph
+
+time series of velocity
+
+def list_get_indexes(list_, indexes):
+    """
+    Access multiple elements of list knowing their index
+​
+    https://stackoverflow.com/questions/18272160/access-multiple-elements-of-list-knowing-their-index
+    
+    """
+    
+    from operator import itemgetter 
+​
+    ret = itemgetter(*indexes)(list_)
+    return ret
+​
+​
+file_in = "scratch.txt"
+#df = pd.DataFrame(cols=)
+​
+# https://stackoverflow.com/questions/10715965/add-one-row-to-pandas-dataframe
+data = []
+​
+if True:
+    txt = open(file_in)
+    
+    for line in txt.readlines():
+        if not "-" in line:
+          continue
+​
+        if not opts.device in line:
+          continue
+        
+        if not " B1 22 " in line:
+            continue
+​
+​
+        l = line.split()
+        ts, vel = list_get_indexes(l, [0,7])
+​
+        ts = int(ts)/1e3
+        vel = int(vel, 16)
+        vel = vel - 127/2
+        #print(ts, vel)
+        data.append([ts, vel])
+        #break
+        
+        
+        
+​
+df_full = pd.DataFrame(data, columns=['ts', 'vel'])
+df = df_full.copy()
+​
+df.plot('ts', 'vel')
+ 
+'''
+
+ 
+    

@@ -3,13 +3,153 @@
 # pip install yapu
 from yapu.imports.all import *
 
+import logging
+from logging import DEBUG, INFO, WARNING
+
+
+"""
+DEBUG
+INFO
+  WARNING
+  
+ERROR
+CRITICAL
+
+https://docs.python.org/3/library/logging.html#logging-levels
+https://verboselogs.readthedocs.io/en/latest/readme.html
+https://docs.python.org/3/library/logging.html#logging.Logger.log
+https://stackoverflow.com/questions/14097061/easier-way-to-enable-verbose-logging/20663028
+"""
+
+
+_logger = logging.getLogger('root')
+FORMAT = "[%(filename)s:%(lineno)s - %(funcName)15s() ] %(message)s"
+logging.basicConfig(format=FORMAT)
+_logger.setLevel(logging.DEBUG)
+
+
+class LogWrapper(logging.getLoggerClass()):
+
+    def __init__(self, logger):
+        self.logger = logger
+
+        
+    def basicConfig(self, **kwargs):
+        self.logger.basicConfig(**kwargs)
+        
+    def setLevel(self, level):
+        self.logger.setLevel(level)
+    
+    def info(self, *args, sep=' '):
+        self.logger.info(sep.join("{}".format(a) for a in args))
+
+    def debug(self, *args, sep=' '):
+        self.logger.debug(sep.join("{}".format(a) for a in args))
+
+    def warning(self, *args, sep=' '):
+        self.logger.warning(sep.join("{}".format(a) for a in args))
+
+    def error(self, *args, sep=' '):
+        self.logger.error(sep.join("{}".format(a) for a in args))
+
+    def critical(self, *args, sep=' '):
+        self.logger.critical(sep.join("{}".format(a) for a in args))
+
+    def exception(self, *args, sep=' '):
+        self.logger.exception(sep.join("{}".format(a) for a in args))
+
+    def log(self, level, *args, sep=' '):
+        self.logger.log(level, sep.join("{}".format(a) for a in args))
+
+logger = LogWrapper(_logger)
+
+
+def list_get_indexes(list_, indexes):
+    """
+    Access multiple elements of list knowing their index
+
+    https://stackoverflow.com/questions/18272160/access-multiple-elements-of-list-knowing-their-index
+    
+    """
+    
+    from operator import itemgetter 
+
+    ret = itemgetter(*indexes)(list_)
+    return ret
+    
+def test_list_get_indexes():
+    a = [-2, 1, 5, 3, 8, 5, 6]
+    b = [1, 2, 5]
+    expected = (1, 5, 5)
+    
+    #print(expected, list_get_indexes(a, b) )
+    assert(expected == list_get_indexes(a, b) )
+    
+    
+#####
+#####
+#####
+
+
+results="""
+ ('single', 265),
+ ('single', 267),
+ ('long', 312),
+ ('long', 341),
+ 
+ (300 miliseconds)
+"""
+
+def ddj_1000_find_longpress(lines):
+    lines = data.split('\n')
+    #lines = lines[:12]
+
+    double_clicks=[]
+    single_clicks=[]
+
+    first_line=True
+
+    ret = []
+
+    for line in lines:
+        if not "1000" in line:
+            continue
+
+        l = line.split()
+        l = list_get_indexes(l, [0,6,7])
+        ts, note, vel = l
+
+        ts = int(ts)
+        if note == "71":
+            if vel == "7F":
+                if first_line:
+                    first_line=False
+                else:    
+                    #print(this_click, duration)
+                    elem = (this_click, duration)
+                    ret.append(elem)
+
+                start=ts
+            if vel == "00":
+                duration = ts - start
+                this_click="long"
+        if note == "5F":
+            this_click="single"
+
+    ret.sort(key=lambda x:x[1])
+    print(ret)
+    
+#####
+#####
+#####
+    
 
 major_vars=list('ghijklmnyz')
 minor_vars=list('15aeiosx')
 
 operators=['=','!=','>','<', '*', '/', '+', '-', ]
 
-exceptions=['hx', "ga", "hi", "ii", "ie"]
+exceptions=['hx', "ga", "gx", "hi", "ii", "ie"]
 
 
 # quickfixes: instead of avoiding the 
@@ -106,11 +246,26 @@ def change_variables(line, deck):
 def change_channel(line, deck):
   #line = RString(line)
   step = deck -1
+
   
+  
+  # normal decks
   ch_in='Channel num="0"'
   ch_out='Channel num="%d"' % (step)
   line = line.replace(ch_in, ch_out)
+
   
+  # pad decks
+  ch_in='Channel num="7"'
+  ch_out='Channel num="%d"' % (7+step*2)
+  line = line.replace(ch_in, ch_out)
+  
+  ch_in='Channel num="8"'
+  ch_out='Channel num="%d"' % (1+7+step*2)
+  line = line.replace(ch_in, ch_out)
+  
+  
+  # descriptions
   ch_in='ch1'
   ch_out='ch%d' % (deck)
   line = line.replace(ch_in, ch_out)
@@ -134,9 +289,7 @@ def change_timer(line, deck):
   if not (line.re_search(r"^Incoming") or line.re_search(r"^Outgoing")):
     return line
   
-  debug=opts.debug
-  debug=False
-  printd(debug, line)
+  logger.log(DEBUG, line)
   
   # https://docs.python.org/3/library/re.html#re.sub
   
@@ -156,7 +309,7 @@ def change_timer(line, deck):
   
   line = line.re_sub(r'(_.*?)1', out_expression)
 
-  printd(debug, line)
+  logger.log(DEBUG, line)
   #sys.exit(1)
 
   return line  
@@ -197,42 +350,77 @@ def manipulate_ml(ml):
   
   inside_deck=False
   
+  lines = [RString(line) for line in lines]
+  
+  conv = {}
   out = []
   for line in lines:
-    line = RString(line)  # debug=True)
+    logger.debug("step1: line:", line)
+    
+    to_match=r"^\[Preset.\d+\]"
+    if line.re_match(to_match):
+      preset = line.re_findfirst(to_match)
+      logger.warning("step1: found preset:", preset)
 
-
-    # reset everytime we see a preset
-    to_match1=r"^Name=.*"
-    if line.re_match(to_match1):
-      deck=1
-      inside_deck = False
-
-      
-      # find decks to change
+    # find decks to change
+    to_match=r"Name=.*"
+    if line.re_match(to_match):
+      logger.info("step1: line:", line)
+     
+       
+        
       to_match2=r"(Name=.* CH)1 \((\d)\)"
       if line.re_match(to_match2):
-        inside_deck = True
-        
+       
         name, step = line.re_findfirst(to_match2)
     
         step = int(step)
         deck = step+1
-        new_line = "%s%s" % (name, deck)
-        
-        debug1=True
-        printd(debug1, "now doing deck: ", deck, line, new_line, sep="\n")
-        line.set(new_line)
-        
-        
     
-    if inside_deck:
-      line2 = manipulate_st(line, deck)
-      #print(line, "\n --> ", line2 )
+        new_line = "%s%s" % (name, deck)
+      
+        #logger.warning("now doing deck: %d", deck, line, new_line, sep="\n")
+        line.set(new_line)
+      
+        conv[preset]=deck
+        logger.warning("step1: line:", line)
+        logger.warning("step1: added conv", preset, deck)
+    
+    out.append(line)
+     
+  lines=out    
+ 
+  print("conversion table:", conv)
+  if opts.step1_only:
+    sys.exit(0)
+  
+  ########
+  
+  out = []
+  new_deck = None
+  for line in lines:
+    to_match=r"^\[Preset.\d+\]"
+    if line.re_match(to_match):
+      preset = line.re_findfirst(to_match)
+      
+      if preset in conv:
+        new_deck=conv[preset]
+      else:
+        new_deck=None
+
+      logger.warning("Changed preset: %s -> %s" %(preset, new_deck) ) 
+        
+
+    if new_deck:
+      line2 = manipulate_st(line, new_deck)
+      logger.info(line) 
+      logger.info(line2) 
+      logger.info("")
       
       line = line2
     else:
       pass
+      
       
     out.append(line)
     
@@ -256,6 +444,16 @@ parser.add_argument('file_in', #nargs='*',
 parser.add_argument('-d', '--debug', dest="debug", default=False, action="store_true",
                     help='enable debug mode')
                     
+parser.add_argument("-v", "--verbose", dest="verbose", help="increase output verbosity",
+                    action="store_true")
+                    
+parser.add_argument("-q", "--quiet", dest="quiet", help="decrease output verbosity",
+                    action="store_true")
+                 
+                 
+parser.add_argument('--step1_only', dest="step1_only", default=False, action="store_true",
+                    help='enable fast debug')
+                   
 parser.add_argument('-D', '--fast_debug', dest="fast_debug", default=False, action="store_true",
                     help='enable fast debug')
                     
@@ -266,11 +464,11 @@ parser.add_argument('--deck', dest="deck_selected", default=0, type=int,
 #                    help='Duplicate all 4 decks')
                     
 
-parser.add_argument('-v', '--variables', dest="only_variables", default=False, action="store_true",
+parser.add_argument('-V', '--variables', dest="only_variables", default=False, action="store_true",
                     help='only do variables')
-parser.add_argument('-t', '--timers', dest="only_timers", default=False, action="store_true",
+parser.add_argument('-T', '--timers', dest="only_timers", default=False, action="store_true",
                     help='only do variables')
-parser.add_argument('-c', '--channels', dest="only_channels", default=False, action="store_true",
+parser.add_argument('-C', '--channels', dest="only_channels", default=False, action="store_true",
                     help='only do variables')
 
 
@@ -280,6 +478,19 @@ parser.add_argument('--diff', dest="do_diff", default=False, action="store_true"
 opts = parser.parse_args()
 
 
+logger.setLevel(logging.WARNING)
+if opts.verbose:
+  logger.setLevel(logging.INFO)
+if opts.debug:
+  logger.setLevel(logging.DEBUG)
+  print("Doing debug")
+if opts.quiet:
+  logger.setLevel(logging.ERROR)
+  print("Doing debug ERROR")
+
+#logging.basicConfig(level=logging.WARNING)
+    
+    
 opts.do_variables = True
 opts.do_timers = True
 opts.do_channels = True
@@ -302,15 +513,6 @@ if opts.only_channels:
   opts.do_timers = False
   opts.do_channels = True
 
-
-#if opts.do_all_decks:
-#  opts.decks_todo=[2,3,4]
-  
-#else:
-if opts.deck_selected == 0:
-  opts.decks_todo = [2,3,4]
-else:
-  opts.decks_todo=[opts.deck_selected]
 
   
 opts.file_out= DPath(opts.file_in).with_suffix(".compiled.bmtp")
