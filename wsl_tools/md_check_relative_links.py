@@ -25,6 +25,11 @@ parser.add_argument('-s', dest="single", default=False, action="store_true",
                     help='exit at first error')
                     
                     
+#parser.add_argument('-b', dest="build", default=False, action="store_true",
+#                    help='exit at first error')
+                    
+                 
+                 
 opts = parser.parse_args()
 
 
@@ -41,12 +46,15 @@ links = st_lower(links)
 links = st_uniq(links)
 
 
-regexp_replace_chars = r"[ \(\),:\?=]"
+regexp_replace_chars = r"[ \(\),:\?=']"
 
 headers = text.re_findall(r'^#+ .*$', re.MULTILINE)
 headers = [ RString(st).re_sub(r"^#+ ", "#")
+  .re_sub(r"'", "")
+  .re_sub(r"-", "|")
   .re_sub(regexp_replace_chars, "-")
   .re_sub(r"--+", r"-")
+  .re_sub(r"\|", "-")
   .re_sub(r"\/")
   .re_sub(r"-$", "") 
   

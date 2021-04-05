@@ -39,7 +39,10 @@ Options:
  -q      ONLY query formats, and exit
  -B      rename backup extensions to windows style (version before the extension)
  
- -r HH:MM  get a range on postprocess. Specify hhours:minutes start point
+Range: 
+ -s HH:MM        start point to postprocess (15 minutes)
+ -S HH:MM        same (1 minute)
+ -r HH:MM HH:MM  give a absolute range
  
 General options: 
  -h      help
@@ -142,6 +145,7 @@ function die()
 	echo_stderr "********************"
 	echo_stderr ""
 	
+  read
   
 	exit 99
 }
@@ -164,7 +168,7 @@ function do_sleep()
   sleep "$time"
 }
 
-require_tools "ffmpeg"  "youtube-dlc"
+require_tools "ffmpeg"  "youtube-dl"
 
 
 dry_run=0
@@ -174,7 +178,6 @@ only_query_format=0
     
 dump_format=0
 need_format=0
-tool="youtube-dlc"
 tool="youtube-dl"
 
 tool_disabled_options="--verbose  --embed-thumbnail --restrict-filenames --add-metadata --merge-output-format mp4"
@@ -189,8 +192,10 @@ keep_opt=""
 
 do_range=0
 range_start="00:00"
+range_stop="none"
 #range_duration="01:00"
 range_duration="15:00"
+inside_qqtabbar=0
 
 post_processor_args=""
 
@@ -219,15 +224,26 @@ function rename_backup_extension()
 
 }
 
+# this was to debug this script itself
+
+#set -x
+#pwd
+#which youtube-dl
+#/usr/bin/youtube-dl 
+#usr/bin/youtube-dl -v -F 'https://www.youtube.com/watch?v=3FND7SsL5X0'
+
+
+
+
 
 while [ "$#" -ge 1 ]; do
   case "$1" in
-  -d|--debug)
+  -d|--debug|-d)
     debug=1
     set -x
     ;;
  
-  -r|--range|--start|-s)
+  --start|-s)
     do_range=1
     range_start="$2"
     shift 1
@@ -240,6 +256,12 @@ while [ "$#" -ge 1 ]; do
     range_duration="01:00"
     ;;
 
+  --range|-r)  
+    do_range=2
+    range_start="$2"
+    range_stop="$3"
+    shift 2
+    ;;
     
   -q|--also_query)
      force_query_format=1
@@ -254,9 +276,17 @@ while [ "$#" -ge 1 ]; do
   --qqtabbar)
      ## this will download videos on windows explorer
      set -x
-     download_folder="/mnt/c/Root/2 Downloads/youtube-dl"
-     cd "$download_folder"
+     download_folder="/mnt/c/Root/2 Downloads/"
+
+     ret=0
+     cd "$download_folder"    || ret=$?
+     if [ $ret -ge 1 ]; then
+        die "Could not CD to $download_folder"
+     fi
+
      
+     inside_qqtabbar=1
+     pwd
      # will read stdin
      ;;
     
@@ -294,6 +324,8 @@ while [ "$#" -ge 1 ]; do
   shift
 done
 
+
+#set -x
 
 case $argc in
 0)
@@ -337,7 +369,7 @@ if [ "$url" == "-" ]; then
   got_errors=0
   
 
-  #  echo "please enter urls"
+  echo "please enter urls"
   cat - | egrep "http" > "$playlist"
 
   # https://mywiki.wooledge.org/bashfaq/005#loading_lines_from_a_file_or_stream
@@ -370,7 +402,8 @@ if [ "$url" == "-" ]; then
         #exit 1
       fi
       
-      do_sleep 1
+      do_sleep 1  
+      #do_sleep 5  
     fi
     
   done
@@ -384,7 +417,12 @@ if [ "$url" == "-" ]; then
     cat "$error_summary"
     echo "***********************"
     
+    read
     exit 1
+  fi
+  
+  if [ $inside_qqtabbar -ge 1 ]; then
+    read
   fi
   
   exit 0
@@ -398,7 +436,7 @@ http*)
   ok=1
   ;;
 *)
-  echo "ERROR: URL doesnt start with httpt    ($url)"
+  echo "ERROR: URL doesnt start with http    ($url)"
   exit 1
   ;;
 esac
@@ -409,9 +447,16 @@ esac
 if [ $do_range -ge 1 ]; then
   set -x
   #https://unix.stackexchange.com/questions/230481/how-to-download-portion-of-video-with-youtube-dl-command
- 
-  post_processor_args="-ss ${range_start}:00.00 -t $range_duration"
-  format="raw_audio"
+
+  if [ $do_range -eq 1 ]; then
+    post_processor_args="-ss ${range_start}:00.00 -t ${range_duration}"
+  else
+    post_processor_args="-ss ${range_start}:00.00 -to ${range_stop}:00.0"
+  fi  
+
+  
+  #format="raw_audio"
+  format="best"
 fi
 
 
@@ -531,7 +576,7 @@ echo ""
 mkdir -p "/tmp/youtube_dl"
 old_pwd="`pwd`"
 cd "/tmp/youtube_dl"
-rm /tmp/youtube_dl/*   2> /dev/null
+rm /tmp/youtube_dl/*   2> /dev/null  || true
 
   
 ret=0
