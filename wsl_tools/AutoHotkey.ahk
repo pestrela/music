@@ -1956,7 +1956,7 @@ do_organize_windows_fancy(action)
   }
 
   ; fancyzone grow window
-  if(has_alt){
+  if(has_ctrl){
     if(action=="left"){
       send {Ctrl down}{LWin down}{Alt down}{Left}{Alt Up}{Ctrl Up}
 
@@ -1973,14 +1973,14 @@ do_organize_windows_fancy(action)
     return
   }
 
-  ; AHK swap monitor
-  if(has_ctrl){
+  ; swap monitor
+  if(has_shift){
     do_organize_swap_monitor(action)
     return
   }
   
   ; AHK half size
-  if(has_shift){
+  if(has_alt){
     do_organize_move_window(action)
     return
   }
@@ -3385,7 +3385,7 @@ init_beep()              ; Signal that we finished autoexec section
   LWin & Up::     do_organize_windows_fancy("up")
   LWin & Down::   do_organize_windows_fancy("down")
 
-  LWin & Numpad0:: do_organize_windows("cycle_max")
+  LWin & Numpad0::   do_organize_windows("cycle_max")
   LWin & NumpadDot:: do_organize_windows("do_min")
 
   ;; BLOCK the Windows key from opening the start menu:
