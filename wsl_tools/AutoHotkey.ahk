@@ -238,17 +238,17 @@ len(String){
 
 
 init_beep(){
-  SoundBeep, 3000, 100
+ ; SoundBeep, 3000, 100
 
 }
 
 beep(){
-  SoundBeep, 5000, 100
+  ; SoundBeep, 5000, 100
 
 }
 
 debug_beep(){
-  SoundBeep, 7000, 100
+  ; SoundBeep, 7000, 100
 
 }
 
