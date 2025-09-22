@@ -6,7 +6,7 @@ ps5 games:
 
 Ps4 games:
 - rise of the tomb raider (BOM)
--vampyr
+- vampyr
 - God of war (2018)
 - Star wars squadrons
 - Fallout 4
@@ -21,6 +21,8 @@ Ps4 games:
 
 - Nier automata
 
+- star wars - tales from tge galaxy edge (VR2)
+- platnetscape tormet / icewind combo
 
 
 - Black mirror  (virote)
