@@ -90,7 +90,7 @@ sacar:
 comprar "specialdef" NL:
 ------------------------
   hunter speak no evil
-  valerie dore lancelot
+  
   Los Bravos - Black Is Black (7", Single)
   Dolly Dots - Love Me Just A Little Bit More (Totally Hooked On You) (7", Single)
   
@@ -551,8 +551,9 @@ DMC megamixes:  (http://www.dmcdownload.com)
 
 	 
 
-(DMC) megamixes que tenho:
---------------------------
+(DMC) megamixes - QUE TENHO:
+----------------------------
+  Commercial Collection 10/92  (kylie minogue bizzie bee)
   DMC December 89 (sanny x - rock remix), 
   abba - DMC megamix "the master" sep /1992
 	bananarama megamix - alan coutard DMC october 88 mixes 2, 
@@ -698,7 +699,8 @@ babylon zoo: spaceman (BOM),
 dave clarke: red 3, red 2 (BOM - nao ha melhor - wisdom to the wise), NAO quero red 1, 
 me and my: dub i dub, baby Boy (nao quero), 
 benny benassi: satisfaction, every single day, 
-flatlines Flat-Lines: A Night In Sao Paulo, 
+flatlines Flat-Lines: A Night In Sao Paulo (BOM)
+, 
 alma matris: rapido (giangi coppai), 
 united djs for central america: too much rain, 
 mika: relax take it easy (orig + ashley beedle), 
@@ -914,13 +916,14 @@ Banji Boyz: Free Florida x2,
 florida inc:  fuck it, 
 dj Fire: The Closest Thing To Heaven, 
 FPI project f.p.i. project: rich in paradise, 
+foggy: come into my dream (clubmix, mad mix. Quero a Esquire remix)
 
 X Factor: Desert Rain (BOM),
 Orielle: All I Know (BOM), 
 Sonorous: Protonic (BOM),
 sono: keep control (BOM), 
 the Underdog Project : Summer Jam 2003 (2x BOM FRANKS summer mix),
-Lost Tribe: gamemaster,
+Lost Tribe: gamemaster, (mashup lost in space), 
 Ispirazione: I Feel You, be the one + release me, 
 Quadran: Free Your Mind, Unlovable, 
 Albert vs Precision: Say Yes (Katana Remix),
@@ -1192,7 +1195,7 @@ itty bitty boozy woozy: party time, tempo fiesta,
 happy clapers: i believe (red jerry ('e esta) + 12' master X2 + not loveland + chris cox mixes),  
 missy elliot: get ur freak on (superchumbo x2), 
 reel 2 real: are you ready for some more, move it album (I like to move it, can you feel it), can you feel it 12'', 
-pete tong: classic house (comeca com right here right now), 
+pete tong with the heritage orchestra: "classic house" (comeca com "right here, right now"), 
 cygnus x: superstring, the orange theme (solarstone + man with no name),  
 blank and jones: perfect silence BOM, beyond time (thrillseekers / jam spoon), cream (pvd + atb),  revealed, perfect silence (BOM martin roth + e-craig 212 so), the hardest heart (kai tracid, acapella + corvil dalek), 
 e-motion: i stand alone (Dubstramental BOM, vocal original, big boat dub), 
@@ -1227,12 +1230,12 @@ first choice: aint he bad,
 satoshi tommie: love in traffic (BOM), 
 kosheen: catch (ferry corsten), hide u, hungry (tiesto vocal BOM, tiesto edit 5:00, decoder and substance, satoshi tommie vocal + tiesto dub + martin eyerer + jan driver), all in my head (BOM), harder (ashley beedle vocal + decoder + technical itch), 
 miss enjoy: hey misbeliever, 
-alcatraz: give me luv (orig + deep dish), 
+alcatraz: give me luv (orig + deep dish + alcatraz + beats + 11th hour dub), 
 the ethics: to the beat of the drum, 
 sil: come togther,  
 dj quicksilver: i have a dream + belissima (2x), i have a dream (de donatis remix), free, Planet Love, 
 amos: 4 da floor, 
-bcode b code b-code: i got a love, Feel good (BOM, mas sem capa), 
+bcode b code b-code: i got a love, Feel good (BOM, mas sem capa), set me free, 
 
 zig zag: them girls, 
 disco blu: disco blu, 
@@ -1255,8 +1258,10 @@ aurora: dreaming (love to infinity remix), ordinary world (club, condor, floorfi
 jeff mills: the bells, tranquilizer ep, 
 chemical brothers: hey boy hey girl, 
 iio: rapture (orig + riva + creamer stephane k), 
+tinlicker: live at ADE 2023 (orquestra), 
 chocolate puma: i wanna be u, 
 tom wilson: Techno Cat | technocat (perplexer x2, 1st try, dance like your dad x3), Bounce (nao quero), The Journey (nao quero), The Journey, 
+Techno Club: 25 years ()age of love, vicent de moor fly away, ramsterdam, lustral everytime, ratty sunrise, 1998 ronski speed, quench dreams, , 
 
 sasha emerson: scorchio (BOM), xpander, 
 seven grand housing: the question, 
@@ -1800,6 +1805,7 @@ gary moore: friday on my mind 12'' x3 (extended e remixed long version), still g
 carmel: you can have him (12 BOM), its all in the game, collected ("best of", com you can have it), 
 ten sharp: last words,
 june lodge: someone loves you honey x2, 
+mysterious art - das omen teil 1 (6:57 version - a ver), 
 roy orbison: best of album, shes a mystery to me, you got it, 
 noodweer: in disco
 marsha raven: false alarm, 
@@ -1918,7 +1924,7 @@ brother beyond: the harder i try (orig + hardest mix),
 great white: face the day blue mix,
 paul da vinci: sugar baby love,
 
-Fake: brick (grand parade),
+Fake: brick (grand parade), brick (original + another brick BOM), 
 Cronica do crime: ost,
 Craig mclagahn: mona,
 da vinci: hiroxima meu amor,
@@ -2304,7 +2310,7 @@ kim wilde: love on the natural way, water on glass 7'', Breakin' Away (NAO quero
 Hazell dean: walk in my shoes, back in my arms, no fool for love, they say its the rain (12'' + zulu mix BOM), leaving who, searching i gotta find a man, Searching 12' sujo (repetido do i gotta find a man?), whos leaving who (original + boys back in town + bobs tamb), whatever i do wherever i go, maybe we should call it a day (12´´ + extra beat boys remix), always doesnt mean forever, evergreen + jealous love, turn it into love, 
 tony carrasco: NRG part 1+2, 
 
-EG daily: say it say it 2x, love in the shadows (2x), Mind Over Matter (BOM, mas com etiqueta),
+EG daily: say it say it 2x, love in the shadows (2x), Mind Over Matter (BOM, mas tem uma etiqueta),
 Mark: Tropical Climate, 
 
   
@@ -2597,7 +2603,7 @@ carl douglas: kung fu fighting,
 rofo: flashlight on a disco night (orig), 
 vitorino: album romances, 
 autograph:album sign in please (com "send her to me"), album that's the stuff, turn up the radio, 
-den harrow: future brain, Don't Break My Heart , (quero: born to love (so' estes. Vi os outros)), 
+den harrow: bad boy (BOM), future brain, Don't Break My Heart , (quero: born to love (so' estes. Vi os outros)), 
 joe cocker: you can leave your hat on (9 semanas e meia ost), Summer In The City (sem capa - city club mix (nao 'e o album)), 
 extreme: more than words + mutha, get the funk out, 
 pavarotti: greatest hits vol 1 (palhaco 1980), 
@@ -2630,7 +2636,7 @@ technos: foreign land,
 sos band: just be good to me, 
 karen young: hot shot, 
 best of: italo disco vol 7, 
-valerie dore: get closer, the night, 
+valerie dore: lancelot (BOM), get closer, the night (BOM), 
 xutos e pontapes: album circo de feras (contentores), alnum ao vivo, 
 lili and sussie: candy love, 
 gavin christopher: one step closer to you, 
@@ -2660,6 +2666,7 @@ toto cutugno: album com l'italiano,
 metallica: enter sandman (dirty funker remix), 
 machiavel: fly (7''), album new lines (com "fly"), 
 voyage: lets fly away, 
+swan: dont talk about it (BOM), 
 
 garbage: i think im paranoid, push it (original + boom boom + victor calderone), 
 odyseey: going back to my roots, 
